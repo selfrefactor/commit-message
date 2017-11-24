@@ -30,7 +30,7 @@
     "clean": "node files/clean",
     "cover": "jest __tests__ --coverage",
     "dev": "jest __tests__ --watch",
-    "docs": "typedoc --readme Readme.md --out docs src",
+    "docs": "typedoc --out docs src",
     "rename": "node files/rename",
     "start": "node files/watch",
     "test": "jest"
