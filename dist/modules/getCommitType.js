@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const constants_1 = require("../constants");
 const promptSelect_1 = require("./promptSelect");
-async function getTypeCommit() {
+async function getCommitType() {
     try {
         const promptOptions = {
             choices: constants_1.typesOfCommitKeys,
@@ -16,5 +16,5 @@ async function getTypeCommit() {
         throw err;
     }
 }
-exports.getTypeCommit = getTypeCommit;
-//# sourceMappingURL=getTypeCommit.js.map
+exports.getCommitType = getCommitType;
+//# sourceMappingURL=getCommitType.js.map

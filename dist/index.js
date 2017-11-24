@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const constants_1 = require("./constants");
-const getTypeCommit_1 = require("./modules/getTypeCommit");
+const getCommitType_1 = require("./modules/getCommitType");
 const promptInput_1 = require("./modules/promptInput");
 const showExplanations_1 = require("./modules/showExplanations");
 /**
@@ -11,9 +11,13 @@ const showExplanations_1 = require("./modules/showExplanations");
  */
 async function commitMessage() {
     showExplanations_1.showExplanations();
-    const typeCommit = await getTypeCommit_1.getTypeCommit();
+    const commitType = await getCommitType_1.getCommitType();
+    const label = commitType.needsLabel ?
+        await getLabel()
+        :
+    ;
     const messageCommit = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
-    return `${typeCommit} - ${messageCommit}`;
+    return `${commitType.value} - ${messageCommit}`;
 }
 exports.commitMessage = commitMessage;
 //# sourceMappingURL=index.js.map

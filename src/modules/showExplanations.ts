@@ -2,9 +2,9 @@ import { log } from 'log'
 import { explanationOfTypes } from '../constants'
 
 export function showExplanations(): void {
-  explanationOfTypes.map(x => {
+  explanationOfTypes.map(explanation => {
     log('sep')
-    log(x, '')
+    log(explanation, '')
   })
   log('sep')
 }

@@ -1,5 +1,5 @@
 import { prompt } from 'inquirer'
-import { PromptSelect } from '../index.d'
+import { PromptSelect } from '../typings'
 
 export async function promptSelect(input: PromptSelect): Promise<string> {
   try {
