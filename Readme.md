@@ -14,11 +14,13 @@ The library uses `Inquirer` to take text or choice from the user. Generating the
 - STEP 1 - Choosing the type of the commit
 
 The user can select one among `'feat','fix', 'test', 'chore', 'refactor', 'doc', 'typing'`.
+
 Default choice is `'feat'`
 
 - STEP 2 - Choosing the label of the commit
 
 If the type of the commit is one of `'feat','fix', 'test'`, then the user can select a label.
+
 The label is one of `'','start','end','perf','UI','style','important'`
 
 Default choice is empty string`''`
