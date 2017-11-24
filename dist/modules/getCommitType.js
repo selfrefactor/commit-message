@@ -6,6 +6,7 @@ async function getCommitType() {
     try {
         const promptOptions = {
             choices: constants_1.typesOfCommitKeys,
+            default: constants_1.FEATURE.key,
             question: constants_1.ASK_FOR_TYPE,
         };
         const typeOfCommitKey = await promptSelect_1.promptSelect(promptOptions);

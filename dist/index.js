@@ -17,10 +17,10 @@ async function commitMessage() {
         await getCommitLabel_1.getCommitLabel(commitType) :
         '';
     const commitFirstPart = commitLabel === '' ?
-        `${commitType.value}:` :
-        `${commitType.value}@${commitLabel}:`;
+        `${commitType.value}` :
+        `${commitType.value}@${commitLabel}`;
     const commitMessageValue = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
-    return `${commitFirstPart} - ${commitMessageValue}`;
+    return `${commitFirstPart}: ${commitMessageValue}`;
 }
 exports.commitMessage = commitMessage;
 //# sourceMappingURL=index.js.map

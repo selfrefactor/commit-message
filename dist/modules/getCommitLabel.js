@@ -8,6 +8,7 @@ async function getCommitLabel(commitType) {
         log_1.log(commitType.key, commitType.explanation, 'info');
         const promptOptions = {
             choices: constants_1.labels,
+            default: '',
             question: constants_1.ASK_FOR_LABEL,
         };
         const label = await promptSelect_1.promptSelect(promptOptions);

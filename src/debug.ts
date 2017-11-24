@@ -1,7 +1,6 @@
 import { commitMessage } from './index'
 
-async function debug() {
-  const result = await commitMessage()
-}
-
-commitMessage().then(console.log)
+commitMessage().then((commitMessageValue: string) => {
+  console.log(commitMessageValue)
+  // => 'feat@style - use animation when logout'
+})

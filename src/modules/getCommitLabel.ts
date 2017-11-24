@@ -6,8 +6,10 @@ import { promptSelect } from './promptSelect'
 export async function getCommitLabel(commitType: CommitType): Promise<string> {
   try {
     log(commitType.key, commitType.explanation, 'info')
+
     const promptOptions: PromptSelect = {
       choices: labels,
+      default: '',
       question: ASK_FOR_LABEL,
     }
 

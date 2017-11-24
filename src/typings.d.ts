@@ -1,6 +1,7 @@
 export interface PromptSelect {
   question: string
   choices: string[]
+  default: string
 }
 
 export function commitMessage(): Promise<string>

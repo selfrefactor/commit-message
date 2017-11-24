@@ -4,7 +4,7 @@ export const ASK_FOR_LABEL = 'Select label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
 export const labels = [
-  'none',
+  '',
   'start',
   'end',
   'perf',
@@ -45,7 +45,7 @@ export const SUPPORT = {
   explanation: 'cleaning tasks, such as remove unnecessary files or linting files.',
   key: 'SUPPORT',
   needsLabel: false,
-  value: 'choir',
+  value: 'chore',
 }
 
 export const REFACTOR = {

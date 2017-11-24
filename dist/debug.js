@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("./index");
-async function debug() {
-    const result = await index_1.commitMessage();
-}
-index_1.commitMessage().then(console.log);
+index_1.commitMessage().then((commitMessageValue) => {
+    console.log(commitMessageValue);
+    // => 'feat@style - use animation when logout'
+});
 //# sourceMappingURL=debug.js.map

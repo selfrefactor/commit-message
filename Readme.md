@@ -1,44 +1,43 @@
+# Commit-message
+Standardized commit message generation
 
-[![CircleCI](https://img.shields.io/circleci/project/github/selfrefactor/node-starter.svg)](https://circleci.com/gh/selfrefactor/node-starter)
-[![Codecov](https://img.shields.io/codecov/c/github/selfrefactor/node-starter.svg)](https://codecov.io/gh/selfrefactor/node-starter)
+## Argumentation
 
-# Node-starter
-Typescript starter boilerplate for creation of Node.js library
+Writing commit messages should benefit of automated assistance. 
 
-## How to install
+While the rules of this library are not perfect, it still helps writing commit messages with consistent style.
 
-Run the commands from a project root directory.
+## How it works?
 
-1. `git clone https://github.com/selfrefactor/node-starter.git`
+The library uses `Inquirer` to take text or choice from the user. Generating the message includes the following steps:
 
-2. `rm -rf  node-starter/.git&&cp -R ./node-starter/* .&&cp -R node-starter/.[^.]* .&&rm -rf node-starter`
+- STEP 1 - Choosing the type of the commit
 
-## What is included?
+The user can select one among `'feat','fix', 'test', 'chore', 'refactor', 'doc', 'typing'`.
+Default choice is `'feat'`
 
-- Watching `.ts` files in `./src` and `./__tests__` directories
+- STEP 2 - Choosing the label of the commit
 
-- Tslinting with `fix` flag upon `.ts` file change
+If the type of the commit is one of `'feat','fix', 'test'`, then the user can select a label.
+The label is one of `'','start','end','perf','UI','style','important'`
 
-- Typescript build upon stopping of file watcher process
+Default choice is empty string`''`
 
-- Integration with `Jest`
+- STEP 3 - Writing the commit message
 
-- Sample files and type definitions
+In this step the user writes the actual commit message.
 
-## More detailed information
+## Install
 
-- Start with cloning the repo and running `yarn install` followed by `yarn start`.
+`yarn add https://github.com/selfrefactor/commit-message#0.1.0`
 
-- When you stop the above process, `./dist` folder is deleted and command `tsc -p .` is executed.
+## Usage
 
-## Additional info
-  
-- Generated Javascript files are located in `./dist` folder.
+```
+import { commitMessage } from './index'
 
-- You can run tests with `yarn test`
-
-- You can run coverage with `yarn run cover`
-
-- Main exported file is set to `src/index.ts` as it is meant for use within Typescript projects. If you want to publish this library for wider audience, then you should change it to `./dist/index.js`.
-
-- Recommended editor for this boilerplate is `VSCode` as when running `tslint --fix` with larger files, `Atom` and `WebStorm` have unexpected behavior. 
+commitMessage().then((commitMessageValue: string) => {
+  console.log(commitMessageValue)
+  // => 'feat@style - use animation when logout'
+})
+```

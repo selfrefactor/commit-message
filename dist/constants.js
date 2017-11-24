@@ -4,7 +4,7 @@ exports.ASK_FOR_TYPE = 'What is the type of the commit?';
 exports.ASK_FOR_LABEL = 'Select label';
 exports.ASK_FOR_MESSAGE = 'What is the message of the commit?';
 exports.labels = [
-    'none',
+    '',
     'start',
     'end',
     'perf',
@@ -40,7 +40,7 @@ exports.SUPPORT = {
     explanation: 'cleaning tasks, such as remove unnecessary files or linting files.',
     key: 'SUPPORT',
     needsLabel: false,
-    value: 'choir',
+    value: 'chore',
 };
 exports.REFACTOR = {
     explanation: 'refactor code without affecting functionality',
