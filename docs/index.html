@@ -74,13 +74,13 @@
 				<ul>
 					<li>STEP 1 - Choosing the type of the commit</li>
 				</ul>
-				<p>The user can select one among <code>&#39;feat&#39;,&#39;fix&#39;, &#39;test&#39;, &#39;chore&#39;, &#39;refactor&#39;, &#39;doc&#39;, &#39;typing&#39;</code>.
-				Default choice is <code>&#39;feat&#39;</code></p>
+				<p>The user can select one among <code>&#39;feat&#39;,&#39;fix&#39;, &#39;test&#39;, &#39;chore&#39;, &#39;refactor&#39;, &#39;doc&#39;, &#39;typing&#39;</code>.</p>
+				<p>Default choice is <code>&#39;feat&#39;</code></p>
 				<ul>
 					<li>STEP 2 - Choosing the label of the commit</li>
 				</ul>
-				<p>If the type of the commit is one of <code>&#39;feat&#39;,&#39;fix&#39;, &#39;test&#39;</code>, then the user can select a label.
-				The label is one of <code>&#39;&#39;,&#39;start&#39;,&#39;end&#39;,&#39;perf&#39;,&#39;UI&#39;,&#39;style&#39;,&#39;important&#39;</code></p>
+				<p>If the type of the commit is one of <code>&#39;feat&#39;,&#39;fix&#39;, &#39;test&#39;</code>, then the user can select a label.</p>
+				<p>The label is one of <code>&#39;&#39;,&#39;start&#39;,&#39;end&#39;,&#39;perf&#39;,&#39;UI&#39;,&#39;style&#39;,&#39;important&#39;</code></p>
 				<p>Default choice is empty string<code>&#39;&#39;</code></p>
 				<ul>
 					<li>STEP 3 - Writing the commit message</li>
@@ -93,9 +93,19 @@
 
 commitMessage().<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(commitMessageValue: string)</span> =&gt;</span> {
   <span class="hljs-built_in">console</span>.log(commitMessageValue)
-  <span class="hljs-regexp">//</span> =&gt; <span class="hljs-string">'feat@style - use animation when logout'</span>
+  <span class="hljs-regexp">//</span>=&gt; <span class="hljs-string">'feat@UI: use animation when logout'</span>
 })
-</code></pre>
+</code></pre><h2 id="todo">TODO</h2>
+				<ul>
+					<li><p>Improve labels set</p>
+					</li>
+					<li><p>Add example property to &#39;CommitMessage&#39; type to show while typing actual commit message</p>
+					</li>
+					<li><p>Cache latest feature, bug or test message to reuse next time</p>
+					</li>
+					<li><p>Each type has separate set of labels</p>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
