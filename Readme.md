@@ -36,7 +36,7 @@ In this step the user writes the actual commit message.
 ## Usage
 
 ```
-import { commitMessage } from './index'
+import { commitMessage } from 'commit-message'
 
 commitMessage().then((commitMessageValue: string) => {
   console.log(commitMessageValue)
