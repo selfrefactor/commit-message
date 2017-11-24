@@ -1,17 +1,17 @@
-import { ASK_FOR_TYPE, typesOfCommit } from '../constants'
+import { ASK_FOR_TYPE, typesOfCommitKeys } from '../constants'
 import { PromptSelect } from '../index.d'
 import { promptSelect } from './promptSelect'
 
 export async function getTypeCommit(): Promise<string> {
   try {
     const promptOptions: PromptSelect = {
-      choices: typesOfCommit,
+      choices: typesOfCommitKeys,
       question: ASK_FOR_TYPE,
     }
 
-    const typeCommit = await promptSelect(promptOptions)
+    const typeOfCommitKey = await promptSelect(promptOptions)
 
-    return typeCommit
+    return typeOfCommitKey
   } catch (err) {
     throw err
   }

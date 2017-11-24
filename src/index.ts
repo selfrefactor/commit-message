@@ -1,4 +1,6 @@
+import { ASK_FOR_MESSAGE } from './constants'
 import { getTypeCommit } from './modules/getTypeCommit'
+import { promptInput } from './modules/promptInput'
 
 /**
  * It ask the user for type and text of commit and returns the final commit message.
@@ -8,5 +10,9 @@ import { getTypeCommit } from './modules/getTypeCommit'
 export async function commitMessage(): Promise<string> {
 
   const typeCommit = await getTypeCommit()
-  return typeCommit
+
+  const messageCommit = await promptInput(ASK_FOR_MESSAGE)
+
+  return messageCommit
+  // return typeCommit
 }
