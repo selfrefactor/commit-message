@@ -1,4 +1,12 @@
-export function fn(x: string): void {
+import { getTypeCommit } from './modules/getTypeCommit'
 
-  return
+/**
+ * It ask the user for type and text of commit and returns the final commit message.
+ *
+ * @returns {Promise<string>}
+ */
+export async function commitMessage(): Promise<string> {
+
+  const typeCommit = await getTypeCommit()
+  return typeCommit
 }

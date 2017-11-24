@@ -1,8 +1,7 @@
-import { fn } from './'
+import { commitMessage } from './index'
 
-async function debug(){
-  const result = fn('foo')
-  console.log(result)
+async function debug() {
+  const result = await commitMessage()
 }
 
-debug()
+commitMessage().then(console.log)

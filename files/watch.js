@@ -4,7 +4,7 @@ const { exec } = require('child_process')
 const { log } = require('log')
 const { lastUsed } = require('last-used')
 
-lastUsed('node starter')
+lastUsed('commit-message')
 
 const projectDirectory = path.resolve(__dirname, '../')
 
