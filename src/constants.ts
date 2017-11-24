@@ -1,5 +1,6 @@
 import { CommitType } from './typings'
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
+export const ASK_FOR_LABEL = 'Select label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
 export const labels = [
@@ -16,21 +17,21 @@ export const FEATURE = {
   explanation: 'Significant change in the functionality',
   key: 'FEATURE',
   needsLabel: true,
-  value: 'feat:',
+  value: 'feat',
 }
 
 export const TEST = {
   explanation: 'writing unit or end-to-end tests for specific feature',
   key: 'TEST',
   needsLabel: true,
-  value: 'test:',
+  value: 'test',
 }
 
 export const FIX = {
   explanation: 'fixing an issue. Start with: \'broken\', \'missing typing\' ...',
   key: 'FIX',
   needsLabel: true,
-  value: 'fix:',
+  value: 'fix',
 }
 
 export const TYPINGS = {

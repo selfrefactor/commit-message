@@ -1,5 +1,7 @@
 import { ASK_FOR_MESSAGE } from './constants'
+import { getCommitLabel } from './modules/getCommitLabel'
 import { getCommitType } from './modules/getCommitType'
+import { getLabel } from './modules/getLabel'
 import { promptInput } from './modules/promptInput'
 import { promptSelect } from './modules/promptSelect'
 import { showExplanations } from './modules/showExplanations'
@@ -15,10 +17,15 @@ export async function commitMessage(): Promise<string> {
 
   const commitType = await getCommitType()
 
-  const label = commitType.needsLabel ?
-    await getLabel() 
+  const commitLabel = commitType.needsLabel ?
+    await getCommitLabel(commitType) :
+    ''
 
-  const messageCommit = await promptInput(ASK_FOR_MESSAGE)
+  const commitFirstPart = commitLabel === '' ?
+    `${commitType.value}:` :
+    `${commitType.value}@${commitLabel}:`
 
-  return `${commitType.value} - ${messageCommit}`
+  const commitMessageValue = await promptInput(ASK_FOR_MESSAGE)
+
+  return `${commitFirstPart} - ${commitMessageValue}`
 }

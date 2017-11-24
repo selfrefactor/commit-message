@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ASK_FOR_TYPE = 'What is the type of the commit?';
+exports.ASK_FOR_LABEL = 'Select label';
 exports.ASK_FOR_MESSAGE = 'What is the message of the commit?';
 exports.labels = [
     'none',
@@ -15,19 +16,19 @@ exports.FEATURE = {
     explanation: 'Significant change in the functionality',
     key: 'FEATURE',
     needsLabel: true,
-    value: 'feat:',
+    value: 'feat',
 };
 exports.TEST = {
     explanation: 'writing unit or end-to-end tests for specific feature',
     key: 'TEST',
     needsLabel: true,
-    value: 'test:',
+    value: 'test',
 };
 exports.FIX = {
     explanation: 'fixing an issue. Start with: \'broken\', \'missing typing\' ...',
     key: 'FIX',
     needsLabel: true,
-    value: 'fix:',
+    value: 'fix',
 };
 exports.TYPINGS = {
     explanation: 'edit Typescript definitions',
