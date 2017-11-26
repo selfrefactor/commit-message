@@ -38,11 +38,11 @@ export const TYPINGS = {
   explanation: 'edit Typescript definitions',
   key: 'TYPINGS',
   needsLabel: false,
-  value: 'typing',
+  value: 'typings',
 }
 
 export const SUPPORT = {
-  explanation: 'cleaning tasks, such as remove unnecessary files or linting files.',
+  explanation: 'updating build tasks, linting files or similar; no production code change.',
   key: 'SUPPORT',
   needsLabel: false,
   value: 'chore',
