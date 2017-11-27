@@ -5,7 +5,7 @@ export interface PromptSelect {
 }
 
 export function commitMessage(): Promise<string>
-export function commitAndPush(): Promise<void>
+export function commitAndPush(): Promise<string>
 
 export interface CommitType {
   key: string
