@@ -924,14 +924,13 @@ img { max-width: 100%; }
 			<ul>
 				<li>STEP 1 - Choosing the type of the commit</li>
 			</ul>
-			<p>The user can select one among <code>&#39;feat&#39;,&#39;fix&#39;, &#39;test&#39;, &#39;chore&#39;, &#39;refactor&#39;, &#39;doc&#39;, &#39;typing&#39;</code>.</p>
-			<p>Default choice is <code>&#39;feat&#39;</code></p>
-			<ul>
+			<p>The user can select one among:</p>
+			<pre><code>&#39;feat&#39;, &#39;fix&#39;, &#39;test&#39;, &#39;chore&#39;, &#39;refactor&#39;, &#39;doc&#39;, &#39;typing&#39;
+</code></pre><ul>
 				<li>STEP 2 - Choosing the label of the commit</li>
 			</ul>
-			<p>If the type of the commit is one of <code>&#39;feat&#39;,&#39;fix&#39;, &#39;test&#39;</code>, then the user can select a label.</p>
-			<p>The label is one of <code>&#39;&#39;,&#39;start&#39;,&#39;end&#39;,&#39;perf&#39;,&#39;UI&#39;,&#39;style&#39;,&#39;important&#39;</code></p>
-			<p>Default choice is empty string<code>&#39;&#39;</code></p>
+			<p>User can select empty label, write his own label or use one of the suggested.</p>
+			<p>Sugested labels depends on the selection in STEP1.</p>
 			<ul>
 				<li>STEP 3 - Writing the commit message</li>
 			</ul>
@@ -945,17 +944,23 @@ commitMessage().<span class="hljs-keyword">then</span>(<span class="hljs-functio
   <span class="hljs-built_in">console</span>.log(commitMessageValue)
   <span class="hljs-regexp">//</span>=&gt; <span class="hljs-string">'feat@UI: use animation when logout'</span>
 })
-</code></pre><h2 id="todo">TODO</h2>
-			<ul>
-				<li><p>Improve labels set</p>
+</code></pre><hr>
+			<p>You can also use the <code>commitAndPush</code> method, which will take the generated commit message and run the following commands for you:</p>
+			<ol>
+				<li><p><code>git add . --all</code></p>
 				</li>
-				<li><p>Add example property to &#39;CommitMessage&#39; type to show while typing actual commit message</p>
+				<li><p><code>git commit -m COMMIT_MESSAGE</code></p>
 				</li>
-				<li><p>Cache latest feature, bug or test message to reuse next time</p>
+				<li><p><code>git push</code></p>
 				</li>
-				<li><p>Each type has separate set of labels</p>
-				</li>
-			</ul>
+			</ol>
+			<pre><code><span class="hljs-keyword">import</span> { commitAndPush } <span class="hljs-keyword">from</span> <span class="hljs-string">'commit-message'</span>
+
+commitAndPush().<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(commitMessageValue: string)</span> =&gt;</span> {
+  <span class="hljs-built_in">console</span>.log(commitMessageValue)
+  <span class="hljs-regexp">//</span>=&gt; Pushed with message <span class="hljs-string">'feat@UI: use animation when logout'</span>
+})
+</code></pre>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
@@ -965,9 +970,11 @@ commitMessage().<span class="hljs-keyword">then</span>(<span class="hljs-functio
 					<section class="tsd-index-section ">
 						<h3>External modules</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-external-module"><a href="modules/_commitandpush_.html" class="tsd-kind-icon">"commit<wbr>And<wbr>Push"</a></li>
 							<li class="tsd-kind-external-module"><a href="modules/_constants_.html" class="tsd-kind-icon">"constants"</a></li>
 							<li class="tsd-kind-external-module"><a href="modules/_debug_.html" class="tsd-kind-icon">"debug"</a></li>
 							<li class="tsd-kind-external-module"><a href="modules/_index_.html" class="tsd-kind-icon">"index"</a></li>
+							<li class="tsd-kind-external-module"><a href="modules/_modules_execcommand_.html" class="tsd-kind-icon">"modules/exec<wbr>Command"</a></li>
 							<li class="tsd-kind-external-module"><a href="modules/_modules_getcommitlabel_.html" class="tsd-kind-icon">"modules/get<wbr>Commit<wbr>Label"</a></li>
 							<li class="tsd-kind-external-module"><a href="modules/_modules_getcommittype_.html" class="tsd-kind-icon">"modules/get<wbr>Commit<wbr>Type"</a></li>
 							<li class="tsd-kind-external-module"><a href="modules/_modules_promptinput_.html" class="tsd-kind-icon">"modules/prompt<wbr>Input"</a></li>
