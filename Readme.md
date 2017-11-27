@@ -13,17 +13,17 @@ The library uses `Inquirer` to take text or choice from the user. Generating the
 
 - STEP 1 - Choosing the type of the commit
 
-The user can select one among `'feat','fix', 'test', 'chore', 'refactor', 'doc', 'typing'`.
+The user can select one among:
 
-Default choice is `'feat'`
+```
+'feat', 'fix', 'test', 'chore', 'refactor', 'doc', 'typing'
+```
 
 - STEP 2 - Choosing the label of the commit
 
-If the type of the commit is one of `'feat','fix', 'test'`, then the user can select a label.
+User can select empty label, write his own label or use one of the suggested.
 
-The label is one of `'','start','end','perf','UI','style','important'`
-
-Default choice is empty string`''`
+Sugested labels depends on the selection in STEP1.
 
 - STEP 3 - Writing the commit message
 
@@ -41,5 +41,24 @@ import { commitMessage } from 'commit-message'
 commitMessage().then((commitMessageValue: string) => {
   console.log(commitMessageValue)
   //=> 'feat@UI: use animation when logout'
+})
+```
+
+---
+
+You can also use the `commitAndPush` method, which will take the generated commit message and run the following commands for you:
+
+1. `git add . --all`
+
+2. `git commit -m COMMIT_MESSAGE`
+
+3. `git push`
+
+```
+import { commitAndPush } from 'commit-message'
+
+commitAndPush().then((commitMessageValue: string) => {
+  console.log(commitMessageValue)
+  //=> Pushed with message 'feat@UI: use animation when logout'
 })
 ```
