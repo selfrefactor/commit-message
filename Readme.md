@@ -16,14 +16,27 @@ The library uses `Inquirer` to take text or choice from the user. Generating the
 The user can select one among:
 
 ```
-'feat', 'fix', 'test', 'chore', 'refactor', 'doc', 'typing'
+'feat' - Significant change in functionality
+
+'fix' - Fixing an issue
+
+'test' - Writing unit or end-to-end tests for specific feature
+
+'chore' - Update build tasks, lint files or similar(no production code change)
+
+'refactor' - Refactor code without affecting functionality
+
+'docs' - Edit the documentation of the project
+
+'typings' - Change Typescript definitions
+
 ```
 
 - STEP 2 - Choosing the label of the commit
 
 User can select empty label, write his own label or use one of the suggested.
 
-Sugested labels depends on the selection in STEP1.
+Suggested labels depends on the selection in STEP1.
 
 - STEP 3 - Writing the commit message
 
@@ -31,7 +44,7 @@ In this step the user writes the actual commit message.
 
 ## Install
 
-`yarn add https://github.com/selfrefactor/commit-message#0.3.0`
+`yarn add https://github.com/selfrefactor/commit-message#0.4.0`
 
 ## Usage
 
@@ -62,3 +75,7 @@ commitAndPush().then((commitMessageValue: string) => {
   //=> Pushed with message 'feat@UI: use animation when logout'
 })
 ```
+
+## PR
+
+I am very open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR. 

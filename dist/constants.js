@@ -5,37 +5,37 @@ exports.ASK_FOR_LABEL = 'Select label';
 exports.ASK_FOR_CUSTOM_LABEL = 'Write your label';
 exports.ASK_FOR_MESSAGE = 'What is the message of the commit?';
 exports.FEATURE = {
-    explanation: 'Significant change in the functionality',
+    explanation: 'Significant change in functionality',
     key: 'FEATURE',
     value: 'feat',
 };
 const TEST = {
-    explanation: 'writing unit or end-to-end tests for specific feature',
+    explanation: 'Writing unit or end-to-end tests for specific feature',
     key: 'TEST',
     value: 'test',
 };
 const FIX = {
-    explanation: 'fixing an issue. Start with: \'broken\', \'missing typing\' ...',
+    explanation: 'Fixing an issue',
     key: 'FIX',
     value: 'fix',
 };
 const TYPINGS = {
-    explanation: 'edit Typescript definitions',
+    explanation: 'Change Typescript definitions',
     key: 'TYPINGS',
     value: 'typings',
 };
 const SUPPORT = {
-    explanation: 'update build tasks, lint files or similar; no production code change.',
+    explanation: 'Update build tasks, lint files or similar(no production code change)',
     key: 'SUPPORT',
     value: 'chore',
 };
 const REFACTOR = {
-    explanation: 'refactor code without affecting functionality',
+    explanation: 'Refactor code without affecting functionality',
     key: 'REFACTOR',
     value: 'refactor',
 };
 const DOCS = {
-    explanation: 'add to the documentation of the project',
+    explanation: 'Edit the documentation of the project',
     key: 'DOCS',
     value: 'docs',
 };
