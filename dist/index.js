@@ -24,4 +24,6 @@ async function commitMessage() {
     return `${commitFirstPart}: ${commitMessageValue}`;
 }
 exports.commitMessage = commitMessage;
+var commitAndPush_1 = require("./commitAndPush");
+exports.commitAndPush = commitAndPush_1.commitAndPush;
 //# sourceMappingURL=index.js.map

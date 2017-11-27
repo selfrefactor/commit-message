@@ -28,3 +28,5 @@ export async function commitMessage(): Promise<string> {
 
   return `${commitFirstPart}: ${commitMessageValue}`
 }
+
+export { commitAndPush } from './commitAndPush'
