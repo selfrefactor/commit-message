@@ -5,10 +5,27 @@ export interface PromptSelect {
 }
 
 export function commitMessage(): Promise<string>
+export function commitAndPush(): Promise<void>
 
 export interface CommitType {
   key: string
   value: string
   explanation: string
-  needsLabel: boolean
+}
+
+export interface Label {
+  explanation: string
+  belongsTo: CommitType[]
+  value: string
+}
+
+export interface CommitType {
+  key: string
+  value: string
+  explanation: string
+}
+
+export interface GetLabel {
+  commitType: CommitType
+  labels: Label[]
 }

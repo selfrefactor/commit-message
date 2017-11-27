@@ -1,18 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const log_1 = require("log");
 const constants_1 = require("../constants");
+const promptInput_1 = require("./promptInput");
+const log_1 = require("log");
+const rambdax_1 = require("rambdax");
 const promptSelect_1 = require("./promptSelect");
-async function getCommitLabel(commitType) {
+async function getCommitLabel(input) {
     try {
-        log_1.log(commitType.key, commitType.explanation, 'info');
+        log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box');
+        const filteredLabels = input.labels.filter(singleLabel => {
+            return singleLabel.belongsTo.includes(input.commitType);
+        });
+        filteredLabels.map(singleLabel => {
+            if (singleLabel.value !== constants_1.EMPTY_LABEL.value) {
+                log_1.log(`${singleLabel.value} - ${singleLabel.explanation}`, '');
+            }
+        });
+        const filteredLabelsValue = rambdax_1.pluck('value', filteredLabels);
         const promptOptions = {
-            choices: constants_1.labels,
+            choices: filteredLabelsValue,
             default: '',
             question: constants_1.ASK_FOR_LABEL,
         };
         const label = await promptSelect_1.promptSelect(promptOptions);
-        return label;
+        return label === constants_1.CUSTOM_LABEL.value ?
+            await promptInput_1.promptInput(constants_1.ASK_FOR_CUSTOM_LABEL) :
+            label;
     }
     catch (err) {
         throw err;

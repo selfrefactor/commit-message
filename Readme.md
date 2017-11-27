@@ -43,13 +43,3 @@ commitMessage().then((commitMessageValue: string) => {
   //=> 'feat@UI: use animation when logout'
 })
 ```
-
-## TODO
-
-- Improve labels set
-
-- Add example property to 'CommitMessage' type to show while typing actual commit message
-
-- Cache latest feature, bug or test message to reuse next time
-
-- Each type has separate set of labels

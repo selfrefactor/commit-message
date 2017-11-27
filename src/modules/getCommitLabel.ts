@@ -1,21 +1,44 @@
+import {
+  ASK_FOR_CUSTOM_LABEL,
+  ASK_FOR_LABEL,
+  CUSTOM_LABEL,
+  EMPTY_LABEL,
+} from '../constants'
+import { promptInput } from './promptInput'
+
 import { log } from 'log'
-import { ASK_FOR_LABEL, labels } from '../constants'
-import { CommitType, PromptSelect } from '../typings'
+import { pluck } from 'rambdax'
+
+import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 
-export async function getCommitLabel(commitType: CommitType): Promise<string> {
+export async function getCommitLabel(input: GetLabel): Promise<string> {
   try {
-    log(commitType.key, commitType.explanation, 'info')
+    log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box')
+
+    const filteredLabels: Label[] = input.labels.filter(singleLabel => {
+      return singleLabel.belongsTo.includes(input.commitType)
+    })
+
+    filteredLabels.map(singleLabel => {
+      if (singleLabel.value !== EMPTY_LABEL.value) {
+        log(`${singleLabel.value} - ${singleLabel.explanation}`, '')
+      }
+    })
+
+    const filteredLabelsValue: string[] = pluck<string>('value', filteredLabels)
 
     const promptOptions: PromptSelect = {
-      choices: labels,
+      choices: filteredLabelsValue,
       default: '',
       question: ASK_FOR_LABEL,
     }
 
     const label = await promptSelect(promptOptions)
 
-    return label
+    return label === CUSTOM_LABEL.value ?
+      await promptInput(ASK_FOR_CUSTOM_LABEL) :
+      label
   } catch (err) {
     throw err
   }

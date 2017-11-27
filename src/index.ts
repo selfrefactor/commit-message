@@ -1,4 +1,4 @@
-import { ASK_FOR_MESSAGE } from './constants'
+import { ASK_FOR_MESSAGE, labels, typesOfCommit } from './constants'
 import { getCommitLabel } from './modules/getCommitLabel'
 import { getCommitType } from './modules/getCommitType'
 import { promptInput } from './modules/promptInput'
@@ -13,11 +13,12 @@ export async function commitMessage(): Promise<string> {
 
   showExplanations()
 
-  const commitType = await getCommitType()
+  const commitType = await getCommitType(typesOfCommit)
 
-  const commitLabel = commitType.needsLabel ?
-    await getCommitLabel(commitType) :
-    ''
+  const commitLabel = await getCommitLabel({
+    commitType,
+    labels,
+  })
 
   const commitFirstPart = commitLabel === '' ?
     `${commitType.value}` :

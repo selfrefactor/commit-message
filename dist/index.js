@@ -12,10 +12,11 @@ const showExplanations_1 = require("./modules/showExplanations");
  */
 async function commitMessage() {
     showExplanations_1.showExplanations();
-    const commitType = await getCommitType_1.getCommitType();
-    const commitLabel = commitType.needsLabel ?
-        await getCommitLabel_1.getCommitLabel(commitType) :
-        '';
+    const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
+    const commitLabel = await getCommitLabel_1.getCommitLabel({
+        commitType,
+        labels: constants_1.labels,
+    });
     const commitFirstPart = commitLabel === '' ?
         `${commitType.value}` :
         `${commitType.value}@${commitLabel}`;

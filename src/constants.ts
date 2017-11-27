@@ -1,62 +1,50 @@
-import { CommitType } from './typings'
+import { CommitType, Label } from './typings'
 
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
 export const ASK_FOR_LABEL = 'Select label'
+export const ASK_FOR_CUSTOM_LABEL = 'Write your label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
 export const FEATURE = {
   explanation: 'Significant change in the functionality',
   key: 'FEATURE',
-  needsLabel: true,
   value: 'feat',
 }
 
-export const TEST = {
+const TEST = {
   explanation: 'writing unit or end-to-end tests for specific feature',
   key: 'TEST',
-  needsLabel: true,
   value: 'test',
 }
 
-export const FIX = {
+const FIX = {
   explanation: 'fixing an issue. Start with: \'broken\', \'missing typing\' ...',
   key: 'FIX',
-  needsLabel: true,
   value: 'fix',
 }
 
-export const TYPINGS = {
+const TYPINGS = {
   explanation: 'edit Typescript definitions',
   key: 'TYPINGS',
-  needsLabel: false,
   value: 'typings',
 }
 
-export const SUPPORT = {
+const SUPPORT = {
   explanation: 'update build tasks, lint files or similar; no production code change.',
   key: 'SUPPORT',
-  needsLabel: false,
   value: 'chore',
 }
 
-export const REFACTOR = {
+const REFACTOR = {
   explanation: 'refactor code without affecting functionality',
   key: 'REFACTOR',
-  needsLabel: false,
   value: 'refactor',
 }
 
-export const DOCS = {
+const DOCS = {
   explanation: 'add to the documentation of the project',
   key: 'DOCS',
-  needsLabel: false,
   value: 'docs',
-}
-
-interface Label {
-  explanation: string
-  belongsTo: CommitType[]
-  value: string
 }
 
 export const typesOfCommit: CommitType[] = [
@@ -69,8 +57,6 @@ export const typesOfCommit: CommitType[] = [
   DOCS,
 ]
 
-export const typesOfCommitKeys: string[] = typesOfCommit.map(x => x.key)
-
 export const explanationOfTypes: string[] = [
   `${FIX.key} - ${FIX.explanation}`,
   `${FEATURE.key} - ${FEATURE.explanation}`,
@@ -81,13 +67,13 @@ export const explanationOfTypes: string[] = [
   `${SUPPORT.key} - ${SUPPORT.explanation}`,
 ]
 
-const EMPTY_LABEL = {
+export const EMPTY_LABEL = {
   belongsTo: typesOfCommit,
   explanation: 'No label',
   value: '',
 }
 
-const CUSTOM_LABEL = {
+export const CUSTOM_LABEL = {
   belongsTo: typesOfCommit,
   explanation: 'Write your own label',
   value: 'custom_label',
@@ -135,25 +121,22 @@ const IMPORTANT_LABEL = {
 }
 
 const SMALL_LABEL = {
-  belongsTo: typesOfCommit,
+  belongsTo: [
+    DOCS,
+    SUPPORT,
+    REFACTOR,
+  ],
   explanation: 'Small change is made',
   value: 'small',
 }
 
 const DEPENDENCY_LABEL = {
   belongsTo: [
-    FEATURE,
     FIX,
     SUPPORT,
   ],
   explanation: 'Add, remove or update dependencies',
   value: 'dependency',
-}
-
-const CHANGE_LABEL = {
-  belongsTo: [FEATURE],
-  explanation: 'Changing behaviour of current feature',
-  value: 'change',
 }
 
 const BREAK_LABEL = {
@@ -188,7 +171,6 @@ export const labels: Label[] = [
   STYLE_LABEL,
   UI_LABEL,
   PERFORMANCE_LABEL,
-  CHANGE_LABEL,
   TYPO_LABEL,
   DEPENDENCY_LABEL,
   PUBLISH_LABEL,

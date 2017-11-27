@@ -1,9 +1,12 @@
-import { ASK_FOR_TYPE, FEATURE, typesOfCommit, typesOfCommitKeys } from '../constants'
+import { ASK_FOR_TYPE, FEATURE } from '../constants'
 import { CommitType, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 
-export async function getCommitType(): Promise<CommitType> {
+export async function getCommitType(typesOfCommit: CommitType[]): Promise<CommitType> {
   try {
+
+    const typesOfCommitKeys: string[] = typesOfCommit.map(x => x.key)
+
     const promptOptions: PromptSelect = {
       choices: typesOfCommitKeys,
       default: FEATURE.key,

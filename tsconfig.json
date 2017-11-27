@@ -10,7 +10,8 @@
     "strictNullChecks": false,
     "target": "esnext",
     "lib": [
-      "es6"
+      "es6",
+      "es2017"
     ]
   },
   "include": [
