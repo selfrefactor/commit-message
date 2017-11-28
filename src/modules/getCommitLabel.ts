@@ -11,18 +11,12 @@ import { log } from 'log'
 import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 
-function pluck<T>(keyToPluck: string, arr: object[]): T[] {
-  const willReturn = []
+const PADDING_LIMIT = 12
 
-  arr.map(
-    val => {
-      if (!(val[keyToPluck] === undefined)) {
-        willReturn.push(val[keyToPluck])
-      }
-    },
-  )
+const getPadding = (str: string): string => {
+  const howLong = PADDING_LIMIT - str.length
 
-  return willReturn
+  return Array(howLong).fill(' ').join('')
 }
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {
@@ -33,21 +27,22 @@ export async function getCommitLabel(input: GetLabel): Promise<string> {
       return singleLabel.belongsTo.includes(input.commitType)
     })
 
-    filteredLabels.map(singleLabel => {
-      if (singleLabel.value !== EMPTY_LABEL.value) {
-        log(`${singleLabel.value} - ${singleLabel.explanation}`, '')
-      }
+    const filteredLabelsValue: string[] = filteredLabels.map(singleLabel => {
+      const padding = getPadding(singleLabel.value)
+      return `${singleLabel.value}${padding}|-| ${singleLabel.explanation}`
     })
-
-    const filteredLabelsValue: string[] = pluck<string>('value', filteredLabels)
 
     const promptOptions: PromptSelect = {
       choices: filteredLabelsValue,
-      default: '',
+      default: filteredLabelsValue[0],
       question: ASK_FOR_LABEL,
     }
 
-    const label = await promptSelect(promptOptions)
+    const labelRaw = await promptSelect(promptOptions)
+
+    const labelIndex = filteredLabelsValue.indexOf(labelRaw)
+
+    const label = filteredLabels[labelIndex].value
 
     return label === CUSTOM_LABEL.value ?
       await promptInput(ASK_FOR_CUSTOM_LABEL) :
