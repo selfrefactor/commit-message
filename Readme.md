@@ -44,7 +44,7 @@ In this step the user writes the actual commit message.
 
 ## Install
 
-`yarn add https://github.com/selfrefactor/commit-message#0.6.0`
+`yarn add https://github.com/selfrefactor/commit-message#0.7.0`
 
 ## Usage
 
