@@ -111,7 +111,6 @@ const STYLE_LABEL = {
   belongsTo: [
     FIX,
     FEATURE,
-    TEST,
   ],
   explanation: 'CSS related changes',
   value: 'style',

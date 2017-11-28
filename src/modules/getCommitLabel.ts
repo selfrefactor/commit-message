@@ -2,7 +2,6 @@ import {
   ASK_FOR_CUSTOM_LABEL,
   ASK_FOR_LABEL,
   CUSTOM_LABEL,
-  EMPTY_LABEL,
 } from '../constants'
 import { promptInput } from './promptInput'
 

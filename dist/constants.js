@@ -96,7 +96,6 @@ const STYLE_LABEL = {
     belongsTo: [
         FIX,
         exports.FEATURE,
-        TEST,
     ],
     explanation: 'CSS related changes',
     value: 'style',
