@@ -50,21 +50,21 @@ const DOCS = {
 export const typesOfCommit: CommitType[] = [
   FEATURE,
   FIX,
+  SUPPORT,
   TEST,
   REFACTOR,
   TYPINGS,
-  SUPPORT,
   DOCS,
 ]
 
 export const explanationOfTypes: string[] = [
-  `${FIX.key} - ${FIX.explanation}`,
   `${FEATURE.key} - ${FEATURE.explanation}`,
+  `${FIX.key} - ${FIX.explanation}`,
+  `${SUPPORT.key} - ${SUPPORT.explanation}`,
   `${TEST.key} - ${TEST.explanation}`,
   `${REFACTOR.key} - ${REFACTOR.explanation}`,
   `${TYPINGS.key} - ${TYPINGS.explanation}`,
   `${DOCS.key} - ${DOCS.explanation}`,
-  `${SUPPORT.key} - ${SUPPORT.explanation}`,
 ]
 
 export const EMPTY_LABEL = {
@@ -96,6 +96,15 @@ const UI_LABEL = {
   ],
   explanation: 'Frontend related changes',
   value: 'UI',
+}
+
+const EXTEND_LABEL = {
+  belongsTo: [
+    FEATURE,
+    SUPPORT,
+  ],
+  explanation: 'Build upon current behaviour',
+  value: 'extend',
 }
 
 const STYLE_LABEL = {
@@ -161,9 +170,15 @@ const PUBLISH_LABEL = {
 }
 
 const TYPO_LABEL = {
-  belongsTo: [FIX],
+  belongsTo: [FIX, DOCS, TYPINGS],
   explanation: 'Fixing typo',
   value: 'typo',
+}
+
+const USAGE_LABEL = {
+  belongsTo: [DOCS],
+  explanation: 'Edit usage information',
+  value: 'usage',
 }
 
 export const labels: Label[] = [
@@ -175,8 +190,10 @@ export const labels: Label[] = [
   DEPENDENCY_LABEL,
   PUBLISH_LABEL,
   EXAMPLES_LABEL,
-  BREAK_LABEL,
+  USAGE_LABEL,
+  EXTEND_LABEL,
   IMPORTANT_LABEL,
+  BREAK_LABEL,
   SMALL_LABEL,
   CUSTOM_LABEL,
 ]

@@ -42,20 +42,20 @@ const DOCS = {
 exports.typesOfCommit = [
     exports.FEATURE,
     FIX,
+    SUPPORT,
     TEST,
     REFACTOR,
     TYPINGS,
-    SUPPORT,
     DOCS,
 ];
 exports.explanationOfTypes = [
-    `${FIX.key} - ${FIX.explanation}`,
     `${exports.FEATURE.key} - ${exports.FEATURE.explanation}`,
+    `${FIX.key} - ${FIX.explanation}`,
+    `${SUPPORT.key} - ${SUPPORT.explanation}`,
     `${TEST.key} - ${TEST.explanation}`,
     `${REFACTOR.key} - ${REFACTOR.explanation}`,
     `${TYPINGS.key} - ${TYPINGS.explanation}`,
     `${DOCS.key} - ${DOCS.explanation}`,
-    `${SUPPORT.key} - ${SUPPORT.explanation}`,
 ];
 exports.EMPTY_LABEL = {
     belongsTo: exports.typesOfCommit,
@@ -83,6 +83,14 @@ const UI_LABEL = {
     ],
     explanation: 'Frontend related changes',
     value: 'UI',
+};
+const EXTEND_LABEL = {
+    belongsTo: [
+        exports.FEATURE,
+        SUPPORT,
+    ],
+    explanation: 'Build upon current behaviour',
+    value: 'extend',
 };
 const STYLE_LABEL = {
     belongsTo: [
@@ -140,9 +148,14 @@ const PUBLISH_LABEL = {
     value: 'publish',
 };
 const TYPO_LABEL = {
-    belongsTo: [FIX],
+    belongsTo: [FIX, DOCS, TYPINGS],
     explanation: 'Fixing typo',
     value: 'typo',
+};
+const USAGE_LABEL = {
+    belongsTo: [DOCS],
+    explanation: 'Edit usage information',
+    value: 'usage',
 };
 exports.labels = [
     exports.EMPTY_LABEL,
@@ -153,8 +166,10 @@ exports.labels = [
     DEPENDENCY_LABEL,
     PUBLISH_LABEL,
     EXAMPLES_LABEL,
-    BREAK_LABEL,
+    USAGE_LABEL,
+    EXTEND_LABEL,
     IMPORTANT_LABEL,
+    BREAK_LABEL,
     SMALL_LABEL,
     exports.CUSTOM_LABEL,
 ];
