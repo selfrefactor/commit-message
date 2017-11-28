@@ -2697,21 +2697,11 @@ qs@~6.5.1:
   version "1.0.0"
   resolved "https://github.com/selfrefactor/rambda#e20c65fb2289e18a86e106483fd2f947ae7f42cc"
 
-"rambda@https://github.com/selfrefactor/rambda#1.0.4":
-  version "1.0.3"
-  resolved "https://github.com/selfrefactor/rambda#5fb9f1a2c91b708e4c760ec319cbb6cf6f1cf3d6"
-
 rambdax@^0.6.9:
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-0.6.10.tgz#096d8df8f4a0b7e82e6b1057a1867c6f11f6ea70"
   dependencies:
     rambda "https://github.com/selfrefactor/rambda#1.0.3"
-
-rambdax@^0.7.6:
-  version "0.7.6"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-0.7.6.tgz#96361d7b935b276706b269480a0abd815aba0580"
-  dependencies:
-    rambda "https://github.com/selfrefactor/rambda#1.0.4"
 
 "rambdax@https://github.com/selfrefactor/rambdax#0.7.2":
   version "0.6.9"

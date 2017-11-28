@@ -3,8 +3,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const constants_1 = require("../constants");
 const promptInput_1 = require("./promptInput");
 const log_1 = require("log");
-const rambdax_1 = require("rambdax");
 const promptSelect_1 = require("./promptSelect");
+function pluck(keyToPluck, arr) {
+    const willReturn = [];
+    arr.map(val => {
+        if (!(val[keyToPluck] === undefined)) {
+            willReturn.push(val[keyToPluck]);
+        }
+    });
+    return willReturn;
+}
 async function getCommitLabel(input) {
     try {
         log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box');
@@ -16,7 +24,7 @@ async function getCommitLabel(input) {
                 log_1.log(`${singleLabel.value} - ${singleLabel.explanation}`, '');
             }
         });
-        const filteredLabelsValue = rambdax_1.pluck('value', filteredLabels);
+        const filteredLabelsValue = pluck('value', filteredLabels);
         const promptOptions = {
             choices: filteredLabelsValue,
             default: '',

@@ -10,8 +10,7 @@
   "private": false,
   "dependencies": {
     "inquirer": "^4.0.0",
-    "log": "https://github.com/selfrefactor/log#0.3.0",
-    "rambdax": "^0.7.6"
+    "log": "https://github.com/selfrefactor/log#0.3.0"
   },
   "devDependencies": {
     "@types/inquirer": "^0.0.35",

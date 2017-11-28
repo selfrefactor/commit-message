@@ -7,10 +7,23 @@ import {
 import { promptInput } from './promptInput'
 
 import { log } from 'log'
-import { pluck } from 'rambdax'
 
 import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
+
+function pluck<T>(keyToPluck: string, arr: object[]): T[] {
+  const willReturn = []
+
+  arr.map(
+    val => {
+      if (!(val[keyToPluck] === undefined)) {
+        willReturn.push(val[keyToPluck])
+      }
+    },
+  )
+
+  return willReturn
+}
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {
   try {
