@@ -21,7 +21,7 @@ const getPadding = (str: string): string => {
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {
   try {
-    log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box')
+    log(`${input.commitType.value} - ${input.commitType.explanation}`, 'box')
 
     const filteredLabels: Label[] = input.labels.filter(singleLabel => {
       return singleLabel.belongsTo.includes(input.commitType)
@@ -29,6 +29,7 @@ export async function getCommitLabel(input: GetLabel): Promise<string> {
 
     const filteredLabelsValue: string[] = filteredLabels.map(singleLabel => {
       const padding = getPadding(singleLabel.value)
+
       return `${singleLabel.value}${padding}|-| ${singleLabel.explanation}`
     })
 

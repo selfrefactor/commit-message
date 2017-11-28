@@ -11,7 +11,7 @@ const getPadding = (str) => {
 };
 async function getCommitLabel(input) {
     try {
-        log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box');
+        log_1.log(`${input.commitType.value} - ${input.commitType.explanation}`, 'box');
         const filteredLabels = input.labels.filter(singleLabel => {
             return singleLabel.belongsTo.includes(input.commitType);
         });

@@ -7,4 +7,5 @@ export function showExplanations(): void {
     log(explanation, '')
   })
   log('sep')
+  log('sep')
 }
