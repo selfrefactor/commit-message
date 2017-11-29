@@ -99,3 +99,15 @@ Custom labels belong to `feat, fix, test` commit types.
 ## PR
 
 I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR. 
+
+## TODO
+
+- support format `type(label)` under flag
+
+- list of example commits that should be handled with this library
+
+```
+refactor@perf switch to lodash alternative
+
+chore@perf use uglify plugin
+````
