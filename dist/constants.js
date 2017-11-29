@@ -132,7 +132,7 @@ const SMALL_LABEL = {
         SUPPORT,
         REFACTOR,
     ],
-    explanation: '⚪ Small change is made',
+    explanation: '🆗 Small change is made',
     value: 'small',
 };
 const DEPENDENCY_LABEL = {
@@ -155,7 +155,7 @@ const BREAK_LABEL = {
 };
 const EXAMPLES_LABEL = {
     belongsTo: [DOCS],
-    explanation: '📤 Add, remove or update examples in documentation',
+    explanation: '📝 Add, remove or update examples in documentation',
     value: 'examples',
 };
 const PUBLISH_LABEL = {
@@ -165,7 +165,7 @@ const PUBLISH_LABEL = {
 };
 const TYPO_LABEL = {
     belongsTo: [FIX, DOCS, TYPINGS],
-    explanation: '🆗 Fixing typo',
+    explanation: '🔠 Fixing typo',
     value: 'typo',
 };
 const USAGE_LABEL = {
