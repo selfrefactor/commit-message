@@ -111,3 +111,24 @@ refactor@perf switch to lodash alternative
 
 chore@perf use uglify plugin
 ````
+
+- support extended custom label settings
+
+```
+  "classNames": {
+    "labels": [
+      "choose-word",
+      "navigation",
+      "root"
+    ],
+    "support"[
+      "webpack"
+    ],
+    "docs"[
+      "todo",
+      "build"
+    ]
+  },
+```
+
+- Prepend custom labels with '- custom label' and append with emoji
