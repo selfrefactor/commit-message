@@ -1,4 +1,7 @@
+import { getCustomLabels } from './modules/getCustomLabels'
 import { CommitType, Label } from './typings'
+
+import { constantCase } from 'string-fn'
 
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
 export const ASK_FOR_LABEL = 'Select label'
@@ -47,6 +50,12 @@ const DOCS = {
   value: 'docs',
 }
 
+const REVERT = {
+  explanation: 'Revert to previous functionality',
+  key: 'REVERT',
+  value: 'revert',
+}
+
 export const typesOfCommit: CommitType[] = [
   FEATURE,
   FIX,
@@ -55,6 +64,7 @@ export const typesOfCommit: CommitType[] = [
   REFACTOR,
   TYPINGS,
   DOCS,
+  REVERT,
 ]
 
 export const explanationOfTypes: string[] = [
@@ -116,6 +126,14 @@ const STYLE_LABEL = {
   value: 'style',
 }
 
+const ISSUE_LABEL = {
+  belongsTo: [
+    FIX,
+  ],
+  explanation: 'Close issue',
+  value: 'issue',
+}
+
 const IMPORTANT_LABEL = {
   belongsTo: [
     FIX,
@@ -124,7 +142,7 @@ const IMPORTANT_LABEL = {
     TYPINGS,
     SUPPORT,
   ],
-  explanation: 'Commit has higher significance',
+  explanation: 'Commit with higher significance',
   value: 'important',
 }
 
@@ -140,8 +158,10 @@ const SMALL_LABEL = {
 
 const DEPENDENCY_LABEL = {
   belongsTo: [
+    FEATURE,
     FIX,
     SUPPORT,
+    REFACTOR,
   ],
   explanation: 'Add, remove or update dependencies',
   value: 'dependency',
@@ -180,11 +200,31 @@ const USAGE_LABEL = {
   value: 'usage',
 }
 
+const customLabelsRaw = getCustomLabels()
+const customLabels: Label[] = []
+if (customLabelsRaw !== false) {
+  customLabelsRaw.labels.map(singleLabel => {
+    const x: Label = {
+      belongsTo: [
+        FEATURE,
+        FIX,
+        TEST,
+      ],
+      explanation: constantCase(singleLabel),
+      value: singleLabel,
+    }
+
+    customLabels.push(x)
+  })
+}
+
 export const labels: Label[] = [
   EMPTY_LABEL,
+  ...customLabels,
   STYLE_LABEL,
   UI_LABEL,
   PERFORMANCE_LABEL,
+  ISSUE_LABEL,
   TYPO_LABEL,
   DEPENDENCY_LABEL,
   PUBLISH_LABEL,

@@ -10,7 +10,8 @@
   "private": false,
   "dependencies": {
     "inquirer": "^4.0.0",
-    "log": "https://github.com/selfrefactor/log#0.3.0"
+    "log": "https://github.com/selfrefactor/log#0.3.0",
+    "string-fn": "^1.5.1"
   },
   "commitMessage": {
     "labels": [

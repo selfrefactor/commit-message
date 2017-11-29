@@ -10,12 +10,15 @@ import { log } from 'log'
 import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 
-const PADDING_LIMIT = 12
+const PADDING_LIMIT = 15
 
 const getPadding = (str: string): string => {
+
   const howLong = PADDING_LIMIT - str.length
 
-  return Array(howLong).fill(' ').join('')
+  return howLong > 0 ?
+    Array(howLong).fill(' ').join('') :
+    ''
 }
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {

@@ -76,6 +76,26 @@ commitAndPush().then((commitMessageValue: string) => {
 })
 ```
 
+## Custom labels
+
+Add `commitMessage` field in your `package.json` like so:
+
+```
+{
+  ...
+  "commitMessage":{
+    "labels":[
+      "foo",
+      "bar",
+      "baz"
+    ]
+  }
+  ...
+}
+```
+
+Custom labels belong to `feat, fix, test` commit types.
+
 ## PR
 
-I am very open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR. 
+I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR. 

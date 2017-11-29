@@ -4,10 +4,12 @@ const constants_1 = require("../constants");
 const promptInput_1 = require("./promptInput");
 const log_1 = require("log");
 const promptSelect_1 = require("./promptSelect");
-const PADDING_LIMIT = 12;
+const PADDING_LIMIT = 15;
 const getPadding = (str) => {
     const howLong = PADDING_LIMIT - str.length;
-    return Array(howLong).fill(' ').join('');
+    return howLong > 0 ?
+        Array(howLong).fill(' ').join('') :
+        '';
 };
 async function getCommitLabel(input) {
     try {
