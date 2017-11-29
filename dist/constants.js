@@ -49,9 +49,9 @@ const REVERT = {
 exports.typesOfCommit = [
     exports.FEATURE,
     FIX,
-    SUPPORT,
     TEST,
     REFACTOR,
+    SUPPORT,
     TYPINGS,
     DOCS,
     REVERT,
