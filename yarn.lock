@@ -2693,6 +2693,10 @@ qs@~6.5.1:
     amqplib "^0.5.1"
     rambda "https://github.com/selfrefactor/rambda#1.0.3"
 
+rambda@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-1.0.5.tgz#c5a79363eea26d139b9af001bf1af983aa0fb22a"
+
 "rambda@https://github.com/selfrefactor/rambda#1.0.3":
   version "1.0.0"
   resolved "https://github.com/selfrefactor/rambda#e20c65fb2289e18a86e106483fd2f947ae7f42cc"
