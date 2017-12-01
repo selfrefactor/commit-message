@@ -18,6 +18,12 @@
       "choose-word",
       "learning-meme",
       "root"
+    ],
+    "feature": [
+      "webpack"
+    ],
+    "support": [
+      "webpack"
     ]
   },
   "devDependencies": {

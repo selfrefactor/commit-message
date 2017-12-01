@@ -100,35 +100,39 @@ Custom labels belong to `feat, fix, test` commit types.
 
 I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR. 
 
-## TODO
+## Support format `type(label): COMMIT_MESSAGE`
 
-- support format `type(label)` under flag
-
-- list of example commits that should be handled with this library
+You just need to pass `true` like so:
 
 ```
-refactor@perf switch to lodash alternative
+commitMessage(true).then((commitMessageValue: string) => {
+  console.log(commitMessageValue)
+  //=> 'feat(UI): use animation when logout'
+})
+```
 
-chore@perf use uglify plugin
-````
+## Support extended custom label settings
 
-- support extended custom label settings
+You can further customize the behaviour of this library with setting `commitMessage` field in your `package.json`
 
 ```
-  "classNames": {
+ "commitMessage": {
     "labels": [
       "choose-word",
-      "navigation",
+      "learning-meme",
       "root"
     ],
-    "support"[
-      "webpack"
+    "feature": [
+      "speed"
     ],
-    "docs"[
-      "todo",
-      "build"
+    "support": [
+      "webpack"
     ]
-  },
+  }
 ```
 
-- Prepend custom labels with '- custom label' and append with emoji
+In the above example, all `labels` members will be labels in `feat, fix, test` commit types.
+
+All `feature` members will be labels in `feat` commit type. 
+
+All `support` members will be labels in `chore` commit type. 
