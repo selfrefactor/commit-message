@@ -10,7 +10,7 @@ const showExplanations_1 = require("./modules/showExplanations");
  *
  * @returns {Promise<string>}
  */
-async function commitMessage() {
+async function commitMessage(flag) {
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
     const commitLabel = await getCommitLabel_1.getCommitLabel({
@@ -19,7 +19,9 @@ async function commitMessage() {
     });
     const commitFirstPart = commitLabel === '' ?
         `${commitType.value}` :
-        `${commitType.value}@${commitLabel}`;
+        flag === true ?
+            `${commitType.value}(${commitLabel})` :
+            `${commitType.value}@${commitLabel}`;
     const commitMessageValue = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
     return `${commitFirstPart}: ${commitMessageValue}`;
 }

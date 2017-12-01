@@ -9,7 +9,7 @@ import { showExplanations } from './modules/showExplanations'
  *
  * @returns {Promise<string>}
  */
-export async function commitMessage(): Promise<string> {
+export async function commitMessage(flag?: boolean): Promise<string> {
 
   showExplanations()
 
@@ -22,7 +22,9 @@ export async function commitMessage(): Promise<string> {
 
   const commitFirstPart = commitLabel === '' ?
     `${commitType.value}` :
-    `${commitType.value}@${commitLabel}`
+    flag === true ?
+      `${commitType.value}(${commitLabel})` :
+      `${commitType.value}@${commitLabel}`
 
   const commitMessageValue = await promptInput(ASK_FOR_MESSAGE)
 
