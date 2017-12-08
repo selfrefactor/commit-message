@@ -3,7 +3,7 @@ import {type} from 'rambda'
 
 test('', () => {
   const result = getCustomLabels()
-
+  
   expect(
     type(result),
   ).toEqual('Object')

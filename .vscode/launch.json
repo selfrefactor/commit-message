@@ -13,6 +13,21 @@
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest Tests",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+          "-i",
+          "__tests__"
+      ],
+      "internalConsoleOptions": "openOnSessionStart",
+      "outFiles": [
+          "${workspaceRoot}/dist/**/*"
+      ]
     }
   ]
 }
