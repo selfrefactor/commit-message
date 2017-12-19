@@ -2,11 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 const path_1 = require("path");
+const HOW_DEEP = 4;
 const getPath = () => {
     let flag = true;
-    let willReturn;
+    let willReturn = false;
     const basePath = process.cwd();
-    Array(4).fill('')
+    Array(HOW_DEEP).fill('')
         .map((_, i) => {
         if (flag) {
             const filePath = path_1.resolve(basePath, `${'../'.repeat(i)}/package.json`);

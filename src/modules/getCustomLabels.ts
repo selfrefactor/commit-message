@@ -2,13 +2,15 @@ import { existsSync, readFileSync } from 'fs'
 import { join, resolve } from 'path'
 import { CustomLabel } from '../typings'
 
+const HOW_DEEP = 4
+
 const getPath = (): false | string => {
   let flag = true
-  let willReturn
+  let willReturn: any = false
 
   const basePath = process.cwd()
 
-  Array(4).fill('')
+  Array(HOW_DEEP).fill('')
     .map((_, i) => {
       if (flag) {
         const filePath = resolve(basePath, `${'../'.repeat(i)}/package.json`)

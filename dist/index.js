@@ -19,7 +19,7 @@ async function commitMessage(flag) {
     });
     const commitFirstPart = commitLabel === '' ?
         `${commitType.value}` :
-        flag === true ?
+        flag ?
             `${commitType.value}(${commitLabel})` :
             `${commitType.value}@${commitLabel}`;
     const commitMessageValue = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);

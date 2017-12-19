@@ -22,7 +22,7 @@ export async function commitMessage(flag?: boolean): Promise<string> {
 
   const commitFirstPart = commitLabel === '' ?
     `${commitType.value}` :
-    flag === true ?
+    flag ?
       `${commitType.value}(${commitLabel})` :
       `${commitType.value}@${commitLabel}`
 
