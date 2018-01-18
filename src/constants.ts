@@ -107,7 +107,7 @@ const STYLE_LABEL = {
     FIX,
     FEATURE,
   ],
-  explanation: '💋  CSS related changes',
+  explanation: '💋  CSS/LESS related changes',
   value: 'style',
 }
 
@@ -133,6 +133,9 @@ const IMPORTANT_LABEL = {
 
 const SMALL_LABEL = {
   belongsTo: [
+    FEATURE,
+    TEST,
+    TYPINGS,
     DOCS,
     SUPPORT,
   ],
@@ -172,7 +175,7 @@ const PUBLISH_LABEL = {
 }
 
 const TYPO_LABEL = {
-  belongsTo: [FIX, DOCS, TYPINGS],
+  belongsTo: [FIX, DOCS],
   explanation: '🔠  Fix a typo',
   value: 'typo',
 }
