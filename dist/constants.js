@@ -163,14 +163,19 @@ const REMOVE_LABEL = {
     explanation: '🔪  Remove feature or test',
     value: 'cut',
 };
-const START_LABEL = {
-    belongsTo: [exports.FEATURE],
-    explanation: '▶️  Begin developing a new feature',
+exports.START_LABEL = {
+    belongsTo: [exports.FEATURE, SUPPORT, FIX],
+    explanation: '▶️  Begin developing a new feature, bugfix or support script',
     value: 'start',
 };
-const STOP_LABEL = {
-    belongsTo: [exports.FEATURE],
-    explanation: '⏹  Stop developing a new feature',
+exports.PROGRESS_LABEL = {
+    belongsTo: [exports.FEATURE, SUPPORT, FIX],
+    explanation: '🐌  Continue developing a new feature, bugfix or support script',
+    value: 'progress',
+};
+exports.STOP_LABEL = {
+    belongsTo: [exports.FEATURE, SUPPORT, FIX],
+    explanation: '⏹  Stop developing a new feature, bugfix or support script',
     value: 'stop',
 };
 const customLabelsRaw = getCustomLabels_1.getCustomLabels();
@@ -216,8 +221,8 @@ exports.labels = [
     PERFORMANCE_LABEL,
     ISSUE_LABEL,
     TYPO_LABEL,
-    START_LABEL,
-    STOP_LABEL,
+    exports.START_LABEL,
+    exports.STOP_LABEL,
     DEPENDENCY_LABEL,
     PUBLISH_LABEL,
     EXAMPLES_LABEL,

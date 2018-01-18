@@ -189,15 +189,21 @@ const REMOVE_LABEL = {
   value: 'cut',
 }
 
-const START_LABEL = {
-  belongsTo: [FEATURE],
-  explanation: '▶️  Begin developing a new feature',
+export const START_LABEL = {
+  belongsTo: [FEATURE, SUPPORT, FIX],
+  explanation: '▶️  Begin developing a new feature, bugfix or support script',
   value: 'start',
 }
 
-const STOP_LABEL = {
-  belongsTo: [FEATURE],
-  explanation: '⏹  Stop developing a new feature',
+export const PROGRESS_LABEL = {
+  belongsTo: [FEATURE, SUPPORT, FIX],
+  explanation: '🐌  Continue developing a new feature, bugfix or support script',
+  value: 'progress',
+}
+
+export const STOP_LABEL = {
+  belongsTo: [FEATURE, SUPPORT, FIX],
+  explanation: '⏹  Stop developing a new feature, bugfix or support script',
   value: 'stop',
 }
 

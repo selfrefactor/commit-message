@@ -1,7 +1,8 @@
-import { ASK_FOR_MESSAGE, labels, typesOfCommit } from './constants'
+import { ASK_FOR_MESSAGE, labels, START_LABEL, typesOfCommit } from './constants'
 import { getCommitLabel } from './modules/getCommitLabel'
 import { getCommitType } from './modules/getCommitType'
 import { promptInput } from './modules/promptInput'
+import { saveWorkInProgress } from './modules/saveWorkInProgress'
 import { showExplanations } from './modules/showExplanations'
 
 /**
@@ -27,6 +28,10 @@ export async function commitMessage(flag?: boolean): Promise<string> {
       `${commitType.value}@${commitLabel}`
 
   const commitMessageValue = await promptInput(ASK_FOR_MESSAGE)
+
+  if (commitLabel === START_LABEL.value) {
+    saveWorkInProgress(commitMessageValue)
+  }
 
   return `${commitFirstPart}: ${commitMessageValue}`
 }

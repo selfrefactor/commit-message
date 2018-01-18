@@ -4,6 +4,7 @@ const constants_1 = require("./constants");
 const getCommitLabel_1 = require("./modules/getCommitLabel");
 const getCommitType_1 = require("./modules/getCommitType");
 const promptInput_1 = require("./modules/promptInput");
+const saveWorkInProgress_1 = require("./modules/saveWorkInProgress");
 const showExplanations_1 = require("./modules/showExplanations");
 /**
  * It ask the user for type and text of commit and returns the final commit message.
@@ -23,6 +24,9 @@ async function commitMessage(flag) {
             `${commitType.value}(${commitLabel})` :
             `${commitType.value}@${commitLabel}`;
     const commitMessageValue = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
+    if (commitLabel === constants_1.START_LABEL.value) {
+        saveWorkInProgress_1.saveWorkInProgress(commitMessageValue);
+    }
     return `${commitFirstPart}: ${commitMessageValue}`;
 }
 exports.commitMessage = commitMessage;
