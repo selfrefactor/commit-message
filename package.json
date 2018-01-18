@@ -16,8 +16,7 @@
 	"commitMessage": {
 		"labels": [
 			"choose-word",
-			"learning-meme",
-			"root"
+			"learning-meme"
 		],
 		"feature": [
 			"webpack"
@@ -25,6 +24,9 @@
 		"support": [
 			"webpack"
 		]
+	},
+	"bin": {
+		"commit": "./bin/commit.js"
 	},
 	"devDependencies": {
 		"@types/inquirer": "^0.0.36",
