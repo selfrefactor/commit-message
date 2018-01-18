@@ -1,65 +1,65 @@
 {
-  "name": "commit-message",
-  "version": "0.1.0",
-  "description": "commit-message",
-  "main": "./dist/index.js",
-  "typings": "./src/index.d.ts",
-  "repository": "git@github.com:selfrefactor/commit-message.git",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "inquirer": "^4.0.0",
-    "log": "https://github.com/selfrefactor/log#0.3.0",
-    "string-fn": "^1.5.1"
-  },
-  "commitMessage": {
-    "labels": [
-      "choose-word",
-      "learning-meme",
-      "root"
-    ],
-    "feature": [
-      "webpack"
-    ],
-    "support": [
-      "webpack"
-    ]
-  },
-  "devDependencies": {
-    "@types/inquirer": "^0.0.35",
-    "@types/jest": "^21.1.8",
-    "@types/node": "^8.0.53",
-    "fs-extra": "^4.0.2",
-    "jest": "^21.3.0-beta.9",
-    "last-used": "https://github.com/selfrefactor/last-used#0.5.0",
-    "rambda": "^1.0.5",
-    "ts-jest": "^21.2.3",
-    "tslint": "^5.8.0",
-    "typescript": "^2.7.0-dev.20171124",
-    "watch-fn": "https://github.com/selfrefactor/watch-fn#0.6.2"
-  },
-  "scripts": {
-    "build": "tsc -p .",
-    "clean": "node files/clean",
-    "cover": "jest __tests__ --coverage",
-    "dev": "jest __tests__ --watch",
-    "docs": "typedoc --readme Readme.md --theme minimal --out docs src&&touch docs/.nojekyll",
-    "rename": "node files/rename",
-    "start": "node files/watch",
-    "test": "jest"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json"
-    ]
-  }
+	"name": "commit-message",
+	"version": "0.1.0",
+	"description": "commit-message",
+	"main": "./dist/index.js",
+	"typings": "./src/index.d.ts",
+	"repository": "git@github.com:selfrefactor/commit-message.git",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"inquirer": "^5.0.0",
+		"log": "https://github.com/selfrefactor/log#0.4.0",
+		"string-fn": "^1.5.2"
+	},
+	"commitMessage": {
+		"labels": [
+			"choose-word",
+			"learning-meme",
+			"root"
+		],
+		"feature": [
+			"webpack"
+		],
+		"support": [
+			"webpack"
+		]
+	},
+	"devDependencies": {
+		"@types/inquirer": "^0.0.36",
+		"@types/jest": "^22.0.1",
+		"@types/node": "^9.3.0",
+		"fs-extra": "^5.0.0",
+		"jest": "^22.1.2",
+		"last-used": "https://github.com/selfrefactor/last-used#0.5.0",
+		"rambda": "^1.0.9",
+		"ts-jest": "^22.0.1",
+		"tslint": "^5.9.1",
+		"typescript": "^2.7.0-insiders.20180108",
+		"watch-fn": "https://github.com/selfrefactor/watch-fn#0.7.0"
+	},
+	"scripts": {
+		"build": "tsc -p .",
+		"clean": "node files/clean",
+		"cover": "jest __tests__ --coverage",
+		"dev": "jest __tests__ --watch",
+		"docs": "typedoc --readme Readme.md --theme minimal --out docs src&&touch docs/.nojekyll",
+		"rename": "node files/rename",
+		"start": "node files/watch",
+		"test": "jest"
+	},
+	"jest": {
+		"transform": {
+			"^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json"
+		]
+	}
 }

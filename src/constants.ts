@@ -38,33 +38,19 @@ const SUPPORT = {
   value: 'chore',
 }
 
-const REFACTOR = {
-  explanation: '⛓  Change of code style',
-  key: 'REFACTOR',
-  value: 'refactor',
-}
-
 const DOCS = {
   explanation: '📚️  Edit the documentation of the project',
   key: 'DOCS',
   value: 'docs',
 }
 
-const REVERT = {
-  explanation: '🔙  Revert to previous state',
-  key: 'REVERT',
-  value: 'revert',
-}
-
 export const typesOfCommit: CommitType[] = [
   FEATURE,
   FIX,
   TEST,
-  REFACTOR,
   SUPPORT,
   TYPINGS,
   DOCS,
-  REVERT,
 ]
 
 export const explanationOfTypes: string[] = [
@@ -72,7 +58,6 @@ export const explanationOfTypes: string[] = [
   `${FIX.key} - ${FIX.explanation}`,
   `${SUPPORT.key} - ${SUPPORT.explanation}`,
   `${TEST.key} - ${TEST.explanation}`,
-  `${REFACTOR.key} - ${REFACTOR.explanation}`,
   `${TYPINGS.key} - ${TYPINGS.explanation}`,
   `${DOCS.key} - ${DOCS.explanation}`,
 ]
@@ -150,7 +135,6 @@ const SMALL_LABEL = {
   belongsTo: [
     DOCS,
     SUPPORT,
-    REFACTOR,
   ],
   explanation: '🆗  Small change is made',
   value: 'small',
@@ -161,7 +145,6 @@ const DEPENDENCY_LABEL = {
     FEATURE,
     FIX,
     SUPPORT,
-    REFACTOR,
   ],
   explanation: '📦  Add, remove or update dependencies',
   value: 'dependency',
