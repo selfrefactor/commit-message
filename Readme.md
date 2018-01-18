@@ -7,7 +7,7 @@ Writing commit messages should benefit of automated assistance.
 
 While the rules of this library are not perfect, it still helps writing commit messages with consistent style.
 
-## How it works?
+## How it works
 
 The library uses `Inquirer` to take text or choice from the user. Generating the message includes the following steps:
 
@@ -98,9 +98,9 @@ Custom labels belong to `feat, fix, test` commit types.
 
 ## PR
 
-I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR. 
+I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR.
 
-## Support format `type(label): COMMIT_MESSAGE`
+## Change format  to `type(label): COMMIT_MESSAGE`
 
 You just need to pass `true` like so:
 
@@ -119,8 +119,7 @@ You can further customize the behaviour of this library with setting `commitMess
  "commitMessage": {
     "labels": [
       "choose-word",
-      "learning-meme",
-      "root"
+      "learning-meme"
     ],
     "feature": [
       "speed"
@@ -133,6 +132,14 @@ You can further customize the behaviour of this library with setting `commitMess
 
 In the above example, all `labels` members will be labels in `feat, fix, test` commit types.
 
-All `feature` members will be labels in `feat` commit type. 
+All `feature` members will be labels in `feat` commit type.
 
-All `support` members will be labels in `chore` commit type. 
+All `support` members will be labels in `chore` commit type.
+
+## START, PROGRESS, STOP
+
+Every time STOP label is selected, the commit message will stay as WORK_IN_PROGRESS text.
+
+Later if PROGRESS or STOP is selected, this WORK_IN_PROGRESS text will be prepended to user input.
+
+When STOP is selected WORK_IN_PROGRESS is reset back to empty string.
