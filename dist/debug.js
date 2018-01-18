@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_1 = require("./index");
-index_1.commitMessage().then((commitMessageValue) => {
+const _1 = require("./");
+_1.commitAndPush().then((commitMessageValue) => {
     console.log(commitMessageValue);
     // => 'feat@style - use animation when logout'
 })

@@ -8,6 +8,7 @@ export function normalize(x) {
   const [first, last] = x.split(SEPARATOR)
   const charToAdd = MIN_LENGTH - first.length
   const padding = Array(charToAdd).fill(' ').join('')
+
   return `${first}${padding}${SEPARATOR}${last}`
 }
 

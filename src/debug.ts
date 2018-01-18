@@ -1,7 +1,6 @@
-import { commitMessage } from './index'
-import { commitAndPush } from './index'
+import { commitAndPush, commitMessage } from './'
 
-commitMessage().then((commitMessageValue: string) => {
+commitAndPush().then((commitMessageValue: string) => {
   console.log(commitMessageValue)
   // => 'feat@style - use animation when logout'
 })
