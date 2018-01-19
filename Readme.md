@@ -46,7 +46,7 @@ In this step the user writes the actual commit message.
 
 `yarn add https://github.com/selfrefactor/commit-message#1.0.0`
 
-## Usage
+## commitMessage
 
 ```
 import { commitMessage } from 'commit-message'
@@ -57,15 +57,15 @@ commitMessage().then((commitMessageValue: string) => {
 })
 ```
 
----
+## commitAndPush
 
-You can also use the `commitAndPush` method, which will take the generated commit message and run the following commands for you:
+`commitAndPush` method will take the generated commit message and run the following commands for you:
 
-1. `git add . --all`
+1.`git add . --all`
 
-2. `git commit -m COMMIT_MESSAGE`
+2.`git commit -m COMMIT_MESSAGE`
 
-3. `git push`
+3.`git push`
 
 ```
 import { commitAndPush } from 'commit-message'
@@ -75,6 +75,30 @@ commitAndPush().then((commitMessageValue: string) => {
   //=> Pushed with message 'feat@UI: use animation when logout'
 })
 ```
+
+## Usage
+
+Recommended way is to add the following in the `scripts` property of  your `package.json`
+
+```
+{
+  ...
+  scripts:{
+    "commit":"commit"
+  }
+  ...
+}
+```
+
+Now running `yarn commit` will execute the `commitAndPush` method.
+
+## START, PROGRESS, STOP
+
+Every time STOP label is selected, the commit message will stay as WORK_IN_PROGRESS text.
+
+Later if PROGRESS or STOP is selected, the WORK_IN_PROGRESS text will be prepended to the user input.
+
+When STOP is selected WORK_IN_PROGRESS is reset back to an empty string.
 
 ## Custom labels
 
@@ -95,10 +119,6 @@ Add `commitMessage` field in your `package.json` like so:
 ```
 
 Custom labels belong to `feat, fix, test` commit types.
-
-## PR
-
-I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR.
 
 ## Change format  to `type(label): COMMIT_MESSAGE`
 
@@ -136,10 +156,7 @@ All `feature` members will be labels in `feat` commit type.
 
 All `support` members will be labels in `chore` commit type.
 
-## START, PROGRESS, STOP
+## PR
 
-Every time STOP label is selected, the commit message will stay as WORK_IN_PROGRESS text.
+I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR.
 
-Later if PROGRESS or STOP is selected, this WORK_IN_PROGRESS text will be prepended to user input.
-
-When STOP is selected WORK_IN_PROGRESS is reset back to empty string.
