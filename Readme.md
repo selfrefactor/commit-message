@@ -32,11 +32,19 @@ The user can select one among:
 
 ```
 
+![STEP1](/files/screen0.png)
+
+---
+
 - STEP 2 - Choosing the label of the commit
 
 User can select empty label, write his own label or use one of the suggested.
 
 Suggested labels depends on the selection in STEP1.
+
+![STEP2](/files/screen1.png)
+
+---
 
 - STEP 3 - Writing the commit message
 
@@ -91,6 +99,10 @@ Recommended way is to add the following in the `scripts` property of  your `pack
 ```
 
 Now running `yarn commit` will execute the `commitAndPush` method.
+
+![STEP3](/files/screen2.png)
+
+---
 
 ## START, PROGRESS, STOP
 
