@@ -43,6 +43,7 @@
 	},
 	"scripts": {
 		"build": "tsc -p .",
+		"de": "node ./bin/commit.js",
 		"clean": "node files/clean",
 		"cover": "jest __tests__ --coverage",
 		"dev": "jest __tests__ --watch",

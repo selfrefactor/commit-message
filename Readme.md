@@ -1,4 +1,5 @@
 # Commit-message
+
 Standardized commit message generation
 
 ## Argumentation
@@ -24,12 +25,9 @@ The user can select one among:
 
 'chore' - Update build tasks, lint files or similar(no production code change)
 
-'refactor' - Refactor code without affecting functionality
-
 'docs' - Edit the documentation of the project
 
 'typings' - Change Typescript definitions
-
 ```
 
 ![STEP1](/files/screen0.png)
@@ -145,7 +143,7 @@ commitMessage(true).then((commitMessageValue: string) => {
 
 ## Support extended custom label settings
 
-You can further customize the behaviour of this library with setting `commitMessage` field in your `package.json`
+You can further customize the behaviour of this library with setting `commitMessage` field in your `package.json`:
 
 ```
  "commitMessage": {
@@ -167,8 +165,3 @@ In the above example, all `labels` members will be labels in `feat, fix, test` c
 All `feature` members will be labels in `feat` commit type.
 
 All `support` members will be labels in `chore` commit type.
-
-## PR
-
-I am open to suggestions for new labels, so if you have any thought on that, please open an issue or file a PR.
-
