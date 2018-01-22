@@ -46,7 +46,11 @@ export async function commitMessage(flag?: boolean): Promise<string> {
   const inputResult = await promptInput(ASK_FOR_MESSAGE)
 
   const hasWorkInProgress = getWorkInProgressFlag(commitLabel)
-  const separator = inputResult.trim() !== '' ?
+  const separatorFlag = hasWorkInProgress && 
+    commitLabel !== START_LABEL.value && 
+    inputResult.trim() !== ''
+  
+  const separator = separatorFlag ?
     ' | ' :
     ''
 
