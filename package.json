@@ -1,6 +1,6 @@
 {
 	"name": "commit-message",
-	"version": "0.1.0",
+	"version": "2.2.0",
 	"description": "commit-message",
 	"main": "./dist/index.js",
 	"typings": "./src/index.d.ts",

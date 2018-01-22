@@ -13,7 +13,7 @@ import { promptInput } from './modules/promptInput'
 import { saveWorkInProgress } from './modules/saveWorkInProgress'
 import { showExplanations } from './modules/showExplanations'
 
-function getWorkInProgressFlag(commitLabel) {
+function getWorkInProgressFlag(commitLabel: string) {
 
   return commitLabel === START_LABEL.value ||
     commitLabel === STOP_LABEL.value ||
@@ -45,8 +45,13 @@ export async function commitMessage(flag?: boolean): Promise<string> {
 
   const inputResult = await promptInput(ASK_FOR_MESSAGE)
 
-  const commitMessageValue = getWorkInProgressFlag(commitLabel) ?
-    `${workInProgress} ${inputResult}` :
+  const hasWorkInProgress = getWorkInProgressFlag(commitLabel)
+  const separator = inputResult.trim() !== '' ?
+    ' | ' :
+    ''
+
+  const commitMessageValue = hasWorkInProgress ?
+    `${workInProgress}${separator}${inputResult.trim()}` :
     inputResult
 
   if (commitLabel === START_LABEL.value) {

@@ -31,8 +31,12 @@ async function commitMessage(flag) {
             `${commitType.value}(${commitLabel})` :
             `${commitType.value}@${commitLabel}`;
     const inputResult = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
-    const commitMessageValue = getWorkInProgressFlag(commitLabel) ?
-        `${workInProgress} ${inputResult}` :
+    const hasWorkInProgress = getWorkInProgressFlag(commitLabel);
+    const separator = inputResult.trim() !== '' ?
+        ' | ' :
+        '';
+    const commitMessageValue = hasWorkInProgress ?
+        `${workInProgress}${separator}${inputResult.trim()}` :
         inputResult;
     if (commitLabel === constants_1.START_LABEL.value) {
         saveWorkInProgress_1.saveWorkInProgress(inputResult);

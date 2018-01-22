@@ -1,1 +1,0 @@
-{"version":3,"file":"hasWorkInProgress.js","sourceRoot":"","sources":["../../src/modules/hasWorkInProgress.ts"],"names":[],"mappings":";;AAAA,2BAAiC;AACjC,+BAA8B;AAE9B,2BAAkC,kBAAkB;IAClD,MAAM,QAAQ,GAAG,cAAO,CAAC,SAAS,EAAE,kCAAkC,CAAC,CAAA;IACvE,cAAc,GAAG,iBAAY,CAAC,QAAQ,EAAE,kBAAkB,CAAC,CAAC,QAAQ,EAAE,CAAC,IAAI,EAAE,CAAA;AAC/E,CAAC;AAHD,8CAGC"}
