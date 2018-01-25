@@ -1,3 +1,4 @@
+import { log } from 'log'
 import {
   ASK_FOR_MESSAGE,
   labels,
@@ -46,10 +47,13 @@ export async function commitMessage(flag?: boolean): Promise<string> {
   const inputResult = await promptInput(ASK_FOR_MESSAGE)
 
   const hasWorkInProgress = getWorkInProgressFlag(commitLabel)
-  const separatorFlag = hasWorkInProgress && 
-    commitLabel !== START_LABEL.value && 
+  if (hasWorkInProgress) {
+    log('WorkInProgress', workInProgress, 'info')
+  }
+  const separatorFlag = hasWorkInProgress &&
+    commitLabel !== START_LABEL.value &&
     inputResult.trim() !== ''
-  
+
   const separator = separatorFlag ?
     ' | ' :
     ''
