@@ -31,11 +31,11 @@ async function commitMessage(flag) {
         flag ?
             `${commitType.value}(${commitLabel})` :
             `${commitType.value}@${commitLabel}`;
+    if (workInProgress.length > 0) {
+        log_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
+    }
     const inputResult = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
     const hasWorkInProgress = getWorkInProgressFlag(commitLabel);
-    if (hasWorkInProgress) {
-        log_1.log('WorkInProgress', workInProgress, 'info');
-    }
     const separatorFlag = hasWorkInProgress &&
         commitLabel !== constants_1.START_LABEL.value &&
         inputResult.trim() !== '';
