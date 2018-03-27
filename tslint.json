@@ -144,7 +144,7 @@
       "allow-string",
       "allow-number"
     ],
-    "strict-type-predicates": true,
+    "strict-type-predicates": false,
     "space-before-function-paren": false,
     "space-within-parens": [
       true,

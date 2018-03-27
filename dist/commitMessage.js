@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const log_1 = require("log");
 const constants_1 = require("./constants");
-const getCommitLabel_1 = require("./modules/getCommitLabel");
-const getCommitType_1 = require("./modules/getCommitType");
-const getWorkInProgress_1 = require("./modules/getWorkInProgress");
-const promptInput_1 = require("./modules/promptInput");
-const saveWorkInProgress_1 = require("./modules/saveWorkInProgress");
-const showExplanations_1 = require("./modules/showExplanations");
+const getCommitLabel_1 = require("./_modules/getCommitLabel");
+const getCommitType_1 = require("./_modules/getCommitType");
+const getWorkInProgress_1 = require("./_modules/getWorkInProgress");
+const promptInput_1 = require("./_modules/promptInput");
+const saveWorkInProgress_1 = require("./_modules/saveWorkInProgress");
+const showExplanations_1 = require("./_modules/showExplanations");
 function getWorkInProgressFlag(commitLabel) {
     return commitLabel === constants_1.START_LABEL.value ||
         commitLabel === constants_1.STOP_LABEL.value ||
@@ -15,8 +15,6 @@ function getWorkInProgressFlag(commitLabel) {
 }
 /**
  * It ask the user for type and text of commit and returns the final commit message.
- *
- * @returns {Promise<string>}
  */
 async function commitMessage(flag) {
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
@@ -51,7 +49,9 @@ async function commitMessage(flag) {
     else if (commitLabel === constants_1.STOP_LABEL.value) {
         saveWorkInProgress_1.saveWorkInProgress('');
     }
-    return `${commitFirstPart}: ${commitMessageValue.trim()}`;
+    return commitMessageValue.trim() === '' ?
+        commitFirstPart :
+        `${commitFirstPart}: ${commitMessageValue.trim()}`;
 }
 exports.commitMessage = commitMessage;
 //# sourceMappingURL=commitMessage.js.map

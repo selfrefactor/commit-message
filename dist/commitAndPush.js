@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const execCommand_1 = require("./_modules/execCommand");
 const commitMessage_1 = require("./commitMessage");
-const execCommand_1 = require("./modules/execCommand");
 async function commitAndPush(flag) {
     try {
         const commitMessageValue = await commitMessage_1.commitMessage(flag);

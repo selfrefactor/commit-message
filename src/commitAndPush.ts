@@ -1,5 +1,5 @@
+import { execCommand } from './_modules/execCommand'
 import { commitMessage } from './commitMessage'
-import { execCommand } from './modules/execCommand'
 
 export async function commitAndPush(flag?: boolean): Promise<string> {
   try {

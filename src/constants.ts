@@ -1,4 +1,4 @@
-import { getCustomLabels } from './modules/getCustomLabels'
+import { getCustomLabels } from './_modules/getCustomLabels'
 import { CommitType, Label } from './typings'
 
 import { constantCase } from 'string-fn'

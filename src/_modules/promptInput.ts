@@ -2,13 +2,13 @@ import { prompt } from 'inquirer'
 
 export async function promptInput(question: string): Promise<string> {
   try {
-    const { answer } = await prompt([{
+    const result: any = await prompt([{
       message: question,
       name: 'answer',
       type: 'input',
     }])
 
-    return answer
+    return result.answer
   } catch (err) {
     throw err
   }

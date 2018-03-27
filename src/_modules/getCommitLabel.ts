@@ -21,6 +21,16 @@ const getPadding = (str: string): string => {
     ''
 }
 
+export async function askCustomLabel(input: GetLabel): Promise<string> {
+  try{
+    const label = await promptInput(ASK_FOR_CUSTOM_LABEL)
+
+    return label
+  }catch (err){
+    throw err
+  }
+}
+
 export async function getCommitLabel(input: GetLabel): Promise<string> {
   try {
     log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box')
@@ -48,7 +58,7 @@ export async function getCommitLabel(input: GetLabel): Promise<string> {
     const label = filteredLabels[labelIndex].value
 
     return label === CUSTOM_LABEL.value ?
-      await promptInput(ASK_FOR_CUSTOM_LABEL) :
+      await askCustomLabel(input) :
       label
   } catch (err) {
     throw err

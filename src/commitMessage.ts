@@ -7,12 +7,14 @@ import {
   STOP_LABEL,
   typesOfCommit,
 } from './constants'
-import { getCommitLabel } from './modules/getCommitLabel'
-import { getCommitType } from './modules/getCommitType'
-import { getWorkInProgress } from './modules/getWorkInProgress'
-import { promptInput } from './modules/promptInput'
-import { saveWorkInProgress } from './modules/saveWorkInProgress'
-import { showExplanations } from './modules/showExplanations'
+
+import { getCommitLabel } from './_modules/getCommitLabel'
+import { getCommitType } from './_modules/getCommitType'
+import { getWorkInProgress } from './_modules/getWorkInProgress'
+
+import { promptInput } from './_modules/promptInput'
+import { saveWorkInProgress } from './_modules/saveWorkInProgress'
+import { showExplanations } from './_modules/showExplanations'
 
 function getWorkInProgressFlag(commitLabel: string) {
 
@@ -23,8 +25,6 @@ function getWorkInProgressFlag(commitLabel: string) {
 
 /**
  * It ask the user for type and text of commit and returns the final commit message.
- *
- * @returns {Promise<string>}
  */
 export async function commitMessage(flag?: boolean): Promise<string> {
   const workInProgress = getWorkInProgress()
@@ -70,5 +70,7 @@ export async function commitMessage(flag?: boolean): Promise<string> {
     saveWorkInProgress('')
   }
 
-  return `${commitFirstPart}: ${commitMessageValue.trim()}`
+  return commitMessageValue.trim() === '' ?
+    commitFirstPart :
+    `${commitFirstPart}: ${commitMessageValue.trim()}`
 }

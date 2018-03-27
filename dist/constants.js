@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const getCustomLabels_1 = require("./modules/getCustomLabels");
+const getCustomLabels_1 = require("./_modules/getCustomLabels");
 const string_fn_1 = require("string-fn");
 exports.ASK_FOR_TYPE = 'What is the type of the commit?';
 exports.ASK_FOR_LABEL = 'Select label';

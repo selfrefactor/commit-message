@@ -3,14 +3,14 @@ import { PromptSelect } from '../typings'
 
 export async function promptSelect(input: PromptSelect): Promise<string> {
   try {
-    const { answer } = await prompt([{
+    const result: any = await prompt([{
       choices: input.choices,
       message: input.question,
       name: 'answer',
       type: 'list',
     }])
 
-    return answer
+    return result.answer
   } catch (err) {
     throw err
   }

@@ -4,65 +4,32 @@
 	"description": "commit-message",
 	"main": "./dist/index.js",
 	"typings": "./src/index.d.ts",
-	"repository": "git@github.com:selfrefactor/commit-message.git",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT",
-	"private": false,
-	"dependencies": {
-		"inquirer": "^5.0.1",
-		"log": "https://github.com/selfrefactor/log#0.6.1",
-		"string-fn": "^1.5.2"
+	"scripts": {
+		"x": "tslint --fix --project tsconfig.json",
+		"y": "tsfmt -r --no-tsconfig src/*.ts",
+		"build": "tsc -p .",
+		"de": "node ./bin/commit.js",
+		"test": "jest"
 	},
-	"commitMessage": {
-		"labels": [
-			"choose-word",
-			"learning-meme"
-		],
-		"feature": [
-			"webpack"
-		],
-		"support": [
-			"webpack"
-		]
+	"dependencies": {
+		"inquirer": "^5.2.0",
+		"log": "https://github.com/selfrefactor/log#0.9.0",
+		"package-storage": "https://github.com/selfrefactor/package-storage#0.1.0",
+		"string-fn": "^1.6.0"
+	},
+	"devDependencies": {
+		"@types/inquirer": "^0.0.38",
+		"@types/node": "^9.6.0",
+		"fs-extra": "^5.0.0",
+		"tslint": "^5.9.1",
+		"typescript-formatter": "^7.1.0",
+		"typescript": "^2.9.0-dev.20180327"
 	},
 	"bin": {
 		"commit": "./bin/commit.js"
 	},
-	"devDependencies": {
-		"@types/inquirer": "^0.0.36",
-		"@types/jest": "^22.1.0",
-		"@types/node": "^9.3.0",
-		"fs-extra": "^5.0.0",
-		"jest": "^22.1.4",
-		"last-used": "https://github.com/selfrefactor/last-used#0.5.0",
-		"rambda": "^1.0.9",
-		"ts-jest": "^22.0.1",
-		"tslint": "^5.9.1",
-		"typescript": "^2.8.0-dev.20180125",
-		"watch-fn": "https://github.com/selfrefactor/watch-fn#0.7.0"
-	},
-	"scripts": {
-		"build": "tsc -p .",
-		"de": "node ./bin/commit.js",
-		"clean": "node files/clean",
-		"cover": "jest __tests__ --coverage",
-		"dev": "jest __tests__ --watch",
-		"docs": "typedoc --readme Readme.md --theme minimal --out docs src&&touch docs/.nojekyll",
-		"rename": "node files/rename",
-		"start": "node files/watch",
-		"test": "jest"
-	},
-	"jest": {
-		"transform": {
-			"^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-		},
-		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-		"moduleFileExtensions": [
-			"ts",
-			"tsx",
-			"js",
-			"jsx",
-			"json"
-		]
-	}
+	"repository": "git@github.com:selfrefactor/commit-message.git",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"private": false
 }

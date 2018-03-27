@@ -14,9 +14,9 @@ export function normalize(x: string) {
 
 export function showExplanations(): void {
   explanationOfTypes.map(explanation => {
-    log('sep')
+    log('','sep')
     log(normalize(explanation), '')
   })
-  log('sep')
-  log('sep')
+  log('','sep')
+  log('','sep')
 }
