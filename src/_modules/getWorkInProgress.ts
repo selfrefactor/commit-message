@@ -4,9 +4,9 @@ export function getWorkInProgress(): string {
   try{
 
     return load('commitMessage', 'workInProgress')
-  }catch(e){
-    
+  }catch (e){
     console.log(e.message)
+
     return ''
   }
 }
