@@ -533,9 +533,9 @@ p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
 
-"package-storage@https://github.com/selfrefactor/package-storage#0.1.0":
+"package-storage@https://github.com/selfrefactor/package-storage#0.3.0":
   version "1.0.0"
-  resolved "https://github.com/selfrefactor/package-storage#2b620eed45261328d9e1c14392904a356b34a6db"
+  resolved "https://github.com/selfrefactor/package-storage#1e8f20906b3cfca638d1203c86accef9d1092784"
 
 path-is-absolute@^1.0.0:
   version "1.0.1"

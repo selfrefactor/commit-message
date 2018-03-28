@@ -14,7 +14,7 @@
 	"dependencies": {
 		"inquirer": "^5.2.0",
 		"log": "https://github.com/selfrefactor/log#0.9.0",
-		"package-storage": "https://github.com/selfrefactor/package-storage#0.1.0",
+		"package-storage": "https://github.com/selfrefactor/package-storage#0.3.0",
 		"string-fn": "^1.6.0"
 	},
 	"devDependencies": {
