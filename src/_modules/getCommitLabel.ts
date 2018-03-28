@@ -37,18 +37,19 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
     const loaded = load(
       'commitMessage',
       key,
+      true
     )
-
-    const isNewLabel = loaded !== undefined && loaded.push
-
+    const isNewLabel = loaded === undefined || loaded.push === undefined
+    
     const toSave = isNewLabel ?
       [label] :
       [...loaded, label]
-
+    
     save(
       'commitMessage',
       key,
       toSave,
+      true
     )
 
     log(

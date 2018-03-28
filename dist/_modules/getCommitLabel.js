@@ -23,12 +23,12 @@ async function askCustomLabel(input) {
         /**
          * When this is not the first label for this `commitType` context
          */
-        const loaded = package_storage_1.load('commitMessage', key);
-        const isNewLabel = loaded !== undefined && loaded.push;
+        const loaded = package_storage_1.load('commitMessage', key, true);
+        const isNewLabel = loaded === undefined || loaded.push === undefined;
         const toSave = isNewLabel ?
             [label] :
             [...loaded, label];
-        package_storage_1.save('commitMessage', key, toSave);
+        package_storage_1.save('commitMessage', key, toSave, true);
         log_1.log(`label '${label}' is part of '${key}' context | is.new = '${isNewLabel}'`, 'info');
         return label;
     }
