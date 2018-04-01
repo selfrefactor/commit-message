@@ -7,10 +7,6 @@ export interface PromptSelect {
 export function commitMessage(): Promise<string>
 export function commitAndPush(): Promise<string>
 
-export interface CustomLabel {
-  labels: string[]
-}
-
 export interface CommitType {
   key: string
   value: string

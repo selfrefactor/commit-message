@@ -1,47 +1,15 @@
-import { existsSync, readFileSync } from 'fs'
-import { join, resolve } from 'path'
-import { CustomLabel } from '../typings'
+import { load } from 'package-storage'
 
-const HOW_DEEP = 4
+export function getCustomLabels(): false | object {
+  try{
+    const loaded = load('commitMessage')
 
-const getPath = (): false | string => {
-  let flag = true
-  let willReturn: any = false
+    return Object.keys(loaded).length === 0 ?
+      false :
+      loaded
+  }catch(e){
+    console.log(e)
 
-  const basePath = process.cwd()
-
-  Array(HOW_DEEP).fill('')
-    .map((_, i) => {
-      if (flag) {
-        const filePath = resolve(basePath, `${'../'.repeat(i)}/package.json`)
-
-        if (existsSync(filePath)) {
-          flag = false
-          willReturn = filePath
-        }
-      }
-    })
-
-  return willReturn
-}
-
-export function getCustomLabels(): false | CustomLabel {
-  const filePathRaw = join(process.cwd(), 'package.json')
-  const initCheck = existsSync(filePathRaw)
-
-  const filePath = initCheck ?
-    filePathRaw :
-    getPath()
-
-  if (filePath === false) {
     return false
   }
-
-  const packageJsonRaw = readFileSync(filePath).toString()
-
-  const packageJson = JSON.parse(packageJsonRaw)
-
-  return packageJson.commitMessage === undefined ?
-    false :
-    packageJson.commitMessage
 }
