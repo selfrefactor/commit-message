@@ -202,8 +202,11 @@ if (customLabelsRaw !== false) {
         FIX,
         TEST,
     ];
-    Object.keys(customLabelsRaw).map(key => {
-        customLabelsRaw[key].map(singleLabel => {
+    Object.keys(customLabelsRaw).forEach(key => {
+        if (key === 'workInProgress') {
+            return;
+        }
+        customLabelsRaw[key].forEach(singleLabel => {
             const belongsToValue = key === 'labels' ?
                 belongsToWhenLabel :
                 getBelongsTo(key);
