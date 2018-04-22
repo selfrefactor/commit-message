@@ -40,13 +40,14 @@ async function commitMessage(flag) {
     const separator = separatorFlag ?
         ' | ' :
         '';
-    const commitMessageValue = hasWorkInProgress ?
+    let commitMessageValue = hasWorkInProgress ?
         `${workInProgress}${separator}${inputResult.trim()}` :
         inputResult;
     if (commitLabel === constants_1.START_LABEL.value) {
         saveWorkInProgress_1.saveWorkInProgress(inputResult);
     }
     else if (commitLabel === constants_1.STOP_LABEL.value) {
+        commitMessageValue = workInProgress;
         saveWorkInProgress_1.saveWorkInProgress('');
     }
     return commitMessageValue.trim() === '' ?
