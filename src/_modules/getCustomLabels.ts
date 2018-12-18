@@ -8,8 +8,6 @@ export function getCustomLabels(): false | object {
       false :
       loaded
   }catch(e){
-    console.log(e)
-
     return false
   }
 }

@@ -9,7 +9,6 @@ function getCustomLabels() {
             loaded;
     }
     catch (e) {
-        console.log(e);
         return false;
     }
 }

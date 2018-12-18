@@ -6,7 +6,6 @@ function getWorkInProgress() {
         return package_storage_1.load('commitMessage', 'workInProgress', true) || '';
     }
     catch (e) {
-        console.log(e.message);
         return '';
     }
 }

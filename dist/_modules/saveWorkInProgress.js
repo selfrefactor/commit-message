@@ -6,7 +6,7 @@ function saveWorkInProgress(commitMessageValue) {
         package_storage_1.save('commitMessage', 'workInProgress', commitMessageValue, true);
     }
     catch (e) {
-        console.log(e.message);
+        console.log(e);
     }
 }
 exports.saveWorkInProgress = saveWorkInProgress;
