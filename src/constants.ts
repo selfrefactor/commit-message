@@ -21,7 +21,7 @@ const TEST = {
 }
 
 const FIX = {
-  explanation: '⚒  Submit a bug fix',
+  explanation: '🐛  Submit a bug fix',
   key: 'FIX',
   value: 'fix',
 }
@@ -176,8 +176,8 @@ const PUBLISH_LABEL = {
 
 const REFACTOR_LABEL = {
   belongsTo: [FEATURE, SUPPORT],
-  explanation: '🔠  Mostly refactor code; could countain small logic change',
-  value: 'typo',
+  explanation: '🏗  Mostly refactor code; could countain small logic change',
+  value: 'refactor',
 }
 
 const USAGE_LABEL = {
