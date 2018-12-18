@@ -151,9 +151,9 @@ const PUBLISH_LABEL = {
     explanation: '📨  Publish new version of the code',
     value: 'publish',
 };
-const TYPO_LABEL = {
-    belongsTo: [FIX, DOCS],
-    explanation: '🔠  Fix a typo',
+const REFACTOR_LABEL = {
+    belongsTo: [exports.FEATURE, SUPPORT],
+    explanation: '🔠  Mostly refactor code; could countain small logic change',
     value: 'typo',
 };
 const USAGE_LABEL = {
@@ -225,6 +225,7 @@ exports.labels = [
     ISSUE_LABEL,
     IMPORTANT_LABEL,
     SMALL_LABEL,
+    REFACTOR_LABEL,
     exports.START_LABEL,
     exports.PROGRESS_LABEL,
     exports.STOP_LABEL,
