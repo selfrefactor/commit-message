@@ -165,3 +165,7 @@ In the above example, all `labels` members will be labels in `feat, fix, test` c
 All `feature` members will be labels in `feat` commit type.
 
 All `support` members will be labels in `chore` commit type.
+
+## Change of working directory
+
+`const cwd = process.env.COMMIT_MESSAGE_CWD || process.cwd()`

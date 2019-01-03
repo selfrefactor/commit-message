@@ -1,6 +1,7 @@
 import { exec } from 'child_process'
+const cwd = process.env.COMMIT_MESSAGE_CWD || process.cwd()
 
-export const execCommand = (command, cwd = process.cwd()) =>
+export const execCommand = (command) =>
   new Promise((resolve, reject) => {
     const proc = exec(
       command,
