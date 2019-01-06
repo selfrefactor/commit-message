@@ -9,6 +9,7 @@
     "y": "tsfmt -r --no-tsconfig src/*.ts",
     "build": "tsc -p .",
     "de": "node ./bin/commit.js",
+    "debug": "node ./dist/debug.js",
     "test": "jest"
   },
   "dependencies": {

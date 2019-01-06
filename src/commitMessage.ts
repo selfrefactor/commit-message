@@ -23,9 +23,9 @@ function getWorkInProgressFlag(commitLabel: string) {
     commitLabel === PROGRESS_LABEL.value
 }
 
-/**
- * It ask the user for type and text of commit and returns the final commit message.
- */
+// It ask the user for type and text of commit
+// and returns the final commit message.
+// ============================================
 export async function commitMessage(flag?: boolean): Promise<string> {
   const workInProgress = getWorkInProgress()
 

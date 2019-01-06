@@ -13,9 +13,9 @@ function getWorkInProgressFlag(commitLabel) {
         commitLabel === constants_1.STOP_LABEL.value ||
         commitLabel === constants_1.PROGRESS_LABEL.value;
 }
-/**
- * It ask the user for type and text of commit and returns the final commit message.
- */
+// It ask the user for type and text of commit
+// and returns the final commit message.
+// ============================================
 async function commitMessage(flag) {
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();

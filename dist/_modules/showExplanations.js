@@ -12,12 +12,18 @@ function normalize(x) {
 }
 exports.normalize = normalize;
 function showExplanations() {
+    let counter = 0;
+    // empty log to assosiate blue with tag=foo
+    // as blue is too bright
+    // ============================================
+    log_1.log('', 'tag=foo');
     constants_1.explanationOfTypes.map(explanation => {
-        log_1.log('', 'sep');
-        log_1.log(normalize(explanation), '');
+        const tag = counter % 2 === 0 ?
+            'tag=baz' :
+            'tag=bar';
+        log_1.log(normalize(explanation), tag);
+        counter++;
     });
-    log_1.log('', 'sep');
-    log_1.log('', 'sep');
 }
 exports.showExplanations = showExplanations;
 //# sourceMappingURL=showExplanations.js.map
