@@ -1,7 +1,7 @@
-import { commitAndPush } from './'
+import { commitMessage, commitAndPush } from './'
 
-commitAndPush()
-// commitMessage()
+// commitAndPush()
+commitMessage()
   .then((commitMessageValue: string) => {
     console.log(commitMessageValue)
   })

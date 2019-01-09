@@ -11,7 +11,7 @@ import { load, save } from 'package-storage'
 import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 
-const PADDING_LIMIT = 15
+const PADDING_LIMIT = 8
 
 const getPadding = (str: string): string => {
 
@@ -64,35 +64,30 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
 }
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {
-  try {
-    log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box')
+  log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box')
 
-    const filteredLabels: Label[] = input.labels.filter(singleLabel => {
-      return singleLabel.belongsTo.includes(input.commitType)
-    })
+  const filteredLabels: Label[] = input.labels.filter(singleLabel => {
+    return singleLabel.belongsTo.includes(input.commitType)
+  })
 
-    const filteredLabelsValue: string[] = filteredLabels.map(singleLabel => {
+  const filteredLabelsValue: string[] = filteredLabels
+    .map(singleLabel => {
       const padding = getPadding(singleLabel.value)
 
-      return `${singleLabel.value}${padding}|-| ${singleLabel.explanation}`
+      return `${singleLabel.value}${padding} ${singleLabel.explanation}`
     })
 
-    const promptOptions: PromptSelect = {
-      choices: filteredLabelsValue,
-      default: filteredLabelsValue[0],
-      question: ASK_FOR_LABEL,
-    }
-
-    const labelRaw = await promptSelect(promptOptions)
-
-    const labelIndex = filteredLabelsValue.indexOf(labelRaw)
-
-    const label = filteredLabels[labelIndex].value
-
-    return label === CUSTOM_LABEL.value ?
-      await askCustomLabel(input) :
-      label
-  } catch (err) {
-    throw err
+  const promptOptions: PromptSelect = {
+    choices: filteredLabelsValue,
+    default: filteredLabelsValue[0],
+    question: ASK_FOR_LABEL,
   }
+
+  const labelRaw = await promptSelect(promptOptions)
+  const labelIndex = filteredLabelsValue.indexOf(labelRaw)
+  const label = filteredLabels[labelIndex].value
+
+  return label === CUSTOM_LABEL.value ?
+    await askCustomLabel(input) :
+    label
 }

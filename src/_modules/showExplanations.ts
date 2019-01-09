@@ -14,13 +14,9 @@ export function normalize(x: string): any {
 
 export function showExplanations(): void {
   let counter = 0
-  // empty log to assosiate blue with tag=foo
-  // as blue is too bright
-  // ============================================
-  log('', 'tag=foo')
   explanationOfTypes.map(explanation => {
     const tag = counter % 2 === 0 ?
-      'tag=baz' :
+      'tag=foo' :
       'tag=bar'
 
     log(

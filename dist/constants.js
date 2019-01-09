@@ -60,7 +60,7 @@ exports.EMPTY_LABEL = {
 exports.CUSTOM_LABEL = {
     belongsTo: exports.typesOfCommit,
     explanation: 'Write your own label',
-    value: 'custom_label',
+    value: 'custom',
 };
 const PERFORMANCE_LABEL = {
     belongsTo: [

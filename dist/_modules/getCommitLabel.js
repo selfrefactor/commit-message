@@ -5,7 +5,7 @@ const promptInput_1 = require("./promptInput");
 const log_1 = require("log");
 const package_storage_1 = require("package-storage");
 const promptSelect_1 = require("./promptSelect");
-const PADDING_LIMIT = 15;
+const PADDING_LIMIT = 8;
 const getPadding = (str) => {
     const howLong = PADDING_LIMIT - str.length;
     return howLong > 0 ?
@@ -38,30 +38,26 @@ async function askCustomLabel(input) {
 }
 exports.askCustomLabel = askCustomLabel;
 async function getCommitLabel(input) {
-    try {
-        log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box');
-        const filteredLabels = input.labels.filter(singleLabel => {
-            return singleLabel.belongsTo.includes(input.commitType);
-        });
-        const filteredLabelsValue = filteredLabels.map(singleLabel => {
-            const padding = getPadding(singleLabel.value);
-            return `${singleLabel.value}${padding}|-| ${singleLabel.explanation}`;
-        });
-        const promptOptions = {
-            choices: filteredLabelsValue,
-            default: filteredLabelsValue[0],
-            question: constants_1.ASK_FOR_LABEL,
-        };
-        const labelRaw = await promptSelect_1.promptSelect(promptOptions);
-        const labelIndex = filteredLabelsValue.indexOf(labelRaw);
-        const label = filteredLabels[labelIndex].value;
-        return label === constants_1.CUSTOM_LABEL.value ?
-            await askCustomLabel(input) :
-            label;
-    }
-    catch (err) {
-        throw err;
-    }
+    log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box');
+    const filteredLabels = input.labels.filter(singleLabel => {
+        return singleLabel.belongsTo.includes(input.commitType);
+    });
+    const filteredLabelsValue = filteredLabels
+        .map(singleLabel => {
+        const padding = getPadding(singleLabel.value);
+        return `${singleLabel.value}${padding} ${singleLabel.explanation}`;
+    });
+    const promptOptions = {
+        choices: filteredLabelsValue,
+        default: filteredLabelsValue[0],
+        question: constants_1.ASK_FOR_LABEL,
+    };
+    const labelRaw = await promptSelect_1.promptSelect(promptOptions);
+    const labelIndex = filteredLabelsValue.indexOf(labelRaw);
+    const label = filteredLabels[labelIndex].value;
+    return label === constants_1.CUSTOM_LABEL.value ?
+        await askCustomLabel(input) :
+        label;
 }
 exports.getCommitLabel = getCommitLabel;
 //# sourceMappingURL=getCommitLabel.js.map

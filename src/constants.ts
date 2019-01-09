@@ -71,7 +71,7 @@ export const EMPTY_LABEL = {
 export const CUSTOM_LABEL = {
   belongsTo: typesOfCommit,
   explanation: 'Write your own label',
-  value: 'custom_label',
+  value: 'custom',
 }
 
 const PERFORMANCE_LABEL = {

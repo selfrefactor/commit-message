@@ -28,11 +28,9 @@ function getWorkInProgressFlag(commitLabel: string) {
 // ============================================
 export async function commitMessage(flag?: boolean): Promise<string> {
   const workInProgress = getWorkInProgress()
-
   showExplanations()
 
   const commitType = await getCommitType(typesOfCommit)
-
   const commitLabel = await getCommitLabel({
     commitType,
     labels,
