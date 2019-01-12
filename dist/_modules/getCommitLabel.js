@@ -5,7 +5,7 @@ const promptInput_1 = require("./promptInput");
 const log_1 = require("log");
 const package_storage_1 = require("package-storage");
 const promptSelect_1 = require("./promptSelect");
-const PADDING_LIMIT = 8;
+const PADDING_LIMIT = 10;
 const getPadding = (str) => {
     const howLong = PADDING_LIMIT - str.length;
     return howLong > 0 ?
@@ -38,7 +38,9 @@ async function askCustomLabel(input) {
 }
 exports.askCustomLabel = askCustomLabel;
 async function getCommitLabel(input) {
-    log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box');
+    log_1.log('sepx');
+    log_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, '');
+    log_1.log('sepx');
     const filteredLabels = input.labels.filter(singleLabel => {
         return singleLabel.belongsTo.includes(input.commitType);
     });

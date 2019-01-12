@@ -9,7 +9,7 @@ export const ASK_FOR_CUSTOM_LABEL = 'Write your label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
 export const FEATURE = {
-  explanation: '💡  Add new feature to the project',
+  explanation: '💡  Add new feature',
   key: 'FEATURE',
   value: 'feat',
 }
@@ -33,13 +33,13 @@ const TYPINGS = {
 }
 
 const SUPPORT = {
-  explanation: '☂️  Improve development environment',
+  explanation: '☂️  Chore',
   key: 'SUPPORT',
   value: 'chore',
 }
 
 const DOCS = {
-  explanation: '📚️  Edit the documentation of the project',
+  explanation: '📚️  Edit documentation',
   key: 'DOCS',
   value: 'docs',
 }
@@ -72,15 +72,6 @@ export const CUSTOM_LABEL = {
   belongsTo: typesOfCommit,
   explanation: 'Write your own label',
   value: 'custom',
-}
-
-const PERFORMANCE_LABEL = {
-  belongsTo: [
-    FEATURE,
-    SUPPORT,
-  ],
-  explanation: '💪  Improve code performance',
-  value: 'perf',
 }
 
 const UI_LABEL = {
@@ -139,7 +130,7 @@ const SMALL_LABEL = {
     DOCS,
     SUPPORT,
   ],
-  explanation: '🆗  Small change is made',
+  explanation: '🆗  Small change',
   value: 'small',
 }
 
@@ -149,7 +140,7 @@ const DEPENDENCY_LABEL = {
     FIX,
     SUPPORT,
   ],
-  explanation: '📦  Add, remove or update dependencies',
+  explanation: '📦  Change of dependencies',
   value: 'dependency',
 }
 
@@ -158,25 +149,25 @@ const BREAK_LABEL = {
     FEATURE,
     FIX,
   ],
-  explanation: '💣  Introduce breaking changes',
+  explanation: '💣  Breaking changes',
   value: 'break',
 }
 
 const EXAMPLES_LABEL = {
   belongsTo: [DOCS],
-  explanation: '📝  Add, remove or update examples in documentation',
+  explanation: '📝  Update examples in documentation',
   value: 'examples',
 }
 
 const PUBLISH_LABEL = {
   belongsTo: [SUPPORT],
-  explanation: '📨  Publish new version of the code',
+  explanation: '📨  Publish new version',
   value: 'publish',
 }
 
 const REFACTOR_LABEL = {
   belongsTo: [FEATURE, SUPPORT],
-  explanation: '🏗  Mostly refactor code; could countain small logic change',
+  explanation: '🏗  Refactor code',
   value: 'refactor',
 }
 
@@ -194,19 +185,19 @@ const REMOVE_LABEL = {
 
 export const START_LABEL = {
   belongsTo: [FEATURE, SUPPORT, FIX],
-  explanation: '▶️  Begin developing a new feature, bugfix or support script',
+  explanation: '▶️  Start',
   value: 'start',
 }
 
 export const PROGRESS_LABEL = {
   belongsTo: [FEATURE, SUPPORT, FIX],
-  explanation: '🐌  Continue developing a new feature, bugfix or support script',
+  explanation: '🐌  Continue developing',
   value: 'progress',
 }
 
 export const STOP_LABEL = {
   belongsTo: [FEATURE, SUPPORT, FIX],
-  explanation: '⏹  Stop developing a new feature, bugfix or support script',
+  explanation: '⏹  Stop',
   value: 'stop',
 }
 
@@ -262,16 +253,15 @@ export const labels: Label[] = [
   EMPTY_LABEL,
   ...customLabels,
   ISSUE_LABEL,
-  IMPORTANT_LABEL,
-  SMALL_LABEL,
-  REFACTOR_LABEL,
   START_LABEL,
   PROGRESS_LABEL,
   STOP_LABEL,
+  IMPORTANT_LABEL,
+  SMALL_LABEL,
+  REFACTOR_LABEL,
   CUSTOM_LABEL,
   STYLE_LABEL,
   UI_LABEL,
-  PERFORMANCE_LABEL,
   DEPENDENCY_LABEL,
   PUBLISH_LABEL,
   EXAMPLES_LABEL,

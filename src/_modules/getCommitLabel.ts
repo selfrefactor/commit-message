@@ -11,7 +11,7 @@ import { load, save } from 'package-storage'
 import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 
-const PADDING_LIMIT = 8
+const PADDING_LIMIT = 10
 
 const getPadding = (str: string): string => {
 
@@ -64,7 +64,9 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
 }
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {
-  log(`${input.commitType.key} - ${input.commitType.explanation}`, 'box')
+  log('sepx')
+  log(`${input.commitType.key} - ${input.commitType.explanation}`, '')
+  log('sepx')
 
   const filteredLabels: Label[] = input.labels.filter(singleLabel => {
     return singleLabel.belongsTo.includes(input.commitType)

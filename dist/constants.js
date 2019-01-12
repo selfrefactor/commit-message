@@ -7,7 +7,7 @@ exports.ASK_FOR_LABEL = 'Select label';
 exports.ASK_FOR_CUSTOM_LABEL = 'Write your label';
 exports.ASK_FOR_MESSAGE = 'What is the message of the commit?';
 exports.FEATURE = {
-    explanation: '💡  Add new feature to the project',
+    explanation: '💡  Add new feature',
     key: 'FEATURE',
     value: 'feat',
 };
@@ -27,12 +27,12 @@ const TYPINGS = {
     value: 'typings',
 };
 const SUPPORT = {
-    explanation: '☂️  Improve development environment',
+    explanation: '☂️  Chore',
     key: 'SUPPORT',
     value: 'chore',
 };
 const DOCS = {
-    explanation: '📚️  Edit the documentation of the project',
+    explanation: '📚️  Edit documentation',
     key: 'DOCS',
     value: 'docs',
 };
@@ -61,14 +61,6 @@ exports.CUSTOM_LABEL = {
     belongsTo: exports.typesOfCommit,
     explanation: 'Write your own label',
     value: 'custom',
-};
-const PERFORMANCE_LABEL = {
-    belongsTo: [
-        exports.FEATURE,
-        SUPPORT,
-    ],
-    explanation: '💪  Improve code performance',
-    value: 'perf',
 };
 const UI_LABEL = {
     belongsTo: [
@@ -121,7 +113,7 @@ const SMALL_LABEL = {
         DOCS,
         SUPPORT,
     ],
-    explanation: '🆗  Small change is made',
+    explanation: '🆗  Small change',
     value: 'small',
 };
 const DEPENDENCY_LABEL = {
@@ -130,7 +122,7 @@ const DEPENDENCY_LABEL = {
         FIX,
         SUPPORT,
     ],
-    explanation: '📦  Add, remove or update dependencies',
+    explanation: '📦  Change of dependencies',
     value: 'dependency',
 };
 const BREAK_LABEL = {
@@ -138,22 +130,22 @@ const BREAK_LABEL = {
         exports.FEATURE,
         FIX,
     ],
-    explanation: '💣  Introduce breaking changes',
+    explanation: '💣  Breaking changes',
     value: 'break',
 };
 const EXAMPLES_LABEL = {
     belongsTo: [DOCS],
-    explanation: '📝  Add, remove or update examples in documentation',
+    explanation: '📝  Update examples in documentation',
     value: 'examples',
 };
 const PUBLISH_LABEL = {
     belongsTo: [SUPPORT],
-    explanation: '📨  Publish new version of the code',
+    explanation: '📨  Publish new version',
     value: 'publish',
 };
 const REFACTOR_LABEL = {
     belongsTo: [exports.FEATURE, SUPPORT],
-    explanation: '🏗  Mostly refactor code; could countain small logic change',
+    explanation: '🏗  Refactor code',
     value: 'refactor',
 };
 const USAGE_LABEL = {
@@ -168,17 +160,17 @@ const REMOVE_LABEL = {
 };
 exports.START_LABEL = {
     belongsTo: [exports.FEATURE, SUPPORT, FIX],
-    explanation: '▶️  Begin developing a new feature, bugfix or support script',
+    explanation: '▶️  Start',
     value: 'start',
 };
 exports.PROGRESS_LABEL = {
     belongsTo: [exports.FEATURE, SUPPORT, FIX],
-    explanation: '🐌  Continue developing a new feature, bugfix or support script',
+    explanation: '🐌  Continue developing',
     value: 'progress',
 };
 exports.STOP_LABEL = {
     belongsTo: [exports.FEATURE, SUPPORT, FIX],
-    explanation: '⏹  Stop developing a new feature, bugfix or support script',
+    explanation: '⏹  Stop',
     value: 'stop',
 };
 const customLabelsRaw = getCustomLabels_1.getCustomLabels();
@@ -223,16 +215,15 @@ exports.labels = [
     exports.EMPTY_LABEL,
     ...customLabels,
     ISSUE_LABEL,
-    IMPORTANT_LABEL,
-    SMALL_LABEL,
-    REFACTOR_LABEL,
     exports.START_LABEL,
     exports.PROGRESS_LABEL,
     exports.STOP_LABEL,
+    IMPORTANT_LABEL,
+    SMALL_LABEL,
+    REFACTOR_LABEL,
     exports.CUSTOM_LABEL,
     STYLE_LABEL,
     UI_LABEL,
-    PERFORMANCE_LABEL,
     DEPENDENCY_LABEL,
     PUBLISH_LABEL,
     EXAMPLES_LABEL,
