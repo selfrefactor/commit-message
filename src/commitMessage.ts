@@ -72,5 +72,5 @@ export async function commitMessage(flag?: boolean): Promise<string> {
 
   return commitMessageValue.trim() === '' ?
     init(commitFirstPart) :
-    `${commitFirstPart}: ${commitMessageValue.trim()}`
+    `${commitFirstPart} ${commitMessageValue.trim()}`
 }

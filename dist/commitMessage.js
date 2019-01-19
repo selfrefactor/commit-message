@@ -53,7 +53,7 @@ async function commitMessage(flag) {
     }
     return commitMessageValue.trim() === '' ?
         rambdax_1.init(commitFirstPart) :
-        `${commitFirstPart}: ${commitMessageValue.trim()}`;
+        `${commitFirstPart} ${commitMessageValue.trim()}`;
 }
 exports.commitMessage = commitMessage;
 //# sourceMappingURL=commitMessage.js.map
