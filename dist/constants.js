@@ -62,15 +62,6 @@ exports.CUSTOM_LABEL = {
     explanation: 'Write your own label',
     value: 'custom',
 };
-const UI_LABEL = {
-    belongsTo: [
-        FIX,
-        exports.FEATURE,
-        TEST,
-    ],
-    explanation: '👁  Frontend related changes',
-    value: 'UI',
-};
 const EXTEND_LABEL = {
     belongsTo: [
         exports.FEATURE,
@@ -214,22 +205,19 @@ if (customLabelsRaw !== false) {
 exports.labels = [
     exports.EMPTY_LABEL,
     ...customLabels,
+    IMPORTANT_LABEL,
+    SMALL_LABEL,
+    BREAK_LABEL,
+    STYLE_LABEL,
+    PUBLISH_LABEL,
     ISSUE_LABEL,
     exports.START_LABEL,
     exports.PROGRESS_LABEL,
     exports.STOP_LABEL,
-    IMPORTANT_LABEL,
-    SMALL_LABEL,
-    REFACTOR_LABEL,
-    exports.CUSTOM_LABEL,
-    STYLE_LABEL,
-    UI_LABEL,
     DEPENDENCY_LABEL,
-    PUBLISH_LABEL,
     EXAMPLES_LABEL,
     USAGE_LABEL,
-    EXTEND_LABEL,
-    BREAK_LABEL,
     REMOVE_LABEL,
+    exports.CUSTOM_LABEL,
 ];
 //# sourceMappingURL=constants.js.map

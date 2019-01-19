@@ -30,7 +30,6 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
   try{
     const label = await promptInput(ASK_FOR_CUSTOM_LABEL)
     const key = input.commitType.key.toLowerCase()
-
     /**
      * When this is not the first label for this `commitType` context
      */

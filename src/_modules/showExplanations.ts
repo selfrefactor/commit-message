@@ -14,6 +14,7 @@ export function normalize(x: string): any {
 
 export function showExplanations(): void {
   let counter = 0
+  
   explanationOfTypes.map(explanation => {
     const tag = counter % 2 === 0 ?
       'tag=foo' :

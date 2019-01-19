@@ -74,16 +74,6 @@ export const CUSTOM_LABEL = {
   value: 'custom',
 }
 
-const UI_LABEL = {
-  belongsTo: [
-    FIX,
-    FEATURE,
-    TEST,
-  ],
-  explanation: '👁  Frontend related changes',
-  value: 'UI',
-}
-
 const EXTEND_LABEL = {
   belongsTo: [
     FEATURE,
@@ -252,21 +242,18 @@ if (customLabelsRaw !== false) {
 export const labels: Label[] = [
   EMPTY_LABEL,
   ...customLabels,
+  IMPORTANT_LABEL,
+  SMALL_LABEL,
+  BREAK_LABEL,
+  STYLE_LABEL,
+  PUBLISH_LABEL,
   ISSUE_LABEL,
   START_LABEL,
   PROGRESS_LABEL,
   STOP_LABEL,
-  IMPORTANT_LABEL,
-  SMALL_LABEL,
-  REFACTOR_LABEL,
-  CUSTOM_LABEL,
-  STYLE_LABEL,
-  UI_LABEL,
   DEPENDENCY_LABEL,
-  PUBLISH_LABEL,
   EXAMPLES_LABEL,
   USAGE_LABEL,
-  EXTEND_LABEL,
-  BREAK_LABEL,
   REMOVE_LABEL,
+  CUSTOM_LABEL,
 ]
