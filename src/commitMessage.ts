@@ -1,5 +1,4 @@
 import { log } from 'log'
-import { init } from 'rambdax'
 import {
   ASK_FOR_MESSAGE,
   labels,
@@ -27,7 +26,7 @@ function getWorkInProgressFlag(commitLabel: string) {
 // It ask the user for type and text of commit
 // and returns the final commit message.
 // ============================================
-export async function commitMessage(flag?: boolean): Promise<string> {
+export async function commitMessage(): Promise<string> {
   const workInProgress = getWorkInProgress()
   showExplanations()
 
@@ -36,12 +35,6 @@ export async function commitMessage(flag?: boolean): Promise<string> {
     commitType,
     labels,
   })
-
-  const commitFirstPart = commitLabel === '' ?
-    `${commitType.value}:` :
-    flag ?
-      `${commitType.value}(${commitLabel}):` :
-      `${commitType.value}@${commitLabel}`
 
   if (workInProgress.length > 0) {
     log(`WorkInProgress - '${workInProgress}'`, 'info')
@@ -69,8 +62,17 @@ export async function commitMessage(flag?: boolean): Promise<string> {
     commitMessageValue = workInProgress
     saveWorkInProgress('')
   }
+  const noInput = commitMessageValue.trim() === ''
+  const noLabel = commitLabel === ''
 
-  return commitMessageValue.trim() === '' ?
-    init(commitFirstPart) :
-    `${commitFirstPart} ${commitMessageValue.trim()}`
+  if(noInput && noLabel) {
+    return commitType.value
+  }
+  if(noInput && !noLabel) {
+    return `${commitType.value}@${commitLabel}`
+  }
+  if(!noInput && noLabel) {
+    return `${commitType.value}: ${commitMessageValue}`
+  }
+  return `${commitType.value}@${commitLabel} ${commitMessageValue}`
 }

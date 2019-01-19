@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const log_1 = require("log");
-const rambdax_1 = require("rambdax");
 const constants_1 = require("./constants");
 const getCommitLabel_1 = require("./_modules/getCommitLabel");
 const getCommitType_1 = require("./_modules/getCommitType");
@@ -17,7 +16,7 @@ function getWorkInProgressFlag(commitLabel) {
 // It ask the user for type and text of commit
 // and returns the final commit message.
 // ============================================
-async function commitMessage(flag) {
+async function commitMessage() {
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
@@ -25,11 +24,6 @@ async function commitMessage(flag) {
         commitType,
         labels: constants_1.labels,
     });
-    const commitFirstPart = commitLabel === '' ?
-        `${commitType.value}:` :
-        flag ?
-            `${commitType.value}(${commitLabel}):` :
-            `${commitType.value}@${commitLabel}`;
     if (workInProgress.length > 0) {
         log_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
     }
@@ -51,9 +45,18 @@ async function commitMessage(flag) {
         commitMessageValue = workInProgress;
         saveWorkInProgress_1.saveWorkInProgress('');
     }
-    return commitMessageValue.trim() === '' ?
-        rambdax_1.init(commitFirstPart) :
-        `${commitFirstPart} ${commitMessageValue.trim()}`;
+    const noInput = commitMessageValue.trim() === '';
+    const noLabel = commitLabel === '';
+    if (noInput && noLabel) {
+        return commitType.value;
+    }
+    if (noInput && !noLabel) {
+        return `${commitType.value}@${commitLabel}`;
+    }
+    if (!noInput && noLabel) {
+        return `${commitType.value}: ${commitMessageValue}`;
+    }
+    return `${commitType.value}@${commitLabel} ${commitMessageValue}`;
 }
 exports.commitMessage = commitMessage;
 //# sourceMappingURL=commitMessage.js.map

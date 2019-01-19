@@ -1,9 +1,9 @@
 import { execCommand } from './_modules/execCommand'
 import { commitMessage } from './commitMessage'
 
-export async function commitAndPush(flag?: boolean): Promise<string> {
+export async function commitAndPush(): Promise<string> {
   try {
-    const commitMessageValue = await commitMessage(flag)
+    const commitMessageValue = await commitMessage()
 
     await execCommand('git add . --all')
     await execCommand(`git commit -m "${commitMessageValue}"`)
