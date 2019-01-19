@@ -811,9 +811,10 @@ typescript-formatter@^7.1.0:
     commandpost "^1.0.0"
     editorconfig "^0.15.0"
 
-typescript@^2.9.0-dev.20180327:
-  version "2.9.0-dev.20180327"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.0-dev.20180327.tgz#f27ca1d6761c7de5e530ead9c9321b9f66c13d1e"
+typescript@^3.1.0:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.2.4.tgz#c585cb952912263d915b462726ce244ba510ef3d"
+  integrity sha512-0RNDbSdEokBeEAkgNbxJ+BLwSManFy9TeXz8uW+48j/xhEXv1ePME60olyzw2XzUqUBNAYFeJadIqAgNqIACwg==
 
 universalify@^0.1.0:
   version "0.1.1"

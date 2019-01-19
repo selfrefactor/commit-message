@@ -1,4 +1,5 @@
 import { log } from 'log'
+import { init } from 'rambdax'
 import {
   ASK_FOR_MESSAGE,
   labels,
@@ -37,9 +38,9 @@ export async function commitMessage(flag?: boolean): Promise<string> {
   })
 
   const commitFirstPart = commitLabel === '' ?
-    `${commitType.value}` :
+    `${commitType.value}:` :
     flag ?
-      `${commitType.value}(${commitLabel})` :
+      `${commitType.value}(${commitLabel}):` :
       `${commitType.value}@${commitLabel}`
 
   if (workInProgress.length > 0) {
@@ -70,6 +71,6 @@ export async function commitMessage(flag?: boolean): Promise<string> {
   }
 
   return commitMessageValue.trim() === '' ?
-    commitFirstPart :
+    init(commitFirstPart) :
     `${commitFirstPart}: ${commitMessageValue.trim()}`
 }

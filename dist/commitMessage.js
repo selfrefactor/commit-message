@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const log_1 = require("log");
+const rambdax_1 = require("rambdax");
 const constants_1 = require("./constants");
 const getCommitLabel_1 = require("./_modules/getCommitLabel");
 const getCommitType_1 = require("./_modules/getCommitType");
@@ -25,9 +26,9 @@ async function commitMessage(flag) {
         labels: constants_1.labels,
     });
     const commitFirstPart = commitLabel === '' ?
-        `${commitType.value}` :
+        `${commitType.value}:` :
         flag ?
-            `${commitType.value}(${commitLabel})` :
+            `${commitType.value}(${commitLabel}):` :
             `${commitType.value}@${commitLabel}`;
     if (workInProgress.length > 0) {
         log_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
@@ -51,7 +52,7 @@ async function commitMessage(flag) {
         saveWorkInProgress_1.saveWorkInProgress('');
     }
     return commitMessageValue.trim() === '' ?
-        commitFirstPart :
+        rambdax_1.init(commitFirstPart) :
         `${commitFirstPart}: ${commitMessageValue.trim()}`;
 }
 exports.commitMessage = commitMessage;

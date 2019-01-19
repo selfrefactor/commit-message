@@ -16,6 +16,7 @@
     "inquirer": "^6.2.1",
     "log": "https://github.com/selfrefactor/log#2.0.1",
     "package-storage": "https://github.com/selfrefactor/package-storage#0.4.0",
+    "rambdax": "^1.6.3",
     "string-fn": "^2.0.0"
   },
   "devDependencies": {
@@ -23,8 +24,8 @@
     "@types/node": "^9.6.0",
     "fs-extra": "^5.0.0",
     "tslint": "^5.9.1",
-    "typescript-formatter": "^7.1.0",
-    "typescript": "^2.9.0-dev.20180327"
+    "typescript": "^3.1.0",
+    "typescript-formatter": "^7.1.0"
   },
   "bin": {
     "commit": "./bin/commit.js"
@@ -37,6 +38,6 @@
     "fix": [
       "small"
     ],
-    "workInProgress":""
+    "workInProgress": ""
   }
 }
