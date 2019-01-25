@@ -26,20 +26,14 @@ const FIX = {
   value: 'fix',
 }
 
-const TYPINGS = {
-  explanation: '✍️  Edit Typescript definitions',
-  key: 'TYPINGS',
-  value: 'typings',
-}
-
 const SUPPORT = {
-  explanation: '☂️  Chore',
+  explanation: '☂️   Chore',
   key: 'SUPPORT',
   value: 'chore',
 }
 
 const DOCS = {
-  explanation: '📚️  Edit documentation',
+  explanation:    '✍ Edit documentation',
   key: 'DOCS',
   value: 'docs',
 }
@@ -49,7 +43,6 @@ export const typesOfCommit: CommitType[] = [
   FIX,
   TEST,
   SUPPORT,
-  TYPINGS,
   DOCS,
 ]
 
@@ -58,7 +51,6 @@ export const explanationOfTypes: string[] = [
   `${FIX.key} - ${FIX.explanation}`,
   `${SUPPORT.key} - ${SUPPORT.explanation}`,
   `${TEST.key} - ${TEST.explanation}`,
-  `${TYPINGS.key} - ${TYPINGS.explanation}`,
   `${DOCS.key} - ${DOCS.explanation}`,
 ]
 
@@ -74,13 +66,13 @@ export const CUSTOM_LABEL = {
   value: 'custom',
 }
 
-const EXTEND_LABEL = {
+const TYPINGS_LABEL = {
   belongsTo: [
     FEATURE,
-    SUPPORT,
+    FIX,
   ],
-  explanation: '🔄  Build upon current behaviour',
-  value: 'extend',
+  explanation: '📚️ ️Edit Typescript definitions',
+  value: 'typings',
 }
 
 const STYLE_LABEL = {
@@ -105,7 +97,6 @@ const IMPORTANT_LABEL = {
     FIX,
     FEATURE,
     TEST,
-    TYPINGS,
     SUPPORT,
   ],
   explanation: '⚠  Commit with higher significance',
@@ -116,7 +107,6 @@ const SMALL_LABEL = {
   belongsTo: [
     FEATURE,
     TEST,
-    TYPINGS,
     DOCS,
     SUPPORT,
   ],
@@ -137,7 +127,6 @@ const DEPENDENCY_LABEL = {
 const BREAK_LABEL = {
   belongsTo: [
     FEATURE,
-    FIX,
   ],
   explanation: '💣  Breaking changes',
   value: 'break',
@@ -218,11 +207,8 @@ if (customLabelsRaw !== false) {
   ]
 
   Object.keys(customLabelsRaw).forEach(key => {
-    if(key === 'workInProgress'){
-      
-      return
-    }
-
+    if(key === 'workInProgress')return
+    
     customLabelsRaw[key].forEach(singleLabel => {
       const belongsToValue = key === 'labels' ?
         belongsToWhenLabel :
@@ -245,6 +231,7 @@ export const labels: Label[] = [
   IMPORTANT_LABEL,
   SMALL_LABEL,
   BREAK_LABEL,
+  TYPINGS_LABEL,
   STYLE_LABEL,
   PUBLISH_LABEL,
   ISSUE_LABEL,

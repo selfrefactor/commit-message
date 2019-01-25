@@ -21,18 +21,13 @@ const FIX = {
     key: 'FIX',
     value: 'fix',
 };
-const TYPINGS = {
-    explanation: '✍️  Edit Typescript definitions',
-    key: 'TYPINGS',
-    value: 'typings',
-};
 const SUPPORT = {
-    explanation: '☂️  Chore',
+    explanation: '☂️   Chore',
     key: 'SUPPORT',
     value: 'chore',
 };
 const DOCS = {
-    explanation: '📚️  Edit documentation',
+    explanation: '✍ Edit documentation',
     key: 'DOCS',
     value: 'docs',
 };
@@ -41,7 +36,6 @@ exports.typesOfCommit = [
     FIX,
     TEST,
     SUPPORT,
-    TYPINGS,
     DOCS,
 ];
 exports.explanationOfTypes = [
@@ -49,7 +43,6 @@ exports.explanationOfTypes = [
     `${FIX.key} - ${FIX.explanation}`,
     `${SUPPORT.key} - ${SUPPORT.explanation}`,
     `${TEST.key} - ${TEST.explanation}`,
-    `${TYPINGS.key} - ${TYPINGS.explanation}`,
     `${DOCS.key} - ${DOCS.explanation}`,
 ];
 exports.EMPTY_LABEL = {
@@ -62,13 +55,13 @@ exports.CUSTOM_LABEL = {
     explanation: 'Write your own label',
     value: 'custom',
 };
-const EXTEND_LABEL = {
+const TYPINGS_LABEL = {
     belongsTo: [
         exports.FEATURE,
-        SUPPORT,
+        FIX,
     ],
-    explanation: '🔄  Build upon current behaviour',
-    value: 'extend',
+    explanation: '📚️ ️Edit Typescript definitions',
+    value: 'typings',
 };
 const STYLE_LABEL = {
     belongsTo: [
@@ -90,7 +83,6 @@ const IMPORTANT_LABEL = {
         FIX,
         exports.FEATURE,
         TEST,
-        TYPINGS,
         SUPPORT,
     ],
     explanation: '⚠  Commit with higher significance',
@@ -100,7 +92,6 @@ const SMALL_LABEL = {
     belongsTo: [
         exports.FEATURE,
         TEST,
-        TYPINGS,
         DOCS,
         SUPPORT,
     ],
@@ -119,7 +110,6 @@ const DEPENDENCY_LABEL = {
 const BREAK_LABEL = {
     belongsTo: [
         exports.FEATURE,
-        FIX,
     ],
     explanation: '💣  Breaking changes',
     value: 'break',
@@ -186,9 +176,8 @@ if (customLabelsRaw !== false) {
         TEST,
     ];
     Object.keys(customLabelsRaw).forEach(key => {
-        if (key === 'workInProgress') {
+        if (key === 'workInProgress')
             return;
-        }
         customLabelsRaw[key].forEach(singleLabel => {
             const belongsToValue = key === 'labels' ?
                 belongsToWhenLabel :
@@ -208,6 +197,7 @@ exports.labels = [
     IMPORTANT_LABEL,
     SMALL_LABEL,
     BREAK_LABEL,
+    TYPINGS_LABEL,
     STYLE_LABEL,
     PUBLISH_LABEL,
     ISSUE_LABEL,
