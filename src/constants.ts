@@ -227,6 +227,9 @@ if (customLabelsRaw !== false) {
 
 export const labels: Label[] = [
   EMPTY_LABEL,
+  START_LABEL,
+  PROGRESS_LABEL,
+  STOP_LABEL,
   ...customLabels,
   IMPORTANT_LABEL,
   SMALL_LABEL,
@@ -235,9 +238,6 @@ export const labels: Label[] = [
   STYLE_LABEL,
   PUBLISH_LABEL,
   ISSUE_LABEL,
-  START_LABEL,
-  PROGRESS_LABEL,
-  STOP_LABEL,
   DEPENDENCY_LABEL,
   EXAMPLES_LABEL,
   USAGE_LABEL,

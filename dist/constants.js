@@ -193,6 +193,9 @@ if (customLabelsRaw !== false) {
 }
 exports.labels = [
     exports.EMPTY_LABEL,
+    exports.START_LABEL,
+    exports.PROGRESS_LABEL,
+    exports.STOP_LABEL,
     ...customLabels,
     IMPORTANT_LABEL,
     SMALL_LABEL,
@@ -201,9 +204,6 @@ exports.labels = [
     STYLE_LABEL,
     PUBLISH_LABEL,
     ISSUE_LABEL,
-    exports.START_LABEL,
-    exports.PROGRESS_LABEL,
-    exports.STOP_LABEL,
     DEPENDENCY_LABEL,
     EXAMPLES_LABEL,
     USAGE_LABEL,
