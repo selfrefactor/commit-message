@@ -144,11 +144,11 @@ const PUBLISH_LABEL = {
   value: 'publish',
 }
 
-const REFACTOR_LABEL = {
-  belongsTo: [FEATURE, SUPPORT],
-  explanation: '🏗  Refactor code',
-  value: 'refactor',
-}
+// const REFACTOR_LABEL = {
+//   belongsTo: [FEATURE, SUPPORT],
+//   explanation: '🏗  Refactor code',
+//   value: 'refactor',
+// }
 
 const USAGE_LABEL = {
   belongsTo: [DOCS],

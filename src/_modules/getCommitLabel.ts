@@ -27,7 +27,6 @@ const getPadding = (str: string): string => {
  * it will be saved as label in the current `commitType` context
  */
 export async function askCustomLabel(input: GetLabel): Promise<string> {
-  try{
     const label = await promptInput(ASK_FOR_CUSTOM_LABEL)
     const key = input.commitType.key.toLowerCase()
     /**
@@ -57,9 +56,6 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
     )
 
     return label
-  }catch (err){
-    throw err
-  }
 }
 
 export async function getCommitLabel(input: GetLabel): Promise<string> {
