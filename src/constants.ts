@@ -33,7 +33,7 @@ const SUPPORT = {
 }
 
 const DOCS = {
-  explanation:    '✍ Edit documentation',
+  explanation: '✍ Edit documentation',
   key: 'DOCS',
   value: 'docs',
 }
@@ -207,8 +207,8 @@ if (customLabelsRaw !== false) {
   ]
 
   Object.keys(customLabelsRaw).forEach(key => {
-    if(key === 'workInProgress')return
-    
+    if (key === 'workInProgress') { return }
+
     customLabelsRaw[key].forEach(singleLabel => {
       const belongsToValue = key === 'labels' ?
         belongsToWhenLabel :

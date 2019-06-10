@@ -65,13 +65,13 @@ export async function commitMessage(): Promise<string> {
   const noInput = commitMessageValue.trim() === ''
   const noLabel = commitLabel === ''
 
-  if(noInput && noLabel) {
+  if (noInput && noLabel) {
     return commitType.value
   }
-  if(noInput && !noLabel) {
+  if (noInput && !noLabel) {
     return `${commitType.value}@${commitLabel}`
   }
-  if(!noInput && noLabel) {
+  if (!noInput && noLabel) {
     return `${commitType.value}: ${commitMessageValue}`
   }
   return `${commitType.value}@${commitLabel} ${commitMessageValue}`
