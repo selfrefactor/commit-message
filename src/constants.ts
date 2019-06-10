@@ -187,7 +187,7 @@ const getBelongsTo = (key): CommitType[] => {
   let flag = false
   let commitTypeHolder: CommitType
 
-  typesOfCommit.map(singleCommitType => {
+  typesOfCommit.forEach(singleCommitType => {
     if (singleCommitType.key.toLowerCase() === key) {
       flag = true
       commitTypeHolder = singleCommitType
