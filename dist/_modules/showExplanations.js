@@ -13,7 +13,7 @@ function normalize(x) {
 exports.normalize = normalize;
 function showExplanations() {
     let counter = 0;
-    constants_1.explanationOfTypes.map(explanation => {
+    constants_1.explanationOfTypes.forEach(explanation => {
         const tag = counter % 2 === 0 ?
             'tag=foo' :
             'tag=bar';

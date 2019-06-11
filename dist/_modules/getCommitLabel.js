@@ -17,24 +17,19 @@ const getPadding = (str) => {
  * it will be saved as label in the current `commitType` context
  */
 async function askCustomLabel(input) {
-    try {
-        const label = await promptInput_1.promptInput(constants_1.ASK_FOR_CUSTOM_LABEL);
-        const key = input.commitType.key.toLowerCase();
-        /**
-         * When this is not the first label for this `commitType` context
-         */
-        const loaded = package_storage_1.load('commitMessage', key, true);
-        const isNewLabel = loaded === undefined || loaded.push === undefined;
-        const toSave = isNewLabel ?
-            [label] :
-            [...loaded, label];
-        package_storage_1.save('commitMessage', key, toSave, true);
-        log_1.log(`label '${label}' is part of '${key}' context | is.new = '${isNewLabel}'`, 'info');
-        return label;
-    }
-    catch (err) {
-        throw err;
-    }
+    const label = await promptInput_1.promptInput(constants_1.ASK_FOR_CUSTOM_LABEL);
+    const key = input.commitType.key.toLowerCase();
+    /**
+     * When this is not the first label for this `commitType` context
+     */
+    const loaded = package_storage_1.load('commitMessage', key, true);
+    const isNewLabel = loaded === undefined || loaded.push === undefined;
+    const toSave = isNewLabel ?
+        [label] :
+        [...loaded, label];
+    package_storage_1.save('commitMessage', key, toSave, true);
+    log_1.log(`label '${label}' is part of '${key}' context | is.new = '${isNewLabel}'`, 'info');
+    return label;
 }
 exports.askCustomLabel = askCustomLabel;
 async function getCommitLabel(input) {
@@ -58,7 +53,7 @@ async function getCommitLabel(input) {
     const labelIndex = filteredLabelsValue.indexOf(labelRaw);
     const label = filteredLabels[labelIndex].value;
     return label === constants_1.CUSTOM_LABEL.value ?
-        await askCustomLabel(input) :
+        askCustomLabel(input) :
         label;
 }
 exports.getCommitLabel = getCommitLabel;

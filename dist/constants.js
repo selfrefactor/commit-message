@@ -124,11 +124,11 @@ const PUBLISH_LABEL = {
     explanation: '📨  Publish new version',
     value: 'publish',
 };
-const REFACTOR_LABEL = {
-    belongsTo: [exports.FEATURE, SUPPORT],
-    explanation: '🏗  Refactor code',
-    value: 'refactor',
-};
+// const REFACTOR_LABEL = {
+//   belongsTo: [FEATURE, SUPPORT],
+//   explanation: '🏗  Refactor code',
+//   value: 'refactor',
+// }
 const USAGE_LABEL = {
     belongsTo: [DOCS],
     explanation: 'ℹ️  Edit usage information',
@@ -159,7 +159,7 @@ const customLabels = [];
 const getBelongsTo = (key) => {
     let flag = false;
     let commitTypeHolder;
-    exports.typesOfCommit.map(singleCommitType => {
+    exports.typesOfCommit.forEach(singleCommitType => {
         if (singleCommitType.key.toLowerCase() === key) {
             flag = true;
             commitTypeHolder = singleCommitType;
@@ -176,8 +176,9 @@ if (customLabelsRaw !== false) {
         TEST,
     ];
     Object.keys(customLabelsRaw).forEach(key => {
-        if (key === 'workInProgress')
+        if (key === 'workInProgress') {
             return;
+        }
         customLabelsRaw[key].forEach(singleLabel => {
             const belongsToValue = key === 'labels' ?
                 belongsToWhenLabel :
