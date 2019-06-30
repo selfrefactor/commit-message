@@ -1,42 +1,7 @@
 {
-  "name": "commit-message",
-  "version": "2.2.0",
-  "description": "commit-message",
-  "main": "./dist/index.js",
-  "typings": "./src/index.d.ts",
-  "scripts": {
-    "x": "tslint --fix --project tsconfig.json",
-    "y": "tsfmt -r --no-tsconfig src/*.ts",
-    "build": "tsc -p .",
-    "de": "node ./bin/commit.js",
-    "debug": "node ./dist/debug.js",
-    "test": "jest"
-  },
-  "dependencies": {
-    "inquirer": "^6.2.1",
-    "log": "https://github.com/selfrefactor/log#2.0.1",
-    "package-storage": "https://github.com/selfrefactor/package-storage#0.4.0",
-    "string-fn": "^2.0.0"
-  },
+  "name": "root",
+  "private": true,
   "devDependencies": {
-    "@types/inquirer": "^0.0.38",
-    "@types/node": "^9.6.0",
-    "fs-extra": "^5.0.0",
-    "tslint": "^5.9.1",
-    "typescript": "^3.1.0",
-    "typescript-formatter": "^7.1.0"
-  },
-  "bin": {
-    "commit": "./bin/commit.js"
-  },
-  "repository": "git@github.com:selfrefactor/commit-message.git",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "license": "MIT",
-  "private": false,
-  "commitMessage": {
-    "fix": [
-      "small"
-    ],
-    "workInProgress": ""
+    "lerna": "^3.15.0"
   }
 }

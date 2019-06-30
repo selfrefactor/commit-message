@@ -1,0 +1,1 @@
+{"version":3,"file":"click.js","sourceRoot":"","sources":["../../src/modules/click.ts"],"names":[],"mappings":";;AAAa,QAAA,KAAK,GAAG,CAAC,QAAgB,EAAQ,EAAE;IAC9C,MAAM,OAAO,GAAG,QAAQ,CAAC,aAAa,CAAC,QAAQ,CAAgB,CAAA;IAC/D,IAAI,OAAO,KAAK,IAAI,EAAE;QACpB,MAAM,uCAAuC,QAAQ,GAAG,CAAA;KACzD;IACD,OAAO,CAAC,KAAK,EAAE,CAAA;AACjB,CAAC,CAAA"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"getCustomLabels.js","sourceRoot":"","sources":["../../src/_modules/getCustomLabels.ts"],"names":[],"mappings":";;AAAA,qDAAsC;AAEtC,SAAgB,eAAe;IAC3B,MAAM,MAAM,GAAG,sBAAI,CAAC,eAAe,EAAE,SAAS,EAAE,IAAI,CAAC,CAAA;IAErD,OAAO,MAAM,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC,MAAM,KAAK,CAAC,CAAC,CAAC;QACvC,KAAK,CAAC,CAAC;QACP,MAAM,CAAA;AACZ,CAAC;AAND,0CAMC"}
