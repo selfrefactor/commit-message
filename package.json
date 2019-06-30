@@ -4,7 +4,7 @@
 	"description": "services",
 	"main": "index.js",
 	"typings": "index.d.ts",
-	"repository": "git@github.com:selfrefactor/lint-fn.git",
+	"repository": "git@github.com:selfrefactor/services.git",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
 	"depFn": [
