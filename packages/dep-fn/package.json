@@ -23,9 +23,9 @@
     "init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#3.5.0",
     "inquirer": "^6.2.0",
     "json-format": "^1.0.1",
-    "log": "https://github.com/selfrefactor/log#1.2.0",
+		"helpers": "https://github.com/selfrefactor/helpers#1.1.0",
     "package-storage": "https://github.com/selfrefactor/package-storage#0.3.0",
-    "puppeteer": "^1.7.0",
+    "puppeteer": "^1.8.1",
     "rambdax": "^0.12.5"
   },
   "devDependencies": {
