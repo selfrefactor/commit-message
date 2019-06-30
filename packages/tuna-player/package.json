@@ -1,0 +1,34 @@
+{
+  "name": "tuna-player",
+  "version": "1.0.0",
+  "description": "Linux MP3 player able to modify the sound with Tuna.js API",
+  "main": "main.js",
+  "repository": "git@github.com:selfrefactor/tuna-player.git",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT",
+  "productName": "Tuna Player",
+  "scripts": {
+    "start": "electron .",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "babel-core": "6.20.0",
+    "babel-loader": "6.2.9",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.2",
+    "electron": "^1.7.9",
+    "express": "^4.16.2",
+    "proud-db": "^0.3.0",
+    "ramda": "^0.25.0",
+    "rc-slider": "^8.3.5",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-notification": "^6.8.2",
+    "react-select": "^1.0.0-rc.10",
+    "reqwest": "^2.0.5",
+    "webpack": "1.14.0"
+  }
+}
