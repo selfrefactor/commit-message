@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "debug": "RAMBDAX_LOG=OFF node debug.js",
+    "test": "jest",
+    "in": "tsc -w",
+    "out": "tsc -p .",
+    "lint": "tslint --type-check --project tsconfig.json"
+  },
   "name": "tag-fn",
   "version": "0.3.6",
   "description": "CLI command for lazy generation of Github tags",
@@ -25,13 +32,6 @@
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "typescript": "^3.5.0"
-  },
-  "scripts": {
-    "debug": "DEBUG_FLAG=true node debug.js",
-    "test": "jest",
-    "in": "tsc -w",
-    "out": "tsc -p .",
-    "lint": "tslint --type-check --project tsconfig.json"
   },
   "jest": {
     "transform": {

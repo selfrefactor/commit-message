@@ -15,15 +15,11 @@ const selectors = {
     submitTag: 'button.js-publish-release',
     username: '#login_field',
 };
-const DEBUG_FLAG = false;
-if (DEBUG_FLAG) {
-    tagFn({ tag: undefined }).then(console.log).catch(console.log);
-}
 async function tagFn(input) {
     try {
         const repoName = getRepoName_1.getRepoName();
         const { user, password } = getCredentials_1.getCredentials();
-        var { browser, page } = await init_puppeteer_1.initPuppeteer({ headless: !DEBUG_FLAG });
+        var { browser, page } = await init_puppeteer_1.initPuppeteer({ headless: process.env.RAMBDAX_LOG !== 'OFF' });
         const urlGithub = 'https://github.com/';
         const urlInit = `${urlGithub}login`;
         await page.goto(urlInit, constants_1.waitForNetwork);

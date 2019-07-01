@@ -16,17 +16,11 @@ const selectors = {
   submitTag: 'button.js-publish-release',
   username: '#login_field',
 }
-const DEBUG_FLAG = false
-
-if(DEBUG_FLAG){
-  tagFn({tag: undefined}).then(console.log).catch(console.log)
-}
-
 export async function tagFn(input: IInput): Promise<void|string>{
   try{
     const repoName = getRepoName()
     const {user, password} = getCredentials()
-    var { browser, page } = await initPuppeteer({headless: !DEBUG_FLAG})
+    var { browser, page } = await initPuppeteer({headless: process.env.RAMBDAX_LOG !== 'OFF'})
 
     const urlGithub = 'https://github.com/'
     const urlInit = `${urlGithub}login`
