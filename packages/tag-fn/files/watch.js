@@ -1,62 +1,32 @@
-const log = require('log-fn')
-const path = require('path')
-const { lastUsed } = require('last-used')
 const watchFn = require('watch-fn')
-const { exec, spawn } = require('child_process')
-
-const projectDirectory = path.resolve(__dirname, '../')
-
-//As we have numerous operations, watch.timeout option is not a good fit. 
-let flag = true
-
-lastUsed('Tag fn')
-
-const execCommand = command =>
-  new Promise((resolve, reject) => {
-    const proc = exec(command, { cwd : projectDirectory })
-
-    proc.stdout.on('data', chunk => {
-      console.log(chunk.toString())
-    })
-    proc.stdout.on('end', () => resolve())
-    proc.stdout.on('error', err => reject(err))
-  })
-
-execCommand('rm -rf dist')
-
-const tslintFn = async filePath => {
-  if (flag === false) {
-    return
-  }
-  flag = false
-  log('sep')
-  await execCommand(`tslint ${ filePath } --fix`)
-  log(`Tslint command over ${ filePath } is completed`, 'info')
-}
-
-const typescriptFn = async filePath => {
-  await execCommand('tsc -p .')
-  log('Typescript build is completed', 'info')
-  log('sep')
-}
-
-const typeCheckFn = async filePath => {
-  await execCommand('tslint --type-check --project tsconfig.json')
-  flag = true
-  log('sep')
-}
-
+const {exec} = require('child_process')
+const CWD = '/home/s/imc_projects/imc-react-api/client'
+const JEST = `${CWD}/node_modules/jest/bin/jest.js`
 const options = {
-  commands : {
-    ts : [
-      tslintFn,
-      typescriptFn,
-      typeCheckFn,
-    ],
-  },
-  directory : `${ projectDirectory }/src`,
-  cwd       : projectDirectory,
-  logFn     : () => {},
+  directory: '/home/s/imc_projects/imc-react-api/client/app/components',
+  pwd: CWD,
+  commands: {
+    jsx: watch
+  }
 }
 
-watchFn.start(options)
+function run(command){
+  return new Promise(resolve => {
+    exec(command, {cwd:CWD}, (_, stdout, __)=> {
+      console.log(_, stdout, __)
+      return resolve(stdout.toString())
+    })
+  })
+}
+
+async function watch(filePath){
+  console.log(filePath, 'filePath')
+  const command = `${JEST} --json --onlyChanged`
+  // numPassedTests
+  // numFailedTests
+  console.log('start Jest')
+  const result = await run(command)
+  console.log(JSON.parse(result))
+}
+
+watchFn.start(options).then(console.log)

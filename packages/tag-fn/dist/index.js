@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const log = require("log-fn");
+const helpers_1 = require("helpers");
 const click_1 = require("./modules/click");
 const constants_1 = require("./modules/constants");
 const getCredentials_1 = require("./modules/getCredentials");
@@ -49,7 +49,7 @@ async function tagFn(input) {
         const urlRepo = `https://github.com/${user}/${repoName}`;
         const responseURLRepo = await page.goto(urlRepo, constants_1.waitForNetwork);
         if (!responseURLRepo.ok) {
-            log(`Github user '${user}' doesn't have repo '${repoName}'`, 'error');
+            helpers_1.log(`Github user '${user}' doesn't have repo '${repoName}'`, 'error');
             return;
         }
         const urlRelease = `${urlRepo}/releases`;
@@ -67,11 +67,11 @@ async function tagFn(input) {
         const expectedURL = `${urlRepo}/releases/tag/${tagValue}`;
         const ok = responseURLNewTag.ok && responseURLNewTag._url === expectedURL;
         if (ok) {
-            log(`Published new tag '${tagValue}' on repo '${repoName}'`, 'success');
+            helpers_1.log(`Published new tag '${tagValue}' on repo '${repoName}'`, 'success');
             const command = `yarn add https://github.com/${user}/${repoName}#${tagValue}`;
-            return log(`Install as dependency with '${command}'`, 'info');
+            return helpers_1.log(`Install as dependency with '${command}'`, 'info');
         }
-        log(`Something went wrong when publishing new tag '${tagValue}'`, 'error');
+        helpers_1.log(`Something went wrong when publishing new tag '${tagValue}'`, 'error');
     }
     catch (err) {
         console.log(err);

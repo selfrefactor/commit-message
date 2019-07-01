@@ -7,7 +7,7 @@ process.on('uncaughtException', err => {
     console.log(err);
 });
 const inquirer = require("inquirer");
-const log = require("log-fn");
+const helpers_1 = require("helpers");
 const rambdax_1 = require("rambdax");
 const index_1 = require("./index");
 const init_1 = require("./modules/init");
@@ -27,15 +27,15 @@ else {
         'minor' :
         input;
     if (['minor', 'major', 'patch'].includes(tag)) {
-        log(`${tag} incrementation of the latest tag will be applied\n`, 'info');
+        helpers_1.log(`${tag} incrementation of the latest tag will be applied\n`, 'info');
     }
     else {
-        log(`The new tag will be '${tag}'\n`, 'info');
+        helpers_1.log(`The new tag will be '${tag}'\n`, 'info');
     }
-    log('spin');
+    helpers_1.log('spin');
     index_1.tagFn({ tag })
         .then(() => {
-        log('stopspin');
+        helpers_1.log('stopspin');
     })
         .catch(console.log);
 }

@@ -6,7 +6,7 @@ process.on('uncaughtException', err => {
 })
 
 import * as inquirer from 'inquirer'
-import * as log from 'log-fn'
+import {log} from 'helpers'
 import {drop} from 'rambdax'
 import {tagFn} from './index'
 import {init} from './modules/init'

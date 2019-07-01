@@ -1,4 +1,4 @@
-import * as log from 'log-fn'
+import {log} from 'helpers'
 import { Response } from 'puppeteer'
 import { click } from './modules/click'
 import { waitForLoad, waitForNetwork} from './modules/constants'

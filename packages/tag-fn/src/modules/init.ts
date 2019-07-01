@@ -1,6 +1,5 @@
 import {writeJsonSync} from 'fs-extra'
-import * as log from 'log-fn'
-
+import {log} from 'helpers'
 import {resolve} from 'path'
 const settingsLocation = resolve(__dirname, '../../files/config.json')
 

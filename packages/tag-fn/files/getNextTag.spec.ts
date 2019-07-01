@@ -1,4 +1,4 @@
-import { getNextTag } from '../src/modules/getNextTag'
+import { getNextTag } from './getNextTag'
 
 test('when patch', () => {
   expect(getNextTag('0.1.0', 'patch')).toEqual('0.1.1')

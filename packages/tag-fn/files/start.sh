@@ -1,2 +1,0 @@
-node watch &
-node watchTests
