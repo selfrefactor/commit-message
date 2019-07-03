@@ -15,7 +15,7 @@ export async function getAllComponents(srcDirectory: string): Promise<string[]> 
   const [listResult] = await execCommand<string>(
     `ls ${srcDirectory}`, 
     process.cwd(), 
-    'DONT_LOG'
+    'DONT_'helpers'
   )
   
   return filter((srcContentInstance: any) => {

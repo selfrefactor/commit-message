@@ -1,5 +1,5 @@
 import { existsSync, readFileSync } from 'fs'
-import { log } from 'log'
+import { log } from 'helpers'
 import { takeLast } from 'rambdax'
 
 function shortenPath(filePath: string): string {

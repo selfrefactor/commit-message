@@ -17176,7 +17176,7 @@
 	      case 'blockquote':
 	      case 'center':
 	      case 'details':
-	      case 'dialog':
+	      case 'dia'helpers':
 	      case 'dir':
 	      case 'div':
 	      case 'dl':
@@ -21456,7 +21456,7 @@
 	  }
 
 	  _createClass(App, [{
-	    key: 'log',
+	    key: 'helpers',
 	    value: function log(msg) {
 	      var _this4 = this;
 

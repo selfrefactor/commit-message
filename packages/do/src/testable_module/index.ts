@@ -1,5 +1,5 @@
 import { prompt } from 'inquirer'
-import { log } from 'log'
+import { log } from 'helpers'
 import { askExpectedResult } from '../_ask/expectedResult'
 import { askTestInput } from '../_ask/testInput'
 import { filePathInfo } from '../_info/filePath'

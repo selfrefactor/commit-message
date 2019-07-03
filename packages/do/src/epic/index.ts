@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 import { camelCase, snakeCase } from 'string-fn'
 import { askUser } from './askUser'
 

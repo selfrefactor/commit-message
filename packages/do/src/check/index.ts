@@ -10,7 +10,7 @@ import {
   ROUTES_MARKER,
 } from '../constants'
 
-import { log } from 'log'
+import { log } from 'helpers'
 import { filter } from 'rambdax'
 import { constantCase } from 'string-fn'
 import { getAllComponents } from '../_helpers/getAllComponents'

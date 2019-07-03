@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs-extra'
-import { log } from 'log'
+import { log } from 'helpers'
 import { replace } from 'rambdax'
 
 import { camelCase, dotCase } from 'string-fn'

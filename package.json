@@ -22,7 +22,7 @@
     "eslint-plugin-sort-requires": "^2.1.0",
     "fs-extra": "^7.0.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.1.0",
-    "init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#6.8.0",
+    "init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#6.8.2",
     "inquirer": "^6.2.0",
     "json-format": "^1.0.1",
     "package-storage": "https://github.com/selfrefactor/package-storage#0.4.0",

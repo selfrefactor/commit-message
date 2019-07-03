@@ -1,5 +1,5 @@
 import { prompt } from 'inquirer'
-import { log } from 'log'
+import { log } from 'helpers'
 import { generateChoices } from './generateChoices'
 
 const choices = generateChoices(['TRUE', 'FALSE'])

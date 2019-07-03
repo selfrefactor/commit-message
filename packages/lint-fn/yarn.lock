@@ -876,7 +876,7 @@ prop-types@^15.7.2:
   dependencies:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"
-    react-is "^16.8.1"
+    react-is "^16.8.2"
 
 punycode@^2.1.0:
   version "2.1.1"
@@ -888,7 +888,7 @@ rambdax@^2.7.0:
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.7.0.tgz#7c59915d7d5440b3725ba2a7e5e9eed7c28b66af"
   integrity sha512-ot3Yh8nd1mmqhtagVYqZHACpKXRIGs5AmnpITiKwHXvmWyqGkwJIEnanUOI2xXlD9hqMVwh3XgEJILEtSQNVbQ==
 
-react-is@^16.8.1:
+react-is@^16.8.2:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==

@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 import { explanationOfTypes } from '../constants'
 
 const MIN_LENGTH = 12

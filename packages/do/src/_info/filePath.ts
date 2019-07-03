@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 
 export function filePathInfo() {
   const info = `Please include the folder as well

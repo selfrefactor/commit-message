@@ -38,7 +38,7 @@
     "typescript-formatter": "^7.2.2"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/node_modules/server-helpers/jest/prepare.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/node_modules/helpers/jest/prepare.js",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },

@@ -5,7 +5,7 @@ import {
 } from '../constants'
 import { promptInput } from './promptInput'
 
-import { log } from 'log'
+import { log } from 'helpers'
 
 import { load, save } from 'package-storage'
 import { GetLabel, Label, PromptSelect } from '../typings'

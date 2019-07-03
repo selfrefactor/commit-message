@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 
 export function inputArgumentsInfo() {
   const info = `Leave empty if no input

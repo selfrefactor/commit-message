@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 import { replace } from 'rambdax'
-import { log } from 'log'
+import { log } from 'helpers'
 import { camelCase } from 'string-fn'
 
 import { outputFileSync } from '../_modules/outputFileSync'

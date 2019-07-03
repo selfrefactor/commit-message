@@ -11,32 +11,36 @@ process.on('unhandledRejection', (reason, promise) => {
 process.on('uncaughtException', err => {
     console.log(err);
 });
-const input = process.argv[2];
-let method;
-switch (input) {
-    case 'add':
-        method = add_1.add;
-        break;
-    case 'init':
-        method = init_1.init;
-        break;
-    case 'special':
-        method = special_1.special;
-        break;
-    case 'update':
-        method = update_1.update;
-        break;
-    case 'updateall':
-        process.env.DEP_FN_UPDATE_ALL = 'true';
-        method = update_1.update;
-        break;
-    default:
-        helpers_1.log('You didn\'t provide a valid method', 'error');
-        process.exit();
+function cli() {
+    const input = process.argv[3];
+    console.log({ input });
+    let method;
+    switch (input) {
+        case 'add':
+            method = add_1.add;
+            break;
+        case 'init':
+            method = init_1.init;
+            break;
+        case 'special':
+            method = special_1.special;
+            break;
+        case 'update':
+            method = update_1.update;
+            break;
+        case 'updateall':
+            process.env.DEP_FN_UPDATE_ALL = 'true';
+            method = update_1.update;
+            break;
+        default:
+            helpers_1.log('You didn\'t provide a valid method', 'error');
+            process.exit();
+    }
+    method()
+        .then(() => {
+        console.log('done');
+    })
+        .catch(console.log);
 }
-method()
-    .then(() => {
-    console.log('done');
-})
-    .catch(console.log);
+exports.cli = cli;
 //# sourceMappingURL=cli.js.map

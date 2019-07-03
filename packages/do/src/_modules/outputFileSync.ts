@@ -1,5 +1,5 @@
 import { outputFileSync as outputFileSyncModule } from 'fs-extra'
-import { log } from 'log'
+import { log } from 'helpers'
 
 export function outputFileSync(filePath: string, content: string) {
   if (process.env.NODE_ENV === 'test') {

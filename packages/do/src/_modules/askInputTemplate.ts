@@ -1,5 +1,5 @@
 import { prompt } from 'inquirer'
-import { log } from 'log'
+import { log } from 'helpers'
 
 export async function askInputTemplate(input: AskTemplate): Promise<string> {
   if (input.info) {

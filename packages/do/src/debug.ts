@@ -1,5 +1,5 @@
 // tslint:disable
-import { log } from 'log'
+import { log } from 'helpers'
 import { type } from 'rambdax'
 import * as prompts from 'prompts'
 import { normalize, normalizeTestInput } from './_helpers/normalizeTestInput'

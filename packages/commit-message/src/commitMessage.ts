@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 import {
   ASK_FOR_MESSAGE,
   labels,

@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs-extra'
 import { constantCase } from 'string-fn'
 
-import { log } from 'log'
+import { log } from 'helpers'
 import { replace } from 'rambdax'
 import { outputFileSync } from '../_modules/outputFileSync'
 
