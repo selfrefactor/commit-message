@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const init_puppeteer_1 = require("init-puppeteer");
 const latestTag_1 = require("./dom/latestTag");
 exports.getUpdateTag = async (input) => {
     try {
@@ -9,12 +8,12 @@ exports.getUpdateTag = async (input) => {
          * Should be Response not any
          * import { Response } from 'puppeteer'
          */
-        const responseGithub = await page.goto(url, init_puppeteer_1.waitForNetwork);
+        const responseGithub = await page.goto(url);
         if (responseGithub._status !== 200) {
             throw new Error(`getGithubTag ${url} ${responseGithub._status}`);
         }
         const urlTags = `${url}/tags`;
-        await page.goto(urlTags, init_puppeteer_1.waitForNetwork);
+        await page.goto(urlTags);
         const latestTagValue = await page.evaluate(latestTag_1.latestTag);
         return latestTagValue;
     }

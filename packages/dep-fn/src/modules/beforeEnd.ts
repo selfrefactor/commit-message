@@ -1,7 +1,7 @@
 import { existsSync, unlinkSync } from 'fs'
 import { writeFileSync } from 'fs-extra'
 import * as jsonFormat from 'json-format'
-import { log } from 'log'
+import { log } from 'helpers'
 import { join } from 'path'
 import { merge } from 'rambdax'
 import { Dependencies } from '../../typings'

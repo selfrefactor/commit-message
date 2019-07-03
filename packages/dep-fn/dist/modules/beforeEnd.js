@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 const fs_extra_1 = require("fs-extra");
 const jsonFormat = require("json-format");
-const log_1 = require("log");
+const helpers_1 = require("helpers");
 const path_1 = require("path");
 const rambdax_1 = require("rambdax");
 exports.beforeEnd = async (input) => {
@@ -19,6 +19,6 @@ exports.beforeEnd = async (input) => {
     };
     const newPackageJson = rambdax_1.merge(input.packageJson, newProps);
     fs_extra_1.writeFileSync(filePath, jsonFormat(newPackageJson));
-    log_1.log('', 'info');
+    helpers_1.log('', 'info');
 };
 //# sourceMappingURL=beforeEnd.js.map

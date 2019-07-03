@@ -10,7 +10,8 @@ exports.getFallBackLatest = async (dependency) => {
         return rambdax_1.last(packageInfo.versions);
     }
     catch (err) {
-        rambdax_1.debug(err);
+        console.log(err);
+        process.exit(1);
     }
 };
 //# sourceMappingURL=getFallbackLatest.js.map

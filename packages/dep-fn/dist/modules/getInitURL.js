@@ -23,7 +23,8 @@ exports.getInitURL = async (dependency) => {
         return urlGithub;
     }
     catch (error) {
-        rambdax_1.debug(error);
+        console.log(error);
+        process.exit(1);
     }
 };
 //# sourceMappingURL=getInitURL.js.map

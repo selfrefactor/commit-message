@@ -1,4 +1,3 @@
-import { waitForNetwork } from 'init-puppeteer'
 import { UpdateTag } from '../../typings'
 import { latestTag } from './dom/latestTag'
 
@@ -13,7 +12,6 @@ export const getUpdateTag = async (
      */
       const responseGithub: any = await page.goto(
       url,
-      waitForNetwork,
     )
 
       if (responseGithub._status !== 200) {
@@ -22,8 +20,7 @@ export const getUpdateTag = async (
       const urlTags = `${url}/tags`
 
       await page.goto(
-      urlTags,
-      waitForNetwork,
+      urlTags
     )
       const latestTagValue = await page.evaluate(latestTag)
 

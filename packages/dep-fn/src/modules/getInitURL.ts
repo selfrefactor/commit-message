@@ -1,6 +1,5 @@
 import {
   compose,
-  debug,
   head,
   identity,
   length,
@@ -51,6 +50,7 @@ export const getInitURL = async (
 
     return urlGithub
   } catch (error) {
-    debug(error)
+    console.log(error)
+    process.exit(1)
   }
 }

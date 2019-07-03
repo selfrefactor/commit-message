@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const log_1 = require("log");
+const helpers_1 = require("helpers");
 const rambdax_1 = require("rambdax");
 const getInitDependency_1 = require("./getInitDependency");
 const confirm_1 = require("./helpers/confirm");
@@ -14,10 +14,10 @@ exports.getInitDependencies = async (input) => {
             const isDefinitelyTyped = prop.startsWith('@types/');
             let conditionRaw = !(alreadyBetter || isDefinitelyTyped);
             if (alreadyBetter) {
-                log_1.log(`Dependency is already converted ${prop} ${dependency}`, 'info');
+                helpers_1.log(`Dependency is already converted ${prop} ${dependency}`, 'info');
             }
             if (isDefinitelyTyped) {
-                log_1.log(`Dependency '${dependency}' cannot be converted ${prop}`, 'info');
+                helpers_1.log(`Dependency '${dependency}' cannot be converted ${prop}`, 'info');
             }
             const question = `Do you want to convert dependency '${prop}'?`;
             const condition = conditionRaw ?
@@ -39,7 +39,8 @@ exports.getInitDependencies = async (input) => {
         return willReturn;
     }
     catch (err) {
-        rambdax_1.debug(err);
+        console.log(err);
+        process.exit(1);
     }
 };
 //# sourceMappingURL=getInitDependencies.js.map

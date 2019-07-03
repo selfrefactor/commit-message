@@ -1,8 +1,8 @@
-import { OutputPuppeteer } from 'init-puppeteer/typings'
+import { OutputPuppeteer } from 'init-puppeteer'
 import { getAddDependency } from './modules/getAddDependency'
 import { getInitURL } from './modules/getInitURL'
 import { initPuppeteer } from 'init-puppeteer'
-import { log } from 'log'
+import { log } from 'helpers'
 import { puppeteerSettings } from './modules/constants'
 import { takeLast } from 'rambdax'
 

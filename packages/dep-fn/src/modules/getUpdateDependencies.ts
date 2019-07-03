@@ -1,5 +1,4 @@
-import { log } from 'log'
-import { debug } from 'rambdax'
+import { log } from 'helpers'
 import {
   InitDependencies,
   StringMap,
@@ -54,6 +53,7 @@ export const getUpdateDependencies = async (
 
     return willReturn
   } catch (err) {
-    debug(err)
+    console.log(err)
+    process.exit(1)
   }
 }

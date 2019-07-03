@@ -1,5 +1,4 @@
-import { waitForNetwork } from 'init-puppeteer'
-import { log } from 'log'
+import { log } from 'helpers'
 import { Response } from 'puppeteer'
 import { AddDependency } from '../../typings'
 import { latestTag } from './dom/latestTag'
@@ -13,7 +12,6 @@ export const getAddDependency = async (
 
     const responsePackageJson: Response = await input.page.goto(
       urlPackageJson,
-      waitForNetwork,
     )
 
     if (responsePackageJson === null || !responsePackageJson.ok) {
@@ -36,7 +34,6 @@ export const getAddDependency = async (
 
     await input.page.goto(
       urlTags,
-      waitForNetwork,
     )
 
     const latestTagValue = await input.page.evaluate(

@@ -1,5 +1,5 @@
 import { initPuppeteer } from 'init-puppeteer'
-import { OutputPuppeteer } from 'init-puppeteer/typings'
+import { OutputPuppeteer } from 'init-puppeteer'
 import { beforeEnd } from './modules/beforeEnd'
 import { puppeteerSettings } from './modules/constants'
 import { getUpdateDependencies } from './modules/getUpdateDependencies'

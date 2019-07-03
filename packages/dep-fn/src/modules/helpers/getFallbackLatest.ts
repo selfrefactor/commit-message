@@ -1,7 +1,6 @@
 import { execCommand } from './execCommand'
 
 import {
-  debug,
   last,
 } from 'rambdax'
 
@@ -15,6 +14,7 @@ export const getFallBackLatest = async (
 
     return last(packageInfo.versions)
   } catch (err) {
-    debug(err)
+    console.log(err)
+    process.exit(1)
   }
 }

@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 import { add } from './add'
 import { init } from './init'
 import { special } from './special'

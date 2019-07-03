@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const log_1 = require("log");
+const helpers_1 = require("helpers");
 const add_1 = require("./add");
 const init_1 = require("./init");
 const special_1 = require("./special");
@@ -31,7 +31,7 @@ switch (input) {
         method = update_1.update;
         break;
     default:
-        log_1.log('You didn\'t provide a valid method', 'error');
+        helpers_1.log('You didn\'t provide a valid method', 'error');
         process.exit();
 }
 method()

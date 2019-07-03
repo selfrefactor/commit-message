@@ -2,7 +2,7 @@ import { initPuppeteer } from 'init-puppeteer'
 import {
   InputPuppeteer,
   OutputPuppeteer,
-} from 'init-puppeteer/typings'
+} from 'init-puppeteer'
 import { beforeEnd } from './modules/beforeEnd'
 import { getInitDependencies } from './modules/getInitDependencies'
 import { getDependencies } from './modules/helpers/getDependencies'

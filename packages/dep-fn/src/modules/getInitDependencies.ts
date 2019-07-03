@@ -1,5 +1,5 @@
-import { log } from 'log'
-import { debug, tail } from 'rambdax'
+import { log } from 'helpers'
+import { tail } from 'rambdax'
 import { GetInfo, InitDependencies, StringMap } from '../../typings'
 import { getInitDependency } from './getInitDependency'
 import { confirm } from './helpers/confirm'
@@ -50,6 +50,7 @@ export const getInitDependencies = async (
 
     return willReturn
   } catch (err) {
-    debug(err)
+    console.log(err)
+    process.exit(1)
   }
 }

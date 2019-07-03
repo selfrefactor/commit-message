@@ -1,4 +1,4 @@
-import { log } from 'log'
+import { log } from 'helpers'
 import { merge } from 'rambdax'
 import {
   GetInfo,

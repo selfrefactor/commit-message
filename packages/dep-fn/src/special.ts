@@ -1,6 +1,5 @@
-import { initPuppeteer } from 'init-puppeteer'
-import { OutputPuppeteer } from 'init-puppeteer/typings'
-import { log } from 'log'
+import { initPuppeteer, OutputPuppeteer } from 'init-puppeteer'
+import { log } from 'helpers'
 import { takeLast } from 'rambdax'
 import { puppeteerSettings } from './modules/constants'
 import { getUpdateTag } from './modules/getUpdateTag'

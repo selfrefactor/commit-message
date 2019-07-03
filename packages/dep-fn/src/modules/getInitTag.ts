@@ -1,7 +1,5 @@
-import { waitForNetwork } from 'init-puppeteer'
-import { log } from 'log'
+import { log } from 'helpers'
 import { Response } from 'puppeteer'
-import { debug } from 'rambdax'
 import { GithubTag } from '../../typings'
 import { currentTag } from './dom/currentTag'
 import { getURLPackageJson } from './helpers/getURLPackageJson'
@@ -13,7 +11,6 @@ export const getInitTag = async (
     const { page, url, dependency, tag } = input
     await page.goto(
       url,
-      waitForNetwork,
     )
     // Jest related issue
     // Jest NPM package reference the major Github project
@@ -25,7 +22,6 @@ export const getInitTag = async (
 
     const responsePackageJson: Response = await page.goto(
       urlPackageJson,
-      waitForNetwork,
     )
     if (responsePackageJson === null || !responsePackageJson.ok) {
       log('responsePackageJson', 'error')
@@ -44,7 +40,6 @@ export const getInitTag = async (
 
     await page.goto(
       urlTags,
-      waitForNetwork,
     )
 
     const currentTagValue: false | string = await page.evaluate(
@@ -54,6 +49,7 @@ export const getInitTag = async (
 
     return currentTagValue
   } catch (error) {
-    debug(error)
+    console.log(error)
+    process.exit(1)
   }
 }
