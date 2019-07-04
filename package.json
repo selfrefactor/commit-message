@@ -27,7 +27,8 @@
     "json-format": "^1.0.1",
     "package-storage": "https://github.com/selfrefactor/package-storage#0.4.0",
     "rambdax": "^2.10.1",
-    "string-fn": "^2.8.1"
+    "string-fn": "^2.8.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.3",
@@ -37,5 +38,10 @@
   },
   "commitMessage": {
     "workInProgress": "dep.fn"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
