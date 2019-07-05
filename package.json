@@ -21,9 +21,9 @@
     "eslint-plugin-sort-class-members": "^1.4.0",
     "eslint-plugin-sort-requires": "^2.1.0",
     "fs-extra": "^7.0.0",
-    "helpers": "https://github.com/selfrefactor/helpers#1.1.0",
+    "helpers": "https://github.com/selfrefactor/helpers#1.2.1",
     "init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#6.8.2",
-    "inquirer": "^6.2.0",
+    "inquirer": "^6.2.1",
     "json-format": "^1.0.1",
     "package-storage": "https://github.com/selfrefactor/package-storage#0.4.0",
     "rambdax": "^2.10.1",
@@ -36,6 +36,6 @@
     "@types/puppeteer": "^1.12.4"
   },
   "commitMessage": {
-    "workInProgress": "dep.fn"
+    "workInProgress": ""
   }
 }

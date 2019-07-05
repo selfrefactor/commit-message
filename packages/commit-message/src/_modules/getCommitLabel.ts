@@ -7,7 +7,7 @@ import { promptInput } from './promptInput'
 
 import { log } from 'helpers'
 
-import { load, save } from 'package-storage'
+import { load, save } from '../../../package-storage/index.js'
 import { GetLabel, Label, PromptSelect } from '../typings'
 import { promptSelect } from './promptSelect'
 

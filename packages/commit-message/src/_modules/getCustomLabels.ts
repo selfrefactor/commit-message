@@ -1,4 +1,4 @@
-import { load } from 'package-storage'
+import { load } from '../../../package-storage/index.js'
 
 export function getCustomLabels(): false | object {
     const loaded = load('commitMessage', undefined, true)

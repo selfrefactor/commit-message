@@ -1,4 +1,4 @@
-import { save } from 'package-storage'
+import { save } from '../../../package-storage/'
 
 export function saveWorkInProgress(commitMessageValue: string) {
   try{
