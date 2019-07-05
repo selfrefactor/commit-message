@@ -1,0 +1,27 @@
+@import '../node_modules/colors/colors';
+
+$back: #43a3;
+
+html{
+  background:$back;
+}
+
+.foo{
+  background: $BACK_12;
+}
+
+.navagation{
+  &__container{
+    background: $BACK_5;
+    color: $DARK_RED_2;
+    position: fixed;
+    height: 10vh;
+    bottom: 0;
+    width: 100vw;
+    span{
+      background: $GREY_2;
+      padding: 20px;
+      margin: 20px;
+    }
+  }
+}

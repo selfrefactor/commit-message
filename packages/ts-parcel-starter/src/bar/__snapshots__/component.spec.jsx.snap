@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+<div>
+  Count: 
+  2
+  <button
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
