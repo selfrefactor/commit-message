@@ -7,7 +7,7 @@ import {
 import { getUpdateDependency } from './getUpdateDependency'
 import { getUpdateURL } from './getUpdateURL'
 import { getFallbackUpdate } from './helpers/getFallbackUpdate'
-import { isDependencyEligible } from './helpers/isDependencyEligible';
+import { isDependencyEligible } from './helpers/isDependencyEligible'
 
 export const getUpdateDependencies = async (
   input: InitDependencies,
@@ -24,7 +24,7 @@ export const getUpdateDependencies = async (
       const eligible = isDependencyEligible(prop)
 
       if ((alreadyBetter && isDefinitelyTyped) || !eligible) {
-        const typeOK = eligible ? 'already better' : 'skipped' 
+        const typeOK = eligible ? 'already better' : 'skipped'
         log(`Dependency ${prop} is ${typeOK}`, 'warning')
         willReturn[prop] = dependency
 

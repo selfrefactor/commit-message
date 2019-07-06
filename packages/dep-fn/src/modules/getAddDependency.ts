@@ -1,5 +1,4 @@
 import { log } from 'helpers'
-import { Response } from 'puppeteer'
 import { AddDependency } from '../../typings'
 import { latestTag } from './dom/latestTag'
 import { getURLPackageJson } from './helpers/getURLPackageJson'
@@ -7,10 +6,9 @@ import { getURLPackageJson } from './helpers/getURLPackageJson'
 export const getAddDependency = async (
   input: AddDependency,
 ): Promise<string> => {
-  try {
     const urlPackageJson = getURLPackageJson(input.url)
 
-    const responsePackageJson: Response = await input.page.goto(
+    const responsePackageJson: any = await input.page.goto(
       urlPackageJson,
     )
 
@@ -43,8 +41,4 @@ export const getAddDependency = async (
     return latestTagValue === false ?
       input.dependency :
       `${input.url}#${latestTagValue}`
-  } catch (err) {
-    console.log(err)
-    throw err
-  }
 }

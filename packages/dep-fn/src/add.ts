@@ -1,10 +1,9 @@
-import { OutputPuppeteer } from 'init-puppeteer'
+import { log } from 'helpers'
+import { initPuppeteer, OutputPuppeteer } from 'init-puppeteer'
+import { takeLast } from 'rambdax'
+import { puppeteerSettings } from './modules/constants'
 import { getAddDependency } from './modules/getAddDependency'
 import { getInitURL } from './modules/getInitURL'
-import { initPuppeteer } from 'init-puppeteer'
-import { log } from 'helpers'
-import { puppeteerSettings } from './modules/constants'
-import { takeLast } from 'rambdax'
 
 export async function add(): Promise<void> {
   try {
@@ -17,10 +16,10 @@ export async function add(): Promise<void> {
     var { browser, page }: OutputPuppeteer = await initPuppeteer(puppeteerSettings)
 
     const url: string = await getInitURL(dependency)
-    const commandEnd: string = await getAddDependency({ 
-      page, 
-      url, 
-      dependency 
+    const commandEnd: string = await getAddDependency({
+      dependency,
+      page,
+      url,
     })
 
     log('stopspin')

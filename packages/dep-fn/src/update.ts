@@ -1,5 +1,4 @@
 import { initPuppeteer } from 'init-puppeteer'
-import { OutputPuppeteer } from 'init-puppeteer'
 import { beforeEnd } from './modules/beforeEnd'
 import { puppeteerSettings } from './modules/constants'
 import { getUpdateDependencies } from './modules/getUpdateDependencies'
@@ -7,7 +6,7 @@ import { getDependencies } from './modules/helpers/getDependencies'
 
 export async function update(): Promise<void> {
   try {
-    var { browser, page }: OutputPuppeteer = await initPuppeteer(puppeteerSettings)
+    var { browser, page } = await initPuppeteer(puppeteerSettings)
 
     const {
       devDependencies,

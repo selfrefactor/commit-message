@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const init_puppeteer_1 = require("init-puppeteer");
 const helpers_1 = require("helpers");
+const init_puppeteer_1 = require("init-puppeteer");
 const rambdax_1 = require("rambdax");
 const constants_1 = require("./modules/constants");
 const getUpdateTag_1 = require("./modules/getUpdateTag");

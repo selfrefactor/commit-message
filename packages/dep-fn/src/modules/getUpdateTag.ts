@@ -20,7 +20,7 @@ export const getUpdateTag = async (
       const urlTags = `${url}/tags`
 
       await page.goto(
-      urlTags
+      urlTags,
     )
       const latestTagValue = await page.evaluate(latestTag)
 

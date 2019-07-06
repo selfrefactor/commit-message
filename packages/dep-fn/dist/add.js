@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const helpers_1 = require("helpers");
+const init_puppeteer_1 = require("init-puppeteer");
+const rambdax_1 = require("rambdax");
+const constants_1 = require("./modules/constants");
 const getAddDependency_1 = require("./modules/getAddDependency");
 const getInitURL_1 = require("./modules/getInitURL");
-const init_puppeteer_1 = require("init-puppeteer");
-const helpers_1 = require("helpers");
-const constants_1 = require("./modules/constants");
-const rambdax_1 = require("rambdax");
 async function add() {
     try {
         helpers_1.log('spin');
@@ -16,9 +16,9 @@ async function add() {
         var { browser, page } = await init_puppeteer_1.initPuppeteer(constants_1.puppeteerSettings);
         const url = await getInitURL_1.getInitURL(dependency);
         const commandEnd = await getAddDependency_1.getAddDependency({
+            dependency,
             page,
             url,
-            dependency
         });
         helpers_1.log('stopspin');
         const command = `${commandStart} ${commandEnd}`;

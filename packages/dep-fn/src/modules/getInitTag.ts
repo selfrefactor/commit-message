@@ -1,5 +1,4 @@
 import { log } from 'helpers'
-import { Response } from 'puppeteer'
 import { GithubTag } from '../../typings'
 import { currentTag } from './dom/currentTag'
 import { getURLPackageJson } from './helpers/getURLPackageJson'
@@ -20,7 +19,7 @@ export const getInitTag = async (
 
     const urlPackageJson = getURLPackageJson(url)
 
-    const responsePackageJson: Response = await page.goto(
+    const responsePackageJson: any = await page.goto(
       urlPackageJson,
     )
     if (responsePackageJson === null || !responsePackageJson.ok) {

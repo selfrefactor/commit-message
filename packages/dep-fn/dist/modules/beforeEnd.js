@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = require("fs");
 const fs_extra_1 = require("fs-extra");
-const jsonFormat = require("json-format");
 const helpers_1 = require("helpers");
+const jsonFormat = require("json-format");
 const path_1 = require("path");
 const rambdax_1 = require("rambdax");
 exports.beforeEnd = async (input) => {
