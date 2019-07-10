@@ -3,23 +3,14 @@
 	"version": "1.0.0",
 	"description": "Watching files and react upon changes",
 	"main": "index.js",
-	"scripts": {
-		"test": "jest",
-		"cover": "jest --coverage",
-		"de": "git add . --all&&git commit -m update&&git push"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/selfrefactor/watch-fn.git"
-	},
+	"repository": "git@github.com:selfrefactor/watch-fn.git",
 	"keywords": [
 		"watch",
 		"files"
 	],
 	"dependencies": {
-		"log": "https://github.com/selfrefactor/log#0.7.0",
-		"rambda": "^1.0.12",
-		"sane": "https://github.com/amasad/sane#2.4.1"
+		"rambda": "^2.11.2",
+		"sane": "^4.1.0"
 	},
 	"author": "self_refactor",
 	"license": "ISC",
@@ -27,5 +18,7 @@
 		"url": "https://github.com/selfrefactor/watch-fn/issues"
 	},
 	"homepage": "https://github.com/selfrefactor/watch-fn#readme",
-	"devDependencies": {}
+	"devDependencies": {
+		
+	}
 }

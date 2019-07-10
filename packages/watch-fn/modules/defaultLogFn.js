@@ -1,5 +1,5 @@
 const R = require("rambda")
-const {log} = require("log")
+const {log} = require("helpers")
 
 const defaultLogFn = logArguments => {
   if(R.type(logArguments)==="String"){

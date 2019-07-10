@@ -2,7 +2,7 @@ const defaultOptions = require('./modules/defaultOptions')
 const execFileCommand = require('./modules/execFileCommand')
 const R = require('rambda')
 const sane = require('sane')
-const { log } = require('log')
+const { log } = require('helpers')
 
 async function helper ({ filePath, commands, options }) {
   try {
