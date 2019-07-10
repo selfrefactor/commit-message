@@ -1,11 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-process.on('unhandledRejection', (reason, promise) => {
-    console.log(reason, promise);
-});
-process.on('uncaughtException', err => {
-    console.log(err);
-});
 const inquirer = require("inquirer");
 const helpers_1 = require("helpers");
 const rambdax_1 = require("rambdax");
