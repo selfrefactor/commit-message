@@ -29,11 +29,11 @@ function syncFiles(source, list){
 }
 
 const splittedOptions = {
-  'editor.fontSize'          : [ 21, 20 ],
-  'editor.lineHeight'        : [ 26, 25 ],
+  'editor.fontSize'          : [ 23, 20 ],
+  'editor.lineHeight'        : [ 27, 25 ],
   'editor.suggestFontSize'   : [ 20, 22 ],
   'editor.suggestLineHeight' : [ 23, 25 ],
-  'window.zoomLevel'         : [ 0.65, 0.5, 0.8 ],
+  'window.zoomLevel'         : [ 0.9, 0.5, 0.8 ],
   'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
   'editor.fontFamily'        : [ 'Bar', 'Operator Mono', 'Bar' ],
   'debug.console.fontFamily' : [ 'Bar', 'Operator Mono', 'Bar' ],
@@ -56,17 +56,17 @@ function syncSettings(){
     SETTINGS
   )
 
-  writeJsonSync(explorationSettingsLocation, {
+  writeJsonSync(insidersSettingsLocation, {
     ...settings,
-    ...getPartialOptions(2),
+    ...getPartialOptions(0),
   }, { spaces : 2 })
   writeJsonSync(stableSettingsLocation, {
     ...settings,
     ...getPartialOptions(1),
   }, { spaces : 2 })
-  writeJsonSync(insidersSettingsLocation, {
+  writeJsonSync(explorationSettingsLocation, {
     ...settings,
-    ...getPartialOptions(0),
+    ...getPartialOptions(2),
   }, { spaces : 2 })
 }
 
