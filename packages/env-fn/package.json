@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "fs-extra": "8.0.1",
+    "rambda": "2.7.1"
+  },
+  "name": "env",
+  "version": "1.1.1",
+  "description": "Env helper",
+  "main": "index.js",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/env-fn",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,2 @@
+require(".")('dirname')
+// require(".")('.envTest')

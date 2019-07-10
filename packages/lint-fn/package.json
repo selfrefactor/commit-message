@@ -3,11 +3,11 @@
 		"de": "commit"
 	},
 	"name": "lint-fn",
-	"version": "1.4.1",
+	"version": "1.4.2",
 	"description": "lint",
 	"main": "index.js",
 	"typings": "index.d.ts",
-  "repository": "https://github.com/selfrefactor/services/tree/master/packages/lint-fn",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/lint-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
 	"depFn": [
@@ -25,7 +25,5 @@
 		"eslint-plugin-jest": "^22.7.2",
 		"eslint-plugin-sort-requires": "^2.1.0"
 	},
-	"devDependencies": {
-		
-	}
+	"devDependencies": {}
 }
