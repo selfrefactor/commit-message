@@ -1,4 +1,4 @@
-import {load} from '../../../../package-storage/index.js'
+import {load} from 'package-storage'
 
 export function isDependencyEligible(dependency: string): boolean{
   const loaded = load(

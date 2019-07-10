@@ -3023,6 +3023,11 @@ p-try@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
   integrity sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
 
+package-storage@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/package-storage/-/package-storage-1.0.0.tgz#6bc5467bbe6b131f3fa1b738e1b2821eab437253"
+  integrity sha512-jIsOXO3O/H4Mea6pbpl0CUQL12g3gbcUOWhCftSzOKQExxXkNuxAerG6SbRr6lYVl2epoj7vZIa8Yyr1JjyxOg==
+
 parse-glob@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/parse-glob/-/parse-glob-3.0.4.tgz#b2c376cfb11f35513badd173ef0bb6e3a388391c"
@@ -3246,7 +3251,12 @@ rambda@^1.2.6:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-1.2.6.tgz#5feed8039369b65c389ee1e02db9527695d30e83"
   integrity sha512-3tjeDuSMKAf8t099BejrmLgXdexAh63AsU2c2ZTcN5y/gt5njw03Wsfb+Ti9b08ZWLLDN5r0EvKynfYM91PB6g==
 
-rambdax@2.10.1, rambdax@^2.10.0:
+rambdax@2.10.2:
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.10.2.tgz#64362fdf9b2fcff36680f59227d845da44248e06"
+  integrity sha512-hU1HH8GqMShM6QeqOtOOo1xxarX4QsHpabTIqvP7xm3y5YFCIyqZbVmwap0qMQpf/BhaNkQP9F0CANnABeNfoA==
+
+rambdax@^2.10.0:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.10.1.tgz#0860102a48f30616cca9339dc571dff7453972aa"
   integrity sha512-s5v2NX8+RTth/z5HIGQQXjhlcTeIyOlOC6O0gIWGCl8lOdC5vw8Gq+NN1ymHmCTnS/Iz9mRcMoe1a0Os/LvUdA==

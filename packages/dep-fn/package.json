@@ -8,11 +8,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "x": "tslint --fix --project tsconfig.json",
-    "y": "tsfmt -r --no-tsconfig src/*.ts",
-    "de": "commit",
-    "build": "tsc -p .",
-    "start": "tsc -p . --watch",
+    "lint": "tslint --fix --project tsconfig.json",
+    "prelint": "tsfmt -r --no-tsconfig src/*.ts",
+    "out": "tsc -p .",
+    "in": "tsc -p . --watch",
     "test": "jest"
   },
   "depFn": [
@@ -24,7 +23,8 @@
     "init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#6.9.0",
     "inquirer": "^6.2.0",
     "json-format": "^1.0.1",
-    "rambdax": "2.10.1"
+    "package-storage": "1.0.0",
+    "rambdax": "2.10.2"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.4",
@@ -57,11 +57,5 @@
   },
   "directories": {
     "bin": "./bin"
-  },
-  "commitMessage": {
-    "support": [
-      "prepublish"
-    ],
-    "workInProgress": ""
   }
 }
