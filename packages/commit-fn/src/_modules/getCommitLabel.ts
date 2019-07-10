@@ -58,6 +58,12 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
     return label
 }
 
+function extractValue(actualLabel){
+  const [toReturn] = actualLabel.value.split(' ')
+
+  return toReturn
+}
+
 export async function getCommitLabel(input: GetLabel): Promise<string> {
   log('sepx')
   log(`${input.commitType.key} - ${input.commitType.explanation}`, '')
@@ -66,25 +72,28 @@ export async function getCommitLabel(input: GetLabel): Promise<string> {
   const filteredLabels: Label[] = input.labels.filter(singleLabel => {
     return singleLabel.belongsTo.includes(input.commitType)
   })
-
   const filteredLabelsValue: string[] = filteredLabels
     .map(singleLabel => {
       const padding = getPadding(singleLabel.value)
 
       return `${singleLabel.value}${padding} ${singleLabel.explanation}`
     })
-
+  
   const promptOptions: PromptSelect = {
     choices: filteredLabelsValue,
     default: filteredLabelsValue[0],
     question: ASK_FOR_LABEL,
   }
 
-  const labelRaw = await promptSelect(promptOptions)
-  const labelIndex = filteredLabelsValue.indexOf(labelRaw)
-  const label = filteredLabels[labelIndex].value
-
-  return label === CUSTOM_LABEL.value ?
+  const labelAnswer = await promptSelect(promptOptions)
+  const [labelRaw] : any = filteredLabelsValue.filter(
+    x => (x as any).name === labelAnswer
+  )
+  const label = extractValue(labelRaw)
+  
+  const toReturn  = label === CUSTOM_LABEL.value ?
     askCustomLabel(input) :
     label
+    
+  return toReturn  
 }

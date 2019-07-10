@@ -100,8 +100,6 @@ const SMALL_LABEL = {
 };
 const DEPENDENCY_LABEL = {
     belongsTo: [
-        exports.FEATURE,
-        FIX,
         SUPPORT,
     ],
     explanation: '📦  Change of dependency',
@@ -196,19 +194,19 @@ if (customLabelsRaw !== false) {
 }
 exports.labels = [
     exports.EMPTY_LABEL,
+    DEPENDENCY_LABEL,
+    SMALL_LABEL,
+    IMPORTANT_LABEL,
+    ...customLabels,
     exports.START_LABEL,
     exports.PROGRESS_LABEL,
     exports.STOP_LABEL,
-    IMPORTANT_LABEL,
-    SMALL_LABEL,
-    ...customLabels,
+    BUMP_LABEL,
     BREAK_LABEL,
     TYPINGS_LABEL,
     STYLE_LABEL,
-    BUMP_LABEL,
     PUBLISH_LABEL,
     ISSUE_LABEL,
-    DEPENDENCY_LABEL,
     EXAMPLES_LABEL,
     USAGE_LABEL,
     REMOVE_LABEL,

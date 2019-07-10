@@ -12,12 +12,11 @@
     "debug": "node ./dist/debug.js"
   },
   "dependencies": {
+    "enquirer": "^2.3.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.2.1",
-    "inquirer": "^6.2.1",
     "string-fn": "^2.8.1"
   },
   "devDependencies": {
-    "@types/inquirer": "^0.0.38",
     "@types/node": "^9.6.0",
     "fs-extra": "^5.0.0",
     "tslint": "^5.9.1",

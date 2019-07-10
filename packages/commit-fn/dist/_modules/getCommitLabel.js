@@ -32,6 +32,10 @@ async function askCustomLabel(input) {
     return label;
 }
 exports.askCustomLabel = askCustomLabel;
+function extractValue(actualLabel) {
+    const [toReturn] = actualLabel.value.split(' ');
+    return toReturn;
+}
 async function getCommitLabel(input) {
     helpers_1.log('sepx');
     helpers_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, '');
@@ -49,12 +53,13 @@ async function getCommitLabel(input) {
         default: filteredLabelsValue[0],
         question: constants_1.ASK_FOR_LABEL,
     };
-    const labelRaw = await promptSelect_1.promptSelect(promptOptions);
-    const labelIndex = filteredLabelsValue.indexOf(labelRaw);
-    const label = filteredLabels[labelIndex].value;
-    return label === constants_1.CUSTOM_LABEL.value ?
+    const labelAnswer = await promptSelect_1.promptSelect(promptOptions);
+    const [labelRaw] = filteredLabelsValue.filter(x => x.name === labelAnswer);
+    const label = extractValue(labelRaw);
+    const toReturn = label === constants_1.CUSTOM_LABEL.value ?
         askCustomLabel(input) :
         label;
+    return toReturn;
 }
 exports.getCommitLabel = getCommitLabel;
 //# sourceMappingURL=getCommitLabel.js.map

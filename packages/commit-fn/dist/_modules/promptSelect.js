@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const inquirer_1 = require("inquirer");
+const Enquirer = require("enquirer");
 async function promptSelect(input) {
-    const result = await inquirer_1.prompt([{
-            choices: input.choices,
-            message: input.question,
-            name: 'answer',
-            type: 'list',
-        }]);
-    return result.answer;
+    const select = new Enquirer.Select({
+        choices: input.choices,
+        message: input.question,
+        name: 'answer',
+    });
+    const answer = await select.run();
+    return answer;
 }
 exports.promptSelect = promptSelect;
 //# sourceMappingURL=promptSelect.js.map

@@ -1,13 +1,13 @@
-import { prompt } from 'inquirer'
+import * as Enquirer from 'enquirer'
 import { PromptSelect } from '../typings'
 
 export async function promptSelect(input: PromptSelect): Promise<string> {
-  const result: any = await prompt([{
+  const select = new (Enquirer as any).Select({
     choices: input.choices,
     message: input.question,
     name: 'answer',
-    type: 'list',
-  }])
-
-  return result.answer
+  });
+  
+  const answer = await select.run()
+  return answer  
 }
