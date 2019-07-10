@@ -5,9 +5,9 @@
   "main": "./dist/index.js",
   "typings": "./src/index.d.ts",
   "scripts": {
-    "x": "tslint --fix --project tsconfig.json",
-    "y": "tsfmt -r --no-tsconfig src/*.ts",
-    "build": "tsc -p .",
+    "lint": "tslint --fix --project tsconfig.json",
+    "prelint": "tsfmt -r --no-tsconfig src/*.ts",
+    "out": "tsc -p .",
     "in": "tsc -w",
     "de": "node ./bin/commit.js",
     "debug": "node ./dist/debug.js",

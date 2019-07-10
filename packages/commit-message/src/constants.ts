@@ -9,19 +9,19 @@ export const ASK_FOR_CUSTOM_LABEL = 'Write your label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
 export const FEATURE = {
-  explanation: '💡  Add new feature',
+  explanation: '💡   Add new feature',
   key: 'FEATURE',
   value: 'feat',
 }
 
 const TEST = {
-  explanation: '🔍  Create unit or end-to-end test',
+  explanation: '🔍   Create unit or end-to-end test',
   key: 'TEST',
   value: 'test',
 }
 
 const FIX = {
-  explanation: '🐛  Submit a bug fix',
+  explanation: '🐛   Submit a bug fix',
   key: 'FIX',
   value: 'fix',
 }
@@ -33,7 +33,7 @@ const SUPPORT = {
 }
 
 const DOCS = {
-  explanation: '✍ Edit documentation',
+  explanation: '✍   Edit documentation',
   key: 'DOCS',
   value: 'docs',
 }
@@ -120,8 +120,16 @@ const DEPENDENCY_LABEL = {
     FIX,
     SUPPORT,
   ],
-  explanation: '📦  Change of dependencies',
-  value: 'dependency',
+  explanation: '📦  Change of dependency',
+  value: 'dep',
+}
+
+const BUMP_LABEL = {
+  belongsTo: [
+    SUPPORT,
+  ],
+  explanation: '🏗  Publish new version of library',
+  value: 'bump',
 }
 
 const BREAK_LABEL = {
@@ -143,12 +151,6 @@ const PUBLISH_LABEL = {
   explanation: '📨  Publish new version',
   value: 'publish',
 }
-
-// const REFACTOR_LABEL = {
-//   belongsTo: [FEATURE, SUPPORT],
-//   explanation: '🏗  Refactor code',
-//   value: 'refactor',
-// }
 
 const USAGE_LABEL = {
   belongsTo: [DOCS],
@@ -224,18 +226,19 @@ if (customLabelsRaw !== false) {
     })
   })
 }
-
+ 
 export const labels: Label[] = [
   EMPTY_LABEL,
   START_LABEL,
   PROGRESS_LABEL,
   STOP_LABEL,
-  ...customLabels,
   IMPORTANT_LABEL,
   SMALL_LABEL,
+  ...customLabels,
   BREAK_LABEL,
   TYPINGS_LABEL,
   STYLE_LABEL,
+  BUMP_LABEL,
   PUBLISH_LABEL,
   ISSUE_LABEL,
   DEPENDENCY_LABEL,
