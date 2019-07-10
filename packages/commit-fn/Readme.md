@@ -1,4 +1,4 @@
-# Commit-message
+# Commit-fn
 
 Standardized commit message generation
 
@@ -7,6 +7,10 @@ Standardized commit message generation
 Writing commit messages should benefit of automated assistance. 
 
 While the rules of this library are not perfect, it still helps writing commit messages with consistent style.
+
+## Installation
+
+> yarn add commit-fn
 
 ## How it works
 
@@ -26,8 +30,6 @@ The user can select one among:
 'chore' - Update build tasks, lint files or similar(no production code change)
 
 'docs' - Edit the documentation of the project
-
-'typings' - Change Typescript definitions
 ```
 
 ![STEP1](/files/screen0.png)
@@ -48,14 +50,10 @@ Suggested labels depends on the selection in STEP1.
 
 In this step the user writes the actual commit message.
 
-## Install
-
-`yarn add https://github.com/selfrefactor/commit-message#1.0.0`
-
 ## commitMessage
 
 ```
-import { commitMessage } from 'commit-message'
+import { commitMessage } from 'commit-fn'
 
 commitMessage().then((commitMessageValue: string) => {
   console.log(commitMessageValue)
@@ -74,7 +72,7 @@ commitMessage().then((commitMessageValue: string) => {
 3.`git push`
 
 ```
-import { commitAndPush } from 'commit-message'
+import { commitAndPush } from 'commit-fn'
 
 commitAndPush().then((commitMessageValue: string) => {
   console.log(commitMessageValue)
