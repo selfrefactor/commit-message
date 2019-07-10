@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const helpers_1 = require("helpers");
-const add_1 = require("./add");
 const special_1 = require("./special");
 const update_1 = require("./update");
 process.on('unhandledRejection', (reason, promise) => {
@@ -12,11 +11,10 @@ process.on('uncaughtException', err => {
 });
 function cli() {
     const input = process.argv[3];
-    console.log({ input });
     let method;
     switch (input) {
         case 'add':
-            method = add_1.add;
+            method = special_1.special;
             break;
         case 'special':
             method = special_1.special;

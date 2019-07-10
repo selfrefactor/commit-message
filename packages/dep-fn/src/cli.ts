@@ -1,5 +1,4 @@
 import { log } from 'helpers'
-import { add } from './add'
 import { special } from './special'
 import { update } from './update'
 
@@ -12,12 +11,11 @@ process.on('uncaughtException', err => {
 
 export function cli() {
   const input: string = process.argv[3]
-  console.log({ input })
   let method: () => Promise<void>
 
   switch (input) {
     case 'add':
-      method = add
+      method = special
       break
     case 'special':
       method = special
