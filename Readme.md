@@ -8,6 +8,10 @@ Writing commit messages should benefit of automated assistance.
 
 While the rules of this library are not perfect, it still helps writing commit messages with consistent style.
 
+## Installation
+
+> TODO
+
 ## How it works
 
 The library uses `Inquirer` to take text or choice from the user. Generating the message includes the following steps:
