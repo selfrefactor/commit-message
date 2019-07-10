@@ -1,6 +1,6 @@
 {
-  "name": "commit-message",
-  "version": "2.2.0",
+  "name": "commit-fn",
+  "version": "1.0.0",
   "description": "commit-message",
   "main": "./dist/index.js",
   "typings": "./src/index.d.ts",
@@ -29,7 +29,7 @@
   "bin": {
     "commit": "./bin/commit.js"
   },
-  "repository": "git@github.com:selfrefactor/commit-message.git",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
   "private": false
