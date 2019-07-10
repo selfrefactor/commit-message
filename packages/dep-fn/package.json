@@ -3,7 +3,7 @@
   "version": "0.7.5",
   "description": "Easier update of Yarn dependencies",
   "main": "dist/index.js",
-  "repository": "git@github.com:selfrefactor/dep-fn.git",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/dep-fn",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
   "private": false,
@@ -50,12 +50,5 @@
       "jsx",
       "json"
     ]
-  },
-  "preferGlobal": true,
-  "bin": {
-    "dep": "bin/dep"
-  },
-  "directories": {
-    "bin": "./bin"
   }
 }

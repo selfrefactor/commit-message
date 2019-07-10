@@ -1,16 +1,10 @@
-process.on('unhandledRejection', (reason, promise) => {
-  console.log(reason, promise)
-})
-process.on('uncaughtException', err => {
-  console.log(err)
-})
-
 import * as inquirer from 'inquirer'
 import {log} from 'helpers'
 import {drop} from 'rambdax'
 import {tagFn} from './index'
 import {init} from './modules/init'
-const [input]: Array<string> = drop(3, process.argv)
+const [input]  = drop(3, process.argv)
+
 export function cli(){
   if (input === 'init') {
   

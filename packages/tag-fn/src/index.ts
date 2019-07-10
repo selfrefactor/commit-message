@@ -16,6 +16,7 @@ const selectors = {
   submitTag: 'button.js-publish-release',
   username: '#login_field',
 }
+
 export async function tagFn(input: IInput): Promise<void|string>{
   try{
     const repoName = getRepoName()
