@@ -9,9 +9,7 @@
     "prelint": "tsfmt -r --no-tsconfig src/*.ts",
     "out": "tsc -p .",
     "in": "tsc -w",
-    "de": "node ./bin/commit.js",
-    "debug": "node ./dist/debug.js",
-    "test": "jest"
+    "debug": "node ./dist/debug.js"
   },
   "dependencies": {
     "helpers": "https://github.com/selfrefactor/helpers#1.2.1",
@@ -25,9 +23,6 @@
     "tslint": "^5.9.1",
     "typescript": "^3.1.0",
     "typescript-formatter": "^7.1.0"
-  },
-  "bin": {
-    "commit": "./bin/commit.js"
   },
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
