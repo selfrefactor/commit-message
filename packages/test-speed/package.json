@@ -1,0 +1,30 @@
+{
+	"name": "test-speed",
+	"version": "0.1.0",
+	"description": "test-speed",
+	"main": "./dist/index.js",
+	"typings": "./src/typings.d.ts",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/test-speed",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"capture-error": "https://github.com/selfrefactor/capture-error#1.1.0",
+		"env": "https://github.com/selfrefactor/env#0.2.0",
+		"opener": "^1.4.3",
+		"psi": "^3.1.0",
+		"rambdax": "^0.8.10"
+	},
+	"devDependencies": {
+		"@types/node": "^9.6.0",
+		"log": "https://github.com/selfrefactor/log#0.8.0",
+		"tslint": "^5.9.1",
+		"typescript": "^2.9.0-dev.20180323",
+		"watch-fn": "https://github.com/selfrefactor/watch-fn#0.8.1"
+	},
+	"scripts": {
+		"build": "tsc -p .",
+		"dev": "jest __tests__ --watch",
+		"start": "node files/watch"
+	}
+}
