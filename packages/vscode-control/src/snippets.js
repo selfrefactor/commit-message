@@ -1,0 +1,3 @@
+import { syncSnippets } from '.'
+
+syncSnippets()

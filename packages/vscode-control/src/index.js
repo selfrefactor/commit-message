@@ -15,11 +15,11 @@ const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
 function getListFiles(x){
-  return [ 
-    x, 
+  return [
+    x,
     replace('/Code/', '/Code - Insiders/', x),
-    replace('/Code/', '/Code - Exploration/', x)
-   ]
+    replace('/Code/', '/Code - Exploration/', x),
+  ]
 }
 
 function syncFiles(source, list){
@@ -30,16 +30,13 @@ function syncFiles(source, list){
 
 const splittedOptions = {
   'editor.fontSize'          : [ 18, 20 ],
-  // "editor.fontSize": [ 24,28],
   'editor.lineHeight'        : [ 23, 25 ],
-  // "editor.lineHeight": [27, 32 ],
   'editor.suggestFontSize'   : [ 22, 22 ],
   'editor.suggestLineHeight' : [ 25, 25 ],
-  // 'window.zoomLevel'         : [ 1.5, 1 ],
   'window.zoomLevel'         : [ -0.65, -0.5 ],
-  'workbench.colorTheme'     : [ 'ZeppelinLemonSong', 'ZeppelinDancingDays' ],
-  'editor.fontFamily'        : [ 'Operator Mono', 'Bar' ],
-  'debug.console.fontFamily' : [ 'Operator Mono', 'Bar' ],
+  'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
+  'editor.fontFamily'        : [ 'Bar', 'Operator Mono', 'Bar' ],
+  'debug.console.fontFamily' : [ 'Bar', 'Operator Mono', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
   'niketa.PORT_2'            : [ 3013, 3023 ],
@@ -47,18 +44,22 @@ const splittedOptions = {
 }
 
 const getPartialOptions = index => map(
-  x => x[ index ]
+  x => x[ index ] ? x[index] : x[index-1]
 )(splittedOptions)
 
 function syncSettings(){
-  const [ 
-    stableSettingsLocation, 
+  const [
+    stableSettingsLocation,
     insidersSettingsLocation,
     explorationSettingsLocation,
-   ] = getListFiles(
+  ] = getListFiles(
     SETTINGS
   )
 
+  writeJsonSync(explorationSettingsLocation, {
+    ...settings,
+    ...getPartialOptions(2),
+  }, { spaces : 2 })
   writeJsonSync(stableSettingsLocation, {
     ...settings,
     ...getPartialOptions(1),
@@ -69,14 +70,15 @@ function syncSettings(){
   }, { spaces : 2 })
 }
 
-function sync(){
-  syncFiles(KEYBINDING_SOURCE, getListFiles(KEYBINDING))
+export function syncSnippets(){
   syncFiles(SNIPPETS_SOURCE, getListFiles(JS_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(JSX_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(TS_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(TSX_SNIPPETS))
-
-  syncSettings()
 }
 
-sync()
+export function sync(){
+  syncFiles(KEYBINDING_SOURCE, getListFiles(KEYBINDING))
+  syncSnippets()
+  syncSettings()
+}
