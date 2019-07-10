@@ -60,16 +60,6 @@
 		],
 		"description": "comment"
 	},
-	"base": {
-		"prefix": "base",
-		"body": [
-			"  const props = {",
-			"    ...propsBase,",
-			"    ${1:prop}: $0",
-			"  }"
-		],
-		"description": "propsBase"
-	},
 	"Dispatch": {
 		"prefix": "dis",
 		"body": [
@@ -87,7 +77,7 @@
 	"StringTemplatex": {
 		"prefix": "stx",
 		"body": [
-			"`${${1:first}}${${2:second}}`"
+			"`${${0}}${}`"
 		],
 		"description": "stx"
 	},
@@ -125,25 +115,7 @@
 		"body": [
 			"exports.${1:module} = ${1:module}"
 		],
-		"description": "exp"
-	},
-	"Expect": {
-		"prefix": "exp",
-		"body": [
-			"expect(",
-			"\t${1:result}",
-			").toBe(${2:expected})$0"
-		],
-		"description": "exp"
-	},
-	"ExpectX": {
-		"prefix": "expx",
-		"body": [
-			"expect(",
-			"\t${1:result}",
-			").toEqual(${2:expected})$0"
-		],
-		"description": "exp"
+		"description": "export"
 	},
 	"ExpectTruthy": {
 		"prefix": "ext",
@@ -205,14 +177,6 @@
 			"debugger"
 		],
 		"description": "log and debug"
-	},
-	"AsyncRoot": {
-		"prefix": "asyr",
-		"body": [
-			"export async function $0(input){",
-			"}"			
-		],
-		"description": "asy"
 	},
 	"Saga": {
 		"prefix": "saga",
