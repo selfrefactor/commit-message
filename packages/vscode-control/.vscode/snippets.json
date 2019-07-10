@@ -1,0 +1,251 @@
+{
+	"Require": {
+		"prefix": "req",
+		"body": [
+			"const { ${1:method} } = require('${0}')"
+		],
+		"description": "require"
+	},
+	"RequireX": {
+		"prefix": "reqx",
+		"body": [
+			"const { ${1:method} } = require('./${1:method}')"
+		],
+		"description": "requireX"
+	},
+	"Import": {
+		"prefix": "im",
+		"body": [
+			"import { ${1:method} } from '${0}'"
+		],
+		"description": "import"
+	},
+	"ImportX": {
+		"prefix": "imx",
+		"body": [
+			"import { ${1:methodPath} } from './${1:methodPath}'"
+		],
+		"description": "import"
+	},
+	"Bind": {
+		"prefix": "bin",
+		"body": [
+			"this.${1:method} = this.${1:method}.bind(this)${0}"
+		],
+		"description": "bind"
+	},
+	"commentX": {
+		"prefix": "comx",
+		"body": [
+			"/**",
+			" * $0",
+			" */"
+		],
+		"description": "commentx"
+	},
+	"commentMultiline": {
+		"prefix": "comm",
+		"body": [
+			"/*",
+			"  $0",
+			"*/"
+		],
+		"description": "comment multiline"
+	},
+	"commentx": {
+		"prefix": "com",
+		"body": [
+			"// $0",
+			"// ============================================"
+		],
+		"description": "comment"
+	},
+	"base": {
+		"prefix": "base",
+		"body": [
+			"  const props = {",
+			"    ...propsBase,",
+			"    ${1:prop}: $0",
+			"  }"
+		],
+		"description": "propsBase"
+	},
+	"Dispatch": {
+		"prefix": "dis",
+		"body": [
+			"this.props.dispatch($0)"
+		],
+		"description": "Dispatch"
+	},
+	"StringTemplate": {
+		"prefix": "st",
+		"body": [
+			"`${${0}}`"
+		],
+		"description": "st"
+	},
+	"StringTemplatex": {
+		"prefix": "stx",
+		"body": [
+			"`${${1:first}}${${2:second}}`"
+		],
+		"description": "stx"
+	},
+	"Test": {
+		"prefix": "test",
+		"body": [
+			"test('${1:happy}', () => {",
+			"\texpect($0).toBe()",	
+			"})"	
+		],
+		"description": "test"
+	},
+	"TestX": {
+		"prefix": "testx",
+		"body": [
+			"test('${1:happy}', () => {",
+			"\tconst result = $0",	
+			"\texpect(result).toBe(expected)",	
+			"})"	
+		],
+		"description": "test"
+	},
+	"TestAsync": {
+		"prefix": "testa",
+		"body": [
+			"test('${1:happy}', async () => {",
+			"\tconst result = await $0",	
+			"\texpect(result).toBe(expected)",	
+			"})"	
+		],
+		"description": "test"
+	},
+	"Export": {
+		"prefix": "exx",
+		"body": [
+			"exports.${1:module} = ${1:module}"
+		],
+		"description": "exp"
+	},
+	"Expect": {
+		"prefix": "exp",
+		"body": [
+			"expect(",
+			"\t${1:result}",
+			").toBe(${2:expected})$0"
+		],
+		"description": "exp"
+	},
+	"ExpectX": {
+		"prefix": "expx",
+		"body": [
+			"expect(",
+			"\t${1:result}",
+			").toEqual(${2:expected})$0"
+		],
+		"description": "exp"
+	},
+	"ExpectTruthy": {
+		"prefix": "ext",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toBeTruthy()"
+		],
+		"description": "ext"
+  },
+  "ExpectFalsy": {
+		"prefix": "exf",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toBeFalsy()"
+		],
+		"description": "x"
+	},
+	"Rambdax": {
+		"prefix": "ramx",
+		"body": [
+			"import { $0 } from 'rambdax'"
+		],
+		"description": "ramx"
+	},
+	"LogRoot": {
+		"prefix": "lgr",
+		"body": [
+			"console.log({$0})"
+		],
+		"description": "log"
+	},
+	"Lg": {
+		"prefix": "lg",
+		"body": [
+			"console.log($0)"
+		],
+		"description": "simple log"
+	},
+	"Lgg": {
+		"prefix": "lgg",
+		"body": [
+			"console.log($0)"
+		],
+		"description": "simple log"
+	},
+	"LogAwait": {
+		"prefix": "lga",
+		"body": [
+			"console.log(await $0)"
+		],
+		"description": "log and await"
+	},
+	"LogDebug": {
+		"prefix": "lgd",
+		"body": [
+			"console.log($0)",
+			"debugger"
+		],
+		"description": "log and debug"
+	},
+	"AsyncRoot": {
+		"prefix": "asyr",
+		"body": [
+			"export async function $0(input){",
+			"}"			
+		],
+		"description": "asy"
+	},
+	"Saga": {
+		"prefix": "saga",
+		"body": [
+        "function *$0Saga(){",
+        "\twhile(true){",
+        "\t\ttry{",	
+        "\t\t\tyield take()",
+        "\t\t}catch(err){",
+        "\t\t\tconsole.error(err)",
+        "\t\t}",
+        "\t}",
+        "}"
+			],
+			"description": "saga"
+		},
+		"ReactComponent": {
+			"prefix": "rear",
+			"body": [
+				"export class $0 extends React.Component{",
+				"\tconstructor(props) {",
+				"\t\tsuper(props)",
+				"\t}",
+				"",
+				"\trender() {",
+				"\t\treturn (",
+				"\t\t\t<div>",
+				"",
+				"\t\t\t</div>",
+				"\t\t)",
+				"\t}",
+				"}"
+			],
+			"description": "react"
+		}
+	}

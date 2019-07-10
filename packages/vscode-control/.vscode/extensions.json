@@ -1,0 +1,24 @@
+{
+  "recommendations": [
+    "selfrefactor.magic-beans",
+    "selfrefactor.zeppelin-themes",
+    "selfrefactor.Because",
+    "rastikerdar.vscode-seedling-icon-theme",
+    "PKief.material-icon-theme",
+    "christian-kohler.path-intellisense",
+    "selfrefactor.Because",
+    "naumovs.color-highlight",
+    "jtlowe.vscode-icon-theme",
+    "DavidAnson.vscode-markdownlint",
+    "SirTori.indenticator",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "gabrielgrinberg.auto-run-command",
+    "jpoissonnier.vscode-styled-components",
+    "ms-vscode.atom-keybindings",
+    "rafamel.subtle-brackets",
+    "selfrefactor.niketa",
+    "selfrefactor.order-props",
+    "spywhere.guides",
+    "vincaslt.highlight-matching-tag"
+  ]
+}
