@@ -29,11 +29,11 @@ function syncFiles(source, list){
 }
 
 const splittedOptions = {
-  'editor.fontSize'          : [ 18, 20 ],
-  'editor.lineHeight'        : [ 23, 25 ],
-  'editor.suggestFontSize'   : [ 22, 22 ],
-  'editor.suggestLineHeight' : [ 25, 25 ],
-  'window.zoomLevel'         : [ -0.65, -0.5 ],
+  'editor.fontSize'          : [ 21, 20 ],
+  'editor.lineHeight'        : [ 26, 25 ],
+  'editor.suggestFontSize'   : [ 20, 22 ],
+  'editor.suggestLineHeight' : [ 23, 25 ],
+  'window.zoomLevel'         : [ 0.65, 0.5, 0.8 ],
   'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
   'editor.fontFamily'        : [ 'Bar', 'Operator Mono', 'Bar' ],
   'debug.console.fontFamily' : [ 'Bar', 'Operator Mono', 'Bar' ],
