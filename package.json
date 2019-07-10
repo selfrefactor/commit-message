@@ -36,6 +36,6 @@
     "@types/puppeteer": "^1.12.4"
   },
   "commitMessage": {
-    "workInProgress": "commit message bump label"
+    "workInProgress": ""
   }
 }

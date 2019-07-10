@@ -59,7 +59,10 @@ export async function commitMessage(): Promise<string> {
   if (commitLabel === START_LABEL.value) {
     saveWorkInProgress(inputResult)
   } else if (commitLabel === STOP_LABEL.value) {
-    commitMessageValue = workInProgress
+    commitMessageValue =  inputResult.trim() ? 
+      `${workInProgress} | ${inputResult}` :
+      workInProgress
+      
     saveWorkInProgress('')
   }
   const noInput = commitMessageValue.trim() === ''
