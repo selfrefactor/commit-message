@@ -1,6 +1,6 @@
 {
   "name": "dep-fn",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Easier update of Yarn dependencies",
   "main": "dist/index.js",
   "repository": "git@github.com:selfrefactor/dep-fn.git",
