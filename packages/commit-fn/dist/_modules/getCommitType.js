@@ -10,9 +10,7 @@ async function getCommitType(typesOfCommit) {
         question: constants_1.ASK_FOR_TYPE,
     };
     const typeOfCommitKey = await promptSelect_1.promptSelect(promptOptions);
-    console.log({ typeOfCommitKey });
     const [commit] = typesOfCommit.filter(x => x.key === typeOfCommitKey);
-    console.log({ commit });
     return commit;
 }
 exports.getCommitType = getCommitType;
