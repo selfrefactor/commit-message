@@ -1,6 +1,6 @@
 {
   "name": "commit-fn",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "commit-message",
   "main": "./dist/index.js",
   "typings": "./src/index.d.ts",
