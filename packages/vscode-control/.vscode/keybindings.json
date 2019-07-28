@@ -37,7 +37,7 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "ctrl+shift+x",
+    "key": "ctrl+alt+x",
     "command": "workbench.view.extensions"
   },
   {
