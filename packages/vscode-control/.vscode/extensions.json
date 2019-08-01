@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "fabiospampinato.vscode-open-in-node-modules",
     "selfrefactor.magic-beans",
     "selfrefactor.zeppelin-themes",
     "selfrefactor.Because",
