@@ -23,7 +23,7 @@ function getListFiles(x){
 }
 
 function syncFiles(source, list){
-  console.log(source, list)
+  console.log({source, list})
 
   list.forEach(x => {
     copySync(source, x)
@@ -80,9 +80,7 @@ export function syncSnippets(){
 }
 
 export function sync(){
-  console.log(1)
-
   syncFiles(KEYBINDING_SOURCE, getListFiles(KEYBINDING))
   syncSnippets()
-  // syncSettings()
+  syncSettings()
 }
