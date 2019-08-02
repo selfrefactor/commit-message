@@ -31,14 +31,14 @@ function syncFiles(source, list){
 }
 
 const splittedOptions = {
-  'editor.fontSize'          : [ 23, 20 ],
-  'editor.lineHeight'        : [ 27, 25 ],
+  'editor.fontSize'          : [ 18, 19 ],
+  'editor.lineHeight'        : [ 23, 24 ],
   'editor.suggestFontSize'   : [ 20, 22 ],
   'editor.suggestLineHeight' : [ 23, 25 ],
-  'window.zoomLevel'         : [ 0.9, 0.5, 0.8 ],
+  'window.zoomLevel'         : [ 0, 0, 0 ],
   'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
-  'editor.fontFamily'        : [ 'Bar', 'Operator Mono', 'Bar' ],
-  'debug.console.fontFamily' : [ 'Bar', 'Operator Mono', 'Bar' ],
+  'editor.fontFamily'        : [ 'Operator Mono', 'Operator Mono', 'Operator Mono' ],
+  'debug.console.fontFamily' : [ 'Bar', 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
   'niketa.PORT_2'            : [ 3013, 3023 ],
