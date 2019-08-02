@@ -126,7 +126,7 @@
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
   "workbench.iconTheme": "vscode-icon-theme",
-  "workbench.colorTheme": "ZeppelinSinceLoving",
+  "workbench.colorTheme": "CircusBrother",
   "typescript.surveys.enabled": false,
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
