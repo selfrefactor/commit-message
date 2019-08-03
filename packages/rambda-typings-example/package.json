@@ -6,5 +6,10 @@
   "dependencies": {
     "rambdax": "^2.12.2",
     "typescript": "^3.5.3"
+  },
+  "commitMessage": {
+    "support": [
+      "example"
+    ]
   }
 }

@@ -1,5 +1,0 @@
-import { 
-  mapToObject
- } from 'rambdax'
-
- 
