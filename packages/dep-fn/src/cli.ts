@@ -28,8 +28,9 @@ export function cli() {
       method = update
       break
     default:
-      log('You didn\'t provide a valid method', 'error')
-      process.exit()
+      log('Default method is "updateall"', 'info')
+      process.env.DEP_FN_UPDATE_ALL = 'true'
+      method = update
   }
 
   method()
