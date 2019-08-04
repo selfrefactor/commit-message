@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+rambda@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.14.0.tgz#3a482770d59f2e761bd3eb5ac92c4f5311b83a13"
+  integrity sha512-ebJfg6i+suUcvJwvRLD0MRXOZ0pHXOy/+DvqTXGGGiqHG4m4Rtg55Cwar/jPfDfuFn9SJU3UrTnWI1soBENvOw==
+
 rambdax@^2.12.2:
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.12.2.tgz#b4ad34b3c227fc90e77fcac85f8ef6ba6f7168e5"
