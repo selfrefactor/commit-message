@@ -27,8 +27,9 @@ function cli() {
             method = update_1.update;
             break;
         default:
-            helpers_1.log('You didn\'t provide a valid method', 'error');
-            process.exit();
+            helpers_1.log('Default method is "updateall"', 'info');
+            process.env.DEP_FN_UPDATE_ALL = 'true';
+            method = update_1.update;
     }
     method()
         .then(() => {
