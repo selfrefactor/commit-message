@@ -100,9 +100,7 @@ async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
     }
 
     const logData = await readLintLog(command.logFilePath)
-
-    if (logFlag !== false) console.log(logData)
-
+    if (logFlag !== false && logData) console.log(logData)
     clearLintLog(command.logFilePath)
 
     return logData
