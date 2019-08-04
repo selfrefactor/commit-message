@@ -1,11 +1,14 @@
-let rules = require('./.eslintBase.js')
+const baseRules = require('./.eslintBase')
+const {filter} = require('./filter')
 
-rules = Object.assign({}, rules, {
+const rules = {
+  ...baseRules,
   'no-unsafe-regex/no-unsafe-regex' : 2,
   'sort-requires/sort-requires'     : 1,
   'async-await/space-after-async'   : 1,
   'async-await/space-after-await'   : 1,
-})
+}
+
 module.exports = {
   "extends": "eslint:recommended",
   parser        : 'babel-eslint',
@@ -22,5 +25,5 @@ module.exports = {
     'no-unsafe-regex',
     'sort-requires'
   ],
-  rules : rules,
+  rules : filter(rules),
 }

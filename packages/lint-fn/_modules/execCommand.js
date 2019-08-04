@@ -1,11 +1,13 @@
 const { exec } = require('child_process')
 
 exports.execCommand = (command, cwd) =>
-
-new Promise((resolve, reject) => {
+  new Promise((resolve, reject) => {
     const proc = exec(
       command,
-      { cwd }
+      {
+        cwd,
+        env : process.env,
+      }
     )
     proc.stdout.on('data', chunk => {
       console.log(chunk.toString())

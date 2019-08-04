@@ -24,11 +24,6 @@ const sortImports = {
   ignoreMemberSort : true,
   memberSyntaxSortOrder,
 }
-const functionParen = {
-  anonymous  : 'never',
-  named      : 'never',
-  asyncArrow : 'never',
-}
 const linesClass = [
   1, 
   'always', 
@@ -158,7 +153,6 @@ module.exports = {
   'sort-keys'                     : 1,
   'sort-vars'                     : 1,
   'space-before-blocks'           : [ 1, 'never' ],
-  // 'space-before-function-paren'   : [ 1, functionParen ],
   'space-before-function-paren'   : 0,
   'space-in-parens'               : [ 1, 'never' ],
   'space-infix-ops'               : 1,

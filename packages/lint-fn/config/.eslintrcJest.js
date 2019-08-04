@@ -7,7 +7,7 @@ const jestRules = {
   'jest/prefer-strict-equal': 0,
   'jest/require-tothrow-message': 0,
   'jest/no-identical-title': 1,
-  "jest/no-large-snapshots": [1, { "maxSize": 300 }],
+  "jest/no-large-snapshots": [1, { "maxSize": 400 }],
 }
 
 module.exports = {

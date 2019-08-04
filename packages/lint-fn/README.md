@@ -13,4 +13,9 @@ lintFn({filePath:"foo.js"})
 
 ## Prettier
 
-Should be globally installed
+It runs before each lint command
+
+## Skip rules
+
+`process.env.SKIP_ESLINT_RULES = 'no-nested-ternary,max-len'
+`
