@@ -1,4 +1,5 @@
 const rules = require('./.eslintBase.js')
+const {filter} = require('./filter')
 
 const jestRules = {
   'jest/consistent-test-it': 1,
@@ -20,5 +21,5 @@ module.exports = {
     jasmine : true,
     jest    : true,
   },
-  rules : {...rules, ...jestRules},
+  rules : filter({...rules, ...jestRules}),
 }

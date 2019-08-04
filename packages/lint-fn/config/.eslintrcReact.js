@@ -1,4 +1,5 @@
 const base = require('./.eslintBase.js')
+const {filter} = require('./filter')
 
 const sortProps = {
   callbacksLast  : true,
@@ -37,7 +38,6 @@ const reactRules = {
   'react/jsx-indent-props'             : [ 1, 2 ],
   'react/jsx-max-depth'                : [ 1, {max: 4}],
   'react/jsx-max-props-per-line'       : [ 1, { maximum : 2 } ],
-  'react/jsx-max-props-per-line'      : [ 1, { "maximum": 2 }],
   'react/jsx-no-literals'              : 0,
   'react/jsx-no-target-blank'          : 1,
   'react/jsx-no-undef'                 : 1,
@@ -79,7 +79,7 @@ module.exports = {
     'sort-class-members',
   ],
   parserOptions : { ecmaFeatures : { jsx : true } },
-  rules,
+  rules: filter(rules),
   settings: {
     react:{
       "version": "16.8"
