@@ -18,7 +18,7 @@ const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 
 const exec = command => {
   // console.log(command, 'Raw lint command')
-  execCommand(command, DIR)
+  return execCommand(command, DIR)
 }
 
 const getLintCommandFn = (command, fixFlag) => mode => {
