@@ -144,7 +144,7 @@ module.exports = {
   'prefer-rest-params'            : 1,
   'quote-props'                   : [ 1, 'consistent-as-needed' ],
   'quotes'                        : [ 1, 'single' ],
-  'require-await'                 : 1,
+  'require-await'                 : 0,
   'require-jsdoc'                 : 0,
   'require-yield'                 : 1,
   'rest-spread-spacing'           : [ 1, 'never' ],
