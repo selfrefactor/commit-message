@@ -16,7 +16,9 @@ const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 const debugFlag = false
 const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 
-const exec = command => execCommand(command, DIR)
+const exec = command =>
+  // console.log(command, 'Raw lint command')
+  execCommand(command, DIR)
 
 const getLintCommandFn = (command, fixFlag) => mode => {
   const willReturn = fixFlag ?
