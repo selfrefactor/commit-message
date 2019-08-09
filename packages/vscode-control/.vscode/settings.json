@@ -163,5 +163,6 @@
   "editor.find.addExtraSpaceOnTop": false,
   "npm.enableScriptExplorer": false,
   "javascript.implicitProjectConfig.checkJs": true,
+  "typescript.experimental.useSeparateSyntaxServer": true,
   "typescript.referencesCodeLens.enabled": true
 }
