@@ -161,6 +161,7 @@
   "gitlens.currentLine.scrollable": false,
   "gitlens.currentLine.format": "${ago}|${message}",
   "editor.find.addExtraSpaceOnTop": false,
+  "npm.enableScriptExplorer": false,
   "javascript.implicitProjectConfig.checkJs": true,
   "typescript.referencesCodeLens.enabled": true
 }
