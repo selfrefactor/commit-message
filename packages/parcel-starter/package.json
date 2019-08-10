@@ -1,7 +1,6 @@
 {
 	"scripts": {
 		"now": "now alias dist-ayqrfcibch.now.sh joke-maker",
-		"do": "plop",
 		"deploy": "now dist --public",
 		"test": "jest",
 		"dev": "jest src --watch --onlyChanged",
