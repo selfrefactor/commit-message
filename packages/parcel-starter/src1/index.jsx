@@ -1,6 +1,6 @@
 import './style.scss'
 import React from 'react'
 import { render } from 'react-dom'
-import App from './App'
+import { Root } from './component'
 
-render(<App />, document.getElementById('root'))
+render(<Root />, document.getElementById('root'))

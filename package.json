@@ -38,6 +38,6 @@
     "@types/puppeteer": "^1.12.4"
   },
   "commitMessage": {
-    "workInProgress": "observable starter"
+    "workInProgress": ""
   }
 }
