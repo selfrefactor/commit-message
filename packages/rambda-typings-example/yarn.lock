@@ -2,17 +2,17 @@
 # yarn lockfile v1
 
 
-rambda@^2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.14.0.tgz#3a482770d59f2e761bd3eb5ac92c4f5311b83a13"
-  integrity sha512-ebJfg6i+suUcvJwvRLD0MRXOZ0pHXOy/+DvqTXGGGiqHG4m4Rtg55Cwar/jPfDfuFn9SJU3UrTnWI1soBENvOw==
+rambda@^2.14.4:
+  version "2.14.4"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.14.4.tgz#234afc6ec8136470ec3f49ebb047ecf1d5a6c68d"
+  integrity sha512-rRqEO+9WIzVV5T2ghLDCWfzgROwdNWFnGSUfIUB0RFOUn9BlQwJ8ioyUpDUq24DefrTcH+ca1hhaCpGwM3YucA==
 
-rambdax@^2.12.2:
-  version "2.12.2"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.12.2.tgz#b4ad34b3c227fc90e77fcac85f8ef6ba6f7168e5"
-  integrity sha512-5ON0D6MsJZZdBjui4rmP6zn64dVQsQ24Feshfvu5bZjNpYQUXaxyLzNe+xNUl6xSA+MVH35SDfcBVEwgTWEc/w==
+rambdax@^2.12.3:
+  version "2.12.3"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.12.3.tgz#8be5c926f449cc6850352463682dae93322ed707"
+  integrity sha512-4gbrTg8EDNYeLMN3edivQrSD6QzpDC7KWfhC0BwVaxZ60+5WCajTD9INVswsaWK1OLmOWguSQ47nMIoXZ1y5Tw==
 
-typescript@^3.5.3:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.5.3.tgz#c830f657f93f1ea846819e929092f5fe5983e977"
-  integrity sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
+typescript@^3.6.0-dev.20190810:
+  version "3.6.0-dev.20190810"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.0-dev.20190810.tgz#dda80279480131eec9b05e3b78182a1ba1efe105"
+  integrity sha512-gubcQ8Sn2G5AO1KhjvLpoFrutV7o/ZJ7wCDBC1IKgNI8R2vadIxTystJxAFqkb9boQ7tyRrZ6FwM5EL5ZYfJrg==
