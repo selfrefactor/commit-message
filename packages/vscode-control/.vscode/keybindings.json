@@ -95,15 +95,6 @@
     "when": "inDebugMode"
   },
   {
-    "key": "ctrl+8",
-    "command": "wallaby.start"
-  },
-  {
-    "key": "ctrl+4",
-    "command": "wallaby.showSideBySideDiff",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+m",
     "command": "workbench.action.toggleMenuBar"
   },
