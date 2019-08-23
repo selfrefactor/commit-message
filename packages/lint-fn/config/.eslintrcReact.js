@@ -20,6 +20,8 @@ const sortMembers = {
 }
 
 const reactRules = {
+  // 'react/jsx-curly-spacing'            : [ 2, 'always' ],
+  // 'react/jsx-indent'                   : [ 1, 2, {checkAttributes: true, indentLogicalExpressions: true} ],
   'no-unused-vars'               : 0,
   'key-spacing'               : 0,
   'no-extra-parens'               : 0,
@@ -30,11 +32,9 @@ const reactRules = {
   'react/jsx-closing-bracket-location' : 1,
   'react/jsx-closing-tag-location'     : 0,
   'react/jsx-curly-spacing'            : 0,
-  // 'react/jsx-curly-spacing'            : [ 2, 'always' ],
   'react/jsx-equals-spacing'           : [ 1, 'never' ],
   'react/jsx-first-prop-new-line'      : [ 1, 'multiline' ],
   'react/jsx-fragments'                : 0,
-  // 'react/jsx-indent'                   : [ 1, 2, {checkAttributes: true, indentLogicalExpressions: true} ],
   'react/jsx-indent-props'             : [ 1, 2 ],
   'react/jsx-max-depth'                : [ 1, {max: 4}],
   'react/jsx-max-props-per-line'       : [ 1, { maximum : 2 } ],
@@ -63,6 +63,8 @@ const reactRules = {
   'react/sort-comp'                    : 1,
   'react/sort-prop-types'              : 1,
   'sort-class-members/sort-class-members' : [ 1, sortMembers ],
+  "react-hooks/rules-of-hooks": 1,
+  "react-hooks/exhaustive-deps": 1
 }
 
 const rules = {
@@ -76,6 +78,7 @@ module.exports = {
   plugins : [
     'async-await',
     'react',
+    'react-hooks',
     'sort-class-members',
   ],
   parserOptions : { ecmaFeatures : { jsx : true } },
