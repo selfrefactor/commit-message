@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "huntertran.auto-markdown-toc",
     "fabiospampinato.vscode-open-in-node-modules",
     "selfrefactor.magic-beans",
     "selfrefactor.Niketa-theme",
