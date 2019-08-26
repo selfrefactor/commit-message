@@ -9,3 +9,15 @@ const FOO = 'foo'
 const bar = 'foo'
 const baz_even = 'foo'
 ```
+
+## Group function arguments
+
+```js
+function foo(
+  a,
+  b,
+  c,d,
+  e,
+  f,
+) {}
+```
