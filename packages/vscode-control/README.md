@@ -8,8 +8,8 @@
 
 > Collapse All list and tree command with Ctrl+LeftArrow keyboard shortcut
 
-## Free keybindings after remove of Wallaby
+## Free keybindings
+
+- alt+2
 
 - ctrl+8
-
-- ctrl+4

@@ -49,7 +49,7 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "alt+2",
+    "key": "ctrl+4",
     "command": "workbench.action.selectTheme"
   },
   {
