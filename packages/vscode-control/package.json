@@ -2,10 +2,10 @@
   "scripts": {
     "start": "node ."
   },
-  "name": "cool-vscode-themes",
+  "name": "vscode-control",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "repository": "git@github.com:selfrefactor/cool-vscode-themes.git",
+  "repository": "git@github.com:selfrefactor/services.git",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
   "dependencies": {

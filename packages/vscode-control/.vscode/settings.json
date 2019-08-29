@@ -51,6 +51,7 @@
     "**/.hg": false,
     "**/.svn": false,
     "**/coverage": true,
+    "**/.vscode": true,
     "**/CVS": false,
     "**/node_modules": true,
     "**/yarn-error.log": true,
