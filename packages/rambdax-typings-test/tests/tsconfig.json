@@ -10,5 +10,5 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "target": "es2015"
-  }
-}
+  } 
+}    
