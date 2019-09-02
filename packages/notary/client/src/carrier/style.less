@@ -1,0 +1,42 @@
+@import "../../node_modules/colors/_colors.css";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    @media screen and (min-width: 900px) {
+        font-size: 18px;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
+    }
+    overflow: hidden;
+    background-color: #b0bec5;
+}
+
+body {
+    margin: 0;
+}
+
+.carrier {
+    position: absolute;
+    top: 90vh;
+    width: 100%;
+    height: 10vh;
+    left: 0;
+    display: grid;
+    grid-column: repeat(33.3, 1fr);
+    grid-template-areas: "logo random points";
+    &__logo {
+        grid-area: logo;
+    }
+    &__random {
+        grid-area: random;
+    }
+    &__points {
+        grid-area: points;
+    }
+}
