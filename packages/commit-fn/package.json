@@ -1,30 +1,30 @@
 {
-  "name": "commit-fn",
-  "version": "1.1.1",
-  "description": "commit-message",
-  "main": "./dist/index.js",
-  "typings": "./src/index.d.ts",
-  "scripts": {
-    "lint": "tslint --fix --project tsconfig.json",
-    "prelint": "tsfmt -r --no-tsconfig src/*.ts",
-    "out": "tsc -p .",
-    "in": "tsc -w",
-    "debug": "node ./dist/debug.js"
-  },
-  "dependencies": {
-    "enquirer": "^2.3.0",
-    "helpers": "https://github.com/selfrefactor/helpers#1.2.1",
-    "string-fn": "^2.8.1"
-  },
-  "devDependencies": {
-    "@types/node": "^9.6.0",
-    "fs-extra": "^5.0.0",
-    "tslint": "^5.9.1",
-    "typescript": "^3.1.0",
-    "typescript-formatter": "^7.1.0"
-  },
-  "repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "license": "MIT",
-  "private": false
+	"name": "commit-fn",
+	"version": "1.1.1",
+	"description": "commit-message",
+	"main": "./dist/index.js",
+	"typings": "./src/index.d.ts",
+	"scripts": {
+		"lint": "tslint --fix --project tsconfig.json",
+		"prelint": "tsfmt -r --no-tsconfig src/*.ts",
+		"out": "tsc -p .",
+		"in": "tsc -w",
+		"debug": "node ./dist/debug.js"
+	},
+	"dependencies": {
+		"enquirer": "^2.3.2",
+		"helpers": "https://github.com/selfrefactor/helpers#1.6.0",
+		"string-fn": "^2.9.0"
+	},
+	"devDependencies": {
+		"@types/node": "^12.7.5",
+		"fs-extra": "^8.1.0",
+		"tslint": "^5.20.0",
+		"typescript": "^3.7.0-dev.20190924",
+		"typescript-formatter": "^7.2.2"
+	},
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"private": false
 }
