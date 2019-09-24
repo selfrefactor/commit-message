@@ -23,16 +23,14 @@ function getListFiles(x){
 }
 
 function syncFiles(source, list){
-  console.log({source, list})
-
   list.forEach(x => {
     copySync(source, x)
   })
 }
 
 const splittedOptions = {
-  'editor.fontSize'          : [ 18, 19 ],
-  'editor.lineHeight'        : [ 23, 24 ],
+  'editor.fontSize'          : [ 17, 18 ],
+  'editor.lineHeight'        : [ 20, 21 ],
   'editor.suggestFontSize'   : [ 20, 22 ],
   'editor.suggestLineHeight' : [ 23, 25 ],
   'window.zoomLevel'         : [ 0, 0, 0 ],
@@ -57,7 +55,7 @@ function syncSettings(){
   ] = getListFiles(
     SETTINGS
   )
-
+  // console.log(insidersSettingsLocation)  
   writeJsonSync(insidersSettingsLocation, {
     ...settings,
     ...getPartialOptions(0),

@@ -49,7 +49,7 @@
     "command": "workbench.action.files.openFolder"
   },
   {
-    "key": "alt+2",
+    "key": "ctrl+4",
     "command": "workbench.action.selectTheme"
   },
   {
@@ -93,15 +93,6 @@
     "key": "f5",
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
-  },
-  {
-    "key": "ctrl+8",
-    "command": "wallaby.start"
-  },
-  {
-    "key": "ctrl+4",
-    "command": "wallaby.showSideBySideDiff",
-    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+m",

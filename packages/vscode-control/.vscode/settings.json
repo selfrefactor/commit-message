@@ -1,6 +1,6 @@
 {
-  "editor.fontSize": 18,
-  "editor.lineHeight": 23,
+  "editor.fontSize": 17,
+  "editor.lineHeight": 21,
   "editor.suggestFontSize": 27,
   "editor.suggestLineHeight": 29,
   "window.zoomLevel": 0,
@@ -51,6 +51,7 @@
     "**/.hg": false,
     "**/.svn": false,
     "**/coverage": true,
+    "**/.vscode": true,
     "**/CVS": false,
     "**/node_modules": true,
     "**/yarn-error.log": true,
@@ -161,6 +162,8 @@
   "gitlens.currentLine.scrollable": false,
   "gitlens.currentLine.format": "${ago}|${message}",
   "editor.find.addExtraSpaceOnTop": false,
+  "npm.enableScriptExplorer": false,
   "javascript.implicitProjectConfig.checkJs": true,
+  "typescript.experimental.useSeparateSyntaxServer": true,
   "typescript.referencesCodeLens.enabled": true
 }

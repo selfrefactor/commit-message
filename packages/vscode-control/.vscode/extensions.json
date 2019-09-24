@@ -1,5 +1,8 @@
 {
   "recommendations": [
+    "TabNine.tabnine-vscode",
+    "dzhavat.css-to-mdn",
+    "huntertran.auto-markdown-toc",
     "fabiospampinato.vscode-open-in-node-modules",
     "selfrefactor.magic-beans",
     "selfrefactor.Niketa-theme",

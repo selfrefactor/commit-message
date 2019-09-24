@@ -1,0 +1,22 @@
+{
+	"name": "rambda-typings-example",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"dependencies": {
+		"rambda": "^2.14.4",
+		"rambdax": "^2.12.3",
+		"typescript": "^3.6.0-dev.20190810"
+	},
+	"commitMessage": {
+		"support": [
+			"example"
+		],
+		"feature": [
+			"example"
+		]
+	},
+	"devDependencies": {
+		
+	}
+}
