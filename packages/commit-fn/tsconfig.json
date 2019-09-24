@@ -7,7 +7,7 @@
     "noImplicitAny": false,
     "outDir": "./dist/",
     "sourceMap": true,
-    "strictNullChecks": false,
+    "strictNullChecks": true,
     "target": "esnext",
     "lib": [
       "es6",

@@ -157,17 +157,15 @@ exports.STOP_LABEL = {
 const customLabelsRaw = getCustomLabels_1.getCustomLabels();
 const customLabels = [];
 const getBelongsTo = (key) => {
-    let flag = false;
     let commitTypeHolder;
     exports.typesOfCommit.forEach(singleCommitType => {
         if (singleCommitType.key.toLowerCase() === key) {
-            flag = true;
             commitTypeHolder = singleCommitType;
         }
     });
-    return flag ?
-        [commitTypeHolder] :
-        [];
+    if (!commitTypeHolder)
+        return [];
+    return [commitTypeHolder];
 };
 if (customLabelsRaw !== false) {
     const belongsToWhenLabel = [

@@ -7,6 +7,8 @@ new Promise((resolve, reject) => {
       command,
       { cwd },
     )
+    if(!proc) return reject('!proc')
+    if(!proc.stdout) return reject('!proc')
 
     proc.stdout.on('data', chunk => {
       console.log(chunk.toString())

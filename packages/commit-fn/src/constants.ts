@@ -184,19 +184,15 @@ const customLabelsRaw = getCustomLabels()
 const customLabels: Label[] = []
 
 const getBelongsTo = (key): CommitType[] => {
-  let flag = false
-  let commitTypeHolder: CommitType
+  let commitTypeHolder: CommitType | undefined
 
   typesOfCommit.forEach(singleCommitType => {
     if (singleCommitType.key.toLowerCase() === key) {
-      flag = true
       commitTypeHolder = singleCommitType
     }
   })
-
-  return flag ?
-    [commitTypeHolder] :
-    []
+  if(!commitTypeHolder) return []
+  return [commitTypeHolder]
 }
 
 if (customLabelsRaw !== false) {
