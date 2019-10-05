@@ -16,6 +16,14 @@ const urlConditionFn: Composed<string, boolean> = compose(
   match(/:/g),
 )
 
+function getGithubUrl(urlInput: string): string{
+  const [a] = match(/github.com.{1,100}/, urlInput)
+  const b = replace('.git', '', a)
+  const c = replace('github.com:', 'github.com/', b)
+  
+  return `https://${c}`
+}
+
 export const getInitURL = async (
   dependency: string,
 ): Promise<string> => {
@@ -30,15 +38,8 @@ export const getInitURL = async (
       console.log('url === undefined')
       process.exit()
     }
-
-    const urlGithub = compose(
-      x => `https://${x}`,
-      replace('github.com:', 'github.com/'),
-      replace('.git', ''),
-      head,
-      identity,
-      match(/github.com.{1,100}/),
-    )(url)
+    
+    const urlGithub = getGithubUrl(url)
 
     const startCondition: boolean = urlGithub.startsWith('https://github.com')
     const urlCondition: boolean = urlConditionFn(urlGithub)
