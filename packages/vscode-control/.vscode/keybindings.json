@@ -295,5 +295,15 @@
   {
     "key": "ctrl+shift+i",
     "command": "editor.action.inspectTMScopes"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
   }
 ]
