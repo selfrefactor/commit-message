@@ -1,0 +1,14 @@
+{
+  "name": "consume-rambda-typings",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "x":"tsc --init",
+    "test":"tsc index.ts"
+  },
+  "dependencies": {
+    "rambda": "^3.2.1",
+    "typescript": "^3.6.4"
+  }
+}
