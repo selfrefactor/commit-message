@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -e
+
+slash=/
+README="$(cat README.md)"
+README="${README//${PREVIOUS_VERSION}${slash}ramda.min.js/${VERSION}${slash}ramda.min.js}"
+README="${README//${PREVIOUS_VERSION}${slash}dist${slash}ramda.min.js/${VERSION}${slash}dist${slash}ramda.min.js}"
+README="${README//${PREVIOUS_VERSION%.*}${slash}dist${slash}ramda.min.js/${VERSION%.*}${slash}dist${slash}ramda.min.js}"
+echo "$README" >README.md
+git add README.md
+
+for filename in $(find source -maxdepth 1 -name "*.js" | xargs grep --files-without-match "@since v") ; do
+  cp -- $filename{,.tmp}
+  sed $'s/@memberOf R/@memberOf R\\\n * @since v'"$VERSION/" $filename.tmp >$filename
+  rm -- $filename.tmp
+  git add $filename
+done
+
+npm run clean
+npm run build
+
+# build reads version from package.json, which isn't updated until after this script is run by xyz
+distpath=dist/ramda.js
+DIST_RAMDA="$(cat $distpath)"
+DIST_RAMDA="${DIST_RAMDA//${slash}${slash}  Ramda v${PREVIOUS_VERSION}/${slash}${slash}  Ramda v${VERSION}}"
+echo "$DIST_RAMDA" >$distpath
+
+git add dist/ramda{,.min}.js
+
+npm run bookmarklet
+git add BOOKMARKLET.md

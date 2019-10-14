@@ -1,0 +1,13 @@
+{
+  "framework": "mocha",
+  "cwd": ".",
+  "src_files": [
+      "dist/ramda.js",
+      "test/*.js"
+  ],
+  "serve_files": [
+      "tmp-test-bundle.js"
+  ],
+  "before_tests": "cross-env BABEL_ENV=cjs browserify test/*.js -t babelify --outfile tmp-test-bundle.js",
+  "after_tests": "rimraf tmp-test-bundle.js"
+}

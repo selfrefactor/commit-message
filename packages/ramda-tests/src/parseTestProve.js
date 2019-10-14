@@ -1,5 +1,7 @@
 const input = `
-eq(R.adjust(2, R.add(1), args(0, 1, 2, 3)), [ 0, 1, 3, 3 ])
+eq(R.allPass([odd, gt5, plusEq]).length, 4);
+    eq(R.allPass([odd, gt5, plusEq])(9, 9, 9, 9), true);
+    eq(R.allPass([odd, gt5, plusEq])(9)(9)(9)(9), true);
 `
 
 const { remove, match, drop, init } = require('rambdax')
@@ -15,7 +17,7 @@ function parseSingleLine(line){
   if (!firstPart) throw new Error('!firstPart')
   const secondPart = remove(firstPart, cleanLine)
 
-  return `expect(${ drop(3, firstPart) }).toEqual(${ init(secondPart) })`
+  return `expect(${ init(drop(3, firstPart)) }).toEqual(${ init(secondPart) })`
 }
 
 void function parseTest(){
