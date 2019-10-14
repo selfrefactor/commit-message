@@ -5,5 +5,9 @@
   "license": "MIT",
   "commitMessage": {
     "workInProgress": "init"
+  },
+  "dependencies": {
+    "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
+    "rambdax": "^2.14.1"
   }
 }

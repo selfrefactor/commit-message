@@ -1,0 +1,33 @@
+
+
+  add
+    ✓ adds together two numbers
+    1) coerces its arguments to numbers
+
+  add properties
+    ✓ commutative
+    ✓ associative
+    ✓ identity
+
+
+  4 passing (121ms)
+  1 failing
+
+  1) add
+       coerces its arguments to numbers:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'"12"' !== '3'
+
+      + expected - actual
+
+      -"12"
+      +3
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/add.js:11:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+
