@@ -1,4 +1,4 @@
 ramda
-outputs
+outputs/*.txt
 dist
 node_modules

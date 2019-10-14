@@ -1,6 +1,6 @@
 const R = require('rambda')
 const { exec } = require('helpers')
-const { glue, mapAsync, take } = require('rambdax')
+const { glue, mapAsync } = require('rambdax')
 const { readFileSync, unlinkSync } = require('fs')
 
 const getOutputPath = x => `${ process.env.HOME }/repos/services/packages/ramda-tests/outputs/${ x }.txt`
@@ -31,7 +31,7 @@ async function checkSingleMethod(method){
   await exec({
     cwd : '/home/matrix/repos/services/packages/ramda-tests/ramda',
     command,
-  }) 
+  })
   const testOutput = readFileSync(outputPath).toString()
   if (testOutput.includes('failing')) return
 
@@ -43,6 +43,5 @@ void async function runTests(){
 
   await mapAsync(
     checkSingleMethod
-  // )(['add'])
-  )(take(12, allMethods))
+  )(allMethods) 
 }()
