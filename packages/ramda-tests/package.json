@@ -7,7 +7,7 @@
     "on": "node src/initProve.js"
   },
   "commitMessage": {
-    "workInProgress": "parse test"
+    "workInProgress": ""
   },
   "dependencies": {
     "clipboardy": "^2.1.0",
