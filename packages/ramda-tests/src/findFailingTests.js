@@ -28,6 +28,7 @@ const getCommand = x => {
 const KNOWN_FAILING_TESTS = {
   adjust  : 1,
   allPass : 1,
+  anyPass : 1,
 }
 
 function getNumberFailing(testOutput){

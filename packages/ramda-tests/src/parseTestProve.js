@@ -1,7 +1,5 @@
 const input = `
-eq(R.allPass([odd, gt5, plusEq]).length, 4);
-    eq(R.allPass([odd, gt5, plusEq])(9, 9, 9, 9), true);
-    eq(R.allPass([odd, gt5, plusEq])(9)(9)(9)(9), true);
+eq(R.anyPass([])(3), false);
 `
 
 const { remove, match, drop, init } = require('rambdax')
