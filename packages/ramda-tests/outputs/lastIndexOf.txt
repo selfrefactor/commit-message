@@ -15,7 +15,7 @@
     1) does not find function, compared by identity
 
 
-  11 passing (84ms)
+  11 passing (85ms)
   1 failing
 
   1) lastIndexOf

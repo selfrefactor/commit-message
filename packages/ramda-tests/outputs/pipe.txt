@@ -8,7 +8,7 @@
     ✓ can be applied to one argument
 
 
-  4 passing (103ms)
+  4 passing (82ms)
   1 failing
 
   1) pipe

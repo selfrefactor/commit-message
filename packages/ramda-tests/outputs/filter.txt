@@ -8,7 +8,7 @@
     ✓ dispatches to passed-in non-Array object with a `filter` method
 
 
-  4 passing (90ms)
+  4 passing (81ms)
   1 failing
 
   1) filter

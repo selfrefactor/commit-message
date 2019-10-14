@@ -13,7 +13,7 @@
     3) correctly uses fantasy-land implementations
 
 
-  7 passing (118ms)
+  7 passing (101ms)
   3 failing
 
   1) map

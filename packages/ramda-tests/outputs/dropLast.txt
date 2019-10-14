@@ -9,7 +9,7 @@
     1) can act as a transducer
 
 
-  5 passing (82ms)
+  5 passing (83ms)
   1 failing
 
   1) dropLast

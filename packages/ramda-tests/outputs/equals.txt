@@ -31,7 +31,7 @@
     11) is commutative
 
 
-  17 passing (160ms)
+  17 passing (127ms)
   11 failing
 
   1) equals

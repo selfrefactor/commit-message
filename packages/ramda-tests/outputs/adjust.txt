@@ -8,7 +8,7 @@
     5) accepts an array-like object
 
 
-  0 passing (102ms)
+  0 passing (80ms)
   5 failing
 
   1) adjust

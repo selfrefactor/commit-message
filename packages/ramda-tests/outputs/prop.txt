@@ -5,7 +5,7 @@
     1) shows the same behaviour as path for an undefined object
 
 
-  1 passing (80ms)
+  1 passing (81ms)
   1 failing
 
   1) prop

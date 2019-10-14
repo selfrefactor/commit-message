@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "on": "node src/initProve.js"
+    "on": "node src/findFailingTests.js"
   },
   "commitMessage": {
     "workInProgress": ""
@@ -12,7 +12,7 @@
   "dependencies": {
     "clipboardy": "^2.1.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
-    "rambda": "^3.2.1",
+    "rambda": "https://github.com/selfrefactor/rambda#3.3.1",
     "rambdax": "^2.14.1"
   }
 }

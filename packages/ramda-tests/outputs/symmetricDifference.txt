@@ -9,7 +9,7 @@
     6) returns an empty array if there are no different elements
 
 
-  0 passing (103ms)
+  0 passing (104ms)
   6 failing
 
   1) symmetricDifference

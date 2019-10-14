@@ -7,7 +7,7 @@
     1) uses the default when supplied an object with a nil value
 
 
-  3 passing (87ms)
+  3 passing (94ms)
   1 failing
 
   1) propOr

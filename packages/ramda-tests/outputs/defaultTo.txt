@@ -7,7 +7,7 @@
     ✓ can be called with both arguments directly
 
 
-  3 passing (86ms)
+  3 passing (92ms)
   1 failing
 
   1) defaultTo

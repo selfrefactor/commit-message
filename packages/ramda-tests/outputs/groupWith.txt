@@ -8,7 +8,7 @@
     5) also works on strings
 
 
-  0 passing (96ms)
+  0 passing (84ms)
   5 failing
 
   1) groupWith

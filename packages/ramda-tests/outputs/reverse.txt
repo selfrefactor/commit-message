@@ -5,7 +5,7 @@
     1) reverses strings
 
 
-  1 passing (85ms)
+  1 passing (81ms)
   1 failing
 
   1) reverse

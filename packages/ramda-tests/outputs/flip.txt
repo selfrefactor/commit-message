@@ -6,10 +6,10 @@
     1) returns a function with the correct arity
 
   flip properties
-    ✓ inverts first two arguments (97ms)
+    ✓ inverts first two arguments (81ms)
 
 
-  3 passing (187ms)
+  3 passing (161ms)
   1 failing
 
   1) flip

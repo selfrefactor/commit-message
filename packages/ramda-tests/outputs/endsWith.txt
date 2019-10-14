@@ -11,7 +11,7 @@
     8) should return false when an array does not end with the provided values
 
 
-  0 passing (79ms)
+  0 passing (85ms)
   8 failing
 
   1) startsWith

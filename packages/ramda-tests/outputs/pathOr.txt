@@ -8,7 +8,7 @@
     5) works with falsy items
 
 
-  0 passing (76ms)
+  0 passing (77ms)
   5 failing
 
   1) pathOr

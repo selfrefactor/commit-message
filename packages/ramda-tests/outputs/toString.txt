@@ -22,7 +22,7 @@
     ✓ handles circular references
 
 
-  15 passing (156ms)
+  15 passing (110ms)
   4 failing
 
   1) toString

@@ -7,7 +7,7 @@
     2) dispatches to transformer objects
 
 
-  2 passing (105ms)
+  2 passing (81ms)
   2 failing
 
   1) tap

@@ -10,7 +10,7 @@
     ✓ dispatches to `filter` method
 
 
-  6 passing (126ms)
+  6 passing (85ms)
   1 failing
 
   1) reject

@@ -6,7 +6,7 @@
     1) coerces non-string types
 
 
-  2 passing (95ms)
+  2 passing (79ms)
   1 failing
 
   1) dissoc

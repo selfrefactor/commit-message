@@ -5,13 +5,13 @@
     ✓ returns false for undefined
     ✓ returns true for empty string
     ✓ returns true for empty array
-    ✓ returns true for empty typed array (42ms)
+    ✓ returns true for empty typed array
     1) returns true for empty object
     ✓ returns true for empty arguments object
     ✓ returns false for every other value
 
 
-  7 passing (146ms)
+  7 passing (91ms)
   1 failing
 
   1) isEmpty

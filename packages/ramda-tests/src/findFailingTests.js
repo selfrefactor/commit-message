@@ -26,6 +26,7 @@ const getCommand = x => {
 }
 
 async function checkSingleMethod(method){
+  console.log(method)
   const { command, outputPath } = getCommand(method)
 
   await exec({
