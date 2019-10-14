@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "commitMessage": {
-    "workInProgress": "init"
+    "workInProgress": ""
   },
   "dependencies": {
     "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
+    "rambda": "^3.2.1",
     "rambdax": "^2.14.1"
   }
 }

@@ -298,6 +298,11 @@ rambda@2.7.1:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.7.1.tgz#56c3d4100131db0e252236a26bed75faffa229d8"
   integrity sha512-EjTEdqAOqMWSgiyIs/7cd9ByCN1hlVq5YBxaTdlmGygIpvAtM+qv4rO2eptiTUIkP8E5lGusuq7hohtFM23knw==
 
+rambda@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-3.2.1.tgz#63e89fe40befd8896aab0e411aa40bb9a137d1dc"
+  integrity sha512-UJzQl7WbctP2zMd2VIb6fxW/G7zUk6tKR1Q2WYtHR0pGy5fVEZvXqrgAmtAPnULet+HGzPO9CKH6UiiuVH26EA==
+
 rambdax@^2.14.1:
   version "2.14.1"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.14.1.tgz#9ede5eebd3bb502ff584592e376abf67e7f8e107"
