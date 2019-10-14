@@ -26,14 +26,14 @@ const getCommand = x => {
 }
 
 const KNOWN_FAILING_TESTS = {
-  adjust: 1,
-  allPass: 1,
+  adjust  : 1,
+  allPass : 1,
 }
 
 function getNumberFailing(testOutput){
-  const [line] = testOutput.split('\n').filter(x => x.includes('failing'))
-  const [numberFailing] = line.split('failing')
-  
+  const [ line ] = testOutput.split('\n').filter(x => x.includes('failing'))
+  const [ numberFailing ] = line.split('failing')
+
   return Number(numberFailing.trim())
 }
 
@@ -50,10 +50,10 @@ async function checkSingleMethod(method){
     unlinkSync(outputPath)
   }
 
-  if(!KNOWN_FAILING_TESTS[method]) return
+  if (!KNOWN_FAILING_TESTS[ method ]) return
   const numberFailing = getNumberFailing(testOutput)
 
-  if(numberFailing > KNOWN_FAILING_TESTS[method]){
+  if (numberFailing > KNOWN_FAILING_TESTS[ method ]){
     unlinkSync(outputPath)
   }
 }
