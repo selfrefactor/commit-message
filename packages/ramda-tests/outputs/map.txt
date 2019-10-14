@@ -1,0 +1,60 @@
+
+
+  map
+    ✓ maps simple functions over arrays
+    ✓ maps simple functions into arrays
+    1) maps over objects
+    2) interprets ((->) r) as a functor
+    ✓ dispatches to objects that implement `map`
+    ✓ dispatches to transformer objects
+    ✓ throws a TypeError on null and undefined
+    ✓ composes
+    ✓ can compose transducer-style
+    3) correctly uses fantasy-land implementations
+
+
+  7 passing (118ms)
+  3 failing
+
+  1) map
+       maps over objects:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '[undefined]'
+- '{}'
+      + expected - actual
+
+      -[undefined]
+      +{}
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/map.js:23:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) map
+       interprets ((->) r) as a functor:
+     TypeError: h is not a function
+      at Context.h (test/map.js:31:8)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) map
+       correctly uses fantasy-land implementations:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '2'
+- 'undefined'
+      + expected - actual
+
+      -2
+      +undefined
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/map.js:70:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

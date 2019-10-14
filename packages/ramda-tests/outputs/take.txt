@@ -1,0 +1,34 @@
+
+
+  take
+    ✓ takes only the first `n` elements from a list
+    ✓ returns only as many as the array can provide
+    ✓ returns an equivalent list if `n` is < 0
+    ✓ never returns the input array
+    ✓ can operate on strings
+    ✓ handles zero correctly (#1224)
+    1) steps correct number of times
+    ✓ transducer called for every member of list if `n` is < 0
+
+
+  7 passing (99ms)
+  1 failing
+
+  1) take
+       steps correct number of times:
+     expected f to be called twice but was called thrice
+    f(1) at XMap.@@transducer/step (/home/matrix/repos/services/packages/ramda-tests/ramda/node_modules/ramda/dist/ramda.js:612:62)
+    f(2) at XMap.@@transducer/step (/home/matrix/repos/services/packages/ramda-tests/ramda/node_modules/ramda/dist/ramda.js:612:62)
+    f(3) at XMap.@@transducer/step (/home/matrix/repos/services/packages/ramda-tests/ramda/node_modules/ramda/dist/ramda.js:612:62)
+  AssertError: expected f to be called twice but was called thrice
+      f(1) at XMap.@@transducer/step (node_modules/ramda/dist/ramda.js:612:62)
+      f(2) at XMap.@@transducer/step (node_modules/ramda/dist/ramda.js:612:62)
+      f(3) at XMap.@@transducer/step (node_modules/ramda/dist/ramda.js:612:62)
+      at Object.fail (node_modules/sinon/lib/sinon/assert.js:106:21)
+      at failAssertion (node_modules/sinon/lib/sinon/assert.js:65:16)
+      at Object.assert.<computed> [as calledTwice] (node_modules/sinon/lib/sinon/assert.js:91:13)
+      at Context.calledTwice (test/take.js:46:18)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

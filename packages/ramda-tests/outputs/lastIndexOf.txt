@@ -1,0 +1,38 @@
+
+
+  lastIndexOf
+    ✓ returns a number indicating an object's last position in a list
+    ✓ returns -1 if the object is not in the list
+    ✓ returns the last index of the first item
+    ✓ returns the index of the last item
+    ✓ finds a
+    ✓ does not find c
+    ✓ does not consider "1" equal to 1
+    ✓ returns -1 for an empty array
+    ✓ has R.equals semantics
+    ✓ dispatches to `lastIndexOf` method
+    ✓ finds function, compared by identity
+    1) does not find function, compared by identity
+
+
+  11 passing (84ms)
+  1 failing
+
+  1) lastIndexOf
+       does not find function, compared by identity:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'1' !== '-1'
+
+      + expected - actual
+
+      -1
+      +-1
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/lastIndexOf.js:96:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

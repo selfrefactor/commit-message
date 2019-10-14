@@ -1,0 +1,66 @@
+
+
+  assocPath
+    1) makes a shallow clone of an object, overriding only what is necessary for the path
+    2) is the equivalent of clone and setPath if the property is not on the original
+    3) empty path replaces the the whole object
+    ✓ replaces `undefined` with a new object
+    ✓ replaces `null` with a new object
+
+
+  2 passing (104ms)
+  3 failing
+
+  1) assocPath
+       makes a shallow clone of an object, overriding only what is necessary for the path:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"0": 5, "1": 42, "2": 7}'
+- '[5, 42, 7]'
+      + expected - actual
+
+      -{"0": 5, "1": 42, "2": 7}
+      +[5, 42, 7]
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/assocPath.js:27:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) assocPath
+       is the equivalent of clone and setPath if the property is not on the original:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"a": 1, "b": {"c": 2, "d": 3}, "e": 4, "f": 5, "x": {"0": {"y": 42}}}'
+- '{"a": 1, "b": {"c": 2, "d": 3}, "e": 4, "f": 5, "x": [{"y": 42}]}'
+      + expected - actual
+
+      -{"a": 1, "b": {"c": 2, "d": 3}, "e": 4, "f": 5, "x": {"0": {"y": 42}}}
+      +{"a": 1, "b": {"c": 2, "d": 3}, "e": 4, "f": 5, "x": [{"y": 42}]}
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/assocPath.js:46:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) assocPath
+       empty path replaces the the whole object:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"a": 1, "b": 2}'
+- '3'
+      + expected - actual
+
+      -{"a": 1, "b": 2}
+      +3
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/assocPath.js:64:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

@@ -1,0 +1,31 @@
+
+
+  zipObj
+    ✓ combines an array of keys with an array of values into a single object
+    ✓ ignores extra values
+    1) ignores extra keys
+    ✓ last one in wins when there are duplicate keys
+
+
+  3 passing (99ms)
+  1 failing
+
+  1) zipObj
+       ignores extra keys:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"a": 1, "b": 2, "c": 3, "d": undefined, "e": undefined, "f": undefined}'
+- '{"a": 1, "b": 2, "c": 3}'
+      + expected - actual
+
+      -{"a": 1, "b": 2, "c": 3, "d": undefined, "e": undefined, "f": undefined}
+      +{"a": 1, "b": 2, "c": 3}
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/zipObj.js:15:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

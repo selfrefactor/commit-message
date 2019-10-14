@@ -1,0 +1,23 @@
+
+
+  propEq
+    ✓ determines whether a particular property matches a given value for a specific object
+    ✓ has R.equals semantics
+    1) returns false if called with a null or undefined object
+
+
+  2 passing (92ms)
+  1 failing
+
+  1) propEq
+       returns false if called with a null or undefined object:
+     TypeError: Cannot read property 'name' of null
+      at propSatisfies (node_modules/ramda/dist/ramda.js:2771:24)
+      at f3 (node_modules/ramda/dist/ramda.js:256:24)
+      at propEq (node_modules/ramda/dist/ramda.js:5424:16)
+      at Object.f3 [as propEq] (node_modules/ramda/dist/ramda.js:256:24)
+      at Context.propEq (test/propEq.js:28:10)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

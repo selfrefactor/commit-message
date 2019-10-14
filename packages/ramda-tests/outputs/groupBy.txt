@@ -1,0 +1,23 @@
+
+
+  groupBy
+    ✓ splits the list into groups according to the grouping function
+    ✓ returns an empty object if given an empty array
+    1) dispatches on transformer objects in list position
+
+
+  2 passing (90ms)
+  1 failing
+
+  1) groupBy
+       dispatches on transformer objects in list position:
+     TypeError: reduce: list must be array or iterable
+      at _reduce (node_modules/ramda/dist/ramda.js:4066:19)
+      at groupBy (node_modules/ramda/dist/ramda.js:4869:16)
+      at /home/matrix/repos/services/packages/ramda-tests/ramda/node_modules/ramda/dist/ramda.js:3919:23
+      at Object.f2 [as groupBy] (node_modules/ramda/dist/ramda.js:191:24)
+      at Context.groupBy (test/groupBy.js:44:25)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

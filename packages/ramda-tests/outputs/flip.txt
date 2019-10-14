@@ -1,0 +1,32 @@
+
+
+  flip
+    ✓ returns a function which inverts the first two arguments to the supplied function
+    ✓ returns a curried function
+    1) returns a function with the correct arity
+
+  flip properties
+    ✓ inverts first two arguments (97ms)
+
+
+  3 passing (187ms)
+  1 failing
+
+  1) flip
+       returns a function with the correct arity:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'2' !== '3'
+
+      + expected - actual
+
+      -2
+      +3
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/flip.js:26:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+
