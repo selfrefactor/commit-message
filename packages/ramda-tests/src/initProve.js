@@ -43,5 +43,5 @@ void async function runTests(){
 
   await mapAsync(
     checkSingleMethod
-  )(allMethods) 
+  )(allMethods)
 }()

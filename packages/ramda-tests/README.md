@@ -2,7 +2,7 @@
 
 Check differences between `Ramda` and `Rambda`
 
-## Steps
+## Find failing tests
 
 - Clone Ramda
 
@@ -19,3 +19,6 @@ or
 - Run `yarn` in `ramda` directory
 
 - Finally run `yarn on` in `ramda-tests` directory
+
+## Parse Ramda test to Rambda test
+

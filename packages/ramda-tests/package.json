@@ -7,9 +7,10 @@
     "on": "node src/initProve.js"
   },
   "commitMessage": {
-    "workInProgress": ""
+    "workInProgress": "parse test"
   },
   "dependencies": {
+    "clipboardy": "^2.1.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
     "rambda": "^3.2.1",
     "rambdax": "^2.14.1"
