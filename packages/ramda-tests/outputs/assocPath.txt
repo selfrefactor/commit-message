@@ -8,7 +8,7 @@
     ✓ replaces `null` with a new object
 
 
-  2 passing (87ms)
+  2 passing (60ms)
   3 failing
 
   1) assocPath

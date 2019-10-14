@@ -35,7 +35,7 @@
     1) dispatches to `clone` method if present
 
 
-  17 passing (99ms)
+  17 passing (75ms)
   1 failing
 
   1) Let `R.clone` use an arbitrary user defined `clone` method

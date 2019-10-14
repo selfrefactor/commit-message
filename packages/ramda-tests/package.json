@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "test":"cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/adjust.js",
     "on": "node src/findFailingTests.js"
   },
   "commitMessage": {
@@ -12,7 +13,6 @@
   "dependencies": {
     "clipboardy": "^2.1.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
-    "rambda": "https://github.com/selfrefactor/rambda#3.3.1",
     "rambdax": "^2.14.1"
   }
 }

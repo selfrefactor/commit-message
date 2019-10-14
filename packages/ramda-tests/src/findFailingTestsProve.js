@@ -25,6 +25,17 @@ const getCommand = x => {
   }
 }
 
+const KNOWN_FAILING_TESTS = {
+  adjust: 1
+}
+
+function getNumberFailing(testOutput){
+  const [line] = testOutput.split('\n').filter(x => x.includes('failing'))
+  const [numberFailing] = line.split('failing')
+  
+  return Number(numberFailing.trim())
+}
+
 async function checkSingleMethod(method){
   console.log(method)
   const { command, outputPath } = getCommand(method)
@@ -34,9 +45,16 @@ async function checkSingleMethod(method){
     command,
   })
   const testOutput = readFileSync(outputPath).toString()
-  if (testOutput.includes('failing')) return
+  if (!testOutput.includes('failing')){
+    unlinkSync(outputPath)
+  }
 
-  unlinkSync(outputPath)
+  if(!KNOWN_FAILING_TESTS[method]) return
+  const numberFailing = getNumberFailing(testOutput)
+
+  if(numberFailing > KNOWN_FAILING_TESTS[method]){
+    unlinkSync(outputPath)
+  }
 }
 
 void async function runTests(){
@@ -44,5 +62,6 @@ void async function runTests(){
 
   await mapAsync(
     checkSingleMethod
+  // )(['adjust'])
   )(allMethods)
 }()
