@@ -1,0 +1,20 @@
+
+
+  test
+    ✓ returns true if string matches pattern
+    ✓ returns false if string does not match pattern
+    ✓ is referentially transparent
+    1) throws if first argument is not a regexp
+
+
+  3 passing (71ms)
+  1 failing
+
+  1) test
+       throws if first argument is not a regexp:
+     AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at Context.throws (test/test.js:26:12)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

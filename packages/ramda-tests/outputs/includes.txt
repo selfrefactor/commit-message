@@ -1,0 +1,45 @@
+
+
+  includes
+    1) returns true if an element is in a list
+    2) returns false if an element is not in a list
+    3) returns false for the empty list
+    4) has R.equals semantics
+    5) returns true if substring is part of string
+
+
+  0 passing (60ms)
+  5 failing
+
+  1) includes
+       returns true if an element is in a list:
+     TypeError: R.includes is not a function
+      at Context.includes (test/includes.js:7:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) includes
+       returns false if an element is not in a list:
+     TypeError: R.includes is not a function
+      at Context.includes (test/includes.js:11:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) includes
+       returns false for the empty list:
+     TypeError: R.includes is not a function
+      at Context.includes (test/includes.js:15:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  4) includes
+       has R.equals semantics:
+     TypeError: R.includes is not a function
+      at Context.includes (test/includes.js:24:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  5) includes
+       returns true if substring is part of string:
+     TypeError: R.includes is not a function
+      at Context.includes (test/includes.js:31:10)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

@@ -1,0 +1,50 @@
+
+
+  path
+    ✓ takes a path and an object and returns the value at the path or undefined
+    ✓ takes a path that contains indices into arrays
+    1) takes a path that contains negative indices into arrays
+    ✓ gets a deep property's value from objects
+    2) returns undefined for items not found
+    ✓ works with falsy items
+
+
+  4 passing (66ms)
+  2 failing
+
+  1) path
+       takes a path that contains negative indices into arrays:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'undefined'
+- '"c"'
+      + expected - actual
+
+      -undefined
+      +"c"
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/path.js:42:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) path
+       returns undefined for items not found:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'null'
+- 'undefined'
+      + expected - actual
+
+      -null
+      +undefined
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/path.js:54:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

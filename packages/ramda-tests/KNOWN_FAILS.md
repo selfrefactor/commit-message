@@ -1,0 +1,1 @@
+adjust - accepts an array-like object

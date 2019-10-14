@@ -1,0 +1,46 @@
+
+
+  dropLast
+    ✓ skips the last `n` elements from a list, returning the remainder
+    ✓ returns an empty array if `n` is too large
+    ✓ returns an equivalent list if `n` is <= 0
+    ✓ never returns the input array
+    ✓ can operate on strings
+    1) can act as a transducer
+
+
+  5 passing (64ms)
+  1 failing
+
+  1) dropLast
+       can act as a transducer:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be loosely deep-equal:
+
+[]
+
+should loosely deep-equal
+
+[
+  1,
+  3,
+  5,
+  7,
+  9
+]
+      + expected - actual
+
+      -[]
+      +[
+      +  1
+      +  3
+      +  5
+      +  7
+      +  9
+      +]
+      
+      at Context.deepEqual (test/dropLast.js:35:12)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

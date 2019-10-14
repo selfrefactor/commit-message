@@ -1,0 +1,31 @@
+
+
+  without
+    1) returns an array not containing values in the first argument
+    2) can act as a transducer
+    3) has R.equals semantics
+
+
+  0 passing (78ms)
+  3 failing
+
+  1) without
+       returns an array not containing values in the first argument:
+     TypeError: R.without is not a function
+      at Context.without (test/without.js:7:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) without
+       can act as a transducer:
+     TypeError: R.without is not a function
+      at Context.without (test/without.js:11:21)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) without
+       has R.equals semantics:
+     TypeError: R.without is not a function
+      at Context.without (test/without.js:20:10)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

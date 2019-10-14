@@ -1,0 +1,92 @@
+
+
+  toString
+    ✓ returns the string representation of null
+    ✓ returns the string representation of undefined
+    ✓ returns the string representation of a Boolean primitive
+    ✓ returns the string representation of a number primitive
+    1) returns the string representation of a string primitive
+    ✓ returns the string representation of a Boolean object
+    ✓ returns the string representation of a Number object
+    2) returns the string representation of a String object
+    3) returns the string representation of a Date object
+    ✓ returns the string representation of a RegExp object
+    ✓ returns the string representation of a function
+    ✓ returns the string representation of an array
+    ✓ returns the string representation of an array with non-numeric property names
+    ✓ returns the string representation of an arguments object
+    ✓ returns the string representation of a plain object
+    ✓ treats instance without custom `toString` method as plain object
+    4) dispatches to custom `toString` method
+    ✓ handles object with no `toString` method
+    ✓ handles circular references
+
+
+  15 passing (109ms)
+  4 failing
+
+  1) toString
+       returns the string representation of a string primitive:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '"\b \b"'
+- '"\\b \\b"'
+     ^
+      + expected - actual
+
+      -" "
+      +"\b \b"
+      
+      at Context.strictEqual (test/toString.js:40:12)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) toString
+       returns the string representation of a String object:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'new String("\b \b")'
+- 'new String("\\b \\b")'
+                ^
+      + expected - actual
+
+      -new String(" ")
+      +new String("\b \b")
+      
+      at Context.strictEqual (test/toString.js:65:12)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) toString
+       returns the string representation of a Date object:
+     RangeError: Invalid time value
+      at Date.toISOString (<anonymous>)
+      at _toISOString (node_modules/ramda/dist/ramda.js:451:22)
+      at _toString (node_modules/ramda/dist/ramda.js:6697:41)
+      at Object.toString (node_modules/ramda/dist/ramda.js:7056:16)
+      at Object.f1 [as toString] (node_modules/ramda/dist/ramda.js:156:27)
+      at Context.toString (test/toString.js:77:26)
+      at processImmediate (internal/timers.js:439:21)
+
+  4) toString
+       dispatches to custom `toString` method:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"toString": function () {\n            return val;\n        }}'
+- 'x'
+      + expected - actual
+
+      -{"toString": function () {
+      -            return val;
+      -        }}
+      +x
+      
+      at Context.strictEqual (test/toString.js:150:12)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

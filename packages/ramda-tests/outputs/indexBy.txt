@@ -1,0 +1,31 @@
+
+
+  indexBy
+    1) indexes list by the given property
+    2) indexes list by the given property upper case
+    3) can act as a transducer
+
+
+  0 passing (65ms)
+  3 failing
+
+  1) indexBy
+       indexes list by the given property:
+     TypeError: R.indexBy is not a function
+      at Context.indexBy (test/indexBy.js:8:21)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) indexBy
+       indexes list by the given property upper case:
+     TypeError: R.indexBy is not a function
+      at Context.indexBy (test/indexBy.js:14:21)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) indexBy
+       can act as a transducer:
+     TypeError: R.indexBy is not a function
+      at Context.indexBy (test/indexBy.js:21:9)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

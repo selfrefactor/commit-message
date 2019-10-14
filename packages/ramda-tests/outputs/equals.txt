@@ -1,0 +1,225 @@
+
+
+  equals
+    ✓ tests for deep equality of its operands
+    ✓ considers equal Boolean primitives equal
+    ✓ considers equivalent Boolean objects equal
+    ✓ never considers Boolean primitive equal to Boolean object
+    ✓ considers equal number primitives equal
+    ✓ considers equivalent Number objects equal
+    ✓ never considers number primitive equal to Number object
+    ✓ considers equal string primitives equal
+    ✓ considers equivalent String objects equal
+    ✓ never considers string primitive equal to String object
+    ✓ handles objects
+    ✓ considers equivalent Arguments objects equal
+    1) considers equivalent Error objects equal
+    ✓ handles regex
+    ✓ handles lists
+    ✓ handles recursive data structures
+    ✓ handles dates
+    2) requires that both objects have the same enumerable properties with the same values
+    ✓ handles typed arrays
+    3) compares Promise objects by identity
+    4) compares Map objects by value
+    5) dispatches to `equals` method recursively in Set
+    6) compares Set objects by value
+    7) dispatches to `equals` method recursively in Set
+    8) compares WeakMap objects by identity
+    9) compares WeakSet objects by identity
+    10) dispatches to `equals` method recursively
+    11) is commutative
+
+
+  17 passing (105ms)
+  11 failing
+
+  1) equals
+       considers equivalent Error objects equal:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:103:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) equals
+       requires that both objects have the same enumerable properties with the same values:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:186:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) equals
+       compares Promise objects by identity:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:213:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  4) equals
+       compares Map objects by value:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:220:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  5) equals
+       dispatches to `equals` method recursively in Set:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:235:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  6) equals
+       compares Set objects by value:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:246:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  7) equals
+       dispatches to `equals` method recursively in Set:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:258:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  8) equals
+       compares WeakMap objects by identity:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:270:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  9) equals
+       compares WeakSet objects by identity:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:278:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  10) equals
+       dispatches to `equals` method recursively:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:301:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  11) equals
+       is commutative:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/equals.js:328:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

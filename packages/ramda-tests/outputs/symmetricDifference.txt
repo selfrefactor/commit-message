@@ -1,0 +1,52 @@
+
+
+  symmetricDifference
+    1) finds the set of all elements in the first or second list but not both
+    2) does not allow duplicates in the output even if the input lists had duplicates
+    3) has R.equals semantics
+    4) works for arrays of different lengths
+    5) will not create a "sparse" array
+    6) returns an empty array if there are no different elements
+
+
+  0 passing (63ms)
+  6 failing
+
+  1) symmetricDifference
+       finds the set of all elements in the first or second list but not both:
+     TypeError: R.symmetricDifference is not a function
+      at Context.symmetricDifference (test/symmetricDifference.js:14:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) symmetricDifference
+       does not allow duplicates in the output even if the input lists had duplicates:
+     TypeError: R.symmetricDifference is not a function
+      at Context.symmetricDifference (test/symmetricDifference.js:18:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) symmetricDifference
+       has R.equals semantics:
+     TypeError: R.symmetricDifference is not a function
+      at Context.symmetricDifference (test/symmetricDifference.js:27:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  4) symmetricDifference
+       works for arrays of different lengths:
+     TypeError: R.symmetricDifference is not a function
+      at Context.symmetricDifference (test/symmetricDifference.js:34:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  5) symmetricDifference
+       will not create a "sparse" array:
+     TypeError: R.symmetricDifference is not a function
+      at Context.symmetricDifference (test/symmetricDifference.js:39:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  6) symmetricDifference
+       returns an empty array if there are no different elements:
+     TypeError: R.symmetricDifference is not a function
+      at Context.symmetricDifference (test/symmetricDifference.js:43:10)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

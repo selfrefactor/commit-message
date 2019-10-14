@@ -1,0 +1,31 @@
+
+
+  dissoc
+    ✓ copies an object omitting the specified property
+    ✓ includes prototype properties
+    1) coerces non-string types
+
+
+  2 passing (61ms)
+  1 failing
+
+  1) dissoc
+       coerces non-string types:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"42": 3, "a": 1, "b": 2}'
+- '{"a": 1, "b": 2}'
+     ^
+      + expected - actual
+
+      -{"42": 3, "a": 1, "b": 2}
+      +{"a": 1, "b": 2}
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/dissoc.js:27:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

@@ -1,0 +1,44 @@
+
+
+  partial
+    1) caches the initially supplied arguments
+    2) correctly reports the arity of the new function
+
+
+  0 passing (60ms)
+  2 failing
+
+  1) partial
+       caches the initially supplied arguments:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'NaN' !== '1'
+
+      + expected - actual
+
+      -NaN
+      +1
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/partial.js:14:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) partial
+       correctly reports the arity of the new function:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'2' !== '1'
+
+      + expected - actual
+
+      -2
+      +1
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/partial.js:21:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+
