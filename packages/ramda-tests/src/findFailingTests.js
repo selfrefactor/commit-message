@@ -56,11 +56,13 @@ async function checkSingleMethod(method){
     unlinkSync(outputPath)
   }
 
-  if (!KNOWN_FAILING_TESTS[ method ]) return
   const numberFailing = getNumberFailing(testOutput)
-  if (numberFailing <= KNOWN_FAILING_TESTS[ method ]){
-    unlinkSync(outputPath)
-  }
+
+  if (!KNOWN_FAILING_TESTS[ method ] || numberFailing > KNOWN_FAILING_TESTS[ method ]){
+    throw new Error(`${method} has ${numberFailing} tests`)
+  } 
+  
+  unlinkSync(outputPath)
 }
 
 void async function runTests(){
