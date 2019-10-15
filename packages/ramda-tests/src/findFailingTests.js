@@ -52,9 +52,7 @@ async function checkSingleMethod(method){
     command,
   })
   const testOutput = readFileSync(outputPath).toString()
-  if (!testOutput.includes('failing')){
-    unlinkSync(outputPath)
-  }
+  if (!testOutput.includes('failing')) return unlinkSync(outputPath)
 
   const numberFailing = getNumberFailing(testOutput)
 
