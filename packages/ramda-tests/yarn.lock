@@ -396,10 +396,6 @@ rambda@2.7.1:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.7.1.tgz#56c3d4100131db0e252236a26bed75faffa229d8"
   integrity sha512-EjTEdqAOqMWSgiyIs/7cd9ByCN1hlVq5YBxaTdlmGygIpvAtM+qv4rO2eptiTUIkP8E5lGusuq7hohtFM23knw==
 
-"rambda@https://github.com/selfrefactor/rambda#3.3.3":
-  version "3.2.1"
-  resolved "https://github.com/selfrefactor/rambda#30204dab6b27f2896f80581fe88a9cda3855d902"
-
 rambdax@^2.14.1:
   version "2.14.1"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-2.14.1.tgz#9ede5eebd3bb502ff584592e376abf67e7f8e107"

@@ -43,7 +43,7 @@ async function checkSingleMethod(method){
   const { command, outputPath } = getCommand(method)
 
   await exec({
-    cwd : '/home/matrix/repos/services/packages/ramda-tests/ramda',
+    cwd : `${process.env.HOME}/repos/services/packages/ramda-tests/ramda`,
     command,
   })
   const testOutput = readFileSync(outputPath).toString()
