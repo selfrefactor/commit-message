@@ -4,7 +4,7 @@ allPass/anyPass - returns a curried function whose arity matches that of the hig
 
 both/complement - accepts fantasy-land applicative functors
 
-compose - passes context to functions
+compose/curry - passes context to functions
 
 > composed functions have no length
 
