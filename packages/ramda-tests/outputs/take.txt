@@ -1,0 +1,54 @@
+
+
+  take
+    ✓ takes only the first `n` elements from a list
+    ✓ returns only as many as the array can provide
+    1) returns an equivalent list if `n` is < 0
+    ✓ never returns the input array
+    ✓ can operate on strings
+    2) handles zero correctly (#1224)
+    3) steps correct number of times
+    4) transducer called for every member of list if `n` is < 0
+
+
+  4 passing (40ms)
+  4 failing
+
+  1) take
+       returns an equivalent list if `n` is < 0:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '[1, 2]'
+- '[1, 2, 3]'
+        ^
+      + expected - actual
+
+      -[1, 2]
+      +[1, 2, 3]
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/take.js:19:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) take
+       handles zero correctly (#1224):
+     TypeError: R.into is not a function
+      at Context.into (test/take.js:39:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) take
+       steps correct number of times:
+     TypeError: R.into is not a function
+      at Context.into (test/take.js:44:7)
+      at processImmediate (internal/timers.js:439:21)
+
+  4) take
+       transducer called for every member of list if `n` is < 0:
+     TypeError: R.into is not a function
+      at Context.into (test/take.js:50:7)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

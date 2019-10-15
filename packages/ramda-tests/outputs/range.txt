@@ -1,0 +1,38 @@
+
+
+  range
+    ✓ returns list of numbers
+    1) returns the empty list if the first parameter is not larger than the second
+    2) returns an empty array if from > to
+    3) terminates given bad input
+
+
+  1 passing (32ms)
+  3 failing
+
+  1) range
+       returns the empty list if the first parameter is not larger than the second:
+     RangeError: Invalid array length
+      at Object.range (node_modules/rambda/dist/rambda.js:993:22)
+      at Context.range (test/range.js:15:10)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) range
+       returns an empty array if from > to:
+     RangeError: Invalid array length
+      at Object.range (node_modules/rambda/dist/rambda.js:993:22)
+      at Context.range (test/range.js:20:20)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) range
+       terminates given bad input:
+     RangeError: Invalid array length
+      at Object.range (node_modules/rambda/dist/rambda.js:993:22)
+      at range (test/range.js:28:22)
+      at getActual (assert.js:611:5)
+      at Function.throws (assert.js:729:24)
+      at Context.throws (test/range.js:27:12)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

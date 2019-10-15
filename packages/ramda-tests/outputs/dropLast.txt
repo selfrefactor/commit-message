@@ -1,0 +1,39 @@
+
+
+  dropLast
+    ✓ skips the last `n` elements from a list, returning the remainder
+    ✓ returns an empty array if `n` is too large
+    1) returns an equivalent list if `n` is <= 0
+    ✓ never returns the input array
+    ✓ can operate on strings
+    2) can act as a transducer
+
+
+  4 passing (31ms)
+  2 failing
+
+  1) dropLast
+       returns an equivalent list if `n` is <= 0:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '[]'
+- '[1, 2, 3]'
+      + expected - actual
+
+      -[]
+      +[1, 2, 3]
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/dropLast.js:17:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) dropLast
+       can act as a transducer:
+     TypeError: R.into is not a function
+      at Context.into (test/dropLast.js:35:24)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

@@ -1,0 +1,69 @@
+
+
+  isEmpty
+    1) returns false for null
+    2) returns false for undefined
+    ✓ returns true for empty string
+    ✓ returns true for empty array
+    ✓ returns true for empty typed array
+    ✓ returns true for empty object
+    ✓ returns true for empty arguments object
+    3) returns false for every other value
+
+
+  5 passing (32ms)
+  3 failing
+
+  1) isEmpty
+       returns false for null:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/isEmpty.js:8:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) isEmpty
+       returns false for undefined:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/isEmpty.js:12:5)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) isEmpty
+       returns false for every other value:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'true'
+- 'false'
+      + expected - actual
+
+      -true
+      +false
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/isEmpty.js:45:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

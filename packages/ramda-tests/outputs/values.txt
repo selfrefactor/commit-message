@@ -1,0 +1,21 @@
+
+
+  values
+    ✓ returns an array of the given object's values
+    ✓ does not include the given object's prototype properties
+    1) returns an empty object for primitives
+
+
+  2 passing (36ms)
+  1 failing
+
+  1) values
+       returns an empty object for primitives:
+     TypeError: Cannot convert undefined or null to object
+      at Function.values (<anonymous>)
+      at Object.values (node_modules/rambda/dist/rambda.js:1184:17)
+      at Context.values (test/values.js:33:10)
+      at processImmediate (internal/timers.js:439:21)
+
+
+
