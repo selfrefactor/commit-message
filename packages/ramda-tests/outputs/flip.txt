@@ -9,7 +9,7 @@
     4) inverts first two arguments
 
 
-  0 passing (68ms)
+  0 passing (57ms)
   4 failing
 
   1) flip
@@ -65,7 +65,7 @@
 
   4) flip properties
        inverts first two arguments:
-     Error: Failed after 1 tests and 6 shrinks. rngState: 00cdb9105284367fea; Counterexample: Function of arity3; []; null; {}; 
+     Error: Failed after 1 tests and 6 shrinks. rngState: 00653a894e1c20d7bf; Counterexample: Function of arity3; []; {}; 0; 
       at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:360:15
       at Object.map (node_modules/jsverify/lib/functor.js:35:12)
       at checkThrow (node_modules/jsverify/lib/jsverify.js:354:30)

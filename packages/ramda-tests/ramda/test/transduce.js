@@ -1,4 +1,4 @@
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 var eq = require('./shared/eq');
 
 describe('transduce', function() {

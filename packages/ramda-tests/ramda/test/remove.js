@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('remove', () => {
   it('splices out a sub-list of the given list', () => {

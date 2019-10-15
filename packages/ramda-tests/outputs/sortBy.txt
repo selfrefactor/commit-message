@@ -6,13 +6,13 @@
     1) sorts array-like object
 
 
-  2 passing (36ms)
+  2 passing (39ms)
   1 failing
 
   1) sortBy
        sorts array-like object:
      TypeError: list.concat is not a function
-      at Object.sortBy (node_modules/rambda/dist/rambda.js:1042:25)
+      at Object.sortBy (/home/s/repos/rambda/dist/rambda.js:1043:25)
       at Context.sortBy (test/sortBy.js:39:20)
       at processImmediate (internal/timers.js:439:21)
 

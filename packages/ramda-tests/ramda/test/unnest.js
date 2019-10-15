@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 var eq = require('./shared/eq');
 var Maybe = require('./shared/Maybe');
 

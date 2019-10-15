@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('assocPath', () => {
   it('makes a shallow clone of an object, overriding only what is necessary for the path', () => {

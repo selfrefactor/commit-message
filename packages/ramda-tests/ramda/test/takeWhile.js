@@ -1,7 +1,7 @@
 const assert = require('assert')
 
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('takeWhile', () => {
   it('continues taking elements while the function reports `true`', () => {

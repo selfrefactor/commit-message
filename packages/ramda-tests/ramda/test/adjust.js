@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('adjust', () => {
   it('applies the given function to the value at the given index of the supplied array', () => {

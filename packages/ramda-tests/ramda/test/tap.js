@@ -1,4 +1,4 @@
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 var eq = require('./shared/eq');
 var listXf = require('./helpers/listXf');
 var _curry2 = require('../source/internal/_curry2');

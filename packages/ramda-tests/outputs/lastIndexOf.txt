@@ -15,7 +15,7 @@
     ✓ does not find function, compared by identity
 
 
-  10 passing (40ms)
+  10 passing (44ms)
   2 failing
 
   1) lastIndexOf

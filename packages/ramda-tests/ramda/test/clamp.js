@@ -1,5 +1,5 @@
 var eq = require('./shared/eq');
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 
 describe('clamp', function() {
   it('clamps to the lower bound', function() {

@@ -6,7 +6,7 @@
     2) accepts fantasy-land functors
 
 
-  1 passing (37ms)
+  1 passing (40ms)
   2 failing
 
   1) complement

@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('uniq', () => {
   it('returns a set from any array (i.e. purges duplicate elements)', () => {

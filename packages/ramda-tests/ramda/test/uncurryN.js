@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('uncurryN', () => {
   function a2(a){

@@ -1,6 +1,6 @@
 const R = require('rambda')
 const { exec } = require('helpers')
-const { glue, mapAsync, take } = require('rambdax')
+const { glue, mapAsync } = require('rambdax')
 const { readFileSync, unlinkSync } = require('fs')
 
 const getOutputPath = x => `${ process.env.HOME }/repos/services/packages/ramda-tests/outputs/${ x }.txt`
@@ -29,6 +29,8 @@ const KNOWN_FAILING_TESTS = {
   adjust  : 1,
   allPass : 1,
   anyPass : 1,
+  both : 1,
+  complement : 1,
 }
 
 function getNumberFailing(testOutput){
@@ -63,6 +65,5 @@ void async function runTests(){
 
   await mapAsync(
     checkSingleMethod
-  // )(take(7, allMethods))
   )(allMethods)
 }()

@@ -9,7 +9,7 @@
     ✓ handles zero correctly (#1224)
 
 
-  5 passing (38ms)
+  5 passing (36ms)
   1 failing
 
   1) takeLast

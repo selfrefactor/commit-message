@@ -1,7 +1,7 @@
 const eq = require('./shared/eq')
 const funcN = require('./shared/funcN')
 const jsv = require('jsverify')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('curry', () => {
   it('curries a single value', () => {

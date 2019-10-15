@@ -2,7 +2,7 @@ const assert = require('assert')
 const sinon = require('sinon')
 
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('take', () => {
 

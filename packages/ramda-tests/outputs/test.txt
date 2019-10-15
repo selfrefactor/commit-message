@@ -7,7 +7,7 @@
     1) throws if first argument is not a regexp
 
 
-  3 passing (38ms)
+  3 passing (34ms)
   1 failing
 
   1) test

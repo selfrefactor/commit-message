@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('partialRight', () => {
   const disc = function(a, b, c){ // note disc(3, 7, 4) => 1

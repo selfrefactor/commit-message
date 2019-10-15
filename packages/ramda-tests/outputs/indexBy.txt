@@ -6,7 +6,7 @@
     1) can act as a transducer
 
 
-  2 passing (37ms)
+  2 passing (36ms)
   1 failing
 
   1) indexBy

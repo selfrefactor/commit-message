@@ -1,6 +1,6 @@
 /* global Map, Set, WeakMap, WeakSet */
 
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 var eq = require('./shared/eq');
 
 describe('equals', function() {

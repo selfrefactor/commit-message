@@ -31,7 +31,7 @@
   2) has
        returns false for non-objects:
      TypeError: Cannot read property 'a' of undefined
-      at Object.has (node_modules/rambda/dist/rambda.js:544:13)
+      at Object.has (/home/s/repos/rambda/dist/rambda.js:545:13)
       at Context.has (test/has.js:26:10)
       at processImmediate (internal/timers.js:439:21)
 

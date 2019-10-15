@@ -1,6 +1,6 @@
 var listXf = require('./helpers/listXf');
 
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 var assert = require('assert');
 var eq = require('./shared/eq');
 var Id = require('./shared/Id');

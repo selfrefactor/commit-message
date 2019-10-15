@@ -1,5 +1,8 @@
 const input = `
-eq(R.anyPass([])(3), false);
+const between = function(a, b, c){ return a < b && b < c }
+    const f = R.complement(between)
+    eq(f(4, 5, 11), false)
+    eq(f(12, 2, 6), true)
 `
 
 const { remove, match, drop, init } = require('rambdax')

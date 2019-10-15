@@ -1,7 +1,7 @@
 const eq = require('./shared/eq')
 const fs = require('fs')
 const path = require('path')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 function sourceMethods(dir){
   const isJsFile = function(file){ return file.match(/\.js$/) }

@@ -6,7 +6,7 @@
     2) returns false if called with a null or undefined object
 
 
-  1 passing (37ms)
+  1 passing (36ms)
   2 failing
 
   1) propEq
@@ -29,7 +29,7 @@
   2) propEq
        returns false if called with a null or undefined object:
      TypeError: Cannot read property 'name' of null
-      at Object.propEq (node_modules/rambda/dist/rambda.js:974:13)
+      at Object.propEq (/home/s/repos/rambda/dist/rambda.js:975:13)
       at Context.propEq (test/propEq.js:28:10)
       at processImmediate (internal/timers.js:439:21)
 

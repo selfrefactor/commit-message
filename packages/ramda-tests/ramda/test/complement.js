@@ -1,7 +1,7 @@
 const S = require('sanctuary')
 
 const eq = require('./shared/eq')
-const R = require('rambda')
+const R = require('../../../../../rambda/dist/rambda')
 
 describe('complement', () => {
   it('creates boolean-returning function that reverses another', () => {

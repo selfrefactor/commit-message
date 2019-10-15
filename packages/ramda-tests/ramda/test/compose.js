@@ -1,7 +1,7 @@
 var assert = require('assert');
 var jsv = require('jsverify');
 
-var R = require('rambda')
+var R = require('../../../../../rambda/dist/rambda')
 var eq = require('./shared/eq');
 
 

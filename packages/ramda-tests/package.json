@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "on": "node src/findFailingTests.js",
-    "test":"cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/anyPass.js"
+    "test":"cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/adjust.js"
   },
   "commitMessage": {
     "workInProgress": ""

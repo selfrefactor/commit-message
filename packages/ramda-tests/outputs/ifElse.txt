@@ -10,7 +10,7 @@
     4) returns a curried function
 
 
-  3 passing (47ms)
+  3 passing (44ms)
   4 failing
 
   1) ifElse
@@ -28,7 +28,7 @@
       
       at strictEqual (test/shared/eq.js:8:10)
       at eq (test/ifElse.js:30:7)
-      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/rambda/dist/rambda.js:581:14
+      at /home/s/repos/rambda/dist/rambda.js:582:14
       at Context.<anonymous> (test/ifElse.js:32:5)
       at processImmediate (internal/timers.js:439:21)
 
@@ -47,7 +47,7 @@
       
       at strictEqual (test/shared/eq.js:8:10)
       at eq (test/ifElse.js:39:7)
-      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/rambda/dist/rambda.js:584:12
+      at /home/s/repos/rambda/dist/rambda.js:585:12
       at Context.<anonymous> (test/ifElse.js:41:5)
       at processImmediate (internal/timers.js:439:21)
 
@@ -70,7 +70,7 @@
   4) ifElse
        returns a curried function:
      TypeError: condition is not a function
-      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/rambda/dist/rambda.js:578:74
+      at /home/s/repos/rambda/dist/rambda.js:579:74
       at Context.fn (test/ifElse.js:64:8)
       at processImmediate (internal/timers.js:439:21)
 
