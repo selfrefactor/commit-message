@@ -32,6 +32,7 @@ const KNOWN_FAILING_TESTS = {
   both : 1,
   complement : 1,
   compose : 3,
+  concat : 1,
 }
 
 function getNumberFailing(testOutput){

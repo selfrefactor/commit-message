@@ -1,8 +1,6 @@
 const input = `
-var f = function(a, b, c) { return [a, b, c]; };
-    var g = R.compose(f);
-    eq(g.length, 3);
-    eq(g(1, 2, 3), [1, 2, 3]);
+eq(R.concat(z1, z2), 'z1 z2');
+
 `
 
 const { remove, match, drop, init } = require('rambdax')

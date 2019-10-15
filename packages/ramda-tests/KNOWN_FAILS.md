@@ -7,3 +7,5 @@ both/complement - accepts fantasy-land applicative functors
 compose - passes context to functions
 
 > composed functions have no length
+
+- concat - pass to concat method if present
