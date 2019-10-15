@@ -31,6 +31,7 @@ const KNOWN_FAILING_TESTS = {
   anyPass : 1,
   both : 1,
   complement : 1,
+  compose : 3,
 }
 
 function getNumberFailing(testOutput){

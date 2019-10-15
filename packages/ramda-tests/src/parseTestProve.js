@@ -1,8 +1,8 @@
 const input = `
-const between = function(a, b, c){ return a < b && b < c }
-    const f = R.complement(between)
-    eq(f(4, 5, 11), false)
-    eq(f(12, 2, 6), true)
+var f = function(a, b, c) { return [a, b, c]; };
+    var g = R.compose(f);
+    eq(g.length, 3);
+    eq(g(1, 2, 3), [1, 2, 3]);
 `
 
 const { remove, match, drop, init } = require('rambdax')
