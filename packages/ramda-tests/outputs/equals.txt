@@ -31,7 +31,7 @@
     ✓ is commutative
 
 
-  14 passing (123ms)
+  14 passing (126ms)
   14 failing
 
   1) equals

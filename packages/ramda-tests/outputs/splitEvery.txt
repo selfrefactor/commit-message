@@ -5,7 +5,7 @@
     1) throws if first argument is not positive
 
 
-  1 passing (34ms)
+  1 passing (37ms)
   1 failing
 
   1) splitEvery

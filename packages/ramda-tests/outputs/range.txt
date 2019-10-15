@@ -7,7 +7,7 @@
     3) terminates given bad input
 
 
-  1 passing (32ms)
+  1 passing (37ms)
   3 failing
 
   1) range

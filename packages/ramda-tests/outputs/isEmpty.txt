@@ -11,7 +11,7 @@
     3) returns false for every other value
 
 
-  5 passing (32ms)
+  5 passing (41ms)
   3 failing
 
   1) isEmpty

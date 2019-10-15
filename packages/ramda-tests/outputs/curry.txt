@@ -11,11 +11,11 @@
     ✓ forwards extra arguments
 
   curry properties
-    ✓ curries multiple values (54ms)
+    ✓ curries multiple values (53ms)
     5) curries with placeholder
 
 
-  5 passing (105ms)
+  5 passing (127ms)
   5 failing
 
   1) curry
@@ -64,9 +64,51 @@
 
   5) curry properties
        curries with placeholder:
-     TypeError: Failed after 1 tests and 5 shrinks. rngState: 0ea56b1d0e87394f2c; Counterexample: Function of arity3; 0; []; 0; Exception: g(...) is not a function
+     TypeError: Failed after 1 tests and 11 shrinks. rngState: 8d954e2b03fc18d67a; Counterexample: Function of arity3; {}; {}; []; Exception: g(...) is not a function
       at /home/s/repos/services/packages/ramda-tests/ramda/test/curry.js:150:7
       at Object.bind (node_modules/jsverify/lib/functor.js:48:11)
+      at test (node_modules/jsverify/lib/jsverify.js:212:20)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
+      at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)
+      at Object.fold (node_modules/lazy-seq/index.js:440:17)
+      at shrinkResult (node_modules/jsverify/lib/jsverify.js:150:25)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:233:16
+      at Object.bind (node_modules/jsverify/lib/functor.js:63:12)
+      at test (node_modules/jsverify/lib/jsverify.js:212:20)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
+      at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)
+      at Object.fold (node_modules/lazy-seq/index.js:440:17)
+      at shrinkResult (node_modules/jsverify/lib/jsverify.js:150:25)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:233:16
+      at Object.bind (node_modules/jsverify/lib/functor.js:63:12)
+      at test (node_modules/jsverify/lib/jsverify.js:212:20)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
+      at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)
+      at Object.fold (node_modules/lazy-seq/index.js:440:17)
+      at shrinkResult (node_modules/jsverify/lib/jsverify.js:150:25)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:233:16
+      at Object.bind (node_modules/jsverify/lib/functor.js:63:12)
+      at test (node_modules/jsverify/lib/jsverify.js:212:20)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
+      at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)
+      at Object.fold (node_modules/lazy-seq/index.js:440:17)
+      at shrinkResult (node_modules/jsverify/lib/jsverify.js:150:25)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:233:16
+      at Object.bind (node_modules/jsverify/lib/functor.js:63:12)
+      at test (node_modules/jsverify/lib/jsverify.js:212:20)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
+      at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)
+      at Object.fold (node_modules/lazy-seq/index.js:440:17)
+      at shrinkResult (node_modules/jsverify/lib/jsverify.js:150:25)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:233:16
+      at Object.bind (node_modules/jsverify/lib/functor.js:63:12)
+      at test (node_modules/jsverify/lib/jsverify.js:212:20)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
+      at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)
+      at Object.fold (node_modules/lazy-seq/index.js:440:17)
+      at shrinkResult (node_modules/jsverify/lib/jsverify.js:150:25)
+      at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:233:16
+      at Object.bind (node_modules/jsverify/lib/functor.js:63:12)
       at test (node_modules/jsverify/lib/jsverify.js:212:20)
       at /home/s/repos/services/packages/ramda-tests/ramda/node_modules/jsverify/lib/jsverify.js:151:13
       at Cons.consFold [as fold] (node_modules/lazy-seq/index.js:225:10)

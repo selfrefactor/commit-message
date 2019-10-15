@@ -8,7 +8,7 @@
     1) dispatches to passed-in non-Array object with a `filter` method
 
 
-  4 passing (31ms)
+  4 passing (40ms)
   1 failing
 
   1) filter

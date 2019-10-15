@@ -8,7 +8,7 @@
     2) short circuits with reduced
 
 
-  3 passing (36ms)
+  3 passing (38ms)
   2 failing
 
   1) reduce

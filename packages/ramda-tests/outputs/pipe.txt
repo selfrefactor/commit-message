@@ -8,7 +8,7 @@
     4) can be applied to one argument
 
 
-  1 passing (34ms)
+  1 passing (38ms)
   4 failing
 
   1) pipe

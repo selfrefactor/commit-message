@@ -10,7 +10,7 @@
     4) returns a curried function
 
 
-  3 passing (35ms)
+  3 passing (47ms)
   4 failing
 
   1) ifElse

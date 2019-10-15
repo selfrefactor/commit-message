@@ -9,7 +9,7 @@
     1) accepts an array-like object
 
 
-  5 passing (35ms)
+  5 passing (36ms)
   1 failing
 
   1) update

@@ -11,7 +11,7 @@
     4) should return false when an array does not start with the provided values
 
 
-  4 passing (34ms)
+  4 passing (35ms)
   4 failing
 
   1) startsWith

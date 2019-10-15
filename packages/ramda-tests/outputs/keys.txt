@@ -7,7 +7,7 @@
     ✓ does not include the given object's prototype properties
 
 
-  3 passing (31ms)
+  3 passing (38ms)
   1 failing
 
   1) keys

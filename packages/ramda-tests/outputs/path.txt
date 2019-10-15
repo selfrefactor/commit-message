@@ -9,7 +9,7 @@
     ✓ works with falsy items
 
 
-  5 passing (37ms)
+  5 passing (44ms)
   1 failing
 
   1) path

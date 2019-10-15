@@ -6,7 +6,7 @@
     1) sorts array-like object
 
 
-  2 passing (34ms)
+  2 passing (36ms)
   1 failing
 
   1) sortBy

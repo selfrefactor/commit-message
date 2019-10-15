@@ -6,7 +6,7 @@
     1) returns an empty object for primitives
 
 
-  2 passing (36ms)
+  2 passing (37ms)
   1 failing
 
   1) values

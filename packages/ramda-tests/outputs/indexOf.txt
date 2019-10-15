@@ -16,7 +16,7 @@
     ✓ does not find function, compared by identity
 
 
-  11 passing (35ms)
+  11 passing (40ms)
   2 failing
 
   1) indexOf

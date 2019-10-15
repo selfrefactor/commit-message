@@ -12,7 +12,7 @@
     ✓ "Undefined" if given the undefined value
 
 
-  7 passing (35ms)
+  7 passing (38ms)
   2 failing
 
   1) type

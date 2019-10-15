@@ -9,7 +9,7 @@
     ✓ uses reference equality for functions
 
 
-  5 passing (37ms)
+  5 passing (38ms)
   1 failing
 
   1) uniq

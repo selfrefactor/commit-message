@@ -8,7 +8,7 @@
     ✓ throws if not an array, String, or object with a concat method
 
 
-  4 passing (27ms)
+  4 passing (36ms)
   1 failing
 
   1) concat
