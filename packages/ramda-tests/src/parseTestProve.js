@@ -1,7 +1,9 @@
 const input = `
-eq(R.concat(z1, z2), 'z1 z2');
-
+eq(R.drop(0, [1, 2, 3]), [1, 2, 3]);
+    eq(R.drop(-1, [1, 2, 3]), [1, 2, 3]);
+    eq(R.drop(-Infinity, [1, 2, 3]), [1, 2, 3]);
 `
+
 
 const { remove, match, drop, init } = require('rambdax')
 const { writeSync } = require('clipboardy')
