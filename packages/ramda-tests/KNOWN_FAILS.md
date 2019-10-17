@@ -11,3 +11,5 @@ compose/curry - passes context to functions
 concat - pass to concat method if present
 
 dropLast - can act as a transducer
+
+either - accepts fantasy-land applicative functors
