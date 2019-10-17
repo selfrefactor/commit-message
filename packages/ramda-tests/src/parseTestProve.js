@@ -1,7 +1,8 @@
 const input = `
-eq(R.drop(0, [1, 2, 3]), [1, 2, 3]);
-    eq(R.drop(-1, [1, 2, 3]), [1, 2, 3]);
-    eq(R.drop(-Infinity, [1, 2, 3]), [1, 2, 3]);
+var xs = [1, 2, 3];
+
+    assert.notStrictEqual(R.drop(0, xs), xs);
+    assert.notStrictEqual(R.drop(-1, xs), xs);
 `
 
 

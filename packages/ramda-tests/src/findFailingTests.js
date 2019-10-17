@@ -34,6 +34,7 @@ const KNOWN_FAILING_TESTS = {
   compose : 3,
   concat : 1,
   curry : 5,
+  dropLast : 1,
 }
 
 function getNumberFailing(testOutput){

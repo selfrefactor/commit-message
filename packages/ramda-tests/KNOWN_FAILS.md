@@ -8,4 +8,6 @@ compose/curry - passes context to functions
 
 > composed functions have no length
 
-- concat - pass to concat method if present
+concat - pass to concat method if present
+
+dropLast - can act as a transducer
