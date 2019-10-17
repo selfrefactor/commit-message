@@ -4,6 +4,8 @@ allPass/anyPass - returns a curried function whose arity matches that of the hig
 
 both/complement - accepts fantasy-land applicative functors
 
+clone - Rambda work only with objects and arrays
+
 compose/curry - passes context to functions
 
 > composed functions have no length
@@ -13,3 +15,5 @@ concat - pass to concat method if present
 dropLast - can act as a transducer
 
 either - accepts fantasy-land applicative functors
+
+endsWith - all array tests

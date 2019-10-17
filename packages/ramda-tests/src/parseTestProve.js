@@ -1,10 +1,6 @@
 const input = `
-var xs = [1, 2, 3];
-
-    assert.notStrictEqual(R.drop(0, xs), xs);
-    assert.notStrictEqual(R.drop(-1, xs), xs);
+eq(R.endsWith(['c'], ['a', 'b', 'c']), true); 
 `
-
 
 const { remove, match, drop, init } = require('rambdax')
 const { writeSync } = require('clipboardy')

@@ -26,16 +26,18 @@ const getCommand = x => {
 }
 
 const KNOWN_FAILING_TESTS = {
-  adjust  : 1,
-  allPass : 1,
-  anyPass : 1,
-  both : 1,
+  adjust     : 1,
+  allPass    : 1,
+  anyPass    : 1,
+  both       : 1,
   complement : 1,
-  compose : 3,
-  concat : 1,
-  curry : 5,
-  dropLast : 1,
-  either : 1,
+  compose    : 3,
+  concat     : 1,
+  curry      : 5,
+  dropLast   : 1,
+  either     : 1,
+  endsWith   : 4,
+  clone      : 9,
 }
 
 function getNumberFailing(testOutput){
@@ -50,7 +52,7 @@ async function checkSingleMethod(method){
   const { command, outputPath } = getCommand(method)
 
   await exec({
-    cwd : `${process.env.HOME}/repos/services/packages/ramda-tests/ramda`,
+    cwd : `${ process.env.HOME }/repos/services/packages/ramda-tests/ramda`,
     command,
   })
   const testOutput = readFileSync(outputPath).toString()
@@ -59,9 +61,9 @@ async function checkSingleMethod(method){
   const numberFailing = getNumberFailing(testOutput)
 
   if (!KNOWN_FAILING_TESTS[ method ] || numberFailing > KNOWN_FAILING_TESTS[ method ]){
-    throw new Error(`${method} has ${numberFailing} tests`)
-  } 
-  
+    throw new Error(`${ method } has ${ numberFailing } tests`)
+  }
+
   unlinkSync(outputPath)
 }
 
