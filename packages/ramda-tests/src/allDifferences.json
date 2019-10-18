@@ -1,0 +1,58 @@
+{
+  "adjust": {
+    "count": 1,
+    "reason": "accepts an array-like object"
+  },
+  "allPass": {
+    "count": 1,
+    "reason": "returns a curried function whose arity matches that of the highest-arity predicate"
+  },
+  "anyPass": {
+    "count": 1,
+    "reason": "returns a curried function whose arity matches that of the highest-arity predicate"
+  },
+  "both": {
+    "count": 1,
+    "reason": "accepts fantasy-land applicative functors"
+  },
+  "either": {
+    "count": 1,
+    "reason": "accepts fantasy-land applicative functors"
+  },
+  "complement": {
+    "count": 1,
+    "reason": "accepts fantasy-land applicative functors"
+  },
+  "difference": {
+    "count": 1,
+    "reason": "Negative zero"
+  },
+  "compose": {
+    "count": 3,
+    "reasons": "passes context to functions|composed functions have no length"
+  },
+  "curry": {
+    "count": 5,
+    "reason": "passes context to functions"
+  },
+  "concat": {
+    "count": 1,
+    "reason": "pass to concat method if present"
+  },
+  "dropLast": {
+    "count": 5,
+    "reason": "can act as a transducer"
+  },
+  "clone": {
+    "count": 9,
+    "reason": "Rambda work only with objects and arrays"
+  },
+  "endsWith": {
+    "count": 4,
+    "reason": "Rambda doesn't support arrays"
+  },
+  "startsWith": {
+    "count": 1,
+    "reason": "Rambda doesn't support arrays"
+  }
+}

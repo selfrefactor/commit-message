@@ -1,5 +1,5 @@
 const input = `
-eq(R.endsWith(['c'], ['a', 'b', 'c']), true); 
+eq(R.difference([0], [-0]).length, 1);
 `
 
 const { remove, match, drop, init } = require('rambdax')
