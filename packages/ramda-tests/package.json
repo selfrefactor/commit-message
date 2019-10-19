@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "on": "node src/findFailingTests.js",
-    "test":"cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/clone.js"
+    "test": "cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/clone.js"
   },
   "commitMessage": {
     "workInProgress": ""
@@ -13,6 +13,7 @@
   "dependencies": {
     "clipboardy": "^2.1.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
-    "rambdax": "^2.14.1"
+    "rambdax": "^2.14.1",
+    "string-fn": "^2.10.2"
   }
 }

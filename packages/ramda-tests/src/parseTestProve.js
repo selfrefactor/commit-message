@@ -1,5 +1,8 @@
 const input = `
-eq(R.difference([0], [-0]).length, 1);
+eq(R.equals(new Error('XXX'), new Error('XXX')), true);
+    eq(R.equals(new Error('XXX'), new Error('YYY')), false);
+    eq(R.equals(new Error('XXX'), new TypeError('XXX')), false);
+    eq(R.equals(new Error('XXX'), new TypeError('YYY')), false);
 `
 
 const { remove, match, drop, init } = require('rambdax')

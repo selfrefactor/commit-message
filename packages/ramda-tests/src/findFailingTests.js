@@ -1,8 +1,8 @@
+const allDifferences = require('./allDifferences.json')
 const R = require('rambda')
 const { exec } = require('helpers')
 const { glue, mapAsync, map } = require('rambdax')
 const { readFileSync, unlinkSync } = require('fs')
-const allDifferences = require('./allDifferences.json')
 
 const getOutputPath = x => `${ process.env.HOME }/repos/services/packages/ramda-tests/outputs/${ x }.txt`
 
@@ -26,8 +26,8 @@ const getCommand = x => {
   }
 }
 
-const KNOWN_FAILING_TESTS = map(({count}) => count)(allDifferences)
-console.log({KNOWN_FAILING_TESTS})
+const KNOWN_FAILING_TESTS = map(({ count }) => count)(allDifferences)
+
 function getNumberFailing(testOutput){
   const [ line ] = testOutput.split('\n').filter(x => x.includes('failing'))
   const [ numberFailing ] = line.split('failing')
