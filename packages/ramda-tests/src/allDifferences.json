@@ -71,6 +71,10 @@
     "count": 1,
     "reason": "dispatches on transformer objects in list position"
   },
+  "has": {
+    "count": 1,
+    "reason": "Rambda does check properties from the prototype chain"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"

@@ -1,8 +1,9 @@
 const input = `
-eq(R.equals(new Date(0), new Date(0)), true);
-    eq(R.equals(new Date(1), new Date(1)), true);
-    eq(R.equals(new Date(0), new Date(1)), false);
-    eq(R.equals(new Date(1), new Date(0)), false);
+eq(R.has('a', undefined), false);
+    eq(R.has('a', null), false);
+    eq(R.has('a', true), false);
+    eq(R.has('a', ''), false);
+    eq(R.has('a', /a/), false);
 `
 
 const { remove, match, drop, init } = require('rambdax')
