@@ -51,6 +51,14 @@
     "count": 4,
     "reason": "Rambda doesn't support arrays"
   },
+  "equals": {
+    "count": 14,
+    "reason": "Rambda doesn't support regex, recursive data structures, objects with same enumerable properties, map/weakmap type of variables, dispatches to `equals` method recursively"
+  },
+  "filter": {
+    "count": 1,
+    "reason": "dispatches to `filter` method of object"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
