@@ -83,6 +83,10 @@
     "count": 1,
     "reason": "pass to equals method if available"
   },
+  "indexBy": {
+    "count": 1,
+    "reason": "can act as a transducer"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
