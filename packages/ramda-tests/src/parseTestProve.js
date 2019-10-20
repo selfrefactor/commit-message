@@ -1,9 +1,14 @@
 const input = `
-eq(R.has('a', undefined), false);
-    eq(R.has('a', null), false);
-    eq(R.has('a', true), false);
-    eq(R.has('a', ''), false);
-    eq(R.has('a', /a/), false);
+const v = function(a){ return typeof a === 'number' }
+    const ifIsNumber = R.ifElse(v)
+    eq(ifIsNumber(t, identity)(15), 16)
+    eq(ifIsNumber(t, identity)('hello'), 'hello')
+
+    const fn = R.ifElse(R.gt, R.subtract, R.add)
+    eq(fn(2)(7), 9)
+    eq(fn(2, 7), 9)
+    eq(fn(7)(2), 5)
+    eq(fn(7, 2), 5)
 `
 
 const { remove, match, drop, init } = require('rambdax')

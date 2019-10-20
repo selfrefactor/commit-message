@@ -75,6 +75,14 @@
     "count": 1,
     "reason": "Rambda does check properties from the prototype chain"
   },
+  "ifElse": {
+    "count": 2,
+    "reason": "returns a curried function"
+  },
+  "includes": {
+    "count": 1,
+    "reason": "pass to equals method if available"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
