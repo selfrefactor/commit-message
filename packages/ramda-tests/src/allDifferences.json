@@ -87,6 +87,10 @@
     "count": 1,
     "reason": "can act as a transducer"
   },
+  "indexOf": {
+    "count": 2,
+    "reason": "dispatches to `indexOf` method"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
