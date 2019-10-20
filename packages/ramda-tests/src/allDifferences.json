@@ -103,6 +103,10 @@
     "count": 1,
     "reason": "works for primitives"
   },
+  "path": {
+    "count": 1,
+    "reason": "takes a path that contains negative indices into arrays"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
