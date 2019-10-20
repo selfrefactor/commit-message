@@ -59,6 +59,18 @@
     "count": 1,
     "reason": "dispatches to `filter` method of object"
   },
+  "flip": {
+    "count": 4,
+    "reason": "Rambda flip work for functions with two arguments"
+  },
+  "forEach": {
+    "count": 1,
+    "reason": "dispatches to `forEach` method"
+  },
+  "groupBy": {
+    "count": 1,
+    "reason": "dispatches on transformer objects in list position"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
