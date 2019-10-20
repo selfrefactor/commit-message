@@ -91,6 +91,18 @@
     "count": 2,
     "reason": "dispatches to `indexOf` method"
   },
+  "lastIndexOf": {
+    "count": 3,
+    "reason": "dispatches to `lastIndexOf` method"
+  },
+  "length": {
+    "count": 1,
+    "reason": "object with `length` method"
+  },
+  "keys": {
+    "count": 1,
+    "reason": "works for primitives"
+  },
   "startsWith": {
     "count": 1,
     "reason": "Rambda doesn't support arrays"
