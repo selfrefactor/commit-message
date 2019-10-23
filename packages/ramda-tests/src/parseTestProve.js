@@ -1,6 +1,13 @@
 const input = `
-eq(R.path(['x', -2], {x: ['a', 'b', 'c', 'd']}), 'c');
-    eq(R.path([-1, 'y'], [{x: 1, y: 99}, {x: 2, y: 98}, {x: 3, y: 97}]), 97);
+eq(R.values(null), []);
+eq(R.values(undefined), []);
+eq(R.values(55), []);
+eq(R.values('foo'), []);
+eq(R.values(true), []);
+eq(R.values(false), []);
+eq(R.values(NaN), []);
+eq(R.values(Infinity), []);
+eq(R.values([]), []);
 `
 
 const { remove, match, drop, init } = require('rambdax')
