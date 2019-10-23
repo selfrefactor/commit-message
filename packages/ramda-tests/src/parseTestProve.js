@@ -1,13 +1,5 @@
 const input = `
-eq(R.values(null), []);
-eq(R.values(undefined), []);
-eq(R.values(55), []);
-eq(R.values('foo'), []);
-eq(R.values(true), []);
-eq(R.values(false), []);
-eq(R.values(NaN), []);
-eq(R.values(Infinity), []);
-eq(R.values([]), []);
+eq(R.type('Gooooodd Mornning Ramda!!'), 'String')
 `
 
 const { remove, match, drop, init } = require('rambdax')

@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "type": {
+    "count": 1,
+    "reason": "Ramda returns 'Number' type to NaN input"
+  },
   "uniq": {
     "count": 2,
     "reason": "pass to `uniq` method|uses reference equality for functions"
