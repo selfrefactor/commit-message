@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "update": {
+    "count": 1,
+    "reason": "accepts an array-like object"
+  },
   "without": {
     "count": 2,
     "reason": "act as a transducer|pass to equals method"
