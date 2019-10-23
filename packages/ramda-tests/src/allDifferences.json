@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "uniq": {
+    "count": 2,
+    "reason": "pass to `uniq` method|uses reference equality for functions"
+  },
   "update": {
     "count": 1,
     "reason": "accepts an array-like object"
