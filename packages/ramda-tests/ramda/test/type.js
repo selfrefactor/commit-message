@@ -24,13 +24,12 @@ describe('type', () => {
     eq(R.type(4), 'Number')
   })
 
-  it.skip('"Number" if given the NaN value', () => {
+  it('"Number" if given the NaN value', () => {
     eq(R.type(NaN), 'Number')
   })
 
   it('"String" if given a String literal', () => {
-    console.log(R.type('Gooooodd Mornning Ramda!!'))
-    // eq(R.type('Gooooodd Mornning Ramda!!'), 'String')
+    eq(R.type('Gooooodd Mornning Ramda!!'), 'String')
   })
 
   it('"String" if given a String object', () => {
