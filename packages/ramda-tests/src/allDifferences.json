@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "trim": {
+    "count": 1,
+    "reason":"trims all ES5 whitespace"
+  },
   "type": {
     "count": 1,
     "reason": "Ramda returns 'Number' type to NaN input"
