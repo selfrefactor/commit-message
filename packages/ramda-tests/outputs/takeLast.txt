@@ -1,0 +1,33 @@
+
+
+  takeLast
+    ✓ takes only the last `n` elements from a list
+    ✓ returns only as many as the array can provide
+    1) returns an equivalent list if `n` is < 0
+    ✓ never returns the input array
+    ✓ can operate on strings
+    ✓ handles zero correctly (#1224)
+
+
+  5 passing (52ms)
+  1 failing
+
+  1) takeLast
+       returns an equivalent list if `n` is < 0:
+
+      AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '[]'
+- '[1, 2, 3]'
+      + expected - actual
+
+      -[]
+      +[1, 2, 3]
+      
+      at strictEqual (test/shared/eq.js:8:10)
+      at Context.eq (test/takeLast.js:19:5)
+      at processImmediate (internal/timers.js:439:21)
+
+
+

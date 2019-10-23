@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "tap": {
+    "count": 2,
+    "reason":"can act as a transducer"
+  },
   "trim": {
     "count": 1,
     "reason":"trims all ES5 whitespace"

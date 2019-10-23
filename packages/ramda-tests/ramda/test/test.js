@@ -1,36 +1,33 @@
-var assert = require('assert');
+const assert = require('assert')
 
-var R = require('../../../../../rambda/dist/rambda')
-var eq = require('./shared/eq');
+const eq = require('./shared/eq')
+const R = require('../../../../../rambda/dist/rambda')
 
+describe('test', () => {
 
-describe('test', function() {
+  it('returns true if string matches pattern', () => {
+    eq(R.test(/^x/, 'xyz'), true)
+  })
 
-  it('returns true if string matches pattern', function() {
-    eq(R.test(/^x/, 'xyz'), true);
-  });
+  it('returns false if string does not match pattern', () => {
+    eq(R.test(/^y/, 'xyz'), false)
+  })
 
-  it('returns false if string does not match pattern', function() {
-    eq(R.test(/^y/, 'xyz'), false);
-  });
+  it('is referentially transparent', () => {
+    const pattern = /x/g
+    eq(pattern.lastIndex, 0)
+    eq(R.test(pattern, 'xyz'), true)
+    eq(pattern.lastIndex, 0)
+    eq(R.test(pattern, 'xyz'), true)
+  })
 
-  it('is referentially transparent', function() {
-    var pattern = /x/g;
-    eq(pattern.lastIndex, 0);
-    eq(R.test(pattern, 'xyz'), true);
-    eq(pattern.lastIndex, 0);
-    eq(R.test(pattern, 'xyz'), true);
-  });
-
-  it('throws if first argument is not a regexp', function() {
+  it('throws if first argument is not a regexp', () => {
     assert.throws(
-      function() { R.test('foo', 'bar'); },
-      function(err) {
-        return err.constructor === TypeError &&
+      () => { R.test('foo', 'bar') },
+      err => err.constructor === TypeError &&
                err.message === '‘test’ requires a value of type RegExp ' +
-                               'as its first argument; received "foo"';
-      }
-    );
-  });
+                               'as its first argument; received "foo"'
+    )
+  })
 
-});
+})
