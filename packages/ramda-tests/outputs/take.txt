@@ -1,5 +1,3 @@
-
-
   take
     ✓ takes only the first `n` elements from a list
     ✓ returns only as many as the array can provide

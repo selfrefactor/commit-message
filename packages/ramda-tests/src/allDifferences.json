@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "take": {
+    "count": 3,
+    "reason":"R.into is not a function"
+  },
   "tap": {
     "count": 2,
     "reason":"can act as a transducer"
