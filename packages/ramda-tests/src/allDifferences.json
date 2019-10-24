@@ -136,7 +136,7 @@
     "reason": "act as a transducer|pass to equals method"
   },
   "startsWith": {
-    "count": 1,
+    "count": 4,
     "reason": "Rambda doesn't support arrays"
   }
 }
