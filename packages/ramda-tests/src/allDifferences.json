@@ -107,6 +107,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "sortBy": {
+    "count": 1,
+    "reason":"with array-like objects"
+  },
   "take": {
     "count": 3,
     "reason":"R.into is not a function"
