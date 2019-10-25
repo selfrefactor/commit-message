@@ -115,6 +115,10 @@
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
   },
+  "propEq": {
+    "count": 1,
+    "reason": "pass to `equals` method if available"
+  },
   "sortBy": {
     "count": 1,
     "reason":"with array-like objects"

@@ -1,7 +1,6 @@
 const input = `
-var addWithMaxOf10 = function(acc, val) {return acc + val > 10 ? R.reduced(acc) : acc + val;};
-    eq(R.reduce(addWithMaxOf10, 0, [1, 2, 3, 4]), 10);
-    eq(R.reduce(addWithMaxOf10, 0, [2, 4, 6, 8]), 6);
+eq(R.propEq('name', 'Abby', null), false);
+    eq(R.propEq('name', 'Abby', undefined), false); 
 `
 
 const { remove, match, drop, init } = require('rambdax')
