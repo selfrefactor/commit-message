@@ -1,5 +1,7 @@
 const input = `
-eq(R.type('Gooooodd Mornning Ramda!!'), 'String')
+var addWithMaxOf10 = function(acc, val) {return acc + val > 10 ? R.reduced(acc) : acc + val;};
+    eq(R.reduce(addWithMaxOf10, 0, [1, 2, 3, 4]), 10);
+    eq(R.reduce(addWithMaxOf10, 0, [2, 4, 6, 8]), 6);
 `
 
 const { remove, match, drop, init } = require('rambdax')

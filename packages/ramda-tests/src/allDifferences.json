@@ -87,6 +87,14 @@
     "count": 1,
     "reason": "can act as a transducer"
   },
+  "reduce": {
+    "count": 2,
+    "reason": "Rambda does have `reduced` method|pass to `reduce` method"
+  },
+  "reject": {
+    "count": 1,
+    "reason": "dispatches to `filter` method"
+  },
   "indexOf": {
     "count": 2,
     "reason": "dispatches to `indexOf` method"

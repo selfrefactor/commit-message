@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "clipboardy": "^2.1.0",
-    "helpers": "https://github.com/selfrefactor/helpers#1.7.1",
+    "helpers": "https://github.com/selfrefactor/helpers#1.8.1",
     "rambdax": "^2.14.1",
     "string-fn": "^2.10.2"
   }
