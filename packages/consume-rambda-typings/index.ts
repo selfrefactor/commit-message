@@ -13,6 +13,14 @@ function fn(input: Input){
   return input.c ? input.a: input.b
 }
 
+interface Foo {
+  [key: string]: string[]
+}
+
+const foo: Foo = {
+  bar: ['1', '2', '3'],
+}
+
 // const curried = partialCurry<Input, PartialInput, string|number>(fn, {a:1, b:'foo'});  
 // curried // $ExpectType (input: Pick<Input, "c">) => string | number
 
