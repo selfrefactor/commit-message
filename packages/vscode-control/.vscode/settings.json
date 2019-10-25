@@ -22,7 +22,7 @@
   "javascript.format.enable": false,
   "typescript.format.enable": false,
   "editor.gotoLocation.multiple":"goto",
-  "editor.suggest.showIcons":false,
+  "editor.suggest.showIcons":true,
   "editor.suggest.filteredTypes":{ "keyword": false },
   "editor.suggest.maxVisibleSuggestions":11,
   "editor.codeActionsOnSave": {
@@ -126,7 +126,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.iconTheme": "vscode-icon-theme",
+  "workbench.iconTheme": "helium-icon-theme",
   "workbench.colorTheme": "CircusBrother",
   "typescript.surveys.enabled": false,
   "search.useGlobalIgnoreFiles": true,
