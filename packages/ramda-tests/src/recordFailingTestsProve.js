@@ -2,6 +2,7 @@ const R = require('rambda')
 const { findFailingTests } = require('./findFailingTests.js')
 const { getIndent, indent } = require('string-fn')
 const { readFileSync, writeFileSync, existsSync } = require('fs')
+const { emptyDirSync,copySync } = require('fs-extra')
 const { remove, replace, take } = require('rambdax')
 const { resolve } = require('path')
 const BASE = resolve(__dirname, '../')
@@ -80,8 +81,10 @@ function withSingleMethod(method){
 }
  
 async function recordFailingTests(){
+  const dir = `${ __dirname }/failing_tests`
+  emptyDirSync(dir)
   // await findFailingTests(true)
-
+ 
   const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
   // const allMethods = take(9,Object.keys(R).filter(x => x !== 'partialCurry'))
   // const allMethods = [ 'adjust' ]
@@ -97,8 +100,14 @@ async function recordFailingTests(){
     summary += toAdd
   })
   writeFileSync(
-    `${ __dirname }/failing_tests/_SUMMARY.md`,
+    `${dir }/_SUMMARY.md`,
     summary
+  )
+
+  const ramdaDir = resolve(__dirname, '../../../../rambda/files/failing_ramda_tests')
+  copySync(
+    dir,
+    ramdaDir
   )
 }
 
