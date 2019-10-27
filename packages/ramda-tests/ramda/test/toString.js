@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var R = require('../../../../../rambda/dist/rambda')
+var R = require('../source');
 
 
 describe('toString', function() {

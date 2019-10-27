@@ -1,39 +1,40 @@
-const eq = require('./shared/eq')
-const R = require('../../../../../rambda/dist/rambda')
+var R = require('../source');
+var eq = require('./shared/eq');
 
-describe('uniq', () => {
-  it('returns a set from any array (i.e. purges duplicate elements)', () => {
-    const list = [ 1, 2, 3, 1, 2, 3, 1, 2, 3 ]
-    eq(R.uniq(list), [ 1, 2, 3 ])
-  })
 
-  it('keeps elements from the left', () => {
-    eq(R.uniq([ 1, 2, 3, 4, 1 ]), [ 1, 2, 3, 4 ])
-  })
+describe('uniq', function() {
+  it('returns a set from any array (i.e. purges duplicate elements)', function() {
+    var list = [1, 2, 3, 1, 2, 3, 1, 2, 3];
+    eq(R.uniq(list), [1, 2, 3]);
+  });
 
-  it('returns an empty array for an empty array', () => {
-    eq(R.uniq([]), [])
-  })
+  it('keeps elements from the left', function() {
+    eq(R.uniq([1, 2, 3, 4, 1]), [1, 2, 3, 4]);
+  });
 
-  it('has R.equals semantics', () => {
-    function Just(x){ this.value = x }
-    Just.prototype.equals = function(x){
-      return x instanceof Just && R.equals(x.value, this.value)
-    }
+  it('returns an empty array for an empty array', function() {
+    eq(R.uniq([]), []);
+  });
 
-    eq(R.uniq([ -0, -0 ]).length, 1)
-    eq(R.uniq([ 0, -0 ]).length, 2)
-    eq(R.uniq([ NaN, NaN ]).length, 1)
-    eq(R.uniq([ [ 1 ], [ 1 ] ]).length, 1)
-    eq(R.uniq([ new Just([ 42 ]), new Just([ 42 ]) ]).length, 1)
-  })
+  it('has R.equals semantics', function() {
+    function Just(x) { this.value = x; }
+    Just.prototype.equals = function(x) {
+      return x instanceof Just && R.equals(x.value, this.value);
+    };
 
-  it('handles null and undefined elements', () => {
-    eq(R.uniq([ void 0, null, void 0, null ]), [ void 0, null ])
-  })
+    eq(R.uniq([-0, -0]).length, 1);
+    eq(R.uniq([0, -0]).length, 2);
+    eq(R.uniq([NaN, NaN]).length, 1);
+    eq(R.uniq([[1], [1]]).length, 1);
+    eq(R.uniq([new Just([42]), new Just([42])]).length, 1);
+  });
 
-  it('uses reference equality for functions', () => {
-    eq(R.uniq([ R.add, R.identity, R.add, R.identity, R.add, R.identity ]).length, 2)
-  })
+  it('handles null and undefined elements', function() {
+    eq(R.uniq([void 0, null, void 0, null]), [void 0, null]);
+  });
 
-})
+  it('uses reference equality for functions', function() {
+    eq(R.uniq([R.add, R.identity, R.add, R.identity, R.add, R.identity]).length, 2);
+  });
+
+});

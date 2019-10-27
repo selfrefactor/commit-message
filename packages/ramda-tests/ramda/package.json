@@ -70,16 +70,14 @@
     "coverage": "istanbul cover node_modules/.bin/_mocha -- --reporter spec",
     "lint": "eslint scripts/bookmarklet scripts/*.js source/*.js source/internal/*.js test/*.js test/**/*.js lib/sauce/*.js lib/bench/*.js",
     "browser_test": "testem ci",
-    "test": "cross-env BABEL_ENV=cjs mocha --require @babel/register --reporter spec test/add.js"
+    "test": "cross-env BABEL_ENV=cjs mocha --require @babel/register --reporter spec"
   },
-  "dependencies": {
-    "rambda": "https://github.com/selfrefactor/rambda#3.3.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
-    "@babel/register": "^7.4.4",
     "@babel/types": "^7.4.4",
+    "@babel/register": "^7.4.4",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
     "babel-plugin-import-export-rename": "^1.0.1",
     "babelify": "^10.0.0",

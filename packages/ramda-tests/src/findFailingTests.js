@@ -35,7 +35,7 @@ function getNumberFailing(testOutput){
   return Number(numberFailing.trim())
 }
 
-async function checkSingleMethod(method){
+async function checkSingleMethod(method, skipDelete){
   console.log(method)
   const { command, outputPath } = getCommand(method)
 
@@ -44,7 +44,9 @@ async function checkSingleMethod(method){
     command,
   })
   const testOutput = readFileSync(outputPath).toString()
+
   if (!testOutput.includes('failing')) return unlinkSync(outputPath)
+  if (skipDelete) return
 
   const numberFailing = getNumberFailing(testOutput)
 
@@ -55,10 +57,12 @@ async function checkSingleMethod(method){
   unlinkSync(outputPath)
 }
 
-void async function runTests(){
+async function findFailingTests(skipDelete = false){
   const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
 
   await mapAsync(
-    checkSingleMethod
+    async method => checkSingleMethod(method, skipDelete)
   )(allMethods)
-}()
+}
+
+exports.findFailingTests = findFailingTests

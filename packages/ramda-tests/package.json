@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "clone": "run read https://github.com/ramda/ramda.git",
     "shake": "node node_modules/bundle-phobia-cli/index.js ramda rambda",
     "on": "node src/findFailingTests.js",
     "test": "cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/pipe.js"
@@ -13,6 +14,7 @@
   },
   "dependencies": {
     "clipboardy": "^2.1.0",
+    "fs-extra": "^8.1.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.8.1",
     "rambdax": "^2.14.1",
     "string-fn": "^2.10.2"

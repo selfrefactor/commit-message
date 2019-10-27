@@ -1,6 +1,6 @@
 var listXf = require('./helpers/listXf');
 
-var R = require('../../../../../rambda/dist/rambda')
+var R = require('../source');
 var eq = require('./shared/eq');
 var _isTransformer = require('../source/internal/_isTransformer');
 

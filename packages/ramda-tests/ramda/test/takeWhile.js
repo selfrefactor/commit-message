@@ -1,20 +1,21 @@
-const assert = require('assert')
+var assert = require('assert');
 
-const eq = require('./shared/eq')
-const R = require('../../../../../rambda/dist/rambda')
+var R = require('../source');
+var eq = require('./shared/eq');
 
-describe('takeWhile', () => {
-  it('continues taking elements while the function reports `true`', () => {
-    eq(R.takeWhile(x => x !== 5, [ 1, 3, 5, 7, 9 ]), [ 1, 3 ])
-  })
 
-  it('starts at the right arg and acknowledges undefined', () => {
-    eq(R.takeWhile(() => { assert(false) }, []), [])
-    eq(R.takeWhile(x => x !== void 0, [ 1, 3, void 0, 5, 7 ]), [ 1, 3 ])
-  })
+describe('takeWhile', function() {
+  it('continues taking elements while the function reports `true`', function() {
+    eq(R.takeWhile(function(x) {return x !== 5;}, [1, 3, 5, 7, 9]), [1, 3]);
+  });
 
-  it('can operate on strings', () => {
-    eq(R.takeWhile(x => x !== 'd', 'Ramda'), 'Ram')
-  })
+  it('starts at the right arg and acknowledges undefined', function() {
+    eq(R.takeWhile(function() { assert(false); }, []), []);
+    eq(R.takeWhile(function(x) {return x !== void 0;}, [1, 3, void 0, 5, 7]), [1, 3]);
+  });
 
-})
+  it('can operate on strings', function() {
+    eq(R.takeWhile(function(x) { return x !== 'd'; }, 'Ramda'), 'Ram');
+  });
+
+});

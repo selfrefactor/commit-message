@@ -1,11 +1,12 @@
-const eq = require('./shared/eq')
-const R = require('../../../../../rambda/dist/rambda')
+var R = require('../source');
+var eq = require('./shared/eq');
 
-describe('F', () => {
-  it('always returns false', () => {
-    eq(R.F(), false)
-    eq(R.F(10), false)
-    eq(R.F(true), false)
-  })
 
-})
+describe('F', function() {
+  it('always returns false', function() {
+    eq(R.F(), false);
+    eq(R.F(10), false);
+    eq(R.F(true), false);
+  });
+
+});
