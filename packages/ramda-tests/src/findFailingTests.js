@@ -57,7 +57,6 @@ async function checkSingleMethod(method){
 
 void async function runTests(){
   const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
-    .reverse()
 
   await mapAsync(
     checkSingleMethod

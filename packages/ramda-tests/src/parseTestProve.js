@@ -1,7 +1,10 @@
 const input = `
-eq(R.propEq('name', 'Abby', null), false);
-    eq(R.propEq('name', 'Abby', undefined), false); 
-`
+eq(R.equals(/\s/, /\s/), true);
+    eq(R.equals(/\s/, /\d/), false);
+    eq(R.equals(/a/gi, /a/ig), true);
+    eq(R.equals(/a/mgi, /a/img), true);
+    eq(R.equals(/a/gi, /a/i), false);
+    `
 
 const { remove, match, drop, init } = require('rambdax')
 const { writeSync } = require('clipboardy')

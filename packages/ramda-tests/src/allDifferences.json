@@ -29,7 +29,11 @@
   },
   "compose": {
     "count": 3,
-    "reasons": "passes context to functions|composed functions have no length"
+    "reason": "passes context to functions|composed functions have no length"
+  },
+  "pipe": {
+    "count": 3,
+    "reason": "passes context to functions|composed functions have no length"
   },
   "curry": {
     "count": 5,
@@ -53,7 +57,7 @@
   },
   "equals": {
     "count": 14,
-    "reason": "Rambda doesn't support regex, recursive data structures, objects with same enumerable properties, map/weakmap type of variables, dispatches to `equals` method recursively"
+    "reason": "Rambda doesn't support recursive data structures, objects with same enumerable properties, map/weakmap type of variables, dispatches to `equals` method recursively"
   },
   "filter": {
     "count": 1,
@@ -114,6 +118,10 @@
   "path": {
     "count": 1,
     "reason": "takes a path that contains negative indices into arrays"
+  },
+  "pluck": {
+    "count": 1,
+    "reason": "behaves as a transducer"
   },
   "propEq": {
     "count": 1,
