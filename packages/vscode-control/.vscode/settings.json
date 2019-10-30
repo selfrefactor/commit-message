@@ -43,7 +43,6 @@
   "workbench.editor.focusRecentEditorAfterClose":false,
   "files.exclude": {
     ".cache": true,
-    ".circleci": true,
     "**/.awcache": true,
     "**/.cache-loader": true,
     "**/.DS_Store": false,
