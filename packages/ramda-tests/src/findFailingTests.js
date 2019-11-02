@@ -44,7 +44,6 @@ async function checkSingleMethod(method, skipDelete){
     command,
   })
 
-  return
   const testOutput = readFileSync(outputPath).toString()
 
   if (!testOutput.includes('failing')) return unlinkSync(outputPath)
