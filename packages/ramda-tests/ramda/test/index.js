@@ -1,4 +1,4 @@
-var R = require('../source');
+var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
 var eq = require('./shared/eq');
 var fs = require('fs');
 var path = require('path');
@@ -34,7 +34,7 @@ describe('API surface', function() {
   var exported = Object.keys(R).filter(function(key) {
     return key !== '__esModule';
   });
-  var actual = sourceMethods(path.dirname(require.resolve('../source')));
+  var actual = sourceMethods(path.dirname(require.resolve('../../../../..'../../../../../rambda/dist/rambda.js'')));
 
   it('both APIs are in sync', function() {
     eq(actual.length, exported.length);

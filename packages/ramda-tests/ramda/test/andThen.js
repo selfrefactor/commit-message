@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var R = require('../source');
+var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
 var eq = require('./shared/eq');
 
 

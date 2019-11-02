@@ -1,6 +1,6 @@
 var assert = require('assert');
 var fs = require('fs');
-var R = require('../source');
+var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
 var dox = require('dox');
 
 // simple object to hold info about our examples

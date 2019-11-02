@@ -1,9 +1,14 @@
 const input = `
-eq(R.equals(/\s/, /\s/), true);
-    eq(R.equals(/\s/, /\d/), false);
-    eq(R.equals(/a/gi, /a/ig), true);
-    eq(R.equals(/a/mgi, /a/img), true);
-    eq(R.equals(/a/gi, /a/i), false);
+eq(R.isEmpty(undefined), false);
+eq(R.isEmpty(''), true);
+eq(R.isEmpty(' '), false);
+eq(R.isEmpty([]), true);
+eq(R.isEmpty([[]]), false);
+eq(R.isEmpty({}), true);
+eq(R.isEmpty({x: 0}), false);
+eq(R.isEmpty(0), false);
+eq(R.isEmpty(NaN), false);
+eq(R.isEmpty(['']), false);
     `
 
 const { remove, match, drop, init } = require('rambdax')
@@ -32,6 +37,7 @@ void function parseTest(){
     return parseSingleLine(removeR(line))
   })
     .join('\n')
+
   // console.log(newContent)
 
   writeSync(newContent)

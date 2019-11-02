@@ -1,15 +1,19 @@
 {
   "adjust": {
     "count": 1,
-    "reason": "accepts an array-like object"
+    "reason": "ramda accepts an array-like object"
   },
   "allPass": {
     "count": 1,
-    "reason": "returns a curried function whose arity matches that of the highest-arity predicate"
+    "reason": "ramda returns a curried function whose arity matches that of the highest-arity predicate"
   },
   "anyPass": {
     "count": 1,
-    "reason": "returns a curried function whose arity matches that of the highest-arity predicate"
+    "reason": "ramda returns a curried function whose arity matches that of the highest-arity predicate"
+  },
+  "isEmpty": {
+    "count": 1,
+    "reason": "ramda supports typed arrays"
   },
   "both": {
     "count": 1,

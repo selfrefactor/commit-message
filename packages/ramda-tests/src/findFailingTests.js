@@ -43,6 +43,8 @@ async function checkSingleMethod(method, skipDelete){
     cwd : `${ process.env.HOME }/repos/services/packages/ramda-tests/ramda`,
     command,
   })
+
+  return
   const testOutput = readFileSync(outputPath).toString()
 
   if (!testOutput.includes('failing')) return unlinkSync(outputPath)
@@ -64,5 +66,7 @@ async function findFailingTests(skipDelete = false){
     async method => checkSingleMethod(method, skipDelete)
   )(allMethods)
 }
+
+findFailingTests()
 
 exports.findFailingTests = findFailingTests

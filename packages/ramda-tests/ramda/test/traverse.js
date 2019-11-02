@@ -1,6 +1,6 @@
 var S = require('sanctuary');
 
-var R = require('../source');
+var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
 var Id = require('./shared/Id');
 var eq = require('./shared/eq');
 
