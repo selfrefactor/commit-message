@@ -5,6 +5,7 @@ const { getIndent, indent } = require('string-fn')
 const { readFileSync, writeFileSync, existsSync } = require('fs')
 const { remove, replace, take, map, filter, piped } = require('rambdax')
 const { resolve } = require('path')
+const allDifferences = require('./allDifferences.json')
 const BASE = resolve(__dirname, '../')
 
 const getOutputPath = x => `${ BASE }/outputs/${ x }.txt`
@@ -92,7 +93,12 @@ function withSingleMethod(method){
     toReturn.join('\n')
   )
 
+  const differencePayload = allDifferences[method] ?
+  {diffReason: allDifferences[method].reason}:
+  {} 
+
   return {
+    ...differencePayload, 
     method,
     content : toReturn.join('\n'),
   }
@@ -104,16 +110,17 @@ async function recordFailingTests(){
   // await findFailingTests(true)
 
   const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
-  // const allMethods = take(9,Object.keys(R).filter(x => x !== 'partialCurry'))
-  // const allMethods = [ 'isEmpty' ]
 
   const allFailingTests = allMethods
     .map(method => withSingleMethod(method))
     .filter(Boolean)
   let summary = ''
 
-  allFailingTests.forEach(({ content, method }) => {
-    const toAdd = `> ${ method }\n\n\`\`\`javascript\n${ content }\n\`\`\`\n\n`
+  allFailingTests.forEach(({ content, method, diffReason }) => {
+    const reasoning = diffReason ?
+      `\nReason for failing:  ${diffReason}\n` : ''
+
+    const toAdd = `> ${ method }\n${reasoning}\n\`\`\`javascript\n${ content }\n\`\`\`\n\n`
 
     summary += toAdd
   })
