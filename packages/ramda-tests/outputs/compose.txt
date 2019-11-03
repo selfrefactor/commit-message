@@ -8,11 +8,11 @@
     3) can be applied to one argument
 
   compose properties
-    ✓ composes two functions (79ms)
-    ✓ associative (47ms)
+    ✓ composes two functions (85ms)
+    ✓ associative
 
 
-  4 passing (182ms)
+  4 passing (192ms)
   3 failing
 
   1) compose

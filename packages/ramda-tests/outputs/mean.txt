@@ -6,7 +6,7 @@
     1) handles array-like object
 
 
-  2 passing (53ms)
+  2 passing (87ms)
   1 failing
 
   1) mean

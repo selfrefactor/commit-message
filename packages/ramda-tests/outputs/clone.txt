@@ -35,7 +35,7 @@
     9) dispatches to `clone` method if present
 
 
-  9 passing (184ms)
+  9 passing (200ms)
   9 failing
 
   1) deep clone integers, strings and booleans

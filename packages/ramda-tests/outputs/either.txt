@@ -7,7 +7,7 @@
     1) accepts fantasy-land applicative functors
 
 
-  3 passing (54ms)
+  3 passing (82ms)
   1 failing
 
   1) either

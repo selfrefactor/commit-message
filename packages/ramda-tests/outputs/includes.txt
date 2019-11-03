@@ -8,7 +8,7 @@
     ✓ returns true if substring is part of string
 
 
-  4 passing (57ms)
+  4 passing (84ms)
   1 failing
 
   1) includes

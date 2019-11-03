@@ -10,7 +10,7 @@
     2) returns a curried function
 
 
-  5 passing (64ms)
+  5 passing (97ms)
   2 failing
 
   1) ifElse

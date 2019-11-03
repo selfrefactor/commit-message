@@ -5,7 +5,7 @@
     2) correctly reports the arity of the new function
 
 
-  0 passing (57ms)
+  0 passing (63ms)
   2 failing
 
   1) partial

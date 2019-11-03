@@ -5,7 +5,7 @@
     1) dispatches
 
 
-  1 passing (52ms)
+  1 passing (65ms)
   1 failing
 
   1) intersperse

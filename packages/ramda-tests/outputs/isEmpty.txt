@@ -5,13 +5,22 @@
     ✓ returns false for undefined
     ✓ returns true for empty string
     ✓ returns true for empty array
+    ✓ returns true for empty object
+    ✓ returns true for empty arguments object
+    ✓ returns false for every other value
+
+  isEmpty
+    ✓ returns false for null
+    ✓ returns false for undefined
+    ✓ returns true for empty string
+    ✓ returns true for empty array
     1) returns true for empty typed array
     ✓ returns true for empty object
     ✓ returns true for empty arguments object
     ✓ returns false for every other value
 
 
-  7 passing (79ms)
+  14 passing (85ms)
   1 failing
 
   1) isEmpty
@@ -28,7 +37,7 @@
       +true
       
       at strictEqual (test/shared/eq.js:8:10)
-      at Context.eq (test/isEmpty.js:30:5)
+      at Context.eq (test/isEmpty.js:75:5)
       at processImmediate (internal/timers.js:439:21)
 
 

@@ -6,7 +6,7 @@
     1) dispatches on transformer objects in list position
 
 
-  2 passing (57ms)
+  2 passing (92ms)
   1 failing
 
   1) groupBy

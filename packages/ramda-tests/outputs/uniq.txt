@@ -9,7 +9,7 @@
     2) uses reference equality for functions
 
 
-  4 passing (84ms)
+  4 passing (75ms)
   2 failing
 
   1) uniq

@@ -3,7 +3,7 @@ const { emptyDirSync, copySync } = require('fs-extra')
 const { findFailingTests } = require('./findFailingTests.js')
 const { getIndent, indent } = require('string-fn')
 const { readFileSync, writeFileSync, existsSync } = require('fs')
-const { remove, replace, take } = require('rambdax')
+const { remove, replace, take,map, filter, piped } = require('rambdax')
 const { resolve } = require('path')
 const BASE = resolve(__dirname, '../')
 
@@ -16,30 +16,43 @@ function withSingleMethod(method){
 
   const content = readFileSync(outputPath).toString()
   const testContent = readFileSync(getTestPath(method)).toString()
-
+  // console.log({testContent})
   const [ sk ] = content.split('passing')
   const goodTests = sk
     .split('\n')
     .filter(line => line.includes('✓'))
     .map(line => remove('✓', line).trim())
+  
+  const badTests = piped(
+    content.split('passing'),
+    ([first]) => first,
+    x=> x.split('\n'),
+    filter( x => x.includes(')')),
+    map( x => x.split(')')[1].trim())
+  )
 
-  let flag = false
-  let counter = 0
+  let flag = false 
+  let counter = 0 
   let indentCount = 0
   const holder = []
-
+ 
   testContent.split('\n').forEach(line => {
+    // if(line.includes(`it('`)) con sole.log(line)
+    // console.log(counter, goodTests[ counter ])
     if (goodTests[ counter ] && line.includes(goodTests[ counter ])){
       // console.log(line, holder.length, goodTests[ counter ])
+      // if(line.includes(`it('`)) console.log(line)
+
       indentCount = getIndent(line)
 
       return flag = true
     }
-    if (line === `${ indent('});', indentCount) }`){
+    // console.log({counter, indentCount})
+    if (line === `${ indent('})', indentCount) }`){
       counter++
 
       if (!flag) holder.push(line)
-
+      // console.log(line)
       return flag = false
     }
 
@@ -50,6 +63,8 @@ function withSingleMethod(method){
 
       holder.push(lineToPush)
     }
+    // if(line.includes(`it('`)) console.log(line)
+    // console.log(line)
   })
   let skipFirstEmptyLine = true
 
@@ -76,12 +91,12 @@ function withSingleMethod(method){
 
 async function recordFailingTests(){
   const dir = `${ __dirname }/failing_tests`
-  // emptyDirSync(dir) 
+  // emptyDirSync(dir)
   // await findFailingTests(true)
-
-  const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
+ 
+  // const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
   // const allMethods = take(9,Object.keys(R).filter(x => x !== 'partialCurry'))
-  // const allMethods = [ 'length' ]
+  const allMethods = [ 'isEmpty' ]
 
   const allFailingTests = allMethods
     .map(method => withSingleMethod(method))

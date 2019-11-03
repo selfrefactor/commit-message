@@ -22,7 +22,7 @@
     16) handles circular references
 
 
-  3 passing (99ms)
+  3 passing (88ms)
   16 failing
 
   1) toString

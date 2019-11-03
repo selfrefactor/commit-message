@@ -9,7 +9,7 @@
     1) returns NaN for length property of unexpected type
 
 
-  5 passing (59ms)
+  5 passing (101ms)
   1 failing
 
   1) length

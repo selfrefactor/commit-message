@@ -8,7 +8,7 @@
     3) can be applied to one argument
 
 
-  2 passing (64ms)
+  2 passing (97ms)
   3 failing
 
   1) pipe

@@ -11,7 +11,7 @@
     3) transducer called for every member of list if `n` is < 0
 
 
-  5 passing (66ms)
+  5 passing (65ms)
   3 failing
 
   1) take
