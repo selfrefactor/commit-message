@@ -10,7 +10,7 @@
     "test": "cd ramda&&BABEL_ENV=cjs node node_modules/mocha/bin/mocha --require @babel/register --reporter spec test/isEmpty.js"
   },
   "commitMessage": {
-    "workInProgress": "record failing test with r.is.empty"
+    "workInProgress": ""
   },
   "dependencies": {
     "clipboardy": "^2.1.0",

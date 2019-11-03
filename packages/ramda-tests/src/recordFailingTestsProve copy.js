@@ -16,12 +16,13 @@ function withSingleMethod(method){
 
   const content = readFileSync(outputPath).toString()
   const testContent = readFileSync(getTestPath(method)).toString()
-
   const [ sk ] = content.split('passing')
   const goodTests = sk
     .split('\n')
     .filter(line => line.includes('✓'))
     .map(line => remove('✓', line).trim())
+
+  // console.log({goodTests})
 
   const badTests = piped(
     content.split('passing'),
@@ -32,38 +33,51 @@ function withSingleMethod(method){
   )
 
   let flag = false
-  let flagBad = false
+  let isGoodCounter = undefined
   let counter = 0
-  let badCounter = 0
+  let counterGood = 0
   let indentCount = 0
   const holder = []
 
   testContent.split('\n').forEach(line => {
-    // if(line.includes(`it('`)) console.log({counter, badCounter, line, target: goodTests[counter]})
-    if (badTests[ badCounter ] && line.includes(badTests[ badCounter ])){
-      indentCount = getIndent(line)
+    // console.log(counter, badTests[ counter ], line)
 
-      holder.push(line)
-      flagBad = true
+    const includeBadTests =
+      badTests[ counterGood ] && line.includes(badTests[ counter ])
+    const includeGoodTests =
+      goodTests[ counterGood ] && line.includes(goodTests[ counterGood ])
+
+    // if (includeBadTests) console.log({ bad : line })
+    if (includeGoodTests) console.log({ good : line })
+    // if(line.includes(`it('`)) console.log(line)
+
+    if (includeGoodTests){
+      // if(line.includes(`it('`)) console.log(line)
+      indentCount = getIndent(line)
+      isGoodCounter = true
+
       return flag = false
     }
 
-    if (goodTests[ counter ] && line.includes(goodTests[ counter ])){
+    if (includeBadTests){
+
       indentCount = getIndent(line)
+      isGoodCounter = false
+
       return flag = true
     }
 
-    if (line === `${ indent('});', indentCount) }` && !flagBad){
-      counter++
-      flagBad = false
-      return flag = false
-    }
+    if (line === `${ indent('});', indentCount) }`){
+      if (isGoodCounter){
+        counterGood++
+      } else {
+        counter++
+      }
 
-    if (line === `${ indent('});', indentCount) }` && flagBad){
-      if(!flag) holder.push(line)
+      // if (!flag) return
+      if (!flag) holder.push(line)
 
-      badCounter++
-      flagBad = false
+      // console.log(line)
       return flag = false
     }
 
@@ -72,9 +86,11 @@ function withSingleMethod(method){
         replace('../source', 'rambda', line) :
         line
 
-      holder.push(lineToPush)
+      // holder.push(lineToPush)
     }
-  }) 
+    // if(line.includes(`it('`)) console.log(line)
+    // console.log(line)
+  })
   let skipFirstEmptyLine = true
 
   const toReturn = holder.filter(x => {
@@ -103,9 +119,9 @@ async function recordFailingTests(){
   // emptyDirSync(dir)
   // await findFailingTests(true)
 
-  const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
+  // const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
   // const allMethods = take(9,Object.keys(R).filter(x => x !== 'partialCurry'))
-  // const allMethods = [ 'isEmpty' ]
+  const allMethods = [ 'isEmpty' ]
 
   const allFailingTests = allMethods
     .map(method => withSingleMethod(method))
