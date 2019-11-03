@@ -1,6 +1,6 @@
 var jsv = require('jsverify');
 
-var R = require('rambda');
+var R = require('../../../../../rambda/dist/rambda.js');
 var eq = require('./shared/eq');
 var funcN = require('./shared/funcN');
 describe('flip', function() {

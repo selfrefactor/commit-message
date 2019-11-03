@@ -4,7 +4,8 @@ const { exec } = require('helpers')
 const { glue, mapAsync, map } = require('rambdax')
 const { readFileSync, unlinkSync } = require('fs')
 
-const getOutputPath = x => `${ process.env.HOME }/repos/services/packages/ramda-tests/outputs/${ x }.txt`
+const getOutputPath = x =>
+  `${ process.env.HOME }/repos/services/packages/ramda-tests/outputs/${ x }.txt`
 
 const getCommand = x => {
   const outputPath = getOutputPath(x)
@@ -51,7 +52,10 @@ async function checkSingleMethod(method, skipDelete){
 
   const numberFailing = getNumberFailing(testOutput)
 
-  if (!KNOWN_FAILING_TESTS[ method ] || numberFailing > KNOWN_FAILING_TESTS[ method ]){
+  if (
+    !KNOWN_FAILING_TESTS[ method ] ||
+    numberFailing > KNOWN_FAILING_TESTS[ method ]
+  ){
     throw new Error(`${ method } has ${ numberFailing } tests`)
   }
 
@@ -61,11 +65,9 @@ async function checkSingleMethod(method, skipDelete){
 async function findFailingTests(skipDelete = false){
   const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
 
-  await mapAsync(
-    async method => checkSingleMethod(method, skipDelete)
-  )(allMethods)
+  await mapAsync(async method => checkSingleMethod(method, skipDelete))(
+    allMethods
+  )
 }
-
-findFailingTests()
 
 exports.findFailingTests = findFailingTests

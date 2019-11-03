@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var R = require('rambda');
+var R = require('../../../../../rambda/dist/rambda.js');
 describe('toString', function() {
   it('returns the string representation of null', function() {
     assert.strictEqual(R.toString(null), 'null');

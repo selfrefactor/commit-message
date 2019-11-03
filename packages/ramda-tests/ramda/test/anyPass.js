@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('../../../../..'../../../../../rambda/dist/rambda.js'')
+const R = require('../../../../../rambda/dist/rambda.js')
 
 describe('anyPass', () => {
   const odd = function(n){ return n % 2 !== 0 }

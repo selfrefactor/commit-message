@@ -1,7 +1,7 @@
 var assert = require('assert');
 var sinon = require('sinon');
 
-var R = require('rambda');
+var R = require('../../../../../rambda/dist/rambda.js');
 var eq = require('./shared/eq');
 describe('take', function() {
   it('handles zero correctly (#1224)', function() {

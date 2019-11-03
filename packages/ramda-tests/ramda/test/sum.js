@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('../../../../..'../../../../../rambda/dist/rambda.js'')
+const R = require('../../../../../rambda/dist/rambda.js')
 
 describe('sum', () => {
   it('adds together the array of numbers supplied', () => {

@@ -1,7 +1,7 @@
 var assert = require('assert');
 var jsv = require('jsverify');
 
-var R = require('rambda');
+var R = require('../../../../../rambda/dist/rambda.js');
 var eq = require('./shared/eq');
 describe('compose', function() {
   it('performs right-to-left function composition', function() {

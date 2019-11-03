@@ -1,6 +1,6 @@
 const eq = require('./shared/eq')
 const listXf = require('./helpers/listXf')
-const R = require('../../../../..'../../../../../rambda/dist/rambda.js'')
+const R = require('../../../../../rambda/dist/rambda.js')
 
 describe('findLast', () => {
   const obj1 = { x : 100 }

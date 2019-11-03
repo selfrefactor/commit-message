@@ -1,4 +1,4 @@
-var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
+var R = require('../../../../../rambda/dist/rambda.js');
 var eq = require('./shared/eq');
 
 describe('descend', function() {

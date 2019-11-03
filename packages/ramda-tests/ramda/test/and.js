@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('../../../../..'../../../../../rambda/dist/rambda.js'')
+const R = require('../../../../../rambda/dist/rambda.js')
 
 describe('and', () => {
   it('compares two values with js &&', () => {
@@ -8,5 +8,4 @@ describe('and', () => {
     eq(R.and(false, true), false)
     eq(R.and(false, false), false)
   })
-
 })

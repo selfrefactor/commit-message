@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
+var R = require('../../../../../rambda/dist/rambda.js');
 
 
 describe('toString', function() {

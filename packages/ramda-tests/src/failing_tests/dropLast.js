@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var R = require('rambda');
+var R = require('../../../../../rambda/dist/rambda.js');
 var eq = require('./shared/eq');
 describe('dropLast', function() {
   it('can act as a transducer', function() {

@@ -1,6 +1,6 @@
 var S = require('sanctuary');
 
-var R = require('rambda');
+var R = require('../../../../../rambda/dist/rambda.js');
 var eq = require('./shared/eq');
 describe('either', function() {
   it('accepts fantasy-land applicative functors', function() {

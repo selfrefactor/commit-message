@@ -1,5 +1,5 @@
 const eq = require('./shared/eq')
-const R = require('../../../../..'../../../../../rambda/dist/rambda.js'')
+const R = require('../../../../../rambda/dist/rambda.js')
 
 describe('propOr', () => {
   const fred = {
@@ -28,5 +28,4 @@ describe('propOr', () => {
     eq(R.propOr('foo', 'x', { x : null }), 'foo')
     eq(R.propOr('foo', 'x', { x : undefined }), 'foo')
   })
-
 })

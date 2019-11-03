@@ -1,5 +1,5 @@
-const R = require('../../../../..'../../../../../rambda/dist/rambda.js'')
-// var R = require('../../../../..'../../../../../rambda/dist/rambda.js'');
+const R = require('../../../../../rambda/dist/rambda.js')
+// var R = require('../../../../../rambda/dist/rambda.js');
 const eq = require('./shared/eq')
 const jsv = require('jsverify')
 
