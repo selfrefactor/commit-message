@@ -17,21 +17,21 @@
 	"private": false,
 	"dependencies": {
 		"fs-extra": "^8.1.0",
-		"init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#6.9.0",
-		"inquirer": "^6.4.1",
-		"helpers": "https://github.com/selfrefactor/helpers#1.2.1",
-		"rambdax": "^2.10.2"
+		"init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#8.0.0",
+		"inquirer": "^7.0.0",
+		"helpers": "https://github.com/selfrefactor/helpers#2.0.1",
+		"rambdax": "^3.1.0"
 	},
 	"devDependencies": {
-		"@types/fs-extra": "^8.0.0",
-		"@types/jest": "^24.0.15",
-		"@types/node": "^12.6.2",
-		"@types/puppeteer": "^1.12.4",
+		"@types/fs-extra": "^8.0.1",
+		"@types/jest": "^24.0.22",
+		"@types/node": "^12.12.6",
+		"@types/puppeteer": "^1.20.2",
 		"env-fn": "^1.1.2",
-		"jest": "^24.8.0",
-		"ts-jest": "^24.0.2",
-		"tslint": "^5.18.0",
-		"typescript": "^3.6.0-dev.20190710"
+		"jest": "^25.0.0",
+		"ts-jest": "^24.1.0",
+		"tslint": "^6.0.0-beta1",
+		"typescript": "^3.8.0-dev.20191105"
 	},
 	"jest": {
 		"transform": {
