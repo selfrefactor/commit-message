@@ -1,3 +1,4 @@
+const allDifferences = require('./allDifferences.json')
 const R = require('rambda')
 const { emptyDirSync, copySync } = require('fs-extra')
 const { findFailingTests } = require('./findFailingTests.js')
@@ -5,7 +6,6 @@ const { getIndent, indent } = require('string-fn')
 const { readFileSync, writeFileSync, existsSync } = require('fs')
 const { remove, replace, take, map, filter, piped } = require('rambdax')
 const { resolve } = require('path')
-const allDifferences = require('./allDifferences.json')
 const BASE = resolve(__dirname, '../')
 
 const getOutputPath = x => `${ BASE }/outputs/${ x }.txt`
@@ -46,25 +46,29 @@ function withSingleMethod(method){
 
       holder.push(line)
       flagBad = true
+
       return flag = false
     }
 
     if (goodTests[ counter ] && line.includes(goodTests[ counter ])){
       indentCount = getIndent(line)
+
       return flag = true
     }
 
     if (line === `${ indent('});', indentCount) }` && !flagBad){
       counter++
       flagBad = false
+
       return flag = false
     }
 
     if (line === `${ indent('});', indentCount) }` && flagBad){
-      if(!flag) holder.push(line)
+      if (!flag) holder.push(line)
 
       badCounter++
       flagBad = false
+
       return flag = false
     }
 
@@ -75,7 +79,7 @@ function withSingleMethod(method){
 
       holder.push(lineToPush)
     }
-  }) 
+  })
   let skipFirstEmptyLine = true
 
   const toReturn = holder.filter(x => {
@@ -93,12 +97,12 @@ function withSingleMethod(method){
     toReturn.join('\n')
   )
 
-  const differencePayload = allDifferences[method] ?
-  {diffReason: allDifferences[method].reason}:
-  {} 
+  const differencePayload = allDifferences[ method ] ?
+    { diffReason : allDifferences[ method ].reason } :
+    {}
 
   return {
-    ...differencePayload, 
+    ...differencePayload,
     method,
     content : toReturn.join('\n'),
   }
@@ -118,9 +122,10 @@ async function recordFailingTests(){
 
   allFailingTests.forEach(({ content, method, diffReason }) => {
     const reasoning = diffReason ?
-      `\nReason for failing:  ${diffReason}\n` : ''
+      `\nReason for failing:  ${ diffReason }\n` :
+      ''
 
-    const toAdd = `> ${ method }\n${reasoning}\n\`\`\`javascript\n${ content }\n\`\`\`\n\n`
+    const toAdd = `> ${ method }\n${ reasoning }\n\`\`\`javascript\n${ content }\n\`\`\`\n\n`
 
     summary += toAdd
   })
