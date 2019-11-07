@@ -7,7 +7,7 @@
 		"lint": "tslint --type-check --project tsconfig.json"
 	},
 	"name": "tag-fn",
-	"version": "0.3.7",
+	"version": "0.3.8",
 	"description": "CLI command for lazy generation of Github tags",
 	"main": "dist/index.ts",
 	"typings": "index.d.ts",
