@@ -4361,10 +4361,10 @@ typescript-formatter@^7.2.2:
     commandpost "^1.0.0"
     editorconfig "^0.15.0"
 
-typescript@^3.8.0-dev.20191105:
-  version "3.8.0-dev.20191105"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.8.0-dev.20191105.tgz#84936856168f081f8ffd67441c76f439c97fb9b7"
-  integrity sha512-bKujrrC0aQRihwWPuavqvlCArHqwXqGmUTwzpyojkTiHBMbfuuVxqM5fYDYLALe6B1eRGm5bFeNtFF/d/8CpCQ==
+typescript@beta:
+  version "3.7.0-beta"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.0-beta.tgz#4ad556e0eee14b90ecc39261001690e16e5eeba9"
+  integrity sha512-4jyCX+IQamrPJxgkABPq9xf+hUN+GWHVxoj+oey1TadCPa4snQl1RKwUba+1dyzYCamwlCxKvZQ3TjyWLhMGBA==
 
 uglify-js@^3.1.4:
   version "3.6.8"
