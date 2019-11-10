@@ -46,7 +46,7 @@
 		"babel-plugin-transform-class-properties": "^6.24.1",
 		"babel-preset-env": "^7.0.0-beta.3",
 		"babel-preset-react": "^7.0.0-beta.3",
-		"env": "https://github.com/selfrefactor/env#0.2.1",
+		"env-fn": "*",
 		"enzyme": "^3.10.0",
 		"enzyme-adapter-react-16": "^1.14.0",
 		"enzyme-to-json": "^3.4.0",

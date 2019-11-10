@@ -7,7 +7,7 @@ const delay = ms =>
     setTimeout(() => {
       resolve()
     }, ms)
-  }) 
+  })
 
 const sortFn = (a, b) => a - b
 

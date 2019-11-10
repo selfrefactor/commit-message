@@ -10,7 +10,7 @@
 	"private": false,
 	"dependencies": {
 		"capture-error": "https://github.com/selfrefactor/capture-error#1.1.0",
-		"env": "https://github.com/selfrefactor/env#0.2.0",
+		"env-fn": "*",
 		"opener": "^1.4.3",
 		"psi": "^3.1.0",
 		"rambdax": "^0.8.10"
