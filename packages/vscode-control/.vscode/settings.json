@@ -23,6 +23,7 @@
   "typescript.format.enable": false,
   "editor.gotoLocation.multiple":"goto",
   "editor.suggest.showIcons":true,
+  "terminal.integrated.rightClickBehavior": "paste",
   "editor.suggest.filteredTypes":{ "keyword": false },
   "editor.suggest.maxVisibleSuggestions":11,
   "editor.codeActionsOnSave": {
@@ -102,7 +103,6 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.rightClickBehavior": "copyPaste",
   "typescript.check.npmIsInstalled": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.suggest.completeFunctionCalls": true,
