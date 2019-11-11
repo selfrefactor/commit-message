@@ -4,12 +4,12 @@
 	"description": "rabbit",
 	"typings": "index.d.ts",
 	"main": "src/index.js",
-	"repository": "git@github.com:selfrefactor/rabbit-fn.git",
+	"repository": "git@github.com:selfrefactor/services.git",
 	"author": "self_refactor <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
 		"amqplib": "^0.5.5",
-		"rambda": "^4.0.2"
+		"rambda": "^4.1.0"
 	},
 	"devDependencies": {
 		"env-fn": "^1.1.2"

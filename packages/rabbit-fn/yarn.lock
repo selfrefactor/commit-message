@@ -99,10 +99,10 @@ rambda@2.7.1:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.7.1.tgz#56c3d4100131db0e252236a26bed75faffa229d8"
   integrity sha512-EjTEdqAOqMWSgiyIs/7cd9ByCN1hlVq5YBxaTdlmGygIpvAtM+qv4rO2eptiTUIkP8E5lGusuq7hohtFM23knw==
 
-rambda@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-4.0.2.tgz#2369c8e30c882f5c12cf4c6c033072e3c05c6be7"
-  integrity sha512-gwldiOIW9I5QAxcIXzFoEhHMonsG0M18A5Tc9LnxHDeZIRZ/1+2OJqFONVU3R7ZUr6UZnk8ffSABeQWYcCabIQ==
+rambda@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-4.1.0.tgz#ca8d1a09f5cceed5ec4e971da0e56a372e88674a"
+  integrity sha512-GaenlDXW7jyVhZUhg0/iSss6FmcRa2JKM++ydGEucp4CeMEB0/jLleJfmvXJiB+LMVfTjr1+CceHq4EjPvsK4w==
 
 "readable-stream@1.x >=1.1.9":
   version "1.1.14"
