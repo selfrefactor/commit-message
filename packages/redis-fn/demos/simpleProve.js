@@ -8,7 +8,7 @@ const delay = ms => new Promise(resolve => {
   setTimeout(() => {
     resolve()
   }, ms)
-})
+}) 
 
 const fn = async () => {
   const redis = await redisFn()
@@ -18,6 +18,7 @@ const fn = async () => {
   })
 
   console.log(await redis.get(KEY))
+  process.exit(0)
 }
 
 fn()

@@ -16,11 +16,12 @@ const UPDATE_OBJ_EXPECTED_RESULT = {
   c : 4,
 }
 
-const delay = ms => new Promise(resolve => {
-  setTimeout(() => {
-    resolve()
-  }, ms)
-})
+const delay = ms =>
+  new Promise(resolve => {
+    setTimeout(() => {
+      resolve()
+    }, ms)
+  })
 
 const debug = async () => {
   try {
@@ -65,21 +66,24 @@ const debug = async () => {
     })
 
     console.log(R.equals(updateResult, UPDATE_OBJ_EXPECTED_RESULT))
-    console.log(R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT))
+    console.log(
+      R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT)
+    )
 
     await delay(1100)
 
-    console.log(R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT))
+    console.log(
+      R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT)
+    )
 
     await delay(1100)
 
     console.log(await redis.get(KEY_OBJ) === null)
 
     process.exit()
-  } catch (err) {
+  } catch (err){
     console.log(err)
   }
 }
 
 debug()
- 
