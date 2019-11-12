@@ -8,6 +8,7 @@ import {
   typesOfCommit,
 } from './constants'
 
+import { getLatestCommits } from './_modules/getLatestCommits'
 import { getCommitLabel } from './_modules/getCommitLabel'
 import { getCommitType } from './_modules/getCommitType'
 import { getWorkInProgress } from './_modules/getWorkInProgress'
@@ -26,7 +27,12 @@ function getWorkInProgressFlag(commitLabel: string) {
 // It ask the user for type and text of commit
 // and returns the final commit message.
 // ============================================
-export async function commitMessage(): Promise<string> {
+export async function commitMessage(dir = process.cwd()): Promise<string> {
+  const latestCommits = await getLatestCommits(dir)
+  latestCommits.forEach(singleCommit => {
+    log(singleCommit, 'info')
+  });
+  log('sep')
   const workInProgress = getWorkInProgress()
   showExplanations()
 

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const helpers_1 = require("helpers");
 const constants_1 = require("./constants");
+const getLatestCommits_1 = require("./_modules/getLatestCommits");
 const getCommitLabel_1 = require("./_modules/getCommitLabel");
 const getCommitType_1 = require("./_modules/getCommitType");
 const getWorkInProgress_1 = require("./_modules/getWorkInProgress");
@@ -16,7 +17,12 @@ function getWorkInProgressFlag(commitLabel) {
 // It ask the user for type and text of commit
 // and returns the final commit message.
 // ============================================
-async function commitMessage() {
+async function commitMessage(dir = process.cwd()) {
+    const latestCommits = await getLatestCommits_1.getLatestCommits(dir);
+    latestCommits.forEach(singleCommit => {
+        helpers_1.log(singleCommit, 'info');
+    });
+    helpers_1.log('sep');
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);

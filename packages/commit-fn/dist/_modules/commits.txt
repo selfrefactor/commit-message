@@ -1,0 +1,23 @@
+commit 719a17425675dccfa2a5a9653ab28550b5109c6b
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Mon Nov 11 22:04:48 2019 +0200
+
+    chore@bump patch
+
+commit 30f18b30e0ec3eaeba38a83dc27bce03815c1a72
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Mon Nov 11 22:04:31 2019 +0200
+
+    chore@dep rambda
+
+commit 56cbd4285e594c8ea0b3c7813111e00d87022ea6
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Mon Nov 11 22:00:18 2019 +0200
+
+    chore@dnd
+
+commit c79332f2029b3922e3d392f748f3cf948d170239
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Mon Nov 11 21:59:22 2019 +0200
+
+    chore@bump minor

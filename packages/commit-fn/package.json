@@ -13,14 +13,15 @@
 	},
 	"dependencies": {
 		"enquirer": "^2.3.2",
-		"helpers": "https://github.com/selfrefactor/helpers#2.0.0",
+		"helpers": "https://github.com/selfrefactor/helpers#2.0.1",
+		"rambda": "^4.1.0",
 		"string-fn": "^2.10.2"
 	},
 	"devDependencies": {
-		"@types/node": "^12.12.6",
+		"@types/node": "^12.12.7",
 		"fs-extra": "^8.1.0",
 		"tslint": "^6.0.0-beta1",
-		"typescript": "^3.8.0-dev.20191105",
+		"typescript": "^3.8.0-dev.20191112",
 		"typescript-formatter": "^7.2.2"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",

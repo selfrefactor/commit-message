@@ -1,0 +1,23 @@
+commit 9774c92224284705314607b7d0c671af982230d3
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Mon Nov 11 21:21:26 2019 +0200
+
+    test: r.try.catch with json parse
+
+commit 42e51f7d899849df963ef6b14546bb2a6154c160
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Sat Nov 9 16:23:04 2019 +0200
+
+    test@method r.try.catch
+
+commit c822fbbdbe55885e9f3a8f40e30c229244c1446e
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Fri Nov 8 15:20:24 2019 +0200
+
+    Create nodejs.yml
+
+commit d384b8e8c761ef96f07a498dd0a71378559dcc03
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Wed Nov 6 01:59:18 2019 +0200
+
+    chore@small no eslint negation rule
