@@ -17,7 +17,7 @@ export const getTagValue = async (x: IGetTagValue): Promise<string> => {
   }
 
   const tagType: TagType = index === -1 ?
-    'minor' :
+    'patch' :
     tagTypes[index]
 
   const currentTag: string = await x.page.evaluate(getCurrentTag)

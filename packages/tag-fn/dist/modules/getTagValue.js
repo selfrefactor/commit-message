@@ -14,7 +14,7 @@ exports.getTagValue = async (x) => {
         return x.input.tag;
     }
     const tagType = index === -1 ?
-        'minor' :
+        'patch' :
         exports.tagTypes[index];
     const currentTag = await x.page.evaluate(getCurrentTag_1.getCurrentTag);
     return getNextTag_1.getNextTag(currentTag, tagType);

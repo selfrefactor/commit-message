@@ -47,12 +47,12 @@ export const getNextTag = (
   }
   const tagIndex = tagType === 'patch' ? 2 : tagType === 'minor' ? 1 : 0
 
-  const result: string = compose<any, any,any,any>(
+  const result: string = compose(
     join('.'),
     ifElse(
       always(flag),
       identity,
-      adjust(add(1), tagIndex),
+      x => adjust(tagIndex, add(1), x),
     ),
     map(Number),
   )([major, minor, patch])

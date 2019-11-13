@@ -25,7 +25,7 @@ exports.getNextTag = (currentTag, tagType) => {
         minor = 0;
     }
     const tagIndex = tagType === 'patch' ? 2 : tagType === 'minor' ? 1 : 0;
-    const result = rambdax_1.compose(rambdax_1.join('.'), rambdax_1.ifElse(rambdax_1.always(flag), rambdax_1.identity, rambdax_1.adjust(rambdax_1.add(1), tagIndex)), rambdax_1.map(Number))([major, minor, patch]);
+    const result = rambdax_1.compose(rambdax_1.join('.'), rambdax_1.ifElse(rambdax_1.always(flag), rambdax_1.identity, x => rambdax_1.adjust(tagIndex, rambdax_1.add(1), x)), rambdax_1.map(Number))([major, minor, patch]);
     return result;
 };
 //# sourceMappingURL=getNextTag.js.map
