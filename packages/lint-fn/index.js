@@ -2,7 +2,7 @@ const { clearLintLog } = require('./_modules/clearLintLog')
 const { commandFactory } = require('./_modules/commandFactory')
 const { execCommand } = require('./_modules/execCommand')
 const { getEslintPath } = require('./_modules/getEslintPath')
-const { glue, test, delay, log } = require('rambdax')
+const { glue, test, delay } = require('rambdax')
 const { isJest } = require('./is/jest')
 const { isReact } = require('./is/react')
 const { readFileSync } = require('fs')
@@ -59,7 +59,7 @@ async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
         ${ filePath }
       `)
 
-      log({
+      console.log({
         tsCommand,
         dir,
       })
