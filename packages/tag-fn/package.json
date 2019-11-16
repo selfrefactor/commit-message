@@ -19,8 +19,8 @@
 		"fs-extra": "^8.1.0",
 		"init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#8.0.0",
 		"inquirer": "^7.0.0",
-		"helpers": "https://github.com/selfrefactor/helpers#2.0.1",
-		"rambdax": "^3.1.0"
+		"helpers": "https://github.com/selfrefactor/helpers#2.2.0",
+		"rambdax": "^3.2.0"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "^8.0.1",

@@ -19,7 +19,7 @@ function cli() {
     }
     else {
         const tag = input === undefined ?
-            'minor' :
+            'patch' :
             input;
         if (['minor', 'major', 'patch'].includes(tag)) {
             helpers_1.log(`${tag} incrementation of the latest tag will be applied\n`, 'info');
