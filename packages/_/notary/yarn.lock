@@ -22,14 +22,6 @@
   dependencies:
     commander "*"
 
-"@types/jest@^22.1.4":
-  version "22.1.4"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.1.4.tgz#5c0c06a9bb495c67e0a78002a952f151e2ae58a1"
-
-"@types/node@^9.4.6":
-  version "9.4.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.4.6.tgz#d8176d864ee48753d053783e4e463aec86b8d82e"
-
 "@types/semver@^5.4.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-5.5.0.tgz#146c2a29ee7d3bae4bf2fcb274636e264c813c45"
@@ -2211,10 +2203,16 @@ rambda@^1.2.6:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-1.2.6.tgz#5feed8039369b65c389ee1e02db9527695d30e83"
   integrity sha512-3tjeDuSMKAf8t099BejrmLgXdexAh63AsU2c2ZTcN5y/gt5njw03Wsfb+Ti9b08ZWLLDN5r0EvKynfYM91PB6g==
 
-rambdax@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-3.3.0.tgz#336b113876b64b433cfc5d7fbd04f8298b06df80"
-  integrity sha512-kr4C2mTkSyFjZ5f8b3M9ctoc6azuozHjqhiYWje8OgIjuE038qhDvP6ER23+lb4TSW0GKdZhFyxhbBMHr/oMVA==
+"rambda@https://github.com/selfrefactor/rambda#1.1.0":
+  version "1.0.9"
+  resolved "https://github.com/selfrefactor/rambda#ee04b4005da84b29d166364100d50e2a9be56a60"
+
+rambdax@^0.8.10:
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-0.8.10.tgz#d8cc090c754e2225a39aa8a5a8d69475e9acd9ed"
+  integrity sha512-mrmotphK0QlD68bDxSpg3yD8To6M5Qe93Dnt/gs3vJyBo+XuAufUCUhYsXzAfj3C4ijXFeR9VXgJWmq79xgT8w==
+  dependencies:
+    rambda "https://github.com/selfrefactor/rambda#1.1.0"
 
 randomatic@^1.1.3:
   version "1.1.7"

@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const log_1 = require("log");
 const getAcreage_1 = require("./getAcreage");
 const getAddress_1 = require("./getAddress");
 const getIdentifikator_1 = require("./getIdentifikator");
@@ -24,9 +23,9 @@ function getResult(text) {
     const purpose = getPurpose_1.getPurpose(text);
     const skitsa = getSkitsa_1.getSkitsa(text);
     const zapoved = getZapoved_1.getZapoved(text);
-    log_1.log({ oldID, previousNumber, neighbours }, 'pattern');
-    log_1.log({ permanentPurpose, purpose, zapoved, address, acreage }, 'pattern');
-    log_1.log({ skitsa, locationRegister, identificator }, 'pattern');
+    console.log({ oldID, previousNumber, neighbours });
+    console.log({ permanentPurpose, purpose, zapoved, address, acreage });
+    console.log({ skitsa, locationRegister, identificator });
     return {
         acreage,
         address,
