@@ -1,0 +1,1 @@
+{"version":3,"file":"normalizeAcreage.js","sourceRoot":"","sources":["../../src/helpers/normalizeAcreage.ts"],"names":[],"mappings":";;AAAA,iEAA8D;AAE9D,SAAgB,gBAAgB,CAAC,KAAa;IAC5C,MAAM,CAAE,WAAW,EAAE,KAAK,CAAC,GAAG,KAAK,CAAC,KAAK,CAAC,GAAG,CAAC,CAAA;IAC9C,MAAM,UAAU,GAAG,2CAAoB,CAAC,WAAW,CAAC,CAAA;IAEpD,OAAO,GAAG,UAAU,IAAI,KAAK,EAAE,CAAA;AACjC,CAAC;AALD,4CAKC"}
