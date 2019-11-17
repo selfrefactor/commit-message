@@ -1,14 +1,9 @@
-import { captureError } from 'capture-error'
-import { readFileSync, unlinkSync } from 'fs'
+import { readFileSync } from 'fs'
 import { resolve } from 'path'
-import { exec } from './modules/exec'
-import { getResult } from './modules/getResult'
-import { getText } from './modules/getText'
 import { getResultSamostoyatelen } from './samostoyatelen/getResult'
 const TEMP_FILE = 'TEMP_SAMOSTOYATELEN.txt'
 
-export async function notary(sourceFilePath: string): Promise<void> {
-  try {
+export async function notary(): Promise<void> {
     const cwd = resolve(__dirname, `../files`)
     const tempFilePath = `${cwd}/${TEMP_FILE}`
 
@@ -17,10 +12,7 @@ export async function notary(sourceFilePath: string): Promise<void> {
       throw new Error('convertedText.length < 100')
     }
     const result = getResultSamostoyatelen(convertedText)
-    let a
-  } catch (err) {
-    captureError(err, { exitFlag: true })
-  }
+    console.log(result)
 }
 
-notary('/home/just/repos/notary/files/samostoyatelenObekt.pdf').then(console.log)
+notary().then(console.log)

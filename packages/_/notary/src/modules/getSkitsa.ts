@@ -6,9 +6,7 @@ import { SKITSA_REGEX, SKITSA_REMOVE } from '../constants'
 
 export function getSkitsa(text: string): string {
   const [result] = match(SKITSA_REGEX, text)
-  if (result === undefined) {
-    throw 'SKITSA'
-  }
+  if (result === undefined) throw 'SKITSA'
 
   const willReturn = replace(
     SKITSA_REMOVE,

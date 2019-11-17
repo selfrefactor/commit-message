@@ -9,7 +9,7 @@ test('', () => {
     result,
   ).toEqual(expectedResult)
 })
-
+ 
 test('when not a number', () => {
   const address = 'гр. Свищов, п.к. 5250, ул. "Трети март" № 105-Б'
   const result = getNumberOfStreet(address)

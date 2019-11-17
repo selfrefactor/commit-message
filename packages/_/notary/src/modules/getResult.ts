@@ -1,5 +1,3 @@
-import { log } from 'log'
-
 import { getAcreage } from './getAcreage'
 import { getAddress } from './getAddress'
 import { getIdentifikator } from './getIdentifikator'
@@ -25,9 +23,9 @@ export function getResult(text: string): Result {
   const skitsa = getSkitsa(text)
   const zapoved = getZapoved(text)
 
-  log({ oldID, previousNumber, neighbours }, 'pattern')
-  log({ permanentPurpose, purpose, zapoved, address, acreage }, 'pattern')
-  log({ skitsa, locationRegister, identificator }, 'pattern')
+  console.log({ oldID, previousNumber, neighbours })
+  console.log({ permanentPurpose, purpose, zapoved, address, acreage })
+  console.log({ skitsa, locationRegister, identificator })
 
   return {
     acreage,
