@@ -8,18 +8,15 @@ const jestRules = {
   'jest/prefer-strict-equal': 0,
   'jest/require-tothrow-message': 0,
   'jest/no-identical-title': 1,
-  "jest/no-large-snapshots": [1, { "maxSize": 400 }],
+  'jest/no-large-snapshots': [1, {maxSize: 400}],
 }
 
 module.exports = {
-  parser  : 'babel-eslint',
-  plugins : [
-    'async-await',
-    'jest'
-  ],
-  env : {
-    jasmine : true,
-    jest    : true,
+  parser: 'babel-eslint',
+  plugins: ['async-await', 'simple-import-sort', 'jest'],
+  env: {
+    jasmine: true,
+    jest: true,
   },
-  rules : filter({...rules, ...jestRules}),
+  rules: filter({...rules, ...jestRules}),
 }
