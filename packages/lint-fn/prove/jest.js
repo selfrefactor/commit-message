@@ -1,8 +1,8 @@
-process.env.NODE_ENV = 'DEBUG'
+process.env.LINT_FN_DEBUG = 'ON'
 const { lintFn } = require('../')
 
-lintFn({ 
-  filePath : '/home/s/repos/rambda/src/indexBy.spec.js',
-  fixFlag: true,
-  logFlag: true
+lintFn({
+  filePath : `${ process.env.HOME }/repos/rambda/src/indexBy.spec.js`,
+  fixFlag  : true,
+  logFlag  : true,
 })

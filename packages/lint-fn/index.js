@@ -12,7 +12,7 @@ const { takeProjectDir } = require('./_modules/takeProjectDir')
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
-const debugFlag = false
+const debugFlag = process.env.LINT_FN_DEBUG === 'ON'
 const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 
 const exec = command => execCommand(command, DIR)

@@ -1,37 +1,39 @@
 {
-  "scripts": {
-    "de": "commit"
-  },
-  "name": "lint-fn",
-  "version": "1.9.0",
-  "description": "lint",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "repository": "https://github.com/selfrefactor/services/tree/master/packages/lint-fn",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "license": "MIT",
-  "depFn": [
-    "babel-eslint"
-  ],
-  "dependencies": {
-    "babel-eslint": "10.0.1",
-    "eslint": "^6.6.0",
-    "eslint-plugin-async-await": "^0.0.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-jest": "^23.0.3",
-    "eslint-plugin-no-unsafe-regex": "^1.0.0",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.2.0",
-    "eslint-plugin-sort-class-members": "^1.6.0",
-    "eslint-plugin-sort-requires": "^2.1.0",
-    "rambdax": "^3.1.0"
-  },
-  "devDependencies": {},
-  "commitMessage": {
-    "feature": [
-      "rule",
-      "deprecate",
-      "dep"
-    ]
-  }
+	"scripts": {
+		"de": "commit"
+	},
+	"name": "lint-fn",
+	"version": "1.9.0",
+	"description": "lint",
+	"main": "index.js",
+	"typings": "index.d.ts",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/lint-fn",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"depFn": [
+		"babel-eslint"
+	],
+	"dependencies": {
+		"babel-eslint": "10.0.1",
+		"eslint": "^6.6.0",
+		"eslint-plugin-async-await": "^0.0.0",
+		"eslint-plugin-babel": "^5.3.0",
+		"eslint-plugin-jest": "^23.0.4",
+		"eslint-plugin-no-unsafe-regex": "^1.0.0",
+		"eslint-plugin-react": "^7.16.0",
+		"eslint-plugin-react-hooks": "^2.3.0",
+		"eslint-plugin-sort-class-members": "^1.6.0",
+		"eslint-plugin-sort-requires": "^2.1.0",
+		"rambdax": "^3.3.1"
+	},
+	"devDependencies": {
+		
+	},
+	"commitMessage": {
+		"feature": [
+			"rule",
+			"deprecate",
+			"dep"
+		]
+	}
 }
