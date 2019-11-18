@@ -3,7 +3,7 @@
 		"de": "commit"
 	},
 	"name": "lint-fn",
-	"version": "1.9.0",
+	"version": "1.10.0",
 	"description": "lint",
 	"main": "index.js",
 	"typings": "index.d.ts",
@@ -26,9 +26,7 @@
 		"eslint-plugin-sort-requires": "^2.1.0",
 		"rambdax": "^3.3.1"
 	},
-	"devDependencies": {
-		
-	},
+	"devDependencies": {},
 	"commitMessage": {
 		"feature": [
 			"rule",
