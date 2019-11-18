@@ -12,13 +12,10 @@ const { takeProjectDir } = require('./_modules/takeProjectDir')
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
-// const debugFlag = process.env.NODE_ENV === 'DEBUG'
 const debugFlag = false
 const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 
-const exec = command =>
-  // console.log(command, 'Raw lint command')
-  execCommand(command, DIR)
+const exec = command => execCommand(command, DIR)
 
 const getLintCommandFn = (command, fixFlag) => mode => {
   const willReturn = fixFlag ?
@@ -28,8 +25,10 @@ const getLintCommandFn = (command, fixFlag) => mode => {
   return willReturn
 }
 
-async function whenPrettier(filePath){
+async function whenPrettier(filePath, withTypescript = false){
   await delay(500)
+  const typescriptPart = withTypescript ? '' : '--parser typescript'
+
   const command = glue(`
   prettier 
   --no-semi
@@ -40,6 +39,7 @@ async function whenPrettier(filePath){
   --jsx-single-quote
   --trailing-comma es5
   --write
+  ${ typescriptPart }
   ${ filePath }
 `)
   await exec(command)
@@ -57,14 +57,13 @@ async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
         --project tsconfig.json
         ${ filePath }
       `)
-
-      console.log({
-        tsCommand,
-        dir,
-      })
+      if (prettierFlag){
+        await whenPrettier(filePath, true)
+      }
 
       return await execCommand(tsCommand, dir)
     }
+
     if (prettierFlag && fixFlag){
       await whenPrettier(filePath)
     }
