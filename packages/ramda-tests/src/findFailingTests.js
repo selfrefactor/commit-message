@@ -46,7 +46,6 @@ async function checkSingleMethod(method, skipDelete){
   })
 
   const testOutput = readFileSync(outputPath).toString()
-
   if (!testOutput.includes('failing')) return unlinkSync(outputPath)
   if (skipDelete) return
 
@@ -56,18 +55,19 @@ async function checkSingleMethod(method, skipDelete){
     !KNOWN_FAILING_TESTS[ method ] ||
     numberFailing > KNOWN_FAILING_TESTS[ method ]
   ){
-    throw new Error(`${ method } has ${ numberFailing } tests`)
+    throw new Error(`'${ method }' has '${ numberFailing }' tests`)
   }
 
   unlinkSync(outputPath)
 }
 
 async function findFailingTests(skipDelete = false){
+  // const allMethods = [ 'and' ] 
   const allMethods = Object.keys(R).filter(x => x !== 'partialCurry')
 
   await mapAsync(async method => checkSingleMethod(method, skipDelete))(
     allMethods
   )
 }
-
+// findFailingTests()
 exports.findFailingTests = findFailingTests

@@ -16,7 +16,7 @@
     "clipboardy": "^2.1.0",
     "fs-extra": "^8.1.0",
     "helpers": "https://github.com/selfrefactor/helpers#1.8.1",
-    "rambda": "4.0.1",
+    "rambda": "https://github.com/selfrefactor/rambda#4.0.3",
     "rambdax": "3.0.2",
     "string-fn": "^2.10.2"
   }
