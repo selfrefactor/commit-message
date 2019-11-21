@@ -1,4 +1,6 @@
-import { reject } from 'rambda'
+import { reject, and } from 'rambda'
+
+const bs = and(1)(2)
 
 const a = reject((a,c)=> a > 1, [1,2,3])
 

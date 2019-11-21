@@ -7,7 +7,7 @@
     "test": "tsc index.ts"
   },
   "dependencies": {
-    "rambda": "3.2.1",
+    "rambda": "https://github.com/selfrefactor/rambda#4.0.4",
     "typescript": "^3.6.4"
   }
 }
