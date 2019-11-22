@@ -1,6 +1,8 @@
 "use strict";
 exports.__esModule = true;
 var rambda_1 = require("rambda");
+var morebs = rambda_1.transpose([[1, 2], [], [1, 2, 3], [3]]);
+console.log({ morebs: morebs });
 var bs = rambda_1.and(1)(2);
 var a = rambda_1.reject(function (a, c) { return a > 1; }, [1, 2, 3]);
 function fn(input) {

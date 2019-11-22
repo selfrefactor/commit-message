@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"rambda@https://github.com/selfrefactor/rambda#4.0.4":
-  version "4.1.0"
-  resolved "https://github.com/selfrefactor/rambda#72016679166e19efce494786e73169667a574539"
+"rambda@https://github.com/selfrefactor/rambda#4.1.0":
+  version "4.2.0"
+  resolved "https://github.com/selfrefactor/rambda#32a5c6ccb43d9c6580515f5197e15cd187864c9f"
 
 typescript@^3.6.4:
   version "3.6.4"

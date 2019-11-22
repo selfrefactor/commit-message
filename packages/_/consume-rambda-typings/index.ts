@@ -1,5 +1,7 @@
-import { reject, and } from 'rambda'
+import { reject, and, transpose } from 'rambda'
 
+const morebs = transpose([[1,2],[],[1,2,3],[3]])
+console.log({morebs})
 const bs = and(1)(2)
 
 const a = reject((a,c)=> a > 1, [1,2,3])
