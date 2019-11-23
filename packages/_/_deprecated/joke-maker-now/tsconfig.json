@@ -1,0 +1,31 @@
+{
+  "compilerOptions":{
+    "alwaysStrict": true,
+    "allowJs": true,
+    "jsx":"react",
+    "module":"commonjs",
+    "noImplicitAny":false,
+    "outDir":"./dist/",
+    "sourceMap":false,
+    "strictNullChecks": false,
+    "target":"es6",
+    "lib":[
+      "dom",
+      "es6",
+      "es7",
+      "esnext",
+      "es2017"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include":[
+    "./src/**/*"
+  ],
+  "exclude":[
+    "dist",
+    "src/**/*.spec.ts",
+    "node_modules"
+  ]
+}
