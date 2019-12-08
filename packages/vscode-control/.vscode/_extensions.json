@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "fabiospampinato.vscode-debug-launcher",
+    "vsls-contrib.gistfs",
     "uctakeoff.vscode-counter",
     "adam-watters.vscode-color-pick",
     "martinjohns.inline-types",
