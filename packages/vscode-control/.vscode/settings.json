@@ -6,6 +6,7 @@
   "window.zoomLevel": 0,
   "terminal.integrated.fontSize": 16,
   "editor.fontFamily": "Operator Mono",
+  "problems.showCurrentInStatus":true,
   "debug.console.fontFamily": "Operator Mono",
   "debug.console.wordWrap":false,
   "subtleBrackets.style": {
