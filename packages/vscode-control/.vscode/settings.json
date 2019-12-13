@@ -7,6 +7,7 @@
   "terminal.integrated.fontSize": 16,
   "editor.fontFamily": "Operator Mono",
   "problems.showCurrentInStatus":true,
+  "json.maxItemsComputed": 1000,
   "terminal.integrated.rendererType": "experimentalWebgl",
   "debug.console.fontFamily": "Operator Mono",
   "debug.console.wordWrap":false,
