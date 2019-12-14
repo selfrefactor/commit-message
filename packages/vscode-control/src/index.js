@@ -43,31 +43,40 @@ const splittedOptions = {
   'niketa.PORT_3'            : [ 3014, 3024 ],
 }
 
-const getPartialOptions = index => map(
-  x => x[ index ] ? x[index] : x[index-1]
-)(splittedOptions)
+const getPartialOptions = index =>
+  map(x => x[ index ] ? x[ index ] : x[ index - 1 ])(splittedOptions)
 
 function syncSettings(){
   const [
     stableSettingsLocation,
     insidersSettingsLocation,
     explorationSettingsLocation,
-  ] = getListFiles(
-    SETTINGS
+  ] = getListFiles(SETTINGS)
+  // console.log(insidersSettingsLocation)
+  writeJsonSync(
+    insidersSettingsLocation,
+    {
+      ...settings,
+      ...getPartialOptions(0),
+    },
+    { spaces : 2 }
   )
-  // console.log(insidersSettingsLocation)  
-  writeJsonSync(insidersSettingsLocation, {
-    ...settings,
-    ...getPartialOptions(0),
-  }, { spaces : 2 })
-  writeJsonSync(stableSettingsLocation, {
-    ...settings,
-    ...getPartialOptions(1),
-  }, { spaces : 2 })
-  writeJsonSync(explorationSettingsLocation, {
-    ...settings,
-    ...getPartialOptions(2),
-  }, { spaces : 2 })
+  writeJsonSync(
+    stableSettingsLocation,
+    {
+      ...settings,
+      ...getPartialOptions(1),
+    },
+    { spaces : 2 }
+  )
+  writeJsonSync(
+    explorationSettingsLocation,
+    {
+      ...settings,
+      ...getPartialOptions(2),
+    },
+    { spaces : 2 }
+  )
 }
 
 export function syncSnippets(){
@@ -78,7 +87,9 @@ export function syncSnippets(){
 }
 
 export function sync(){
+  console.log('START')
   syncFiles(KEYBINDING_SOURCE, getListFiles(KEYBINDING))
   syncSnippets()
   syncSettings()
+  console.log('END')
 }

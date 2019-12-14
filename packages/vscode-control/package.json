@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node ."
+    "sync": "node ."
   },
   "name": "vscode-control",
   "version": "0.1.0",
