@@ -17,6 +17,7 @@
     "borderColor": "#727566",
     "borderWidth": "7px"
   },
+  "editor.suggest.showKeywords": true,
   "magicBeans.IMPORT_HELPER_NAME": "ants",
   "magicBeans.IMPORT_TARGET": "rambdax",
   "magicBeans.IMPORT_UTIL_NAME": "bees",
