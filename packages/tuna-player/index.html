@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tuna Player</title>
+
+<script>
+        let link = document.createElement('link')
+        let linkSecond = document.createElement('link')
+        let linkThird = document.createElement('link')
+        let linkFourth = document.createElement('link')
+        let linkFifth = document.createElement('link')
+        link.setAttribute('rel', 'stylesheet')
+        linkSecond.setAttribute('rel', 'stylesheet')
+        linkThird.setAttribute('rel', 'stylesheet')
+        linkFourth.setAttribute('rel', 'stylesheet')
+        linkFifth.setAttribute('rel', 'stylesheet')
+        link.setAttribute('href',  'bulma.css')
+        linkSecond.setAttribute('href', 'reactSlider.css')
+        linkThird.setAttribute('href', 'reactSelect.css')
+        linkFourth.setAttribute('href', 'css/fontAwesome.css')
+        linkFifth.setAttribute('href', 'common.css')
+        document.head.appendChild(linkFourth)
+        document.head.appendChild(linkFifth)
+        document.head.appendChild(link)
+        document.head.appendChild(linkSecond)
+        document.head.appendChild(linkThird)
+        require('./bundle')
+</script>
+</head>
+<body>
+<div id="reactHook"></div>
+</body>
+</html>
