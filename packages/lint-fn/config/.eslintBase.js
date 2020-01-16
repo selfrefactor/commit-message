@@ -32,6 +32,7 @@ const betweenStatements = {
 }
 
 module.exports = {
+  'no-dupe-else-if': 1,
   'simple-import-sort/sort': 1,
   'array-bracket-spacing': [1, 'always'],
   'array-callback-return': 0,
