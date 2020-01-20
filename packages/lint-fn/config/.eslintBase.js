@@ -32,6 +32,7 @@ const betweenStatements = {
 }
 
 module.exports = {
+  'function-paren-newline': [1, {minItems: 3}],
   'function-call-argument-newline': [1, 'consistent'],
   'no-dupe-else-if': 1,
   'simple-import-sort/sort': 1,
@@ -149,7 +150,7 @@ module.exports = {
   'rest-spread-spacing': [1, 'never'],
   semi: [1, 'never'],
   // 'sort-imports'                  : [ 0, sortImports ],
-  'sort-keys': 1,
+  'sort-keys': [1, 'asc', {'caseSensitive': true, 'natural': false, 'minKeys': 4}],
   'sort-vars': 1,
   'space-before-blocks': [1, 'never'],
   'space-before-function-paren': 0,
