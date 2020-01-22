@@ -41,10 +41,10 @@ rambda@2.7.1:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.7.1.tgz#56c3d4100131db0e252236a26bed75faffa229d8"
   integrity sha512-EjTEdqAOqMWSgiyIs/7cd9ByCN1hlVq5YBxaTdlmGygIpvAtM+qv4rO2eptiTUIkP8E5lGusuq7hohtFM23knw==
 
-rambda@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-4.1.0.tgz#ca8d1a09f5cceed5ec4e971da0e56a372e88674a"
-  integrity sha512-GaenlDXW7jyVhZUhg0/iSss6FmcRa2JKM++ydGEucp4CeMEB0/jLleJfmvXJiB+LMVfTjr1+CceHq4EjPvsK4w==
+rambda@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-4.4.0.tgz#c300335e2c0a560f0d6334c200728cd753c5cce4"
+  integrity sha512-NbQBX5LOfSIHnLQww+QPiHqllTTnKqPLs0pqwBcVctkPh+o0AHCJ985rwGVS9OgaT+GGKI1lOIX3aTQnqXjoPA==
 
 redis-commands@^1.2.0:
   version "1.5.0"

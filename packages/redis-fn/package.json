@@ -8,7 +8,7 @@
 	"author": "selfrefactor <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"rambda": "^4.1.0",
+		"rambda": "^4.4.0",
 		"redis": "^2.8.0"
 	},
 	"devDependencies": {
