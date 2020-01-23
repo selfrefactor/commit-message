@@ -1,14 +1,15 @@
 const input = `
-eq(R.isEmpty(undefined), false);
-eq(R.isEmpty(''), true);
-eq(R.isEmpty(' '), false);
-eq(R.isEmpty([]), true);
-eq(R.isEmpty([[]]), false);
-eq(R.isEmpty({}), true);
-eq(R.isEmpty({x: 0}), false);
-eq(R.isEmpty(0), false);
-eq(R.isEmpty(NaN), false);
-eq(R.isEmpty(['']), false);
+eq(R.toggle(['on', 'off', 'neither'], 'on'), 'off');
+    eq(R.toggle(['on', 'off', 'neither'], 'off'), 'on');
+    eq(R.toggle(['on', 'off', 'neither'], 'neither'), 'neither');
+
+    eq(R.toggle(['active', 'inactive', 'neither'], 'inactive'), 'active');
+    eq(R.toggle(['active', 'inactive', 'neither'], 'active'), 'inactive');
+    eq(R.toggle(['active', 'inactive', 'neither'], 'neither'), 'neither');
+
+    eq(R.toggle([10, 100, 50], 10), 100);
+    eq(R.toggle([10, 100, 50], 100), 10);
+    eq(R.toggle([10, 100, 50], 50), 50);
     `
 
 const { remove, match, drop, init } = require('rambdax')
@@ -27,19 +28,20 @@ function parseSingleLine(line){
   return `expect(${ init(drop(3, firstPart)) }).toEqual(${ init(secondPart) })`
 }
 
-void function parseTest(){
+void (function parseTest(){
   const content = input.trim()
 
   if (!content.includes('eq(')) return
-  const newContent = content.split('\n').map(line => {
-    if (!line.includes('eq(')) return removeR(line)
+  const newContent = content
+    .split('\n')
+    .map(line => {
+      if (!line.includes('eq(')) return removeR(line)
 
-    return parseSingleLine(removeR(line))
-  })
+      return parseSingleLine(removeR(line))
+    })
     .join('\n')
 
   // console.log(newContent)
 
   writeSync(newContent)
-}()
-
+})()

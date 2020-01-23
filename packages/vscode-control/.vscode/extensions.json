@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "TabNine.tabnine-vscode",
+    "alexesprit.vscode-unfancy-file-icons",
     "helgardrichard.helium-icon-theme",
     "dzhavat.css-to-mdn",
     "huntertran.auto-markdown-toc",

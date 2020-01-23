@@ -150,7 +150,11 @@ module.exports = {
   'rest-spread-spacing': [1, 'never'],
   semi: [1, 'never'],
   // 'sort-imports'                  : [ 0, sortImports ],
-  'sort-keys': [1, 'asc', {'caseSensitive': true, 'natural': false, 'minKeys': 4}],
+  'sort-keys': [
+    1,
+    'asc',
+    {caseSensitive: true, natural: false, minKeys: 4},
+  ],
   'sort-vars': 1,
   'space-before-blocks': [1, 'never'],
   'space-before-function-paren': 0,
