@@ -1,15 +1,13 @@
 const input = `
-eq(R.toggle(['on', 'off', 'neither'], 'on'), 'off');
-    eq(R.toggle(['on', 'off', 'neither'], 'off'), 'on');
-    eq(R.toggle(['on', 'off', 'neither'], 'neither'), 'neither');
-
-    eq(R.toggle(['active', 'inactive', 'neither'], 'inactive'), 'active');
-    eq(R.toggle(['active', 'inactive', 'neither'], 'active'), 'inactive');
-    eq(R.toggle(['active', 'inactive', 'neither'], 'neither'), 'neither');
-
-    eq(R.toggle([10, 100, 50], 10), 100);
-    eq(R.toggle([10, 100, 50], 100), 10);
-    eq(R.toggle([10, 100, 50], 50), 50);
+eq(R.clamp(1, 10, 0), 1);
+eq(R.clamp(3, 12, 1), 3);
+eq(R.clamp(-15, 3, -100), -15);
+eq(R.clamp(1, 10, 20), 10);
+eq(R.clamp(3, 12, 23), 12);
+eq(R.clamp(-15, 3, 16), 3);
+eq(R.clamp(1, 10, 4), 4);
+eq(R.clamp(3, 12, 6), 6);
+eq(R.clamp(-15, 3, 0), 0);
     `
 
 const { remove, match, drop, init } = require('rambdax')
