@@ -16,17 +16,15 @@ const debug = async () => {
     const rabbit = await rabbitFn()
     const results = []
     const sentMessages = []
-    rabbit.receiveMessageCallback(
-      {
-        queue       : 'bar',
-        acknowledge : true,
-      },
-      receivedMessage => {
-        console.log('received', receivedMessage.content.toString('utf8'))
+    rabbit.receiveMessageCallback({
+      queue       : 'bar',
+      acknowledge : true,
+    },
+    receivedMessage => {
+      console.log('received', receivedMessage.content.toString('utf8'))
 
-        results.push(receivedMessage.content.toString('utf8'))
-      }
-    )
+      results.push(receivedMessage.content.toString('utf8'))
+    })
     for (const _ of R.range(0, 5)){
       const message = `foo${ Math.random() }`
       sentMessages.push(message)
@@ -38,10 +36,8 @@ const debug = async () => {
       await delay(200)
     }
     await delay(200)
-    const result = R.equals(
-      R.sort(sortFn, results),
-      R.sort(sortFn, sentMessages)
-    )
+    const result = R.equals(R.sort(sortFn, results),
+      R.sort(sortFn, sentMessages))
     console.log(R.sort(sortFn, results))
     console.log(R.sort(sortFn, sentMessages))
     console.log(result, true)

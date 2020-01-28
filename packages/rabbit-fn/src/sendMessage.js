@@ -7,7 +7,9 @@ const sendMessage = async ({ queue, message, rqChannel, persistent }) => {
 
   const messageToSend = Buffer.from(message, 'utf8')
 
-  rqChannel.sendToQueue(queue, messageToSend, { persistent : persistentFlag })
+  rqChannel.sendToQueue(
+    queue, messageToSend, { persistent : persistentFlag }
+  )
 }
 
 exports.sendMessage = sendMessage
