@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono:400&subset=cyrillic);
+
+html{
+  overflow: hidden;
+}
+body{
+  font-family: 'Fira Mono', monospace;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 15fr 1fr; 
+  grid-template-columns: 1fr 15fr 1fr;
+}
+.content{
+  background: #433;
+  grid-area: 2/2/3/3;
+}

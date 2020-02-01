@@ -1,7 +1,0 @@
-dist
-out
-.cache
-node_modules
-coverage
-chrome_bookmarks.json
-yarn-error.log*
