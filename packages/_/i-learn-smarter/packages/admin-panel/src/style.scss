@@ -1,0 +1,101 @@
+.adminrepair {
+  height: 89vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 8fr;
+  grid-template-areas: "depart depart depart" "enpart enpart enpart" "bgpart bgpart bgpart" "deword enword bgword" "search buttons buttons" "image image image";
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  div {
+    input {
+      padding-left: 6px;
+      font-size: 13px !important;
+      color: var(--dark);
+      margin-left: 5%;
+    }
+
+    input.short {
+      width: 85%;
+    }
+
+    input.long {
+      margin-left: 1.5%;
+      width: 95%;
+    }
+  }
+
+  &__depart {
+    grid-area: depart;
+  }
+
+  &__enpart {
+    grid-area: enpart;
+  }
+
+  &__bgpart {
+    grid-area: bgpart;
+  }
+
+  &__deword {
+    grid-area: deword;
+  }
+
+  &__enword {
+    grid-area: enword;
+  }
+
+  &__bgword {
+    grid-area: bgword;
+  }
+
+  &__search {
+    grid-area: search;
+  }
+
+  &__image {
+    grid-area: image;
+    text-align: center;
+
+    img {
+      height: 60vh;
+      width: auto;
+    }
+  }
+
+  &__buttons {
+    grid-area: buttons;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr;
+    }
+  }
+
+  &__images {
+    grid-area: image;
+    overflow-y: auto;
+
+    &--container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+
+      div {
+        width: 27vw;
+        height: auto;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+
+        img {
+          width: auto;
+          max-width: 22vw;
+          height: 30vh;
+        }
+      }
+    }
+  }
+}

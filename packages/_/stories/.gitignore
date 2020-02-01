@@ -1,0 +1,11 @@
+dist
+node_modules
+coverage
+reports
+flow-coverage
+.eslintcache
+.jest-cache
+.size-snapshot.json
+.cache
+.log
+storybook-static

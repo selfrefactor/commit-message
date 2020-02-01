@@ -1,0 +1,9 @@
+${input.marker}
+// ${_.constantCase(input.name)}
+interface ${_.pascalCase(`${input.name}.store`)} {
+${input.interfaceProps}
+}
+
+interface ${_.pascalCase(`${input.name}.props`)}{
+  ${_.camelCase(`${input.name}.store`)}: ${_.pascalCase(`${input.name}.store`)}
+}

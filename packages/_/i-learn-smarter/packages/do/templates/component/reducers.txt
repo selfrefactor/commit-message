@@ -1,0 +1,13 @@
+const initialState = ${0}
+  
+export function ${1}(
+  state: ${2} = initialState,
+  action: Action,
+): ${2} {
+
+  switch (action.type) {
+    // STORE_SWITCH
+    default:
+      return state
+  }
+}

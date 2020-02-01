@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Array [
+  "1 with focus ' a' and length 12: '           a'",
+  "2 with focus 'ab' and length 12: '          ab'",
+  "3 with focus 'ab' and length 13: '          abc'",
+  "4 with focus 'bc' and length 13: '         abcd'",
+  "5 with focus 'bc' and length 14: '         abcde'",
+  "6 with focus 'cd' and length 14: '        abcdef'",
+  "7 with focus 'cd' and length 15: '        abcdefg'",
+  "8 with focus 'de' and length 15: '       abcdefgh'",
+  "9 with focus 'de' and length 16: '       abcdefghi'",
+  "10 with focus 'ef' and length 16: '      abcdefghij'",
+  "11 with focus 'ef' and length 17: '      abcdefghijk'",
+  "12 with focus 'ef' and length 18: '      abcdefghijkl'",
+  "13 with focus 'fg' and length 18: '     abcdefghijklm'",
+  "14 with focus 'fg' and length 19: '     abcdefghijklmn'",
+  "15 with focus 'gh' and length 19: '    abcdefghijklmno'",
+  "16 with focus 'gh' and length 20: '    abcdefghijklmnop'",
+  "17 with focus 'gh' and length 21: '    abcdefghijklmnopq'",
+  "18 with focus 'cd' and length 26: '        abcdefghijklmnopqr'",
+  "19 with focus 'de' and length 26: '       abcdefghijklmnopqrs'",
+  "20 with focus 'ef' and length 26: '      abcdefghijklmnopqrst'",
+  "21 with focus 'fg' and length 26: '     abcdefghijklmnopqrstu'",
+  "22 with focus 'gh' and length 26: '    abcdefghijklmnopqrstuv'",
+  "23 with focus 'hi' and length 26: '   abcdefghijklmnopqrstuvw'",
+  "24 with focus 'ij' and length 26: '  abcdefghijklmnopqrstuvwx'",
+  "25 with focus 'jk' and length 26: ' abcdefghijklmnopqrstuvwxy'",
+  "26 with focus 'kl' and length 26: 'abcdefghijklmnopqrstuvwxyz'",
+]
+`;

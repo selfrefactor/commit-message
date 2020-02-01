@@ -1,0 +1,11 @@
+import { ActionsObservable } from 'redux-observable'
+import { Observable } from 'rxjs/Observable'
+import { ${0} } from '../../constants'
+
+export const ${1}Epic = (
+  action$: ActionsObservable<${2}>,
+  store: ObservableStore,
+): Observable<Action> =>
+  action$
+    .ofType(${0})
+    .map( () => ({ type: 'REPLACE_ME' }) )

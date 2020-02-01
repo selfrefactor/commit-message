@@ -1,0 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand);
+
+$back: #fafafa;
+$left-width: 84vw;
+$right-width: 73vw;
+$top: 1vh;
+$total-height: 98vh;
+
+portal{
+  width: $left-width;
+  height: $total-height;
+}
+portal#second{
+  width: $right-width;
+  height: $total-height;
+}
+.overflow__button{
+  cursor: pointer;
+  border-top-left-radius: 15%;
+  border-top-right-radius:20%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 20%;
+  background: #fafaccf1;
+  border: 1px ridge #2caf;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#portal{
+  top: $top;
+  left: -16vw;
+  position: absolute;
+}
+#portal-second{
+  top: $top;
+  border-left: 1px ridge #c5a;
+  left: 46vw;
+  position: absolute;
+}

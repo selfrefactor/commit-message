@@ -1,0 +1,2402 @@
+[
+  {
+    "from": "Вярваш ли в любовта на пръв поглед или трябва да вляза отново.",
+    "to": "Do you believe in love at first sight or should I come in again."
+  },
+  {
+    "from": "Любовта и приятелството са взаимно изключващи се.",
+    "to": "Love and friendship are mutually exclusive."
+  },
+  {
+    "from": "Капка любов струва повече от океан воля и разбиране.",
+    "to": "A drop of love is more than an ocean of will and understanding."
+  },
+  {
+    "from": "Ако искате да бъдете щастливи за час, опийте се.",
+    "to": "If you want to be happy for an hour, get drunk."
+  },
+  {
+    "from": "Всеки, който се ядосва на критиката, си признава че я заслужава.",
+    "to": "Anyone who is angry with criticism, admits that he deserves it."
+  },
+  {
+    "from": "Човек трябва да се подчини на изкушенията, защото не се знае, дали те ще се върнат отново.",
+    "to": "Man should submit to temptations, because no one knows if they are coming back."
+  },
+  {
+    "from": "Живеете, защото Бог го е искал, затова му покажете, че това е добра идея.",
+    "to": "You live because God wanted it, so show him it was a good idea."
+  },
+  {
+    "from": "Имам толкова хитър план, че можеш да му сложиш опашка и да го наречеш невестулка.",
+    "to": "I got a plan so cunning you could put a tail on it and call it a weasel."
+  },
+  {
+    "from": "Въпреки че хората изискват искрени критики, те искат само да чуят комплименти.",
+    "to": "Although people demand sincere criticism, they only want to hear compliments."
+  },
+  {
+    "from": "Ако два магарета се учат взаимно, нито едно от тях няма да стане лекар.",
+    "to": "If two donkeys teach each other, nobody will become a doctor."
+  },
+  {
+    "from": "Ако искате да опознаете хората, изучете техните извинения.",
+    "to": "If you want to get to know people, study their excuses."
+  },
+  {
+    "from": "Търпението е изкуството бавно да се ядосваш.",
+    "to": "Patience is the art of slowly becoming angry."
+  },
+  {
+    "from": "Рационалното в човека са неговите прозрения.",
+    "to": "The rational in man is his insights."
+  },
+  {
+    "from": "Едно нещо, което научих в математиката, е твърде лесно, греши!",
+    "to": "One thing I've learned in math, it's too easy, it's wrong!"
+  },
+  {
+    "from": "Това, което човек обича да прави, рядко е особено добро.",
+    "to": "What one likes to do is rarely especially good."
+  },
+  {
+    "from": "Харесва ми да изненадвам себе си.",
+    "to": "I like to surprise myself."
+  },
+  {
+    "from": "Всеки вярва само какъв шанс го е довел.",
+    "to": "Everyone believes only what chance has brought him."
+  },
+  {
+    "from": "Молитвата опреснява надеждите на сърцето.",
+    "to": "Prayer refreshes the hopes of the heart."
+  },
+  {
+    "from": "Тихо, не мога да се чуя как лъжа.",
+    "to": "Quiet, I can't hear myself lie."
+  },
+  {
+    "from": "Бедният не е този, който има малко, но този, който не може да получи достатъчно.",
+    "to": "Poor is not the one who has little, but the one who can not get enough."
+  },
+  {
+    "from": "Ако времето е най-ценното от всичко, загубата на време е най-големият отпадък.",
+    "to": "If time is the most precious thing of all, wasting time is the greatest waste."
+  },
+  {
+    "from": "Разбират много малко онези, които разбират само какво може да се обясни.",
+    "to": "They understand very little, those who understand only what can be explained."
+  },
+  {
+    "from": "По-добре да си лягате без вечеря, отколкото да се събуждате с дългове.",
+    "to": "Better to go to bed without supper than to get up with debts."
+  },
+  {
+    "from": "Никога не можеш да бъдеш твърде внимателен при избора си на врагове.",
+    "to": "You cannot be too careful in your choice of enemies."
+  },
+  {
+    "from": "Съвестта не ни пречи да извършим грях, но ни пречи да го ползваме.",
+    "to": "Conscience does not stop us from committing sin, but it prevents us from enjoying it."
+  },
+  {
+    "from": "Удоволствието е природно богатство, луксът е изкуствена бедност.",
+    "to": "Enjoyment is natural wealth, luxury is artificial poverty."
+  },
+  {
+    "from": "Образованието е пример и любов, нищо друго.",
+    "to": "Education is example and love, nothing else."
+  },
+  {
+    "from": "Поглед към света доказва, че ужасът не е нищо друго освен реалност.",
+    "to": "A look into the world proves that horror is nothing but reality."
+  },
+  {
+    "from": "Който никога не оттегля мнението си, обича себе си повече от истината.",
+    "to": "Whoever never withdraws his opinion, loves himself more than the truth."
+  },
+  {
+    "from": "Всеки ден можете да научите нещо глупаво.",
+    "to": "Every day you can learn something stupid."
+  },
+  {
+    "from": "Кривата е най-хубавото разстояние между две точки.",
+    "to": "A curve is the loveliest distance between two points."
+  },
+  {
+    "from": "Много съм добър в леглото, понякога спя над 9 часа.",
+    "to": "I am very good in bed, sometimes I sleep over 9 hours."
+  },
+  {
+    "from": "Страхът все още е единствената безплатна застраховка-живот.",
+    "to": "Fear is still the only life insurance for free."
+  },
+  {
+    "from": "За да получите заем, трябва да докажете, че нямате нужда от такъв.",
+    "to": "To get a loan, you have to prove that you do not need one."
+  },
+  {
+    "from": "В играта можете да разберете човек по-добре, отколкото ако говорите с него цяла година.",
+    "to": "In the game you can understand a person better, than talking with him whole year."
+  },
+  {
+    "from": "Не правете една глупост два пъти, защото изборът е достатъчно голям.",
+    "to": "Do not go stupid twice, because the choice is big enough."
+  },
+  {
+    "from": "Искрен и честен интерес значи почти толкова, колкото и разбирането.",
+    "to": "Warm and honest interest is almost as much as understanding."
+  },
+  {
+    "from": "Любовта не е всичко, от което се нуждаем, но имаме нужда от нея, за да имаме всичко.",
+    "to": "Love is not everything we need, but we need it in order to have everything."
+  },
+  {
+    "from": "Животът е дар, който заслужаваме, като се отказваме от него.",
+    "to": "Life is a gift that we deserve by giving it up."
+  },
+  {
+    "from": "Който иска да бъде обичан, трябва да бъде очарователен.",
+    "to": "Who wants to be loved should be adorable."
+  },
+  {
+    "from": "Бъди промяната, която искаш за света.",
+    "to": "Be yourself the change that you want for the world."
+  },
+  {
+    "from": "Умният човек забелязва всичко, а глупавият прави коментар на всичко.",
+    "to": "A clever person notices everything and a stupid makes a comment about everything."
+  },
+  {
+    "from": "Ако магарето е твърде добре, то отива на леда и си чупи крака.",
+    "to": "If the donkey is too well, then he goes to the ice and breaks his leg."
+  },
+  {
+    "from": "Това, което можете да направите днес, не отлагайте за утре.",
+    "to": "What you can do today, don't delay for tomorrow."
+  },
+  {
+    "from": "Да си вземеш довиждане винаги означава малка смърт.",
+    "to": "Saying goodbye always means a little death."
+  },
+  {
+    "from": "Един офис е само по-добър затвор.",
+    "to": "An office is only a better prison."
+  },
+  {
+    "from": "Независимо дали бързате или ходите бавно, пътят винаги остава същият.",
+    "to": "Whether you are rushing or walking slowly, the path always remains the same."
+  },
+  {
+    "from": "Изисквайте много от себе си и не очаквайте нищо от другите.",
+    "to": "Demand much of yourself and expect little from others. "
+  },
+  {
+    "from": "Мирът идва чрез разбиране, а не чрез съгласие.",
+    "to": "Peace comes through understanding not through agreement."
+  },
+  {
+    "from": "Спомням си го все едно че беше интересно.",
+    "to": "I remember it like it was interesting."
+  },
+  {
+    "from": "Да не знаеш нищо не е срам, но е срам ако нямаш желание да се научиш.",
+    "to": "Knowing nothing is not a shame, but it is if one doesn't want to learn anything."
+  },
+  {
+    "from": "Най-големите трудности се крият, когато ги търсим.",
+    "to": "The greatest difficulties lie where we look for them."
+  },
+  {
+    "from": "Беден не е този който има малко, а този който се нуждае от много.",
+    "to": "Poor is not who has little, but who needs a lot."
+  },
+  {
+    "from": "Наистина имам точната възраст, просто трябва да разбера за какво.",
+    "to": "I have exactly the right age now, I just have to find out for what."
+  },
+  {
+    "from": "Лъжата е като снежна топка, колкото по-дълго я търкаляте, толкова по-голяма става.",
+    "to": "The lie is like a snowball, the longer you roll it, the bigger it gets."
+  },
+  {
+    "from": "Ако не знаеш нищо, трябва да вярваш на всичко.",
+    "to": "If you do not know anything, you have to believe everything."
+  },
+  {
+    "from": "Всяка минута, в която се смеете, животът се удължава с един час.",
+    "to": "Every minute you laugh, life prolongs by an hour."
+  },
+  {
+    "from": "Който знае най-малко, често говори най-много.",
+    "to": "Who knows the least, often has the most to say."
+  },
+  {
+    "from": "Който се усмихва, вместо да се ядосва, винаги е най-силният.",
+    "to": "Who smiles instead of raging is always the strongest."
+  },
+  {
+    "from": "Човекът не е продукт на околната среда.",
+    "to": "Man is not the product of his environment."
+  },
+  {
+    "from": "Децата освежават живота и носят наслада на сърцето.",
+    "to": "Children refresh life and delight the heart."
+  },
+  {
+    "from": "Който е направил грешка и не я поправя, ще извърши следваща.",
+    "to": "Who has made a mistake and does not correct it, will commit a second one."
+  },
+  {
+    "from": "Костенурките могат да ви разкажат повече за пътя, отколкото зайците.",
+    "to": "Turtles can tell you more about the way than rabbits."
+  },
+  {
+    "from": "Само един идиот вярва, че той се учи от собствения си опит.",
+    "to": "Only an idiot believes that he learns from his own experience."
+  },
+  {
+    "from": "В нищо не се вярва толкова силно, колкото  за това, за което знаем най-малко.",
+    "to": "Nothing is believed as strongly as that about what we know the least."
+  },
+  {
+    "from": "Ти си специален в олимпийския смисъл на думата.",
+    "to": "You are special in an Olympic kind of way."
+  },
+  {
+    "from": "Който живее с разсеяности, става чужд в собственото си сърце.",
+    "to": "Whoever lives in distractions becomes alien in his own heart."
+  },
+  {
+    "from": "Само тези, които плуват срещу течението, стигат до източника.",
+    "to": "Only those who swim against the stream reach the source."
+  },
+  {
+    "from": "Човекът има много качества, но той определено не е рационален.",
+    "to": "Man is many things, but he is not rational."
+  },
+  {
+    "from": "Един мъдър човек пази парите в главата си, а не и в сърцето си.",
+    "to": "A wise man has the money in his head, but not in his heart."
+  },
+  {
+    "from": "Ако можете да победите себе си, можете да се състезавате с никого.",
+    "to": "If you can defeat yourself, you can compete with anyone."
+  },
+  {
+    "from": "Този, който прави винаги това което той вече може, винаги остава това което той вече е.",
+    "to": "Who always does what he already can, always remains only what he is already."
+  },
+  {
+    "from": "Вие трябва да се възползвате от вашите недостатъци.",
+    "to": "You should benefit from your disadvantages."
+  },
+  {
+    "from": "Парите не миришат когато са заслужени.",
+    "to": "Money doesn't smell, when they are deserved."
+  },
+  {
+    "from": "Истинският вкус на водата човек научава в пустинята.",
+    "to": "The true taste of the water man learns in the desert."
+  },
+  {
+    "from": "Успехът се основава на знанието, колко време е необходимо за неговото постигане.",
+    "to": "Success is generally based on knowing how much time is needed to succeed."
+  },
+  {
+    "from": "Една верига е толкова здрава, колкото е здрава нейната най-слаба връзка.",
+    "to": "A chain is only as strong as its weakest link."
+  },
+  {
+    "from": "Желанието на човек да изглежда умно често възпрепятства това да се случи.",
+    "to": "The desire to appear smart often prevents it."
+  },
+  {
+    "from": "Майките обичат да забравят, че пъпната връв вече е разделена при раждането.",
+    "to": "Moms like to forget that the umbilical cord is already separated at birth."
+  },
+  {
+    "from": "Колкото по-красива и по-пълна е паметта, толкова по-твърдо е раздялата.",
+    "to": "The more beautiful and fuller the memory, the harder the separation."
+  },
+  {
+    "from": "Трябва да погледнете нагоре, за да видите звездите.",
+    "to": "You have to look up to see the stars."
+  },
+  {
+    "from": "Винаги съм си мислел, че въздухът е безплатен, докато не си купих пакетче с чипс.",
+    "to": "I always thought air was free until I bought a bag of chips."
+  },
+  {
+    "from": "Имате все повече и повече мечти, отколкото реалността може да унищожи.",
+    "to": "Have more and more dreams than reality can destroy."
+  },
+  {
+    "from": "Ти искаш да си спестиш неприятностите, когато опознаваш хората.",
+    "to": "You want to save yourself from the trouble of getting to know the people."
+  },
+  {
+    "from": "Когато бях малък, вярвах че парите са най-важното в живота.",
+    "to": "When I was little, I believed that money was the most important thing in life."
+  },
+  {
+    "from": "Честността е първата глава в книгата на мъдростта.",
+    "to": "Honesty is the first chapter in the book of wisdom."
+  },
+  {
+    "from": "Тези, които само следват следите на другите, не оставят трайни впечатления.",
+    "to": "Those who only follow in the footsteps of others do not leave behind lasting impressions."
+  },
+  {
+    "from": "Ако моите изявления са ви прекалено ясни, тогава трябва да сте ме разбрали погрешно.",
+    "to": "If my statements have been too clear to you, then you must have misunderstood me."
+  },
+  {
+    "from": "В изречението на живота дяволът може да е запетая, но никога да не бъде този период.",
+    "to": "In the sentence of life, the devil may be a comma, but never let him be the period."
+  },
+  {
+    "from": "Предпочитам умен враг, отколкото глупав приятел.",
+    "to": "I prefer a clever enemy than a silly friend."
+  },
+  {
+    "from": "Въпреки че мирът е затворен, само интересът го поддържа.",
+    "to": "Although peace is closed, it is only the interest that sustains it."
+  },
+  {
+    "from": "Който иска да предвиди твърде надалеч, често прави грешно предположение.",
+    "to": "Who wants to foresee too far, often looks wrong."
+  },
+  {
+    "from": "Красиви дни не плачат че са отминали, а се смеят че са били.",
+    "to": "Beautiful days, do not cry when they have passed, but laugh that they have been."
+  },
+  {
+    "from": "Земното притегляне не е само закон, но и добра идея.",
+    "to": "Gravity is not only a law, but also a good idea."
+  },
+  {
+    "from": "Оптимизмът е философския камък, който превръща в злато всичко, до което се докосва.",
+    "to": "Optimism is the true philosopher stone that transforms into gold everything it touches."
+  },
+  {
+    "from": "Съществува благородното изкуство да оставяш нещата недовършени.",
+    "to": "There is the noble art of leaving things undone."
+  },
+  {
+    "from": "Шансът е псевдонимът, който Бог избира да остане инкогнито.",
+    "to": "Chance is the pseudonym that God chooses to remain incognito."
+  },
+  {
+    "from": "Ако съдите хора, нямате време да ги обичате.",
+    "to": "If you judge people, you have no time to love them."
+  },
+  {
+    "from": "Математиката е азбуката, с която Бог е описал Вселената.",
+    "to": "Mathematics is the alphabet by which God has described the universe."
+  },
+  {
+    "from": "Говоренето за музика е като танци за архитектурата.",
+    "to": "Talking about music is like dancing about architecture."
+  },
+  {
+    "from": "Обратното на лошото не трябва да бъде добро - може да е дори по-лошо.",
+    "to": "The opposite of bad does not have to be good - it can be even worse."
+  },
+  {
+    "from": "Добри намерения са като чекове в банка, в която вие нямате сметка.",
+    "to": "Good intentions are checks drawn to a bank where you do not have an account."
+  },
+  {
+    "from": "Лисицата е умна и се преструва, че е глупава, а при тебе е обратното.",
+    "to": "The fox is smart and pretends to be stupid, with you is the other way around."
+  },
+  {
+    "from": "Изобретателят на аварията излъга обичаше мира повече от истината.",
+    "to": "The inventor of the emergency lied loved peace more than the truth."
+  },
+  {
+    "from": "Има неща, които изглеждат невероятни за повечето хора, които не са изучавали математика.",
+    "to": "There are things that seem incredible to most people who have not studied mathematics."
+  },
+  {
+    "from": "Когато има разбиране, няма нужда от много думи.",
+    "to": "Where there is understanding, there is no need for many words."
+  },
+  {
+    "from": "Да не говорим за себе си е много благородно лицемерие.",
+    "to": "Not to speak of itself is a very noble hypocrisy."
+  },
+  {
+    "from": "Господи, прости ми вината, защото моите кредитори ми отказват.",
+    "to": "God, forgive me my guilt, as my creditors refuse."
+  },
+  {
+    "from": "Бакалаврите са мъже, които първо се информират за аварийния изход.",
+    "to": "Bachelors are men who first of all inform themselves about the emergency exit."
+  },
+  {
+    "from": "Напишете цялата несправедливост в пръстта, всички благословения в мрамора!",
+    "to": "Write all the injustice in the dust, all the blessings in the marble !."
+  },
+  {
+    "from": "Каквото ви липсва в главата, трябва да имате в краката си.",
+    "to": "What you do not have in your head, you have to be in the legs."
+  },
+  {
+    "from": "Ако имате само един чук като инструмент, ще видите нокът във всеки проблем.",
+    "to": "If you only have a hammer as a tool, you will see a nail in every problem."
+  },
+  {
+    "from": "Приятели са просто врагове, които не са достатъчно смели да те убият.",
+    "to": "Friends are just enemies who are not brave enough to kill you."
+  },
+  {
+    "from": "Отделете време за приятелите си, в противен случай времето ще ви ги отнеме.",
+    "to": "Take time for your friends, otherwise the time will take them from you."
+  },
+  {
+    "from": "Редът е удоволствието от разума, но безредието е наслада на въображението.",
+    "to": "Order is the pleasure of reason, but disorder is the delight of imagination."
+  },
+  {
+    "from": "Радостен е този който се смее и пее, дори когато животът му носи тревоги.",
+    "to": "Cheerful, who laughs and sings, even when life brings worries."
+  },
+  {
+    "from": "Започнах да медитирам и е много по-добре, отколкото да седя и да не правя нищо.",
+    "to": "I started meditating and it is much better than sitting around and doing nothing."
+  },
+  {
+    "from": "Прехвалването е като десет парчета захар в кафе, никой не може да погълне толкова.",
+    "to": "Over praise is like ten pieces of sugar in coffee, nobody can swallow that."
+  },
+  {
+    "from": "Щастието е просто един сън, докато болката е напълно реална.",
+    "to": "Happiness is just a dream, but the pain is real."
+  },
+  {
+    "from": "Живото изкуство е 90% способността да се справяш с хора, които не харесваш.",
+    "to": "Living art is 90% the ability to get on with people you do not like."
+  },
+  {
+    "from": "Никой не е безполезен, той все още може да служи като лош пример.",
+    "to": "Nobody is useless, he can still serve as a bad example."
+  },
+  {
+    "from": "Когато камъните плуват, листата потъват.",
+    "to": "When the stones are swimming, the leaves sink."
+  },
+  {
+    "from": "Щастието само понякога помага, винаги работи.",
+    "to": "Happiness only sometimes helps, work always."
+  },
+  {
+    "from": "Любящите сърца се усмихват на всички въпроси, относно смисъла на живота.",
+    "to": "Loving hearts smile about all questions about the meaning of life."
+  },
+  {
+    "from": "Още един безсмислен ден, в който не постигнах нищо.",
+    "to": "Another pointless day where I accomplish nothing."
+  },
+  {
+    "from": "Добрият брак се основава на приятелство.",
+    "to": "A good marriage is based on the talent for friendship."
+  },
+  {
+    "from": "Жалко е, че да си безполезен не е олимпийски спорт.",
+    "to": "It's too bad that being useless is not an Olympic sport."
+  },
+  {
+    "from": "Хвърлянето на кърпи е любимия спорт на песимистите.",
+    "to": "Towel throwing is the favorite sport of the pessimists."
+  },
+  {
+    "from": "Новата метла мете добре, но старата знае всички ъгли.",
+    "to": "A new broom returns well, but the old one knows all the corners."
+  },
+  {
+    "from": "Трябва да целунете много жаби, преди да намерите своя принц.",
+    "to": "You have to kiss a lot of frogs, before you find a prince."
+  },
+  {
+    "from": "Мъдър човек никога не противоречи на жена.",
+    "to": "A wise man never contradicts a woman."
+  },
+  {
+    "from": "Най-кратките думи, а именно да и не, изискват най-голямото мислене.",
+    "to": "The shortest words, namely yes and no, demand the most thought."
+  },
+  {
+    "from": "В Германия нищо не се възприема толкова сериозно като подготовката за забавление.",
+    "to": "Nothing is taken as seriously in Germany as the preparation for fun."
+  },
+  {
+    "from": "Кой понастоящем използва семейната мозъчна клетка.",
+    "to": "Who is currently using the family brain cell."
+  },
+  {
+    "from": "Какво казвате като аутсайдер на темата за разузнаването?",
+    "to": "What do you say as an outsider to the topic of intelligence?"
+  },
+  {
+    "from": "Пет минути слънце всеки ден могат да означават повече от цял слънчев ден по време на почивка.",
+    "to": "Five minutes of sunshine everyday life can mean more than a sunny day on holiday."
+  },
+  {
+    "from": "Когато един приятел си отиде, трябва да затворите вратата или ще стане студено.",
+    "to": "When a friend goes, you have to close the door or it will be cold."
+  },
+  {
+    "from": "Наистина е мъдър кой има повече сънища в душата си,\nтъй като реалността може да унищожи.",
+    "to": "Really wise is who has more dreams in his soul,\nas the reality can destroy."
+  },
+  {
+    "from": "Онези, които напускат, не усещат болката от раздяла.",
+    "to": "Those who leave do not feel the pain of parting."
+  },
+  {
+    "from": "Шлагер са текстове, които трябва да се пеят, защото са прекалено глупави, за да им се говори.",
+    "to": "Schlager are lyrics that have to be sung because they are too stupid to be spoken."
+  },
+  {
+    "from": "Ако не можете да измъкнете някой от главата си, това любов ли е или глупост.",
+    "to": "If you can not get someone out of your head, is that love or stupidity."
+  },
+  {
+    "from": "Ако имате градина и библиотека, няма да пропуснете нищо.",
+    "to": "If you have a garden and a library you will not miss anything."
+  },
+  {
+    "from": "Ние правим толкова много, за да мислим толкова малко.",
+    "to": "We do so much to think so little."
+  },
+  {
+    "from": "Един наистина велик човек никога не губи семплостта на дете.",
+    "to": "A truly great person never loses the simplicity of a child."
+  },
+  {
+    "from": "Страхувам се да знам и не мога да се игнорирам.",
+    "to": "I am afraid to know and can not ignore myself."
+  },
+  {
+    "from": "Трябва да порицавате една грешка с благородство и да се изповядвате с достойнство.",
+    "to": "You have to reprimand a mistake with grace and confess with dignity."
+  },
+  {
+    "from": "Докато децата са малки, дайте им корени.",
+    "to": "As long as the children are small, give them roots."
+  },
+  {
+    "from": "Когато сме ядосани, опонентът ни е постигнал целта си.",
+    "to": "When we are angry, our opponent has achieved his goal."
+  },
+  {
+    "from": "Прошката не е нещо еднократно, прошката е начин на живот.",
+    "to": "Forgiveness is not a one-time thing, forgiveness is a lifestyle."
+  },
+  {
+    "from": "Ароматът на цветята е по-сладък във въздуха, отколкото в ръката.",
+    "to": "The scent of the flowers is far sweeter in the air than in the hand."
+  },
+  {
+    "from": "Дори и този ден да не беше твой приятел, той поне беше твой учител.",
+    "to": "If this day was not your friend, he was at least your teacher."
+  },
+  {
+    "from": "Точно това, което са вашите мисли, е вашият живот.",
+    "to": "Exactly what your thoughts are, is your life."
+  },
+  {
+    "from": "Можеш да започнеш война, но никога не спираш, ако искаш.",
+    "to": "You can start a war, but never stop if you want."
+  },
+  {
+    "from": "С всеки неуспешен опит се приближавате до себе си.",
+    "to": "With each failed attempt you get closer to yourself."
+  },
+  {
+    "from": "Жена, която не ревнува, е като топка, която не скача.",
+    "to": "A woman, who does not get jealous, is like a ball that does not jump."
+  },
+  {
+    "from": "Работа, вечната тежест, без която всички други тежести ще станат непоносими.",
+    "to": "Work, the eternal burden, without which all other burdens would become unbearable."
+  },
+  {
+    "from": "Стартирането е добро, продължителността е по-добра, но търпението е най-доброто.",
+    "to": "Starting is good, continuing is better, patience is the best."
+  },
+  {
+    "from": "На каква възраст е подходящо да кажа на моето куче, че е осиновено.",
+    "to": "At what age is it appropriate to tell my dog that he is adopted."
+  },
+  {
+    "from": "Дори моят грим издържа по-дълго от връзките ти.",
+    "to": "Even my make-up lasts longer than your relationships."
+  },
+  {
+    "from": "Отричането е потвърждението на новина, която преди това е била само слух.",
+    "to": "A denial is the confirmation of a news that was previously a rumor."
+  },
+  {
+    "from": "Всеки има свои собствени вярвания и аз вярвам че ще пийна още едно.",
+    "to": "Everyone has their own beliefs and I believe I will have another drink."
+  },
+  {
+    "from": "Който вижда грешките си твърде лесно, рядко е готов да се подобри.",
+    "to": "Who finds it too easy to see his mistakes, is rarely ready to improve."
+  },
+  {
+    "from": "Какво е национализъм? Това е патриотизъм, който е загубил своето благородство.",
+    "to": "What is nationalism? This is a patriotism that has lost its nobility."
+  },
+  {
+    "from": "Радвам се да те видя и това е само малко преувеличение.",
+    "to": "Nice to meet you and that is only a slight exaggeration."
+  },
+  {
+    "from": "Любовта и уважението не могат да бъдат наложени от никакъв закон.",
+    "to": "Love and respect can not be enforced by any law."
+  },
+  {
+    "from": "Ако някой иска да се направи на глупак, той трябва да опита ревността.",
+    "to": "If one want to make a fool of yourself, one should try jealousy."
+  },
+  {
+    "from": "Всеки, който твърди че познава жените, не е джентълмен.",
+    "to": "Anyone, who claims to know women, is not a gentleman."
+  },
+  {
+    "from": "Човек не винаги може да направи нещо велико, но със сигурност нещо добро.",
+    "to": "One can not always do something great, but certainly something good."
+  },
+  {
+    "from": "Благодарен съм за най-острата критика, стига тя да е фактическа.",
+    "to": "I am grateful for the sharpest criticism as long as it remains factual."
+  },
+  {
+    "from": "Виното е създадено, за да прави хората щастливи.",
+    "to": "The wine is created to make people happy."
+  },
+  {
+    "from": "Нашето утре би било различно, ако можехме да се променим днес.",
+    "to": "Our tomorrow will be different if we change today."
+  },
+  {
+    "from": "Похвално е да имаш добро намерение, но самото изпълнение е трудно.",
+    "to": "Good is the intent, but the fulfillment is difficult."
+  },
+  {
+    "from": "Ако искате да дадете на децата си нещо, дайте им добър пример.",
+    "to": "If you want to give your children something, give them a good example."
+  },
+  {
+    "from": "За всяко приятно очакване, има поне три неприятни възможности.",
+    "to": "For every pleasant expectation, there are at least three unpleasant options."
+  },
+  {
+    "from": "За теб Ренесанса е нещо, което се случва на другите хора.",
+    "to": "To you the Renaissance was just something that happened to other people."
+  },
+  {
+    "from": "Щастливите роби са най-лошите врагове на свободата.",
+    "to": "Happy slaves are the bitterest enemies of freedom."
+  },
+  {
+    "from": "Когато лисицата чака пилетата сами да паднат от стобора, тя си отива гладна в къщи.",
+    "to": "When the fox waits for the chickens to fall off the bar, it goes home hungry."
+  },
+  {
+    "from": "Хората, които никога не се смеят, не са сериозни хора.",
+    "to": "The people who never laugh are not serious people."
+  },
+  {
+    "from": "Никога не говорим с пълна уста, а по-скоро с празна глава.",
+    "to": "We never speak with a full mouth rather with an empty head."
+  },
+  {
+    "from": "Сбогом думи трябва да бъдат кратки като обявяване на любов.",
+    "to": "Farewell words have to be short like a declaration of love."
+  },
+  {
+    "from": "Благодарен съм, не защото е полезно, а защото ми доставя удоволствие.",
+    "to": "I am grateful, not because it is beneficial, but because it gives pleasure."
+  },
+  {
+    "from": "Ако майката Земя можеше да крещи, всички щяхме да сме глухи.",
+    "to": "If Mother Earth could scream, we would all be deaf."
+  },
+  {
+    "from": "Риба се лови със стръв, а хора с думи.",
+    "to": "You catch fish with bait, people with words."
+  },
+  {
+    "from": "Лангвайлер: човек, който говори, ако искаш да го слуша.",
+    "to": "Langweiler: a person who talks if you want him to listen."
+  },
+  {
+    "from": "Да преживеете много все още не означава че имате опит.",
+    "to": "To experience much doesn't mean yet that you have experience."
+  },
+  {
+    "from": "Съществува само един напредък, а именно този в любовта.",
+    "to": "There is only one progress, namely the one in love."
+  },
+  {
+    "from": "Вие не сте милиардер, ако все още можете да броите милионите си.",
+    "to": "You are not a billionaire if you can still count your millions."
+  },
+  {
+    "from": "Колкото повече се доверяваме на човек, толкова повече сила му даваме да ни нарани.",
+    "to": "The more we trust a person, the more power we give him to hurt us."
+  },
+  {
+    "from": "Всяко обещание е ангажимент.",
+    "to": "Every promise is a commitment."
+  },
+  {
+    "from": "Една лъжица пълна с действие, е по-добра от кацата пълна със съвети.",
+    "to": "A spoon full of action is better than a bushel full of advice."
+  },
+  {
+    "from": "Ние можем да спечелим власт чрез знанието, но достигаме до съвършенството само чрез любов.",
+    "to": "We can gain power through knowledge, but we only get to perfection through love."
+  },
+  {
+    "from": "Уважението наистина е само фалшивата дума за страха от разума.",
+    "to": "Respect is really just the fake word for the fear of reason."
+  },
+  {
+    "from": "Да усещаш радостта на другите като своя е неизмеримо щастие.",
+    "to": "To feel the joy of others as your own is an unmeasurable happiness."
+  },
+  {
+    "from": "Киното в моята глава заслужава Оскар.",
+    "to": "My head cinema deserves an Oscar."
+  },
+  {
+    "from": "Винаги можеш да научиш нещо, ако не си достатъчно внимателен.",
+    "to": "You can always learn something if you are not careful enough."
+  },
+  {
+    "from": "Да се ​​намери мярката на нещата е най-точната наука.",
+    "to": "To find the measure of things is the finest science."
+  },
+  {
+    "from": "Иновациите започват със смела идея в главата и кураж за поемане на рискове.",
+    "to": "Innovation starts in the head with a bold idea and the courage to take risks."
+  },
+  {
+    "from": "Човек става богат само чрез неща, които човек не желае.",
+    "to": "One becomes rich only through things one does not desire."
+  },
+  {
+    "from": "Доволните хора нямат желание за каквито и да е промени.",
+    "to": "Satisfied people do not want any changes."
+  },
+  {
+    "from": "Спаси ме от илюзията, че трябва да кажа нещо по всеки повод и по всяка тема.",
+    "to": "Save me from the illusion of having to say something on every occasion and on every topic."
+  },
+  {
+    "from": "Силата на нашата вяра не е доказателство за нейната истинност.",
+    "to": "The strength of our belief is no proof of its correctness."
+  },
+  {
+    "from": "Шансовете предпочитат да ни се представят с маската на неудобството.",
+    "to": "Chances prefer to show themselves to us in the mask of inconvenience."
+  },
+  {
+    "from": "Всичко, което противоречи на природата, няма стабилност в дългосрочен план.",
+    "to": "Everything which is contrary to nature has no stability in long term."
+  },
+  {
+    "from": "Моята мотивация и аз имаме проблеми помежду си и в момента живеем отделно.",
+    "to": "My motivation and I have relationship problems and currently we live separately."
+  },
+  {
+    "from": "Ласкането е агресия на колене.",
+    "to": "Flattery is aggression on knees."
+  },
+  {
+    "from": "Не вярвам в напредъка, а в постоянството на човешката глупост.",
+    "to": "I do not believe in progress, but in the perseverance of human stupidity."
+  },
+  {
+    "from": "Не прекарвайте времето си в търсене на препятствие.",
+    "to": "Do not spend your time looking for an obstacle."
+  },
+  {
+    "from": "Благородният човек изисква от себе си, обикновеният изисква от другите.",
+    "to": "The noble demands himself, the regular demands of others."
+  },
+  {
+    "from": "Няма излишък на любов, излишък на знание и излишък на красота.",
+    "to": "There is no excess of love, no excess of knowledge and no excess of beauty."
+  },
+  {
+    "from": "Децата ги е грижа повече за това, което правят родителите, отколкото от това което казват.",
+    "to": "Children are more concerned about what parents do than what they say."
+  },
+  {
+    "from": "Ако натискате по-често, асансьорът ще дойде по-бързо.",
+    "to": "If you press more often, the elevator comes faster."
+  },
+  {
+    "from": "Любовта е разпродадена, но все още имаме водка на промоция.",
+    "to": "Love is sold out, but we still have vodka on sale."
+  },
+  {
+    "from": "Животът ни не винаги може да бъде изпълнен с радост, но винаги в него трябва да има любов.",
+    "to": "Our life can not always be full of joy, but always full of love."
+  },
+  {
+    "from": "Патетичен е ученикът, който не постига превъзходство над учителя си.",
+    "to": "Pathetic is the student who doesn't outclass his teacher."
+  },
+  {
+    "from": "Страхът е надеждата да не получим това, което заслужаваме.",
+    "to": "Fear is the hope we don't get what we deserve."
+  },
+  {
+    "from": "Ако човекът е твърде умен, той остава сам.",
+    "to": "If man is too clever, he remains alone."
+  },
+  {
+    "from": "Проблемите трябва да се разглеждат като възможности да пораснеш и преодолееш себе си.",
+    "to": "Problems should be seen as an opportunities to grow and to overcome yourself."
+  },
+  {
+    "from": "Аз не чета инструкции, аз натискам бутони докато проработи.",
+    "to": "I do not read instructions, I push buttons until it works."
+  },
+  {
+    "from": "Ревността е скрит комплимент за другите.",
+    "to": "Jealousy is a hidden compliment to others."
+  },
+  {
+    "from": "Сватбеният пръстен е смелост, която носите на пръста си.",
+    "to": "A wedding ring is a bravery award that you wear on your finger."
+  },
+  {
+    "from": "Ние рядко мислим за това, което нямаме, но твърде често за това, което ни липсва.",
+    "to": "We rarely think of what we do not have but too often of what we lack."
+  },
+  {
+    "from": "Човек ходи винаги с едно усмихнато и едно плачещо око.",
+    "to": "Man always walks with one smiling and one crying eye."
+  },
+  {
+    "from": "Най-богатият е този, който има най-малко нужда.",
+    "to": "The richest is the one who needs the least."
+  },
+  {
+    "from": "Първото нещо, което губите на диета за отслабване е доброто настроение.",
+    "to": "The first thing you lose on a weight loss diet is the good mood."
+  },
+  {
+    "from": "Ако искаш да спечелиш нещо ново, трябва да си готов да пожертваш нещо старо.",
+    "to": "If you want to win something new, you have to be ready to sacrifice the old."
+  },
+  {
+    "from": "Вярванията са по-опасни врагове на истината, отколкото лъжите.",
+    "to": "Beliefs are more dangerous enemies of truth than lies."
+  },
+  {
+    "from": "Законите на природата ни учат какво е възможно, но не и на това, което е правилно.",
+    "to": "The laws of nature teach us what is possible, but not what is right."
+  },
+  {
+    "from": "Това, което дава значение на живота, дава смисъл и на смъртта.",
+    "to": "That which gives meaning to life also makes sense to death."
+  },
+  {
+    "from": "Щастлив е този който е намерил своята работа, тъй като няма нужда от друг късмет.",
+    "to": "Happy is who has found his job, as he needs no other luck."
+  },
+  {
+    "from": "Каква полза за човека, ако се е научил да чете и пише, а оставя мисленето на другите?",
+    "to": "What good does it do to man if he has learned to read and write, but leaves thinking to others?"
+  },
+  {
+    "from": "Изглеждаш като че имаш спешна нужда да ми кажеш името си.",
+    "to": "You look like you have the urgent need to tell me your name."
+  },
+  {
+    "from": "Нежността е почивката на страстта.",
+    "to": "The tenderness is the resting of the passion."
+  },
+  {
+    "from": "Преди всичко любовта е слушане в мълчание.",
+    "to": "Above all, love is a listening in silence."
+  },
+  {
+    "from": "Ако бягате по тънък лед, безопасността ви е във вашата скорост.",
+    "to": "If you are running over thin ice, the safety is in your speed."
+  },
+  {
+    "from": "На който му доставя удоволствие да се оплаква, винаги ще намери нещо за което да го направи.",
+    "to": "Who receives pleasure from complaining, will always find something to complain about."
+  },
+  {
+    "from": "Ако се бях съгласил с вас, и двамата щяхме да сгрешим.",
+    "to": "If I had agreed with you, we’d both be wrong."
+  },
+  {
+    "from": "Забравих телефонния си номер, мога ли взема вашият?",
+    "to": "I forgot my phone number, can I have yours?"
+  },
+  {
+    "from": "Гласовете в главата ми ми казват, че ти искаш да говориш с мен.",
+    "to": "The voices in my head tell me, that you want to speak with me."
+  },
+  {
+    "from": "Просто исках да разменя няколко думи с нея.",
+    "to": "I just wanted to have a few words with her."
+  },
+  {
+    "from": "Не съществува причина да бързате или пришпорвате нещата напред.",
+    "to": "There is no reason to hurry or push things forward."
+  },
+  {
+    "from": "Въображението е по-важно от знанието, защото знанието е ограничено.",
+    "to": "Imagination is more important than knowledge, because knowledge is limited."
+  },
+  {
+    "from": "Звучеше толкова неоспоримо, че той изобщо не отговори.",
+    "to": "It sounded so indisputable that he gave no answer at all."
+  },
+  {
+    "from": "Вероятно мисля твърде малко за това.",
+    "to": "I probably think very little about it."
+  },
+  {
+    "from": "Ти разбираш същността на нещата.",
+    "to": "You understand the essence of the things."
+  },
+  {
+    "from": "Мислех си че може да имате причина да премълчите името си.",
+    "to": "I thought you might have a reason to keep your name secret."
+  },
+  {
+    "from": "Аз бях в чакалнята, когато ти минаваше през нея.",
+    "to": "I was in the waiting room myself when you went through."
+  },
+  {
+    "from": "Тези хора са толкова суеверни.",
+    "to": "These people are so superstitious."
+  },
+  {
+    "from": "Ненужната сложност убива котката.",
+    "to": "The unnecessary complexity killed the cat."
+  },
+  {
+    "from": "Кой има добър приятел, не се нуждае от огледало.",
+    "to": "Who has a good friend, doesn't need a mirror."
+  },
+  {
+    "from": "Който не знае нищо, също така не се съмнява в нищо.",
+    "to": "Whoever knows nothing, also does not question anything."
+  },
+  {
+    "from": "Който търси трудности, винаги ги намира.",
+    "to": "Who looks for difficulties, always finds them."
+  },
+  {
+    "from": "Толерантността е подозрението, че другите могат да имат право.",
+    "to": "Tolerance is the suspicion that others could have right."
+  },
+  {
+    "from": "Глупакът който работи, е по-добър от един умен човек, който спи.",
+    "to": "A fool, who works, is better that a smart guy, who sleeps."
+  },
+  {
+    "from": "За приятелството между двама души е необходимо търпението на единия.",
+    "to": "For the friendship of two, the patience of one is required."
+  },
+  {
+    "from": "Приятелството е като парите, тъй като е по-лесно да се спечели, отколкото да се запази.",
+    "to": "Friendship is like money as it is easier to be won, rather than to keep."
+  },
+  {
+    "from": "Приятелството между хората е просто пакт за ненападение.",
+    "to": "Friendship between people is just a non-aggression pact."
+  },
+  {
+    "from": "Често се нуждаем от промяна в посоката на гледане, за да видим по-ясно.",
+    "to": "We often need a change of our viewing direction, in order to see clearly."
+  },
+  {
+    "from": "Погледнете своите действия и се замислете ако те бяха вашите последни.",
+    "to": "Take a look at your actions and think if they were your last ones."
+  },
+  {
+    "from": "Това е една добра възможност за постигане на безсмъртие.",
+    "to": "This is a good opportunity to achieve immortality."
+  },
+  {
+    "from": "Прости на враговете си, но никога не забравяй техните имена.",
+    "to": "Forgive your enemies, but never forget their names."
+  },
+  {
+    "from": "Усмивката е най-краткото разстояние между двама души.",
+    "to": "A smile is the shortest distance between two people."
+  },
+  {
+    "from": "Мъжът носи своите години в костите си, докато жената носи своите в лицето си.",
+    "to": "The man carries his years in his bones, while the woman carries them in her face."
+  },
+  {
+    "from": "Най-същественото е невидимо за очите.",
+    "to": "The essential is invisible to the eyes."
+  },
+  {
+    "from": "Къща се строи с мъдрост и се пази с разбиране.",
+    "to": "А house is built with wisdom and kept with understanding."
+  },
+  {
+    "from": "Любовта е уравнение с две неизвестни.",
+    "to": "Love is an equation with two unknowns."
+  },
+  {
+    "from": "Жените искат да изживеят любовни романи, докато мъжете искат кратки разкази.",
+    "to": "Women want to experience love novels, while men want short stories."
+  },
+  {
+    "from": "Повечето хора се нуждаят от повече любов, отколкото те заслужават.",
+    "to": "Most people need more love, than they deserve."
+  },
+  {
+    "from": "Любовта е единственото робство, което се възприема като удоволствие.",
+    "to": "Love is the only slavery perceived as pleasure."
+  },
+  {
+    "from": "Не мога да те нараня, без да нараня и себе си.",
+    "to": "I cannot hurt you without hurting myself."
+  },
+  {
+    "from": "Който се смее последен, не схваща шегата.",
+    "to": "Who laughs last, did not understand the joke."
+  },
+  {
+    "from": "Каквото се замита под масата, накрая се озовава под килима.",
+    "to": "What is swept under the table, is often found under the carpet."
+  },
+  {
+    "from": "Винаги има две мнения, моето и грешното.",
+    "to": "There are always two opinions, mine and the false one."
+  },
+  {
+    "from": "Който говори много, има по-малко време да мисли.",
+    "to": "Who speaks much, has less time to think."
+  },
+  {
+    "from": "Номерът със забравянето е да разберете защо.",
+    "to": "The trick of forgetting is to understand why."
+  },
+  {
+    "from": "Мога да устоя на всичко, с изключение на изкушението.",
+    "to": "I can resist everything with the exception of the temptation."
+  },
+  {
+    "from": "Арогантността е изкуствотото да бъдете горди от собствената си глупост.",
+    "to": "Arrogance is the art of being proud of your own stupidity."
+  },
+  {
+    "from": "Времето не лекува никакви рани, ние просто свикваме с болката.",
+    "to": "Time heals no wounds, we just get used to the pain."
+  },
+  {
+    "from": "Хората си правят планове, а съдбата им се смее.",
+    "to": "People make plans and the the destiny laughs about that."
+  },
+  {
+    "from": "Завършилият на второ място е първият губещ.",
+    "to": "The second placed is the first loser."
+  },
+  {
+    "from": "Няма втори шанс за първо впечатление.",
+    "to": "There is never a second chance for a first impression."
+  },
+  {
+    "from": "Извънредните ситуации изискват извънредни решения.",
+    "to": "Extraordinary situations require extraordinary solutions."
+  },
+  {
+    "from": "Ако това е решението, предпочитам да си взема проблема обратно.",
+    "to": "If this is the solution, i would take my problem back."
+  },
+  {
+    "from": "Една звезда е достатъчна, за да може човек може да повярва в светлината.",
+    "to": "One star is enough, so one can believe in the light."
+  },
+  {
+    "from": "Това, което човек никога не предава, всъщност никога не го губи.",
+    "to": "What man never surrender, man will never lose."
+  },
+  {
+    "from": "Дискусията е изкуството да говорим внимателно един през друг.",
+    "to": "Discussion is the art to thoughtfully talk over each other."
+  },
+  {
+    "from": "Този, който обича, иска да даде нещо без да получи нищо в замяна.",
+    "to": "Who loves, wants to give something and not to receive."
+  },
+  {
+    "from": "Често човек е разстроен от критиката, защото човек знае че тя е основателна.",
+    "to": "Often one is upset about criticism, because one knows it was justified."
+  },
+  {
+    "from": "Спонтанността трябва да бъде внимателно планирана.",
+    "to": "Spontaneity must be careful planned."
+  },
+  {
+    "from": "Не ме следвай, аз също съм се загубил.",
+    "to": "Do not follow me, I am also lost."
+  },
+  {
+    "from": "Не вземайте нищо прекалено сериозно и тогава всичко става по-лесно.",
+    "to": "Do not take anything too serious and then everything will get easy."
+  },
+  {
+    "from": "Аз не съм воайор, просто съм много добре информиран.",
+    "to": "I am no stalker, i am just very well informed."
+  },
+  {
+    "from": "Добрата новина е, че днес е последния понеделник за тази седмица.",
+    "to": "The good news is that today is the last Monday this week."
+  },
+  {
+    "from": "За теб специално би трябвало да вали дъжд от рози, но с вазите.",
+    "to": "For you should rain roses, but with the vases."
+  },
+  {
+    "from": "Аз не съм глупав, просто имам лош късмет, когато мисля.",
+    "to": "I am not stupid, I just have bad luck with thinking."
+  },
+  {
+    "from": "Днес живея утре ще чистя, може би.",
+    "to": "Today I live, tomorrow I clean, maybe."
+  },
+  {
+    "from": "Аз не съм дебел, просто стомахът ми е триизмерен.",
+    "to": "I am not fat, just my stomach is in three dimensions."
+  },
+  {
+    "from": "Да бъдеш уморен не е състояние, а е по-скоро отношение към живота.",
+    "to": "Being tired is not a state, rather an attitude towards life."
+  },
+  {
+    "from": "Ако всичко беше толкова лесно, колкото да станеш дебел.",
+    "to": "If only everything was as easy as getting fat."
+  },
+  {
+    "from": "Алкохолът не решава никакви проблеми, но същото важи и за млякото.",
+    "to": "Alcohol does not solve any problems, but neither does milk."
+  },
+  {
+    "from": "Господи, дай ми търпение, но моля направи го веднага.",
+    "to": "Dear God, give me patience, but please do so immediately."
+  },
+  {
+    "from": "По-добре да карате колело към плажа, отколкото да ходите на работа с Мерцедес.",
+    "to": "Better ride a bike to the beach, rather than go to work with Mercedes."
+  },
+  {
+    "from": "Може да се ожениш само ако имаш пари за развод.",
+    "to": "Marry only when you have the money for the divorce."
+  },
+  {
+    "from": "Интелигентността ме преследва, но аз съм по-бърз.",
+    "to": "The intelligence chases me, but I am faster."
+  },
+  {
+    "from": "Аз не падам, аз просто атакувам земята.",
+    "to": "I am not falling, i just attack the ground."
+  },
+  {
+    "from": "Хората си мислят, че те могат да ме оценят.",
+    "to": "People think that they can evaluate me."
+  },
+  {
+    "from": "Моето легло и аз сме влюбени, но будилникът не иска да го приеме.",
+    "to": "My bed and I are in love, but the alarm clock doesn't want to accept it."
+  },
+  {
+    "from": "Преди това бяхте всичко за мен, а сега сте просто още един телефонен номер.",
+    "to": "Earlier you were everything to me, now you are just another phone number."
+  },
+  {
+    "from": "Къде всъщност бях в нощта между петък и понеделник?",
+    "to": "Where was I actually in the night between Friday and Monday?"
+  },
+  {
+    "from": "Защо да ходя пеш, когато имам четири напълно здрави гуми.",
+    "to": "Why should I go walking, when I have four healthy tires."
+  },
+  {
+    "from": "Извинявай че не тя чух, просто моите мисли бяха по-интересни.",
+    "to": "Sorry that I didn't listen, because my thoughts were more interesting."
+  },
+  {
+    "from": "Накрая взех решение и казвам може би.",
+    "to": "I finally decide and I say maybe."
+  },
+  {
+    "from": "Моите съседи слушат добра музика, независимо от тяхното желание.",
+    "to": "My neighbors listen to good music, regardless of their will."
+  },
+  {
+    "from": "Пияният казва, какво мисли трезвения.",
+    "to": "The drunk says, what the sober thinks."
+  },
+  {
+    "from": "Секунда търпение може да предотврати много бедствия.",
+    "to": "A moment of patience can prevent many disasters."
+  },
+  {
+    "from": "За бира дори бих отишъл на работа.",
+    "to": "For beer I would even go to work."
+  },
+  {
+    "from": "Събудих се днес и веднага се замислих за теб.",
+    "to": "I woke up today and immediately though about you."
+  },
+  {
+    "from": "Любовта е, когато от Аз и Ти се получава Ние.",
+    "to": "Love is when from I and You emerge We."
+  },
+  {
+    "from": "Дългият спор доказва, че и двете страни грешат.",
+    "to": "A long dispute proves, that both sides are wrong."
+  },
+  {
+    "from": "Пацифистите са овце, които вярват, че вълкът е вегетарианец.",
+    "to": "The pacifists are sheeps who believe that the wolf is vegetarian."
+  },
+  {
+    "from": "Страхливецът, който признава същността си, има кураж.",
+    "to": "The coward, that admits his nature, has a courage."
+  },
+  {
+    "from": "Жената е единственият подарък, който сам се опакова.",
+    "to": "The woman is the only gift, that pack itself."
+  },
+  {
+    "from": "Разбираш че остаряваш, когато хората почнат да ти казват колко млад изглеждаш.",
+    "to": "You know you are getting old, when people start saying how young you look."
+  },
+  {
+    "from": "Понякога животът може да се понесе единствено в пиян ступор.",
+    "to": "Some days life is only bearable in drunken stupor."
+  },
+  {
+    "from": "Кръстопътя на живота е без знаци.",
+    "to": "On the crossroads of life, there are no signs."
+  },
+  {
+    "from": "Приятният комплимент е правдоподобно преувеличение.",
+    "to": "A nice compliment is a believable exaggeration."
+  },
+  {
+    "from": "Обидите имат дълъг живот.",
+    "to": "The insults have a long life."
+  },
+  {
+    "from": "Импровизация е, когато никой не забележи подготовката.",
+    "to": "Improvisation is when nobody notices the preparation."
+  },
+  {
+    "from": "Да бъдеш богат не означава да имаш пари, а да можеш да ги харчиш.",
+    "to": "Being rich means not having money, but spending money."
+  },
+  {
+    "from": "Любовта е клетка с решетки от щастие.",
+    "to": "Love is a cage with bars of happiness."
+  },
+  {
+    "from": "Който няма самочувствие, се нуждае от патриотизъм.",
+    "to": "Who doesn't have self-confidence, needs patriotism."
+  },
+  {
+    "from": "Традицията е илюзия за дълготрайност.",
+    "to": "Tradition is illusion of the durability."
+  },
+  {
+    "from": "Парите и оръжията не са заместител на ума и волята.",
+    "to": "Money and weapons are no substitute for brain and willpower."
+  },
+  {
+    "from": "Рационалността говори тихо, затова често никой не я чува.",
+    "to": "Rationality speaks quiet, that is why it is often not heard."
+  },
+  {
+    "from": "Всички проблеми са решени, когато сме взели твърдо решение.",
+    "to": "All problems are over, when we have made a firm decision"
+  },
+  {
+    "from": "По-лошо от това да си сляп е да не искаш да вижиш.",
+    "to": "Worse than being blind is to not want to see."
+  },
+  {
+    "from": "Мълчанието е аргументация с други средства.",
+    "to": "Silence is reasoning with other means."
+  },
+  {
+    "from": "Мълчанието от вчера никога не оправдава мълчанието от днес.",
+    "to": "The silence from yesterday never justifies the silence from today."
+  },
+  {
+    "from": "По-добре е да се обиждаме един друг, отколкото да се стреляме.",
+    "to": "It is better to insult each other rather than to shoot each other."
+  },
+  {
+    "from": "Това, което се печели с насилие, може да бъде запазено само с насилие.",
+    "to": "What is won with violence, can be kept only with violence."
+  },
+  {
+    "from": "Историята е лъжата, за която има взаимно съгласие.",
+    "to": "History is the lie, for which man have agreed upon."
+  },
+  {
+    "from": "Когато двама хора винаги мислят еднакво, единият от тях е ненужен.",
+    "to": "When two people think always the same, one of them is needless."
+  },
+  {
+    "from": "Безусловното покорство изисква невежеството.",
+    "to": "Unconditional obedience requires ignorance."
+  },
+  {
+    "from": "Каквото човек се е научил да разбира, той не се страхува повече от него.",
+    "to": "What man has learned to understand, he is no longer affraid from."
+  },
+  {
+    "from": "Да се ​​откажеш от мисленето е психическата версия на обявяването на фалит.",
+    "to": "To surrender from thinking is the mental version of declaration of bankruptcy."
+  },
+  {
+    "from": "Липсата на въображение означава смъртта на науката.",
+    "to": "A lack of imagination means the death of science."
+  },
+  {
+    "from": "Този въпрос е твърде добър, за да го развалиш с отговор.",
+    "to": "This question is too good for you to spoil it with your answer."
+  },
+  {
+    "from": "Има мълчаливи хора, които са по-интересни и от най-талантливите оратори.",
+    "to": "There are silent people who are more interesting than the best speakers."
+  },
+  {
+    "from": "Високоговорителят усилва гласа, но не и аргумента.",
+    "to": "The speaker strengthen the voice, but not the argument."
+  },
+  {
+    "from": "Удовлетворението от твоите обстоятелства е най-голямото благосъстояние.",
+    "to": "The satisfaction of your circumstances is the biggest fortune."
+  },
+  {
+    "from": "Съвестта е свекърва, чието посещение никога не свършва.",
+    "to": "The conscience is mother-in-law, which visit never ends."
+  },
+  {
+    "from": "Това, което се спечели с насилие, няма издръжливост.",
+    "to": "What is won by violence has no endurance."
+  },
+  {
+    "from": "Слухът е сляп, но тича по-бързо от вятъра.",
+    "to": "The rumor is blind, but runs faster than the wind."
+  },
+  {
+    "from": "Искреността е първия дълг на критика.",
+    "to": "Sincerity is the first duty of the critic."
+  },
+  {
+    "from": "Музиката е езикът на страстта.",
+    "to": "The music is the language of the passion."
+  },
+  {
+    "from": "Търпението е също толкова позорно, колкото и бързането, защото и двете са страх.",
+    "to": "The patience is equally disgraceful as the rush, because both are fear."
+  },
+  {
+    "from": "Теорията е предположение с висше образование.",
+    "to": "Theory is a guess with higher education."
+  },
+  {
+    "from": "Не можете да спрете вълната, но можете да се научите да сърфирате.",
+    "to": "You can't stop the wave, but you can learn to surf."
+  },
+  {
+    "from": "Човекът трябва първо да умре няколко пъти, преди да може наистина да живее.",
+    "to": "Man at first must die several times, before he can really live."
+  },
+  {
+    "from": "Който не преодолява страха си всеки ден, не е научил нищо.",
+    "to": "Who doesn't overcome his fear every day, has learned nothing."
+  },
+  {
+    "from": "Който не може да намери радост в живота, не го търси.",
+    "to": "Who cannot find a joy in life is not searching for it."
+  },
+  {
+    "from": "Препятствията и трудностите са стъпки, от които се издигаме нагоре.",
+    "to": "Obstacles and difficulties are steps from which we rise up."
+  },
+  {
+    "from": "Думата е мъртва, но вярата я прави жива.",
+    "to": "The word is dead, but the faith makes it alive."
+  },
+  {
+    "from": "Състраданието стои в основата на световния мир.",
+    "to": "The compassion is the basis for peace in the world."
+  },
+  {
+    "from": "Това, което се прави от любов, е винаги от другата страна на доброто и лошото.",
+    "to": "What is done out of love always is on the other side of good and evil."
+  },
+  {
+    "from": "Новата любов започва, когато старата спира да боли.",
+    "to": "New love begins where the old one stops to hurt."
+  },
+  {
+    "from": "Истинската любов блести като зората и мълчи като гроб.",
+    "to": "True love shines like a dawn and stay silent like a grave."
+  },
+  {
+    "from": "Действията би трябвало да бъдат последица от мислите, а не обратното.",
+    "to": "The practice should be the result of thoughts, not vice versa."
+  },
+  {
+    "from": "Разумът и чувствата са различни по природа.",
+    "to": "To thinking and to feel are different by nature."
+  },
+  {
+    "from": "Работата на интелекта е да мисли, докато сънищата са неговото удоволствие.",
+    "to": "To think is work for the intellect, while the dreams are his pleasure."
+  },
+  {
+    "from": "Знанието дава власт, но характерът осигурява уважение и признателност.",
+    "to": "Knowledge gives power, but character provides respect and recognition."
+  },
+  {
+    "from": "Човекът се нуждае само от невежество и самоувереност за да бъде успешен.",
+    "to": "Man needs for success only ignorance and self-confidence."
+  },
+  {
+    "from": "Знанието е дете на опита.",
+    "to": "Knowledge is the child of the experience."
+  },
+  {
+    "from": "Мъдрият човек не винаги е образован, както и образованият не винаги е мъдър.",
+    "to": "The wise man is not educated, the educated man is not wise."
+  },
+  {
+    "from": "Нищо не е по-невежо, колкото невежеството на сигурността.",
+    "to": "Nothing is more ignorant as the ignorance of certainty."
+  },
+  {
+    "from": "По-добре е да разбереш човека, отколкото да го съдиш.",
+    "to": "It is nicer to understand a person, rather than judge him."
+  },
+  {
+    "from": "Загубата на време е най-голямата измама срещу мислещото човечеството.",
+    "to": "The waste of time is the biggest scam of thinking mankind."
+  },
+  {
+    "from": "Когато думите губят смисъла си, тогава хората губят свободата си.",
+    "to": "When the words loose their meaning, then people loose their freedom."
+  },
+  {
+    "from": "Амбицията е последното убежище подслон на губещия.",
+    "to": "Ambition is the last shelter of the loser."
+  },
+  {
+    "from": "Обществото аплодира фойерверките, но никога не аплодира изгрева.",
+    "to": "The public applauds a firework, but never a sunrise."
+  },
+  {
+    "from": "Често хората предпочитат желанието повече от изпълнението.",
+    "to": "Often people prefer the desire more than the fulfillment."
+  },
+  {
+    "from": "Вниманието е това, което наричаме страхливост в другите.",
+    "to": "Caution is what we call cowardice in the others."
+  },
+  {
+    "from": "Търпението, това е изкуството да се скрие нетърпението.",
+    "to": "Patience is the art to hide your impatience."
+  },
+  {
+    "from": "Утопистът вижда рая, реалиста вижда рая плюс змията.",
+    "to": "The utopian sees the paradise, the realist the paradise plus the snake."
+  },
+  {
+    "from": "Изненадата и учудването са началото на осъзнаването.",
+    "to": "Surprise and amazement are the beginning of the comprehension."
+  },
+  {
+    "from": "Потокът на истината минава през канали от грешки.",
+    "to": "The stream of truth runs through canals of errors."
+  },
+  {
+    "from": "Повечето хора използват младата си възраст, за да разрушат старостта си.",
+    "to": "Most people use their young age to ruin their old age."
+  },
+  {
+    "from": "Който не се страхува от истината, също не трябва да се страхува и от лъжата.",
+    "to": "Who does not fear the truth, also shouldn't fear the lie."
+  },
+  {
+    "from": "Животът не е справедлив, но за някои хора това е добре.",
+    "to": "Life is not fair, but for the most people this is good."
+  },
+  {
+    "from": "Нашата природа е да мразим всичко, което е по-висшестоящо от нас.",
+    "to": "It is our nature to hate everything that is superior to us."
+  },
+  {
+    "from": "Няма по-добра хармония, отколкото когато сърцето и устата действат като едно цяло.",
+    "to": "There is no better harmony, than when heart and mouth link together."
+  },
+  {
+    "from": "Хипербола е истината, която е загубила своя мир.",
+    "to": "The hyperbole is a true, that has lost its peace."
+  },
+  {
+    "from": "Който бяга от миналото си, винаги губи състезанието.",
+    "to": "Who escapes his past, always loses the race."
+  },
+  {
+    "from": "Който обвинява времето, просто търси причина се извини себе си.",
+    "to": "Whoever accuses the time, wants only to excuse himself."
+  },
+  {
+    "from": "Не можете да направите омлет, без да счупите яйцата.",
+    "to": "You can't make an omelette without braking some eggs."
+  },
+  {
+    "from": "Човекът чува по-лесно ехото, отколкото отговора.",
+    "to": "Man hears easier an echo rather that an answer."
+  },
+  {
+    "from": "Най-доброто от хората са младите им чувства и старите им мисли.",
+    "to": "The best in people are their young feelings and their old thoughts."
+  },
+  {
+    "from": "Човечеството е пример за безпрецедентното търпение на природата.",
+    "to": "The mankind is an example of the unprecedented patience of nature."
+  },
+  {
+    "from": "Грациозността е изблик на вътрешна хармония.",
+    "to": "Grace is a leak of the internal harmony."
+  },
+  {
+    "from": "Да не правиш нищо, всъщност увеличава свободата в света.",
+    "to": "Nothing to do increases the freedom in the world."
+  },
+  {
+    "from": "Човекът забравя болката много по-бързо от щастието.",
+    "to": "Man forgets pain much faster than happiness."
+  },
+  {
+    "from": "Когато се построят замъци във въздуха, няма архитектурни правила.",
+    "to": "To build castles in the air, there is no architectural rules."
+  },
+  {
+    "from": "Убийството от отмъщение или омраза не е доказателство за сила.",
+    "to": "Killing from revenge or hate is not a proof of strength."
+  },
+  {
+    "from": "Нетърпението вижда само целта, а не пътя към нея.",
+    "to": "Impatience only sees the goal not the way to there."
+  },
+  {
+    "from": "Фактите няма да престанат да съществуват, само защото са игнорирани.",
+    "to": "Facts wouldn't cease to exist, only because they are ignored."
+  },
+  {
+    "from": "Желанието винаги се състои от нетърпение и означава страдание.",
+    "to": "Desire always involves impatience and means suffering."
+  },
+  {
+    "from": "Първо изпразнете душата си, чак след това започнете да я пълните.",
+    "to": "First empty your soul, then start filling it."
+  },
+  {
+    "from": "Грациозността за тялото е това, каквото е яснотата за ума.",
+    "to": "Grace for the body is what clarity is for the mind."
+  },
+  {
+    "from": "В една и съща среда, всеки от нас живее в напълно различен свят.",
+    "to": "By the same environment, each of us lives in a completely different world."
+  },
+  {
+    "from": "Красотата отминава, но глупостта е вечна.",
+    "to": "The beauty passes away, but the stupidity is eternal."
+  },
+  {
+    "from": "Съдбата често бива наричана случайност.",
+    "to": "The destiny would often be called accident."
+  },
+  {
+    "from": "Сетивата не мамят, защото те не съдят.",
+    "to": "The senses don't lie, because they don't judge."
+  },
+  {
+    "from": "Да се ​​наслаждаваме на живота, докато не го разбираме.",
+    "to": "Let us enjoy life as long as we do not understand it."
+  },
+  {
+    "from": "Ревнивият човек умира, но ревността никога.",
+    "to": "The jealous guy dies, but the jealousy never dies."
+  },
+  {
+    "from": "Който руши всички мостове, трябва да знае как да плува.",
+    "to": "Who breaks all the bridges, must know how to swim."
+  },
+  {
+    "from": "Търпението е бавен, но надежден строител.",
+    "to": "Patience is a slow but reliable builder."
+  },
+  {
+    "from": "Меланхолията е удоволствието да бъдеш тъжен.",
+    "to": "Melancholy is the pleasure of being sad."
+  },
+  {
+    "from": "Характерът е една напълно образована воля.",
+    "to": "A character is one fully educated will."
+  },
+  {
+    "from": "Сърцето никога няма да бъде напълно запълнено със слава и чест.",
+    "to": "The heart will never be completely full of fame and honour."
+  },
+  {
+    "from": "Да си напълно глупав не е толкова зле, колкото да си само наполовина просветлен.",
+    "to": "Fully stupid is not so bad as only partially enlightened."
+  },
+  {
+    "from": "Най-красивата мечта за свобода ще бъде мечтана в затвора.",
+    "to": "The most beautiful dream for freedom will be dreamed in the prison."
+  },
+  {
+    "from": "Злополука е дума без смисъл, защото нищо не съществува без причина.",
+    "to": "Accident is meaningless word, because nothing exist without a cause."
+  },
+  {
+    "from": "В живота има по-важни неща, отколкото да ускоряваме неговата скорост.",
+    "to": "There are more important things in life, than accelerating its speed."
+  },
+  {
+    "from": "Пазете се от вземането на решение, на което не можете да се усмихнете.",
+    "to": "Beware of the decision you can not smile at."
+  },
+  {
+    "from": "Бедността в града е голяма, но мързелът е още по-голям.",
+    "to": "Poverty is big in the city, but the laziness is even bigger."
+  },
+  {
+    "from": "Всяка подредба е първата стъпка към нов хаос.",
+    "to": "Every order is the first step towards a new chaos."
+  },
+  {
+    "from": "Надеждата е добра закуска, но лоша вечеря.",
+    "to": "Hope is a good breakfast, but a bad dinner."
+  },
+  {
+    "from": "По-рано страдахме от престъпността, днес страдаме от законите.",
+    "to": "Earlier we suffered from the crime, today we suffer from the laws."
+  },
+  {
+    "from": "Единствената ми последователност е постоянната ми непоследователност.",
+    "to": "My only consistency is my permanent inconsistency."
+  },
+  {
+    "from": "Големият град означава силна изолация.",
+    "to": "A big city means deep isolation."
+  },
+  {
+    "from": "Ние не се разболяваме от даването, а по-скоро от запазването.",
+    "to": "We don't get sick from giving, rather than from keeping."
+  },
+  {
+    "from": "Лъжата разтърсва душата, истината я укрепва.",
+    "to": "Untruth shatters the soul, truth strengthens it."
+  },
+  {
+    "from": "Компромисът е добър чадър, но не е покрив.",
+    "to": "The compromise is a good umbrella, but it is no roof."
+  },
+  {
+    "from": "Мълчанието е едно от най-великите умения за разговор.",
+    "to": "Silence is one of the greatest conversation skills."
+  },
+  {
+    "from": "Най-големият враг на справедливостта е привилегията.",
+    "to": "The biggest enemy of the justice is the privilege."
+  },
+  {
+    "from": "Завистта е по-непреклонна от омразата.",
+    "to": "The envy is more relentless than the hate."
+  },
+  {
+    "from": "Колкото повече думи говорим, толкова повече са шансовете за неразбиране.",
+    "to": "As many words we speak, as much are the chances for misunderstanding."
+  },
+  {
+    "from": "Най-добрата част от смелостта е предпазливостта.",
+    "to": "The best part of the bravery is the caution."
+  },
+  {
+    "from": "Характерът не е нищо повече от продължителен навик.",
+    "to": "The character is nothing more than a lengthy habit."
+  },
+  {
+    "from": "Цялото настоящо време е само един момент от вечността.",
+    "to": "The whole current time is just a point of the eternity."
+  },
+  {
+    "from": "Амбицията и удоволствието говорят често на един и същи език.",
+    "to": "Ambition and pleasure speak often the same language."
+  },
+  {
+    "from": "Взаимните спомени често са най-добрите миротворци.",
+    "to": "Mutual memories are often the best peacemakers."
+  },
+  {
+    "from": "Животът е мост от въздишки над поток от сълзи.",
+    "to": "The life is a bridge of sighs over a river of tears."
+  },
+  {
+    "from": "Речта е дадена на хората, за да скрият мислите си.",
+    "to": "The speech is given to the people to hide their thoughts."
+  },
+  {
+    "from": "Иронията не е оръжие, а по-скоро е една утеха за безсилните.",
+    "to": "Irony is no weapon, rather than only a consolation for the powerless."
+  },
+  {
+    "from": "Във всяко желание спи разочарованието от неговото изпълнение.",
+    "to": "In every wish slumbers the disappointment of his fulfillment."
+  },
+  {
+    "from": "Ако предположим, че всички сме луди, тогава животът е обяснен.",
+    "to": "When we consider that we are all crazy, life is explained."
+  },
+  {
+    "from": "Справедливостта е временна, но съвестта е вечна.",
+    "to": "Justice is temporary, but the conscience is eternal."
+  },
+  {
+    "from": "Недоверието е лоша защита, която ограничава повече отколкото да защитава.",
+    "to": "Mistrust is bad armour, that does more restraining than protecting."
+  },
+  {
+    "from": "Трябва да се събудим от съня и да видим нашата отговорност.",
+    "to": "We must awaken from sleep and see our responsibility."
+  },
+  {
+    "from": "Наистина незаменими в историята са само Адам и Ева.",
+    "to": "Really irreplaceable in history were only Adam and Eve."
+  },
+  {
+    "from": "Само чрез смелост човек може да въведе ред в живота си.",
+    "to": "Only through courage man can bring order in his life."
+  },
+  {
+    "from": "Образованието е най-евтината държавна защита.",
+    "to": "Education is the cheapest defense of the countries."
+  },
+  {
+    "from": "Имаме неясни надежди, но ясни страхове.",
+    "to": "We have vague hopes, but clear fears."
+  },
+  {
+    "from": "Никой момент не е толкова лош, за да не може човек да бъде честен.",
+    "to": "No time is so bad, so that man cannot be honest."
+  },
+  {
+    "from": "Омразата е любовта, която се е провалила.",
+    "to": "The hate is the love, that has failed."
+  },
+  {
+    "from": "Болезнената истина струва повече от приятното ласкателство.",
+    "to": "A hurtful truth is worth more than a lovely flattery."
+  },
+  {
+    "from": "Един добър съвет в забавна форма е по-добър от сериозната инструкция.",
+    "to": "A good advice in funny form is better than a serious instruction."
+  },
+  {
+    "from": "Най-важното умение е това, което организира всички останали.",
+    "to": "The most important skill is the one, which organizes all others."
+  },
+  {
+    "from": "Очите говорят по-силно от устните.",
+    "to": "The eyes speak stronger than the lips."
+  },
+  {
+    "from": "Обещаната земя винаги е отвъд планините.",
+    "to": "The promised land is always beyond the mountains."
+  },
+  {
+    "from": "Опитът е името, което хората дават на своите глупости.",
+    "to": "Experience is the name people give to their stupidities."
+  },
+  {
+    "from": "Илюзиите са болести, от които за съжаление човек винаги бива излекуван.",
+    "to": "Illusions are diseases, from which man is unfortunately always cured."
+  },
+  {
+    "from": "Човекът трябва да знае докъде е все още възможно да се върне назад.",
+    "to": "Man must know the point where retreat is still possible."
+  },
+  {
+    "from": "Надеждата е нелогичната вяра пред входа към невъзможното.",
+    "to": "Hope is the abnormal belief in front of the entry of the impossible."
+  },
+  {
+    "from": "Как може човек, който е видял другата страна на хората, все още да бъде горд?",
+    "to": "How can a person, who saw the other side of the people, can still be proud?"
+  },
+  {
+    "from": "Кой понякога не чувства прекалено много, винаги чувства твърде малко.",
+    "to": "Who does not sometimes feel too much, always feels too little."
+  },
+  {
+    "from": "Силата на характера често е просто слабост на емоцията.",
+    "to": "Strength of the character is often just weakness of the emotion."
+  },
+  {
+    "from": "Нищо не е толкова ужасно, колкото силата на глупостта при умните хора.",
+    "to": "Nothing is as terrible as the power of stupidity in the smart people."
+  },
+  {
+    "from": "Доброто име остава ярко дори и в тъмнината.",
+    "to": "The good name remains bright even in the darkness."
+  },
+  {
+    "from": "Безразличието е най-леката форма на нетолерантност.",
+    "to": "Indifference is the mildest form of intolerance."
+  },
+  {
+    "from": "По-добре да управляваш в ада, отколкото да служиш в рая.",
+    "to": "Better to rule in hell, than to serve in heaven."
+  },
+  {
+    "from": "Който иска най-доброто, трябва да вкуси от най-горчивото.",
+    "to": "Who wants the best, must taste the bitterest."
+  },
+  {
+    "from": "Колко скоро красотата и фигурата избледняват.",
+    "to": "How soon beauty and figure fade away."
+  },
+  {
+    "from": "Животът възпитава великите умове и оставя на мира малките.",
+    "to": "Life educates the great minds and leave the small ones."
+  },
+  {
+    "from": "Кое място в света вече не е пълно с нашите проблеми.",
+    "to": "Which place in the world is not already full with our troubles."
+  },
+  {
+    "from": "Този, който не знае че носи маска, я носи по най-перфектния начин.",
+    "to": "The one who doesn't know that he wears a mask, wears it most perfectly."
+  },
+  {
+    "from": "Винаги съм бил глупав да вярвам в доброто у човека.",
+    "to": "I have always been foolish to believe in the good in man."
+  },
+  {
+    "from": "Инатът е пародия на характера.",
+    "to": "Stubbornness is the parody of the character."
+  },
+  {
+    "from": "Нищо в историята на живота не е по-стабилно от промяната.",
+    "to": "Nothing in the history of life is more stable than the change."
+  },
+  {
+    "from": "Няма друга мотивация за катерене освен егоизма.",
+    "to": "There is no other motivation to climb mountains than egoism."
+  },
+  {
+    "from": "Най-болезнени са тези агонии, които си създаваме сами.",
+    "to": "The most painful are those agonies, which we create ourselves."
+  },
+  {
+    "from": "Човек без цел страда от съдбата си, а човек с цел формира своята.",
+    "to": "Man without a goal suffer from his fate, while man with goal shape it."
+  },
+  {
+    "from": "Хората трябва да се борят за законите си, по същия начин както защитават градските си стени.",
+    "to": "The people must fight for their laws as they fight for the city walls."
+  },
+  {
+    "from": "Животът е почти твърде жесток, за да бъде поносим.",
+    "to": "The life is almost too cruel to be bearable."
+  },
+  {
+    "from": "Само най-смелите сънища трябва да рискуват пробуждането.",
+    "to": "Only the bravest dreams should risk the awaking."
+  },
+  {
+    "from": "Времето може да бъде само дума или мярка, защото то е без истинска същност.",
+    "to": "The time is only a word or a measure, but without a real essence."
+  },
+  {
+    "from": "Най-трудната част в живота е вземането на решение.",
+    "to": "The most difficult in life is the decision."
+  },
+  {
+    "from": "Философията мълчи там където правосъдието е изгубило своя разум.",
+    "to": "The philosophy is silent, where the justice loses his mind."
+  },
+  {
+    "from": "Безкористността е просто един по-зрял егоизъм.",
+    "to": "Selflessness is more mature egoism."
+  },
+  {
+    "from": "Скриването на несправедливостта е покана за нейното повторение.",
+    "to": "The conceal of injustice is an invitation to its repetition."
+  },
+  {
+    "from": "Отговорността произтича от факта, че човекът каза Не твърде късно.",
+    "to": "Responsibility comes from the fact, that man said No too late."
+  },
+  {
+    "from": "Съвестта е един от най-умните адвокати.",
+    "to": "The conscience is one of the smartest lawyers."
+  },
+  {
+    "from": "Сред най-нелогичните понятия са страхът и надеждата.",
+    "to": "Among the least logical concepts are the fear and the hope."
+  },
+  {
+    "from": "Който иска да се грижи за всичко, го очаква много страдание.",
+    "to": "Whoever wants to take care of all things, expects much suffering."
+  },
+  {
+    "from": "Самотата означава ефективност за този, който притежава памет и цел.",
+    "to": "Loneliness means efficiency for the one who posses memory and objective."
+  },
+  {
+    "from": "Малките хора се радват на живот, който предлага само удоволствие.",
+    "to": "The little people enjoy a life that offers only pleasure."
+  },
+  {
+    "from": "В дълбините на съзнанието си, хората крият своите съкровища.",
+    "to": "In the depths of their minds, people hide their treasures."
+  },
+  {
+    "from": "Сълзите са таксата, която плащаме да влезем в божиите градините.",
+    "to": "Tears are the toll pay for the gardens of god."
+  },
+  {
+    "from": "Никой човек не е свободен, там където човек също е роб на своята независимост.",
+    "to": "No man is free, where man is also a slave to his independence."
+  },
+  {
+    "from": "Хората остаряват, но рядко узряват.",
+    "to": "People grow old, but rarely mature."
+  },
+  {
+    "from": "Книгите за много хора са само хартиени мебели.",
+    "to": "Books for many people are just paper furniture."
+  },
+  {
+    "from": "Би било безполезно да я молите за помощ.",
+    "to": "It would be useless to ask her for help."
+  },
+  {
+    "from": "Опитах се да го накарам да разбере, че не е добре дошъл.",
+    "to": "I tried to make him understand that he was not welcome."
+  },
+  {
+    "from": "Бях уплашен почти до смърт.",
+    "to": "I was scared almost to death."
+  },
+  {
+    "from": "Когато си дал всичко от себе си, тогава не можеш да се обвиняваш.",
+    "to": "When you give it all, then you can't accuse yourself."
+  },
+  {
+    "from": "Нямам и най-малкият шанс.",
+    "to": "I don't stand a chance."
+  },
+  {
+    "from": "Аз най-важните неща мога само да намекна.",
+    "to": "I can only indicate the most important things."
+  },
+  {
+    "from": "Моите постижения се основават на минали преживявания.",
+    "to": "My performances are based on past experiences."
+  },
+  {
+    "from": "Тъй като нашият престой е много кратък, ние трябва да го планираме много по-добре.",
+    "to": "As our stay is very short, we have to plan it much better."
+  },
+  {
+    "from": "Tой печели много пари и живее съобразно това.",
+    "to": "He earns a lot of money and lives accordingly."
+  },
+  {
+    "from": "Опитах се да го накарам да разбере, че не е добре дошъл.",
+    "to": "I tried to make him understand that he was not welcome."
+  },
+  {
+    "from": "Ние сме по следите на убиеца.",
+    "to": "We are on the trails of the killer."
+  },
+  {
+    "from": "Човек трябва да пише мемоари си, докато все още може да си ги спомни.",
+    "to": "Man should write memoirs, while he can still remember them."
+  },
+  {
+    "from": "Редът е знак за слабост.",
+    "to": "Order is a sign of weakness."
+  },
+  {
+    "from": "Преди това още бях нерешителен, а днес не съм напълно сигурен.",
+    "to": "I used to be undecided, I аm not so sure today."
+  },
+  {
+    "from": "Модата е акроним за мъжете жертващи спестяванията си.",
+    "to": "Fashion is acronym for men sacrificing the savings."
+  },
+  {
+    "from": "Майка ти готви вряща вода, но по рецепта.",
+    "to": "Your mother cooks boiling water by recipe."
+  },
+  {
+    "from": "Моралният обича душата си, обикновеният обича своята собственост.",
+    "to": "The moral man loves his soul, the ordinary his property."
+  },
+  {
+    "from": "Всеки има глупави мисли, но умният човек ги крие.",
+    "to": "Everyone has silly thoughts, but the smart person keeps them quiet."
+  },
+  {
+    "from": "Предразсъдъците са препятствия поставени на пътя на живота.",
+    "to": "Prejudices are obstacles on the race track of life."
+  },
+  {
+    "from": "Но повечето хора си мислят нова мисъл на всеки десет години.",
+    "to": "But most people only think a new thought every ten years."
+  },
+  {
+    "from": "Идеалистите понякога стават много ядосани, когато реалността ги опровергава.",
+    "to": "Idealists sometimes become very angry when reality disproves them."
+  },
+  {
+    "from": "Когато вятърът на промяната настъпи, някои строят вятърни мелници, а други изграждат стени.",
+    "to": "When the wind of change blows, some build windmills, other build walls."
+  },
+  {
+    "from": "Отърви се от голямата страст да се опитваш да организираш делата на другите.",
+    "to": "Get rid of the great passion of trying to organize the affairs of others."
+  },
+  {
+    "from": "Не можете да изядете тортата и да я запазите цяла.",
+    "to": "You can not eat and keep the cake."
+  },
+  {
+    "from": "Обърнете внимание на вашите чувства, защото те се превръщат в мисли.",
+    "to": "Pay attention to your feelings, because they become thoughts."
+  },
+  {
+    "from": "Децата и часовниците не бива да са постоянно под око, трябва да ги пуснете сами да вървят.",
+    "to": "Children and watches should not be raised constantly, you have to let them go."
+  },
+  {
+    "from": "Цялата власт, която имам, се основава единствено на това да знам това което не знам.",
+    "to": "All the authority I have is based solely on knowing what I do not know."
+  },
+  {
+    "from": "Хората, които си изгарят пръстите, не разбират по същество играта с огъня.",
+    "to": "People who burn their fingers do not understand the game with the fire."
+  },
+  {
+    "from": "Нямам решение, но се възхищавам на проблема.",
+    "to": "I do not have a solution, but I admire the problem."
+  },
+  {
+    "from": "Платоничната любов е времето между запознаването и първата целувка.",
+    "to": "Platonic love is the time between introduction and the first kiss."
+  },
+  {
+    "from": "За да бъде щастлив, човек не трябва да бъде прекалено зает с другите хора.",
+    "to": "To be happy, one should not be too busy with the other people."
+  },
+  {
+    "from": "Фактът, че мечтая на английски не ме притеснява, но германските субтитри ме дразнят!",
+    "to": "The fact that I dream in English does not bother me, but the German subtitles annoy me!"
+  },
+  {
+    "from": "Смешните хора извършват повече глупости от тъжните, но тъжните хора извършват по-големи.",
+    "to": "Funny people commit more foolishnesses than sad ones, but sad people commit bigger ones."
+  },
+  {
+    "from": "Който има лоша памет, винаги трябва да казва истината.",
+    "to": "Who has a bad memory, must always tell the truth."
+  },
+  {
+    "from": "Много по-лесно е да простиш на врага си вместо на приятеля си.",
+    "to": "It is much easier to forgive the enemy instead of the friend."
+  },
+  {
+    "from": "Фактите не се интересуват от вашите чувства.",
+    "to": "Facts don't care about your feelings."
+  },
+  {
+    "from": "Да говоря със самия себе си е единственият начин за интелигентен разговор.",
+    "to": "Talking to myself is the only way of having an intelligent conversation."
+  },
+  {
+    "from": "Научете правилата, за да можете да ги нарушавате правилно.",
+    "to": "Learn the rules so you can break them properly."
+  },
+  {
+    "from": "Голямата цел на живота не е знанието, а действието.",
+    "to": "The big goal of life is not knowledge, but action."
+  },
+  {
+    "from": "Мишката не може да бъде държана отговорна за сиренето.",
+    "to": "A mouse can not be held responsible for the cheese."
+  },
+  {
+    "from": "Ранната птица улавя червея, но втората мишка получава сиренето.",
+    "to": "The early bird catches the worm, but the second mouse gets the cheese."
+  },
+  {
+    "from": "Израстването е единствения начин да оцелееш.",
+    "to": "Getting older is the only way to survive."
+  },
+  {
+    "from": "Кой се отказва от свободата да спечели сигурност, ще загуби и двете в края на краищата.",
+    "to": "Who gives up the freedom to gain security, will lose both in the end."
+  },
+  {
+    "from": "Който мълчи, се смята за мъдър.",
+    "to": "Whoever is silent, is thought to be wise."
+  },
+  {
+    "from": "Всичко, което започва  със смях, вече е спечелено.",
+    "to": "Whoever starts the day with a laugh has already won him."
+  },
+  {
+    "from": "Най-добрият начин да запазите мира е непрекъснато да се подготвяте за войната.",
+    "to": "The best way to keep the peace is to constantly prepare for the war."
+  },
+  {
+    "from": "Семената на миналото са плодовете на бъдещето.",
+    "to": "The seeds of the past are the fruits of the future."
+  },
+  {
+    "from": "Твърде много хора смятат, че навиците им са правилата на живота.",
+    "to": "Too many people consider their habits to be the rules of life."
+  },
+  {
+    "from": "Всъщност исках да завладея света, но в момента вали.",
+    "to": "Actually I wanted to conquer the world, but it rains."
+  },
+  {
+    "from": "Който може да издържи да погледне себе си в огледалото, е победител.",
+    "to": "He, who can bear himself in the mirror, is a winner."
+  },
+  {
+    "from": "Светът е достатъчен за нуждите на всички, но не и за алчността на всички.",
+    "to": "The world has enough for everyone's needs, but not for everyone's greed."
+  },
+  {
+    "from": "Никога не забравяйте, че сте любопитно дете.",
+    "to": "Never forget that you are a child who is curious."
+  },
+  {
+    "from": "Трябва да има много ранкове, защото всеки иска да управлява, а няма място за всички.",
+    "to": "There have to be different ranks, because all people want to rule and not all can."
+  },
+  {
+    "from": "Ако се съглася с вас, и двамата ще се объркаме.",
+    "to": "If I agreed with you, we’d both be wrong."
+  },
+  {
+    "from": "Ставайки рано е първата стъпка в грешната посока.",
+    "to": "Getting up early is the first step in the wrong direction."
+  },
+  {
+    "from": "Покажи ми какво си построил, и аз ще ти кажа кой си.",
+    "to": "Show me how you build, and I will tell you who you are."
+  },
+  {
+    "from": "Кажете, как управлявате времето, което ви се дава само веднъж?",
+    "to": "Say, how do you manage the time given to you only once?"
+  },
+  {
+    "from": "Най-добрият начин да убедите другите е като ги слушате.",
+    "to": "The best way to convince others is by listening to them."
+  },
+  {
+    "from": "Завистта е най-искрената форма на ласкателство.",
+    "to": "Envy is the sincerest form of flattery."
+  },
+  {
+    "from": "Мъдростта на живота се състои в изключване на несъществените неща.",
+    "to": "The wisdom of life lies in turning off the nonessential things."
+  },
+  {
+    "from": "Когато започнете да изглеждате като вашата паспортна снимка, трябва да отидете на почивка.",
+    "to": "When you start to look like your passport photo, you should go on holiday."
+  },
+  {
+    "from": "Който не се бори за това, което обича, не трябва да се ядосва ако го загуби.",
+    "to": "Who does not fight for what he loves should not be angry if he loses it."
+  },
+  {
+    "from": "Където са вашите таланти, там са и вашите задължения.",
+    "to": "Where your gifts are, there are also your duties."
+  },
+  {
+    "from": "Индивидуално ние сме просто думи, докато заедно сме стихотворение.",
+    "to": "Individually we are only words, together we are a poem."
+  },
+  {
+    "from": "Цялата сила на хората се придобива чрез борба със себе си и преодоляване на себе си.",
+    "to": "All the power of men is acquired by struggling with oneself and overcoming oneself."
+  },
+  {
+    "from": "С течение на времето душата поема цвета на мислите.",
+    "to": "In the course of time the soul takes on the color of the thoughts."
+  },
+  {
+    "from": "Често трябва да започнем отначало, но рядко от нулата.",
+    "to": "We often have to start over, but rarely from scratch."
+  },
+  {
+    "from": "Една жена може да измами стотици мъже, но нито една друга жена.",
+    "to": "A woman can deceive a hundred men, but not a single woman."
+  },
+  {
+    "from": "Там, където културата се разпада, има място за насилие.",
+    "to": "Where culture breaks away, there is room for violence."
+  },
+  {
+    "from": "Красиво е всъщност всичко, което човек гледа с любов.",
+    "to": "Beautiful is actually everything that one looks at with love."
+  },
+  {
+    "from": "Щастие е да обичаш това, което трябва да направиш, а не само това, което искаш да направиш.",
+    "to": "Happiness is to love what you must do and not just what you want to do."
+  },
+  {
+    "from": "Винаги трябва да се надяваш на най-доброто, но да бъдеш подготвен и за най-лошото.",
+    "to": "You should always hope for the best, but be prepared for the worst."
+  },
+  {
+    "from": "Опитването е първата стъпка към неуспеха.",
+    "to": "Trying is the first step towards failure."
+  },
+  {
+    "from": "Ако отивате в грешната посока, няма смисъл да увеличавате темпото.",
+    "to": "If you are going in the wrong direction, there is no point in increasing the pace."
+  },
+  {
+    "from": "Ако нямате пари, ще трябва да плащате с кожата си.",
+    "to": "If you do not have money, you have to pay with your skin."
+  },
+  {
+    "from": "Слабите не могат да прощават, защото прошката е качество на силните.",
+    "to": "The weak can not forgive, because forgiving is a quality of the strong."
+  },
+  {
+    "from": "Вие не можете да заемате книга, която обичате, трябва да я притежавате.",
+    "to": "You can not borrow a book that you love, you have to own it."
+  },
+  {
+    "from": "Надеждата е средно положение между крило и парашут.",
+    "to": "Hope is a middle ground between wing and parachute."
+  },
+  {
+    "from": "Направете нещо добро за вашето тяло, за да може душата ви да живее в нея.",
+    "to": "Do something good for your body, so that your soul feels like living in it."
+  },
+  {
+    "from": "Истинската тайна на успеха е ентусиазмът.",
+    "to": "The true secret of success is the enthusiasm."
+  },
+  {
+    "from": "Силата не издава шум, тя е там и работи.",
+    "to": "Power makes no noise, it is there and works."
+  },
+  {
+    "from": "Научете се да плувате, вместо да чакате приливите.",
+    "to": "Learn to swim instead of waiting for the tide."
+  },
+  {
+    "from": "Извънредното не се случва по гладък и обикновен начин.",
+    "to": "The extraordinary does not happen in a smooth and ordinary way."
+  },
+  {
+    "from": "Великото изкуство се постига, когато не можете да махнете нищо.",
+    "to": "Great art is achieved when you can not leave anything out."
+  },
+  {
+    "from": "Сега съм образована и отегчена.",
+    "to": "Now I am both educated and bored."
+  },
+  {
+    "from": "Не можеш да се преструваш, че си мед, ако си наденичка.",
+    "to": "You can not pretend to be honey if you're a bratwurst."
+  },
+  {
+    "from": "Когато надеждата се събуди, отчаянието заспива.",
+    "to": "When hope awakens, despair falls asleep."
+  },
+  {
+    "from": "Днес е последният ден преди утрешния ден.",
+    "to": "Today is the last day before tomorrow."
+  },
+  {
+    "from": "Който купува много неща, от които не се нуждае, скоро ще продава тези от които се нуждае.",
+    "to": "Who buys a lot of needless things, soon he will sell things that he needs."
+  },
+  {
+    "from": "По-добре оригинал с грешки, отколкото копие без сърце.",
+    "to": "Better an original with errors than a copy without a heart."
+  },
+  {
+    "from": "Кой може да пише прекрасно, пише добре и с лоша четка.",
+    "to": "Who can write beautifully, writes well also with a bad brush."
+  },
+  {
+    "from": "Мога да пея в три гласа: силен, погрешен и с ентусиазъм.",
+    "to": "I can sing in three voices: loud, wrong and with enthusiasm."
+  },
+  {
+    "from": "Човекът, който не е гладен, казва за кокосовия орех, че има твърда черупка.",
+    "to": "The man, who is not hungry, says about the coconut, that it has a hard shell."
+  },
+  {
+    "from": "Грешките са полезни, но само ако ги намерите бързо.",
+    "to": "Mistakes are useful, but only if you find them quickly."
+  },
+  {
+    "from": "Ожени се за любов, а не за пари, след всичко, което не обича парите.",
+    "to": "Marry for love not for money, after all who doesn't love money."
+  },
+  {
+    "from": "Един джентълмен е човек, който поне се представя, преди да го имитира.",
+    "to": "A gentleman is a man who at least introduces himself before imitating him."
+  },
+  {
+    "from": "Пийте, когато сте щастливи, никога когато сте нещастни.",
+    "to": "Drink when you are happy, never when you are unhappy."
+  },
+  {
+    "from": "Нямам нужда от среден пръст. Мога да го направя с очите си.",
+    "to": "I do not need a middle finger. I can do that with my eyes."
+  },
+  {
+    "from": "Остаряваш, когато свещите струват повече от тортата за рожден ден.",
+    "to": "You get old when the candles cost more than the birthday cake."
+  }
+]

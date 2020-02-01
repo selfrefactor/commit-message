@@ -1,0 +1,515 @@
+sight,der Blick
+mutually,gegenseitig
+drop,der Tropfen
+deserves,verdient
+to submit,nachgeben
+cunning,listig
+criticism,aufrichtige
+donkeys,Esel
+excuses,Entschuldigungsgründe
+angry,wütend
+insights,Einsichten
+especially,besonders
+to surprise,überrasche
+prayer,das Gebet
+hear,hören
+explain,erklären
+debts,Schulden
+careful,vorsichtig
+else,sonst
+sometimes,manchmal
+life insurance,Lebensversicherung
+prove,beweisen
+understand,kennen lernen
+choice,die Auswahl
+understanding,das Verständnis
+need,brauchen
+giving up,hingeben
+adorable,liebenswert
+change,Veränderung
+notice,bemerkt
+breaks,bricht
+to delay,verschiebe
+goodbye,der Abschied
+rushing,eilst
+expect,erwarte
+agreement,Vereinbarung
+interesting,interessant
+shame,die Schande
+difficulties,Schwierigkeiten
+needs,bedarf
+find out,rausbekommen
+snowball,der Schneeball
+prolong,verlängert
+least,wenigste
+smiles,lächelt
+to delight,erfreuen
+commit,begeht
+rabbits,Hasen
+believed,geglaubt
+special,besonders
+distractions,Zerstreuungen
+source,die Quelle
+rational,vernünftig
+wise,weiser
+remains,bleibt
+disadvantages,Nachteilen
+smell,riecht
+desert,die Wüste
+needed,nötig
+chain,die Kette
+prevents,verhindert
+look,blicken
+thought,dachte
+save,sparen
+believed,glaubte
+wisdom,Weisheit
+impressions,Eindrücke
+sentence,Satz
+clever,kluger
+foresee,voraussehen
+cry,weinen
+law,Gesetz
+transform,verwandelt
+undone,unverrichtet
+described,beschrieben
+intentions,Vorsätze
+pretends,stellt
+understanding,der Verstand
+forgive,vergib
+legs,Beinen
+brave,mutig
+otherwise,sonst
+worries,Sorgen
+swallow,schlucken
+pain,der Schmerz
+useless,unnütz
+meaning,der Sinn
+pointless,sinnloser
+based,beruht
+useless,nutzlos
+favorite sport,der Lieblingssport
+broom,der Besen
+frogs,Frösche
+demand,erfordern
+to mean,bedeuten
+to close,schließen
+someone,jemanden
+simplicity,Einfachheit
+dignity,die Würde
+roots,Wurzeln
+goal,der Zweck
+has,besitzt
+flowers,Blumen
+teacher,der Lehrer
+thoughts,Gedanken
+jump,springt
+continuing,das Fortfahren
+appropriate,angemessen
+relationship,Beziehung
+confirmation,Bestätigung
+own,eigenen
+see,einzusehen
+exaggeration,Übertreibung
+respect,Hochachtung
+jealousy,Eifersucht
+claims,behauptet
+certainly,gewiss
+factual,sachlich
+happy,fröhlich
+change,verändern
+fulfillment,Erfüllung
+example,das Beispiel
+expectation,Erwartung
+happened to,widerfuhr
+slaves,Sklaven
+fox,der Fuchs
+rather,lieber
+beneficial,vorteilhaft
+scream,schreien
+catch,fängt
+have,besitzen
+progress,der Fortschritt
+hurt,verletzen
+commitment,Verpflichtung
+spoon,der Löffel
+perfection,Vollendung
+unmeasurable,unermessliches
+deserves,verdient
+careful,vorsichtig
+science,Wissenschaft
+bold,kühnen
+changes,Veränderungen
+belief,Überzeugung
+inconvenience,Unannehmlichkeiten
+stability,der Bestand
+separately,getrennt
+spend,Verbringe
+demands,fordert
+excess,das Übermaß
+about,darauf
+sold out,ausverkauft
+joy,die Freude
+outclass,übertrifft
+deserve,verdienen
+clever,klug
+overcome,überwinden
+half,die Hälfte
+instructions,Anleitungen
+hidden,verstecktes
+crying,weinenden
+to sacrifice,opfern
+beliefs,Überzeugungen
+laws of nature,die Naturgesetze
+gives,verleiht
+found,gefunden
+urgent,dringende
+speed,Geschwindigkeit
+pleasure,die Freude
+agreed,einverstanden
+forgot,verloren
+voices,Stimmen
+wanted,wollte
+reason,der Anlaß
+limited,begrenzt
+indisputable,unwiderleglich
+probably,wahrscheinlich
+essence,der Kern
+to keep quiet,verschweigen
+went through,durchgingen
+superstitious,abergläubisch
+unnecessary,unnötige
+friend,der Freund
+to question,bezweifelt
+difficulties,Schwierigkeiten
+suspicion,der Verdacht
+fool,der Dummkopf
+required,nötig
+keep,erhalten
+between,zwischen
+viewing direction,Blickrichtung
+actions,Handlungen
+achieve,erlangen
+enemies,Feinden
+defeating,besiegt
+distance,Entfernung
+face,das Gesicht
+invisible,unsichtbar
+kept,erhalten
+equation,Gleichung
+experience,erleben
+deserve,verdienen
+pleasure,das Vergnügen
+hurting,verletzen
+understand,begriffen
+swept,gefegt
+opinions,Meinungen
+less,weniger
+why,warum
+lazyness,die Faulheit
+temptation,Versuchung
+being proud,stolz zu sein
+heals,heilt
+laughs,lacht
+loser,der Verlierer
+impression,der Eindruck
+require,erfordern
+solution,Lösung
+believe,glauben
+surrender,aufgibt
+thoughtfully,wohlüberlegt
+to receive,bekommen
+justified,berechtigt
+careful,sorgfältig
+lost,verfahren
+serious,schwer
+just,einfach
+news,die Nachricht
+to rain,regnen
+bad luck,das Pech
+to clean,putze
+stomach,der Bauch
+state,der Zustand
+fat,fett
+solves,löst
+patience,die Geduld
+beach,der Strand
+divorce,Scheidung
+chases,verfolgt
+ground,der Boden
+evaluate,einschätzen
+alarm clock,der Wecker
+now,jetzt
+night,die Nacht
+tires,Reifen
+thoughts,Gedanken
+decide,entschieden
+to listen,hören
+drunk,der Betrunkene
+prevent,verhüten
+even,sogar
+woke up,aufgewacht
+to emerge,entsteht
+dispute,der Streit
+sheeps,Schafe
+admits,zugibt
+to pack,verpackt
+to look,aussieht
+to bear,ertragen
+crossroads,Scheidewegen
+believable,glaubwürdige
+insults,Beleidigungen
+preparation,Vorbereitung
+spending,ausgeben
+cage,der Käfig
+self-confidence,das Selbstbewusstsein
+durability,Dauerhaftigkeit
+substitute,der Ersatz
+rationality,die Vernunft
+decision ,der Entschluss
+to want,wollen
+silence,das Schweigen
+justifies,rechtfertigt
+to shoot,beschießen
+kept,behalten
+lie,die Lüge
+needless,überflüssig
+obedience,der Gehorsam
+affraid,fürchtet
+declaration,Erklärung
+lack,der Mangel
+to spoil,verderben
+speakers,Redner
+voice,die Stimme
+fortune,der Reichtum
+visit,der Besuch
+violence,die Gewalt
+rumor,das Gerücht
+sincerity,Aufrichtigkeit
+passion,die Leidenschaft
+disgraceful,schmachvoll
+guess,Vermutung
+wave,die Welle
+several,einige
+to overcome,überwindet
+find,findet
+obstacles,Hindernisse
+alive,lebendig
+compassion,das Mitgefühl
+on the other side,jenseits
+stops,aufhört
+shines,leuchtet
+vice versa,umgekehrt
+different,verschieden
+dreams,Träumen
+recognition,Anerkennung
+successful ,erfolgreich
+knowledge,das Wissen
+educated,gelehrt
+certainty,Gewissheit
+to judge,richten
+waste,Verschwendung
+meaning,Bedeutung
+shelter,die Zuflucht
+applauds,beklatscht
+desire,die Sehnsucht
+cowardice,Feigheit
+hide,verbergen
+snake,die Schlange
+amazement,Verwunderung
+stream,der Storm
+ruin,ruinieren
+to fear,fürchten
+fair,gerecht
+hate,hasst
+to link together,übereinstimmen
+hyperbole,Übertreibung
+escapes,flieht
+accuses,anklagt
+break,zerbrechen
+answer,die Antwort
+prejudice,das Vorurteil
+feelings,Gefühle
+unprecedented,beispiellosen
+grace,die Anmut
+increases,vermehrt
+forgets,vergißt
+castles in the air,Luftschlössern
+proof,der Beweis
+impatience ,die Ungeduld
+facts,Tatsachen
+impatience ,Ungeduld
+to empty,entleert
+traveler,der Reisende
+clarity,Klarheit
+environment,Umgebung
+stupidity,Blödheit
+to be called,genannt
+to lie,betrügen
+understand,begreifen
+never,nimmer
+breaks,abbricht
+reliable,verlässlicher
+pleasure,das Vergnügen
+completely,vollständig
+honour,die Ehre
+enlightened,aufgeklärt
+prison,der Kerker
+cause,die Ursache
+to accelerate,beschleunigen
+decision,der Entschluß
+laziness,Faulheit
+order,Ordnung
+hope,Hoffnung
+crime,das Verbrechen
+only,einzig
+isolation,Einsamkeit
+keeping,Behalten
+shatters,zerstört
+roof,das Dach
+conversation,die Konversation
+privilege,das Vorrecht
+envy,der Neid
+misunderstanding,das Mißverständnis
+caution,die Vorsicht
+lengthy,langwierige
+eternity,Ewigkeit
+ambition,der Ehrgeiz
+memories,Erinnerungen
+bridge,die Brücke
+hide,verbergen
+consolation,der Trost
+fulfillment ,Erfüllung
+crazy,verrückt
+temporary,vorübergehend
+protecting,schirmen
+responsibility,Verantwortung
+happens,eintritt
+irreplaceable,unersetzlich
+courage,der Mut
+education,Erziehung
+fears,Befürchtungen
+honest,ehrlich
+failed,gescheitert
+lovely,reizende
+instruction,Belehrung
+то organize,ordnet
+suspect,ahnt
+stronger,mächtiger
+promised,gelobte
+stupidities,die Torheiten
+cured,geheilt
+retreat,zurückweichen
+abnormal ,krankhafte
+other side,die Kehrseite
+feels,empfindet
+weakness,die Schwäche
+terrible,fürchterlich
+bright,hell
+indifference,Gleichgültigkeit
+rule,herrschen
+taste,kosten
+fade away,schwindet
+educates,erzieht
+troubles,Mühen
+to talk,reden
+most perfectly,vollkommensten
+foolish,töricht
+stubbornness,der Eigensinn
+more stable,beständiger
+climb,steigen
+agonies,Qualen
+to shape,gestaltet
+laws,Gesetze
+cruel,gemein
+bravest,mutigsten
+essence,das Wesen
+decision,Entscheidung
+justice,Gerechtigkeit
+more mature,ausgereifter
+repetition,Wiederholung
+comes from,entsteht
+conscience,das Gewissen
+fear,die Furcht
+expects,erwartet
+efficiency,Wirksamkeit
+pleasure,der Genuss
+to hide,verbirgt
+tears,Tränen
+independence ,Unabhängigkeit
+rarely,selten
+furniture,das Möbel
+useless,vergeblich
+get to understand,beizubringen
+almost,beinahe
+to accuse,vorwerfen
+least,geringste
+indicate,andeuten
+performances,Ausführungen
+stay,der Aufenthalt
+accordingly,dementsprechend
+to make someone understand,beibringen
+trails,Spuren
+remember,erinnern
+sign,das Zeichen
+undecided,unentschlossen
+acronym,Abkürzung
+cooks,kocht
+ordinary,gewöhnliche
+keeps,verschweigt
+obstacles,Hindernisse
+to deserve,verdienen
+windmills,Windmühlen
+keep,behalten
+become,werden
+constantly,beständig
+based,beruht
+burn,verbrennen
+admire,bewundere
+introduction,Vorstellung
+commit,begehen
+forgive,verzeihen
+care,kümmern
+way,Möglichkeit
+break,brechen
+responsible,verantwortlich
+to survive,überleben
+silent,schweigt
+already,bereits
+constantly,stetig
+seeds,Samen
+habits,Gewohnheiten
+conquer,erobern
+bear,ertragen
+curious,neugierig
+to rule,herrschen
+received,bekommen
+agreed,einverstanden
+direction,Richtung
+build,baust
+convince,überzeugt
+sincerest,aufrichtigste
+nonessential,unwesentlichen
+like,ähnlich
+fight,kämpft
+duties,Aufgaben
+together,zusammen
+deceive,täuschen
+actually,eigentlich
+happiness,das Glück
+prepared,gefasst
+failure,Scheitern
+skin,die Haut
+quality,die Eigenschaft
+to borrow,leihen
+ordinary,gewöhnlichem
+achieved,erreicht
+misfortune,das Unglück
+pretend,vorgeben
+despair,Verzweiflung
+soon,bald
+mistakes,Fehlern
+brush,der Pinsel
+shell,die Schale
+never,niemals
+candles,Kerzen

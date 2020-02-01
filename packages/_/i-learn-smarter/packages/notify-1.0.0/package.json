@@ -1,0 +1,30 @@
+{
+	"name": "notify",
+	"version": "0.8.4",
+	"description": "Notification component build with React, Redux and Redux-saga",
+	"main": "./component.tsx",
+	"typings": "./index.d.ts",
+	"repository": "git@github.com:selfrefactor/notify.git",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+	},
+	"devDependencies": {
+		"colors": "https://github.com/selfrefactor/colors#0.2.0",
+		"@types/react": "16.0.18",
+		"@types/react-dom": "16.0.2",
+		"@types/react-redux": "5.0.10",
+		"last-used": "https://github.com/selfrefactor/last-used#0.4.0",
+		"log": "https://github.com/selfrefactor/log#0.3.0",
+		"postcss-fn": "https://github.com/selfrefactor/postcss-fn#0.1.0",
+		"watch-fn": "https://github.com/selfrefactor/watch-fn#0.3.0"
+	},
+	"peerDependencies": {
+		"rambdax": "^0.6.8",
+		"react": "^16.0.0",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"redux-saga": "^0.16.0"
+	}
+}

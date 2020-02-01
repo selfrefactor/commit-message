@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Puppeteer",
+      "program": "${workspaceFolder}/files/debugPuppeteer.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "SEO",
+      "program": "${workspaceFolder}/files/seo.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "getDB",
+      "program": "${workspaceFolder}/files/getDB.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug",
+      "program": "${workspaceFolder}/dist/_helpers/debug.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js"
+      ]
+    }
+  ]
+}

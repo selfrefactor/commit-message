@@ -1,0 +1,39 @@
+.fa {
+  cursor: pointer;
+}
+
+.single_insert {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-gap: 2vh;
+  height: 88vh;
+
+  &__item {
+    height: 12vh;
+  }
+
+  &__button--label {
+    margin-right: 12%;
+    margin-left: 12%;
+  }
+
+  &__button--container {
+    padding-top: 3vh;
+  }
+
+  &__input--container {
+    clear: both;
+    padding-left: 3%;
+    padding-top: 3vh;
+
+    input {
+      padding-left: 2%;
+      line-height: 9h;
+      font-size: 4.6vh;
+      width: 95%;
+    }
+  }
+}
+
+

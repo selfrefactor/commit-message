@@ -1,0 +1,119 @@
+@import "node_modules/colors/colors";
+
+.notify {
+  line-height: 15vh;
+  font-size: 3.3vh;
+  text-align: center;
+
+  &__info {
+    @inherit: .notify;
+    border: 1px dashed var(--darkblue);
+    background-color: var(--blue-sixth);
+    color: var(--light);
+  }
+
+  &__warning {
+    @inherit: .notify;
+    border: 1px dashed var(--yellow-seventh);
+    background-color: var(--orange-seventh);
+    color: var(--lightdark-seventh);
+  }
+
+  &__error {
+    @inherit: .notify;
+    border: 1px dashed var(--pink);
+    background-color: var(--red-sixth);
+    color: var(--darkblue);
+  }
+
+  &__success {
+    @inherit: .notify;
+    border: 1px dashed var(--teal);
+    background-color: var(--teal-fifth);
+    color: var(--dark-seventh);
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 20vw;
+    height: 15vh;
+  }
+
+  &__hidden {
+    display: none;
+  }
+
+  &__active--info {
+    animation: animationOpen 1s;
+
+    @inherit: .notify__info;
+  }
+
+  &__active--warning {
+    animation: animationOpen 1s;
+
+    @inherit: .notify__warning;
+  }
+
+  &__active--error {
+    animation: animationOpen 1s;
+
+    @inherit: .notify__error;
+  }
+
+  &__active--success {
+    animation: animationOpen 1s;
+
+    @inherit: .notify__success;
+  }
+
+  &__animate-close--info {
+    animation: animationClose 1s;
+    opacity: 0;
+
+    @inherit: .notify__info;
+  }
+
+  &__animate-close--warning {
+    animation: animationClose 1s;
+    opacity: 0;
+
+    @inherit: .notify__warning;
+  }
+
+  &__animate-close--error {
+    animation: animationClose 1s;
+    opacity: 0;
+
+    @inherit: .notify__error;
+  }
+
+  &__animate-close--success {
+    animation: animationClose 1s;
+    opacity: 0;
+
+    @inherit: .notify__success;
+  }
+}
+
+@keyframes animationOpen {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animationClose {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

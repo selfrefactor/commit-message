@@ -1,0 +1,25 @@
+{
+  "compilerOptions":{
+    "allowJs": true,
+    "jsx":"react",
+    "module":"commonjs",
+    "noImplicitAny":false,
+    "outDir":"./dist/",
+    "sourceMap":false,
+    "strictNullChecks": false,
+    "target":"es6",
+    "lib":[
+      "dom",
+      "es7",
+      "esnext",
+      "es2017"
+    ]
+  },
+  "include":[
+    "./src/**/*"
+  ],
+  "exclude":[
+    "dist",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "server",
+  "main": "./src/index.js",
+  "repository": "git@github.com:selfrefactor/server.git",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "go": "git pull&&pm2 update",
+    "prod": "pm2 start index.js -i max",
+    "ngrok": "NGROK=ON DEV_PORT=3007 node index.js",
+    "start": "DEV_PORT=3007 nodemon --watch src index.js",
+    "dev": "DEV_PORT=3007 node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "ngrok-fn": "https://github.com/selfrefactor/ngrok-fn#0.1.0",
+    "ejs": "^2.6.1",
+    "env": "https://github.com/selfrefactor/env#0.2.0",
+    "express": "^4.16.4",
+    "rambdax": "^1.6.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/node": "^8.0.53",
+    "esm": "^3.0.84",
+    "typescript": "^3.1.0"
+  }
+}

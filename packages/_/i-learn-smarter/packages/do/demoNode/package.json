@@ -1,0 +1,11 @@
+{
+  "name": "demoNode",
+  "version": "1.0.0",
+  "description": "x",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "jest src/foo.spec.ts",
+    "devx": "jest src/foo.spec.ts --watch"
+  }
+}

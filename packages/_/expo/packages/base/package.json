@@ -1,0 +1,41 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "description": "foo",
+  "author": {
+    "email": "deyan8284@gmail.com",
+    "name": "Dejan Toteff"
+  },
+  "private": false,
+  "license": "MIT",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "populate": "node files/populate",
+    "doctor": "expo doctor",
+    "build": "EXPO_DEBUG=true expo build:android",
+    "start": "expo start -c --tunnel --dev",
+    "startx": "expo start -c --tunnel",
+    "eject": "expo eject"
+  },
+  "depFn": [
+    "react-redux",
+    "create-action"
+  ],
+  "dependencies": {
+    "create-action": "https://github.com/selfrefactor/create-action#0.5.0",
+    "expo": "^32.0.0",
+    "rambdax": "1.6.3",
+    "react": "16.5.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-navigation": "^2.17.0",
+    "react-redux": "^5.0.6",
+    "redux": "^4.0.0",
+    "redux-saga": "^0.16.0",
+    "string-fn": "^2.2.0",
+    "styled-components": "^3.4.9"
+  },
+  "devDependencies": {},
+  "commitMessage": {
+    "workInProgress": "cannot publish"
+  }
+}

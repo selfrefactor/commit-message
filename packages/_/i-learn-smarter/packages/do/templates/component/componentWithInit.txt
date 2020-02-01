@@ -1,0 +1,21 @@
+import * as React from 'react'
+import { connect } from 'react-redux'
+import { init } from './actions'
+
+export class ${0} extends React.Component<${1}, {}> {
+  constructor(props: ${1}) {
+    super(props)
+  }
+  public componentDidMount(){
+    this.props.dispatch(init())
+  }
+  public render() {
+    return <div>
+      ${0}
+    </div>
+  }
+}
+
+const connectComponent = ({ ${2} }) => ({ ${2} })
+
+export const ${0}Wrapped = connect(connectComponent)(${0})

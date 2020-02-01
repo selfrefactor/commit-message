@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the message 1`] = `
+<styled.div>
+  <Styled(styled.div)>
+    <styled.div
+      id="toggle-navigation"
+    />
+  </Styled(styled.div)>
+  <styled.div>
+    <styled.canvas />
+  </styled.div>
+  <styled.div
+    className="change-language"
+  >
+    <styled.canvas />
+  </styled.div>
+  <styled.div
+    className="toggle-random"
+  >
+    <styled.canvas />
+  </styled.div>
+  <styled.div
+    className="toggle-speech"
+  >
+    <styled.canvas />
+  </styled.div>
+  <styled.div
+    className="submit-answer"
+  >
+    <styled.canvas />
+  </styled.div>
+  <styled.div
+    className="next-instance"
+  >
+    <styled.canvas />
+  </styled.div>
+  <Styled(styled.div)
+    id="points"
+  >
+    0
+  </Styled(styled.div)>
+</styled.div>
+`;

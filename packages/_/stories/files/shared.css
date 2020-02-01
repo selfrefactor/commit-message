@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Cousine);
+
+html{
+  font-family: 'Cousine', monospace;
+}
+
+.outline{
+  outline: 3px solid #433
+}
