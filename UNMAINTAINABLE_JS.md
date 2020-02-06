@@ -22,6 +22,8 @@ function foo(
 ) {}
 ```
 
+The logic here is that `c` and `d` are somewhat related.
+
 ## Use logical operator instead of `if`
 
 ```js
