@@ -14,7 +14,6 @@
         "${workspaceFolder}/dist/**/*.js"
       ],
       "args":["updateall"]
-      // "args":["special","-D","commit-message"]
     }
   ]
 }
