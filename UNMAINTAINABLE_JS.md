@@ -21,3 +21,9 @@ function foo(
   f,
 ) {}
 ```
+
+## Use logical operator instead of `if`
+
+```js
+!isPathOpen() && setCount(total - total_seen);
+```
