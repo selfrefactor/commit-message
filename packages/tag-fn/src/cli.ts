@@ -1,39 +1,25 @@
-import * as inquirer from 'inquirer'
 import {log} from 'helpers'
-import {drop} from 'rambdax'
-import {tagFn} from './index'
-import {init} from './modules/init'
-const [input]  = drop(3, process.argv)
+import {drop, defaultTo} from 'rambdax'
+import {setGithubTag} from './setGithubTag'
+import {setCredentials} from './helpers/setCredentials'
 
-export function cli(){
-  if (input === 'init') {
-  
-    inquirer
-      .prompt([
-        { type: 'input', message: 'Your Github username?', name: 'user' },
-        { type: 'password', message: 'Your Github password?', name: 'password' },
-      ])
-      .then((credentials: ICredentials) => {
-        init(credentials)
-      })
-  
-  }else {
-    const tag = input === undefined ?
-      'patch' :
-      input
-  
-    if (['minor', 'major', 'patch'].includes(tag)){
+const allPossibleTags = ['minor', 'major', 'patch']
+
+export async function cli(debugInput?: string){
+  const [cliInput]  = drop(3, process.argv)
+  const input = debugInput ? debugInput : cliInput
+  if (input === 'init') return setCredentials()
+
+  const tag = defaultTo('patch', input)
+
+  if (allPossibleTags.includes(tag)){
       log(`${tag} incrementation of the latest tag will be applied\n`, 'info')
     }else{
       log(`The new tag will be '${tag}'\n`, 'info')
     }
-  
-    log('spin')
-    tagFn({tag})
-    .then(() => {
-      log('stopspin')
-    })
-    .catch(console.log)
-  
-  }
+
+  log('spin')
+
+  await setGithubTag(tag)
+  log('stopspin')
 }

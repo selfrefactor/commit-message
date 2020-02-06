@@ -1,59 +1,59 @@
 {
-	"scripts": {
-		"debug": "RAMBDAX_LOG=OFF node debug.js",
-		"test": "jest",
-		"in": "tsc -w",
-		"out": "tsc -p .",
-		"lint": "tslint --type-check --project tsconfig.json"
-	},
-	"name": "tag-fn",
-	"version": "0.4.1",
-	"description": "CLI command for lazy generation of Github tags",
-	"main": "dist/index.ts",
-	"typings": "index.d.ts",
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/tag-fn",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT",
-	"private": false,
-	"dependencies": {
-		"fs-extra": "^8.1.0",
-		"init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#8.0.0",
-		"inquirer": "^7.0.0",
-		"helpers": "https://github.com/selfrefactor/helpers#2.2.0",
-		"rambdax": "^3.2.0"
-	},
-	"devDependencies": {
-		"@types/fs-extra": "^8.0.1",
-		"@types/jest": "^24.0.22",
-		"@types/node": "^12.12.6",
-		"@types/puppeteer": "^1.20.2",
-		"env-fn": "^1.1.2",
-		"jest": "^25.0.0",
-		"ts-jest": "^24.1.0",
-		"tslint": "^6.0.0-beta1",
-		"typescript": "^3.8.0-dev.20191105"
-	},
-	"jest": {
-		"transform": {
-			"^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-		},
-		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-		"moduleFileExtensions": [
-			"ts",
-			"tsx",
-			"js",
-			"jsx",
-			"json"
-		]
-	},
-	"preferGlobal": true,
-	"bin": {
-		"tag": "bin/tag"
-	},
-	"directories": {
-		"bin": "./bin"
-	},
-	"commitMessage": {
-		"workInProgress": ""
-	}
+  "scripts": {
+    "debug": "RAMBDAX_LOG=OFF node debug.js",
+    "test": "jest",
+    "in": "tsc -w",
+    "out": "tsc -p .",
+    "lint": "tslint --fix --project tsconfig.json"
+  },
+  "name": "tag-fn",
+  "version": "0.4.1",
+  "description": "CLI command for lazy generation of Github tags",
+  "main": "dist/index.ts",
+  "typings": "index.d.ts",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/tag-fn",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "init-puppeteer": "https://github.com/selfrefactor/init-puppeteer#8.0.0",
+    "inquirer": "^7.0.0",
+    "helpers": "https://github.com/selfrefactor/helpers#2.2.0",
+    "rambdax": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^24.0.22",
+    "@types/node": "^12.12.6",
+    "@types/puppeteer": "^1.20.2",
+    "env-fn": "^1.1.2",
+    "jest": "^25.0.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^6.0.0-beta1",
+    "typescript": "^3.8.0-dev.20191105"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
+  "preferGlobal": true,
+  "bin": {
+    "tag": "bin/tag"
+  },
+  "directories": {
+    "bin": "./bin"
+  },
+  "commitMessage": {
+    "workInProgress": "two factor auth"
+  }
 }

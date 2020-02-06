@@ -7,5 +7,5 @@ export interface IPuppeteer {
 
 export interface IGetTagValue {
   page: Page
-  input: IInput
+  tag: string
 }

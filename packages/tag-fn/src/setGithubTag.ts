@@ -17,7 +17,7 @@ const selectors = {
   username: '#login_field',
 }
 
-export async function tagFn(input: IInput): Promise<void | string> {
+export async function setGithubTag(tag): Promise<void | string> {
   try {
     const repoName = getRepoName()
     const {user, password} = getCredentials()
@@ -43,9 +43,6 @@ export async function tagFn(input: IInput): Promise<void | string> {
 
     await page.evaluate(click, selectors.clickLoginSubmit)
 
-    /**
-     * Typescript doesn't like when `responseURLInit: Response`
-     */
     const responseURLInit: any = await page.waitForNavigation(waitForLoad)
     const responseOK = (responseURLInit._url as any).includes('github.com')
 
@@ -68,7 +65,7 @@ export async function tagFn(input: IInput): Promise<void | string> {
     const urlRelease = `${urlRepo}/releases`
     await page.goto(urlRelease, waitForNetwork)
 
-    const tagValue: string = await getTagValue({page, input})
+    const tagValue: string = await getTagValue({page, tag})
 
     const urlNewRelease = `${urlRelease}/new`
     await page.goto(urlNewRelease, waitForNetwork)
@@ -105,7 +102,7 @@ export async function tagFn(input: IInput): Promise<void | string> {
   } catch (err) {
     console.log(err)
   } finally {
-    if (browser !== undefined) {
+    if (browser && browser.close) {
       await browser.close()
     }
   }

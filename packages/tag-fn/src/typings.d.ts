@@ -19,10 +19,6 @@ interface ITypeSettings{
   text: string
 }
 
-interface IInput{
-  tag: string|undefined
-}
-
 type TagType = 'major' | 'minor' | 'patch'
 
 type TypeFunction = (input: ITypeSettings) => Promise<void>

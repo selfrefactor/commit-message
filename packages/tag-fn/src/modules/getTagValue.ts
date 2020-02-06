@@ -1,4 +1,4 @@
-import { equals,findIndex } from 'rambdax'
+import { equals, findIndex } from 'rambdax'
 import { IGetTagValue } from '../custom'
 import { getCurrentTag } from './getCurrentTag'
 import { getNextTag } from './getNextTag'
@@ -10,10 +10,10 @@ export const tagTypes: Array<TagType> = [
 ]
 
 export const getTagValue = async (x: IGetTagValue): Promise<string> => {
-  const index: number = findIndex(equals(x.input.tag), tagTypes)
+  const index: number = findIndex(equals(x.tag), tagTypes)
 
-  if (x.input.tag !== undefined && index === -1) {
-    return x.input.tag
+  if (index === -1) {
+    return x.tag
   }
 
   const tagType: TagType = index === -1 ?
