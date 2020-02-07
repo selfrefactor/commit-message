@@ -8,8 +8,7 @@
   "repository": "git@github.com:selfrefactor/services.git",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "lerna": "^3.15.0"
   },
@@ -17,6 +16,9 @@
     "workInProgress": "",
     "docs": [
       "unmaintainable"
+    ],
+    "feature": [
+      "vscode"
     ]
   }
 }

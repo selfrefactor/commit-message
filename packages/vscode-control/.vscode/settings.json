@@ -17,6 +17,7 @@
     "borderColor": "#727566",
     "borderWidth": "7px"
   },
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "timeline.showView": true,
   "editor.semanticHighlighting.enabled": true,
   "editor.suggest.showKeywords": true,
