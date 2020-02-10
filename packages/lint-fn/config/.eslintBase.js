@@ -32,6 +32,7 @@ const betweenStatements = {
 }
 
 module.exports = {
+  'max-len': [1, { "code": 100 }],
   'function-paren-newline': [1, {minItems: 3}],
   'function-call-argument-newline': [1, 'consistent'],
   'no-dupe-else-if': 1,
