@@ -17,6 +17,7 @@
     "borderColor": "#727566",
     "borderWidth": "7px"
   },
+  "explorer.incrementalNaming": "smart",
   "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "timeline.showView": true,
   "editor.semanticHighlighting.enabled": true,
