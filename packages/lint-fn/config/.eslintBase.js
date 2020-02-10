@@ -149,7 +149,6 @@ module.exports = {
   'require-yield': 1,
   'rest-spread-spacing': [1, 'never'],
   semi: [1, 'never'],
-  // 'sort-imports'                  : [ 0, sortImports ],
   'sort-keys': [
     1,
     'asc',

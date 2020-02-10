@@ -33,7 +33,7 @@ async function whenPrettier(filePath, withTypescript = false){
   prettier 
   --no-semi
   --no-bracket-spacing
-  --print-width 75
+  --print-width 100
   --single-quote
   --no-bracket-spacing
   --jsx-single-quote
