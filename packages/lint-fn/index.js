@@ -49,6 +49,8 @@ async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
   try {
     if (test(/\.tsx?$/, filePath)){
       const dir = takeProjectDir(filePath)
+      if(!dir) return console.log('It seems this is not a Typescript project')
+      
       const tsCommand = glue(`
         node 
         node_modules/tslint/bin/tslint

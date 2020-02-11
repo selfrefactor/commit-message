@@ -4,7 +4,7 @@ const { allTrue, dropLast } = require('rambdax')
 function takeProjectDir(filePath){
   let willReturn
 
-  [1,2,3,4].forEach(i => {
+  [1,2,3,4,5,6].forEach(i => {
     if(willReturn=== undefined){
       const list = filePath.split('/')
       const maybeDir = dropLast(i, list).join('/')
