@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "ghaschel.vscode-angular-html",
     "ms-vscode.vscode-typescript-next",
     "TabNine.tabnine-vscode",
     "alexesprit.vscode-unfancy-file-icons",

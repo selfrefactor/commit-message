@@ -1,13 +1,19 @@
 const input = `
-eq(R.clamp(1, 10, 0), 1);
-eq(R.clamp(3, 12, 1), 3);
-eq(R.clamp(-15, 3, -100), -15);
-eq(R.clamp(1, 10, 20), 10);
-eq(R.clamp(3, 12, 23), 12);
-eq(R.clamp(-15, 3, 16), 3);
-eq(R.clamp(1, 10, 4), 4);
-eq(R.clamp(3, 12, 6), 6);
-eq(R.clamp(-15, 3, 0), 0);
+it('moves an element from an index to another', function() {
+  eq(R.move(0, 1, list), ['b', 'a', 'c', 'd', 'e', 'f']);
+  eq(R.move(2, 1, list), ['a', 'c', 'b', 'd', 'e', 'f']);
+  eq(R.move(-1, 0, list), ['f', 'a', 'b', 'c', 'd', 'e']);
+  eq(R.move(0, -1, list), ['b', 'c', 'd', 'e', 'f', 'a']);
+});
+
+it('does nothing when indexes are outside the list outbounds', function() {
+  eq(R.move(-20, 2, list), list);
+  eq(R.move(20, 2, list), list);
+  eq(R.move(2, 20, list), list);
+  eq(R.move(2, -20, list), list);
+  eq(R.move(20, 20, list), list);
+  eq(R.move(-20, -20, list), list);
+});
     `
 
 const { remove, match, drop, init } = require('rambdax')
