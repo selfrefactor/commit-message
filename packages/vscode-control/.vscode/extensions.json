@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "lannonbr.vscode-js-annotations",
     "ghaschel.vscode-angular-html",
     "ms-vscode.vscode-typescript-next",
     "TabNine.tabnine-vscode",
