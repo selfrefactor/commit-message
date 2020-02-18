@@ -47,6 +47,10 @@
     "count": 1,
     "reason": "ramda pass to concat method if present"
   },
+  "cond": {
+    "count": 2,
+    "reason": "pass to transformer is not applied in rambda"
+  },
   "dropLast": {
     "count": 5,
     "reason": "ramda method can act as a transducer"
