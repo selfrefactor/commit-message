@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "bee.git-temporal-vscode",
     "lannonbr.vscode-js-annotations",
     "ghaschel.vscode-angular-html",
     "ms-vscode.vscode-typescript-next",

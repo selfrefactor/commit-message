@@ -170,5 +170,9 @@
   "startsWith": {
     "count": 4,
     "reason": "rambda doesn't support arrays"
+  },
+  "xor": {
+    "count": 1,
+    "reason": "ramda support empty call of method"
   }
 }
