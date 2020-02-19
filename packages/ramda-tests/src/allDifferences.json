@@ -127,6 +127,10 @@
     "count": 1,
     "reason": "ramda method supports negative indices"
   },
+  "paths": {
+    "count": 1,
+    "reason": "ramda method supports negative indices"
+  },
   "pluck": {
     "count": 1,
     "reason": "ramda method behaves as a transducer"
