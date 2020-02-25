@@ -44,3 +44,9 @@ It makes sense, but it makes more sense to drop React. Still this deleted code w
 
 ### Use Typescript definitions in Jest tests
 
+### Use file system database instead of actual database
+
+Still, such database is useful for backup and restoration of database state.
+
+### Hanging too long on React
+
