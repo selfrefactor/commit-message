@@ -1,5 +1,10 @@
 {
   "recommendations": [
+    "helgardrichard.helium-icon-theme",
+    "rastikerdar.vscode-seedling-icon-theme",
+    "PKief.material-icon-theme",
+    "jtlowe.vscode-icon-theme",
+    "alexesprit.vscode-unfancy-file-icons",
     "fabiospampinato.vscode-debug-launcher",
     "vsls-contrib.gistfs",
     "uctakeoff.vscode-counter",
