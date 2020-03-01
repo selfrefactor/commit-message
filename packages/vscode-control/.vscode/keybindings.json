@@ -1,5 +1,18 @@
 [
   {
+    "key": "ctrl+shift+i",
+    "command": "editor.action.inspectTMScopes"
+  },
+  {
+    "key": "ctrl+5",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "alt+h",
+    "command": "gitTemporal.start"
+  },
+  {
     "key": "ctrl+g",
     "command": "editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
@@ -13,8 +26,6 @@
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
   {
-    "key": "ctrl+shift+3", "command": "workbench.action.terminal.focusNext" },
-  {
     "key": "ctrl+d",
     "command": "editor.action.goToTypeDefinition"
   },
@@ -22,10 +33,6 @@
     "key": "alt+d",
     "command": "editor.action.smartSelect.expand",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+a",
-    "command": "workbench.action.terminal.new"
   },
   {
     "key": "ctrl+shift+r",
@@ -47,10 +54,6 @@
   {
     "key": "ctrl+3",
     "command": "workbench.action.files.openFolder"
-  },
-  {
-    "key": "ctrl+4",
-    "command": "workbench.action.selectTheme"
   },
   {
     "key": "ctrl+6",
@@ -93,10 +96,6 @@
     "key": "f5",
     "command": "workbench.action.debug.continue",
     "when": "inDebugMode"
-  },
-  {
-    "key": "ctrl+m",
-    "command": "workbench.action.toggleMenuBar"
   },
   {
     "key": "ctrl+7",
@@ -291,27 +290,5 @@
     "key": "ctrl+shift+i",
     "command": "-workbench.action.toggleDevTools",
     "when": "isDevelopment"
-  },
-  {
-    "key": "ctrl+shift+i",
-    "command": "editor.action.inspectTMScopes"
-  },
-  {
-    "key": "ctrl+5",
-    "command": "editor.toggleFold",
-    "when": "editorTextFocus && foldingEnabled"
-  },
-  {
-    "key": "ctrl+k ctrl+l",
-    "command": "-editor.toggleFold",
-    "when": "editorTextFocus && foldingEnabled"
-  },
-  {
-    "key": "ctrl+shift+h",
-    "command": "-workbench.action.replaceInFiles"
-  },
-  {
-    "key": "ctrl+shift+h",
-    "command": "gitlens.showFileHistoryInView"
   }
 ]
