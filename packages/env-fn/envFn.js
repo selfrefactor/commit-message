@@ -1,6 +1,6 @@
-const fs = require('fs')
-const path = require('path')
-const R = require('rambda')
+const {readFileSync, existsSync} = require('fs')
+const {resolve} = require('path')
+const {head, split, replace} = require('rambda')
 const SPECIAL_MODE = 'special'
 const DIR_MODE = 'dirname'
 const LEVELS_SPECIAL = 4
@@ -17,9 +17,9 @@ const getSpecialEnvPath = (dirFlag) => {
   Array(LEVELS_SPECIAL).fill('')
     .map((_, i) => {
       if (flag) {
-        const filePath = path.resolve(basePath, `${ '../'.repeat(i) }/docker-service/.env`)
+        const filePath = resolve(basePath, `${ '../'.repeat(i) }/envs/.env`)
 
-        if (fs.existsSync(filePath)) {
+        if (existsSync(filePath)) {
           flag = false
           willReturn = filePath
         }
@@ -36,9 +36,9 @@ const getEnvPath = fileName => {
   Array(LEVELS).fill('')
     .map((_, i) => {
       if (flag) {
-        const filePath = path.resolve(process.cwd(), `${ '../'.repeat(i) }${ fileName }`)
+        const filePath = resolve(process.cwd(), `${ '../'.repeat(i) }${ fileName }`)
 
-        if (fs.existsSync(filePath)) {
+        if (existsSync(filePath)) {
           flag = false
           willReturn = filePath
         }
@@ -49,10 +49,10 @@ const getEnvPath = fileName => {
 }
 
 const helper = filePath => {
-  const allEnv = fs.readFileSync(filePath, 'utf8')
+  const allEnv = readFileSync(filePath, 'utf8')
   allEnv.split('\n').filter(Boolean).map(line => {
-    const key = R.head(R.split('=', line)).trim()
-    const val = R.replace(
+    const key = head(split('=', line)).trim()
+    const val = replace(
       `${ key }=`,
       '',
       line
@@ -62,16 +62,16 @@ const helper = filePath => {
   console.log(`\u2713    Environment variables loaded from '${ filePath }'`)
 }
 
-const env = (fileName = '.env') => {
+const envFn = (fileName = '.env') => {
   if (process.env.ENV_FLAG === undefined) {
     process.env.ENV_FLAG = 'true'
   } else {
     return
   }
 
-  const initFilePath = path.resolve(process.cwd(), fileName)
+  const initFilePath = resolve(process.cwd(), fileName)
 
-  if (fs.existsSync(initFilePath)) {
+  if (existsSync(initFilePath)) {
     helper(initFilePath)
 
     return
@@ -83,7 +83,7 @@ const env = (fileName = '.env') => {
     getSpecialEnvPath(fileName === DIR_MODE) :
     getEnvPath(fileName)
 
-  if (filePath === undefined || fs.existsSync(filePath) === false) {
+  if (filePath === undefined || existsSync(filePath) === false) {
     console.log('Such env filepath does not exist !!!')
 
     return
@@ -92,4 +92,4 @@ const env = (fileName = '.env') => {
   helper(filePath)
 }
 
-module.exports = env
+exports.envFn = envFn
