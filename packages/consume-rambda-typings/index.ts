@@ -1,4 +1,7 @@
-import { reject, and, transpose } from 'rambda'
+import { add, reject, and, transpose } from 'rambda'
+
+const add1 = add(1)(2)
+const add2 = add('foo')('bar')
 
 const morebs = transpose([[1,2],[],[1,2,3],[3]])
 console.log({morebs})
