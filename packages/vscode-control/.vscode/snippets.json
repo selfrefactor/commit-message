@@ -60,13 +60,6 @@
 		],
 		"description": "comment"
 	},
-	"Dispatch": {
-		"prefix": "dis",
-		"body": [
-			"this.props.dispatch($0)"
-		],
-		"description": "Dispatch"
-	},
 	"StringTemplate": {
 		"prefix": "st",
 		"body": [
@@ -85,18 +78,8 @@
 		"prefix": "test",
 		"body": [
 			"test('${1:happy}', () => {",
-			"\texpect($0).toBe()",	
-			"})"	
-		],
-		"description": "test"
-	},
-	"TestX": {
-		"prefix": "testx",
-		"body": [
-			"test('${1:happy}', () => {",
-			"\tconst result = $0",	
-			"\texpect(result).toBe(expected)",	
-			"})"	
+			"\t$0",
+			"})"
 		],
 		"description": "test"
 	},
@@ -104,30 +87,30 @@
 		"prefix": "testa",
 		"body": [
 			"test('${1:happy}', async () => {",
-			"\tconst result = await $0",	
-			"\texpect(result).toBe(expected)",	
-			"})"	
+			"\tconst result = await $0",
+			"\texpect(result).toEqual(expected)",
+			"})"
 		],
 		"description": "test"
 	},
 	"Export": {
-		"prefix": "exx",
+		"prefix": "exportx",
 		"body": [
 			"exports.${1:module} = ${1:module}"
 		],
 		"description": "export"
 	},
 	"ExpectTruthy": {
-		"prefix": "ext",
+		"prefix": "expt",
 		"body": [
 			"expect(",
 			"\t$0",
 			").toBeTruthy()"
 		],
 		"description": "ext"
-  },
-  "ExpectFalsy": {
-		"prefix": "exf",
+	},
+	"ExpectFalsy": {
+		"prefix": "expf",
 		"body": [
 			"expect(",
 			"\t$0",
@@ -135,12 +118,25 @@
 		],
 		"description": "x"
 	},
+	"ExpectEqual": {
+		"prefix": "exp",
+		"body": [
+			"expect(",
+			"\t${1:testResult}",
+			").toEqual($0)"
+		]
+	},
 	"Rambdax": {
 		"prefix": "ramx",
 		"body": [
 			"import { $0 } from 'rambdax'"
-		],
-		"description": "ramx"
+		]
+	},
+	"RambdaxRequire": {
+		"prefix": "ramxq",
+		"body": [
+			"const { $0 } = require('rambdax')"
+		]
 	},
 	"LogRoot": {
 		"prefix": "lgr",
@@ -156,20 +152,6 @@
 		],
 		"description": "simple log"
 	},
-	"Lgg": {
-		"prefix": "lgg",
-		"body": [
-			"console.log($0)"
-		],
-		"description": "simple log"
-	},
-	"LogAwait": {
-		"prefix": "lga",
-		"body": [
-			"console.log(await $0)"
-		],
-		"description": "log and await"
-	},
 	"LogDebug": {
 		"prefix": "lgd",
 		"body": [
@@ -177,39 +159,5 @@
 			"debugger"
 		],
 		"description": "log and debug"
-	},
-	"Saga": {
-		"prefix": "saga",
-		"body": [
-        "function *$0Saga(){",
-        "\twhile(true){",
-        "\t\ttry{",	
-        "\t\t\tyield take()",
-        "\t\t}catch(err){",
-        "\t\t\tconsole.error(err)",
-        "\t\t}",
-        "\t}",
-        "}"
-			],
-			"description": "saga"
-		},
-		"ReactComponent": {
-			"prefix": "rear",
-			"body": [
-				"export class $0 extends React.Component{",
-				"\tconstructor(props) {",
-				"\t\tsuper(props)",
-				"\t}",
-				"",
-				"\trender() {",
-				"\t\treturn (",
-				"\t\t\t<div>",
-				"",
-				"\t\t\t</div>",
-				"\t\t)",
-				"\t}",
-				"}"
-			],
-			"description": "react"
-		}
 	}
+}
