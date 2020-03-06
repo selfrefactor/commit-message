@@ -135,7 +135,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.iconTheme": "helium-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "BraveHomer",
   "typescript.surveys.enabled": false,
   "search.useGlobalIgnoreFiles": true,
