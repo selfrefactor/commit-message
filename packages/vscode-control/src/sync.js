@@ -1,3 +1,3 @@
-import { sync } from '.'
+import { sync } from './syncSettings.js'
 
 sync()

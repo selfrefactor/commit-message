@@ -18,7 +18,6 @@ function getListFiles(x){
   return [
     x,
     replace('/Code/', '/Code - Insiders/', x),
-    replace('/Code/', '/Code - Exploration/', x),
   ]
 }
 
@@ -29,13 +28,13 @@ function syncFiles(source, list){
 }
 
 const splittedOptions = {
-  'editor.fontSize'          : [ 17, 18 ],
-  'editor.lineHeight'        : [ 20, 21 ],
-  'editor.suggestFontSize'   : [ 20, 22 ],
-  'editor.suggestLineHeight' : [ 23, 25 ],
-  'window.zoomLevel'         : [ 0, 0, 0 ],
-  'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
-  'editor.fontFamily'        : [ 'Operator Mono', 'Operator Mono', 'Operator Mono' ],
+  // 'editor.fontSize'          : [ 17, 18 ],
+  // 'editor.lineHeight'        : [ 20, 21 ],
+  // 'editor.suggestFontSize'   : [ 20, 22 ],
+  // 'editor.suggestLineHeight' : [ 23, 25 ],
+  // 'window.zoomLevel'         : [ 0, 0, 0 ],
+  // 'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
+  'editor.fontFamily'        : [ 'Operator Mono', 'Bar', 'Operator Mono' ],
   'debug.console.fontFamily' : [ 'Bar', 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
@@ -50,9 +49,8 @@ function syncSettings(){
   const [
     stableSettingsLocation,
     insidersSettingsLocation,
-    explorationSettingsLocation,
   ] = getListFiles(SETTINGS)
-  // console.log(insidersSettingsLocation)
+
   writeJsonSync(
     insidersSettingsLocation,
     {
@@ -66,14 +64,6 @@ function syncSettings(){
     {
       ...settings,
       ...getPartialOptions(1),
-    },
-    { spaces : 2 }
-  )
-  writeJsonSync(
-    explorationSettingsLocation,
-    {
-      ...settings,
-      ...getPartialOptions(2),
     },
     { spaces : 2 }
   )
