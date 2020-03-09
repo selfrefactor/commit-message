@@ -8,6 +8,7 @@
   "editor.fontFamily": "Operator Mono",
   "problems.showCurrentInStatus": true,
   "debug.chrome.useV3": true,
+  "editor.semanticHighlighting.enabled": true,
   "debug.node.useV3": true,
   "json.maxItemsComputed": 1000,
   "terminal.integrated.rendererType": "experimentalWebgl",
