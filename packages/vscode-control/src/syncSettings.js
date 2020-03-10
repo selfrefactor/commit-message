@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { copySync, writeJsonSync } from 'fs-extra'
-import { replace, map } from 'rambdax'
+import { replace, map, toDecimal } from 'rambdax'
 import settings from '../.vscode/settings.json'
 import {
   KEYBINDING,
@@ -10,6 +10,10 @@ import {
   TS_SNIPPETS,
   TSX_SNIPPETS,
 } from './constants'
+
+const SCALE_FACTOR = process.env.SCALE === undefined ?
+  1 :
+  Number(process.env.SCALE)
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
@@ -27,15 +31,34 @@ function syncFiles(source, list){
   })
 }
 
+const getScaledOptions = () => {
+  const fontSize = toDecimal(22 * SCALE_FACTOR)
+  const zoomLevel = toDecimal(2.4 * SCALE_FACTOR)
+  const lineHeight = toDecimal(25 * SCALE_FACTOR)
+  const suggestFontSize = toDecimal(20 * SCALE_FACTOR)
+  const suggestLineHeight = toDecimal(23 * SCALE_FACTOR)
+  const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
+
+  const base =  {
+    "editor.fontSize": fontSize,
+    "window.zoomLevel": zoomLevel,
+    "editor.lineHeight": lineHeight,
+    "editor.suggestFontSize": suggestFontSize,
+    "editor.suggestLineHeight": suggestLineHeight,
+    "terminal.integrated.fontSize": terminalFontSize,
+  }
+
+  const toReturn =  map(
+    x => [x,x] 
+  )(base)
+  return toReturn
+}
+
+
 const splittedOptions = {
-  // 'editor.fontSize'          : [ 17, 18 ],
-  // 'editor.lineHeight'        : [ 20, 21 ],
-  // 'editor.suggestFontSize'   : [ 20, 22 ],
-  // 'editor.suggestLineHeight' : [ 23, 25 ],
-  // 'window.zoomLevel'         : [ 0, 0, 0 ],
-  // 'workbench.colorTheme'     : [ 'BraveHomer', 'BraveHomer' ],
-  'editor.fontFamily'        : [ 'Operator Mono', 'Bar', 'Operator Mono' ],
-  'debug.console.fontFamily' : [ 'Bar', 'Bar', 'Bar' ],
+  ...getScaledOptions(),
+  'editor.fontFamily'        : [ 'Operator Mono', 'Bar' ],
+  'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
   'niketa.PORT_2'            : [ 3013, 3023 ],
@@ -47,8 +70,8 @@ const getPartialOptions = index =>
 
 function syncSettings(){
   const [
-    stableSettingsLocation,
     insidersSettingsLocation,
+    stableSettingsLocation,
   ] = getListFiles(SETTINGS)
 
   writeJsonSync(
@@ -69,17 +92,17 @@ function syncSettings(){
   )
 }
 
-export function syncSnippets(){
+function syncSnippets(){
   syncFiles(SNIPPETS_SOURCE, getListFiles(JS_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(JSX_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(TS_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(TSX_SNIPPETS))
 }
 
-export function sync(){
+void function sync(){
   console.log('START')
   syncFiles(KEYBINDING_SOURCE, getListFiles(KEYBINDING))
   syncSnippets()
   syncSettings()
   console.log('END')
-}
+}()

@@ -1,3 +1,0 @@
-import { syncSnippets } from '.'
-
-syncSnippets()

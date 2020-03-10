@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "PhilHindle.errorlens",
     "lannonbr.vscode-js-annotations",
     "helgardrichard.helium-icon-theme",
     "rastikerdar.vscode-seedling-icon-theme",

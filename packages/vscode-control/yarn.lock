@@ -28,10 +28,10 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-rambdax@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-0.19.0.tgz#29624a6cc2d728fffb5c75fbd0b301571b0d37f1"
-  integrity sha512-wQ1ro8so4bmIcth8rXkH1B9lsc2WdY39zzxl5eImIaCwqMpLHzSnzLlRtZkxQsKXlyDpFhUNX0GdNdMRm01+nw==
+rambdax@3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-3.7.0.tgz#bc89ced092f95521555eb24fe0a29039807a4756"
+  integrity sha512-EaV46HD0sqoFGmm0BT7cMSUXJw0l+iMCH52CkhAuByJNLC+WXE13KgxRd5UsnwdLg/tEskgPADYacOuR0zVa9Q==
 
 universalify@^0.1.0:
   version "0.1.2"
