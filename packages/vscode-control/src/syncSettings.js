@@ -38,7 +38,6 @@ const getScaledOptions = () => {
   const suggestFontSize = toDecimal(20 * SCALE_FACTOR)
   const suggestLineHeight = toDecimal(23 * SCALE_FACTOR)
   const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
-
   const base =  {
     "editor.fontSize": fontSize,
     "window.zoomLevel": zoomLevel,
@@ -51,13 +50,17 @@ const getScaledOptions = () => {
   const toReturn =  map(
     x => [x,x] 
   )(base)
+
+  toReturn['editor.fontFamily'] =  SCALE_FACTOR === 1 ?
+  [ 'Operator Mono', 'Bar'] :
+  [ 'Bar' , 'Bar']
+
   return toReturn
 }
 
 
 const splittedOptions = {
   ...getScaledOptions(),
-  'editor.fontFamily'        : [ 'Bar' , 'Operator Mono'],
   'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
