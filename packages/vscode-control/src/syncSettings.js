@@ -57,7 +57,7 @@ const getScaledOptions = () => {
 
 const splittedOptions = {
   ...getScaledOptions(),
-  'editor.fontFamily'        : [ 'Operator Mono', 'Bar' ],
+  'editor.fontFamily'        : [ 'Bar' , 'Operator Mono'],
   'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
