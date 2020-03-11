@@ -18,6 +18,10 @@
     "command": "workbench.files.action.collapseExplorerFolders"
   },
   {
+    "key": "alt+2",
+    "command": "workbench.action.selectTheme"
+  },
+  {
     "key": "alt+e",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
