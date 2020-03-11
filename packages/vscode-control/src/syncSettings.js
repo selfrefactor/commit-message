@@ -55,6 +55,7 @@ const getScaledOptions = () => {
   [ 'Operator Mono', 'Bar'] :
   [ 'Bar' , 'Bar']
   
+  console.log(toReturn)
   return toReturn
 }
 
