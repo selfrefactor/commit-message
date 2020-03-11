@@ -35,7 +35,7 @@ const getScaledOptions = () => {
   const fontSize = toDecimal(22 * SCALE_FACTOR)
   const zoomLevel = toDecimal(2.4 * SCALE_FACTOR)
   const lineHeight = toDecimal(25 * SCALE_FACTOR)
-  const suggestFontSize = Math.floor(toDecimal(20 * SCALE_FACTOR))
+  const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = toDecimal(23 * SCALE_FACTOR)
   const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
   const base =  {
