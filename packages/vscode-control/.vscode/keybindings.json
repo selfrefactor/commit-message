@@ -9,10 +9,6 @@
     "when": "editorTextFocus && foldingEnabled"
   },
   {
-    "key": "alt+h",
-    "command": "gitTemporal.start"
-  },
-  {
     "key": "ctrl+g",
     "command": "editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
