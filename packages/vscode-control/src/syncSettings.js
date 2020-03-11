@@ -36,7 +36,7 @@ const getScaledOptions = () => {
   const zoomLevel = toDecimal(2.4 * SCALE_FACTOR)
   const lineHeight = toDecimal(25 * SCALE_FACTOR)
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
-  const suggestLineHeight = toDecimal(23 * SCALE_FACTOR)
+  const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
   const base =  {
     "editor.fontSize": fontSize,
@@ -55,7 +55,6 @@ const getScaledOptions = () => {
   [ 'Operator Mono', 'Bar'] :
   [ 'Bar' , 'Bar']
   
-  console.log(toReturn)
   return toReturn
 }
 
