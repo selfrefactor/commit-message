@@ -52,7 +52,7 @@ const getScaledOptions = () => {
   )(base)
 
   toReturn['editor.fontFamily'] =  SCALE_FACTOR === 1 ?
-  [ 'Operator Mono', 'Bar'] :
+  [ 'Bar', 'Operator Mono'] :
   [ 'Bar' , 'Bar']
   
   return toReturn
