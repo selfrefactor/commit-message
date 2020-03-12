@@ -15,6 +15,10 @@ const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   Number(process.env.SCALE)
 
+const BIGGER_SCALE_FACTOR = SCALE_FACTOR === 1 ?
+  1.4 :
+  SCALE_FACTOR  
+
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
@@ -32,9 +36,9 @@ function syncFiles(source, list){
 }
 
 const getScaledOptions = () => {
-  const fontSize = toDecimal(21 * SCALE_FACTOR)
-  const zoomLevel = toDecimal(2.2 * SCALE_FACTOR)
-  const lineHeight = toDecimal(24 * SCALE_FACTOR)
+  const fontSize = toDecimal(24 * SCALE_FACTOR)
+  const zoomLevel = toDecimal(2 * BIGGER_SCALE_FACTOR)
+  const lineHeight = toDecimal(27 * SCALE_FACTOR)
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
