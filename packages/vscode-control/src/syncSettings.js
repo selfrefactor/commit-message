@@ -38,7 +38,7 @@ function syncFiles(source, list){
 const getScaledOptions = () => {
   const fontSize = toDecimal(24 * SCALE_FACTOR)
   const zoomLevel = toDecimal(2 * BIGGER_SCALE_FACTOR)
-  const lineHeight = toDecimal(27 * SCALE_FACTOR)
+  const lineHeight = Math.round(toDecimal(27 * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
