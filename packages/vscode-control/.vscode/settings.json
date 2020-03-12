@@ -5,15 +5,11 @@
   "editor.suggestFontSize": 20,
   "editor.suggestLineHeight": 23,
   "terminal.integrated.fontSize": 16,
-  "editor.fontFamily": "Operator Mono",
+  "editor.fontFamily": "Bar",
   "json.maxItemsComputed": 1000,
   "debug.console.fontFamily": "Bar",
   "debug.console.wordWrap": false,
-  "subtleBrackets.style": {
-    "borderColor": "#727566",
-    "borderWidth": "7px"
-  },
-  "timeline.showView": true,
+  "timeline.showView": false,
   "magicBeans.IMPORT_HELPER_NAME": "ants",
   "magicBeans.IMPORT_TARGET": "rambdax",
   "magicBeans.IMPORT_UTIL_NAME": "bees",

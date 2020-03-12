@@ -32,9 +32,9 @@ function syncFiles(source, list){
 }
 
 const getScaledOptions = () => {
-  const fontSize = toDecimal(22 * SCALE_FACTOR)
-  const zoomLevel = toDecimal(2.4 * SCALE_FACTOR)
-  const lineHeight = toDecimal(25 * SCALE_FACTOR)
+  const fontSize = toDecimal(21 * SCALE_FACTOR)
+  const zoomLevel = toDecimal(2.2 * SCALE_FACTOR)
+  const lineHeight = toDecimal(24 * SCALE_FACTOR)
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
@@ -51,9 +51,11 @@ const getScaledOptions = () => {
     x => [x,x] 
   )(base)
 
-  toReturn['editor.fontFamily'] =  SCALE_FACTOR === 1 ?
+  toReturn['editor.fontFamily'] = SCALE_FACTOR === 1 ?
   [ 'Bar', 'Operator Mono'] :
   [ 'Bar' , 'Bar']
+
+  console.log(toReturn)
   
   return toReturn
 }
