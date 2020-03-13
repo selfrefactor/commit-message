@@ -26,7 +26,7 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "search.collapseResults": "alwaysCollapse",
-  "window.title": "${activeEditorLong}",
+  "window.title": "${activeEditorShort}",
   "zenMode.hideLineNumbers": true,
   "workbench.editor.labelFormat": "default",
   "workbench.editor.focusRecentEditorAfterClose": false,
