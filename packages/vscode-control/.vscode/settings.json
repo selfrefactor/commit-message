@@ -126,8 +126,6 @@
   "niketa.DEFAULT_MODE": "WITH_COVERAGE",
   "niketa.PORT_0": 3011,
   "niketa.PORT_1": 3012,
-  "niketa.PORT_2": 3013,
-  "niketa.PORT_3": 3014,
   "workbench.editor.openPositioning": "last",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.find.addExtraSpaceOnTop": false,
