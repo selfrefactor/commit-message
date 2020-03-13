@@ -41,7 +41,7 @@ const getScaledOptions = () => {
   const lineHeight = Math.round(toDecimal(27 * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
-  const terminalFontSize = toDecimal(16 * SCALE_FACTOR)
+  const terminalFontSize = toDecimal(17 * SCALE_FACTOR)
   const base =  {
     "editor.fontSize": fontSize,
     "window.zoomLevel": zoomLevel,
@@ -70,8 +70,6 @@ const splittedOptions = {
   'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
-  'niketa.PORT_2'            : [ 3013, 3023 ],
-  'niketa.PORT_3'            : [ 3014, 3024 ],
 }
 
 const getPartialOptions = index =>
