@@ -1,7 +1,11 @@
-import { add, reject, and, transpose } from 'rambda'
+import { add, applySpec, reject, and, transpose } from 'rambda'
 
+const applySpecResult = applySpec({
+  a: add(1)
+})(1)
+console.log({applySpecResult})
 const add1 = add(1)(2)
-const add2 = add('foo')('bar')
+const add2 = add(1)(3)
 
 const morebs = transpose([[1,2],[],[1,2,3],[3]])
 console.log({morebs})

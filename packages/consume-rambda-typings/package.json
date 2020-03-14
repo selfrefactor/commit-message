@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "tsc index.ts"
+    "test": "tsc index.ts&&node index.js"
   },
   "dependencies": {
-    "rambda": "https://github.com/selfrefactor/rambda#4.5.0",
+    "rambda": "https://github.com/selfrefactor/rambda#5.0.0",
     "typescript": "^3.7.2"
   }
 }
