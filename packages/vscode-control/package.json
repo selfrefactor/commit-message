@@ -1,7 +1,8 @@
 {
   "scripts": {
     "sync": "node syncSettings",
-    "sync:small": "SCALE=0.7 node syncSettings"
+    "sync:small": "SCALE=0.7 node syncSettings",
+    "sync:smaller": "SCALE=0.57 node syncSettings"
   },
   "name": "vscode-control",
   "version": "0.1.0",
