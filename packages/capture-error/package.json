@@ -1,6 +1,6 @@
 {
 	"name": "capture-error",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"description": "Capture error to Sentry",
 	"main": "index.js",
 	"typings": "index.d.ts",
