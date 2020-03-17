@@ -5,6 +5,7 @@
 	},
 	"name": "env-fn",
 	"version": "2.0.0",
+	"typings": "index.d.ts",
 	"description": "Load env from local file system",
 	"main": "envFn.js",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/env-fn",

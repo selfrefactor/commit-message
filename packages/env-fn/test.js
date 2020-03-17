@@ -1,4 +1,21 @@
 const {envFn} = require('./envFn')
 
-envFn('special')
-console.log(process.env.REDIS_URL)
+// SPECIAL
+// ============================================
+const envs = envFn('special')
+
+
+//  LOCAL WITH CWD
+// ============================================
+// const envs = envFn('local', `${__dirname}/test_folder`)
+
+
+// RESULTS
+// ============================================
+console.log('=============')
+console.log({envs})
+console.log('=============')
+console.log({
+  redis: process.env.REDIS_URL,
+  foo: process.env.foo,
+})

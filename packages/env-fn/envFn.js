@@ -1,25 +1,21 @@
-const {readFileSync, existsSync} = require('fs')
-const {resolve} = require('path')
-const {head, split, replace} = require('rambda')
-const SPECIAL_MODE = 'special'
-const DIR_MODE = 'dirname'
-const LEVELS_SPECIAL = 4
+const { head, split, replace } = require('rambda')
+const { readFileSync, existsSync } = require('fs')
+const { resolve } = require('path')
 const LEVELS = 10
 
-const getSpecialEnvPath = (dirFlag) => {
+const getEnvPath = (isSpecial, cwd) => {
+  const end = isSpecial ? '/envs/.env' : '.env'
+
   let flag = true
   let willReturn
 
-  const basePath = dirFlag ?
-    __dirname : 
-    process.cwd()
-
-  Array(LEVELS_SPECIAL).fill('')
+  Array(LEVELS)
+    .fill('')
     .map((_, i) => {
-      if (flag) {
-        const filePath = resolve(basePath, `${ '../'.repeat(i) }/envs/.env`)
+      if (flag){
+        const filePath = resolve(cwd, `${ '../'.repeat(i) }${ end }`)
 
-        if (existsSync(filePath)) {
+        if (existsSync(filePath)){
           flag = false
           willReturn = filePath
         }
@@ -29,67 +25,49 @@ const getSpecialEnvPath = (dirFlag) => {
   return willReturn
 }
 
-const getEnvPath = fileName => {
-  let flag = true
-  let willReturn
-
-  Array(LEVELS).fill('')
-    .map((_, i) => {
-      if (flag) {
-        const filePath = resolve(process.cwd(), `${ '../'.repeat(i) }${ fileName }`)
-
-        if (existsSync(filePath)) {
-          flag = false
-          willReturn = filePath
-        }
-      }
-    })
-
-  return willReturn
-}
-
-const helper = filePath => {
+const applyEnvFn = filePath => {
   const allEnv = readFileSync(filePath, 'utf8')
-  allEnv.split('\n').filter(Boolean).map(line => {
-    const key = head(split('=', line)).trim()
-    const val = replace(
-      `${ key }=`,
-      '',
-      line
-    ).trim()
-    process.env[ key ] = val
-  })
+  const toReturn = []
+
+  allEnv
+    .split('\n')
+    .filter(Boolean)
+    .map(line => {
+      const key = head(split('=', line)).trim()
+      const val = replace(
+        `${ key }=`, '', line
+      ).trim()
+
+      process.env[ key ] = val
+      toReturn.push(`${ key }=${ val }`)
+    })
   console.log(`\u2713    Environment variables loaded from '${ filePath }'`)
+
+  return toReturn.join(';')
 }
 
-const envFn = (fileName = '.env') => {
-  if (process.env.ENV_FLAG === undefined) {
+const envFn = (mode = 'local', cwd = process.cwd()) => {
+  if (process.env.ENV_FLAG === undefined){
     process.env.ENV_FLAG = 'true'
   } else {
     return
   }
 
-  const initFilePath = resolve(process.cwd(), fileName)
+  const initialFilePath = resolve(cwd, '.env')
 
-  if (existsSync(initFilePath)) {
-    helper(initFilePath)
-
-    return
+  if (existsSync(initialFilePath)){
+    return applyEnvFn(initialFilePath)
   }
 
-  const condition = fileName === SPECIAL_MODE || fileName === DIR_MODE
+  const filePath = getEnvPath(mode === 'special', cwd)
 
-  const filePath = condition ?
-    getSpecialEnvPath(fileName === DIR_MODE) :
-    getEnvPath(fileName)
-
-  if (filePath === undefined || existsSync(filePath) === false) {
+  if (filePath === undefined || existsSync(filePath) === false){
     console.log('Such env filepath does not exist !!!')
 
     return
   }
 
-  helper(filePath)
+  return applyEnvFn(filePath)
 }
 
 exports.envFn = envFn
