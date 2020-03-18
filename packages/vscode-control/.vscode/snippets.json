@@ -126,6 +126,22 @@
 			").toEqual($0)"
 		]
 	},
+	"ExpectSnapshot": {
+		"prefix": "snap",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toMatchSnapshot()"
+		]
+	},
+	"ExpectInlineSnapshot": {
+		"prefix": "inline",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toMatchInlineSnapshot()"
+		]
+	},
 	"Rambdax": {
 		"prefix": "ramx",
 		"body": [
