@@ -1,5 +1,12 @@
 {
   "references.preferredLocation": "view",
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "json.format.enable": false,
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  "task.autoDetect": "off",
+  "task.quickOpen.detail": false,
+  "problems.showCurrentInStatus": true,
+  "workbench.view.experimental.allowMovingToNewContainer": false,
   "window.zoomLevel": 1,
   "editor.fontSize": 22,
   "editor.lineHeight": 25,
