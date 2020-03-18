@@ -13,7 +13,7 @@
   "magicBeans.IMPORT_HELPER_NAME": "_helpers",
   "magicBeans.IMPORT_UTIL_NAME": "_modules",
   "magicBeans.IMPORT_TARGET": "rambdax",
-  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticHighlighting.enabled": false,
   "editor.minimap.enabled": false,
   "editor.minimap.maxColumn": 100,
   "editor.minimap.renderCharacters": true,
@@ -131,5 +131,9 @@
   "editor.find.addExtraSpaceOnTop": false,
   "npm.enableScriptExplorer": false,
   "javascript.implicitProjectConfig.checkJs": false,
-  "typescript.tsserver.experimental.enableProjectDiagnostics":false
+  "typescript.tsserver.experimental.enableProjectDiagnostics":false,
+  "wallaby.reportFailuresAsProblems": false,
+  "wallaby.showUpdateNotifications": false,
+  "wallaby.strictSSL": false,
+  "wallaby.suppressExpirationNotifications": true
 }
