@@ -1,6 +1,6 @@
 {
   "editor.tokenColorCustomizations": {
-    "semanticHighlighting": true
+    "semanticHighlighting": false
   },
   "references.preferredLocation": "view",
   "path-intellisense.autoSlashAfterDirectory": true,
