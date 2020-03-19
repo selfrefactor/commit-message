@@ -21,8 +21,6 @@
   "debug.console.fontFamily": "Bar",
   "debug.console.wordWrap": false,
   "timeline.showView": false,
-  "magicBeans.IMPORT_HELPER_NAME": "_helpers",
-  "magicBeans.IMPORT_UTIL_NAME": "_modules",
   "magicBeans.IMPORT_TARGET": "rambdax",
   "editor.semanticHighlighting.enabled": false,
   "editor.minimap.enabled": false,
