@@ -1,4 +1,7 @@
 {
+  "editor.tokenColorCustomizations": {
+    "semanticHighlighting": true
+  },
   "references.preferredLocation": "view",
   "path-intellisense.autoSlashAfterDirectory": true,
   "json.format.enable": false,
