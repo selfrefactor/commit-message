@@ -8,7 +8,7 @@
     "typescript": "^3.8.3"
   },
   "name": "tslint-fn",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Require eslint typescript deps",
   "main": "index.js",
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/tslint-fn",
