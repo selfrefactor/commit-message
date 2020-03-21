@@ -1,6 +1,9 @@
 const { exec } = require('child_process')
+const { resolve } = require('path')
+const debugFlag = process.env.LINT_FN_DEBUG === 'ON'
+const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 
-exports.execCommand = (command, cwd) =>
+const execCommand = (command, cwd) =>
   new Promise((resolve, reject) => {
     const proc = exec(
       command,
@@ -15,3 +18,9 @@ exports.execCommand = (command, cwd) =>
     proc.stdout.on('end', () => resolve())
     proc.stdout.on('error', err => reject(err))
   })
+
+const execFn = command => execCommand(command, DIR)
+
+exports.execCommand = execCommand
+exports.exec = execFn
+exports.debugFlag = debugFlag

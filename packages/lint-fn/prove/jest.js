@@ -1,8 +1,10 @@
 process.env.LINT_FN_DEBUG = 'ON'
-const { lintFn } = require('../')
+const { lintFn } = require('../lintFn')
 
-lintFn({
-  filePath : `${ process.env.HOME }/repos/rambdax/src/isValid.spec.js`,
-  fixFlag  : true,
-  logFlag  : true,
-})
+const filePath = `${ process.env.HOME }/repos/rambda/source/compose.spec.js`
+
+void (async function prove(){
+  console.time('prove')
+  await lintFn(filePath)
+  console.timeEnd('prove')
+})()

@@ -21,8 +21,6 @@
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-jest-formatting": "^1.2.0",
     "eslint-plugin-no-unsafe-regex": "^1.0.0",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-simple-import-sort": "^5.0.2",
     "eslint-plugin-sort-class-members": "^1.6.0",
     "eslint-plugin-sort-requires": "^2.1.0",

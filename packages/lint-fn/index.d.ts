@@ -1,8 +1,1 @@
-interface Input{
-  filePath: string 
-  prettierFlag?: boolean 
-  fixFlag?: boolean
-  logFlag?: boolean
-}
-
-export function lintFn(input: Input): Promise<any>
+export function lintFn(filePath: string): Promise<void>

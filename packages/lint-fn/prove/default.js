@@ -1,10 +1,11 @@
 process.env.LINT_FN_DEBUG = 'ON'
 process.env.SKIP_ESLINT_RULES = 'no-nested-ternary,max-len'
-const { lintFn } = require('../')
+const { lintFn } = require('../lintFn')
 
-lintFn({
-  filePath     : `${ process.env.HOME }/repos/rambda/source/add.js`,
-  fixFlag      : true,
-  prettierFlag : true,
-  logFlag      : true,
-}).then(console.log)
+const filePath = `${ process.env.HOME }/repos/rambda/source/add.js`
+
+void (async function prove(){
+  console.time('prove')
+  await lintFn(filePath)
+  console.timeEnd('prove')
+})()
