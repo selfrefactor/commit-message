@@ -1,4 +1,5 @@
 {
+  "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.tokenColorCustomizations": {
     "semanticHighlighting": false
   },
