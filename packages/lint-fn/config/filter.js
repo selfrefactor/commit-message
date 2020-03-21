@@ -5,10 +5,8 @@ function filterRules(rules){
 
   const FILTER = process.env.SKIP_ESLINT_RULES.split(',')
 
-  const newRules = map(
-    (rule, prop) => FILTER.includes(prop) ? 0 : rule,
-    rules
-  )
+  const newRules = map((rule, prop) => FILTER.includes(prop) ? 0 : rule,
+    rules)
 
   return newRules
 }

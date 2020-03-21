@@ -9,17 +9,12 @@ const jestRules = {
   'jest/require-tothrow-message': 0,
   'jest/no-identical-title': 1,
   'jest/no-large-snapshots': [1, {maxSize: 400}],
-  "jest-formatting/padding-around-test-blocks": 1
-}  
+  'jest-formatting/padding-around-test-blocks': 1,
+}
 
 module.exports = {
   parser: 'babel-eslint',
-  plugins: [
-    'async-await',
-    'jest-formatting',
-    'simple-import-sort',
-    'jest',
-  ],
+  plugins: ['async-await', 'jest-formatting', 'simple-import-sort', 'jest'],
   env: {
     jasmine: true,
     jest: true,
