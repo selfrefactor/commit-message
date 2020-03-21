@@ -2,7 +2,7 @@ const { clearLintLog } = require('./_modules/clearLintLog')
 const { commandFactory } = require('./_modules/commandFactory')
 const { execCommand } = require('./_modules/execCommand')
 const { getEslintPath } = require('./_modules/getEslintPath')
-const { glue, test, delay } = require('rambdax')
+const { glue, delay } = require('rambdax')
 const { isJest } = require('./is/jest')
 const { isReact } = require('./is/react')
 const { readFileSync } = require('fs')
@@ -18,9 +18,7 @@ const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 const exec = command => execCommand(command, DIR)
 
 const getLintCommandFn = (command, fixFlag) => mode => {
-  const willReturn = fixFlag ?
-    command[ `lint${ mode }` ] :
-    command[ `lint${ mode }NoFix` ]
+  const willReturn = fixFlag ? command[ `lint${ mode }` ] : command[ `lint${ mode }NoFix` ]
 
   return willReturn
 }
@@ -45,25 +43,44 @@ async function whenPrettier(filePath, withTypescript = false){
   await exec(command)
 }
 
+async function whenTypescript(
+  filePath, projectDir, prettierFlag
+){
+  if (!projectDir.hasEslintConfig){
+    const tsCommand = glue(`
+      node 
+      node_modules/tslint/bin/tslint
+      --fix
+      --config tslint.json
+      --project tsconfig.json
+      ${ filePath }
+    `)
+    if (prettierFlag) await whenPrettier(filePath, true)
+
+    return execCommand(tsCommand, projectDir.path)
+  }
+  console.log('Will lint Typescript file with ESLint')
+  
+  const eslintCommand = glue(`
+  node 
+  node_modules/eslint/bin/eslint.js
+  --fix
+  --quiet
+  ${ filePath }
+  `)
+
+  return execCommand(eslintCommand, projectDir.path)
+}
+
 async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
   try {
-    if (test(/\.tsx?$/, filePath)){
+    if (filePath.endsWith('.ts')){
       const dir = takeProjectDir(filePath)
-      if(!dir) return console.log('It seems this is not a Typescript project')
-      
-      const tsCommand = glue(`
-        node 
-        node_modules/tslint/bin/tslint
-        --fix
-        --config tslint.json
-        --project tsconfig.json
-        ${ filePath }
-      `)
-      if (prettierFlag){
-        await whenPrettier(filePath, true)
-      }
+      if (!dir.path) return console.log('It seems this is not a Typescript project')
 
-      return await execCommand(tsCommand, dir)
+      return whenTypescript(
+        filePath, dir, prettierFlag
+      )
     }
 
     if (prettierFlag && fixFlag){
@@ -80,10 +97,7 @@ async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
       src : filePath,
     })
 
-    const getLintCommand = getLintCommandFn(
-      command,
-      fixFlag === undefined ? true : fixFlag
-    )
+    const getLintCommand = getLintCommandFn(command, fixFlag === undefined ? true : fixFlag)
 
     if (isJest(filePath)){
       const jestCommand = getLintCommand('Jest')
@@ -105,6 +119,7 @@ async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
 
     return logData
   } catch (err){
+    console.log(err, 'in lint.fn')
     throw err
   }
 }

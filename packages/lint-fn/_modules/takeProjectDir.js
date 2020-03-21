@@ -14,14 +14,23 @@ function takeProjectDir(filePath){
           existsSync(`${maybeDir}/tslint.json`),
           existsSync(`${maybeDir}/tsconfig.json`),
         )
-
+          
         willReturn = ok ? maybeDir : false
       }
 
     }
   })
 
-  return willReturn
+  if(!willReturn){
+    return {
+      path: false,
+      hasEslintConfig: false
+    }
+  }
+  return {
+    path: willReturn,
+    hasEslintConfig: existsSync(`${willReturn}/.eslintrc.js`)
+  }
 }
 
 exports.takeProjectDir = takeProjectDir
