@@ -3,7 +3,7 @@
     "de": "commit"
   },
   "name": "lint-fn",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "lint",
   "main": "lintFn.js",
   "typings": "index.d.ts",
