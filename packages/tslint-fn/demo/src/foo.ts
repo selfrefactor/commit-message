@@ -5,8 +5,8 @@ interface Foo {
   b: boolean,
 }
 interface Foox {
-          a: string
-          b: boolean,
+  a: string,
+  b: boolean,
 }
 
 function myFunc(foo: string | null) {

@@ -4,7 +4,6 @@
     "rambdax": "^3.7.0"
   },
   "scripts": {
-		"out": "node buildConfig.js",
     "dev": "eslint . --ext .ts --fix",
     "devx": "eslint . --ext .ts --fix",
     "lint": "eslint src/foo.ts --fix",
@@ -12,8 +11,7 @@
     "y": "eslint src/foo.ts --fix"
   },
   "devDependencies": {
-    "fs-extra": "^9.0.0",
-    "tslint-fn": "0.2.0",
+    "tslint-fn": "0.1.0",
     "typescript": "^3.8.3"
   }
 }
