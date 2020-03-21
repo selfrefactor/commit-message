@@ -1,35 +1,38 @@
+const { dropLast } = require('rambdax')
 const { existsSync } = require('fs')
-const { allTrue, dropLast } = require('rambdax')
 
 function takeProjectDir(filePath){
   let willReturn
-
-  [1,2,3,4,5,6].forEach(i => {
-    if(willReturn=== undefined){
+  ;[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].forEach(i => {
+    if (willReturn === undefined){
       const list = filePath.split('/')
       const maybeDir = dropLast(i, list).join('/')
 
-      if(existsSync(`${maybeDir}/package.json`)){
-        const ok = allTrue(
-          existsSync(`${maybeDir}/tslint.json`),
-          existsSync(`${maybeDir}/tsconfig.json`),
-        )
-          
-        willReturn = ok ? maybeDir : false
+      if (existsSync(`${ maybeDir }/package.json`)){
+        willReturn = existsSync(`${ maybeDir }/tsconfig.json`) ? maybeDir : false
       }
-
     }
   })
 
-  if(!willReturn){
+  if (willReturn === undefined)
     return {
-      path: false,
-      hasEslintConfig: false
+      ok         : false,
+      eslintFlag : false,
+      path       : '',
+    }
+
+  if (!willReturn){
+    return {
+      eslintFlag : false,
+      ok         : existsSync(`${ willReturn }/tslint.json`),
+      path       : willReturn,
     }
   }
+
   return {
-    path: willReturn,
-    hasEslintConfig: existsSync(`${willReturn}/.eslintrc.js`)
+    ok         : existsSync(`${ willReturn }/.eslintrc.js`),
+    path       : willReturn,
+    eslintFlag : true,
   }
 }
 

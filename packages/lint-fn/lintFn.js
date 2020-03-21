@@ -46,7 +46,11 @@ async function whenPrettier(filePath, withTypescript = false){
 async function whenTypescript(
   filePath, projectDir, prettierFlag
 ){
-  if (!projectDir.hasEslintConfig){
+  console.log({
+    filePath,
+    projectDir,
+  })
+  if (!projectDir.eslintFlag){
     const tsCommand = glue(`
       node 
       node_modules/tslint/bin/tslint
@@ -60,26 +64,27 @@ async function whenTypescript(
     return execCommand(tsCommand, projectDir.path)
   }
   console.log('Will lint Typescript file with ESLint')
-  
+
   const eslintCommand = glue(`
   node 
   node_modules/eslint/bin/eslint.js
   --fix
-  --quiet
   ${ filePath }
   `)
-
-  return execCommand(eslintCommand, projectDir.path)
+  console.log(eslintCommand)
+  await execCommand(eslintCommand, projectDir.path)
 }
 
 async function lintFn({ prettierFlag, filePath, fixFlag, logFlag }){
   try {
     if (filePath.endsWith('.ts')){
-      const dir = takeProjectDir(filePath)
-      if (!dir.path) return console.log('It seems this is not a Typescript project')
+      const projectDirectory = takeProjectDir(filePath)
+      if (!projectDirectory.ok){
+        return console.log('It seems this is not a Typescript project')
+      }
 
       return whenTypescript(
-        filePath, dir, prettierFlag
+        filePath, projectDirectory, prettierFlag
       )
     }
 
