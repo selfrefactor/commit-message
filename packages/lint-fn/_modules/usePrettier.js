@@ -1,7 +1,7 @@
 const { delay, glue } = require('rambdax')
 const { exec } = require('./execCommand')
 
-async function usePrettier({filePath, withTypescript}){
+async function usePrettier({ filePath, withTypescript }){
   await delay(200)
   const typescriptPart = withTypescript ? '' : '--parser typescript'
 

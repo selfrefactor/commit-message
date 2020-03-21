@@ -1,11 +1,12 @@
-const { glue } = require('rambdax')
 const { execCommand } = require('./execCommand')
+const { glue } = require('rambdax')
 const { usePrettier } = require('./usePrettier')
 
-async function lintTypescript(
-  filePath, projectDir
-){
-  await usePrettier({filePath, withTypescript: true})
+async function lintTypescript(filePath, projectDir){
+  await usePrettier({
+    filePath,
+    withTypescript : true,
+  })
 
   if (!projectDir.eslintFlag){
     const tsCommand = glue(`

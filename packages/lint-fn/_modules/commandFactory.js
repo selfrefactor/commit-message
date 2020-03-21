@@ -1,24 +1,27 @@
-const { resolve } = require('path')
 const { glue } = require('rambdax')
+const { resolve } = require('path')
 
 const commandFactory = ({ src, eslintPath }) => {
   const configFilePath = resolve(__dirname, '../config')
   const lintDefault = glue(`
-    ${eslintPath}
-    ${src}
+    ${ eslintPath }
+    ${ src }
     --fix
     --config 
     ${ configFilePath }/.eslintrcDefault.js
   `)
   const lintJest = glue(`
-    ${eslintPath}
-    ${src}
+    ${ eslintPath }
+    ${ src }
     --fix
     --config 
     ${ configFilePath }/.eslintrcJest.js
   `)
 
-  return {lintDefault, lintJest}
+  return {
+    lintDefault,
+    lintJest,
+  }
 }
 
 exports.commandFactory = commandFactory
