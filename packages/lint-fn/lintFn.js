@@ -46,10 +46,6 @@ async function whenPrettier(filePath, withTypescript = false){
 async function whenTypescript(
   filePath, projectDir, prettierFlag
 ){
-  console.log({
-    filePath,
-    projectDir,
-  })
   if (!projectDir.eslintFlag){
     const tsCommand = glue(`
       node 
@@ -71,7 +67,6 @@ async function whenTypescript(
   --fix
   ${ filePath }
   `)
-  console.log(eslintCommand)
   await execCommand(eslintCommand, projectDir.path)
 }
 

@@ -1,5 +1,13 @@
 const {resolve} = require('path')
 
+const eslintTypescriptCommand = ({ filePath, eslintPath }) => {
+  const configFilePath = resolve(__dirname, '../config')
+  const cacheFilePath = `${ configFilePath }/tmp`
+  const logFilePath = `${ configFilePath }/tmp/eslint.txt`
+  
+ return `-o ${ logFilePath } --cache --cache-location ${ cacheFilePath }`
+}
+
 const commandFactory = ({ src, eslintPath }) => {
   const eslint = `${ eslintPath }`
   const configFilePath = resolve(__dirname, '../config')
