@@ -21,7 +21,6 @@ async function lintTypescript(filePath, projectDir){
     return execCommand(tsCommand, projectDir.path)
   }
 
-  console.log('New feature - lint Typescript file with ESLint')
   const eslintCommand = glue(`
   node 
   node_modules/eslint/bin/eslint.js
