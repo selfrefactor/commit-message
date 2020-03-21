@@ -1,20 +1,20 @@
 {
-	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^2.24.0",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
     "@typescript-eslint/parser": "^2.24.0",
     "eslint": "^6.8.0"
-	},
-	"devDependencies": {
-		"typescript": "3.8.3"
-	},
-	"peerDependencies": {
-		"typescript": "^3.8.3"
-	},
-	"name": "tslint-fn",
-	"version": "0.1.0",
-	"description": "Require eslint typescript deps",
-	"main": "index.js",
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/tslint-fn",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT"
+  },
+  "peerDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "name": "tslint-fn",
+  "version": "0.1.0",
+  "description": "Require eslint typescript deps",
+  "main": "index.js",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/tslint-fn",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT",
+  "commitMessage": {
+    "workInProgress": "demo folder"
+  }
 }
