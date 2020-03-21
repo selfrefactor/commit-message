@@ -1,5 +1,5 @@
 const { clearLintLog } = require('./_modules/clearLintLog')
-const { commandFactory } = require('./_modules/commandFactory')
+const { commandFactory, getLogCommand } = require('./_modules/commandFactory')
 const { execCommand } = require('./_modules/execCommand')
 const { getEslintPath } = require('./_modules/getEslintPath')
 const { glue, delay } = require('rambdax')
@@ -60,13 +60,13 @@ async function whenTypescript(
     return execCommand(tsCommand, projectDir.path)
   }
   console.log('Will lint Typescript file with ESLint')
-
   const eslintCommand = glue(`
   node 
   node_modules/eslint/bin/eslint.js
   --fix
   ${ filePath }
   `)
+
   await execCommand(eslintCommand, projectDir.path)
 }
 
