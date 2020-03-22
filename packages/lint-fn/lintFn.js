@@ -10,12 +10,12 @@ const { execPrettier } = require('./_modules/execPrettier')
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
 async function handleTypescript(filePath){
-  const projectDirectory = takeProjectDir(filePath)
-  if (!projectDirectory.ok){
+  const {ok,eslintFlag,path} = takeProjectDir(filePath)
+  if (!ok){
     return console.log('This is not a Typescript project')
   }
 
-  if (!projectDir.eslintFlag){
+  if (!eslintFlag){
     return console.log(
       glue(`
         TSLint is no longer
@@ -27,7 +27,7 @@ async function handleTypescript(filePath){
     )
   }
 
-  return lintTypescript(filePath, projectDirectory.path)
+  return lintTypescript(filePath, path)
 }
 
 async function lintFn(filePath){
