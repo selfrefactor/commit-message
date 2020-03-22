@@ -122,7 +122,7 @@
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "AmericanSpy",
+  "workbench.colorTheme": "HungerShake",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,
