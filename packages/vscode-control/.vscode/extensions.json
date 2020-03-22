@@ -1,5 +1,7 @@
 {
   "recommendations": [
+    "wallabyjs.wallaby-vscode",
+    "syler.sass-indented",
     "vscode-icons-team.vscode-icons",
     "ghaschel.vscode-angular-html",
     "ms-vscode.vscode-typescript-next",
