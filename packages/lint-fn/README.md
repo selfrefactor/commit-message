@@ -2,13 +2,17 @@
 
 Run ESLint with fix with predefined rules, which depend on the file path.
 
+It supports Typescript files as well.
+
+> Important - it expects `prettier` installed as global dependency
+
 ## Usage
 
 ```
 // yarn add -D lint-fn
 const lintFn = require("lint-fn")
-lintFn({filePath:"foo.js"})
-.then(console.log)
+await lintFn("foo.js")
+await lintFn("bar.ts")
 ```
 
 ## Prettier

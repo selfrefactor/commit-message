@@ -2,6 +2,9 @@ const { glue } = require('rambdax')
 const { exec } = require('./execCommand')
 
 async function usePrettier({ filePath, withTypescript }){
+  /*
+    Other option is `--parser babel-ts`
+  */
   const typescriptPart = withTypescript ? '' : '--parser typescript'
 
   const command = glue(`
@@ -12,6 +15,7 @@ async function usePrettier({ filePath, withTypescript }){
   --single-quote
   --no-bracket-spacing
   --trailing-comma es5
+  --arrow-parens avoid
   --write
   ${ typescriptPart }
   ${ filePath }
