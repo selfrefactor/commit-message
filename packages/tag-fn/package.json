@@ -30,7 +30,7 @@
     "env-fn": "^1.1.2",
     "jest": "^25.0.0",
     "ts-jest": "^24.1.0",
-    "tslint": "^6.0.0-beta1",
+    "tslint-fn": "0.2.1",
     "typescript": "^3.8.0-dev.20191105"
   },
   "jest": {
