@@ -3,20 +3,36 @@ const { exec, debugFlag } = require('./_modules/execCommand')
 const { getEslintPath } = require('./_modules/getEslintPath')
 const { lintTypescript } = require('./_modules/lintTypescript')
 const { takeProjectDir } = require('./_modules/takeProjectDir')
+const { glue } = require('rambdax')
 const { usePrettier } = require('./_modules/usePrettier')
+const { execPrettier } = require('./_modules/execPrettier')
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
+async function handleTypescript(filePath){
+  const projectDirectory = takeProjectDir(filePath)
+  if (!projectDirectory.ok){
+    return console.log('This is not a Typescript project')
+  }
+
+  if (!projectDir.eslintFlag){
+    return console.log(
+      glue(`
+        TSLint is no longer
+        supported! You need to switch
+        to the new setup, which
+        lints Typescript files
+        using ESLint with 'tslint-fn' library
+      `)
+    )
+  }
+
+  return lintTypescript(filePath, projectDirectory.path)
+}
+
 async function lintFn(filePath){
   try {
-    if (filePath.endsWith('.ts')){
-      const projectDirectory = takeProjectDir(filePath)
-      if (!projectDirectory.ok){
-        return console.log('This is not a Typescript project')
-      }
-
-      return lintTypescript(filePath, projectDirectory)
-    }
+    if (filePath.endsWith('.ts')) return handleTypescript(filePath)
 
     const eslintPath = getEslintPath(debugFlag)
 
@@ -48,3 +64,4 @@ async function lintFn(filePath){
 }
 
 exports.lintFn = lintFn
+exports.execPrettier = execPrettier

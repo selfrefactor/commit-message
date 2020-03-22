@@ -1,9 +1,11 @@
-const { dropLast } = require('rambdax')
+const { dropLast, range } = require('rambdax')
 const { existsSync } = require('fs')
 
 function takeProjectDir(filePath){
   let willReturn
-  ;[ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ].forEach(i => {
+  const loop = range(1,10)
+
+  loop.forEach(i => {
     if (willReturn === undefined){
       const list = filePath.split('/')
       const maybeDir = dropLast(i, list).join('/')
@@ -14,25 +16,18 @@ function takeProjectDir(filePath){
     }
   })
 
-  if (willReturn === undefined)
+  if (!willReturn){
     return {
       ok         : false,
       eslintFlag : false,
       path       : '',
     }
-
-  if (!willReturn){
-    return {
-      eslintFlag : false,
-      ok         : existsSync(`${ willReturn }/tslint.json`),
-      path       : willReturn,
-    }
   }
 
   return {
-    ok         : existsSync(`${ willReturn }/.eslintrc.js`),
+    ok         : true,
     path       : willReturn,
-    eslintFlag : true,
+    eslintFlag : existsSync(`${ willReturn }/.eslintrc.js`),
   }
 }
 

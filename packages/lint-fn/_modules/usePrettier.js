@@ -1,14 +1,19 @@
 const { glue } = require('rambdax')
-const { exec } = require('./execCommand')
+const { resolve } = require('path')
+const { execCommand } = require('./execCommand')
+
+const PRETTIER_PATH = 'node_modules/prettier/bin-prettier.js'
 
 async function usePrettier({ filePath, withTypescript }){
+  const cwd = resolve(__dirname, '../')
   /*
     Other option is `--parser babel-ts`
   */
   const typescriptPart = withTypescript ? '' : '--parser typescript'
 
   const command = glue(`
-  prettier 
+  node
+  ${PRETTIER_PATH}
   --no-semi
   --no-bracket-spacing
   --print-width 77
@@ -20,7 +25,7 @@ async function usePrettier({ filePath, withTypescript }){
   ${ typescriptPart }
   ${ filePath }
 `)
-  await exec(command)
+  await execCommand(command, cwd)
 }
 
 exports.usePrettier = usePrettier

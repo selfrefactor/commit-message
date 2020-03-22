@@ -8,19 +8,6 @@ async function lintTypescript(filePath, projectDir){
     withTypescript : true,
   })
 
-  if (!projectDir.eslintFlag){
-    const tsCommand = glue(`
-      node 
-      node_modules/tslint/bin/tslint
-      --fix
-      --config tslint.json
-      --project tsconfig.json
-      ${ filePath }
-    `)
-
-    return execCommand(tsCommand, projectDir.path)
-  }
-
   const eslintCommand = glue(`
   node 
   node_modules/eslint/bin/eslint.js
@@ -28,7 +15,7 @@ async function lintTypescript(filePath, projectDir){
   ${ filePath }
   `)
 
-  await execCommand(eslintCommand, projectDir.path)
+  await execCommand(eslintCommand, projectDir)
 }
 
 exports.lintTypescript = lintTypescript

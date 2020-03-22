@@ -24,6 +24,7 @@
     "eslint-plugin-simple-import-sort": "^5.0.2",
     "eslint-plugin-sort-class-members": "^1.6.0",
     "eslint-plugin-sort-requires": "^2.1.0",
+    "prettier": "^2.0.1",
     "rambdax": "^3.7.0"
   },
   "devDependencies": {},
