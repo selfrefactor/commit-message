@@ -1,4 +1,9 @@
 {
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "vsintellicode.java.completionsEnabled": false,
+  "vsintellicode.features.python.deepLearning": "disabled",
+  "vsintellicode.python.completionsEnabled": false,
+  "vsintellicode.sql.completionsEnabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.tokenColorCustomizations": {
     "semanticHighlighting": false
@@ -114,7 +119,7 @@
   "workbench.tips.enabled": false,
   "zenMode.centerLayout": false,
   "zenMode.hideStatusBar": false,
-  "editor.suggest.localityBonus": false,
+  "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "AmericanSpy",
