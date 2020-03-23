@@ -1,4 +1,6 @@
 {
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.java.completionsEnabled": false,
   "vsintellicode.features.python.deepLearning": "disabled",
