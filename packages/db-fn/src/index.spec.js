@@ -1,6 +1,6 @@
-import { readFileSync, unlinkSync } from 'fs'
+const { readFileSync, unlinkSync } = require('fs')
 
-import {
+const {
   init,
   load,
   loadAll,
@@ -10,7 +10,7 @@ import {
   remove,
   save,
   update,
-} from './'
+} = require('./') 
 
 init('/home/s/repos/data/tmp')
 

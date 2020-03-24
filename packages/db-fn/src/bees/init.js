@@ -11,4 +11,4 @@ function getDirBee(){
 }
 
 exports.initBee = initBee
-exports.getDirBee = getDirBee()
+exports.getDirBee = getDirBee

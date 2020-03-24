@@ -1,4 +1,4 @@
-import { uuidAnt } from './uuid'
+const { uuidAnt } = require('./uuid')
 
 test('', () => {
   expect(() => console.log(uuidAnt())).not.toThrow()
