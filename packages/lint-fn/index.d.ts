@@ -1,8 +1,15 @@
 type PrettierSpecialCase = 'check' | 'local' | 'outer'
-
-export function lintFn(filePath: string, prettierSpecialCase?:PrettierSpecialCase): Promise<void>;
 interface ExecPrettier {
   filePath: string
   injectOptions: string
+  prettierSpecialCase?:PrettierSpecialCase
 }
-export function execPrettier(input: ExecPrettier): Promise<void>
+
+export function lintFn(
+  filePath: string, 
+  prettierSpecialCase?:PrettierSpecialCase
+): Promise<void>;
+
+export function execPrettier(
+  input: ExecPrettier
+): Promise<void>

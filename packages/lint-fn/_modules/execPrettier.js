@@ -1,14 +1,15 @@
 const { execCommand } = require('./execCommand')
-const { glue } = require('rambdax')
+const { glue, defaultTo } = require('rambdax')
 const { resolve } = require('path')
+const { getPrettierPath } = require('./usePrettier')
 
-const PRETTIER_PATH = 'node_modules/prettier/bin-prettier.js'
-
-async function execPrettier({ filePath, injectOptions }){
+async function execPrettier({ filePath, injectOptions, prettierSpecialCase }){
   const cwd = resolve(__dirname, '../')
+  const prettierPath = getPrettierPath(cwd, defaultTo('skip', prettierSpecialCase))
+  
   const command = glue(`
     node
-    ${ PRETTIER_PATH }
+    ${ prettierPath }
     ${ injectOptions }
     --write
     ${ filePath }

@@ -1,10 +1,11 @@
 const { execCommand } = require('./execCommand')
 const { glue } = require('rambdax')
 const { resolve } = require('path')
+const { existsSync } = require('fs')
 
 const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
 
-const getPrettierPath = (cwd, prettierSpecialCase) => {
+export const getPrettierPath = (cwd, prettierSpecialCase) => {
   if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
 
   const otherPossiblePath = resolve(__dirname,
