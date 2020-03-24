@@ -2,11 +2,8 @@ interface Push<T>{
     newState: Array<T>
     location: string
 }
-interface WithId<T> extends T{
-    id: string
-}
 interface Save<T>{
-    saved: T | WithId
+    saved: T
     location: string
 }
 export function init(dir: string): void
