@@ -6,7 +6,7 @@
 	},
 	"name": "db-fn",
 	"version": "1.0.0",
-	"main": "./src/index.js",
+	"main": "./index.js",
 	"typings": "./index.d.ts",
 	"devDependencies": {
 		"esm": "^3.2.25",
