@@ -5,7 +5,7 @@
 		"start": "node ."
 	},
 	"name": "db-fn",
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"main": "./src/index.js",
 	"typings": "./index.d.ts",
 	"devDependencies": {
