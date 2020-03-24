@@ -15,7 +15,7 @@ function myFunc(foo: string | null) {
 function myFuncx<T>(foo: T | null) {
   return foo?.['a']?.b?.c
 }
-const a = add(1, 2)
+const a = add(1, 2);
 const aa = add(1, 2)
 const aaa: string[] = ['']
 const aaaa: string[] = ['']
