@@ -3,7 +3,7 @@ const { existsSync } = require('fs')
 
 function takeProjectDir(filePath){
   let willReturn
-  const loop = range(1,10)
+  const loop = range(1, 10)
 
   loop.forEach(i => {
     if (willReturn === undefined){
@@ -11,7 +11,9 @@ function takeProjectDir(filePath){
       const maybeDir = dropLast(i, list).join('/')
 
       if (existsSync(`${ maybeDir }/package.json`)){
-        willReturn = existsSync(`${ maybeDir }/tsconfig.json`) ? maybeDir : false
+        willReturn = existsSync(`${ maybeDir }/tsconfig.json`) ?
+          maybeDir :
+          false
       }
     }
   })

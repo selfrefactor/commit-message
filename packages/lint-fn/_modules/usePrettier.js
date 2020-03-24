@@ -1,29 +1,35 @@
+const { execCommand } = require('./execCommand')
 const { glue } = require('rambdax')
 const { resolve } = require('path')
-const { existsSync } = require('fs')
-const { execCommand } = require('./execCommand')
 
 const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
 
-const getPrettierPath = (cwd) => {
-  if(existsSync(
-    `${cwd}/${PRETTIER_PATH_BASE}`
-  )) return `${cwd}/${PRETTIER_PATH_BASE}`
-  const otherPossiblePath = resolve(
-    __dirname,
-    `../../../${PRETTIER_PATH_BASE}`
-  )
+const getPrettierPath = (cwd, prettierSpecialCase) => {
+  if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
 
-  if(existsSync(otherPossiblePath)) return otherPossiblePath
+  const otherPossiblePath = resolve(__dirname,
+    `../../../${ PRETTIER_PATH_BASE }`)
+  if (prettierSpecialCase === 'outer') return otherPossiblePath
 
-  console.log(otherPossiblePath, `${cwd}/${PRETTIER_PATH_BASE}`)
+  if (existsSync(`${ cwd }/${ PRETTIER_PATH_BASE }`)){
+    console.log('You should use \'prettierSpecialCase = local\'')
+
+    return `${ cwd }/${ PRETTIER_PATH_BASE }`
+  }
+
+  if (existsSync(otherPossiblePath)){
+    console.log('You should use \'prettierSpecialCase = outer\'')
+
+    return otherPossiblePath
+  }
+
   throw new Error('Prettier was not found "lint.fn"')
 }
 
-async function usePrettier({ filePath, withTypescript }){
+async function usePrettier({ filePath, withTypescript, prettierSpecialCase }){
   const cwd = resolve(__dirname, '../')
-  const prettierPath = getPrettierPath(cwd)
-  
+  const prettierPath = getPrettierPath(cwd, prettierSpecialCase)
+
   /*
     Other option is `--parser babel-ts`
   */
@@ -31,7 +37,7 @@ async function usePrettier({ filePath, withTypescript }){
 
   const command = glue(`
   node
-  ${prettierPath}
+  ${ prettierPath }
   --no-semi
   --no-bracket-spacing
   --print-width 77

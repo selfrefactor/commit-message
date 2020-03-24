@@ -5,11 +5,10 @@ const DIR = debugFlag ? __dirname : resolve(__dirname, '../../')
 
 const execCommand = (command, cwd) =>
   new Promise((resolve, reject) => {
-    const proc = exec(command,
-      {
-        cwd,
-        env : process.env,
-      })
+    const proc = exec(command, {
+      cwd,
+      env : process.env,
+    })
     proc.stdout.on('data', chunk => {
       console.log(chunk.toString())
     })

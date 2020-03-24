@@ -6,6 +6,9 @@ const injectOptions = '--print-width 44'
 
 void (async function prove(){
   console.time('prove')
-  await execPrettier({filePath, injectOptions}) 
+  await execPrettier({
+    filePath,
+    injectOptions,
+  })
   console.timeEnd('prove')
 })()

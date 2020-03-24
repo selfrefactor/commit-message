@@ -5,6 +5,6 @@ const filePath = `${ process.env.HOME }/repos/rambda-docs/src/app/whole/whole.co
 
 void (async function prove(){
   console.time('prove')
-  await lintFn(filePath) 
+  await lintFn(filePath)
   console.timeEnd('prove')
 })()

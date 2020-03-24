@@ -1,38 +1,39 @@
 const { commandFactory } = require('./_modules/commandFactory')
 const { exec, debugFlag } = require('./_modules/execCommand')
+const { execPrettier } = require('./_modules/execPrettier')
 const { getEslintPath } = require('./_modules/getEslintPath')
+const { glue } = require('rambdax')
 const { lintTypescript } = require('./_modules/lintTypescript')
 const { takeProjectDir } = require('./_modules/takeProjectDir')
-const { glue } = require('rambdax')
 const { usePrettier } = require('./_modules/usePrettier')
-const { execPrettier } = require('./_modules/execPrettier')
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
-async function handleTypescript(filePath){
-  const {ok,eslintFlag,path} = takeProjectDir(filePath)
+async function handleTypescript(filePath, prettierSpecialCase){
+  const { ok, eslintFlag, path } = takeProjectDir(filePath)
   if (!ok){
     return console.log('This is not a Typescript project')
   }
 
   if (!eslintFlag){
-    return console.log(
-      glue(`
+    return console.log(glue(`
         TSLint is no longer
         supported! You need to switch
         to the new setup, which
         lints Typescript files
         using ESLint with 'tslint-fn' library
-      `)
-    )
+      `))
   }
 
-  return lintTypescript(filePath, path)
+  return lintTypescript(
+    filePath, path, prettierSpecialCase
+  )
 }
 
-async function lintFn(filePath){
+async function lintFn(filePath, prettierSpecialCase = 'local'){
   try {
-    if (filePath.endsWith('.ts')) return handleTypescript(filePath)
+    if (filePath.endsWith('.ts'))
+      return handleTypescript(filePath, prettierSpecialCase)
 
     const eslintPath = getEslintPath(debugFlag)
 
@@ -41,6 +42,7 @@ async function lintFn(filePath){
     await usePrettier({
       filePath,
       withTypescript : false,
+      prettierSpecialCase,
     })
 
     const { lintDefault, lintJest } = commandFactory({
