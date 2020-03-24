@@ -5,7 +5,7 @@ const { existsSync } = require('fs')
 
 const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
 
-export const getPrettierPath = (cwd, prettierSpecialCase) => {
+const getPrettierPath = (cwd, prettierSpecialCase) => {
   if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
 
   const otherPossiblePath = resolve(__dirname,
@@ -54,3 +54,4 @@ async function usePrettier({ filePath, withTypescript, prettierSpecialCase }){
 }
 
 exports.usePrettier = usePrettier
+exports.getPrettierPath = getPrettierPath
