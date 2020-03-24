@@ -1,17 +1,13 @@
-import { loadJsonBee } from './loadJson'
-import { find } from 'rambdax'
+const { loadJsonBee } = require('./loadJson')
 
-export function loadBee(id, label){
+function loadBee(id, label){
   return new Promise(resolve => {
-    loadJsonBee(label)
-      .then(content => {
-        if (!content) return resolve()
-        const found = find(
-          x => x.id === id,
-          content
-        )
+    loadJsonBee(label).then(content => {
+      if (!content) return resolve()
+      const found = find(x => x.id === id, content)
 
-        resolve(found)
-      })
+      resolve(found)
+    })
   })
 }
+exports.loadBee = loadBee

@@ -1,9 +1,9 @@
-import { remove, maybe } from 'rambdax'
-import { snakeCase } from 'string-fn'
-import { existsSync, readdir } from 'fs'
-import { getDirBee } from './init'
+const { existsSync, readdir } = require('fs')
+const { getDirBee } = require('./init')
+const { remove, maybe } = require('rambdax')
+const { snakeCase } = require('string-fn')
 
-export function loadKeysBee(label, secondLabel){
+function loadKeysBee(label, secondLabel){
   return new Promise(resolve => {
     const actualLabel = maybe(
       secondLabel === undefined,
@@ -20,3 +20,5 @@ export function loadKeysBee(label, secondLabel){
     })
   })
 }
+
+exports.loadKeysBee = loadKeysBee

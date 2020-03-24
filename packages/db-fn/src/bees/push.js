@@ -1,9 +1,9 @@
-import { writeFile, readFileSync, existsSync } from 'fs'
-import { snakeCase } from 'string-fn'
-import { uuidAnt } from '../ants/uuid'
-import { getDirBee } from './init'
+const { getDirBee } = require('./init')
+const { snakeCase } = require('string-fn')
+const { uuidAnt } = require('../ants/uuid')
+const { writeFile, readFileSync, existsSync } = require('fs')
 
-export function pushBee(data, label){
+function pushBee(data, label){
   return new Promise((resolve, reject) => {
     try {
       const output = `${ getDirBee() }/${ snakeCase(label, true) }.json`
@@ -17,13 +17,14 @@ export function pushBee(data, label){
       })
 
       writeFile(
-        output,
-        JSON.stringify(currentState, null, 2),
-        () => resolve({
-          id,
-          location : output,
-          newState : currentState,
-        })
+        output, JSON.stringify(
+          currentState, null, 2
+        ), () =>
+          resolve({
+            id,
+            location : output,
+            newState : currentState,
+          })
       )
     } catch (e){
       console.log('push bee')
@@ -31,3 +32,5 @@ export function pushBee(data, label){
     }
   })
 }
+
+exports.pushBee = pushBee

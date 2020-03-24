@@ -1,11 +1,14 @@
-import { setter, getter } from 'rambdax'
+const { setter, getter } = require('rambdax')
 
-export function initBee(dir){
+function initBee(dir){
   setter('DIR', dir)
 }
 
-export function getDirBee(){
+function getDirBee(){
   const found = getter('DIR')
 
   return found
 }
+
+exports.initBee = initBee
+exports.getDirBee = getDirBee()

@@ -1,3 +1,5 @@
+import { readFileSync, unlinkSync } from 'fs'
+
 import {
   init,
   load,
@@ -5,16 +7,17 @@ import {
   loadJson,
   loadKeys,
   push,
+  remove,
   save,
   update,
-  remove,
 } from './'
-import { unlinkSync, readFileSync } from 'fs'
 
 init('/home/s/repos/data/tmp')
 
 test('happy', async () => {
-  const { location } = await save({ b : 2 }, 'foo', 'bar')
+  const { location } = await save(
+    { b : 2 }, 'foo', 'bar'
+  )
   readFileSync(location).toString()
   const loaded = await loadJson('foo', 'bar')
   expect(loaded).toEqual({ b : 2 })
@@ -29,7 +32,9 @@ test('save with one label', async () => {
 })
 
 test('save with two labels', async () => {
-  const saved = await save({ b : 2 }, 'foo', 'bar')
+  const saved = await save(
+    { b : 2 }, 'foo', 'bar'
+  )
   console.log(saved)
 
   expect(await remove('foo', 'bar')).toBe(true)
@@ -50,8 +55,12 @@ test('load keys', async () => {
 })
 
 test('load all', async () => {
-  const firstLocation = await save({ a : 1 }, 'foo', 'bar')
-  const secondLocation = await save({ a : 20 }, 'foo', 'baz')
+  const firstLocation = await save(
+    { a : 1 }, 'foo', 'bar'
+  )
+  const secondLocation = await save(
+    { a : 20 }, 'foo', 'baz'
+  )
   const result = await loadAll('foo')
   expect(result).toEqual([ { a : 1 }, { a : 20 } ])
   unlinkSync(firstLocation.location)
@@ -73,13 +82,11 @@ test('update', async () => {
   await push({ a : 20 }, 'foo')
   const loaded = await load(firstPush.id, 'foo')
 
-  const updated = await update(
-    {
-      ...loaded,
-      a : 40,
-    },
-    'foo'
-  )
+  const updated = await update({
+    ...loaded,
+    a : 40,
+  },
+  'foo')
   const afterUpdate = await load(firstPush.id, 'foo')
   expect(updated.length).toBe(2)
   expect(afterUpdate.a).toBe(40)

@@ -1,15 +1,13 @@
-import { glue } from 'rambdax'
-import { existsSync, unlinkSync } from 'fs'
-import { snakeCase } from 'string-fn'
-import { getDirBee } from './init'
+const { existsSync, unlinkSync } = require('fs')
+const { getDirBee } = require('./init')
+const { glue } = require('rambdax')
+const { snakeCase } = require('string-fn')
 
-export function removeBee(id, label){
-  const filePath = glue(
-    `${ getDirBee() }
+function removeBee(id, label){
+  const filePath = glue(`${ getDirBee() }
     ${ snakeCase(id, true) }
     ${ snakeCase(label, true) }.json`,
-    '/'
-  )
+  '/')
 
   if (!existsSync(filePath)) return false
 
@@ -17,3 +15,5 @@ export function removeBee(id, label){
 
   return true
 }
+
+exports.removeBee = removeBee

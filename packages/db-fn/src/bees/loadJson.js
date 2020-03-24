@@ -1,8 +1,8 @@
-import { readFile, existsSync } from 'fs'
-import { snakeCase } from 'string-fn'
-import { getDirBee } from './init'
+const { getDirBee } = require('./init')
+const { readFile, existsSync } = require('fs')
+const { snakeCase } = require('string-fn')
 
-export function loadJsonBee(label, secondLabel){
+function loadJsonBee(label, secondLabel){
   const base = `${ getDirBee() }/${ snakeCase(label, true) }`
 
   return new Promise(resolve => {
@@ -12,26 +12,21 @@ export function loadJsonBee(label, secondLabel){
 
     if (!existsSync(path)) return resolve()
 
-    readFile(
-      path,
-      (_, data) => {
-        if (!data) return resolve()
+    readFile(path, (_, data) => {
+      if (!data) return resolve()
 
-        try {
-          const parsed = JSON.parse(data.toString())
+      try {
+        const parsed = JSON.parse(data.toString())
 
-          resolve(parsed)
-        } catch (error){
-          console.log(
-            error,
-            data.toString(),
-            label,
-            secondLabel,
-            'sk'
-          )
-          resolve()
-        }
+        resolve(parsed)
+      } catch (error){
+        console.log(
+          error, data.toString(), label, secondLabel, 'sk'
+        )
+        resolve()
       }
-    )
+    })
   })
 }
+
+exports.loadJsonBee = loadJsonBee

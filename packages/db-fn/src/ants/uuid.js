@@ -1,15 +1,13 @@
-import { range, head, shuffle} from 'rambdax'
+const { range, head, shuffle } = require('rambdax')
 
-const charCodes = [
-  ...range(49,57),
-  ...range(65,90),
-  ...range(97,122),
-]
+const charCodes = [ ...range(49, 57), ...range(65, 90), ...range(97, 122) ]
 
-const loops = range(0,8)
+const loops = range(0, 8)
 
-export function uuidAnt(){
-  return loops.map(
-    x => String.fromCharCode(head(shuffle(charCodes)))
-  ).join('')
+function uuidAnt(){
+  return loops
+    .map(x => String.fromCharCode(head(shuffle(charCodes))))
+    .join('')
 }
+
+exports.uuidAnt = uuidAnt

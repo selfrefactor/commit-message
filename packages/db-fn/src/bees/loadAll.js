@@ -1,21 +1,21 @@
-import { remove } from 'rambdax'
-import { snakeCase } from 'string-fn'
-import { existsSync, readdir } from 'fs'
-import { getDirBee } from './init'
-import { loadJsonBee } from './loadJson'
+const { existsSync, readdir } = require('fs')
+const { getDirBee } = require('./init')
+const { loadJsonBee } = require('./loadJson')
+const { remove } = require('rambdax')
+const { snakeCase } = require('string-fn')
 
-export function loadAllBee(label){
+function loadAllBee(label){
   return new Promise(resolve => {
     const dir = `${ getDirBee() }/${ snakeCase(label, true) }`
 
     if (!existsSync(dir)) return resolve()
 
     readdir(dir, (_, dirData) => {
-      const promised = dirData.map(
-        x => loadJsonBee(label, remove('.json', x))
-      )
-      Promise.all(promised)
-        .then(resolve)
+      const promised = dirData.map(x =>
+        loadJsonBee(label, remove('.json', x)))
+      Promise.all(promised).then(resolve)
     })
   })
 }
+
+exports.loadAllBee = loadAllBee

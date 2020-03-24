@@ -1,9 +1,19 @@
-export { initBee as init } from './bees/init'
-export { updateBee as update } from './bees/update'
-export { pushBee as push } from './bees/push'
-export { saveBee as save } from './bees/save'
-export { loadJsonBee as loadJson } from './bees/loadJson'
-export { loadBee as load } from './bees/load'
-export { loadKeysBee as loadKeys } from './bees/loadKeys'
-export { loadAllBee as loadAll } from './bees/loadAll'
-export { removeBee as remove } from './bees/remove'
+const { initBee } = require('./bees/init')
+const { loadAllBee } = require('./bees/loadAll')
+const { loadBee } = require('./bees/load')
+const { loadJsonBee } = require('./bees/loadJson')
+const { loadKeysBee } = require('./bees/loadKeys')
+const { pushBee } = require('./bees/push')
+const { removeBee } = require('./bees/remove')
+const { saveBee } = require('./bees/save')
+const { updateBee } = require('./bees/update')
+
+exports.init = initBee
+exports.update = updateBee
+exports.push = pushBee
+exports.save = saveBee
+exports.loadJson = loadJsonBee
+exports.load = loadBee
+exports.loadKeys = loadKeysBee
+exports.loadAll = loadAllBee
+exports.remove = removeBee
