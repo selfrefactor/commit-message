@@ -1,4 +1,4 @@
-import { log } from 'helpers'
+import {log} from 'helpers'
 import {
   ASK_FOR_MESSAGE,
   labels,
@@ -8,20 +8,21 @@ import {
   typesOfCommit,
 } from './constants'
 
-import { getLatestCommits } from './_modules/getLatestCommits'
-import { getCommitLabel } from './_modules/getCommitLabel'
-import { getCommitType } from './_modules/getCommitType'
-import { getWorkInProgress } from './_modules/getWorkInProgress'
+import {getLatestCommits} from './_modules/getLatestCommits'
+import {getCommitLabel} from './_modules/getCommitLabel'
+import {getCommitType} from './_modules/getCommitType'
+import {getWorkInProgress} from './_modules/getWorkInProgress'
 
-import { promptInput } from './_modules/promptInput'
-import { saveWorkInProgress } from './_modules/saveWorkInProgress'
-import { showExplanations } from './_modules/showExplanations'
+import {promptInput} from './_modules/promptInput'
+import {saveWorkInProgress} from './_modules/saveWorkInProgress'
+import {showExplanations} from './_modules/showExplanations'
 
 function getWorkInProgressFlag(commitLabel: string) {
-
-  return commitLabel === START_LABEL.value ||
+  return (
+    commitLabel === START_LABEL.value ||
     commitLabel === STOP_LABEL.value ||
     commitLabel === PROGRESS_LABEL.value
+  )
 }
 
 // It ask the user for type and text of commit
@@ -31,7 +32,7 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
   const latestCommits = await getLatestCommits(dir)
   latestCommits.forEach(singleCommit => {
     log(singleCommit, 'info')
-  });
+  })
   log('sep')
   const workInProgress = getWorkInProgress()
   showExplanations()
@@ -50,25 +51,24 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
 
   const hasWorkInProgress = getWorkInProgressFlag(commitLabel)
 
-  const separatorFlag = hasWorkInProgress &&
+  const separatorFlag =
+    hasWorkInProgress &&
     commitLabel !== START_LABEL.value &&
     inputResult.trim() !== ''
 
-  const separator = separatorFlag ?
-    ' | ' :
-    ''
+  const separator = separatorFlag ? ' | ' : ''
 
-  let commitMessageValue = hasWorkInProgress ?
-    `${workInProgress}${separator}${inputResult.trim()}` :
-    inputResult
+  let commitMessageValue = hasWorkInProgress
+    ? `${workInProgress}${separator}${inputResult.trim()}`
+    : inputResult
 
   if (commitLabel === START_LABEL.value) {
     saveWorkInProgress(inputResult)
   } else if (commitLabel === STOP_LABEL.value) {
-    commitMessageValue =  inputResult.trim() ? 
-      `${workInProgress} | ${inputResult}` :
-      workInProgress
-      
+    commitMessageValue = inputResult.trim()
+      ? `${workInProgress} | ${inputResult}`
+      : workInProgress
+
     saveWorkInProgress('')
   }
   const noInput = commitMessageValue.trim() === ''

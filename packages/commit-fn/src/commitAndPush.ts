@@ -1,5 +1,5 @@
-import { execCommand } from './_modules/execCommand'
-import { commitMessage } from './commitMessage'
+import {execCommand} from './_modules/execCommand'
+import {commitMessage} from './commitMessage'
 
 export async function commitAndPush(cwd): Promise<string> {
   const commitMessageValue = await commitMessage(cwd)

@@ -1,2 +1,2 @@
-export { commitAndPush } from './commitAndPush'
-export { commitMessage } from './commitMessage'
+export {commitAndPush} from './commitAndPush'
+export {commitMessage} from './commitMessage'

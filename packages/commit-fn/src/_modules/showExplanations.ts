@@ -1,5 +1,5 @@
-import { log } from 'helpers'
-import { explanationOfTypes } from '../constants'
+import {log} from 'helpers'
+import {explanationOfTypes} from '../constants'
 
 const MIN_LENGTH = 12
 const SEPARATOR = ' - '
@@ -16,14 +16,9 @@ export function showExplanations(): void {
   let counter = 0
 
   explanationOfTypes.forEach(explanation => {
-    const tag = counter % 2 === 0 ?
-      'tag=foo' :
-      'tag=bar'
+    const tag = counter % 2 === 0 ? 'tag=foo' : 'tag=bar'
 
-    log(
-      normalize(explanation),
-      tag,
-    )
+    log(normalize(explanation), tag)
     counter++
   })
 }

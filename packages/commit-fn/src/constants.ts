@@ -1,7 +1,7 @@
-import { getCustomLabels } from './_modules/getCustomLabels'
-import { CommitType, Label } from './typings'
+import {getCustomLabels} from './_modules/getCustomLabels'
+import {CommitType, Label} from './typings'
 
-import { constantCase } from 'string-fn'
+import {constantCase} from 'string-fn'
 
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
 export const ASK_FOR_LABEL = 'Select label'
@@ -67,73 +67,49 @@ export const CUSTOM_LABEL = {
 }
 
 const TYPINGS_LABEL = {
-  belongsTo: [
-    FEATURE,
-    FIX,
-  ],
+  belongsTo: [FEATURE, FIX],
   explanation: '📚️ ️Edit Typescript definitions',
   value: 'typings',
 }
 
 const STYLE_LABEL = {
-  belongsTo: [
-    FIX,
-    FEATURE,
-  ],
+  belongsTo: [FIX, FEATURE],
   explanation: '💋  CSS/LESS related changes',
   value: 'style',
 }
 
 const ISSUE_LABEL = {
-  belongsTo: [
-    FIX,
-  ],
+  belongsTo: [FIX],
   explanation: '🚮  Close issue',
   value: 'issue',
 }
 
 const IMPORTANT_LABEL = {
-  belongsTo: [
-    FIX,
-    FEATURE,
-    TEST,
-    SUPPORT,
-  ],
+  belongsTo: [FIX, FEATURE, TEST, SUPPORT],
   explanation: '⚠  Commit with higher significance',
   value: 'important',
 }
 
 const SMALL_LABEL = {
-  belongsTo: [
-    FEATURE,
-    TEST,
-    DOCS,
-    SUPPORT,
-  ],
+  belongsTo: [FEATURE, TEST, DOCS, SUPPORT],
   explanation: '🆗  Small change',
   value: 'small',
 }
 
 const DEPENDENCY_LABEL = {
-  belongsTo: [
-    SUPPORT,
-  ],
+  belongsTo: [SUPPORT],
   explanation: '📦  Change of dependency',
   value: 'dep',
 }
 
 const BUMP_LABEL = {
-  belongsTo: [
-    SUPPORT,
-  ],
+  belongsTo: [SUPPORT],
   explanation: '🏗  Publish new version of library',
   value: 'bump',
 }
 
 const BREAK_LABEL = {
-  belongsTo: [
-    FEATURE,
-  ],
+  belongsTo: [FEATURE],
   explanation: '💣  Breaking changes',
   value: 'break',
 }
@@ -191,24 +167,21 @@ const getBelongsTo = (key): CommitType[] => {
       commitTypeHolder = singleCommitType
     }
   })
-  if(!commitTypeHolder) return []
+  if (!commitTypeHolder) return []
   return [commitTypeHolder]
 }
 
 if (customLabelsRaw !== false) {
-  const belongsToWhenLabel: CommitType[] = [
-    FEATURE,
-    FIX,
-    TEST,
-  ]
+  const belongsToWhenLabel: CommitType[] = [FEATURE, FIX, TEST]
 
   Object.keys(customLabelsRaw).forEach(key => {
-    if (key === 'workInProgress') { return }
+    if (key === 'workInProgress') {
+      return
+    }
 
     customLabelsRaw[key].forEach(singleLabel => {
-      const belongsToValue = key === 'labels' ?
-        belongsToWhenLabel :
-        getBelongsTo(key)
+      const belongsToValue =
+        key === 'labels' ? belongsToWhenLabel : getBelongsTo(key)
 
       const x: Label = {
         belongsTo: belongsToValue,
@@ -220,7 +193,7 @@ if (customLabelsRaw !== false) {
     })
   })
 }
- 
+
 export const labels: Label[] = [
   EMPTY_LABEL,
   DEPENDENCY_LABEL,

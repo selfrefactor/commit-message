@@ -1,4 +1,4 @@
-import { commitMessage } from './'
+import {commitMessage} from './'
 
 // commitAndPush()
 commitMessage()

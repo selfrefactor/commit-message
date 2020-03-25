@@ -1,9 +1,9 @@
 import {load} from '../../../package-storage/'
 
 export function getWorkInProgress(): string {
-  try{
+  try {
     return load('commitMessage', 'workInProgress', true) || ''
-  }catch (e){
+  } catch (e) {
     return ''
   }
 }
