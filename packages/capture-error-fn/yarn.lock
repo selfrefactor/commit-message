@@ -17,10 +17,10 @@ crypt@~0.0.1:
   resolved "https://registry.yarnpkg.com/crypt/-/crypt-0.0.2.tgz#88d7ff7ec0dfb86f713dc87bbb42d044d3e6c41b"
   integrity sha1-iNf/fsDfuG9xPch7u0LQRNPmxBs=
 
-env-fn@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/env-fn/-/env-fn-2.0.0.tgz#6a4eea2fae45340780e4006295b3d339e3f84ddb"
-  integrity sha512-+K876aQfv0QaOqoEs+b05ihlacFMcFrJfyXJj+NIQ/YtBG7Yw938iv1L/qOpFAIbfAuK87ovuhkW6qE7YRy7Cw==
+env-fn@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/env-fn/-/env-fn-2.1.0.tgz#1dd088d571f2169800ada9a8c9ad397beb708e2a"
+  integrity sha512-kxPL4WGvcnVokkbuEsbxQyzW0MLOT87DWOt0O7dPifvS8wne0tEfZgaiwbaYhMUOjjGLsU952ve7XAfFI81u/w==
   dependencies:
     fs-extra "^8.1.0"
     rambda "^4.5.0"
