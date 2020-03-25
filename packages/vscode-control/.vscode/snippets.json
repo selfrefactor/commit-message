@@ -83,6 +83,28 @@
 		],
 		"description": "test"
 	},
+	"Testf": {
+		"prefix": "testf",
+		"body": [
+			"test('$TM_SELECTED_TEXT', () => {",
+			"\tconst result = $TM_SELECTED_TEXT($0)",
+			"\tconsole.log(result)",
+			"\t// expect(result).toEqual()",
+			"})"
+		],
+		"description": "test function with clipboard"
+	},
+	"Testfa": {
+		"prefix": "testfa",
+		"body": [
+			"test('$TM_SELECTED_TEXT', async () => {",
+			"\tconst result = await $TM_SELECTED_TEXT($0)",
+			"\tconsole.log(result)",
+			"\t// expect(result).toEqual()",
+			"})"
+		],
+		"description": "test async function with clipboard"
+	},
 	"TestAsync": {
 		"prefix": "testa",
 		"body": [
