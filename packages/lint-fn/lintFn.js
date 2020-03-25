@@ -1,5 +1,5 @@
 const { commandFactory } = require('./_modules/commandFactory')
-const { exec, debugFlag } = require('./_modules/execCommand')
+const { spawn, debugFlag } = require('./_modules/spawnCommand')
 const { execPrettier } = require('./_modules/execPrettier')
 const { getEslintPath } = require('./_modules/getEslintPath')
 const { glue } = require('rambdax')
@@ -51,11 +51,11 @@ async function lintFn(filePath, prettierSpecialCase = 'local'){
     })
 
     if (filePath.endsWith('.spec.js')){
-      return exec(lintJest)
+      return spawn(lintJest.command, lintJest.inputs)
     }
 
     if (filePath.endsWith('.js')){
-      return exec(lintDefault)
+      return spawn(lintDefault.command, lintDefault.inputs)
     }
 
     return console.log(NO_AVAILABLE_LINTER)

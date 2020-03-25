@@ -3,20 +3,18 @@ const { resolve } = require('path')
 
 const commandFactory = ({ src, eslintPath }) => {
   const configFilePath = resolve(__dirname, '../config')
-  const lintDefault = glue(`
-    ${ eslintPath }
+  const lintDefault = {command: eslintPath, inputs: glue(`
     ${ src }
     --fix
     --config 
     ${ configFilePath }/.eslintrcDefault.js
-  `)
-  const lintJest = glue(`
-    ${ eslintPath }
+  `).split(' ')}
+  const lintJest = {command: eslintPath, inputs: glue(`
     ${ src }
     --fix
     --config 
     ${ configFilePath }/.eslintrcJest.js
-  `)
+  `).split(' ')}
 
   return {
     lintDefault,

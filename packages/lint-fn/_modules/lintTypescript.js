@@ -1,4 +1,4 @@
-const { execCommand } = require('./execCommand')
+const { spawnCommand } = require('./spawnCommand')
 const { glue } = require('rambdax')
 const { usePrettier } = require('./usePrettier')
 
@@ -12,13 +12,12 @@ async function lintTypescript(
   })
 
   const eslintCommand = glue(`
-  node 
   node_modules/eslint/bin/eslint.js
   --fix
   ${ filePath }
-  `)
+  `).split(' ')
 
-  await execCommand(eslintCommand, projectDir)
+  await spawnCommand('node', eslintCommand, projectDir)
 }
 
 exports.lintTypescript = lintTypescript

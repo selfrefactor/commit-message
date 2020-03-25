@@ -1,4 +1,4 @@
-const { execCommand } = require('./execCommand')
+const { spawnCommand } = require('./spawnCommand')
 const { glue, defaultTo } = require('rambdax')
 const { resolve } = require('path')
 const { getPrettierPath } = require('./usePrettier')
@@ -8,13 +8,12 @@ async function execPrettier({ filePath, injectOptions, prettierSpecialCase }){
   const prettierPath = getPrettierPath(cwd, defaultTo('skip', prettierSpecialCase))
   
   const command = glue(`
-    node
     ${ prettierPath }
     ${ injectOptions }
     --write
     ${ filePath }
-  `)
-  await execCommand(command, cwd)
+  `).split(' ')
+  await spawnCommand('node', command, cwd)
 }
 
 exports.execPrettier = execPrettier
