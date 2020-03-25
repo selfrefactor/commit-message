@@ -86,8 +86,8 @@
 	"Testf": {
 		"prefix": "testf",
 		"body": [
-			"test('$TM_SELECTED_TEXT', () => {",
-			"\tconst result = $TM_SELECTED_TEXT($0)",
+			"test('${CLIPBOARD}', () => {",
+			"\tconst result = ${CLIPBOARD}($0)",
 			"\tconsole.log(result)",
 			"\t// expect(result).toEqual()",
 			"})"
@@ -97,8 +97,8 @@
 	"Testfa": {
 		"prefix": "testfa",
 		"body": [
-			"test('$TM_SELECTED_TEXT', async () => {",
-			"\tconst result = await $TM_SELECTED_TEXT($0)",
+			"test('${CLIPBOARD}', async () => {",
+			"\tconst result = await ${CLIPBOARD}($0)",
 			"\tconsole.log(result)",
 			"\t// expect(result).toEqual()",
 			"})"

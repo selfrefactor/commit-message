@@ -21,6 +21,11 @@
       "settings",
       "extension"
     ],
+    "fix": [
+      "snippet",
+      "keybinding",
+      "settings"
+    ],
     "workInProgress": ""
   }
 }
