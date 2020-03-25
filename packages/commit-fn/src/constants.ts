@@ -91,7 +91,7 @@ const IMPORTANT_LABEL = {
 }
 
 const SMALL_LABEL = {
-  belongsTo: [FEATURE, TEST, DOCS, SUPPORT],
+  belongsTo: [FEATURE, FIX, TEST, DOCS, SUPPORT],
   explanation: '🆗  Small change',
   value: 'small',
 }
@@ -132,10 +132,10 @@ const USAGE_LABEL = {
   value: 'usage',
 }
 
-const REMOVE_LABEL = {
-  belongsTo: [FEATURE, TEST, DOCS],
-  explanation: '🔪  Remove feature or test',
-  value: 'cut',
+const DEPRECATE_LABEL = {
+  belongsTo: [FEATURE],
+  explanation: '🔪  Deprecate feature or dependency',
+  value: 'deprecate',
 }
 
 export const START_LABEL = {
@@ -211,6 +211,6 @@ export const labels: Label[] = [
   ISSUE_LABEL,
   EXAMPLES_LABEL,
   USAGE_LABEL,
-  REMOVE_LABEL,
+  DEPRECATE_LABEL,
   CUSTOM_LABEL,
 ]

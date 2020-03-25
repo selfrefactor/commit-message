@@ -10,9 +10,9 @@ const promptInput_1 = require("./_modules/promptInput");
 const saveWorkInProgress_1 = require("./_modules/saveWorkInProgress");
 const showExplanations_1 = require("./_modules/showExplanations");
 function getWorkInProgressFlag(commitLabel) {
-    return commitLabel === constants_1.START_LABEL.value ||
+    return (commitLabel === constants_1.START_LABEL.value ||
         commitLabel === constants_1.STOP_LABEL.value ||
-        commitLabel === constants_1.PROGRESS_LABEL.value;
+        commitLabel === constants_1.PROGRESS_LABEL.value);
 }
 // It ask the user for type and text of commit
 // and returns the final commit message.
@@ -38,19 +38,17 @@ async function commitMessage(dir = process.cwd()) {
     const separatorFlag = hasWorkInProgress &&
         commitLabel !== constants_1.START_LABEL.value &&
         inputResult.trim() !== '';
-    const separator = separatorFlag ?
-        ' | ' :
-        '';
-    let commitMessageValue = hasWorkInProgress ?
-        `${workInProgress}${separator}${inputResult.trim()}` :
-        inputResult;
+    const separator = separatorFlag ? ' | ' : '';
+    let commitMessageValue = hasWorkInProgress
+        ? `${workInProgress}${separator}${inputResult.trim()}`
+        : inputResult;
     if (commitLabel === constants_1.START_LABEL.value) {
         saveWorkInProgress_1.saveWorkInProgress(inputResult);
     }
     else if (commitLabel === constants_1.STOP_LABEL.value) {
-        commitMessageValue = inputResult.trim() ?
-            `${workInProgress} | ${inputResult}` :
-            workInProgress;
+        commitMessageValue = inputResult.trim()
+            ? `${workInProgress} | ${inputResult}`
+            : workInProgress;
         saveWorkInProgress_1.saveWorkInProgress('');
     }
     const noInput = commitMessageValue.trim() === '';

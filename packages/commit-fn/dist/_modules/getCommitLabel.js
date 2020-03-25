@@ -8,9 +8,7 @@ const promptSelect_1 = require("./promptSelect");
 const PADDING_LIMIT = 10;
 const getPadding = (str) => {
     const howLong = PADDING_LIMIT - str.length;
-    return howLong > 0 ?
-        Array(howLong).fill(' ').join('') :
-        '';
+    return howLong > 0 ? Array(howLong).fill(' ').join('') : '';
 };
 /**
  * Every time custom label is selected
@@ -24,9 +22,7 @@ async function askCustomLabel(input) {
      */
     const loaded = index_js_1.load('commitMessage', key, true);
     const isNewLabel = loaded === undefined || loaded.push === undefined;
-    const toSave = isNewLabel ?
-        [label] :
-        [...loaded, label];
+    const toSave = isNewLabel ? [label] : [...loaded, label];
     index_js_1.save('commitMessage', key, toSave, true);
     helpers_1.log(`label '${label}' is part of '${key}' context | is.new = '${isNewLabel}'`, 'info');
     return label;
@@ -43,8 +39,7 @@ async function getCommitLabel(input) {
     const filteredLabels = input.labels.filter(singleLabel => {
         return singleLabel.belongsTo.includes(input.commitType);
     });
-    const filteredLabelsValue = filteredLabels
-        .map(singleLabel => {
+    const filteredLabelsValue = filteredLabels.map(singleLabel => {
         const padding = getPadding(singleLabel.value);
         return `${singleLabel.value}${padding} ${singleLabel.explanation}`;
     });
@@ -56,9 +51,7 @@ async function getCommitLabel(input) {
     const labelAnswer = await promptSelect_1.promptSelect(promptOptions);
     const [labelRaw] = filteredLabelsValue.filter(x => x.name === labelAnswer);
     const label = extractValue(labelRaw);
-    const toReturn = label === constants_1.CUSTOM_LABEL.value ?
-        askCustomLabel(input) :
-        label;
+    const toReturn = label === constants_1.CUSTOM_LABEL.value ? askCustomLabel(input) : label;
     return toReturn;
 }
 exports.getCommitLabel = getCommitLabel;

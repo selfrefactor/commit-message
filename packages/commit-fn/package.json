@@ -11,16 +11,16 @@
 		"debug": "node ./dist/debug.js"
 	},
 	"dependencies": {
-		"enquirer": "^2.3.2",
-		"helpers": "https://github.com/selfrefactor/helpers#2.0.1",
-		"rambda": "^4.1.0",
-		"string-fn": "^2.10.2"
+		"enquirer": "^2.3.4",
+		"helpers": "https://github.com/selfrefactor/helpers#2.4.0",
+		"rambda": "^5.0.0",
+		"string-fn": "^2.11.0"
 	},
 	"devDependencies": {
-		"@types/node": "^12.12.7",
-		"fs-extra": "^8.1.0",
-		"tslint-fn": "^2.1.0",
-		"typescript": "^3.8.0-dev.20191112"
+		"@types/node": "^13.9.4",
+		"fs-extra": "^9.0.0",
+		"tslint-fn": "^0.2.1",
+		"typescript": "^3.9.0-dev.20200325"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",

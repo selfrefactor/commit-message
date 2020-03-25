@@ -56,66 +56,42 @@ exports.CUSTOM_LABEL = {
     value: 'custom',
 };
 const TYPINGS_LABEL = {
-    belongsTo: [
-        exports.FEATURE,
-        FIX,
-    ],
+    belongsTo: [exports.FEATURE, FIX],
     explanation: '📚️ ️Edit Typescript definitions',
     value: 'typings',
 };
 const STYLE_LABEL = {
-    belongsTo: [
-        FIX,
-        exports.FEATURE,
-    ],
+    belongsTo: [FIX, exports.FEATURE],
     explanation: '💋  CSS/LESS related changes',
     value: 'style',
 };
 const ISSUE_LABEL = {
-    belongsTo: [
-        FIX,
-    ],
+    belongsTo: [FIX],
     explanation: '🚮  Close issue',
     value: 'issue',
 };
 const IMPORTANT_LABEL = {
-    belongsTo: [
-        FIX,
-        exports.FEATURE,
-        TEST,
-        SUPPORT,
-    ],
+    belongsTo: [FIX, exports.FEATURE, TEST, SUPPORT],
     explanation: '⚠  Commit with higher significance',
     value: 'important',
 };
 const SMALL_LABEL = {
-    belongsTo: [
-        exports.FEATURE,
-        TEST,
-        DOCS,
-        SUPPORT,
-    ],
+    belongsTo: [exports.FEATURE, FIX, TEST, DOCS, SUPPORT],
     explanation: '🆗  Small change',
     value: 'small',
 };
 const DEPENDENCY_LABEL = {
-    belongsTo: [
-        SUPPORT,
-    ],
+    belongsTo: [SUPPORT],
     explanation: '📦  Change of dependency',
     value: 'dep',
 };
 const BUMP_LABEL = {
-    belongsTo: [
-        SUPPORT,
-    ],
+    belongsTo: [SUPPORT],
     explanation: '🏗  Publish new version of library',
     value: 'bump',
 };
 const BREAK_LABEL = {
-    belongsTo: [
-        exports.FEATURE,
-    ],
+    belongsTo: [exports.FEATURE],
     explanation: '💣  Breaking changes',
     value: 'break',
 };
@@ -134,10 +110,10 @@ const USAGE_LABEL = {
     explanation: 'ℹ️  Edit usage information',
     value: 'usage',
 };
-const REMOVE_LABEL = {
-    belongsTo: [exports.FEATURE, TEST, DOCS],
-    explanation: '🔪  Remove feature or test',
-    value: 'cut',
+const DEPRECATE_LABEL = {
+    belongsTo: [exports.FEATURE],
+    explanation: '🔪  Deprecate feature or dependency',
+    value: 'deprecate',
 };
 exports.START_LABEL = {
     belongsTo: [exports.FEATURE, SUPPORT, FIX],
@@ -168,19 +144,13 @@ const getBelongsTo = (key) => {
     return [commitTypeHolder];
 };
 if (customLabelsRaw !== false) {
-    const belongsToWhenLabel = [
-        exports.FEATURE,
-        FIX,
-        TEST,
-    ];
+    const belongsToWhenLabel = [exports.FEATURE, FIX, TEST];
     Object.keys(customLabelsRaw).forEach(key => {
         if (key === 'workInProgress') {
             return;
         }
         customLabelsRaw[key].forEach(singleLabel => {
-            const belongsToValue = key === 'labels' ?
-                belongsToWhenLabel :
-                getBelongsTo(key);
+            const belongsToValue = key === 'labels' ? belongsToWhenLabel : getBelongsTo(key);
             const x = {
                 belongsTo: belongsToValue,
                 explanation: `🔧  ${string_fn_1.constantCase(singleLabel)}`,
@@ -207,7 +177,7 @@ exports.labels = [
     ISSUE_LABEL,
     EXAMPLES_LABEL,
     USAGE_LABEL,
-    REMOVE_LABEL,
+    DEPRECATE_LABEL,
     exports.CUSTOM_LABEL,
 ];
 //# sourceMappingURL=constants.js.map
