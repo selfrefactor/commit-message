@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "ghaschel.vscode-angular-html",
     "bee.git-temporal-vscode",
     "PhilHindle.errorlens",
     "lannonbr.vscode-js-annotations",
