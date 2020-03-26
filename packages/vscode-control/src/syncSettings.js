@@ -34,9 +34,10 @@ function syncFiles(source, list){
 }
 
 const getScaledOptions = () => {
+  const isBig = SCALE_FACTOR === 1
   const fontSize = toDecimal(24 * SCALE_FACTOR)
   const zoomLevel = toDecimal(2 * ZOOM_SCALE_FACTOR)
-  const lineHeight = Math.round(toDecimal(27 * SCALE_FACTOR))
+  const lineHeight = isBig ? 27 : Math.round(toDecimal(33 * SCALE_FACTOR))
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(17 * SCALE_FACTOR)
@@ -80,7 +81,7 @@ function getMinimapOptions(){
 
 const splittedOptions = {
   ...getScaledOptions(),
-  "workbench.colorTheme": [ "AmericanAlien", 'NiketaBear'],
+  "workbench.colorTheme": [ "AmericanAlien", 'AmericanDad'],
   'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],

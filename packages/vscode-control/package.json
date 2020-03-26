@@ -4,8 +4,8 @@
     "sync:mini": "MINI_MAP=ON node syncSettings",
     "small": "SCALE=0.7 node syncSettings",
     "small:mini": "SCALE=0.7 MINI_MAP=ON node syncSettings",
-    "smaller": "SCALE=0.59 node syncSettings",
-    "smaller:mini": "SCALE=0.59 MINI_MAP=ON node syncSettings"
+    "smaller": "SCALE=0.63 node syncSettings",
+    "smaller:mini": "SCALE=0.63 MINI_MAP=ON node syncSettings"
   },
   "name": "vscode-control",
   "version": "0.1.0",
