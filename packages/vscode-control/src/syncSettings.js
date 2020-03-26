@@ -64,8 +64,24 @@ const getScaledOptions = () => {
   return toReturn
 }
 
+function getMinimapOptions(){
+  const whenTrue = {
+    "editor.minimap.enabled": true,
+    "editor.minimap.maxColumn": 70,
+    "editor.minimap.renderCharacters": true,
+    "editor.minimap.side": "left",
+    "editor.minimap.scale": 3,
+    "editor.minimap.size": "fit"
+  }
+  const whenFalse = {
+    "editor.minimap.enabled": false,
+  }
+  return process.env.MINI_MAP === 'ON' ? whenTrue : whenFalse
+}
+
 
 const splittedOptions = {
+  ...getMinimapOptions(),
   ...getScaledOptions(),
   'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],

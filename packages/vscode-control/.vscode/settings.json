@@ -31,10 +31,6 @@
   "timeline.showView": false,
   "magicBeans.IMPORT_TARGET": "rambdax",
   "editor.semanticHighlighting.enabled": false,
-  "editor.minimap.enabled": false,
-  "editor.minimap.maxColumn": 100,
-  "editor.minimap.renderCharacters": true,
-  "editor.minimap.side": "left",
   "editor.suggest.showIcons": true,
   "editor.suggest.maxVisibleSuggestions": 11,
   "editor.codeActionsOnSave": {
