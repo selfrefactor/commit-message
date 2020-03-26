@@ -6,9 +6,7 @@ import {
   KEYBINDING,
   SETTINGS,
   JS_SNIPPETS,
-  JSX_SNIPPETS,
   TS_SNIPPETS,
-  TSX_SNIPPETS,
 } from './constants'
 
 const SCALE_FACTOR = process.env.SCALE === undefined ?
@@ -69,9 +67,9 @@ function getMinimapOptions(){
     "editor.minimap.enabled": true,
     "editor.minimap.maxColumn": 70,
     "editor.minimap.renderCharacters": true,
-    "editor.minimap.side": "left",
     "editor.minimap.scale": 3,
-    "editor.minimap.size": "fit"
+    "editor.minimap.side": "left",
+    "editor.minimap.size": "fit",
   }
   const whenFalse = {
     "editor.minimap.enabled": false,
@@ -81,8 +79,8 @@ function getMinimapOptions(){
 
 
 const splittedOptions = {
-  ...getMinimapOptions(),
   ...getScaledOptions(),
+  "workbench.colorTheme": [ "AmericanAlien", 'NiketaBear'],
   'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
   'niketa.PORT_0'            : [ 3011, 3021 ],
   'niketa.PORT_1'            : [ 3012, 3022 ],
@@ -97,10 +95,15 @@ function syncSettings(){
     stableSettingsLocation,
   ] = getListFiles(SETTINGS)
 
+  const mergedSettings = {
+    ...settings,
+    ...getMinimapOptions()
+  }
+
   writeJsonSync(
     insidersSettingsLocation,
     {
-      ...settings,
+      ...mergedSettings,
       ...getPartialOptions(0),
     },
     { spaces : 2 }
@@ -108,7 +111,7 @@ function syncSettings(){
   writeJsonSync(
     stableSettingsLocation,
     {
-      ...settings,
+      ...mergedSettings,
       ...getPartialOptions(1),
     },
     { spaces : 2 }
@@ -117,9 +120,7 @@ function syncSettings(){
 
 function syncSnippets(){
   syncFiles(SNIPPETS_SOURCE, getListFiles(JS_SNIPPETS))
-  syncFiles(SNIPPETS_SOURCE, getListFiles(JSX_SNIPPETS))
   syncFiles(SNIPPETS_SOURCE, getListFiles(TS_SNIPPETS))
-  syncFiles(SNIPPETS_SOURCE, getListFiles(TSX_SNIPPETS))
 }
 
 void function sync(){
