@@ -1,0 +1,32 @@
+{
+	"name": "client-helpers-fn",
+	"version": "0.1.0",
+	"main": "src/index.js",
+	"typings": "./index.d.ts",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/client-helpers-fn",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"de": "commit",
+		"test": "jest",
+		"dev": "jest --watch"
+	},
+	"jest": {
+		"setupFiles": [
+			"jest-localstorage-mock"
+		]
+	},
+	"dependencies": {
+		"rambdax": "^3.7.0"
+	},
+	"devDependencies": {
+		"@types/jest": "^25.1.4",
+		"jest": "^25.1.0",
+		"jest-localstorage-mock": "^2.4.0"
+	},
+	"commitMessage": {
+		"support": [
+			"typings"
+		]
+	}
+}
