@@ -1,8 +1,0 @@
-import { createAction } from 'create-action'
-import {
-  // IMPORT_CONSTANTS
-  ${0},
-} from '../constants'
-
-// ACTIONS
-export const ${1} = createAction(${0})

@@ -1,9 +1,0 @@
-{
-  "name": "search-image",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "@k3rn31p4nic/google-translate-api": "^1.0.5"
-  }
-}

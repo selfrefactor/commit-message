@@ -1,7 +1,0 @@
-export const PRESS = 'PRESS'
-export const PRESS_READY = 'PRESS_READY'
-export const NEXT = 'NEXT'
-export const ANIMATION_START = 'ANIMATION_START'
-export const ANIMATION_READY = 'ANIMATION_READY'
-export const SHOW_NEXT = 'SHOW_NEXT'
-export const NEXT_READY = 'NEXT_READY'

@@ -1,3 +1,0 @@
-{
-	"setupTestFrameworkScriptFile": "<rootDir>/node_modules/helpers/jest/script.js"
-}

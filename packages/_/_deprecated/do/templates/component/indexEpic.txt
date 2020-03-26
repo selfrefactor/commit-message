@@ -1,8 +1,0 @@
-import { combineEpics } from 'redux-observable'
-// IMPORT_EPICS
-import { ${0}Epic } from './${0}'
-  
-export const ${1} = combineEpics(
-  // CONNECT_EPICS
-  ${0}Epic,
-)
