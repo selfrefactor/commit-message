@@ -93,7 +93,7 @@
     "js-yaml": "3.13.1",
     "jsverify": "0.8.4",
     "mocha": "6.1.4",
-    "rimraf": "2.6.3",
+    "rimraf": "2.7.1",
     "rollup": "0.68.2",
     "rollup-plugin-uglify": "6.0.2",
     "sanctuary": "0.7.1",
