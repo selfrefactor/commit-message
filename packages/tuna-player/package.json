@@ -25,7 +25,7 @@
     "ramda": "^0.25.0",
     "rc-slider": "^8.3.5",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.0.1",
     "react-notification": "^6.8.2",
     "react-select": "^1.0.0-rc.10",
     "reqwest": "^2.0.5",
