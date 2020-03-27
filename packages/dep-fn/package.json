@@ -27,15 +27,15 @@
 		"rambdax": "^3.1.0"
 	},
 	"devDependencies": {
-		"@types/fs-extra": "^8.0.1",
-		"@types/jest": "^24.0.22",
-		"@types/node": "^12.12.6",
-		"@types/puppeteer": "^1.20.2",
-		"jest": "^25.0.0",
-		"ts-jest": "^24.1.0",
-		"tslint": "^6.0.0-beta1",
+		"@types/fs-extra": "8.0.1",
+		"@types/jest": "24.0.22",
+		"@types/node": "12.12.6",
+		"@types/puppeteer": "1.20.2",
+		"jest": "25.0.0",
+		"ts-jest": "24.1.0",
+		"tslint": "6.0.0-beta1",
 		"typescript": "beta",
-		"typescript-formatter": "^7.2.2"
+		"typescript-formatter": "7.2.2"
 	},
 	"jest": {
 		"setupTestFrameworkScriptFile": "<rootDir>/node_modules/helpers/jest/prepare.js",

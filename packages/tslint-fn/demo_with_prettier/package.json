@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "execa": "^4.0.0",
-    "rambdax": "^3.7.0"
+    "execa": "4.0.0",
+    "rambdax": "3.7.0"
   },
   "scripts": {
 		"out": "node buildConfig.js",
@@ -10,6 +10,6 @@
   "devDependencies": {
     "lint-fn": "2.3.0",
     "tslint-fn": "0.2.0",
-    "typescript": "^3.8.3"
+    "typescript": "3.8.3"
   }
 }
