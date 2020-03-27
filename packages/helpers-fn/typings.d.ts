@@ -41,7 +41,7 @@ export function runTests(input: {
     async?: boolean,
     logFlag?: boolean,
     callback?: () => void,
-  })
+  }) : void
 // LOADING BAR
 // ============================================
 interface LoadingBar{
@@ -76,35 +76,35 @@ type Standalone = 'stopspin' |
 
 export function log(
   inputmode: Standalone | any[] | object | boolean
-)
+): void
 
 export function log(
   inputA:any, 
   inputmode: Single
-)
+): void
 
 export function log(
   input: string, 
   inputmode: 'box' | 'success' | 'warning' | 'error' | 'info' 
-)
+): void
 
 export function log(
   input: object, 
   inputmode: 'pattern' | 'patternx' | 'obj'
-)
+): void
 
 export function log(
   inputA:any, 
   inputB:any, 
   inputC:any
-)
+): void
 
 export function log(
   inputA:any, 
   inputB:any, 
   inputC:any, 
   inputD:any
-)
+): void
 
 export function log(
   inputA:any, 
@@ -112,4 +112,4 @@ export function log(
   inputC:any, 
   inputD:any, 
   inputF:any
-)
+): void
