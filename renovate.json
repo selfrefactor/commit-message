@@ -2,6 +2,9 @@
   "extends": [
     "config:base"
   ],
+  "ignorePaths": [
+    "tuna-player"
+  ],
   "packageRules": [
 		{
 			"updateTypes": [
