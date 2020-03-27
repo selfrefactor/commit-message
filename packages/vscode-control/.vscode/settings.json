@@ -1,4 +1,8 @@
 {
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "search.useReplacePreview": false,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "javascript.suggest.completeFunctionCalls": true,
   "typescript.suggest.completeFunctionCalls": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
