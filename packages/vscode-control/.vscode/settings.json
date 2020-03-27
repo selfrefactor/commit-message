@@ -32,7 +32,7 @@
   "json.maxItemsComputed": 1000,
   "debug.console.fontFamily": "Bar",
   "debug.console.wordWrap": false,
-  "timeline.showView": false,
+  "timeline.showView": true,
   "magicBeans.IMPORT_TARGET": "rambdax",
   "editor.semanticHighlighting.enabled": false,
   "editor.suggest.showIcons": true,
