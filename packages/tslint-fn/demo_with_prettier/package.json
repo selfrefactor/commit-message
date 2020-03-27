@@ -8,7 +8,7 @@
     "lint": "eslint src/foo.ts --fix"
   },
   "devDependencies": {
-    "lint-fn": "2.3.0",
+    "lint-fn": "2.5.0",
     "tslint-fn": "0.2.0",
     "typescript": "^3.8.3"
   }
