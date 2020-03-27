@@ -23,15 +23,15 @@
     "rambdax": "^3.2.0"
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.0.1",
-    "@types/jest": "^24.0.22",
-    "@types/node": "^12.12.6",
-    "@types/puppeteer": "^1.20.2",
+    "@types/fs-extra": "8.1.0",
+    "@types/jest": "24.0.22",
+    "@types/node": "12.12.31",
+    "@types/puppeteer": "1.20.2",
     "env-fn": "^1.1.2",
-    "jest": "^25.0.0",
-    "ts-jest": "^24.1.0",
+    "jest": "25.0.0",
+    "ts-jest": "24.1.0",
     "tslint-fn": "0.2.1",
-    "typescript": "^3.8.0-dev.20191105"
+    "typescript": "3.8.0-dev.20191105"
   },
   "jest": {
     "transform": {
