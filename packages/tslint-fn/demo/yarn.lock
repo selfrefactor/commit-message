@@ -999,10 +999,10 @@ tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
   integrity sha512-aZW88SY8kQbU7gpV19lN24LtXh/yD4ZZg6qieAJDDg+YBsJcSmLGK9QpnUjAKVG/xefmvJGd1WUmfpT/g6AJGA==
 
-tslint-fn@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/tslint-fn/-/tslint-fn-0.2.0.tgz#5edae20f95e36baf8830281aa8f05defc5e4e864"
-  integrity sha512-NEJyHPd1vUfirzqFYp+x5xBW5b/zcooTf0rn/SpK5P/IOelFXG2uwTI5E+3H0+uh03esjibqizMMH+EZ32+oDg==
+tslint-fn@0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/tslint-fn/-/tslint-fn-0.2.1.tgz#151851630e115a83071d03c874f0fa6a817dcbf3"
+  integrity sha512-hLQmW1mtiugiCmT5maO3CL/wdzkIGlJmbWgiK1+4P5j8OT0XUELITISf+BlBfN5cGcgN3mJ4Dz+NFGMq2Cc5bg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^2.24.0"
     "@typescript-eslint/parser" "^2.24.0"
