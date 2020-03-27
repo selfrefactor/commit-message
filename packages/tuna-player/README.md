@@ -1,15 +1,16 @@
 # Tuna Player
-Ubuntu MP3 player which applies various sound effects to the songs
+
+Linux MP3 player which applies various sound effects to the songs
 
 ## Bugs
 
-Plenty so use `+` to select a song
+`sudo apt-get install libgtk2.0-0`
 
-# Screen
+## Screen
 
 ![Screen](/screen.png)
 
-# Argumentation
+## Argumentation
 
 I used to like tools as *Traktor*, *Ableton Live*. But then I realized, that they are not flexible enough for my needs so I ditched them.
 
@@ -17,7 +18,7 @@ I accepted the situation up until I found [Tuna.js](https://github.com/Theodeus/
 
 The rest of the story is code.
 
-# How to install
+## How to install
 
 1. `git clone https://github.com/selfrefactor/tuna-player.git&&cd tuna-player` 
 
