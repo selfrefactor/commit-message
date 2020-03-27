@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "fs-extra": "9.0.0",
-    "tslint-fn": "0.2.0",
+    "tslint-fn": "0.2.1",
     "typescript": "3.8.3"
   }
 }
