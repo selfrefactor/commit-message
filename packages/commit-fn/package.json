@@ -17,10 +17,10 @@
 		"string-fn": "^2.11.0"
 	},
 	"devDependencies": {
-		"@types/node": "^13.9.4",
-		"fs-extra": "^9.0.0",
+		"@types/node": "13.9.4",
+		"fs-extra": "9.0.0",
 		"tslint-fn": "^0.2.1",
-		"typescript": "^3.9.0-dev.20200325"
+		"typescript": "3.9.0-dev.20200325"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
