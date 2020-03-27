@@ -862,10 +862,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lint-fn@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/lint-fn/-/lint-fn-2.3.0.tgz#a63d7ebe127d17005870415ec937de9a6cb2f545"
-  integrity sha512-8L14BBzIjNIoByeU5h7OySdtpHvmheco8hktNuHbposv8J3bY+wrNwxatupUwx4rUCN/0RSFmrY+Tz2TIctcEQ==
+lint-fn@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/lint-fn/-/lint-fn-2.5.0.tgz#3ec63111675af8c419fdb39aeae23fff162f5d1c"
+  integrity sha512-T8H3nVeNwPZ292TsxtpyGZhgpb/kgTwZ/yXTAT7tkk6HsnAbgYD1Rpyuue6Epylglr/fgVvwCb1HmXkyBjiPdw==
   dependencies:
     babel-eslint "10.0.1"
     eslint "^7.0.0-alpha.2"
