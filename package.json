@@ -19,6 +19,9 @@
     ],
     "feature": [
       "vscode"
+    ],
+    "support": [
+      "renovate"
     ]
   }
 }
