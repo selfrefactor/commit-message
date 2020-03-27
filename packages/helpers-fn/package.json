@@ -1,8 +1,8 @@
 {
   "name": "helpers-fn",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "src/index.js",
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
   "typings": "typings.d.ts",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
