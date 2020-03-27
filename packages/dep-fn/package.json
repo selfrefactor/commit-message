@@ -27,7 +27,7 @@
 		"rambdax": "^3.1.0"
 	},
 	"devDependencies": {
-		"@types/fs-extra": "8.0.1",
+		"@types/fs-extra": "8.1.0",
 		"@types/jest": "24.0.22",
 		"@types/node": "12.12.6",
 		"@types/puppeteer": "1.20.2",
