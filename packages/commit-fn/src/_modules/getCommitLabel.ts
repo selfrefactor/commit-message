@@ -5,7 +5,7 @@ import {
 } from '../constants'
 import {promptInput} from './promptInput'
 
-import {log} from 'helpers'
+import {log} from 'helpers-fn'
 
 import {load, save} from '../../../package-storage/index.js'
 import {GetLabel, Label, PromptSelect} from '../typings'

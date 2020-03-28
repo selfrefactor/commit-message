@@ -1,4 +1,4 @@
-import {exec} from 'helpers'
+import {exec} from 'helpers-fn'
 import {all} from 'rambda'
 import {readFileSync} from 'fs'
 
