@@ -9,6 +9,8 @@ import {
   TS_SNIPPETS,
 } from './constants'
 
+const OPERATOR_MONO = process.env.OPERATOR_MONO === 'ON'
+
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   Number(process.env.SCALE)
@@ -54,9 +56,11 @@ const getScaledOptions = () => {
     x => [x,x] 
   )(base)
 
+  const fontFamilyInsiders = OPERATOR_MONO ? 'Operator Mono' : 'Bar'
+
   toReturn['editor.fontFamily'] = SCALE_FACTOR === 1 ?
-  [ 'Bar', 'Operator Mono'] :
-  [ 'Bar' , 'Bar']
+  [ fontFamilyInsiders, 'Bar'] :
+  [ fontFamilyInsiders , 'Bar']
 
   console.log(toReturn)
   
@@ -92,8 +96,8 @@ const getPartialOptions = index =>
 
 function syncSettings(){
   const [
-    insidersSettingsLocation,
     stableSettingsLocation,
+    insidersSettingsLocation,
   ] = getListFiles(SETTINGS)
 
   const mergedSettings = {

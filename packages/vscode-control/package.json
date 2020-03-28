@@ -3,6 +3,7 @@
     "sync": "node syncSettings",
     "sync:mini": "MINI_MAP=ON node syncSettings",
     "small": "SCALE=0.85 node syncSettings",
+    "small:mono": "OPERATOR_MONO=ON SCALE=0.85 node syncSettings",
     "small:mini": "SCALE=0.8 MINI_MAP=ON node syncSettings",
     "smaller": "SCALE=0.63 node syncSettings"
   },
