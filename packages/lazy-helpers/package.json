@@ -41,7 +41,7 @@
 		"react-hot-loader": "^4.6.3",
 		"style-loader": "^0.23.1",
 		"thread-loader": "^2.1.1",
-		"typescript": "^3.3.0-dev.20190105",
+		"typescript": "3.8.3",
 		"sane": "^4.1.0",
 		"webpack": "^4.26.0",
 		"webpack-cli": "^3.1.2",
