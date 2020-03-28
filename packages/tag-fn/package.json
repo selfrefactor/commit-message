@@ -7,7 +7,7 @@
     "lint": "cd src&&run lx"
   },
   "name": "tag-fn",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "CLI command for lazy generation of Github tags",
   "main": "dist/index.ts",
   "typings": "index.d.ts",
