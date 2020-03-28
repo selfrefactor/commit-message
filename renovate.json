@@ -3,7 +3,8 @@
     "config:base"
   ],
   "ignorePaths": [
-    "tuna-player"
+    "tuna-player",
+    "maided"
   ],
   "packageRules": [
 		{

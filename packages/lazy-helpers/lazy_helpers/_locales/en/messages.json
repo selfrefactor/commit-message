@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Bulk-Youtube-Downloader",
+    "description": "Cron job that creates a zip file containing at least 10 Youtube clips in MP3 format"
+  },
+  "appDescription": {
+    "message": "Bulk-Youtube-Downloader",
+    "description": "Cron job that creates a zip file containing at least 10 Youtube clips in MP3 format"
+  }
+}
