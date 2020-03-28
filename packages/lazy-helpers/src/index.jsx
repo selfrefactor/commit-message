@@ -3,7 +3,8 @@ import * as React from 'react'
 import { render } from 'react-dom'
 import { initLocalState } from 'client-helpers-fn'
 import { RootApp, store } from './app'
-import { init } from './actions'
+import { createAction } from './createAction'
+import { INIT } from './constants'
 import { copyToClipboard } from './_helpers/copyToClipboard.js'
 import { isYoutubeURL } from './common'
 import { germanShortkeys } from './_modules/germanShortkeys'
@@ -39,7 +40,7 @@ const renderOnce = once(() => {
 
 const renderFn = () => {
   renderOnce(undefined)
-  store.dispatch(init())
+  store.dispatch(createAction(INIT, undefined))
 }
 
 const methods = {

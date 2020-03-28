@@ -8,12 +8,10 @@ const envToPass = [
   'API_ACCESS_TOKEN',
   'NGROK_URL',
   'NODE_ENV',
-  'ZAPIER_BUFFER_URL'
+  'ZAPIER_BUFFER_URL',
 ]
 
-const plugins = [
-  new webpack.EnvironmentPlugin(envToPass),
-]
+const plugins = [ new webpack.EnvironmentPlugin(envToPass) ]
 
 const entry = './src/index.jsx'
 
@@ -24,7 +22,7 @@ const output = {
 
 const fileRule = {
   test    : /\.jsx?$/,
-  loader  : "babel-loader",
+  loader  : 'babel-loader',
   include : `${ __dirname }/src`,
 }
 
@@ -33,18 +31,13 @@ const cssRule = {
   use  : [ 'style-loader', 'css-loader' ],
 }
 
-const rules = [
-  fileRule,
-  cssRule
-]
+const rules = [ fileRule, cssRule ]
 
 module.exports = {
-  mode: 'production',
+  mode    : 'production',
   entry,
   output,
   plugins,
-  resolve : { 
-    extensions : [ '.js', '.jsx' ] 
-  },
+  resolve : { extensions : [ '.js', '.jsx' ] },
   module  : { rules },
 }

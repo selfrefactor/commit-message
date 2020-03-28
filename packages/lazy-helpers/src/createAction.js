@@ -1,3 +1,6 @@
-export function createAction(type){
-  return payload => ({type, payload})
+export function createAction(type, payload){
+  return {
+    type,
+    payload : payload,
+  }
 }

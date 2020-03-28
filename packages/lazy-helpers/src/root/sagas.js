@@ -6,7 +6,7 @@ import { googleImageSaga } from '../sagas/googleImageSaga'
 import { initSaga } from '../sagas/initSaga'
 import { slowScrollSaga } from '../sagas/slowScrollSaga'
 
-export default function* rootSaga() {
+export default function* rootSaga(){
   return yield all([
     bufferInputSaga(),
     bufferSubmitSaga(),
