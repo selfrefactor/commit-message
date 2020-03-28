@@ -25,7 +25,7 @@ export function* googleImageSaga(){
       yield delay(1000)
 
       const getArrow = () =>
-        document.querySelectorAll(GOOGLE_IMAGE_ARROW_SELECTOR)[1]
+        document.querySelectorAll(GOOGLE_IMAGE_ARROW_SELECTOR)[ 1 ]
 
       let arrow = getArrow()
 
