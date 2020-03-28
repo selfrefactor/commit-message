@@ -24,7 +24,7 @@
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"fs-extra": "^8.1.0",
+		"fs-extra": "^9.0.0",
 		"rambdax": "^3.6.0",
 		"string-fn": "^2.10.2"
 	}

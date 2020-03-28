@@ -16,7 +16,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "init-puppeteer": "4.3.6",
     "inquirer": "^7.0.0",
     "helpers-fn": "0.1.1",
