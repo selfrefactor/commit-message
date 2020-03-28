@@ -151,9 +151,9 @@
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"devDependencies": {
-		"jest": "^25.1.0",
-		"typescript": "^3.9.0-dev.20200315",
-		"vscode": "^1.1.36"
+		"jest": "25.2.3",
+		"typescript": "3.9.0-dev.20200328",
+		"vscode": "1.1.36"
 	},
 	"repository": {
 		"type": "git",
