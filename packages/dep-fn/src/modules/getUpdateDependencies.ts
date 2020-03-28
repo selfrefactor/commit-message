@@ -1,16 +1,12 @@
-import { log } from 'helpers'
-import {
-  InitDependencies,
-  StringMap,
-  UpdateDependencies,
-} from '../../typings'
-import { getUpdateDependency } from './getUpdateDependency'
-import { getUpdateURL } from './getUpdateURL'
-import { getFallbackUpdate } from './helpers/getFallbackUpdate'
-import { isDependencyEligible } from './helpers/isDependencyEligible'
+import {log} from 'helpers-fn'
+import {InitDependencies, StringMap, UpdateDependencies} from '../../typings'
+import {getUpdateDependency} from './getUpdateDependency'
+import {getUpdateURL} from './getUpdateURL'
+import {getFallbackUpdate} from './helpers/getFallbackUpdate'
+import {isDependencyEligible} from './helpers/isDependencyEligible'
 
-export const getUpdateDependencies = async (
-  input: InitDependencies,
+export const getUpdateDependencies = async(
+  input: InitDependencies
 ): Promise<StringMap<string>> => {
   try {
     const dependencies: object = input.dependencies
@@ -23,7 +19,7 @@ export const getUpdateDependencies = async (
       const condition = alreadyBetter && !isDefinitelyTyped
       const eligible = isDependencyEligible(prop)
 
-      if ((alreadyBetter && isDefinitelyTyped) || !eligible) {
+      if (alreadyBetter && isDefinitelyTyped || !eligible) {
         const typeOK = eligible ? 'already better' : 'skipped'
         log(`Dependency ${prop} is ${typeOK}`, 'warning')
         willReturn[prop] = dependency
@@ -38,13 +34,13 @@ export const getUpdateDependencies = async (
         url: getUpdateURL(dependency),
       }
 
-      const willPush: string = condition ?
-        await getUpdateDependency(options) :
-        await getFallbackUpdate(options)
+      const willPush: string = condition
+        ? await getUpdateDependency(options)
+        : await getFallbackUpdate(options)
 
       if (willPush !== dependency) {
         log(`Updated '${prop}' dependency to ${willPush}`, 'success')
-      }else{
+      } else {
         log(`'${prop}' dependency no need to update`, 'success')
       }
 

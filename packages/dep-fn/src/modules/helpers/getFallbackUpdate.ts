@@ -13,7 +13,7 @@ export const getFallbackUpdate = async (
 
     if (currentVersion === latestVersion) {
 
-      return `^${currentVersion}`
+      return currentVersion
     }
 
     const question: string = getUpdateQuestion({
@@ -24,8 +24,8 @@ export const getFallbackUpdate = async (
     const answer = await confirm(question, input.dependency)
 
     const willReturn = answer ?
-      `^${latestVersion}` :
-      `^${currentVersion}`
+      latestVersion :
+      currentVersion
 
     return willReturn
   } catch (error) {

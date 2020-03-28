@@ -1,7 +1,7 @@
 {
 	"name": "dep-fn",
 	"version": "0.8.3",
-	"description": "Easier update of Yarn dependencies",
+	"description": "Easier update of Node.js dependencies",
 	"main": "dist/index.js",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/dep-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
@@ -19,7 +19,7 @@
 	"dependencies": {
 		"fs-extra": "^7.0.0",
 		"helpers-fn": "0.1.1",
-		"init-puppeteer": "4.3.3",
+		"init-puppeteer": "4.3.5",
 		"inquirer": "^7.0.0",
 		"json-format": "^1.0.1",
 		"package-storage": "^1.0.0",
@@ -43,9 +43,7 @@
 		"testRegex": ".+spec.ts(x)?$",
 		"moduleFileExtensions": [
 			"ts",
-			"tsx",
 			"js",
-			"jsx",
 			"json"
 		]
 	}

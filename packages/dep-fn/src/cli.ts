@@ -1,6 +1,6 @@
-import { log } from 'helpers'
-import { special } from './special'
-import { update } from './update'
+import {log} from 'helpers-fn'
+import {special} from './special'
+import {update} from './update'
 
 process.on('unhandledRejection', (reason, promise) => {
   console.log(reason, promise)

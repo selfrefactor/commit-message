@@ -1,13 +1,12 @@
-import { existsSync, unlinkSync } from 'fs'
-import { writeFileSync } from 'fs-extra'
-import { log } from 'helpers'
+import {existsSync, unlinkSync} from 'fs'
+import {writeFileSync} from 'fs-extra'
+import {log} from 'helpers-fn'
 import * as jsonFormat from 'json-format'
-import { join } from 'path'
-import { merge } from 'rambdax'
-import { Dependencies } from '../../typings'
+import {join} from 'path'
+import {merge} from 'rambdax'
+import {Dependencies} from '../../typings'
 
-export const beforeEnd = async (input: Dependencies): Promise<void> => {
-
+export const beforeEnd = async(input: Dependencies): Promise<void> => {
   const filePath = join(process.cwd(), 'package.json')
   const lockFilePath = join(process.cwd(), 'yarn.lock')
 
@@ -22,10 +21,7 @@ export const beforeEnd = async (input: Dependencies): Promise<void> => {
     devDependencies: input.devDependencies,
   }
 
-  const newPackageJson = merge(
-    input.packageJson,
-    newProps,
-  )
+  const newPackageJson = merge(input.packageJson, newProps)
 
   writeFileSync(filePath, jsonFormat(newPackageJson))
 

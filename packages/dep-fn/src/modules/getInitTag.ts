@@ -1,16 +1,14 @@
-import { log } from 'helpers'
-import { GithubTag } from '../../typings'
-import { currentTag } from './dom/currentTag'
-import { getURLPackageJson } from './helpers/getURLPackageJson'
+import {log} from 'helpers-fn'
+import {GithubTag} from '../../typings'
+import {currentTag} from './dom/currentTag'
+import {getURLPackageJson} from './helpers/getURLPackageJson'
 
-export const getInitTag = async (
-  input: GithubTag,
+export const getInitTag = async(
+  input: GithubTag
 ): Promise<false | string> => {
   try {
-    const { page, url, dependency, tag } = input
-    await page.goto(
-      url,
-    )
+    const {page, url, dependency, tag} = input
+    await page.goto(url)
     // Jest related issue
     // Jest NPM package reference the major Github project
     // This project contains all Jest related packages
@@ -19,15 +17,13 @@ export const getInitTag = async (
 
     const urlPackageJson = getURLPackageJson(url)
 
-    const responsePackageJson: any = await page.goto(
-      urlPackageJson,
-    )
+    const responsePackageJson: any = await page.goto(urlPackageJson)
     if (responsePackageJson === null || !responsePackageJson.ok) {
       log('responsePackageJson', 'error')
 
       return false
     }
-    const packageJson: { private?: boolean } = await responsePackageJson.json()
+    const packageJson: {private?: boolean} = await responsePackageJson.json()
 
     if (packageJson.private) {
       log(`packageJson.private === true | ${dependency}`, 'error')
@@ -37,13 +33,11 @@ export const getInitTag = async (
 
     const urlTags = `${url}/tags`
 
-    await page.goto(
-      urlTags,
-    )
+    await page.goto(urlTags)
 
     const currentTagValue: false | string = await page.evaluate(
       currentTag,
-      tag,
+      tag
     )
 
     return currentTagValue
