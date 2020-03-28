@@ -1,4 +1,4 @@
-import {log} from 'helpers'
+import {log} from 'helpers-fn'
 import {Response} from 'puppeteer'
 import {click} from './modules/click'
 import {waitForLoad, waitForNetwork} from './modules/constants'
@@ -7,7 +7,7 @@ import {initPuppeteer} from 'init-puppeteer'
 import {getCredentials} from './modules/getCredentials'
 import {getRepoName} from './modules/getRepoName'
 import {getTagValue} from './modules/getTagValue'
-import {typeModule } from './modules/type'
+import {typeModule} from './modules/type'
 
 const selectors = {
   clickLoginSubmit: '.btn-primary',
@@ -53,7 +53,7 @@ export async function setGithubTag(tag): Promise<void | string> {
     const urlRepo = `https://github.com/${user}/${repoName}`
     const responseURLRepo: Response = await page.goto(
       urlRepo,
-      waitForNetwork,
+      waitForNetwork
     )
 
     if (!responseURLRepo.ok) {
@@ -77,19 +77,13 @@ export async function setGithubTag(tag): Promise<void | string> {
     })
 
     await page.evaluate(click, selectors.submitTag)
-    const responseURLNewTag: any = await page.waitForNavigation(
-      waitForLoad,
-    )
+    const responseURLNewTag: any = await page.waitForNavigation(waitForLoad)
 
     const expectedURL = `${urlRepo}/releases/tag/${tagValue}`
-    const ok =
-      responseURLNewTag.ok && responseURLNewTag._url === expectedURL
+    const ok = responseURLNewTag.ok && responseURLNewTag._url === expectedURL
 
     if (ok) {
-      log(
-        `Published new tag '${tagValue}' on repo '${repoName}'`,
-        'success',
-      )
+      log(`Published new tag '${tagValue}' on repo '${repoName}'`, 'success')
       const command = `yarn add https://github.com/${user}/${repoName}#${tagValue}`
 
       return log(`Install as dependency with '${command}'`, 'info')
@@ -97,7 +91,7 @@ export async function setGithubTag(tag): Promise<void | string> {
 
     log(
       `Something went wrong when publishing new tag '${tagValue}'`,
-      'error',
+      'error'
     )
   } catch (err) {
     console.log(err)

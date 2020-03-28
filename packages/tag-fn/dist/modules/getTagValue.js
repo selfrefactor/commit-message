@@ -9,9 +9,9 @@ exports.tagTypes = [
     'patch',
 ];
 exports.getTagValue = async (x) => {
-    const index = rambdax_1.findIndex(rambdax_1.equals(x.input.tag), exports.tagTypes);
-    if (x.input.tag !== undefined && index === -1) {
-        return x.input.tag;
+    const index = rambdax_1.findIndex(rambdax_1.equals(x.tag), exports.tagTypes);
+    if (index === -1) {
+        return x.tag;
     }
     const tagType = index === -1 ?
         'patch' :

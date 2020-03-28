@@ -1,4 +1,4 @@
-import {log} from 'helpers'
+import {log} from 'helpers-fn'
 import {drop, defaultTo} from 'rambdax'
 import {setGithubTag} from './setGithubTag'
 import {setCredentials} from './helpers/setCredentials'

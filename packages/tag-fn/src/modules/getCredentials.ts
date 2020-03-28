@@ -1,6 +1,6 @@
 import {existsSync} from 'fs'
 import {readJsonSync} from 'fs-extra'
-import {log} from 'helpers'
+import {log} from 'helpers-fn'
 import { resolve } from 'path'
 import {any, isNil} from 'rambdax'
 

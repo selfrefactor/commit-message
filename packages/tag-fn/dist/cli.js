@@ -1,39 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const inquirer = require("inquirer");
-const helpers_1 = require("helpers");
+const helpers_fn_1 = require("helpers-fn");
 const rambdax_1 = require("rambdax");
-const index_1 = require("./index");
-const init_1 = require("./modules/init");
-const [input] = rambdax_1.drop(3, process.argv);
-function cli() {
-    if (input === 'init') {
-        inquirer
-            .prompt([
-            { type: 'input', message: 'Your Github username?', name: 'user' },
-            { type: 'password', message: 'Your Github password?', name: 'password' },
-        ])
-            .then((credentials) => {
-            init_1.init(credentials);
-        });
+const setGithubTag_1 = require("./setGithubTag");
+const setCredentials_1 = require("./helpers/setCredentials");
+const allPossibleTags = ['minor', 'major', 'patch'];
+async function cli(debugInput) {
+    const [cliInput] = rambdax_1.drop(3, process.argv);
+    const input = debugInput ? debugInput : cliInput;
+    if (input === 'init')
+        return setCredentials_1.setCredentials();
+    const tag = rambdax_1.defaultTo('patch', input);
+    if (allPossibleTags.includes(tag)) {
+        helpers_fn_1.log(`${tag} incrementation of the latest tag will be applied\n`, 'info');
     }
     else {
-        const tag = input === undefined ?
-            'patch' :
-            input;
-        if (['minor', 'major', 'patch'].includes(tag)) {
-            helpers_1.log(`${tag} incrementation of the latest tag will be applied\n`, 'info');
-        }
-        else {
-            helpers_1.log(`The new tag will be '${tag}'\n`, 'info');
-        }
-        helpers_1.log('spin');
-        index_1.tagFn({ tag })
-            .then(() => {
-            helpers_1.log('stopspin');
-        })
-            .catch(console.log);
+        helpers_fn_1.log(`The new tag will be '${tag}'\n`, 'info');
     }
+    helpers_fn_1.log('spin');
+    await setGithubTag_1.setGithubTag(tag);
+    helpers_fn_1.log('stopspin');
 }
 exports.cli = cli;
 //# sourceMappingURL=cli.js.map
