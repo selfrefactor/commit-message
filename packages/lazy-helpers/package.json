@@ -1,17 +1,9 @@
 {
 	"scripts": {
 		"build": "webpack --config webpack.config.prod.js",
-		"out": "webpack --config webpack.config.prod.js&&node files/chromebook",
-		"public": "webpack --config webpack.config.public.js",
+		"chromebook": "webpack --config webpack.config.prod.js&&node files/chromebook",
 		"watch": "node files/watch",
 		"start": "node_modules/.bin/webpack-dev-server"
-	},
-	"jest": {
-		"testRegex": ".+spec.js(x)?$",
-		"moduleFileExtensions": [
-			"jsx",
-			"js"
-		]
 	},
 	"dependencies": {
 		"client-helpers-fn": "0.1.0",
@@ -50,7 +42,7 @@
 		"style-loader": "^0.23.1",
 		"thread-loader": "^2.1.1",
 		"typescript": "^3.3.0-dev.20190105",
-		"watch-fn": "1.0.0",
+		"sane": "^4.1.0",
 		"webpack": "^4.26.0",
 		"webpack-cli": "^3.1.2",
 		"webpack-dev-server": "^3.1.9"

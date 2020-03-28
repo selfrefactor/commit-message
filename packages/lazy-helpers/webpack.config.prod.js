@@ -1,4 +1,5 @@
-require('env')('special')
+const { envFn } = require('env-fn')
+envFn('special')
 const webpack = require('webpack')
 
 process.env.NODE_ENV = 'production'

@@ -1,4 +1,4 @@
-import { createAction } from 'create-action'
+import { createAction } from '../createAction'
 import * as React from 'react'
 import { prepend } from 'rambdax'
 import { titleCase } from 'string-fn'

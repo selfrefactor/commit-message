@@ -1,8 +1,8 @@
 const path = require('path')
 const postCssFn = require('postcss-fn')
-const watchFn = require('watch-fn')
+const watchFn = require('../files/watch-fn/watchFn')
 const { exec } = require('child_process')
-const { log } = require('log')
+const { log } = require('helpers-fn')
 const { replace } = require('rambdax')
 const { resolve } = require('path')
 const { writeFileSync, readFileSync } = require('fs')
@@ -12,7 +12,7 @@ const projectDirectory = path.resolve(__dirname, '../')
 let flag = true
 let latestPCSS
 
-function syncBackground() {
+function syncBackground(){
   const source = resolve(__dirname, '../src/background.js')
   const output = resolve(__dirname, '../chrome_dist/background.js')
 
@@ -25,7 +25,7 @@ const execCommand = (command, logFlag = true) =>
     const proc = exec(command, { cwd : projectDirectory })
 
     proc.stdout.on('data', chunk => {
-      if (logFlag) {
+      if (logFlag){
         console.log(chunk.toString())
       }
     })
@@ -34,10 +34,10 @@ const execCommand = (command, logFlag = true) =>
   })
 
 const buildFn = async filePath => {
-  if (filePath.endsWith('background.js')) {
+  if (filePath.endsWith('background.js')){
     syncBackground()
   }
-  if (flag === false) {
+  if (flag === false){
     return
   }
   flag = false
@@ -50,26 +50,24 @@ const buildFn = async filePath => {
 
 const convertPostCSS = async filePath => {
   log(`postCss ${ path.basename(filePath) }`, 'box')
-  if (path.basename(filePath).startsWith('_')) {
+  if (path.basename(filePath).startsWith('_')){
     log('No need to convert internal styles', 'info')
-    if (latestPCSS === undefined) {
+    if (latestPCSS === undefined){
       return
     }
     filePath = latestPCSS
-    log(
-      `Will convert instead the latest PCSS file - ${ path.basename(
-        latestPCSS
-      ) }`,
-      'info'
-    )
+    log(`Will convert instead the latest PCSS file - ${ path.basename(latestPCSS) }`,
+      'info')
   } else {
     latestPCSS = filePath
   }
 
   const options = {
     filePath : filePath,
-    output   : replace('.pcss', '.css', filePath),
-    options  : { cssnano : false },
+    output   : replace(
+      '.pcss', '.css', filePath
+    ),
+    options : { cssnano : false },
   }
 
   await postCssFn(options)

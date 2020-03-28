@@ -1,4 +1,5 @@
-require('env-fn')('special')
+const { envFn } = require('env-fn')
+envFn('special')
 
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -10,7 +11,7 @@ const envToPass = [
   'API_ACCESS_TOKEN',
   'NGROK_URL',
   'NODE_ENV',
-  'ZAPIER_BUFFER_URL'
+  'ZAPIER_BUFFER_URL',
 ]
 
 const plugins = [
@@ -40,14 +41,14 @@ const entry = [
 ]
 
 const output = {
-  pathinfo: false,
+  pathinfo : false,
   filename : 'bundle.js',
   path     : __dirname + '/dist',
 }
 
 const fileRule = {
   test    : /\.jsx?$/,
-  loader  : ["thread-loader","babel-loader"],
+  loader  : [ 'thread-loader', 'babel-loader' ],
   include : `${ __dirname }/src`,
 }
 
@@ -56,19 +57,14 @@ const cssRule = {
   use  : [ 'style-loader', 'css-loader' ],
 }
 
-const rules = [
-  fileRule,
-  cssRule,
-]
+const rules = [ fileRule, cssRule ]
 
 module.exports = {
-  mode: 'development',
+  mode    : 'development',
   devServer,
   entry,
   output,
   plugins,
-  resolve : { 
-    extensions : [ '.jsx', '.js' ] 
-  },
+  resolve : { extensions : [ '.jsx', '.js' ] },
   module  : { rules },
 }

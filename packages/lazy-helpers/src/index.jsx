@@ -1,7 +1,7 @@
 import { switcher, once } from 'rambdax'
 import * as React from 'react'
 import { render } from 'react-dom'
-import { initLocalState } from 'client-helpers'
+import { initLocalState } from 'client-helpers-fn'
 import { RootApp, store } from './app'
 import { init } from './actions'
 import { copyToClipboard } from './_helpers/copyToClipboard.js'
@@ -38,7 +38,7 @@ const renderOnce = once(() => {
 })
 
 const renderFn = () => {
-  renderOnce()
+  renderOnce(undefined)
   store.dispatch(init())
 }
 
@@ -57,7 +57,6 @@ if (pass){
 }
 
 if (process.env.NODE_ENV === 'production' && pass){
-   
   const onRequest = request => {
     if (request.lazyHelpers){
       const methodKey = switcher(window.location.href)
