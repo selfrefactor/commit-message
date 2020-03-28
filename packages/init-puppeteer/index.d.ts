@@ -26,11 +26,6 @@ interface Fn{
   [key: string]: Function
 }
 
-interface Selector{
-  index: number
-  selector: string
-}
-
 interface Tabs{
   before: number
   after: number
@@ -44,16 +39,15 @@ interface Selector{
   index?: number,
   selector: string
 }
-type eval<T> = (input: Selector, fn: (node: HTMLElement) => T) => Promise<T>
+
 interface AttachOutput{
   $$: (selector: string, fn: Function, ...args: any[]) => Promise<any>
   $: (selector: string, fn: Function, ...args: any[]) => Promise<any>
   ctrlA: () => Promise<void>
   helpers: Helpers
   clickAndWaitFor: (firstSelector: Selector, secondSelector: Selector, timeout?: number) => Promise<boolean>
-  eval: eval
+  eval: (input: Selector, fn: (node: HTMLElement) => any) => Promise<any>
   click: (input: Selector) => Promise<boolean>
-  click: (selector: string, index?: number|string) => Promise<boolean>
   clickWithPartialText: (selector: string, text: string) => Promise<boolean>
   clickWithText: (selector: string, text: string) => Promise<boolean>
   count: (selector: string) => Promise<number>
@@ -129,4 +123,3 @@ type ClickFunction = (input: IClickModule) => Promise<void>
 export function initPuppeteer(input: InputPuppeteer): Promise<OutputPuppeteer>
 export function attach(page: Page, screenDir?: string): AttachOutput
 export function expect(result: any, expected: any, label: any, complexLabel?: string): void
-
