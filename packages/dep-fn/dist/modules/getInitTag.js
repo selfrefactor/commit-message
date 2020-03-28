@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("helpers");
+const helpers_fn_1 = require("helpers-fn");
 const currentTag_1 = require("./dom/currentTag");
 const getURLPackageJson_1 = require("./helpers/getURLPackageJson");
 exports.getInitTag = async (input) => {
@@ -15,12 +15,12 @@ exports.getInitTag = async (input) => {
         const urlPackageJson = getURLPackageJson_1.getURLPackageJson(url);
         const responsePackageJson = await page.goto(urlPackageJson);
         if (responsePackageJson === null || !responsePackageJson.ok) {
-            helpers_1.log('responsePackageJson', 'error');
+            helpers_fn_1.log('responsePackageJson', 'error');
             return false;
         }
         const packageJson = await responsePackageJson.json();
         if (packageJson.private) {
-            helpers_1.log(`packageJson.private === true | ${dependency}`, 'error');
+            helpers_fn_1.log(`packageJson.private === true | ${dependency}`, 'error');
             return false;
         }
         const urlTags = `${url}/tags`;
@@ -33,4 +33,3 @@ exports.getInitTag = async (input) => {
         process.exit(1);
     }
 };
-//# sourceMappingURL=getInitTag.js.map

@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("helpers");
+const helpers_fn_1 = require("helpers-fn");
 const special_1 = require("./special");
 const update_1 = require("./update");
 process.on('unhandledRejection', (reason, promise) => {
@@ -9,7 +9,7 @@ process.on('unhandledRejection', (reason, promise) => {
 process.on('uncaughtException', err => {
     console.log(err);
 });
-function cli() {
+async function cli() {
     const input = process.argv[3];
     let method;
     switch (input) {
@@ -27,15 +27,11 @@ function cli() {
             method = update_1.update;
             break;
         default:
-            helpers_1.log('Default method is "updateall"', 'info');
+            helpers_fn_1.log('Default method is "updateall"', 'info');
             process.env.DEP_FN_UPDATE_ALL = 'true';
             method = update_1.update;
     }
-    method()
-        .then(() => {
-        console.log('done');
-    })
-        .catch(console.log);
+    await method();
+    return console.log('done');
 }
 exports.cli = cli;
-//# sourceMappingURL=cli.js.map

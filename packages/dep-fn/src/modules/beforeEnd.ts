@@ -6,7 +6,7 @@ import {join} from 'path'
 import {merge} from 'rambdax'
 import {Dependencies} from '../../typings'
 
-export const beforeEnd = async(input: Dependencies): Promise<void> => {
+export const beforeEnd = (input: Dependencies): void => {
   const filePath = join(process.cwd(), 'package.json')
   const lockFilePath = join(process.cwd(), 'yarn.lock')
 
@@ -25,5 +25,5 @@ export const beforeEnd = async(input: Dependencies): Promise<void> => {
 
   writeFileSync(filePath, jsonFormat(newPackageJson))
 
-  log('', 'info')
+  log('end', 'info')
 }

@@ -1,18 +1,17 @@
-import { UpdateDependencies } from '../../../typings'
-import { confirm } from './confirm'
-import { getFallBackLatest } from './getFallbackLatest'
-import { getUpdateQuestion } from './getUpdateQuestion'
-import { normalizeTag } from './normalizeTag'
+import {UpdateDependencies} from '../../../typings'
+import {confirm} from './confirm'
+import {getFallBackLatest} from './getFallbackLatest'
+import {getUpdateQuestion} from './getUpdateQuestion'
+import {normalizeTag} from './normalizeTag'
 
-export const getFallbackUpdate = async (
-  input: UpdateDependencies,
+export const getFallbackUpdate = async(
+  input: UpdateDependencies
 ): Promise<string> => {
   try {
     const currentVersion = normalizeTag(input.tag)
     const latestVersion: string = await getFallBackLatest(input.dependency)
 
     if (currentVersion === latestVersion) {
-
       return currentVersion
     }
 
@@ -21,11 +20,9 @@ export const getFallbackUpdate = async (
       dependency: input.dependency,
       latestTag: latestVersion,
     })
-    const answer = await confirm(question, input.dependency)
+    const answer = await confirm(question)
 
-    const willReturn = answer ?
-      latestVersion :
-      currentVersion
+    const willReturn = answer ? latestVersion : currentVersion
 
     return willReturn
   } catch (error) {

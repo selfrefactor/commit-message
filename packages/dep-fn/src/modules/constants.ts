@@ -1,4 +1,4 @@
-import { InputPuppeteer } from 'init-puppeteer'
+import {InputPuppeteer} from 'init-puppeteer'
 
 export const puppeteerSettings: InputPuppeteer = {
   headless: process.env.DEBUG !== 'true',

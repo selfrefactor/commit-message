@@ -14,4 +14,3 @@ exports.getFallBackLatest = async (dependency) => {
         process.exit(1);
     }
 };
-//# sourceMappingURL=getFallbackLatest.js.map

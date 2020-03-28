@@ -8,7 +8,7 @@ const getDependencies_1 = require("./modules/helpers/getDependencies");
 async function update() {
     try {
         var { browser, page } = await init_puppeteer_1.initPuppeteer(constants_1.puppeteerSettings);
-        const { devDependencies, dependencies, peerDependencies, packageJson, } = await getDependencies_1.getDependencies();
+        const { devDependencies, dependencies, peerDependencies, packageJson, } = getDependencies_1.getDependencies();
         const updatedDependencies = await getUpdateDependencies_1.getUpdateDependencies({
             dependencies,
             page,
@@ -21,7 +21,7 @@ async function update() {
             dependencies: peerDependencies,
             page: page,
         });
-        await beforeEnd_1.beforeEnd({
+        beforeEnd_1.beforeEnd({
             dependencies: updatedDependencies,
             devDependencies: updatedDevDependencies,
             packageJson: packageJson,
@@ -39,4 +39,3 @@ async function update() {
     }
 }
 exports.update = update;
-//# sourceMappingURL=update.js.map

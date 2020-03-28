@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "checkJs": true,
+    "allowJs": false,
+    "checkJs": false,
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": false,
     "outDir": "./dist/",
-    "sourceMap": true,
+    "sourceMap": false,
     "strictNullChecks": false,
     "target": "esnext",
     "lib": [
       "es7",
+      "es6",
       "dom"
     ]
   },

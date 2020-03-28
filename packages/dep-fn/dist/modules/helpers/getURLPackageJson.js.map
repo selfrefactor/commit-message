@@ -1,1 +1,1 @@
-{"version":3,"file":"getURLPackageJson.js","sourceRoot":"","sources":["../../../src/modules/helpers/getURLPackageJson.ts"],"names":[],"mappings":";;AAAA,qCAGgB;AAEH,QAAA,iBAAiB,GAAG,iBAAO,CACtC,CAAC,CAAC,EAAE,CAAC,qCAAqC,CAAC,sBAAsB,EACjE,iBAAO,CAAC,qBAAqB,EAAE,EAAE,CAAC,CACnC,CAAA"}
+{"version":3,"file":"getURLPackageJson.js","sourceRoot":"","sources":["../../../src/modules/helpers/getURLPackageJson.ts"],"names":[],"mappings":";;AAAA,qCAAwC;AAE3B,QAAA,iBAAiB,GAAG,iBAAO,CACtC,CAAC,CAAC,EAAE,CAAC,qCAAqC,CAAC,sBAAsB,EACjE,iBAAO,CAAC,qBAAqB,EAAE,EAAE,CAAC,CACnC,CAAA"}

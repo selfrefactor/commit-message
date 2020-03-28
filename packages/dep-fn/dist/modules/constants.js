@@ -4,4 +4,3 @@ exports.puppeteerSettings = {
     headless: process.env.DEBUG !== 'true',
     url: 'about:blank',
 };
-//# sourceMappingURL=constants.js.map

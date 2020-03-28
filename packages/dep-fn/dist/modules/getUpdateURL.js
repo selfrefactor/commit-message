@@ -5,4 +5,3 @@ function getUpdateURL(x) {
     return rambdax_1.head(x.split('#'));
 }
 exports.getUpdateURL = getUpdateURL;
-//# sourceMappingURL=getUpdateURL.js.map

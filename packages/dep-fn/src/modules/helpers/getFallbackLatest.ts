@@ -1,11 +1,9 @@
-import { execCommand } from './execCommand'
+import {execCommand} from './execCommand'
 
-import {
-  last,
-} from 'rambdax'
+import {last} from 'rambdax'
 
-export const getFallBackLatest = async (
-  dependency: string,
+export const getFallBackLatest = async(
+  dependency: string
 ): Promise<string> => {
   const command = `npm info --json ${dependency}`
   const packageInfoRaw: string = await execCommand(command)

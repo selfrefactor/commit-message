@@ -9,7 +9,7 @@ process.on('uncaughtException', err => {
   console.log(err)
 })
 
-export function cli() {
+export async function cli(): Promise<void> {
   const input: string = process.argv[3]
   let method: () => Promise<void>
 
@@ -33,9 +33,7 @@ export function cli() {
       method = update
   }
 
-  method()
-    .then(() => {
-      console.log('done')
-    })
-    .catch(console.log)
+  await method()
+
+  return console.log('done')
 }

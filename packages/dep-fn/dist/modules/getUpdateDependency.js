@@ -10,7 +10,7 @@ exports.getUpdateDependency = async (input) => {
     if (latestTagRaw === false) {
         throw `Couldn't fetch latest tag ${input.dependency} ${input.tag}`;
     }
-    const latestTag = rambdax_1.match(/[0-9\.]/g, latestTagRaw).join('');
+    const latestTag = rambdax_1.match(/[0-9.]/g, latestTagRaw).join('');
     if (currentTag === latestTag) {
         return input.tag;
     }
@@ -19,7 +19,6 @@ exports.getUpdateDependency = async (input) => {
         dependency: input.dependency,
         latestTag: latestTag,
     });
-    const answer = await confirm_1.confirm(question, input.dependency);
+    const answer = await confirm_1.confirm(question);
     return answer ? `${input.url}#${latestTag}` : input.tag;
 };
-//# sourceMappingURL=getUpdateDependency.js.map

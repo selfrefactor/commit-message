@@ -1,10 +1,9 @@
-import * as child_process from 'child_process'
+import * as childProcess from 'child_process'
+import {promisify} from 'util'
 
-const { promisify } = require('util')
+const exec = promisify(childProcess.exec)
 
-const exec = promisify(child_process.exec)
-
-export const execCommand = async (command: string): Promise<string> => {
+export const execCommand = async(command: string): Promise<string> => {
   const {stdout} = await exec(command, {cwd: process.cwd()})
 
   return stdout

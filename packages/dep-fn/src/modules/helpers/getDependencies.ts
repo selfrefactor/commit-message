@@ -1,10 +1,10 @@
-import { existsSync } from 'fs'
-import { readJsonSync } from 'fs-extra'
-import { join } from 'path'
-import { defaultTo } from 'rambdax'
-import { Dependencies, StringMap } from '../../../typings'
+import {existsSync} from 'fs'
+import {readJsonSync} from 'fs-extra'
+import {join} from 'path'
+import {defaultTo} from 'rambdax'
+import {Dependencies, StringMap} from '../../../typings'
 
-export const getDependencies = async (): Promise<Dependencies> => {
+export const getDependencies = (): Dependencies => {
   const filePath = join(process.cwd(), 'package.json')
 
   if (!existsSync(filePath)) {
@@ -15,17 +15,17 @@ export const getDependencies = async (): Promise<Dependencies> => {
 
   const dependencies: StringMap<string> = defaultTo(
     {},
-    packageJson.dependencies,
+    packageJson.dependencies
   )
 
   const devDependencies: StringMap<string> = defaultTo(
     {},
-    packageJson.devDependencies,
+    packageJson.devDependencies
   )
 
   const peerDependencies: StringMap<string> = defaultTo(
     {},
-    packageJson.peerDependencies,
+    packageJson.peerDependencies
   )
 
   return {

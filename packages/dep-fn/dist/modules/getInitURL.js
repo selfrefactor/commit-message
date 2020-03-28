@@ -33,4 +33,3 @@ exports.getInitURL = async (dependency) => {
         process.exit(1);
     }
 };
-//# sourceMappingURL=getInitURL.js.map

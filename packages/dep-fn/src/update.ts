@@ -1,19 +1,19 @@
-import { initPuppeteer } from 'init-puppeteer'
-import { beforeEnd } from './modules/beforeEnd'
-import { puppeteerSettings } from './modules/constants'
-import { getUpdateDependencies } from './modules/getUpdateDependencies'
-import { getDependencies } from './modules/helpers/getDependencies'
+import {initPuppeteer} from 'init-puppeteer'
+import {beforeEnd} from './modules/beforeEnd'
+import {puppeteerSettings} from './modules/constants'
+import {getUpdateDependencies} from './modules/getUpdateDependencies'
+import {getDependencies} from './modules/helpers/getDependencies'
 
 export async function update(): Promise<void> {
   try {
-    var { browser, page } = await initPuppeteer(puppeteerSettings)
+    var {browser, page} = await initPuppeteer(puppeteerSettings)
 
     const {
       devDependencies,
       dependencies,
       peerDependencies,
       packageJson,
-    } = await getDependencies()
+    } = getDependencies()
 
     const updatedDependencies = await getUpdateDependencies({
       dependencies,
@@ -30,7 +30,7 @@ export async function update(): Promise<void> {
       page: page,
     })
 
-    await beforeEnd({
+    beforeEnd({
       dependencies: updatedDependencies,
       devDependencies: updatedDevDependencies,
       packageJson: packageJson,

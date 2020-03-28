@@ -1,2 +1,2 @@
-export { update } from './update'
-export { cli } from './cli'
+export {update} from './update'
+export {cli} from './cli'

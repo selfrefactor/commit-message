@@ -639,10 +639,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.6.tgz#a47240c10d86a9a57bb0c633f0b2e0aea9ce9253"
   integrity sha512-FjsYUPzEJdGXjwKqSpE0/9QEh6kzhTAeObA54rn6j3rR4C/mzpI9L0KNfoeASSPMMdxIsoJuCLDWcM/rVjIsSA==
 
-"@types/node@12.12.31":
-  version "12.12.31"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.31.tgz#d6b4f9645fee17f11319b508fb1001797425da51"
-  integrity sha512-T+wnJno8uh27G9c+1T+a1/WYCHzLeDqtsGJkoEdSp2X8RTh3oOCZQcUnjAx90CS8cmmADX51O0FI/tu9s0yssg==
+"@types/node@13.9.5":
+  version "13.9.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.9.5.tgz#59738bf30b31aea1faa2df7f4a5f55613750cf00"
+  integrity sha512-hkzMMD3xu6BrJpGVLeQ3htQQNAcOrJjX7WFmtK8zWQpz2UJf13LCFF2ALA7c9OVdvc2vQJeDdjfR35M0sBCxvw==
 
 "@types/prettier@^1.19.0":
   version "1.19.1"
@@ -2170,10 +2170,10 @@ inherits@2, inherits@^2.0.3, inherits@~2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
-init-puppeteer@4.3.5:
-  version "4.3.5"
-  resolved "https://registry.yarnpkg.com/init-puppeteer/-/init-puppeteer-4.3.5.tgz#df863b1644406052d339e88277bf2cd08323f49d"
-  integrity sha512-OGwEwEaM49YjLJX7B+ITAcXhZOPBxl6RbJsdI2JKUfdiyy7ym4P2Lkv4vFSiLm3EaXeBpnjHOsqE1SeIyoqqFQ==
+init-puppeteer@4.3.6:
+  version "4.3.6"
+  resolved "https://registry.yarnpkg.com/init-puppeteer/-/init-puppeteer-4.3.6.tgz#442b82b09c28ce5f44f65f1a357435b3efbddd4d"
+  integrity sha512-9qxF/DfwaMKUKhDsHYD2mfxqYj4e7mX1/zNdQ/JIKK3B/adGOkQSDyEjEeTC70CsPzN6P0UVVYa6zIFNc2rI1Q==
   dependencies:
     helpers-fn "0.1.1"
     puppeteer "^2.1.1"

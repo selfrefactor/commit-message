@@ -1,1 +1,1 @@
-{"version":3,"file":"getUpdateURL.js","sourceRoot":"","sources":["../../src/modules/getUpdateURL.ts"],"names":[],"mappings":";;AAAA,qCAEgB;AAEhB,SAAgB,YAAY,CAAC,CAAS;IACpC,OAAO,cAAI,CAAC,CAAC,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAA;AAC3B,CAAC;AAFD,oCAEC"}
+{"version":3,"file":"getUpdateURL.js","sourceRoot":"","sources":["../../src/modules/getUpdateURL.ts"],"names":[],"mappings":";;AAAA,qCAA4B;AAE5B,SAAgB,YAAY,CAAC,CAAS;IACpC,OAAO,cAAI,CAAC,CAAC,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,CAAA;AAC3B,CAAC;AAFD,oCAEC"}

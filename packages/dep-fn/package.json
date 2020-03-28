@@ -19,7 +19,7 @@
 	"dependencies": {
 		"fs-extra": "^7.0.0",
 		"helpers-fn": "0.1.1",
-		"init-puppeteer": "4.3.5",
+		"init-puppeteer": "4.3.6",
 		"inquirer": "^7.0.0",
 		"json-format": "^1.0.1",
 		"package-storage": "^1.0.0",
@@ -28,7 +28,7 @@
 	"devDependencies": {
 		"@types/fs-extra": "8.1.0",
 		"@types/jest": "24.9.1",
-		"@types/node": "12.12.31",
+		"@types/node": "13.9.5",
 		"@types/puppeteer": "1.20.2",
 		"jest": "25.2.3",
 		"ts-jest": "24.3.0",

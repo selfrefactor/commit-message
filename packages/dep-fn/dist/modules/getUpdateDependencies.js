@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("helpers");
+const helpers_fn_1 = require("helpers-fn");
 const getUpdateDependency_1 = require("./getUpdateDependency");
 const getUpdateURL_1 = require("./getUpdateURL");
 const getFallbackUpdate_1 = require("./helpers/getFallbackUpdate");
@@ -15,9 +15,9 @@ exports.getUpdateDependencies = async (input) => {
             const isDefinitelyTyped = prop.startsWith('@types/');
             const condition = alreadyBetter && !isDefinitelyTyped;
             const eligible = isDependencyEligible_1.isDependencyEligible(prop);
-            if ((alreadyBetter && isDefinitelyTyped) || !eligible) {
+            if (alreadyBetter && isDefinitelyTyped || !eligible) {
                 const typeOK = eligible ? 'already better' : 'skipped';
-                helpers_1.log(`Dependency ${prop} is ${typeOK}`, 'warning');
+                helpers_fn_1.log(`Dependency ${prop} is ${typeOK}`, 'warning');
                 willReturn[prop] = dependency;
                 continue;
             }
@@ -27,14 +27,14 @@ exports.getUpdateDependencies = async (input) => {
                 tag: dependency,
                 url: getUpdateURL_1.getUpdateURL(dependency),
             };
-            const willPush = condition ?
-                await getUpdateDependency_1.getUpdateDependency(options) :
-                await getFallbackUpdate_1.getFallbackUpdate(options);
+            const willPush = condition
+                ? await getUpdateDependency_1.getUpdateDependency(options)
+                : await getFallbackUpdate_1.getFallbackUpdate(options);
             if (willPush !== dependency) {
-                helpers_1.log(`Updated '${prop}' dependency to ${willPush}`, 'success');
+                helpers_fn_1.log(`Updated '${prop}' dependency to ${willPush}`, 'success');
             }
             else {
-                helpers_1.log(`'${prop}' dependency no need to update`, 'success');
+                helpers_fn_1.log(`'${prop}' dependency no need to update`, 'success');
             }
             willReturn[prop] = willPush;
         }
@@ -45,4 +45,3 @@ exports.getUpdateDependencies = async (input) => {
         process.exit(1);
     }
 };
-//# sourceMappingURL=getUpdateDependencies.js.map
