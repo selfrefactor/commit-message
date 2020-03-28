@@ -10,6 +10,10 @@
   },
   {
     "key": "ctrl+g",
+    "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "ctrl+d",
     "command": "editor.action.goToDeclaration",
     "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
   },
@@ -24,10 +28,6 @@
   {
     "key": "alt+e",
     "command": "workbench.files.action.showActiveFileInExplorer"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "editor.action.goToTypeDefinition"
   },
   {
     "key": "alt+d",
