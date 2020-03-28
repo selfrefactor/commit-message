@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("helpers");
+exports.showExplanations = exports.normalize = void 0;
+const helpers_fn_1 = require("helpers-fn");
 const constants_1 = require("../constants");
 const MIN_LENGTH = 12;
 const SEPARATOR = ' - ';
@@ -15,7 +16,7 @@ function showExplanations() {
     let counter = 0;
     constants_1.explanationOfTypes.forEach(explanation => {
         const tag = counter % 2 === 0 ? 'tag=foo' : 'tag=bar';
-        helpers_1.log(normalize(explanation), tag);
+        helpers_fn_1.log(normalize(explanation), tag);
         counter++;
     });
 }

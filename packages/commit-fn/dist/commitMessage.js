@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("helpers");
+exports.commitMessage = void 0;
+const helpers_fn_1 = require("helpers-fn");
 const constants_1 = require("./constants");
 const getLatestCommits_1 = require("./_modules/getLatestCommits");
 const getCommitLabel_1 = require("./_modules/getCommitLabel");
@@ -20,9 +21,9 @@ function getWorkInProgressFlag(commitLabel) {
 async function commitMessage(dir = process.cwd()) {
     const latestCommits = await getLatestCommits_1.getLatestCommits(dir);
     latestCommits.forEach(singleCommit => {
-        helpers_1.log(singleCommit, 'info');
+        helpers_fn_1.log(singleCommit, 'info');
     });
-    helpers_1.log('sep');
+    helpers_fn_1.log('sep');
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
@@ -31,7 +32,7 @@ async function commitMessage(dir = process.cwd()) {
         labels: constants_1.labels,
     });
     if (workInProgress.length > 0) {
-        helpers_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
+        helpers_fn_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
     }
     const inputResult = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
     const hasWorkInProgress = getWorkInProgressFlag(commitLabel);

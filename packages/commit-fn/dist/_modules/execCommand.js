@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.execCommand = void 0;
 const child_process_1 = require("child_process");
 exports.execCommand = command => new Promise((resolve, reject) => {
     const cwd = process.env.COMMIT_MESSAGE_CWD || process.cwd();

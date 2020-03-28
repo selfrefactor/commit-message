@@ -1,4 +1,4 @@
-const {exec} = require('helpers')
+const {exec} = require('helpers-fn')
 const {all} = require('rambda')
 const {readFileSync} = require('fs')
 

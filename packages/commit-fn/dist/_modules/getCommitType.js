@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getCommitType = void 0;
 const constants_1 = require("../constants");
 const promptSelect_1 = require("./promptSelect");
 async function getCommitType(typesOfCommit) {

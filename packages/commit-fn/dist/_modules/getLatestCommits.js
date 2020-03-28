@@ -1,12 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const helpers_1 = require("helpers");
+exports.getLatestCommits = void 0;
+const helpers_fn_1 = require("helpers-fn");
 const rambda_1 = require("rambda");
 const fs_1 = require("fs");
 const nonCommitPrefixes = ['commit', 'Author:', 'Date:'];
 const COMMITS_OUTPUT = `${__dirname}/commits.txt`;
 async function getLatestCommits(dir) {
-    await helpers_1.exec({
+    await helpers_fn_1.exec({
         command: `git log -3 > ${COMMITS_OUTPUT}`,
         onLog: () => { },
         cwd: dir,

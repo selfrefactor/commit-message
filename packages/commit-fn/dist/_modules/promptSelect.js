@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.promptSelect = void 0;
 const Enquirer = require("enquirer");
 async function promptSelect(input) {
     const select = new Enquirer.Select({

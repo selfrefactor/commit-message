@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getCommitLabel = exports.askCustomLabel = void 0;
 const constants_1 = require("../constants");
 const promptInput_1 = require("./promptInput");
-const helpers_1 = require("helpers");
+const helpers_fn_1 = require("helpers-fn");
 const index_js_1 = require("../../../package-storage/index.js");
 const promptSelect_1 = require("./promptSelect");
 const PADDING_LIMIT = 10;
@@ -24,7 +25,7 @@ async function askCustomLabel(input) {
     const isNewLabel = loaded === undefined || loaded.push === undefined;
     const toSave = isNewLabel ? [label] : [...loaded, label];
     index_js_1.save('commitMessage', key, toSave, true);
-    helpers_1.log(`label '${label}' is part of '${key}' context | is.new = '${isNewLabel}'`, 'info');
+    helpers_fn_1.log(`label '${label}' is part of '${key}' context | is.new = '${isNewLabel}'`, 'info');
     return label;
 }
 exports.askCustomLabel = askCustomLabel;
@@ -33,9 +34,9 @@ function extractValue(actualLabel) {
     return toReturn;
 }
 async function getCommitLabel(input) {
-    helpers_1.log('sepx');
-    helpers_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, '');
-    helpers_1.log('sepx');
+    helpers_fn_1.log('sepx');
+    helpers_fn_1.log(`${input.commitType.key} - ${input.commitType.explanation}`, '');
+    helpers_fn_1.log('sepx');
     const filteredLabels = input.labels.filter(singleLabel => {
         return singleLabel.belongsTo.includes(input.commitType);
     });
