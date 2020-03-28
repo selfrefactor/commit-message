@@ -9,7 +9,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"rambda": "^4.4.0",
-		"redis": "^2.8.0"
+		"redis": "^3.0.0"
 	},
 	"devDependencies": {
 		"env-fn": "^1.1.2"
