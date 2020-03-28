@@ -6,6 +6,8 @@
 
 ## On slow machines try disable GPU acceleration
 
+Configure runtime arguments
+
 `"disable-hardware-acceleration": true`
 
 
