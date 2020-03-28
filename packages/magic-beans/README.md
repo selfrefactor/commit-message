@@ -2,7 +2,7 @@
 
 VSCode extension for magic-like features
 
-![demo](https://github.com/selfrefactor/magic-beans/blob/master/files/demo.gif?raw=true)
+[VSCode marketplace link](https://marketplace.visualstudio.com/items?itemName=selfrefactor.magic-beans)
 
 ## TODO
 
