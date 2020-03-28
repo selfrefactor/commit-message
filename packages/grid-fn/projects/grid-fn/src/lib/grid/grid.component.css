@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  width: 99vw;
+  height: 99vw;
+  grid-template-rows: repeat(32, 1fr);
+  grid-template-columns: repeat(32, 1fr);
+}
