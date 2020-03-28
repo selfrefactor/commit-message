@@ -1,6 +1,6 @@
 {
 	"name": "rabbit-fn",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "rabbit",
 	"typings": "index.d.ts",
 	"main": "src/index.js",
