@@ -4,12 +4,11 @@
 
 - Populate settings and keybingings to local VSCode instances
 
+## On slow machines try disable GPU acceleration
+
+`"disable-hardware-acceleration": true`
+
+
 ## VSCode changes
 
 > Collapse All list and tree command with Ctrl+LeftArrow keyboard shortcut
-
-## Free keybindings
-
-- alt+2
-
-- ctrl+8
