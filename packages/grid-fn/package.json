@@ -1,6 +1,6 @@
 {
   "name": "grid-fn-workspace",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "out": "ng build grid-fn --prod",
     "ng": "ng",
