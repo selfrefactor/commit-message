@@ -19,7 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^13.7.0",
-    "jest": "^25.1.0"
+    "jest": "25.2.4"
   },
   "commitMessage": {
     "feature": [
