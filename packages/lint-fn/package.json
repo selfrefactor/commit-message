@@ -3,7 +3,7 @@
 		"de": "commit"
 	},
 	"name": "lint-fn",
-	"version": "2.5.0",
+	"version": "2.5.1",
 	"description": "lint",
 	"main": "lintFn.js",
 	"typings": "index.d.ts",
@@ -27,9 +27,7 @@
 		"prettier": "2.0.2",
 		"rambdax": "3.7.0"
 	},
-	"devDependencies": {
-		
-	},
+	"devDependencies": {},
 	"commitMessage": {
 		"feature": [
 			"rule",
