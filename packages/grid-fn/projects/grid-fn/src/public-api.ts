@@ -2,7 +2,7 @@
  * Public API Surface of grid-fn
  */
 
-export * from './lib/grid/grid.component'
-export * from './lib/cell/cell.component'
-export * from './lib/sub-grid/sub-grid.component'
-export * from './lib/grid-fn.module'
+export {GridComponent} from './lib/grid/grid.component'
+export {CellComponent} from './lib/cell/cell.component'
+export {SubGridComponent} from './lib/sub-grid/sub-grid.component'
+export {GridFnModule} from './lib/grid-fn.module'
