@@ -2,6 +2,10 @@
   "name": "grid-fn-workspace",
   "version": "0.1.2",
   "scripts": {
+    "update": "ng update --all=true --allowDirty=true --next=true",
+    "updatex": "ng update --all=true --allowDirty=true",
+    "update:force": "ng update --force --all=true --allowDirty=true --next=true",
+    "updatex:force": "ng update --force --all=true --allowDirty=true",
     "out": "ng build grid-fn --prod",
     "start": "ng serve",
     "build": "ng build",
@@ -32,7 +36,7 @@
     "ng-packagr": "^9.0.0",
     "ts-node": "~8.3.0",
     "tslint-fn": "0.2.1",
-    "typescript": "3.8.3"
+    "typescript": "3.7.3"
   },
   "commitMessage": {
     "workInProgress": ""
