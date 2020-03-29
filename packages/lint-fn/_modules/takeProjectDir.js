@@ -6,7 +6,12 @@ function takeProjectDir(filePath){
   const loop = range(1, 10)
 
   loop.forEach(i => {
-    if (willReturn === undefined){
+    // needed as even package.json is found 
+    // that could be Angular library 
+    // and we need to keep waiting for
+    // project root directory
+    // ============================================
+    if (!willReturn){
       const list = filePath.split('/')
       const maybeDir = dropLast(i, list).join('/')
 
