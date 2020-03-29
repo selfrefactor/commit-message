@@ -35,6 +35,6 @@
     "typescript": "3.8.3"
   },
   "commitMessage": {
-    "workInProgress": "use tslint.fn"
+    "workInProgress": ""
   }
 }

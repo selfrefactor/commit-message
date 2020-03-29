@@ -3,8 +3,8 @@ import {DomSanitizer} from '@angular/platform-browser'
 import {ok} from 'rambdax'
 
 interface TopLeft {
-  x: number
-  y: number
+  x: number,
+  y: number,
 }
 
 @Component({
@@ -19,15 +19,22 @@ export class CellComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    ok(this.width, this.height, this.topLeft)(Number, Number, {x: Number, y: Number})
+    ok(this.width, this.height, this.topLeft)(Number, Number, {
+      x: Number,
+      y: Number,
+    })
   }
   @HostBinding('style.grid-row')
   get gridRow() {
-    return this.sanitizer.bypassSecurityTrustStyle(`${this.topLeft.y + 1} / span ${this.height}`)
+    return this.sanitizer.bypassSecurityTrustStyle(
+      `${this.topLeft.y + 1} / span ${this.height}`
+    )
   }
   @HostBinding('style.grid-column')
   get gridColumn() {
-    return this.sanitizer.bypassSecurityTrustStyle(`${this.topLeft.x + 1} / span ${this.width}`)
+    return this.sanitizer.bypassSecurityTrustStyle(
+      `${this.topLeft.x + 1} / span ${this.width}`
+    )
   }
   @HostBinding('style.outline')
   get outlineCell() {
