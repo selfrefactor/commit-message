@@ -13,7 +13,7 @@
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "esm": "3.0.84",
+    "esm": "3.2.25",
     "fs-extra": "7.0.0",
     "rambdax": "3.7.0"
   },
