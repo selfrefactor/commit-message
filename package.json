@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "version": "4.2.0",
+  "version": "4.2.1",
   "description": "services",
   "main": "index.js",
   "typings": "index.d.ts",
