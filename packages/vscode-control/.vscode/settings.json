@@ -1,4 +1,5 @@
 {
+  "javascript.implicitProjectConfig.checkJs": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "search.useReplacePreview": false,
   "editor.gotoLocation.multipleDefinitions": "goto",
@@ -147,7 +148,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.find.addExtraSpaceOnTop": false,
   "npm.enableScriptExplorer": false,
-  "javascript.implicitProjectConfig.checkJs": false,
   "typescript.tsserver.experimental.enableProjectDiagnostics":false,
   "wallaby.reportFailuresAsProblems": false,
   "wallaby.showUpdateNotifications": false,
