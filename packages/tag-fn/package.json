@@ -31,7 +31,7 @@
     "jest": "25.2.3",
     "ts-jest": "24.3.0",
     "tslint-fn": "0.2.1",
-    "typescript": "3.8.0-dev.20191105"
+    "typescript": "3.8.3"
   },
   "jest": {
     "transform": {

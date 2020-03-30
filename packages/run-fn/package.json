@@ -29,7 +29,7 @@
     "tag-fn": "0.4.2"
   },
   "devDependencies": {
-    "typescript": "3.9.0-dev.20200328"
+    "typescript": "3.9.0-dev.20200330"
   },
   "commitMessage": {
     "feature": [
