@@ -18,7 +18,7 @@
   "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^13.7.0",
+    "@types/node": "13.9.8",
     "jest": "^25.1.0"
   },
   "commitMessage": {

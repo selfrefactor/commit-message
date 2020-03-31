@@ -17,7 +17,7 @@
 		"string-fn": "^2.11.0"
 	},
 	"devDependencies": {
-		"@types/node": "13.9.5",
+		"@types/node": "13.9.8",
 		"fs-extra": "9.0.0",
 		"tslint-fn": "^0.2.1",
 		"typescript": "3.9.0-dev.20200325"
