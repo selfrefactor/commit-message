@@ -7,7 +7,7 @@
 	},
 	"dependencies": {
 		"client-helpers-fn": "0.1.0",
-		"ms": "2.1.1",
+		"ms": "2.1.2",
 		"rambdax": "3.7.0",
 		"react": "16.8.6",
 		"react-dom": "16.8.6",
