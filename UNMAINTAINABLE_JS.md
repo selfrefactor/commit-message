@@ -30,9 +30,19 @@ The logic here is that `c` and `d` are somewhat related.
 !isPathOpen() && setCount(total - total_seen);
 ```
 
+## Abuse this
+
+```
+  const coverPath = user
+    .getBusinessInfo()
+    .getCover()
+    .getCompressed()
+    .getPath();
+```
+
 ## Two donkeys on a same bridge
 
-Most of bad code happens due to the stubbornness of semi-useful ideas, such as: 
+Most of bad code happens due to the stubbornness of semi-useful ideas, such as:
 
 ### Use two computers as your personal workstations
 
