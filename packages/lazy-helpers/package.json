@@ -34,7 +34,7 @@
 		"babel-loader": "^8.0.5",
 		"css-loader": "^2.1.0",
 		"env-fn": "2.1.0",
-		"fs-extra": "^8.1.0",
+		"fs-extra": "9.0.0",
 		"html-webpack-harddisk-plugin": "^1.0.1",
 		"html-webpack-plugin": "^4.0.0-beta.5",
 		"postcss-fn": "^0.1.7",
