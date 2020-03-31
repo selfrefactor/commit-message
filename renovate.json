@@ -6,12 +6,8 @@
     "tuna-player",
     "maided"
   ],
-  "packageRules": [
-		{
-			"updateTypes": [
-				"patch"
-      ],
-      "enabled": false
-		}
-	]
+  "packageRules": [{
+    "depTypeList": ["devDependencies"],
+    "enabled": false
+  }]
 }
