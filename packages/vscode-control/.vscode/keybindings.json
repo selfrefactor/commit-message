@@ -1,5 +1,15 @@
 [
   {
+    "key": "alt+f2",
+    "command": "editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+f3",
+    "command": "-editor.action.selectHighlights",
+    "when": "editorFocus"
+  },
+  {
     "key": "ctrl+shift+i",
     "command": "editor.action.inspectTMScopes"
   },
@@ -44,7 +54,7 @@
     "command": "workbench.action.closeOtherEditors"
   },
   {
-    "key": "ctrl+alt+x",
+    "key": "ctrl+alt+m",
     "command": "workbench.view.extensions"
   },
   {

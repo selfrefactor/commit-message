@@ -125,7 +125,7 @@
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "CircusAjax",
+  "workbench.colorTheme": "HungerEpiphany",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,

@@ -9,6 +9,7 @@ import {
   TS_SNIPPETS,
 } from './constants'
 
+
 const OPERATOR_MONO = process.env.OPERATOR_MONO === 'ON'
 
 const SCALE_FACTOR = process.env.SCALE === undefined ?
