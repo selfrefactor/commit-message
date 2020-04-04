@@ -1,6 +1,6 @@
 [
   {
-    "key": "alt+f2",
+    "key": "alt+capslock",
     "command": "editor.action.selectHighlights",
     "when": "editorFocus"
   },
