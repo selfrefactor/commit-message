@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { copySync, writeJsonSync } from 'fs-extra'
+import { copySync, writeJsonSync, existsSync } from 'fs-extra'
 import { replace, map, toDecimal } from 'rambdax'
 import settings from '../.vscode/settings.json'
 import {
@@ -114,6 +114,9 @@ function syncSettings(){
     },
     { spaces : 2 }
   )
+  if(!existsSync(stableSettingsLocation)){
+    return console.log('Only Insiders');
+  }
   writeJsonSync(
     stableSettingsLocation,
     {
