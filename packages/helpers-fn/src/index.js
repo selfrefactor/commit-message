@@ -1,17 +1,14 @@
 const {
-  startLoadingBar,
-  stopLoadingBar,
-} = require('./exported/loadingBarCLI')
-const {
   translate,
   translateToBulgarian,
   translateToGerman,
 } = require('./exported/translate')
 const { createBenchmark } = require('./exported/createBenchmark.js')
-const { exec } = require('./exported/exec')
+const { exec, execSafe, spawn } = require('./exported/exec')
 const { loadingBar } = require('./exported/loadingBar')
 const { log } = require('./log/index')
 const { runTests } = require('./exported/runTests')
+const { startLoadingBar, stopLoadingBar } = require('./exported/loadingBarCLI')
 
 exports.createBenchmark = createBenchmark
 exports.runTests = runTests
@@ -22,4 +19,6 @@ exports.stopLoadingBar = stopLoadingBar
 exports.startLoadingBar = startLoadingBar
 exports.loadingBar = loadingBar
 exports.exec = exec
+exports.execSafe = execSafe
+exports.spawn = spawn
 exports.log = log

@@ -16,13 +16,18 @@ export function translateToBulgarian(text: string) : Promise<string>
 export function translateToGerman(text: string) : Promise<string>
 // EXEC
 // ============================================
-type OnLog = (x: string) => any
+type OnLog = (x: string) => void
 interface Exec{
   cwd: string
   command: string
   onLog?: OnLog
 }
+interface Spawn extends Exec{
+  inputs: string[]
+}
 export function exec(input: Exec) : Promise<string[]>
+export function execSafe(input: Omit<Exec, 'onLog'>) : Promise<string>
+export function spawn(input: Spawn) : Promise<string>
 
 // Run tests
 // ============================================
