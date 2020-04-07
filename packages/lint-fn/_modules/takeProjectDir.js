@@ -1,7 +1,14 @@
 const { dropLast, range } = require('rambdax')
 const { existsSync } = require('fs')
 
-function takeProjectDir(filePath){
+function takeProjectDir(filePath, cwdOverride){
+  if(cwdOverride){
+    return {
+      ok         : existsSync(`${ cwdOverride }/tsconfig.json`),
+      eslintFlag : existsSync(`${ cwdOverride }/.eslintrc.js`),
+      path       : cwdOverride,
+    }
+  }
   let willReturn
   const loop = range(1, 10)
 
