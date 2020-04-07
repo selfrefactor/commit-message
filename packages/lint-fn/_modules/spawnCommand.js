@@ -17,25 +17,6 @@ const spawnCommand = (command, inputs, cwd) =>
     proc.stdout.on('error', err => reject(err))
   })
 
-// const execCommand = (command, cwd) =>
-//   new Promise((resolve, reject) => {
-//     const callback = (error, stdout, stderr) => {
-//       if(error) return reject(error)
-//       if(stderr){
-//         console.warn(stderr)
-//       }
-//       if(stdout){
-//         console.log(stderr)
-//       }
-//       resolve()
-//     }
-//     exec(command, {
-//         cwd,
-//         shell:'/bin/sh',
-//         env : process.env,
-//       }, callback)
-//   })
-
 const spawnFn = (command, inputs) => spawnCommand(command, inputs, DIR)
 
 exports.spawnCommand = spawnCommand

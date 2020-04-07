@@ -1,5 +1,5 @@
 const { spawnCommand } = require('./spawnCommand')
-const { glue } = require('rambdax')
+const { glue, defaultTo } = require('rambdax')
 const { resolve } = require('path')
 const { existsSync } = require('fs')
 
@@ -27,9 +27,10 @@ const getPrettierPath = (cwd, prettierSpecialCase) => {
   throw new Error('Prettier was not found "lint.fn"')
 }
 
-async function usePrettier({ filePath, withTypescript, prettierSpecialCase }){
-  const cwd = resolve(__dirname, '../')
-  const prettierPath = getPrettierPath(cwd, prettierSpecialCase)
+async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdOverride }){
+  const cwdDefault = resolve(__dirname, '../')
+  const cwd =  defaultTo(cwdDefault, cwdOverride) 
+  const prettierPath = getPrettierPath(cwdDefault, prettierSpecialCase)
 
   /*
     Other option is `--parser babel-ts`

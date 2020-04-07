@@ -9,7 +9,7 @@ const { usePrettier } = require('./_modules/usePrettier')
 
 const NO_AVAILABLE_LINTER = 'Filepath has no corresponding linter'
 
-async function handleTypescript(filePath, prettierSpecialCase){
+async function handleTypescript(filePath, prettierSpecialCase, cwdOverride){
   const { ok, eslintFlag, path } = takeProjectDir(filePath)
   if (!ok){
     return console.log('This is not a Typescript project')
@@ -26,14 +26,14 @@ async function handleTypescript(filePath, prettierSpecialCase){
   }
 
   return lintTypescript(
-    filePath, path, prettierSpecialCase
+    filePath, path, prettierSpecialCase, cwdOverride
   )
 }
 
-async function lintFn(filePath, prettierSpecialCase = 'local'){
+async function lintFn(filePath, prettierSpecialCase = 'local', cwdOverride = false){
   try {
     if (filePath.endsWith('.ts'))
-      return handleTypescript(filePath, prettierSpecialCase)
+      return handleTypescript(filePath, prettierSpecialCase, cwdOverride)
 
     const eslintPath = getEslintPath(debugFlag)
 

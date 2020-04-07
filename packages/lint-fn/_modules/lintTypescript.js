@@ -3,12 +3,13 @@ const { glue } = require('rambdax')
 const { usePrettier } = require('./usePrettier')
 
 async function lintTypescript(
-  filePath, projectDir, prettierSpecialCase
+  filePath, projectDir, prettierSpecialCase, cwdOverride
 ){
   await usePrettier({
     filePath,
     withTypescript : true,
     prettierSpecialCase,
+    cwdOverride
   })
 
   const eslintCommand = glue(`
