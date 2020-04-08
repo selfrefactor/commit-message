@@ -24,7 +24,7 @@
 		"eslint-plugin-simple-import-sort": "5.0.2",
 		"eslint-plugin-sort-class-members": "1.6.0",
 		"eslint-plugin-sort-requires": "2.1.0",
-		"prettier": "2.0.2",
+		"prettier": "2.0.4",
 		"rambdax": "3.7.0",
 		"@typescript-eslint/eslint-plugin": "2.27.1-alpha.3",
 		"@typescript-eslint/parser": "2.27.1-alpha.3"
