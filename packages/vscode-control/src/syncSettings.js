@@ -1,6 +1,6 @@
 import { resolve } from 'path'
-import { copySync, writeJsonSync, existsSync } from 'fs-extra'
-import { replace, map, toDecimal } from 'rambdax'
+import { copySync, writeJsonSync } from 'fs-extra'
+import { toDecimal } from 'rambdax'
 import settings from '../.vscode/settings.json'
 import {
   KEYBINDING,
@@ -8,7 +8,6 @@ import {
   JS_SNIPPETS,
   TS_SNIPPETS,
 } from './constants'
-
 
 const OPERATOR_MONO = process.env.OPERATOR_MONO === 'ON'
 
@@ -23,20 +22,11 @@ const ZOOM_SCALE_FACTOR = SCALE_FACTOR === 1 ?
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
 
-function getListFiles(x){
-  return [
-    x,
-    replace('/Code/', '/Code - Insiders/', x),
-  ]
+function syncFiles(source, destination){
+  copySync(source, destination)
 }
 
-function syncFiles(source, list){
-  list.forEach(x => {
-    copySync(source, x)
-  })
-}
-
-const getScaledOptions = () => {
+const getCalculatedOptions = () => {
   const isBig = SCALE_FACTOR === 1
   const fontSize = toDecimal(24 * SCALE_FACTOR)
   const zoomLevel = toDecimal(2 * ZOOM_SCALE_FACTOR)
@@ -44,7 +34,10 @@ const getScaledOptions = () => {
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(17 * SCALE_FACTOR)
-  const base =  {
+  const fontFamily = OPERATOR_MONO ? 'Operator Mono' : 'Bar'
+
+  return  {
+    'editor.fontFamily': fontFamily,
     "editor.fontSize": fontSize,
     "window.zoomLevel": zoomLevel,
     "editor.lineHeight": lineHeight,
@@ -52,20 +45,6 @@ const getScaledOptions = () => {
     "editor.suggestLineHeight": suggestLineHeight,
     "terminal.integrated.fontSize": terminalFontSize,
   }
-
-  const toReturn =  map(
-    x => [x,x] 
-  )(base)
-
-  const fontFamilyInsiders = OPERATOR_MONO ? 'Operator Mono' : 'Bar'
-
-  toReturn['editor.fontFamily'] = SCALE_FACTOR === 1 ?
-  [ fontFamilyInsiders, 'Bar'] :
-  [ fontFamilyInsiders , 'Bar']
-
-  console.log(toReturn)
-  
-  return toReturn
 }
 
 function getMinimapOptions(){
@@ -84,57 +63,33 @@ function getMinimapOptions(){
 }
 
 
-const splittedOptions = {
-  ...getScaledOptions(),
-  "workbench.colorTheme": [ "AmericanAlien", 'AmericanDad'],
-  'debug.console.fontFamily' : [ 'Bar', 'Bar' ],
-  'niketa.PORT_0'            : [ 3011, 3021 ],
-  'niketa.PORT_1'            : [ 3012, 3022 ],
-}
-
-const getPartialOptions = index =>
-  map(x => x[ index ] ? x[ index ] : x[ index - 1 ])(splittedOptions)
 
 function syncSettings(){
-  const [
-    stableSettingsLocation,
-    insidersSettingsLocation,
-  ] = getListFiles(SETTINGS)
-
-  const mergedSettings = {
+  const newOptions = {
     ...settings,
-    ...getMinimapOptions()
+    ...getMinimapOptions(),
+    ...getCalculatedOptions(),
+    "workbench.colorTheme": "Archer",
+    'debug.console.fontFamily' :'Bar',
+    'niketa.PORT_0'            : 3011,
+    'niketa.PORT_1'            : 3012,
   }
 
   writeJsonSync(
-    insidersSettingsLocation,
-    {
-      ...mergedSettings,
-      ...getPartialOptions(0),
-    },
-    { spaces : 2 }
-  )
-  if(!existsSync(stableSettingsLocation)){
-    return console.log('Only Insiders');
-  }
-  writeJsonSync(
-    stableSettingsLocation,
-    {
-      ...mergedSettings,
-      ...getPartialOptions(1),
-    },
+    SETTINGS,
+    newOptions,
     { spaces : 2 }
   )
 }
 
 function syncSnippets(){
-  syncFiles(SNIPPETS_SOURCE, getListFiles(JS_SNIPPETS))
-  syncFiles(SNIPPETS_SOURCE, getListFiles(TS_SNIPPETS))
+  syncFiles(SNIPPETS_SOURCE, JS_SNIPPETS)
+  syncFiles(SNIPPETS_SOURCE, TS_SNIPPETS)
 }
 
 void function sync(){
   console.log('START')
-  syncFiles(KEYBINDING_SOURCE, getListFiles(KEYBINDING))
+  syncFiles(KEYBINDING_SOURCE, KEYBINDING)
   syncSnippets()
   syncSettings()
   console.log('END')
