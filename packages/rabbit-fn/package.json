@@ -9,7 +9,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"amqplib": "0.5.5",
-		"rambda": "5.0.0"
+		"rambda": "5.1.0"
 	},
 	"devDependencies": {
 		"env-fn": "2.1.0"
