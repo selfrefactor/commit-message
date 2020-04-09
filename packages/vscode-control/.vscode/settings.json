@@ -1,4 +1,5 @@
 {
+  "javascript.preferences.importModuleSpecifierEnding":"auto",
   "javascript.implicitProjectConfig.checkJs": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "search.useReplacePreview": false,
