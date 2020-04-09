@@ -1,26 +1,20 @@
 {
   "recommendations": [
+    "firefox-devtools.vscode-firefox-debug",
     "Angular.ng-template",
     "wallabyjs.wallaby-vscode",
     "syler.sass-indented",
     "vscode-icons-team.vscode-icons",
     "ms-vscode.vscode-typescript-next",
     "TabNine.tabnine-vscode",
-    "huntertran.auto-markdown-toc",
-    "fabiospampinato.vscode-open-in-node-modules",
     "selfrefactor.magic-beans",
     "selfrefactor.niketa-dark-theme",
-    "selfrefactor.niketa-future-theme",
+    "selfrefactor.Niketa-theme",
     "selfrefactor.niketa",
     "christian-kohler.path-intellisense",
     "naumovs.color-highlight",
     "DavidAnson.vscode-markdownlint",
-    "SirTori.indenticator",
     "VisualStudioExptTeam.vscodeintellicode",
-    "gabrielgrinberg.auto-run-command",
-    "ms-vscode.atom-keybindings",
-    "rafamel.subtle-brackets",
-    "spywhere.guides",
-    "vincaslt.highlight-matching-tag"
+    "ms-vscode.atom-keybindings"
   ]
 }

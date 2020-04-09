@@ -1,5 +1,12 @@
 {
   "recommendations": [
+    "huntertran.auto-markdown-toc",
+    "SirTori.indenticator",
+    "rafamel.subtle-brackets",
+    "spywhere.guides",
+    "vincaslt.highlight-matching-tag",
+    "gabrielgrinberg.auto-run-command",
+    "fabiospampinato.vscode-open-in-node-modules",
     "ghaschel.vscode-angular-html",
     "bee.git-temporal-vscode",
     "PhilHindle.errorlens",
