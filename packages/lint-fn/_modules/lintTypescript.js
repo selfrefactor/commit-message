@@ -18,11 +18,6 @@ async function lintTypescript(
   ${ filePath }
   `).split(' ')
   
-  console.log(
-    `node ${eslintCommand.join(' ')}`,
-    projectDir
-  )
-
   await spawnCommand('node', eslintCommand, projectDir)
 }
 

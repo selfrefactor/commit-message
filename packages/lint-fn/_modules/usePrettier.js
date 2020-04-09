@@ -1,5 +1,5 @@
 const { spawnCommand } = require('./spawnCommand')
-const { glue, defaultTo } = require('rambdax')
+const { glue } = require('rambdax')
 const { resolve } = require('path')
 const { existsSync } = require('fs')
 
@@ -29,7 +29,7 @@ const getPrettierPath = (cwd, prettierSpecialCase) => {
 
 async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdOverride }){
   const cwdDefault = resolve(__dirname, '../')
-  const cwd =  defaultTo(cwdDefault, cwdOverride) 
+  const cwd =  cwdOverride ? cwdOverride : cwdDefault 
   const prettierPath = getPrettierPath(cwdDefault, prettierSpecialCase)
 
   /*
