@@ -20,7 +20,7 @@
 		"boxen": "4.2.0",
 		"cfonts": "2.8.1",
 		"chalk": "4.0.0",
-		"dayjs": "1.8.23",
+		"dayjs": "1.8.24",
 		"env-fn": "2.1.0",
 		"figures": "3.2.0",
 		"gradient-string": "1.2.0",
