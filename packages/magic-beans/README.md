@@ -29,12 +29,6 @@ It will create `.spec` file importing the current file
 For example, the command is started while file `foo.js` is on focus.
 Then file `foo.spec.js` is created importing the first exported method from `foo.js`
 
-## Toggle prove mode
-
-> Press `ctrl+shift+h` to switch file name between `fooBar.js` and `fooBarProve.js`
-
-Files of type `*Prove.js` are used by `Niketa suite` in order to execute the file.
-
 ## Order props
 
 > Press `f8` to order lines, including when the user selects an object.
