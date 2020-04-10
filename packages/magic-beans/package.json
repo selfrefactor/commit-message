@@ -9,7 +9,7 @@
 	"name": "magic-beans",
 	"displayName": "Magic Beans",
 	"description": "Magic-like effects",
-	"version": "0.20.2",
+	"version": "0.21.0",
 	"publisher": "selfrefactor",
 	"engines": {
 		"vscode": "^1.30.1"
@@ -42,7 +42,7 @@
 		"keybindings": [
 			{
 				"command": "magicBeans.start",
-				"key": "alt+m",
+				"key": "ctrl+1",
 				"when": "editorTextFocus"
 			},
 			{
@@ -75,13 +75,9 @@
 						"type": "string"
 					},
 					"default": [
-						".jsx",
 						".js",
-						".tsx",
 						".ts",
-						".go",
-						".vue",
-						".vuex"
+						".go"
 					],
 					"description": "Which file extensions are allowed in random file mode"
 				},
@@ -143,18 +139,18 @@
 		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"devDependencies": {
-		"jest": "25.3.0",
-		"typescript": "3.9.0-dev.20200410",
-		"vscode": "1.1.36"
+		"jest": "^25.1.0",
+		"typescript": "^3.9.0-dev.20200315",
+		"vscode": "^1.1.36"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/selfrefactor/services/tree/master/packages/magic-beans"
 	},
 	"dependencies": {
-		"klaw-sync": "6.0.0",
-		"rambdax": "3.7.0",
-		"string-fn": "2.11.1"
+		"klaw-sync": "^6.0.0",
+		"rambdax": "^3.7.0",
+		"string-fn": "^2.11.0"
 	},
 	"commitMessage": {
 		"docs": [
