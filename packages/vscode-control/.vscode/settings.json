@@ -1,4 +1,5 @@
 {
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "javascript.preferences.importModuleSpecifierEnding":"auto",
   "javascript.implicitProjectConfig.checkJs": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -143,13 +144,11 @@
     }
   ],
   "niketa.DEFAULT_MODE": "WITH_COVERAGE",
-  "niketa.PORT_0": 3011,
-  "niketa.PORT_1": 3012,
+  "niketa.PORT": 3020,
   "workbench.editor.openPositioning": "last",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.find.addExtraSpaceOnTop": false,
   "npm.enableScriptExplorer": false,
-  "typescript.tsserver.experimental.enableProjectDiagnostics":false,
   "wallaby.reportFailuresAsProblems": false,
   "wallaby.showUpdateNotifications": false,
   "wallaby.strictSSL": false,
