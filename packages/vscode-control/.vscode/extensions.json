@@ -13,7 +13,6 @@
     "selfrefactor.niketa",
     "christian-kohler.path-intellisense",
     "naumovs.color-highlight",
-    "DavidAnson.vscode-markdownlint",
     "VisualStudioExptTeam.vscodeintellicode",
     "ms-vscode.atom-keybindings"
   ]

@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "DavidAnson.vscode-markdownlint",
     "huntertran.auto-markdown-toc",
     "SirTori.indenticator",
     "rafamel.subtle-brackets",
