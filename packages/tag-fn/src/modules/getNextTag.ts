@@ -13,7 +13,10 @@ import {
 export const getNextTag = (
   currentTag: string,
   tagType: TagType,
+  shouldLog?: boolean
 ): string => {
+  if(shouldLog) console.log({currentTag, tagType})
+  
   let [major, minor, patch]: Array<any> = compose(
     ifElse(
       (x: Array<string>) => x.length === 3,
