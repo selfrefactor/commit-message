@@ -9,7 +9,7 @@
 	"name": "magic-beans",
 	"displayName": "Magic Beans",
 	"description": "Magic-like effects",
-	"version": "0.21.0",
+	"version": "0.21.1",
 	"publisher": "selfrefactor",
 	"engines": {
 		"vscode": "^1.30.1"
@@ -31,20 +31,11 @@
 				"title": "Magic Beans random file every interval"
 			},
 			{
-				"command": "magicBeans.start",
-				"title": "Magic Beans start"
-			},
-			{
 				"command": "magicBeans.createSpec",
 				"title": "Create spec"
 			}
 		],
 		"keybindings": [
-			{
-				"command": "magicBeans.start",
-				"key": "ctrl+1",
-				"when": "editorTextFocus"
-			},
 			{
 				"command": "magicBeans.createSpec",
 				"key": "ctrl+shift+x"

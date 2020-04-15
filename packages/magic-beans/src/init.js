@@ -157,6 +157,4 @@ function initWatcher(){
   })
 }
 
-exports.init = () => {
-  initWatcher()
-}
+exports.initWatcher = initWatcher
