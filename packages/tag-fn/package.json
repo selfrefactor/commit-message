@@ -1,7 +1,7 @@
 {
   "scripts": {
     "debug": "RAMBDAX_LOG=OFF node debug.js",
-    "test": "jest",
+    "test": "jest src/modules/getNextTag.spec.ts --watch",
     "in": "tsc -w",
     "out": "tsc -p .",
     "lint": "cd src&&run lx"
@@ -29,13 +29,13 @@
     "@types/puppeteer": "2.0.1",
     "env-fn": "^1.1.2",
     "jest": "25.2.3",
-    "ts-jest": "24.3.0",
+    "ts-jest": "25.3.1",
     "tslint-fn": "0.2.1",
-    "typescript": "3.8.0-dev.20191105"
+    "typescript": "3.8.3"
   },
   "jest": {
     "transform": {
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      "^.+\\.tsx?$": "ts-jest"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
