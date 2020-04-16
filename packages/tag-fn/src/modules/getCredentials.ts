@@ -6,7 +6,7 @@ import {any, isNil} from 'rambdax'
 
 const settingsLocation = resolve(__dirname, '../../files/config.json')
 
-export const getCredentials = (): ICredentials => {
+export function getCredentials(): ICredentials{
   if (existsSync(settingsLocation)){
     return readJsonSync(settingsLocation)
   }
