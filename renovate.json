@@ -7,8 +7,12 @@
     "tuna-player",
     "maided"
   ],
+  "separateMinorPatch": true,
   "packageRules": [{
     "depTypeList": ["devDependencies"],
+    "enabled": false
+  }, {
+    "updateTypes": ["patch"],
     "enabled": false
   }]
 }
