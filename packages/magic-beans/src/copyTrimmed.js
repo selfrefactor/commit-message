@@ -16,9 +16,7 @@ function rabbit(
   if (lines.length === 1) return copy(lines[ 0 ].trim())
 
   const withFirst = update(
-    0,
-    lines[ 0 ].trimLeft(),
-    lines
+    0, lines[ 0 ].trimLeft(), lines
   )
   const withLast = update(
     lines.length - 1,
@@ -33,9 +31,7 @@ function copeTrimmedFn(){
   const { selection } = textEditor
 
   return rabbit(
-    textEditor,
-    selection.start.line,
-    selection.end.line
+    textEditor, selection.start.line, selection.end.line
   )
 }
 

@@ -50,12 +50,8 @@ test('easiest', () => {
 })
 
 test('single line unsortable', () => {
-  const lines = [
-    'const baz = {}',
-  ]
-  const expectedResult = [
-    'const baz = {}',
-  ]
+  const lines = [ 'const baz = {}' ]
+  const expectedResult = [ 'const baz = {}' ]
   const result = sort(lines)
 
   expect(result).toStrictEqual(expectedResult)
@@ -117,9 +113,7 @@ test('bug 2', () => {
 })
 
 test('change to multiline import', () => {
-  const lines = [
-    'import { branch, model, risk, anason } from \'rambdax\'',
-  ]
+  const lines = [ 'import { branch, model, risk, anason } from \'rambdax\'' ]
   const expected = [
     'import {',
     '  anason,',
@@ -134,9 +128,7 @@ test('change to multiline import', () => {
 })
 
 test('change to multiline require', () => {
-  const lines = [
-    'const{ branch, model, risk, anason } = require(\'rambdax\')',
-  ]
+  const lines = [ 'const{ branch, model, risk, anason } = require(\'rambdax\')' ]
   const expected = [
     'const{',
     '  anason,',
@@ -151,9 +143,7 @@ test('change to multiline require', () => {
 })
 
 test('change to multiline function arguments', () => {
-  const lines = [
-    'export function foo({ branch, model, risk, anason }){',
-  ]
+  const lines = [ 'export function foo({ branch, model, risk, anason }){' ]
   const expected = [
     'export function foo({',
     '  anason,',
@@ -166,4 +156,3 @@ test('change to multiline function arguments', () => {
 
   expect(result).toStrictEqual(expected)
 })
-

@@ -12,7 +12,8 @@ function applyCreateSpec(filePath, fileName){
     const [ matched ] = match(/export\s(async\s)?function\s[a-zA-Z]+/, line)
     if (matched && !found){
       found = true
-      const [ startExportStatement ] = match(/export\s(async\s)?function/, matched)
+      const [ startExportStatement ] = match(/export\s(async\s)?function/,
+        matched)
       if (!startExportStatement) return
 
       const methodName = remove(startExportStatement, matched)

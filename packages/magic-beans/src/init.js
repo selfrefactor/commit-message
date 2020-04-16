@@ -18,7 +18,7 @@ function shouldImport(text){
 }
 
 function extractLibrary(found){
-  const [ ,, library ] = found.split('.')
+  const [ , , library ] = found.split('.')
 
   return library
 }
@@ -61,9 +61,7 @@ function setCursor(){
 
 function whenImport({ line, text }){
   const { fixedLine, importMethod, foundLibrary } = fixLine(text)
-  const target = foundLibrary ?
-    foundLibrary :
-    configAnt('IMPORT_TARGET')
+  const target = foundLibrary ? foundLibrary : configAnt('IMPORT_TARGET')
 
   const { lineCount } = vscode.window.activeTextEditor.document
 
@@ -74,13 +72,13 @@ function whenImport({ line, text }){
 
   for (const i of rangeMethod(0, lineCount)){
     if (foundImportAt === -1){
-
       const currentLine = vscode.window.activeTextEditor.document.lineAt(i)
       const hasMethod = currentLine.text.includes(importMethod)
-      const hasLibrary = currentLine.text.includes(`"${ target }"`) || currentLine.text.includes(`'${ target }'`)
+      const hasLibrary =
+        currentLine.text.includes(`"${ target }"`) ||
+        currentLine.text.includes(`'${ target }'`)
 
       if (hasLibrary){
-
         multiline = !currentLine.text.includes('import')
         foundImportAt = i
         foundImportLine = currentLine.text
@@ -92,23 +90,18 @@ function whenImport({ line, text }){
 
   vscode.window.activeTextEditor.edit(editBuilder => {
     if (foundImportAt === -1){
-
       const importStartPosition = new vscode.Position(0, 0)
       editBuilder.insert(importStartPosition,
         `import { ${ importMethod } } from '${ target }'\n`)
     } else {
-
       if (foundMethod) return
       if (!multiline && foundImportLine.includes(` ${ importMethod }`)) return
 
       if (multiline){
-
         const importStartPosition = new vscode.Position(foundImportAt - 1, 0)
 
-        editBuilder.insert(importStartPosition,
-          `  ${ importMethod },\n`)
+        editBuilder.insert(importStartPosition, `  ${ importMethod },\n`)
       } else {
-
         const importStartPosition = new vscode.Position(foundImportAt, 0)
         const importEndPosition = new vscode.Position(foundImportAt,
           foundImportLine.length)

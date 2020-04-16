@@ -6,7 +6,8 @@ const specTemplate = glue(`
   test('happy', () => {
   ___{{methodName}}()
   })
-`, '\n')
+`,
+'\n')
 
 const specTemplateAsync = glue(`
   import { {{methodName}} } from './{{fileName}}'
@@ -14,7 +15,8 @@ const specTemplateAsync = glue(`
   test('happy', async () => {
   ___await {{methodName}}()
   })
-`, '\n')
+`,
+'\n')
 
 function specTemplateFn({ asyncFlag, fileName, methodName }){
   const actualTemplate = asyncFlag ? specTemplateAsync : specTemplate

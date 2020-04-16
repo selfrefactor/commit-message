@@ -57,11 +57,7 @@ function parseFunctionInput(line){
     map(x => '  ' + x)
   )
 
-  return [
-    `${ opening }{`,
-    ...parsed,
-    '}){',
-  ]
+  return [ `${ opening }{`, ...parsed, '}){' ]
 }
 
 function parseOneLineObject(line){
@@ -90,19 +86,12 @@ const isSimple = line => {
 
 const getProp = line => init(head(match(/[a-zA-Z\s]+:/, line)))
 
-const isClosingBracket = line =>
-  line.trim() === '}' || line.trim() === '},'
+const isClosingBracket = line => line.trim() === '}' || line.trim() === '},'
 
 const appendComma = x => x.endsWith(',') ? x : `${ x },`
 
 const concat = holderInstance => {
-  const {
-    shorthand,
-    complex,
-    prop,
-    propValue,
-    lastLine,
-  } = holderInstance
+  const { shorthand, complex, prop, propValue, lastLine } = holderInstance
   if (shorthand){
     return appendComma(`${ prop }`)
   }
@@ -136,11 +125,7 @@ function sortProps(lines){
   let propChildrenHolder = []
 
   filtered.forEach(line => {
-    if (
-      isSimple(line) &&
-      status === WAITING &&
-      !line.includes(':')
-    ){
+    if (isSimple(line) && status === WAITING && !line.includes(':')){
       return holder.push({
         prop      : line,
         shorthand : true,
@@ -151,9 +136,7 @@ function sortProps(lines){
       const prop = getProp(line)
 
       const propValue = holder[ prop ] = replace(
-        `${ prop }:`,
-        '',
-        line
+        `${ prop }:`, '', line
       )
 
       return holder.push({
@@ -170,12 +153,12 @@ function sortProps(lines){
     }
 
     if (isClosingBracket(line)){
-
       holder.push({
         prop      : propHolder,
-        propValue : propChildrenHolder.sort((a, b) => a.trim() > b.trim() ? 1 : -1),
-        lastLine  : line,
-        complex   : true,
+        propValue : propChildrenHolder.sort((a, b) =>
+          a.trim() > b.trim() ? 1 : -1),
+        lastLine : line,
+        complex  : true,
       })
       status = WAITING
       propChildrenHolder = []

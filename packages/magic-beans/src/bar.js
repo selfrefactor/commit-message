@@ -1,5 +1,5 @@
 const vscode = require('vscode')
-const {delay} = require('rambdax')
+const { delay } = require('rambdax')
 
 const PRIORITY = 201
 const holder = {}
