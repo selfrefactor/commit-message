@@ -193,9 +193,12 @@
 	"LogDebug": {
 		"prefix": "lgd",
 		"body": [
-			"console.log($0)",
-			"debugger"
+			"console.log({type: typeof ${1:toLog}})",
+			"console.log({array: Array.isArray(${1:toLog}) ? ${1:toLog}.length : 'not array'})",
+			"console.log( {keys: ${1:toLog} ? Object.keys(${1:toLog}) : 'not object'})",
+			"console.log(${1:toLog})",
+			"\n$0"
 		],
-		"description": "log and debug"
+		"description": "log and describe"
 	}
 }
