@@ -1,6 +1,6 @@
-const { sortPackageJson } = require('./sort-package-json')
+import { sortPackageJson } from './sort-package-json'
 
 test('happy', async () => {
   const result = await sortPackageJson(`${ __dirname }/test-assets/foo.json`, { testing : true })
-  console.log(typeof result)
+  console.log(1)
 })
