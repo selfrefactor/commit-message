@@ -47,17 +47,6 @@ export function runTests(input: {
     logFlag?: boolean,
     callback?: () => void,
   }) : void
-// LOADING BAR
-// ============================================
-interface LoadingBar{
-  numberBars?: number
-    step?:number
-    symbol?: string
-    stopAfter?: number
-}
-export function startLoadingBar(input: LoadingBar): void 
-export function stopLoadingBar(): void 
-export function loadingBar(barLength: number): () => string
 
 // LOG
 // ============================================
