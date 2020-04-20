@@ -1,50 +1,51 @@
 {
-	"name": "helpers-fn",
-	"version": "0.2.0",
-	"main": "src/index.js",
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
-	"typings": "typings.d.ts",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT",
-	"scripts": {
-		"test": "jest src",
-		"dev": "jest src/log/big.spec.js"
-	},
-	"jest": {
-		"setupFiles": [
-			"jest-localstorage-mock"
-		]
-	},
-	"dependencies": {
-		"benny": "3.6.14",
-		"boxen": "4.2.0",
-		"cfonts": "2.8.1",
-		"chalk": "4.0.0",
-		"dayjs": "1.8.24",
-		"env-fn": "2.1.0",
-		"figures": "3.2.0",
-		"gradient-string": "1.2.0",
-		"log-symbols": "3.0.0",
-		"ora": "4.0.3",
-		"q-i": "2.0.1",
-		"rambdax": "3.7.0",
-		"string-fn": "2.11.1"
-	},
-	"devDependencies": {
-		"@types/jest": "25.2.1",
-		"jest": "25.4.0",
-		"jest-localstorage-mock": "2.4.0"
-	},
-	"commitMessage": {
-		"feature": [
-			"improve",
-			"method",
-			"log"
-		],
-		"fix": [
-			"method",
-			"silly"
-		],
-		"workInProgress": ""
-	}
+  "name": "helpers-fn",
+  "version": "0.2.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
+  "typings": "typings.d.ts",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest src",
+    "dev": "jest src/log/big.spec.js"
+  },
+  "jest": {
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ]
+  },
+  "dependencies": {
+    "benny": "3.6.14",
+    "boxen": "4.2.0",
+    "cfonts": "2.8.1",
+    "chalk": "4.0.0",
+    "dayjs": "1.8.24",
+    "env-fn": "2.1.0",
+    "figures": "3.2.0",
+    "fs-extra": "^9.0.0",
+    "gradient-string": "1.2.0",
+    "log-symbols": "3.0.0",
+    "ora": "4.0.3",
+    "q-i": "2.0.1",
+    "rambdax": "3.7.0",
+    "string-fn": "2.11.1"
+  },
+  "devDependencies": {
+    "@types/jest": "25.2.1",
+    "jest": "25.4.0",
+    "jest-localstorage-mock": "2.4.0"
+  },
+  "commitMessage": {
+    "feature": [
+      "improve",
+      "method",
+      "log"
+    ],
+    "fix": [
+      "method",
+      "silly"
+    ],
+    "workInProgress": "sort package json"
+  }
 }
