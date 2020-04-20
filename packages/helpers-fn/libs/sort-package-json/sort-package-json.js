@@ -1,9 +1,10 @@
-const { omit } = require('rambdax')
-const { readJson, outputJson } = require('fs-extra')
+import { omit } from 'rambdax'
+import { readJson, outputJson } from 'fs-extra'
 
 const ORDER = [ 'name', 'scripts', 'git', 'author' ]
 
-async function sortPackageJson(location, options = {}){
+export async function sortPackageJson(location, options = {}){
+  console.log({location})
   const { testing } = options
   const unsorted = await readJson(location)
   const other = omit(ORDER, unsorted)
@@ -30,5 +31,3 @@ async function sortPackageJson(location, options = {}){
     location, toSave, { spaces : 2 }
   )
 }
-
-exports.sortPackageJson = sortPackageJson
