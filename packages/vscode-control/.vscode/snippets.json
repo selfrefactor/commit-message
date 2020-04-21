@@ -20,13 +20,6 @@
 		],
 		"description": "import"
 	},
-	"ImportX": {
-		"prefix": "imx",
-		"body": [
-			"import { ${1:methodPath} } from './${1:methodPath}'"
-		],
-		"description": "import"
-	},
 	"Bind": {
 		"prefix": "bin",
 		"body": [
