@@ -1,6 +1,6 @@
-const { delay } = require('rambdax')
-const assert = require('assert')
-const { runTests } = require('./runTests')
+import { delay } from 'rambdax'
+import assert from 'assert'
+import {runTests} from './runTests'
 
 const testFn = x => typeof x.a === 'number'
 
