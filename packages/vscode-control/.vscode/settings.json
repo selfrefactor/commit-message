@@ -1,4 +1,5 @@
 {
+  "winddown.minutesTillBreak": 20,
   "update.mode": "none",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "javascript.preferences.importModuleSpecifierEnding":"auto",
