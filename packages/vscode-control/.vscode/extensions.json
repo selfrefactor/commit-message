@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "winddown.vscode-winddown",
     "firefox-devtools.vscode-firefox-debug",
     "Angular.ng-template",
     "wallabyjs.wallaby-vscode",
