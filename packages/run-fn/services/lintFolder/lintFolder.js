@@ -4,7 +4,7 @@ const { lintFn } = require('lint-fn')
 const { log } = require('helpers-fn')
 
 const allowedFileEndings = [ '.ts', '.js' ]
-const MAX_LIMIT = 500
+const MAX_LIMIT = 700
 
 const isExcludedDir = x =>
   R.anyTrue(
