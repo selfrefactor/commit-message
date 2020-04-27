@@ -1,12 +1,10 @@
 {
   "recommendations": [
-    "winddown.vscode-winddown",
     "firefox-devtools.vscode-firefox-debug",
     "Angular.ng-template",
     "wallabyjs.wallaby-vscode",
     "syler.sass-indented",
     "vscode-icons-team.vscode-icons",
-    "ms-vscode.vscode-typescript-next",
     "TabNine.tabnine-vscode",
     "selfrefactor.magic-beans",
     "selfrefactor.niketa-dark-theme",
@@ -14,7 +12,6 @@
     "selfrefactor.niketa",
     "christian-kohler.path-intellisense",
     "naumovs.color-highlight",
-    "VisualStudioExptTeam.vscodeintellicode",
     "ms-vscode.atom-keybindings"
   ]
 }
