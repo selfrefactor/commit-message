@@ -1,5 +1,4 @@
 {
-  "winddown.minutesTillBreak": 20,
   "update.mode": "none",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "javascript.preferences.importModuleSpecifierEnding":"auto",
@@ -86,7 +85,7 @@
   "editor.formatOnPaste": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.quickSuggestionsDelay": 9,
+  "editor.quickSuggestionsDelay":30,
   "editor.renderControlCharacters": false,
   "editor.renderIndentGuides": false,
   "editor.snippetSuggestions": "top",
