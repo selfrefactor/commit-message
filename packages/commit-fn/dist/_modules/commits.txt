@@ -1,23 +1,17 @@
-commit 719a17425675dccfa2a5a9653ab28550b5109c6b
+commit fc0f62d6dd8df82d6c410635f3d3c43b5916a47e
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Mon Nov 11 22:04:48 2019 +0200
-
-    chore@bump patch
-
-commit 30f18b30e0ec3eaeba38a83dc27bce03815c1a72
-Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Mon Nov 11 22:04:31 2019 +0200
-
-    chore@dep rambda
-
-commit 56cbd4285e594c8ea0b3c7813111e00d87022ea6
-Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Mon Nov 11 22:00:18 2019 +0200
+Date:   Fri May 1 16:44:23 2020 +0300
 
     chore@dnd
 
-commit c79332f2029b3922e3d392f748f3cf948d170239
+commit 1b1576b599afff3fc463a70814154668a82a29b1
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Mon Nov 11 21:59:22 2019 +0200
+Date:   Wed Apr 29 12:23:50 2020 +0300
+
+    chore@dnd
+
+commit d471683c2d28eba4f6358f089dc3684098f6ed76
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Mon Apr 27 22:31:52 2020 +0300
 
     chore@bump minor

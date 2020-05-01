@@ -26,7 +26,9 @@ async function commitMessage(dir = process.cwd()) {
     helpers_fn_1.log('sep');
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();
+    console.log(12);
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
+    console.log({ commitType });
     const commitLabel = await getCommitLabel_1.getCommitLabel({
         commitType,
         labels: constants_1.labels,

@@ -1,13 +1,17 @@
-import * as Enquirer from 'enquirer'
 import {PromptSelect} from '../typings'
+import {prompt} from 'inquirer'
 
 export async function promptSelect(input: PromptSelect): Promise<string> {
-  const select = new (Enquirer as any).Select({
-    choices: input.choices,
-    message: input.question,
-    name: 'answer',
-  })
+  const defaultIndex = input.choices.indexOf(input.default)
 
-  const answer = await select.run()
+  const {answer} = await prompt([
+    {
+      type: 'list',
+      name: 'answer',
+      message: input.question,
+      choices: input.choices,
+      default: defaultIndex === -1 ? 0 : defaultIndex,
+    },
+  ])
   return answer
 }

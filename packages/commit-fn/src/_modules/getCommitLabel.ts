@@ -45,7 +45,7 @@ export async function askCustomLabel(input: GetLabel): Promise<string> {
 }
 
 function extractValue(actualLabel) {
-  const [toReturn] = actualLabel.value.split(' ')
+  const [toReturn] = actualLabel.split(' ')
 
   return toReturn
 }
@@ -69,13 +69,9 @@ export async function getCommitLabel(input: GetLabel): Promise<string> {
     default: filteredLabelsValue[0],
     question: ASK_FOR_LABEL,
   }
-
   const labelAnswer = await promptSelect(promptOptions)
-  const [labelRaw]: any = filteredLabelsValue.filter(
-    x => (x as any).name === labelAnswer
-  )
+  const [labelRaw]: any = filteredLabelsValue.filter(x => x === labelAnswer)
   const label = extractValue(labelRaw)
-
   const toReturn =
     label === CUSTOM_LABEL.value ? askCustomLabel(input) : label
 

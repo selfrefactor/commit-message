@@ -36,8 +36,9 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
   log('sep')
   const workInProgress = getWorkInProgress()
   showExplanations()
-
+  console.log(12)
   const commitType = await getCommitType(typesOfCommit)
+  console.log({commitType})
   const commitLabel = await getCommitLabel({
     commitType,
     labels,

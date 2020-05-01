@@ -1,13 +1,13 @@
-import {prompt} from 'enquirer'
+import {prompt} from 'inquirer'
 
 export async function promptInput(question: string): Promise<string> {
-  const result: any = await prompt([
+  const {answer} = await prompt([
     {
-      message: question,
-      name: 'answer',
       type: 'input',
+      name: 'answer',
+      message: question,
     },
   ])
 
-  return result.answer
+  return answer
 }

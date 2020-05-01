@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.promptSelect = void 0;
-const Enquirer = require("enquirer");
+const inquirer_1 = require("inquirer");
 async function promptSelect(input) {
-    const select = new Enquirer.Select({
-        choices: input.choices,
-        message: input.question,
-        name: 'answer',
-    });
-    const answer = await select.run();
+    const defaultIndex = input.choices.indexOf(input.default);
+    const { answer } = await inquirer_1.prompt([{
+            type: 'list',
+            name: 'answer',
+            message: input.question,
+            choices: input.choices,
+            default: defaultIndex === -1 ? 0 : defaultIndex
+        }]);
     return answer;
 }
 exports.promptSelect = promptSelect;
