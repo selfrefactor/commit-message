@@ -1,6 +1,6 @@
 {
   "name": "dep-fn",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Easier update of Node.js dependencies",
   "main": "dist/index.js",
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/dep-fn",
