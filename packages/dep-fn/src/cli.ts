@@ -1,6 +1,7 @@
 import {log} from 'helpers-fn'
 import {special} from './special'
 import {update} from './update'
+// import {renovate} from './renovate'
 
 process.on('unhandledRejection', (reason, promise) => {
   console.log(reason, promise)
@@ -11,6 +12,7 @@ process.on('uncaughtException', err => {
 
 export async function cli(): Promise<void> {
   const input: string = process.argv[3]
+  const target: string = process.argv[4]
   let method: () => Promise<void>
 
   switch (input) {

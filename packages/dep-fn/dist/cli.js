@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const helpers_fn_1 = require("helpers-fn");
 const special_1 = require("./special");
 const update_1 = require("./update");
+// import {renovate} from './renovate'
 process.on('unhandledRejection', (reason, promise) => {
     console.log(reason, promise);
 });
@@ -11,6 +12,7 @@ process.on('uncaughtException', err => {
 });
 async function cli() {
     const input = process.argv[3];
+    const target = process.argv[4];
     let method;
     switch (input) {
         case 'add':
