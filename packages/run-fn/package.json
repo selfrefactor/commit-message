@@ -1,6 +1,6 @@
 {
 	"name": "run-fn",
-	"version": "3.19.0",
+	"version": "3.19.1",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
