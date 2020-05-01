@@ -508,10 +508,10 @@ commander@^2.15.1:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commit-fn@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/commit-fn/-/commit-fn-1.4.0.tgz#f3935bb4d29f783a43e4efd7c1b065b2bd6f30b5"
-  integrity sha512-k3oRVmouCRZL0k7K1LI5qzZuMXi/Re5EFiqajxhr/9kLKO4xnho3Ytvn5Rb2fcb9+oS2tipfJS2c8IUNn3V/Hw==
+commit-fn@1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/commit-fn/-/commit-fn-1.4.1.tgz#0f0670a241ad35d6a38a452ad35a05e4a6750e6e"
+  integrity sha512-LJZk16ma53nstMWc7ChfMlo9Y7WJewYDOwpcyb60OpVIpundWDkrGTx7i9NX3zPzggTKqTggl+PmsTGP7uI6yQ==
   dependencies:
     helpers-fn "0.1.1"
     inquirer "7.1.0"
