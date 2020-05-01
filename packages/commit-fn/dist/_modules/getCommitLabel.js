@@ -52,9 +52,7 @@ async function getCommitLabel(input) {
     const labelAnswer = await promptSelect_1.promptSelect(promptOptions);
     const [labelRaw] = filteredLabelsValue.filter(x => x === labelAnswer);
     const label = extractValue(labelRaw);
-    console.log({ label });
     const toReturn = label === constants_1.CUSTOM_LABEL.value ? askCustomLabel(input) : label;
-    console.log(toReturn);
     return toReturn;
 }
 exports.getCommitLabel = getCommitLabel;
