@@ -87,8 +87,24 @@
 		],
 		"description": "test function with clipboard"
 	},
-	"Testfa": {
-		"prefix": "testfa",
+	"AsyncFunction": {
+		"prefix": "asy",
+		"body": [
+			"export async function $0(){",
+			"\t",
+			"})"
+		],
+		"description": "export async function"
+	},
+	"LogClipboard": {
+		"prefix": "lgc",
+		"body": [
+			"console.log(`${CLIPBOARD}`)$0"
+		],
+		"description": "log clipboard"
+	},
+	"TestAsyncClipboard": {
+		"prefix": "testac",
 		"body": [
 			"test('${CLIPBOARD}', async () => {",
 			"\tconst result = await ${CLIPBOARD}($0)",
