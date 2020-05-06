@@ -15,8 +15,8 @@
   "vsintellicode.python.completionsEnabled": false,
   "vsintellicode.sql.completionsEnabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.tokenColorCustomizations": {
-    "semanticHighlighting": false
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": false
   },
   "references.preferredLocation": "view",
   "path-intellisense.autoSlashAfterDirectory": true,
@@ -132,19 +132,6 @@
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,
-  "auto-run-command.rules": [
-    {
-      "condition": "hasFile: package.json",
-      "command": "niketa.start",
-      "message": "Niketa auto start"
-    },
-    {
-      "condition": "hasFile: package.json",
-      "command": "magicBeans.start",
-      "message": "Magic Beans start"
-    }
-  ],
-  "niketa.DEFAULT_MODE": "WITH_COVERAGE",
   "niketa.PORT": 3020,
   "workbench.editor.openPositioning": "last",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
