@@ -10,10 +10,20 @@ Configure runtime arguments
 
 `"disable-hardware-acceleration": true`
 
-
 ## VSCode changes
 
-> Collapse All list and tree command with Ctrl+LeftArrow keyboard shortcut
+---
+
+Inline diff is now editable
+
+You can now edit inside the quick diff editor, when previewing changes in a file.
+---
+
+We introduced Focus Next Part (F6) and Focus Previous Part (Shift+F6) commands to make it easy to navigate across the workbench.
+
+---
+
+Collapse All list and tree command with Ctrl+LeftArrow keyboard shortcut
 
 ## Old extensions
 
