@@ -14,7 +14,7 @@ const jestRules = {
 
 module.exports = {
   parser: 'babel-eslint',
-  plugins: ['async-await', 'jest-formatting', 'simple-import-sort', 'jest'],
+  plugins: ['async-await', 'jest-formatting', 'simple-import-sort', 'node', 'jest'],
   env: {
     jasmine: true,
     jest: true,

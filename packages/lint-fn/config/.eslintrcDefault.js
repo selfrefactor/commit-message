@@ -24,6 +24,7 @@ module.exports = {
     'async-await',
     'no-unsafe-regex',
     'simple-import-sort',
+    'node',
     'sort-requires',
   ],
   rules: filter(rules),

@@ -47,7 +47,7 @@ module.exports = {
   'block-spacing': 1,
   'brace-style': [1, '1tbs', {allowSingleLine: true}],
   'capitalized-comments': 0,
-  'callback-return': 0,
+  'node/callback-return': 0,
   camelcase: 0,
   'comma-dangle': [1, 'always-multiline'],
   'comma-spacing': [1, beforeFalse],
