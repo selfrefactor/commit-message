@@ -32,7 +32,10 @@ const betweenStatements = {
 }
 
 module.exports = {
-  'max-len': [1, {code: 100}],
+  'node/no-deprecated-api': 1,
+  'node/file-extension-in-import': [1, 'never'],
+  'node/callback-return': 0,
+  'max-len': [1, {code: 90}],
   'function-paren-newline': [1, {minItems: 3}],
   'function-call-argument-newline': [1, 'consistent'],
   'no-dupe-else-if': 1,
@@ -47,7 +50,6 @@ module.exports = {
   'block-spacing': 1,
   'brace-style': [1, '1tbs', {allowSingleLine: true}],
   'capitalized-comments': 0,
-  'node/callback-return': 0,
   camelcase: 0,
   'comma-dangle': [1, 'always-multiline'],
   'comma-spacing': [1, beforeFalse],
@@ -72,7 +74,6 @@ module.exports = {
   'lines-between-class-members': linesClass,
   'lno-console': 0,
   'max-depth': [1, 4],
-  'max-len': [1, {ignoreTemplateLiterals: true}],
   'max-lines-per-function': [1, {max: 70}],
   'max-params': [1, 3],
   'max-statements': [1, 50],
