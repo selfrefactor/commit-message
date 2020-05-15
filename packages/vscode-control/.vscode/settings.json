@@ -1,4 +1,12 @@
 {
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true
+  },
+  "editor.minimap.renderCharacters": true,
+  "editor.minimap.scale": 3,
+  "editor.minimap.side": "left",
+  "editor.minimap.size": "fit",
+  "editor.minimap.maxColumn": 80,
   "update.mode": "none",
   "typescript.tsserver.experimental.enableProjectDiagnostics": false,
   "javascript.preferences.importModuleSpecifierEnding":"auto",
@@ -15,9 +23,6 @@
   "vsintellicode.python.completionsEnabled": false,
   "vsintellicode.sql.completionsEnabled": false,
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.semanticTokenColorCustomizations": {
-    "enabled": false
-  },
   "references.preferredLocation": "view",
   "path-intellisense.autoSlashAfterDirectory": true,
   "json.format.enable": false,
@@ -128,7 +133,7 @@
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "GlassOnion",
+  "workbench.colorTheme": "ClevelandShow",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,

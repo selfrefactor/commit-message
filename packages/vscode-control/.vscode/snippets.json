@@ -99,7 +99,7 @@
 	"LogClipboard": {
 		"prefix": "lgc",
 		"body": [
-			"console.log(`${CLIPBOARD}`)$0"
+			"console.log(`${CLIPBOARD}`, ${CLIPBOARD} $0)"
 		],
 		"description": "log clipboard"
 	},
