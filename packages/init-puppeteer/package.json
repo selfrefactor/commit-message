@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "helpers-fn": "0.1.1",
-    "puppeteer": "^2.1.1",
+    "puppeteer": "^3.0.0",
     "rambdax": "^3.7.0",
     "string-fn": "^2.10.2"
   },
