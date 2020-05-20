@@ -90,7 +90,7 @@
   "editor.formatOnPaste": false,
   "editor.mouseWheelZoom": true,
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.quickSuggestionsDelay":30,
+  "editor.quickSuggestionsDelay":200,
   "editor.renderControlCharacters": false,
   "editor.renderIndentGuides": false,
   "editor.snippetSuggestions": "top",
