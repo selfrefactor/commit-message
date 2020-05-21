@@ -25,8 +25,7 @@
 		"helpers-fn": "0.2.0",
 		"lint-fn": "2.7.1",
 		"rambdax": "3.7.0",
-		"string-fn": "2.11.1",
-		"tag-fn": "0.4.2"
+		"string-fn": "2.11.1"
 	},
 	"devDependencies": {
 		"typescript": "4.0.0-dev.20200501"

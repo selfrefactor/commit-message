@@ -2,7 +2,6 @@ process.on('unhandledRejection', console.log)
 process.on('uncaughtException', console.log)
 
 const depFn = require('dep-fn')
-const tagFn = require('tag-fn/dist/cli')
 const { drop } = require('rambdax')
 
 const { bump } = require('./services/bump/bump')
@@ -10,7 +9,6 @@ const { clone } = require('./services/clone/clone')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
 const { deploy } = require('./services/de/deploy')
 const { fastDeploy } = require('./services/d/fastDeploy')
-const { install } = require('./services/install/install')
 const { lintFile } = require('./services/lintFile/lintFile')
 const { lintFolder } = require('./services/lintFolder/lintFolder')
 const { log } = require('helpers-fn')
@@ -32,16 +30,8 @@ async function runFn(){
     return lintFile(secondArgument)
   }
 
-  if (firstArgument === 'tag'){
-    return tagFn.cli()
-  }
-
   if (firstArgument === 'bump'){
     return bump(secondArgument)
-  }
-
-  if (firstArgument === 'install'){
-    return install(secondArgument)
   }
 
   if (firstArgument === 'dep'){

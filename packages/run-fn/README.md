@@ -49,16 +49,6 @@ Also if file path contains `to-read` then it will make a commit afterwards.
 
 It will move `foo` folder to `_DONE` folder
 
-### stories
-
-Will remove `stories` from current folder and replace it with `selfrefactor/stories` repo
-
-> run stories
-
-### install
-
-> run install foo
-
 It clones `selfrefactor` foo repo and removes `.git` folder afterwards.
 
 ### Lint file

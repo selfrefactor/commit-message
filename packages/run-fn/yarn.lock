@@ -869,10 +869,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-2.1.1.tgz#11b3d8b9b74aab626791c73c5e5ce28cf8fcc8af"
-  integrity sha512-pBc2pGnR4cTkJf7y0NmhWlDFtZw4r92i5TW+tirHYxgivX7ZlfGKRk9KZ667xGbmCvrzb9f11a4j+qAeHz+oqQ==
+fdir@3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-3.3.0.tgz#12e40d364d8a0e23fa7de7bffee45c8718ebca94"
+  integrity sha512-JEQLavRfrkufmxVTMqEIN4vvkr7tPjbTA5sAZMWZfZxhdCBdQSPbWFg8MOO74TSQXban37Ub/7vKl4z99V90Mw==
 
 figures@3.2.0, figures@^3.0.0, figures@^3.1.0:
   version "3.2.0"
@@ -1886,17 +1886,6 @@ table@^5.2.3:
     lodash "^4.17.14"
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
-
-tag-fn@0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/tag-fn/-/tag-fn-0.4.2.tgz#6572b38f29b1c98b6cda3287e7ee97794c7d2325"
-  integrity sha512-rhorjiqimkFCbNYqqTwqxR97AxfYtMsQ99kNZMFVqFvURd1usKqtf99MuePAJnjZGKfZB39y2RO6EpURPVk2Gw==
-  dependencies:
-    fs-extra "^8.1.0"
-    helpers-fn "0.1.1"
-    init-puppeteer "4.3.6"
-    inquirer "^7.0.0"
-    rambdax "^3.7.0"
 
 term-size@^2.1.0:
   version "2.2.0"
