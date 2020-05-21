@@ -1,9 +1,9 @@
 const { attach: attachModule } = require('./attach')
-const { type, pass } = require('rambdax')
 const { headless } = require('./_modules/headless')
 const { init } = require('./_modules/init')
+const { type, pass } = require('rambdax')
 const LONG_TIMEOUT = 60000
-const SUPPORTED_WAIT_CONDITIONS = ['load', 'domcontentloaded', 'networkidle']
+const SUPPORTED_WAIT_CONDITIONS = [ 'load', 'domcontentloaded', 'networkidle' ]
 
 const defaultWaitCondition = {
   timeout   : LONG_TIMEOUT,
@@ -45,30 +45,33 @@ function logMethod(input){
 
 function getWaitCondition(waitCondition){
   const typeIs = type(waitCondition)
-  
-  if(typeIs === 'Object'){
-    const okCondition = pass({timeout: Number, waitUntil: SUPPORTED_WAIT_CONDITIONS})
-    if(okCondition) return waitCondition
+
+  if (typeIs === 'Object'){
+    const okCondition = pass({
+      timeout   : Number,
+      waitUntil : SUPPORTED_WAIT_CONDITIONS,
+    })
+    if (okCondition) return waitCondition
 
     return defaultWaitCondition
   }
 
-  if(typeIs === 'String'){
-    if(SUPPORTED_WAIT_CONDITIONS.includes(waitCondition)){
+  if (typeIs === 'String'){
+    if (SUPPORTED_WAIT_CONDITIONS.includes(waitCondition)){
       return {
         waitUntil : waitCondition,
-        timeout: LONG_TIMEOUT
+        timeout   : LONG_TIMEOUT,
       }
     }
 
     return defaultWaitCondition
   }
 
-  if(typeIs !== 'Number')return defaultWaitCondition
+  if (typeIs !== 'Number') return defaultWaitCondition
 
   return {
-    waitUntil: 'networkidle',
-    timeout: waitCondition
+    waitUntil : 'networkidle',
+    timeout   : waitCondition,
   }
 }
 

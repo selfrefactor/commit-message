@@ -1,22 +1,27 @@
-const {delay, type, range, pass, waitFor: waitForMethod} = require('rambdax')
+const { delay, type, range, pass, waitFor: waitForMethod } = require('rambdax')
 
 const STEP_DELAY = Number(process.env.STEP_DELAY || '0')
 const CAN_SNAP = process.env.PLAYWRIGHT_SNAP !== 'OFF'
 const DELAY = 200
 
 const normalizeInput = input =>
-  input.index === undefined ? {...input, index: 0} : input
+  input.index === undefined ? {
+    ...input,
+    index : 0,
+  } : input
 
-const extractText = ({textContent}) => textContent
+const extractText = ({ textContent }) => textContent
 
-const helpers = {extractText}
+const helpers = { extractText }
 
-function attach(page, screenDir = process.cwd()) {
+function attach(page, screenDir = process.cwd()){
   const $ = async (selector, fn, ...args) => {
     const okSelector = await page.$(selector)
     if (!okSelector) return null
 
-    const result = await page.$eval(selector, fn, ...args)
+    const result = await page.$eval(
+      selector, fn, ...args
+    )
     await delay(STEP_DELAY)
 
     return result
@@ -26,7 +31,9 @@ function attach(page, screenDir = process.cwd()) {
     const okSelector = await page.$(selector)
     if (okSelector.length === 0) return null
 
-    const result = await page.$$eval(selector, fn, ...args)
+    const result = await page.$$eval(
+      selector, fn, ...args
+    )
     await delay(STEP_DELAY)
 
     return result
@@ -36,7 +43,7 @@ function attach(page, screenDir = process.cwd()) {
     const initialQueryResult = await page.$$(input.selector)
     if (initialQueryResult.length === 0) return null
     if (initialQueryResult.length - 1 < input.index) return null
-    const foundElement = initialQueryResult[input.index]
+    const foundElement = initialQueryResult[ input.index ]
     const result = await foundElement.evaluate(fn, ...extraArgs)
     await delay(STEP_DELAY)
 
@@ -45,7 +52,7 @@ function attach(page, screenDir = process.cwd()) {
 
   const waitForSelector = async (selector, timeout = 10000) => {
     await page.waitForSelector(selector, {
-      visible: true,
+      visible : true,
       timeout,
     })
     const found = await page.$$eval(selector, els => els.length > 0)
@@ -65,13 +72,13 @@ function attach(page, screenDir = process.cwd()) {
   }
 
   const waitFor = async (selectorInput, countInput = 1) => {
-    const {selector, count} =
-      typeof selectorInput === 'object'
-        ? selectorInput
-        : {
-            selector: selectorInput,
-            count: countInput,
-          }
+    const { selector, count } =
+      typeof selectorInput === 'object' ?
+        selectorInput :
+        {
+          selector : selectorInput,
+          count    : countInput,
+        }
 
     let counter = 40
     let found = await (async () => {
@@ -80,7 +87,7 @@ function attach(page, screenDir = process.cwd()) {
       return counted >= count
     })()
 
-    while (!found && counter > 0) {
+    while (!found && counter > 0){
       counter -= 1
       await delay(DELAY)
       found = await (async () => {
@@ -114,19 +121,21 @@ function attach(page, screenDir = process.cwd()) {
   const exists = selector => page.$$eval(selector, els => els.length > 0)
 
   const click = async input => {
-    const {index, selector} = normalizeInput(input)
+    const { index, selector } = normalizeInput(input)
 
-    if ((await exists(selector)) === false) {
+    if (await exists(selector) === false){
       return false
     }
 
-    if (index === 0) {
+    if (index === 0){
       await $(selector, el => el.click())
 
       return true
     }
 
-    await $$(selector, clickWhichSelector, index)
+    await $$(
+      selector, clickWhichSelector, index
+    )
 
     return true
   }
@@ -138,9 +147,9 @@ function attach(page, screenDir = process.cwd()) {
   ) => {
     const firstSelector = normalizeInput(firstSelectorRaw)
     const isSelector = type(predicateOrSelector) === 'Object'
-    const secondSelector = isSelector
-      ? normalizeInput(predicateOrSelector)
-      : {}
+    const secondSelector = isSelector ?
+      normalizeInput(predicateOrSelector) :
+      {}
 
     const okFirstSelector = await waitForMethod(async () => {
       const okExists = await exists(firstSelector.selector)
@@ -151,7 +160,7 @@ function attach(page, screenDir = process.cwd()) {
 
     await click(firstSelector)
 
-    if (isSelector) {
+    if (isSelector){
       const okSecondSelector = await waitForMethod(async () => {
         const okExists = await exists(secondSelector.selector)
 
@@ -167,61 +176,71 @@ function attach(page, screenDir = process.cwd()) {
   }
 
   const clickWithText = async (selector, text) => {
-    if ((await exists(selector)) === false) {
+    if (await exists(selector) === false){
       return false
     }
-    await $$(selector, clickWithTextFn, text)
+    await $$(
+      selector, clickWithTextFn, text
+    )
 
     return true
   }
 
   const clickWithPartialText = async (selector, text) => {
-    if ((await exists(selector)) === false) {
+    if (await exists(selector) === false){
       return false
     }
 
-    await $$(selector, clickWithPartialTextFn, text)
+    await $$(
+      selector, clickWithPartialTextFn, text
+    )
 
     return true
   }
 
   const waitAndClick = async inputRaw => {
     const input = normalizeInput(inputRaw)
-    if ((await waitFor(input.selector, input.index + 1)) === false) {
+    if (await waitFor(input.selector, input.index + 1) === false){
       return false
     }
-    if (input.index === 0) {
+    if (input.index === 0){
       await $(input.selector, el => el.click())
+
       return true
     }
 
-    await $$(input.selector, clickWhichSelector, input.index)
+    await $$(
+      input.selector, clickWhichSelector, input.index
+    )
+
     return true
   }
 
   const fill = async (selector, text) => {
     await focus(selector)
-    await page.keyboard.type(text, {delay: 50})
+    await page.keyboard.type(text, { delay : 50 })
   }
 
   const setInput = async (selector, newValue) => {
-    if ((await exists(selector)) === false) {
+    if (await exists(selector) === false){
       return false
     }
 
-    await page.$eval(selector, setInputFn, newValue)
+    await page.$eval(
+      selector, setInputFn, newValue
+    )
 
     return true
   }
   const pressTab = async timesToPress => {
-    for (const i of range(0, timesToPress)) {
+    for (const i of range(0, timesToPress)){
       await page.keyboard.down('Tab')
       await delay(200)
     }
     await delay(300)
   }
   const typeText = async (input, step = 500) => {
-    for (const char of input.split('')) {
+    for (const char of input.split('')){
       await delay(step)
       await page.keyboard.down(char)
     }
@@ -229,19 +248,19 @@ function attach(page, screenDir = process.cwd()) {
   const typeTextWithTab = async (
     input,
     tabs = {
-      before: 0,
-      after: 0,
+      before : 0,
+      after  : 0,
     },
     step = 500
   ) => {
-    if (tabs.before !== 0) {
+    if (tabs.before !== 0){
       await pressTab(tabs.before)
     }
-    for (const char of input.split('')) {
+    for (const char of input.split('')){
       await delay(step)
       await page.keyboard.down(char)
     }
-    if (tabs.after !== 0) {
+    if (tabs.after !== 0){
       await pressTab(tabs.after)
     }
   }
@@ -250,9 +269,9 @@ function attach(page, screenDir = process.cwd()) {
     if (!CAN_SNAP) return
 
     await page.screenshot({
-      path: `${screenDir}/${label}.png`,
-      type: 'png',
-      fullPage: true,
+      path     : `${ screenDir }/${ label }.png`,
+      type     : 'png',
+      fullPage : true,
     })
   }
 
@@ -265,9 +284,9 @@ function attach(page, screenDir = process.cwd()) {
 
   const its = (els, prop) => {
     if (els.length === 0) return null
-    if (els[prop]) return els[prop]
+    if (els[ prop ]) return els[ prop ]
 
-    return Array.from(els).map(x => x[prop])
+    return Array.from(els).map(x => x[ prop ])
   }
 
   return {
@@ -281,7 +300,7 @@ function attach(page, screenDir = process.cwd()) {
     ctrlA,
     delay,
     exists,
-    eval: evalFn,
+    eval : evalFn,
     fill,
     focus,
     helpers,
@@ -301,44 +320,44 @@ function attach(page, screenDir = process.cwd()) {
   }
 }
 
-function clickWhichSelector(els, i) {
+function clickWhichSelector(els, i){
   const convertIndex = (x, length) =>
     typeof x === 'number' ? x : x === 'last' ? length - 1 : 0
 
   const index = convertIndex(i, els.length)
 
-  if (index >= els.length) {
+  if (index >= els.length){
     return false
   }
 
-  els[index].click()
+  els[ index ].click()
 
   return true
 }
 
-function clickWithTextFn(els, text) {
+function clickWithTextFn(els, text){
   const filtered = els.filter(x => x.textContent === text)
 
-  if (filtered.length === 0) {
+  if (filtered.length === 0){
     return false
   }
-  filtered[0].click()
+  filtered[ 0 ].click()
 
   return true
 }
 
-function clickWithPartialTextFn(els, text) {
+function clickWithPartialTextFn(els, text){
   const filtered = els.filter(x => x.textContent.includes(text))
 
-  if (filtered.length === 0) {
+  if (filtered.length === 0){
     return false
   }
-  filtered[0].click()
+  filtered[ 0 ].click()
 
   return true
 }
 
-function setInputFn(el, newValue) {
+function setInputFn(el, newValue){
   el.value = newValue
 }
 
