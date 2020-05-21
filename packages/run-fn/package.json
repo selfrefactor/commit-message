@@ -19,7 +19,7 @@
 	"dependencies": {
 		"clipboardy": "2.3.0",
 		"commit-fn": "1.4.1",
-		"dep-fn": "0.10.0",
+		"dep-fn": "1.0.0",
 		"fdir": "3.3.0",
 		"fs-extra": "9.0.0",
 		"helpers-fn": "0.2.0",
