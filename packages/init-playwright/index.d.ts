@@ -1,24 +1,23 @@
-import { Browser, Page, NavigationOptions } from 'puppeteer'
+import { Browser, Page } from 'playwright'
 
-export type GetWaitCondition = 'load' | 'domcontentloaded' | 'networkidle0'
+export type WaitConditionType = 'load' | 'domcontentloaded' | 'networkidle'
 
-export type WaitConditions = 'LOAD' | 
-  'NETWORK' | 
-  'DOM' |
-  NavigationOptions
+export type SupportedBrowsers = 'chromium' | 'firefox' | 'webkit'
 
-interface ConditionMap{
-  [key: string]: GetWaitCondition
+interface WaitCondition{
+  timeout: number
+  waitUntil: WaitConditionType
 }  
 
-export interface InputPuppeteer{
+export interface InputPlaywright{
   extraProps?: object
   resolution?: Resolution
   url?: string
   mobile?: boolean
+  browser?: SupportedBrowsers
   headless?: boolean
   fullScreen?: boolean
-  waitCondition?: WaitConditions
+  waitCondition?: WaitConditionType | WaitCondition 
   logFlag?: boolean
 }
 
@@ -54,7 +53,6 @@ interface AttachOutput{
   its: (els: Array<HTMLElement>, prop: string) => Promise<any>
   delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
-  expect: (result: any, expected: any, label: any, complexLabel?: string) => void
   fill(selector: string, text: string): Promise<void>
   match(label: string, updateFlag?: boolean, allowedPixedDiff?: number, threshold?: number): Promise<void>
   focus: (selector: string) => Promise<boolean>
@@ -68,17 +66,16 @@ interface AttachOutput{
   waitAndClick: (input: Selector) => Promise<boolean>
   waitFor: (selector: string, count?: number) => Promise<boolean>
   waitForLocation: (predicate: (url: string, ms?: number) => boolean) => Promise<boolean>
-
   waitForSelector: (selector: string, timeout?: number) => Promise<boolean>
   waitForSelectors: (selectors: string[]) => Promise<boolean>
 }
 
-interface OutputPuppeteer{
+interface OutputPlaywright{
   page: Page
   browser: Browser
 }
 
-interface PuppeteerInstance {
+interface PlaywrightInstance {
   browser: Browser
   page: Page
 }
@@ -88,7 +85,7 @@ interface Resolution {
   y: number
 }
 
-interface PuppeteerSettings{
+interface PlaywrightSettings{
   args: Array<string>
   pipe?: boolean
   handleSIGINT?: boolean
@@ -120,6 +117,5 @@ interface IClickModule{
 type TypeFunction = (input: ITypeModule) => Promise<Array<void>>
 type ClickFunction = (input: IClickModule) => Promise<void>
 
-export function initPuppeteer(input: InputPuppeteer): Promise<OutputPuppeteer>
+export function initPlaywright(input: InputPlaywright): Promise<OutputPlaywright>
 export function attach(page: Page, screenDir?: string): AttachOutput
-export function expect(result: any, expected: any, label: any, complexLabel?: string): void

@@ -1,28 +1,16 @@
 const { attach: attachModule } = require('./attach')
-const { expect: expectModule } = require('./expect/expect')
+const { type, pass } = require('rambdax')
 const { headless } = require('./_modules/headless')
 const { init } = require('./_modules/init')
 const LONG_TIMEOUT = 60000
-const TIMEOUT = 5000
-const SHORT_TIMEOUT = 100
+const SUPPORTED_WAIT_CONDITIONS = ['load', 'domcontentloaded', 'networkidle']
 
-const waitForNetwork = {
+const defaultWaitCondition = {
   timeout   : LONG_TIMEOUT,
-  waitUntil : 'networkidle0',
+  waitUntil : 'networkidle',
 }
 
-const getWaitCondition = condition => ({
-  timeout   : LONG_TIMEOUT,
-  waitUntil : condition,
-})
-
-const waitForTimeout = ms => ({
-  timeout   : ms,
-  waitUntil : 'networkidle0',
-})
-
 const defaultURL = 'about:blank'
-const webpackURL = 'http://localhost:8080'
 const defaultResolution = {
   x : 1366,
   y : 768,
@@ -37,7 +25,7 @@ const defaultInput = {
   logFlag       : false,
   resolution    : defaultResolution,
   url           : defaultURL,
-  waitCondition : waitForNetwork,
+  waitCondition : defaultWaitCondition,
 }
 
 function getDefaultInput(mobile){
@@ -49,42 +37,42 @@ function getDefaultInput(mobile){
   }
 }
 
-function getWait(url, waitCondition){
-  const urlFlag =
-    url === defaultURL ?
-      waitForTimeout(SHORT_TIMEOUT) :
-      url === webpackURL ?
-        waitForTimeout(TIMEOUT) :
-        false
-
-  if (urlFlag === false && waitCondition === undefined){
-    return waitForNetwork
-  }
-
-  if (typeof waitCondition === 'string'){
-    const conditionMap = {
-      DOM     : 'domcontentloaded',
-      LOAD    : 'load',
-      NETWORK : 'networkidle0',
-    }
-
-    const answer = conditionMap[ waitCondition ] === undefined
-
-    const condition = answer ? 'load' : conditionMap[ waitCondition ]
-
-    return getWaitCondition(condition)
-  }
-
-  return waitCondition
-}
-
 function logMethod(input){
   if (input._type === 'log'){
     console.log(input._text)
   }
 }
 
-async function initPuppeteer(inputRaw){
+function getWaitCondition(waitCondition){
+  const typeIs = type(waitCondition)
+  
+  if(typeIs === 'Object'){
+    const okCondition = pass({timeout: Number, waitUntil: SUPPORTED_WAIT_CONDITIONS})
+    if(okCondition) return waitCondition
+
+    return defaultWaitCondition
+  }
+
+  if(typeIs === 'String'){
+    if(SUPPORTED_WAIT_CONDITIONS.includes(waitCondition)){
+      return {
+        waitUntil : waitCondition,
+        timeout: LONG_TIMEOUT
+      }
+    }
+
+    return defaultWaitCondition
+  }
+
+  if(typeIs !== 'Number')return defaultWaitCondition
+
+  return {
+    waitUntil: 'networkidle',
+    timeout: waitCondition
+  }
+}
+
+async function initPlaywright(inputRaw){
   const headlessBase = headless() ? {} : { headless : false }
 
   const input = {
@@ -94,9 +82,8 @@ async function initPuppeteer(inputRaw){
   }
   const { browser, page } = await init(input, inputRaw.extraProps)
 
-  const wait = getWait(input.url, input.waitCondition)
-
-  await page.goto(input.url, wait)
+  const waitCondition = getWaitCondition(input.waitCondition)
+  await page.goto(input.url, waitCondition)
 
   if (input.logFlag) page.on('console', logMethod)
 
@@ -106,11 +93,5 @@ async function initPuppeteer(inputRaw){
   }
 }
 
-exports.expect = expectModule
-exports.initPuppeteer = initPuppeteer
-exports.waitForTimeout = waitForTimeout
-exports.waitForNetwork = waitForNetwork
-exports.LONG_TIMEOUT = LONG_TIMEOUT
-exports.SHORT_TIMEOUT = SHORT_TIMEOUT
-exports.TIMEOUT = TIMEOUT
+exports.initPlaywright = initPlaywright
 exports.attach = attachModule

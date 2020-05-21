@@ -1,5 +1,5 @@
 function headless(){
-  return process.env.PUPPETEER_DEBUG !== 'true'
+  return process.env.PLAYWRIGHT_DEBUG !== 'true'
 }
 
 exports.headless = headless

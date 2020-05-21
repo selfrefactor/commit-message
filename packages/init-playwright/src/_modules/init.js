@@ -1,13 +1,18 @@
-const puppeteer = require('puppeteer')
+const playwright = require('playwright')
 const { getSettings } = require('./getSettings')
 
-const iPhone = puppeteer.devices[ 'iPhone 6' ]
+const iPhone = playwright.devices[ 'iPhone 6' ]
+const SUPPORTED_BROWSERS = ['chromium' , 'firefox' , 'webkit']
 
 async function init(input, extraProps = {}){
+  const browserType =SUPPORTED_BROWSERS.includes(input.browser) ?
+    input.browser: 'firefox'
+    
   const settings = getSettings(input, extraProps)
-  const browser = await puppeteer.launch(settings)
-  const page = await browser.newPage()
-  await page.setViewport({
+  const browser = await playwright[browserType].launch(settings);
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.setViewportSize({
     height : input.resolution.y,
     width  : input.resolution.x,
   })

@@ -1,31 +1,26 @@
 {
-  "scripts": {
-    "test": "node prove"
-  },
-  "dependencies": {
-    "helpers-fn": "0.1.1",
-    "playwright": "^1.0.0",
-    "rambdax": "^3.7.0",
-    "string-fn": "^2.10.2"
-  },
-  "private": false,
   "name": "init-playwright",
-  "version": "4.3.6",
-  "description": "Abstraction over playwright",
-  "main": "./src/index.js",
-  "typings": "./index.d.ts",
-  "repository": "https://github.com/selfrefactor/services/tree/master/packages/init-playwright",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^13.7.0",
-    "jest": "^25.1.0"
+  "scripts": {
+    "test": "jest src/tests/happy.spec.js"
   },
-  "commitMessage": {
-    "feature": [
-      "attach",
-      "helpers",
-      "deprecate"
-    ]
-  }
+  "typings": "./index.d.ts",
+  "main": "./src/index.js",
+  "version": "0.1.0",
+  "dependencies": {
+    "playwright": "1.0.2",
+    "rambdax": "3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "14.0.4",
+    "@types/jest": "25.2.3",
+    "jest": "26.0.1",
+    "@babel/core": "7.9.6",
+    "@babel/plugin-proposal-object-rest-spread": "7.9.5",
+    "@babel/preset-env": "7.9.0"
+  },
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/init-playwright",
+  "license": "MIT",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "private": false,
+  "description": "Abstraction over playwright"
 }

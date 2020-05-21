@@ -1,8 +1,7 @@
 const {delay, type, range, pass, waitFor: waitForMethod} = require('rambdax')
-const {expect} = require('./expect/expect')
 
 const STEP_DELAY = Number(process.env.STEP_DELAY || '0')
-const CAN_SNAP = process.env.PUPPETEER_SNAP !== 'OFF'
+const CAN_SNAP = process.env.PLAYWRIGHT_SNAP !== 'OFF'
 const DELAY = 200
 
 const normalizeInput = input =>
@@ -32,7 +31,7 @@ function attach(page, screenDir = process.cwd()) {
 
     return result
   }
-  const eval = async (inputRaw, fn, extraArgs = []) => {
+  const evalFn = async (inputRaw, fn, extraArgs = []) => {
     const input = normalizeInput(inputRaw)
     const initialQueryResult = await page.$$(input.selector)
     if (initialQueryResult.length === 0) return null
@@ -282,8 +281,7 @@ function attach(page, screenDir = process.cwd()) {
     ctrlA,
     delay,
     exists,
-    expect,
-    eval,
+    eval: evalFn,
     fill,
     focus,
     helpers,
