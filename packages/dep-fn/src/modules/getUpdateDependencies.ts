@@ -1,6 +1,5 @@
 import {log} from 'helpers-fn'
 import {InitDependencies, StringMap, UpdateDependencies} from '../../typings'
-import {getUpdateDependency} from './getUpdateDependency'
 import {getUpdateURL} from './getUpdateURL'
 import {getFallbackUpdate} from './helpers/getFallbackUpdate'
 import {isDependencyEligible} from './helpers/isDependencyEligible'
@@ -14,12 +13,9 @@ export const getUpdateDependencies = async(
 
     for (const prop in dependencies) {
       const dependency = dependencies[prop]
-      const alreadyBetter = dependency.startsWith('https://github.com/')
-      const isDefinitelyTyped = prop.startsWith('@types/')
-      const condition = alreadyBetter && !isDefinitelyTyped
-      const eligible = isDependencyEligible(prop)
+      const eligible = isDependencyEligible(prop) && !dependency.startsWith('https://github.com/')
 
-      if (alreadyBetter && isDefinitelyTyped || !eligible) {
+      if (!eligible) {
         const typeOK = eligible ? 'already better' : 'skipped'
         log(`Dependency ${prop} is ${typeOK}`, 'warning')
         willReturn[prop] = dependency
@@ -34,9 +30,7 @@ export const getUpdateDependencies = async(
         url: getUpdateURL(dependency),
       }
 
-      const willPush: string = condition
-        ? await getUpdateDependency(options)
-        : await getFallbackUpdate(options)
+      const willPush: string = await getFallbackUpdate(options)
 
       if (willPush !== dependency) {
         log(`Updated '${prop}' dependency to ${willPush}`, 'success')

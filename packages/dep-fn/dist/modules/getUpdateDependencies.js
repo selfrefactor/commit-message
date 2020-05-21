@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const helpers_fn_1 = require("helpers-fn");
-const getUpdateDependency_1 = require("./getUpdateDependency");
 const getUpdateURL_1 = require("./getUpdateURL");
 const getFallbackUpdate_1 = require("./helpers/getFallbackUpdate");
 const isDependencyEligible_1 = require("./helpers/isDependencyEligible");
@@ -11,11 +10,8 @@ exports.getUpdateDependencies = async (input) => {
         const willReturn = {};
         for (const prop in dependencies) {
             const dependency = dependencies[prop];
-            const alreadyBetter = dependency.startsWith('https://github.com/');
-            const isDefinitelyTyped = prop.startsWith('@types/');
-            const condition = alreadyBetter && !isDefinitelyTyped;
-            const eligible = isDependencyEligible_1.isDependencyEligible(prop);
-            if (alreadyBetter && isDefinitelyTyped || !eligible) {
+            const eligible = isDependencyEligible_1.isDependencyEligible(prop) && !dependency.startsWith('https://github.com/');
+            if (!eligible) {
                 const typeOK = eligible ? 'already better' : 'skipped';
                 helpers_fn_1.log(`Dependency ${prop} is ${typeOK}`, 'warning');
                 willReturn[prop] = dependency;
@@ -27,9 +23,7 @@ exports.getUpdateDependencies = async (input) => {
                 tag: dependency,
                 url: getUpdateURL_1.getUpdateURL(dependency),
             };
-            const willPush = condition
-                ? await getUpdateDependency_1.getUpdateDependency(options)
-                : await getFallbackUpdate_1.getFallbackUpdate(options);
+            const willPush = await getFallbackUpdate_1.getFallbackUpdate(options);
             if (willPush !== dependency) {
                 helpers_fn_1.log(`Updated '${prop}' dependency to ${willPush}`, 'success');
             }

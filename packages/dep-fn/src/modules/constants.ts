@@ -1,6 +1,6 @@
-import {InputPuppeteer} from 'init-puppeteer'
+import {InputPlaywright} from 'init-playwright'
 
-export const puppeteerSettings: InputPuppeteer = {
+export const playwrightSettings: InputPlaywright = {
   headless: process.env.DEBUG !== 'true',
   url: 'about:blank',
 }

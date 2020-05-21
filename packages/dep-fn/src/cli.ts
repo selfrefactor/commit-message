@@ -3,17 +3,11 @@ import {special} from './special'
 import {update} from './update'
 import {renovate} from './renovate'
 
-process.on('unhandledRejection', (reason, promise) => {
-  console.log(reason, promise)
-})
-process.on('uncaughtException', err => {
-  console.log(err)
-})
-
 export async function cli(): Promise<void> {
   const input: string = process.argv[3]
   const target: string = process.argv[4]
-  let method: (x?: any) => any
+  const lastArgument: string = process.argv[5]
+  let method: (x?: any, y?: any) => any
 
   switch (input) {
     case 'add':
@@ -38,7 +32,7 @@ export async function cli(): Promise<void> {
       method = update
   }
 
-  await method(target)
+  await method(target, lastArgument)
 
   return console.log('done')
 }

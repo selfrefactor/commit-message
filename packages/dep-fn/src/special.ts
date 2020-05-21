@@ -1,20 +1,22 @@
 import {log} from 'helpers-fn'
-import {initPuppeteer, OutputPuppeteer} from 'init-puppeteer'
-import {takeLast} from 'rambdax'
-import {puppeteerSettings} from './modules/constants'
+import {initPlaywright, OutputPlaywright} from 'init-playwright'
+import {playwrightSettings} from './modules/constants'
 import {getUpdateTag} from './modules/getUpdateTag'
 import {execCommand} from './modules/helpers/execCommand'
 
-export async function special(): Promise<void> {
+export async function special(
+  flagOrDependency: string,
+  maybeDependency?: string
+): Promise<void> {
   try {
     (log as any)('spin')
-    const [flag, dependency] = takeLast(2, process.argv)
-    const yarnAdd = ['-D', '--dev'].includes(flag)
-      ? 'yarn add -D'
-      : 'yarn add'
+    const isDevDependency = ['-D', '--dev'].includes(flagOrDependency)
+    const dependency = maybeDependency ? maybeDependency : flagOrDependency
 
-    var {browser, page}: OutputPuppeteer = await initPuppeteer(
-      puppeteerSettings
+    const yarnAdd = isDevDependency ? 'yarn add -D' : 'yarn add'
+
+    var {browser, page}: OutputPlaywright = await initPlaywright(
+      playwrightSettings
     )
 
     const url = `https://github.com/selfrefactor/${dependency}`

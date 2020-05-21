@@ -1,4 +1,4 @@
-import {Page} from 'puppeteer'
+import {Page} from 'playwright'
 
 type Identity<T> = (x: T) => T
 

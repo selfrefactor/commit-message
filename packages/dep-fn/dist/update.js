@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const init_puppeteer_1 = require("init-puppeteer");
+const init_playwright_1 = require("init-playwright");
 const beforeEnd_1 = require("./modules/beforeEnd");
 const constants_1 = require("./modules/constants");
 const getUpdateDependencies_1 = require("./modules/getUpdateDependencies");
 const getDependencies_1 = require("./modules/helpers/getDependencies");
 async function update() {
     try {
-        var { browser, page } = await init_puppeteer_1.initPuppeteer(constants_1.puppeteerSettings);
+        var { browser, page } = await init_playwright_1.initPlaywright(constants_1.playwrightSettings);
         const { devDependencies, dependencies, peerDependencies, packageJson, } = getDependencies_1.getDependencies();
         const updatedDependencies = await getUpdateDependencies_1.getUpdateDependencies({
             dependencies,
