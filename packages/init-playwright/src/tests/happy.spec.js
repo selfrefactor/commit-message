@@ -8,7 +8,7 @@ test('happy', async () => {
   const { browser, page } = await initPlaywright({
     headless      : false,
     logFlag       : false,
-    browser       : 'webkit',
+    // browser       : 'webkit',
     url           : GITHUB,
     waitCondition : {
       timeout   : 5800,
