@@ -871,10 +871,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@3.3.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-3.3.0.tgz#12e40d364d8a0e23fa7de7bffee45c8718ebca94"
-  integrity sha512-JEQLavRfrkufmxVTMqEIN4vvkr7tPjbTA5sAZMWZfZxhdCBdQSPbWFg8MOO74TSQXban37Ub/7vKl4z99V90Mw==
+fdir@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-2.1.1.tgz#11b3d8b9b74aab626791c73c5e5ce28cf8fcc8af"
+  integrity sha512-pBc2pGnR4cTkJf7y0NmhWlDFtZw4r92i5TW+tirHYxgivX7ZlfGKRk9KZ667xGbmCvrzb9f11a4j+qAeHz+oqQ==
 
 figures@3.2.0, figures@^3.0.0, figures@^3.1.0:
   version "3.2.0"
