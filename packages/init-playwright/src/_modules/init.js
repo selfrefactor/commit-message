@@ -1,24 +1,39 @@
 const playwright = require('playwright')
 const { getSettings } = require('./getSettings')
 
-const iPhone = playwright.devices[ 'iPhone 6' ]
-const SUPPORTED_BROWSERS = [ 'chromium', 'firefox', 'webkit' ]
+const SUPPORTED_BROWSERS = [ 'chromium', 'firefox'
+]
+// const SUPPORTED_BROWSERS = [ 'chromium', 'firefox', 'webkit' ]
+
+async function getContext(browser, mobileFlag){
+  if(!mobileFlag){
+    return browser.newContext()
+  }
+  const iPhone = playwright.devices[ 'iPhone 11']
+
+  return browser.newContext({
+    ...iPhone,
+  });
+}
 
 async function init(input, extraProps = {}){
-  const browserType = SUPPORTED_BROWSERS.includes(input.browser) ?
+  const browserTypeInput = SUPPORTED_BROWSERS.includes(input.browser) ?
     input.browser :
     'firefox'
 
+  const browserType = input.mobile ? 'chromium': browserTypeInput
+
   const settings = getSettings(input, extraProps)
   const browser = await playwright[ browserType ].launch(settings)
-  const context = await browser.newContext()
+  const context = await getContext(browser, input.mobile)
   const page = await context.newPage()
-  await page.setViewportSize({
-    height : input.resolution.y,
-    width  : input.resolution.x,
-  })
 
-  if (input.mobile) await page.emulate(iPhone)
+  if(!input.mobile){
+    await page.setViewportSize({
+      height : input.resolution.y,
+      width  : input.resolution.x,
+    })
+  }
 
   return {
     browser,

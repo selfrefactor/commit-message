@@ -1,4 +1,3 @@
-// process.env.DEBUG='pw:browser*'
 const { attach: attachModule } = require('./attach')
 const { headless } = require('./_modules/headless')
 const { init } = require('./_modules/init')
