@@ -1,5 +1,5 @@
 const { attach: attachModule } = require('./attach')
-const { headless } = require('./_modules/headless')
+const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
 const { type, pass } = require('rambdax')
 const LONG_TIMEOUT = 60000
@@ -76,12 +76,12 @@ function getWaitCondition(waitCondition){
 }
 
 async function initPlaywright(inputRaw){
-  const headlessBase = headless() ? {} : { headless : false }
+  const headless = headlessModule() ? {} : { headless : false }
 
   const input = {
     ...getDefaultInput(inputRaw.mobile),
     ...inputRaw,
-    ...headlessBase,
+    ...headless,
   }
   const { browser, page } = await init(input, inputRaw.extraProps)
 

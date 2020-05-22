@@ -5,10 +5,12 @@ const CAN_SNAP = process.env.PLAYWRIGHT_SNAP !== 'OFF'
 const DELAY = 200
 
 const normalizeInput = input =>
-  input.index === undefined ? {
-    ...input,
-    index : 0,
-  } : input
+  input.index === undefined ?
+    {
+      ...input,
+      index : 0,
+    } :
+    input
 
 const extractText = ({ textContent }) => textContent
 
@@ -293,14 +295,14 @@ function attach(page, screenDir = process.cwd()){
     $$,
     $,
     click,
+    clickAndWaitFor,
     clickWithPartialText,
     clickWithText,
-    clickAndWaitFor,
     count,
     ctrlA,
     delay,
-    exists,
     eval : evalFn,
+    exists,
     fill,
     focus,
     helpers,
@@ -312,9 +314,9 @@ function attach(page, screenDir = process.cwd()){
     typeText,
     typeTextWithTab,
     url,
-    waitForLocation,
     waitAndClick,
     waitFor,
+    waitForLocation,
     waitForSelector,
     waitForSelectors,
   }
