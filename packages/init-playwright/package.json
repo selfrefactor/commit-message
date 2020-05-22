@@ -1,11 +1,11 @@
 {
   "name": "init-playwright",
   "scripts": {
-    "test": "jest src/tests/happy.spec.js"
+    "test": "jest src/tests/mobile.spec.js"
   },
   "typings": "./index.d.ts",
   "main": "./src/index.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "playwright": "1.0.2",
     "rambdax": "3.7.0"

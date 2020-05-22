@@ -2,7 +2,7 @@ import { Browser, Page } from 'playwright'
 
 export type WaitConditionType = 'load' | 'domcontentloaded' | 'networkidle'
 
-export type SupportedBrowsers = 'chromium' | 'firefox' | 'webkit'
+export type SupportedBrowsers = 'chromium' | 'firefox'
 
 interface WaitCondition{
   timeout: number
