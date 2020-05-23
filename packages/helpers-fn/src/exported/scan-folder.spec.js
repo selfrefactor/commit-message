@@ -1,15 +1,15 @@
 import { resolve } from 'path'
-import { readFolder } from './read-folder.js'
+import { scanFolder } from './scan-folder.js'
 const testDir = resolve(__dirname, '../../src')
 
 test('happy', async () => {
-  expect(await readFolder({ folder : testDir })).toMatchSnapshot()
+  expect(await scanFolder({ folder : testDir })).toMatchSnapshot()
 })
 
 test('with filter', async () => {
   const filterFn = x => x.endsWith('.spec.js')
 
-  expect(await readFolder({
+  expect(await scanFolder({
     folder : testDir,
     filterFn,
   })).toMatchSnapshot()
@@ -18,7 +18,7 @@ test('with filter', async () => {
 test('with exclude', async () => {
   const excludeFn = dir => dir.endsWith('log')
 
-  expect(await readFolder({
+  expect(await scanFolder({
     folder : testDir,
     excludeFn,
   })).toMatchSnapshot()

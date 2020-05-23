@@ -2,7 +2,7 @@ const fdir = require('fdir')
 const defaultFilterFn = x => x.endsWith('.js')
 const defaultExcludeFn = x => x.includes('node_modules') || x.startsWith('.')
 
-export async function readFolder({
+export async function scanFolder({
   folder,
   filterFn = defaultFilterFn,
   excludeFn = defaultExcludeFn,
@@ -18,4 +18,4 @@ export async function readFolder({
   return files
 }
 
-exports.readFolder = readFolder
+exports.scanFolder = scanFolder
