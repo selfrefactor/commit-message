@@ -20,9 +20,8 @@
 		"clipboardy": "2.3.0",
 		"commit-fn": "1.4.1",
 		"dep-fn": "1.0.0",
-		"fdir": "2.1.1",
 		"fs-extra": "9.0.0",
-		"helpers-fn": "0.2.0",
+		"helpers-fn": "0.3.3",
 		"lint-fn": "2.7.1",
 		"rambdax": "3.7.0",
 		"string-fn": "2.11.1"

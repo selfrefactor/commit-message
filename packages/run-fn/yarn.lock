@@ -552,6 +552,11 @@ dayjs@1.8.23:
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.23.tgz#07b5a8e759c4d75ae07bdd0ad6977f851c01e510"
   integrity sha512-NmYHMFONftoZbeOhVz6jfiXI4zSiPN6NoVWJgC0aZQfYVwzy/ZpESPHuCcI0B8BUMpSJQ08zenHDbofOLKq8hQ==
 
+dayjs@1.8.24:
+  version "1.8.24"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.24.tgz#2ef8a2ab9425eaf3318fe78825be1c571027488d"
+  integrity sha512-bImQZbBv86zcOWOq6fLg7r4aqMx8fScdmykA7cSh+gH1Yh8AM0Dbw0gHYrsOrza6oBBnkK+/OaR+UAa9UsMrDw==
+
 dayjs@^1.8.19:
   version "1.8.26"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.26.tgz#c6d62ccdf058ca72a8d14bb93a23501058db9f1e"
@@ -871,10 +876,10 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/fdir/-/fdir-2.1.1.tgz#11b3d8b9b74aab626791c73c5e5ce28cf8fcc8af"
-  integrity sha512-pBc2pGnR4cTkJf7y0NmhWlDFtZw4r92i5TW+tirHYxgivX7ZlfGKRk9KZ667xGbmCvrzb9f11a4j+qAeHz+oqQ==
+fdir@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/fdir/-/fdir-3.4.2.tgz#978bc4e8cf9884b03b1429d50feb0cc9fd4824ce"
+  integrity sha512-Bya64kBW9us4CmX4T7P3JV+TBY0cXB3JhmyYBQ6CXEePat5FD72f7eaKt75ljSP2R8EdwD4txEestENsH/D0Jg==
 
 figures@3.2.0, figures@^3.0.0, figures@^3.1.0:
   version "3.2.0"
@@ -913,7 +918,7 @@ fs-extra@8.0.1:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
-fs-extra@9.0.0:
+fs-extra@9.0.0, fs-extra@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.0.tgz#b6afc31036e247b2466dc99c29ae797d5d4580a3"
   integrity sha512-pmEYSk3vYsG/bF651KPUXZ+hvjpgWYw/Gc7W9NFUe3ZVLczKKWIij3IKpOrQcdw4TILtibFslZ0UmR8Vvzig4g==
@@ -1046,6 +1051,27 @@ helpers-fn@0.2.0:
     dayjs "1.8.23"
     env-fn "2.1.0"
     figures "3.2.0"
+    gradient-string "1.2.0"
+    log-symbols "3.0.0"
+    ora "4.0.3"
+    q-i "2.0.1"
+    rambdax "3.7.0"
+    string-fn "2.11.1"
+
+helpers-fn@0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/helpers-fn/-/helpers-fn-0.3.3.tgz#30b15ef7f3914f05fc64e695a18a014b58eef659"
+  integrity sha512-WBokYcdyhOvXogzsYj+EmZzTAZpimtdfVspmdaSLmUptc4m1yaUa1Pdmas7BJcKqQ4PxDITQCguw1JhA4IV26A==
+  dependencies:
+    benny "3.6.14"
+    boxen "4.2.0"
+    cfonts "2.8.1"
+    chalk "4.0.0"
+    dayjs "1.8.24"
+    env-fn "2.1.0"
+    fdir "^3.4.2"
+    figures "3.2.0"
+    fs-extra "^9.0.0"
     gradient-string "1.2.0"
     log-symbols "3.0.0"
     ora "4.0.3"
