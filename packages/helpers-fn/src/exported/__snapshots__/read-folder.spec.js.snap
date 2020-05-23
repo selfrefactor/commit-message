@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Array [
+  "/home/s/repos/services/packages/helpers-fn/src/index.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/createBenchmark.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/exec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/read-folder.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/read-folder.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/runTests.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/runTests.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/translate.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/translate.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/back.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/big.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/box.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/general.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/icon.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/iconSet.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/index.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/object.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/pattern.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/patternx.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/separator.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/spin.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/boxMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/figuresCollection.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/helpers.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/iconMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/iconSetMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/objMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/patternMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/patternxMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/separatorMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/spinMethod.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/modules/stopSpinMethod.js",
+]
+`;
+
+exports[`with exclude 1`] = `
+Array [
+  "/home/s/repos/services/packages/helpers-fn/src/index.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/createBenchmark.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/exec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/read-folder.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/read-folder.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/runTests.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/runTests.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/translate.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/translate.spec.js",
+]
+`;
+
+exports[`with filter 1`] = `
+Array [
+  "/home/s/repos/services/packages/helpers-fn/src/exported/read-folder.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/runTests.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/exported/translate.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/back.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/big.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/box.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/general.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/icon.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/iconSet.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/object.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/pattern.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/patternx.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/separator.spec.js",
+  "/home/s/repos/services/packages/helpers-fn/src/log/spin.spec.js",
+]
+`;

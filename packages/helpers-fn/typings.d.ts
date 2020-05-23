@@ -1,3 +1,13 @@
+// READ FOLDER
+// ============================================
+interface ReadFolderInput{
+    folder: string
+    excludeFn?: (dir: string) => boolean
+    filterFn?: (file: string) => boolean
+}
+
+export function readFolder(input: ReadFolderInput): Promise<Array<string>>
+
 // BENCHMARK
 // ============================================
 export function createBenchmark(
