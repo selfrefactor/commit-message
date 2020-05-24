@@ -9,6 +9,6 @@
     "@angular/common": "^9.0.7",
     "@angular/core": "^9.0.7",
     "rambdax": "^3.7.0",
-    "tslib": "^1.10.0"
+    "tslib": "^1.10.0 || ^2.0.0"
   }
 }
