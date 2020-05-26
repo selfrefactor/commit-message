@@ -1,29 +1,32 @@
 {
-	"name": "commit-fn",
-	"version": "1.4.1",
-	"description": "commit-message",
-	"main": "./dist/index.js",
-	"typings": "./src/index.d.ts",
-	"scripts": {
-		"lint": "cd src&&run lx",
-		"out": "tsc -p .",
-		"in": "tsc -w",
-		"debug": "yarn out&&node ./dist/debug.js"
-	},
-	"dependencies": {
-		"inquirer": "7.1.0",
-		"helpers-fn": "0.1.1",
-		"rambda": "^5.0.0",
-		"string-fn": "^2.11.0"
-	},
-	"devDependencies": {
-		"@types/node": "13.9.5",
-		"fs-extra": "9.0.0",
-		"tslint-fn": "^0.2.1",
-		"typescript": "3.9.0-dev.20200325"
-	},
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT",
-	"private": false
+  "name": "commit-fn",
+  "version": "1.4.1",
+  "description": "commit-message",
+  "main": "./dist/index.js",
+  "typings": "./src/index.d.ts",
+  "scripts": {
+    "lint": "cd src&&run lx",
+    "out": "tsc -p .",
+    "in": "tsc -w",
+    "debug": "yarn out&&node ./dist/debug.js"
+  },
+  "dependencies": {
+    "inquirer": "7.1.0",
+    "helpers-fn": "0.1.1",
+    "rambda": "^5.0.0",
+    "string-fn": "^2.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "13.9.5",
+    "fs-extra": "9.0.0",
+    "tslint-fn": "^0.2.1",
+    "typescript": "3.9.0-dev.20200325"
+  },
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "commitMessage": {
+    "workInProgress": "use autocomplete"
+  }
 }

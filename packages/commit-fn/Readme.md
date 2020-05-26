@@ -38,11 +38,7 @@ The user can select one among:
 
 - STEP 2 - Choosing the label of the commit
 
-User can select empty label, write his own label or use one of the suggested.
-
-Suggested labels depends on the selection in STEP1.
-
-![STEP2](/files/screen1.png)
+Start typing to select from predefined list of labels
 
 ---
 
@@ -82,13 +78,13 @@ commitAndPush().then((commitMessageValue: string) => {
 
 ## Usage
 
-Recommended way is to add the following in the `scripts` property of  your `package.json`
+Recommended way is to add the following in the `scripts` property of your `package.json`
 
 ```
 {
   ...
   scripts:{
-    "commit":"commit"
+    "commit":"commit-fn"
   }
   ...
 }
@@ -98,7 +94,24 @@ Now running `yarn commit` will execute the `commitAndPush` method.
 
 ![STEP3](/files/screen2.png)
 
----
+## Predefined labels
+
+```
+"commitMessage": [
+
+    "script",
+    "build",
+    "prepublish",
+    "lint",
+    "typings",
+    "benchmark",
+    "refactor",
+    "method",
+    "docs",
+    "typings"
+  ]
+}
+```
 
 ## START, PROGRESS, STOP
 
