@@ -18,7 +18,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"clipboardy": "2.3.0",
-		"commit-fn": "1.4.1",
+		"commit-fn": "2.0.0",
 		"dep-fn": "1.0.0",
 		"fs-extra": "9.0.0",
 		"helpers-fn": "0.3.3",
@@ -28,14 +28,5 @@
 	},
 	"devDependencies": {
 		"typescript": "4.0.0-dev.20200501"
-	},
-	"commitMessage": {
-		"feature": [
-			"dep"
-		],
-		"workInProgress": "",
-		"fix": [
-			"dep"
-		]
 	}
 }

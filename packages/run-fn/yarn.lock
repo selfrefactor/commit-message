@@ -260,7 +260,7 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^3.0.0"
 
-ansi-escapes@^3.2.0:
+ansi-escapes@^3.0.0, ansi-escapes@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-3.2.0.tgz#8780b98ff9dbf5638152d1f1fe5c1d7b4442976b"
   integrity sha512-cBhpre4ma+U0T1oM5fXg7Dy1Jw7zzwv7lt/GoCpr+hDQJoYnKVPLL4dCvSEFMmQurOQvSrwT7SL/DAlhBI97RQ==
@@ -512,15 +512,17 @@ commander@^2.15.1:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commit-fn@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/commit-fn/-/commit-fn-1.4.1.tgz#0f0670a241ad35d6a38a452ad35a05e4a6750e6e"
-  integrity sha512-LJZk16ma53nstMWc7ChfMlo9Y7WJewYDOwpcyb60OpVIpundWDkrGTx7i9NX3zPzggTKqTggl+PmsTGP7uI6yQ==
+commit-fn@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/commit-fn/-/commit-fn-2.0.0.tgz#922529f7cc4c33c019740467cae6d2d44c648957"
+  integrity sha512-mlLIZlBsw16Fnx/BGB0qqOjDnDaGuSB9YswsR6XZID1GCv1ZpAPxkjeunj+k4k0KQvQvhQ4rCh3neOXYgYof0A==
   dependencies:
+    fuzzy "0.1.3"
     helpers-fn "0.1.1"
     inquirer "7.1.0"
-    rambda "^5.0.0"
-    string-fn "^2.11.0"
+    inquirer-autocomplete-prompt "^1.0.2"
+    rambda "5.4.1"
+    string-fn "2.11.0"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -888,6 +890,13 @@ figures@3.2.0, figures@^3.0.0, figures@^3.1.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
+figures@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
+  integrity sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=
+  dependencies:
+    escape-string-regexp "^1.0.5"
+
 file-entry-cache@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-5.0.1.tgz#ca0f6efa6dd3d561333fb14515065c2fafdf439c"
@@ -946,6 +955,11 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
+
+fuzzy@0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
+  integrity sha1-THbsL/CsGjap3M+aAN+GIweNTtg=
 
 get-own-enumerable-property-symbols@^3.0.0:
   version "3.0.2"
@@ -1132,6 +1146,16 @@ init-playwright@0.1.0:
   dependencies:
     playwright "1.0.2"
     rambdax "3.7.0"
+
+inquirer-autocomplete-prompt@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/inquirer-autocomplete-prompt/-/inquirer-autocomplete-prompt-1.0.2.tgz#3f2548f73dd12f0a541be055ea9c8c7aedeb42bf"
+  integrity sha512-vNmAhhrOQwPnUm4B9kz1UB7P98rVF1z8txnjp53r40N0PBCuqoRWqjg3Tl0yz0UkDg7rEUtZ2OZpNc7jnOU9Zw==
+  dependencies:
+    ansi-escapes "^3.0.0"
+    chalk "^2.0.0"
+    figures "^2.0.0"
+    run-async "^2.3.0"
 
 inquirer@7.1.0, inquirer@^7.0.0:
   version "7.1.0"
@@ -1644,15 +1668,17 @@ rambda@2.7.1:
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-2.7.1.tgz#56c3d4100131db0e252236a26bed75faffa229d8"
   integrity sha512-EjTEdqAOqMWSgiyIs/7cd9ByCN1hlVq5YBxaTdlmGygIpvAtM+qv4rO2eptiTUIkP8E5lGusuq7hohtFM23knw==
 
+rambda@5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.4.1.tgz#d657b3fdd971ed6263a7cff12212bbf9abbfe8f4"
+  integrity sha512-1kk39sO41O2BtdXm4aLrHlsuOwK0Oz/RhksjvgzPvkf5kAsG2sIen3hvmwAxAgIz9imJyoG7wCAGMemnZcl9qA==
+  dependencies:
+    fs-extra "^9.0.0"
+
 rambda@^4.5.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-4.6.0.tgz#79a47911329c91ad6094a0425a2980ec19e6ba72"
   integrity sha512-RGFM9TnZWmh/r6SAjNK9qrz5Ch8UceRgQrxtijtdD/ZmTUOEcqNYKlJNzApPH+kWvvUJ0ZYhS82I+3gR1O/6uA==
-
-rambda@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.1.1.tgz#e6c53d65fc060f94bcda951c0b0d8fee6096a73d"
-  integrity sha512-E2jeCwKxpJq4MgcL645yeeO9RkBRDn+jgvek9rUjX78CwB85XBlb6ETSIqiEwjp4KZ+JvxCqCHZGY/8jlg8doQ==
 
 rambdax@3.7.0, rambdax@^3.3.1:
   version "3.7.0"
@@ -1711,7 +1737,7 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-run-async@^2.4.0:
+run-async@^2.3.0, run-async@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"
   integrity sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==
@@ -1803,7 +1829,14 @@ stats-median@^1.0.1:
   resolved "https://registry.yarnpkg.com/stats-median/-/stats-median-1.0.1.tgz#ca8497cb1014d23d145db4d6fc93c8e815eed3ef"
   integrity sha512-IYsheLg6dasD3zT/w9+8Iq9tcIQqqu91ZIpJOnIEM25C3X/g4Tl8mhXwW2ZQpbrsJISr9+wizEYgsibN5/b32Q==
 
-string-fn@2.11.1, string-fn@^2.10.2, string-fn@^2.11.0:
+string-fn@2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/string-fn/-/string-fn-2.11.0.tgz#6488fda37c0b23e0c1d00434da174499a3b04aac"
+  integrity sha512-M69Gv1BjusS8pljB9Vo8MDcHBAA7MjRxOQVMWtcxFZGxZCImJXKQd4zlakXBaZdDZ35UhVve3QaVSurXInnCsw==
+  dependencies:
+    rambdax "3.7.0"
+
+string-fn@2.11.1, string-fn@^2.10.2:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/string-fn/-/string-fn-2.11.1.tgz#2eee6bfa426c855255b4199b61185335ff0b5c6a"
   integrity sha512-W/OAf3hwIGcGM8+oqP5wbm/mXOz/XIYIFncEHcVKuuY1erWsUbO9I5bb1zDA3DjgTTETtqEmtHm2Nn7tgxZKYw==
