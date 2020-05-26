@@ -1,0 +1,1 @@
+{"version":3,"file":"happy.js","sourceRoot":"","sources":["../../src/tests/happy.ts"],"names":[],"mappings":";;AAAA,0BAAgC;AAEhC,MAAM,GAAG,GAAG,SAAS,CAAA;AAErB,qBAAqB;AACrB,iBAAa,CAAC,GAAG,CAAC;KACf,IAAI,CAAC,CAAC,kBAA0B,EAAE,EAAE;IACnC,OAAO,CAAC,GAAG,CAAC,kBAAkB,CAAC,CAAA;AACjC,CAAC,CAAC;KACD,KAAK,CAAC,OAAO,CAAC,GAAG,CAAC,CAAA"}

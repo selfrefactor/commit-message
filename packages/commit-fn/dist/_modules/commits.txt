@@ -1,17 +1,23 @@
-commit fc0f62d6dd8df82d6c410635f3d3c43b5916a47e
+commit 8e4efd5644bb92a56e5b69b081c8dfac75e365d0
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Fri May 1 16:44:23 2020 +0300
+Date:   Tue May 26 16:44:09 2020 +0300
 
-    chore@dnd
+    feat@start use autocomplete
 
-commit 1b1576b599afff3fc463a70814154668a82a29b1
+commit 358223a2877e7eda83dc272d1bed8f274599b722
+Merge: 5154f21 a1d8e25
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed Apr 29 12:23:50 2020 +0300
+Date:   Sun May 24 20:02:24 2020 +0300
 
-    chore@dnd
+    Merge pull request #118 from selfrefactor/renovate/log-symbols-4.x
+    
+    Update dependency log-symbols to v4
 
-commit d471683c2d28eba4f6358f089dc3684098f6ed76
+commit 5154f219e96cf7a8d23b161c422be7fcf17cbd19
+Merge: e28954a e14aa4f
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Mon Apr 27 22:31:52 2020 +0300
+Date:   Sun May 24 19:59:44 2020 +0300
 
-    chore@bump minor
+    Merge pull request #126 from selfrefactor/renovate/eslint-plugin-jest-23.x
+    
+    Update dependency eslint-plugin-jest to v23.13.1
