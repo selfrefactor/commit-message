@@ -50,3 +50,30 @@ export const explanationOfTypes: string[] = [
   `${TEST.key} - ${TEST.explanation}`,
   `${DOCS.key} - ${DOCS.explanation}`,
 ]
+
+export const NO_LABEL = 'NO_LABEL'
+
+export const ALL_LABELS = [
+  '🏗 bump',
+  '💣 break',
+  '🔪 deprecate',
+  '📦 dep',
+  '📝 examples',
+  '⚠ important',
+  '🚮 issue',
+  '📨 publish',
+  '🆗 small',
+  '💋 style',
+  '📚️ typings',
+  'benchmark',
+  'build',
+  'docs',
+  'lint',
+  'method',
+  'prepublish',
+  'refactor',
+  'script',
+  'typings',
+  'typings',
+  'usage',
+]

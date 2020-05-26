@@ -1,8 +1,5 @@
 import {log} from 'helpers-fn'
-import {
-  ASK_FOR_MESSAGE,
-  typesOfCommit,
-} from './constants'
+import {ASK_FOR_MESSAGE, typesOfCommit} from './constants'
 
 import {getLatestCommits} from './_modules/getLatestCommits'
 import {getCommitLabel} from './_modules/getCommitLabel'
@@ -10,7 +7,6 @@ import {getCommitType} from './_modules/getCommitType'
 import {getWorkInProgress} from './_modules/getWorkInProgress'
 
 import {promptInput} from './_modules/promptInput'
-import {saveWorkInProgress} from './_modules/saveWorkInProgress'
 import {showExplanations} from './_modules/showExplanations'
 
 // It ask the user for type and text of commit
