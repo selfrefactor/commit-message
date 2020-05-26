@@ -1,4 +1,3 @@
-import {PromptSelect} from '../typings'
 import {prompt} from 'inquirer'
 
 export async function promptSelect(input: PromptSelect): Promise<string> {

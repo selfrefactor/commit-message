@@ -98,7 +98,6 @@ Now running `yarn commit` will execute the `commitAndPush` method.
 
 ```
 "commitMessage": [
-
     "script",
     "build",
     "prepublish",

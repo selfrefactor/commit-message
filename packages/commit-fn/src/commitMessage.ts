@@ -1,5 +1,5 @@
 import {log} from 'helpers-fn'
-import {ASK_FOR_MESSAGE, typesOfCommit} from './constants'
+import {ASK_FOR_MESSAGE, typesOfCommit, NO_LABEL} from './constants'
 
 import {getLatestCommits} from './_modules/getLatestCommits'
 import {getCommitLabel} from './_modules/getCommitLabel'
@@ -21,9 +21,7 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
   const workInProgress = getWorkInProgress()
   showExplanations()
   const commitType = await getCommitType(typesOfCommit)
-  const commitLabel = await getCommitLabel({
-    commitType,
-  })
+  const commitLabel = await getCommitLabel(commitType)
 
   if (workInProgress.length > 0) {
     log(`WorkInProgress - '${workInProgress}'`, 'info')
@@ -32,7 +30,7 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
   const commitMessageValue = await promptInput(ASK_FOR_MESSAGE)
 
   const noInput = commitMessageValue.trim() === ''
-  const noLabel = commitLabel === ''
+  const noLabel = commitLabel === NO_LABEL
 
   if (noInput && noLabel) {
     return commitType.value
@@ -43,5 +41,6 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
   if (!noInput && noLabel) {
     return `${commitType.value}: ${commitMessageValue}`
   }
+
   return `${commitType.value}@${commitLabel} ${commitMessageValue}`
 }

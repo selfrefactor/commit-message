@@ -1,8 +1,8 @@
-import {ASK_FOR_LABEL, NO_LABEL, ALL_LABELS} from '../constants'
+import {NO_LABEL, ALL_LABELS} from '../constants'
 import {log} from 'helpers-fn'
 import * as inquirer from 'inquirer'
 import * as fuzzy from 'fuzzy'
-import {sort} from 'rambdax'
+import {sort, last} from 'rambdax'
 
 function sortFn(a: any, b: any){
   if(a.includes(' ')&&!b.includes(' ')) return -1
@@ -21,53 +21,29 @@ async function searchStates(_, input) {
   return sorted
 }
 
-async function pickLabel(mode?: string) {
+async function pickLabel() {
   const {state} = await inquirer.prompt([
     {
       type: 'autocomplete',
       name: 'state',
       message: 'Label:',
+      suggestOnly: true,
       source: searchStates,
     },
   ])
+  if(!state.includes(' ')) return state
 
-  return state
+  return last(state.split(' '))
 }
 
-function extractValue(actualLabel) {
-  const [toReturn] = actualLabel.split(' ')
-
-  return toReturn
-}
-
-inquirer.registerPrompt(
-  'autocomplete',
-  require('inquirer-autocomplete-prompt')
-)
-export async function getCommitLabel(input: any): Promise<string> {
-  console.log({input})
+export async function getCommitLabel(input: CommitType): Promise<string> {
+  inquirer.registerPrompt(
+    'autocomplete',
+    require('inquirer-autocomplete-prompt')
+  )
   log('sepx')
-  log(`${input.commitType.key} - ${input.commitType.explanation}`, '')
+  log(`${input.key} - ${input.explanation}`, '')
   log('sepx')
 
-  await pickLabel()
-  // const filteredLabels: Label[] = input.labels.filter(singleLabel => {
-  //   return singleLabel.belongsTo.includes(input.commitType)
-  // })
-  // const filteredLabelsValue: string[] = filteredLabels.map(singleLabel => {
-  //   const padding = getPadding(singleLabel.value)
-
-  //   return `${singleLabel.value}${padding} ${singleLabel.explanation}`
-  // })
-
-  // const promptOptions: PromptSelect = {
-  //   choices: filteredLabelsValue,
-  //   default: filteredLabelsValue[0],
-  //   question: ASK_FOR_LABEL,
-  // }
-  // const labelAnswer = await promptSelect(promptOptions)
-  // const [labelRaw]: any = filteredLabelsValue.filter(x => x === labelAnswer)
-  // const label = extractValue(labelRaw)
-  // console.log({label})
-  return 'toReturn'
+  return pickLabel()
 }

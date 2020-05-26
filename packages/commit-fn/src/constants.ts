@@ -1,37 +1,40 @@
-import {CommitType, Label} from './typings'
-
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
-export const ASK_FOR_LABEL = 'Select label'
 export const ASK_FOR_CUSTOM_LABEL = 'Write your label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
+export const DOCS_KEY = 'DOCS'
+export const FEATURE_KEY = 'FEATURE'
+export const FIX_KEY = 'FIX'
+export const SUPPORT_KEY = 'SUPPORT'
+export const TEST_KEY = 'TEST'
+
 export const FEATURE = {
   explanation: '💡   Add new feature',
-  key: 'FEATURE',
+  key: FEATURE_KEY,
   value: 'feat',
 }
 
 const TEST = {
   explanation: '🔍   Create unit or end-to-end test',
-  key: 'TEST',
+  key: TEST_KEY,
   value: 'test',
 }
 
 const FIX = {
   explanation: '🐛   Submit a bug fix',
-  key: 'FIX',
+  key: FIX_KEY,
   value: 'fix',
 }
 
 const SUPPORT = {
   explanation: '☂️   Chore',
-  key: 'SUPPORT',
+  key: SUPPORT_KEY,
   value: 'chore',
 }
 
 const DOCS = {
   explanation: '✍   Edit documentation',
-  key: 'DOCS',
+  key: DOCS_KEY,
   value: 'docs',
 }
 
@@ -60,7 +63,6 @@ export const ALL_LABELS = [
   '📦 dep',
   '📝 examples',
   '⚠ important',
-  '🚮 issue',
   '📨 publish',
   '🆗 small',
   '💋 style',
@@ -73,7 +75,6 @@ export const ALL_LABELS = [
   'prepublish',
   'refactor',
   'script',
-  'typings',
   'typings',
   'usage',
 ]

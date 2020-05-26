@@ -1,5 +1,4 @@
 import {ASK_FOR_TYPE, FEATURE} from '../constants'
-import {CommitType, PromptSelect} from '../typings'
 import {promptSelect} from './promptSelect'
 
 export async function getCommitType(

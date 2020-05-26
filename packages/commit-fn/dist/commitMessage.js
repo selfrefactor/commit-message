@@ -21,15 +21,13 @@ async function commitMessage(dir = process.cwd()) {
     const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
-    const commitLabel = await getCommitLabel_1.getCommitLabel({
-        commitType,
-    });
+    const commitLabel = await getCommitLabel_1.getCommitLabel(commitType);
     if (workInProgress.length > 0) {
         helpers_fn_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
     }
     const commitMessageValue = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
     const noInput = commitMessageValue.trim() === '';
-    const noLabel = commitLabel === '';
+    const noLabel = commitLabel === constants_1.NO_LABEL;
     if (noInput && noLabel) {
         return commitType.value;
     }

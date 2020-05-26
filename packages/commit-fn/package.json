@@ -1,9 +1,5 @@
 {
   "name": "commit-fn",
-  "version": "1.4.1",
-  "description": "commit-message",
-  "main": "./dist/index.js",
-  "typings": "./src/index.d.ts",
   "scripts": {
     "lint": "cd src&&run lx",
     "out": "tsc -p .",
@@ -11,10 +7,14 @@
     "test": "yarn out&&node ./dist/tests/happy.js",
     "test:autocomplete": "yarn out&&node ./dist/tests/autocomplete.js"
   },
+  "typings": "./src/index.d.ts",
+  "main": "./dist/index.js",
+  "version": "1.4.1",
   "dependencies": {
     "fuzzy": "0.1.3",
     "helpers-fn": "0.1.1",
     "inquirer": "7.1.0",
+    "inquirer-autocomplete-prompt": "^1.0.2",
     "rambda": "5.4.1",
     "string-fn": "2.11.0"
   },
@@ -25,7 +25,8 @@
     "typescript": "3.9.0-dev.20200325"
   },
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/commit-fn",
-  "author": "Dejan Toteff <deyan8284@gmail.com>",
   "license": "MIT",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "description": "commit-message",
   "private": false
 }
