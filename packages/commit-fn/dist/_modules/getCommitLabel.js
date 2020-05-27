@@ -13,13 +13,14 @@ function sortFn(a, b) {
         return 1;
     return a > b ? -1 : 1;
 }
-async function searchStates(_, input) {
-    const labels = fuzzy.filter(input || '', constants_1.ALL_LABELS).map(function (el) {
+async function searchStates(_, userInput) {
+    rambdax_1.setter(constants_1.USER_LABEL_INPUT, userInput);
+    const labels = fuzzy.filter(userInput || '', constants_1.ALL_LABELS).map(function (el) {
         return el.original;
     });
     const sorted = rambdax_1.sort(sortFn)(labels);
     if (labels.length === 0)
-        return [constants_1.NO_LABEL];
+        return [constants_1.CUSTOM_LABEL];
     if (labels.length === constants_1.ALL_LABELS.length)
         return [constants_1.NO_LABEL, ...sorted];
     return sorted;
@@ -30,10 +31,12 @@ async function pickLabel() {
             type: 'autocomplete',
             name: 'state',
             message: 'Label:',
-            suggestOnly: true,
             source: searchStates,
+            pageSize: 5,
         },
     ]);
+    if (state === constants_1.CUSTOM_LABEL)
+        return rambdax_1.getter(constants_1.USER_LABEL_INPUT);
     if (!state.includes(' '))
         return state;
     return rambdax_1.last(state.split(' '));

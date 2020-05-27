@@ -1,17 +1,17 @@
-commit e8cd3c8d4dd3ecb34f6903d071d45f10d95ba05d
+commit 024960e9541b684a49ea59429485f283bc3cee1e
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Tue May 26 20:59:12 2020 +0300
+Date:   Wed May 27 14:21:37 2020 +0300
 
-    chore@dnd
+    chore@de
 
-commit f32311481e0126611497a0bb9b628ec0f8a04b23
+commit a46544e3ad44f4aa8570c3af50f17f52e32746d2
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Tue May 26 17:22:59 2020 +0300
+Date:   Wed May 27 11:29:18 2020 +0300
 
-    chore@dnd
+    chore@bump patch
 
-commit 8e4efd5644bb92a56e5b69b081c8dfac75e365d0
+commit 12417031e2cae997ff843d5d357659ee3cb5b881
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Tue May 26 16:44:09 2020 +0300
+Date:   Tue May 26 22:47:42 2020 +0300
 
-    feat@start use autocomplete
+    chore@bump minor

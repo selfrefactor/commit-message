@@ -1,6 +1,9 @@
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
-export const ASK_FOR_CUSTOM_LABEL = 'Write your label'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
+
+export const USER_LABEL_INPUT = 'USER_LABEL_INPUT'
+export const NO_LABEL = 'NO_LABEL'
+export const CUSTOM_LABEL = 'CUSTOM_LABEL'
 
 export const DOCS_KEY = 'DOCS'
 export const FEATURE_KEY = 'FEATURE'
@@ -53,8 +56,6 @@ export const explanationOfTypes: string[] = [
   `${TEST.key} - ${TEST.explanation}`,
   `${DOCS.key} - ${DOCS.explanation}`,
 ]
-
-export const NO_LABEL = 'NO_LABEL'
 
 export const ALL_LABELS = [
   '🏗 bump',
