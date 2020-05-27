@@ -4,9 +4,9 @@ import * as inquirer from 'inquirer'
 import * as fuzzy from 'fuzzy'
 import {sort, last} from 'rambdax'
 
-function sortFn(a: any, b: any){
-  if(a.includes(' ')&&!b.includes(' ')) return -1
-  if(!a.includes(' ')&&b.includes(' ')) return 1
+function sortFn(a: any, b: any) {
+  if (a.includes(' ') && !b.includes(' ')) return -1
+  if (!a.includes(' ') && b.includes(' ')) return 1
   return a > b ? -1 : 1
 }
 
@@ -31,7 +31,7 @@ async function pickLabel() {
       source: searchStates,
     },
   ])
-  if(!state.includes(' ')) return state
+  if (!state.includes(' ')) return state
 
   return last(state.split(' '))
 }

@@ -34,7 +34,6 @@ async function pickLabel() {
             source: searchStates,
         },
     ]);
-    console.log({ state });
     if (!state.includes(' '))
         return state;
     return rambdax_1.last(state.split(' '));
