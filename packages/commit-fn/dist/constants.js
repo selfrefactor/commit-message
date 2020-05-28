@@ -1,6 +1,28 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ALL_LABELS = exports.explanationOfTypes = exports.typesOfCommit = exports.FEATURE = exports.TEST_KEY = exports.SUPPORT_KEY = exports.FIX_KEY = exports.FEATURE_KEY = exports.DOCS_KEY = exports.CUSTOM_LABEL = exports.NO_LABEL = exports.USER_LABEL_INPUT = exports.ASK_FOR_MESSAGE = exports.ASK_FOR_TYPE = void 0;
+exports.explanationOfTypes = exports.typesOfCommit = exports.FEATURE = exports.TEST_KEY = exports.SUPPORT_KEY = exports.FIX_KEY = exports.FEATURE_KEY = exports.DOCS_KEY = exports.CUSTOM_LABEL = exports.NO_LABEL = exports.USER_LABEL_INPUT = exports.ASK_FOR_MESSAGE = exports.ASK_FOR_TYPE = exports.ALL_LABELS = void 0;
+exports.ALL_LABELS = [
+    '🐪 dnd',
+    '🎏 refactor',
+    '📦 dep',
+    '🔥 important',
+    '🆗 small',
+    '🦠 issue',
+    '🎰 publish',
+    '🏇 bump',
+    '🐸 break',
+    '🔪 deprecate',
+    '💮 script',
+    '🥑 typings',
+    '🎳 lint',
+    '💋 style',
+    'examples',
+    'build',
+    'method',
+    'docs',
+    'prepublish',
+    'usage',
+];
 exports.ASK_FOR_TYPE = 'What is the type of the commit?';
 exports.ASK_FOR_MESSAGE = 'What is the message of the commit?';
 exports.USER_LABEL_INPUT = 'USER_LABEL_INPUT';
@@ -49,27 +71,5 @@ exports.explanationOfTypes = [
     `${SUPPORT.key} - ${SUPPORT.explanation}`,
     `${TEST.key} - ${TEST.explanation}`,
     `${DOCS.key} - ${DOCS.explanation}`,
-];
-exports.ALL_LABELS = [
-    '🏗 bump',
-    '💣 break',
-    '🔪 deprecate',
-    '📦 dep',
-    '📝 examples',
-    '⚠ important',
-    '📨 publish',
-    '🆗 small',
-    '💋 style',
-    '📚️ typings',
-    'benchmark',
-    'build',
-    'docs',
-    'lint',
-    'method',
-    'prepublish',
-    'refactor',
-    'script',
-    'typings',
-    'usage',
 ];
 //# sourceMappingURL=constants.js.map

@@ -1,3 +1,27 @@
+
+export const ALL_LABELS = [
+  '🐪 dnd',
+  '🎏 refactor',
+  '📦 dep',
+  '🔥 important',
+  '🆗 small',
+  '🦠 issue',
+  '🎰 publish',
+  '🏇 bump',
+  '🐸 break',
+  '🔪 deprecate',
+  '💮 script',
+  '🥑 typings',
+  '🎳 lint',
+  '💋 style',
+  'examples',
+  'build',
+  'method',
+  'docs',
+  'prepublish',
+  'usage',
+]
+
 export const ASK_FOR_TYPE = 'What is the type of the commit?'
 export const ASK_FOR_MESSAGE = 'What is the message of the commit?'
 
@@ -55,27 +79,4 @@ export const explanationOfTypes: string[] = [
   `${SUPPORT.key} - ${SUPPORT.explanation}`,
   `${TEST.key} - ${TEST.explanation}`,
   `${DOCS.key} - ${DOCS.explanation}`,
-]
-
-export const ALL_LABELS = [
-  '🏗 bump',
-  '💣 break',
-  '🔪 deprecate',
-  '📦 dep',
-  '📝 examples',
-  '⚠ important',
-  '📨 publish',
-  '🆗 small',
-  '💋 style',
-  '📚️ typings',
-  'benchmark',
-  'build',
-  'docs',
-  'lint',
-  'method',
-  'prepublish',
-  'refactor',
-  'script',
-  'typings',
-  'usage',
 ]

@@ -1,17 +1,17 @@
-commit 024960e9541b684a49ea59429485f283bc3cee1e
+commit acbe4db0b779033a44679efdbb735739a3ecaa45
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed May 27 14:21:37 2020 +0300
+Date:   Wed May 27 14:55:55 2020 +0300
 
-    chore@de
+    fix@ commit.fn
 
-commit a46544e3ad44f4aa8570c3af50f17f52e32746d2
+commit 505029c54e9704c2c1b82cc0457443161493ce6a
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed May 27 11:29:18 2020 +0300
+Date:   Wed May 27 14:54:37 2020 +0300
 
     chore@bump patch
 
-commit 12417031e2cae997ff843d5d357659ee3cb5b881
+commit e8d8353da4bff6496177c3da86377cdec9817874
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Tue May 26 22:47:42 2020 +0300
+Date:   Wed May 27 14:53:50 2020 +0300
 
-    chore@bump minor
+    chore@bump patch
