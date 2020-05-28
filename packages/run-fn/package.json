@@ -18,7 +18,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"clipboardy": "2.3.0",
-		"commit-fn": "2.0.2",
+		"commit-fn": "2.0.3",
 		"dep-fn": "1.0.0",
 		"fs-extra": "9.0.0",
 		"helpers-fn": "0.3.3",
