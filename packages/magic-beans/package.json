@@ -142,11 +142,5 @@
 		"klaw-sync": "^6.0.0",
 		"rambdax": "^3.7.0",
 		"string-fn": "^2.11.0"
-	},
-	"commitMessage": {
-		"docs": [
-			"important"
-		],
-		"workInProgress": ""
 	}
 }
