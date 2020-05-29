@@ -9,8 +9,6 @@ import {
   TS_SNIPPETS,
 } from './constants'
 
-const OPERATOR_MONO = process.env.OPERATOR_MONO === 'ON'
-
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   Number(process.env.SCALE)
@@ -34,10 +32,9 @@ const getCalculatedOptions = () => {
   const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
   const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
   const terminalFontSize = toDecimal(17 * SCALE_FACTOR)
-  const fontFamily = OPERATOR_MONO ? 'Operator Mono' : 'Bar'
 
   return  {
-    'editor.fontFamily': fontFamily,
+    'editor.fontFamily': 'Operator Mono',
     "editor.fontSize": fontSize,
     "window.zoomLevel": zoomLevel,
     "editor.lineHeight": lineHeight,
