@@ -4,7 +4,7 @@ const {snakeCase, constantCase} = require('string-fn')
 
 const folderFallback = 'benchmark_results'
 
-function createBenchmark(input){
+async function createBenchmark(input){
   const {prop: suiteLabel,value: tests} = headObject(input)
   ok(tests, suiteLabel)([{label: String, fn: Function}], String)
 
@@ -17,7 +17,7 @@ function createBenchmark(input){
     process.env.BENCHMARK_FOLDER ? process.env.BENCHMARK_FOLDER : folderFallback
   )
 
-  bench.suite(
+  await bench.suite(
     constantCase(suiteLabel),
     ...benches,  
     bench.cycle(),

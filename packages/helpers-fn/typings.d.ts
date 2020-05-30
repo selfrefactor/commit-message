@@ -17,7 +17,7 @@ export function createBenchmark(
       label: string
     }>
   }    
-): void
+): Promise<void>
 
 // TRANSLATE
 // ============================================
