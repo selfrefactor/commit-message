@@ -17,7 +17,7 @@ function createBenchmark(input){
     process.env.BENCHMARK_FOLDER ? process.env.BENCHMARK_FOLDER : folderFallback
   )
 
-  bench.suite(
+  return bench.suite(
     constantCase(suiteLabel),
     ...benches,  
     bench.cycle(),
