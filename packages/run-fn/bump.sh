@@ -1,1 +1,1 @@
-run dep&&yarn&run d chore@release&&run bump&&run d chore: after publish&&./update.sh
+run bump&&run d chore: after publish&&./update.sh
