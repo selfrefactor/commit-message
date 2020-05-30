@@ -1,6 +1,6 @@
 {
   "name": "helpers-fn",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "src/index.js",
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/helpers-fn",
   "typings": "typings.d.ts",
