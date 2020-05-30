@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.explanationOfTypes = exports.typesOfCommit = exports.FEATURE = exports.TEST_KEY = exports.SUPPORT_KEY = exports.FIX_KEY = exports.FEATURE_KEY = exports.DOCS_KEY = exports.CUSTOM_LABEL = exports.NO_LABEL = exports.USER_LABEL_INPUT = exports.ASK_FOR_MESSAGE = exports.ASK_FOR_TYPE = exports.ALL_LABELS = void 0;
+exports.explanationOfTypes = exports.typesOfCommit = exports.FEATURE = exports.TEST_KEY = exports.SUPPORT_KEY = exports.FIX_KEY = exports.FEATURE_KEY = exports.SERVICE_KEY = exports.DOCS_KEY = exports.CUSTOM_LABEL = exports.NO_LABEL = exports.USER_LABEL_INPUT = exports.ASK_FOR_MESSAGE = exports.ASK_FOR_TYPE = exports.ALL_LABELS = void 0;
 exports.ALL_LABELS = [
     '🐪 dnd',
     '🎏 refactor',
@@ -29,6 +29,7 @@ exports.USER_LABEL_INPUT = 'USER_LABEL_INPUT';
 exports.NO_LABEL = 'NO_LABEL';
 exports.CUSTOM_LABEL = 'CUSTOM_LABEL';
 exports.DOCS_KEY = 'DOCS';
+exports.SERVICE_KEY = 'SERVICE';
 exports.FEATURE_KEY = 'FEATURE';
 exports.FIX_KEY = 'FIX';
 exports.SUPPORT_KEY = 'SUPPORT';
@@ -48,8 +49,13 @@ const FIX = {
     key: exports.FIX_KEY,
     value: 'fix',
 };
+const SERVICE = {
+    explanation: '🧩   Create or edit of service',
+    key: exports.SERVICE_KEY,
+    value: 'service',
+};
 const SUPPORT = {
-    explanation: '☂️   Chore',
+    explanation: '☂️   Support related commit',
     key: exports.SUPPORT_KEY,
     value: 'chore',
 };
@@ -61,8 +67,9 @@ const DOCS = {
 exports.typesOfCommit = [
     exports.FEATURE,
     FIX,
-    TEST,
+    SERVICE,
     SUPPORT,
+    TEST,
     DOCS,
 ];
 exports.explanationOfTypes = [

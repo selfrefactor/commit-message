@@ -1,17 +1,17 @@
-commit acbe4db0b779033a44679efdbb735739a3ecaa45
+commit 7c68ca4af80cc7b8c22bef394b18c753f94532d8
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed May 27 14:55:55 2020 +0300
-
-    fix@ commit.fn
-
-commit 505029c54e9704c2c1b82cc0457443161493ce6a
-Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed May 27 14:54:37 2020 +0300
+Date:   Sat May 30 15:48:41 2020 +0300
 
     chore@bump patch
 
-commit e8d8353da4bff6496177c3da86377cdec9817874
+commit 45a292c3355eac4b4a96c1f47cd720d502f7cb59
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed May 27 14:53:50 2020 +0300
+Date:   Sat May 30 15:48:21 2020 +0300
 
-    chore@bump patch
+    fix: create.benchmark should return a promise
+
+commit 83f7eca6d988f3263ca67da3795ab35946b99c4c
+Author: Dejan Toteff <deyan8284@gmail.com>
+Date:   Fri May 29 11:38:02 2020 +0300
+
+    chore@dnd

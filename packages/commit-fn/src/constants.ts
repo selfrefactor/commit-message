@@ -30,6 +30,7 @@ export const NO_LABEL = 'NO_LABEL'
 export const CUSTOM_LABEL = 'CUSTOM_LABEL'
 
 export const DOCS_KEY = 'DOCS'
+export const SERVICE_KEY = 'SERVICE'
 export const FEATURE_KEY = 'FEATURE'
 export const FIX_KEY = 'FIX'
 export const SUPPORT_KEY = 'SUPPORT'
@@ -53,8 +54,14 @@ const FIX = {
   value: 'fix',
 }
 
+const SERVICE = {
+  explanation: '🧩   Create or edit of service',
+  key: SERVICE_KEY,
+  value: 'service',
+}
+
 const SUPPORT = {
-  explanation: '☂️   Chore',
+  explanation: '☂️   Support related commit',
   key: SUPPORT_KEY,
   value: 'chore',
 }
@@ -68,8 +75,9 @@ const DOCS = {
 export const typesOfCommit: CommitType[] = [
   FEATURE,
   FIX,
-  TEST,
+  SERVICE,
   SUPPORT,
+  TEST,
   DOCS,
 ]
 
