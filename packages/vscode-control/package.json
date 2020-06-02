@@ -15,19 +15,5 @@
     "esm": "3.0.84",
     "fs-extra": "9.0.0",
     "rambdax": "3.7.0"
-  },
-  "commitMessage": {
-    "feature": [
-      "snippet",
-      "keybinding",
-      "settings",
-      "extension"
-    ],
-    "fix": [
-      "snippet",
-      "keybinding",
-      "settings"
-    ],
-    "workInProgress": ""
   }
 }

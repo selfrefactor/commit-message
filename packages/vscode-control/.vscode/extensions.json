@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "WallabyJs.dingo-vscode",
     "firefox-devtools.vscode-firefox-debug",
     "Angular.ng-template",
     "wallabyjs.wallaby-vscode",
