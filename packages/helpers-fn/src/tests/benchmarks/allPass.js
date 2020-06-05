@@ -53,6 +53,6 @@ const ramdaCurried = {
 }
 
 module.exports = [
-  {label: 'allPass', suites: [ rambda, ramda, lodash ]},
-  {label: 'allPass#curried', suites: [ rambdaCurried, ramdaCurried ]},
+  // {label: 'allPass', suites: [ rambda, ramda, lodash ]},
+  {label: 'allPass#curried.slow', suites: [ rambdaCurried, ramdaCurried ]},
 ]
