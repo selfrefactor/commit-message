@@ -17,7 +17,7 @@ async function getContext(browser, mobileFlag){
 async function init(input, extraProps = {}){
   const browserTypeInput = SUPPORTED_BROWSERS.includes(input.browser) ?
     input.browser :
-    'firefox'
+    'chromium'
 
   const browserType = input.mobile ? 'chromium' : browserTypeInput
 
