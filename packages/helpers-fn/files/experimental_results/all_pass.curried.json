@@ -1,0 +1,27 @@
+{
+  "name": "ALL_PASS.curried",
+  "date": "2020-06-05T08:55:19.362Z",
+  "version": null,
+  "results": [
+    {
+      "name": "Rambda",
+      "ops": 3314423,
+      "margin": 0.84,
+      "percentSlower": 0
+    },
+    {
+      "name": "Ramda",
+      "ops": 1294960,
+      "margin": 0.94,
+      "percentSlower": 60.93
+    }
+  ],
+  "fastest": {
+    "name": "Rambda",
+    "index": 0
+  },
+  "slowest": {
+    "name": "Ramda",
+    "index": 1
+  }
+}

@@ -19,6 +19,16 @@ export function createBenchmark(
   }    
 ): Promise<void>
 
+export function createComplexBenchmark(
+    input: Array<{
+      suites: Array<{
+        fn: () => void,
+        label: string
+      }>
+      label: string
+    }>
+): Promise<void>
+
 // TRANSLATE
 // ============================================
 export function translate(text: string) : Promise<string>

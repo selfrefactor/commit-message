@@ -1,6 +1,6 @@
 import { delay } from 'rambdax'
 import assert from 'assert'
-import {runTests} from './runTests'
+import {runTests} from './run-tests'
 
 const testFn = x => typeof x.a === 'number'
 
