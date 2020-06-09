@@ -1,0 +1,12 @@
+{
+  "name": "watch-fn",
+	"description": "Watch files",
+  "version": "1.0.0",
+  "main": "watchFn.js",
+  "author": "self_refactor",
+  "license": "MIT",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/run-fn",
+  "dependencies": {
+    "rambda": "5.6.2"
+  }
+}
