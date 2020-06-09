@@ -46,7 +46,7 @@ const renderFn = () => {
 const methods = {
   renderFn,
   youtubeToAudio,
-}
+} 
 
 if (pass){
   youtubeAutoplay()

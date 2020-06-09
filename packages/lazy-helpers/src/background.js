@@ -12,25 +12,10 @@ chrome.browserAction.onClicked.addListener(tab => {
     currentWindow : true,
   }, tabs => {
     const {id, url } = tabs[0]  
-
-    if(url.startsWith(
-      'https://ilearnsmarter.com'
-    )){
-
-      chrome.bookmarks.getTree(
-        tree => sendMessage({
-          id,
-          message : 'exportBookmarks',
-          payload: tree
-        })
-      )
-    }else{
-
-      sendMessage({
-        id,
-        message : 'lazyHelpers',
-      })
-    }
+    sendMessage({
+      id,
+      message : 'lazyHelpers',
+    })
   })
 })
 

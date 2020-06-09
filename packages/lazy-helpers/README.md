@@ -16,9 +16,7 @@
 
 ## Functionality
 
-### Import bookmarks as JSON
-
-Press icon when in `https://ilearnsmarter.com/`
+### Permenant Youtube autoplay
 
 ### Alarm
 
@@ -56,22 +54,6 @@ It gets activated from a result page of Google images.
 
 It clicks on the first image and afterwards it start clicking on next image button after some seconds.
 
-## TODO
+## Development
 
-- Override Imgur style so the image can look better at Chromebook screen
-
-- Have a button to start time component with the latest timeComponentValue, instead of selecting it every time.
-
-- Fix Reddit override style
-
-- Google image - display image in larger frame as 'img src' is visible
-
-- Production mode
-
-- remove `hot-reload.js` from manifest
-
-- increment semver
-
-- create temp directory
-
-- zip temp directory
+Load unpacked `chrome_dist` folder
