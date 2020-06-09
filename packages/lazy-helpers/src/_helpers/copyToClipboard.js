@@ -28,3 +28,4 @@ export function copyToClipboard(text) {
   span.remove()
   iframe.remove()
 }
+ 

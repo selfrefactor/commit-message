@@ -60,5 +60,3 @@ chrome.contextMenus.onClicked.addListener(() => {
     }, ms)
   })
 })
-
-//chrome.browserAction.setBadgeText({string:'foo'}, function(){})

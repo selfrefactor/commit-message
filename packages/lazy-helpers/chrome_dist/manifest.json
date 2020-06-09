@@ -26,15 +26,10 @@
 	],
 	"permissions": [
 		"background",
-		"bookmarks",
 		"clipboardRead",
-		"clipboardWrite",
 		"contextMenus",
-		"power",
 		"http://*/*",
 		"https://*/*",
-		"notifications",
-		"storage",
 		"tabs"
 	],
 	"background": {

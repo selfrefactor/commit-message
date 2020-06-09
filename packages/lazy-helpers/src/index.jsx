@@ -54,7 +54,7 @@ if (pass){
   alarmBee()
   germanShortkeys()
 }
-
+  
 if (process.env.NODE_ENV === 'production' && pass){
   const onRequest = request => {
     if (request.lazyHelpers){
