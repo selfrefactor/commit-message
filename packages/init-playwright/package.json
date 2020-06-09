@@ -6,7 +6,7 @@
 	},
 	"typings": "./index.d.ts",
 	"main": "./src/index.js",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"dependencies": {
 		"playwright": "1.1.0-next.1591678053179",
 		"rambdax": "3.7.0"
