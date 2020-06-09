@@ -16,6 +16,7 @@ function confirmAutoplay(){
 
 export async function youtubeAutoplay(){
   if(!window.location.href.startsWith('https://www.youtube.com')) return
+  
   while(true){
     await delay(10000)
     if(hasDialog()) confirmAutoplay()

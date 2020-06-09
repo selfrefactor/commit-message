@@ -25,7 +25,6 @@
 		}
 	],
 	"permissions": [
-		"activeTab",
 		"background",
 		"bookmarks",
 		"clipboardRead",

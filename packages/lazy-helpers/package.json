@@ -1,7 +1,6 @@
 {
 	"scripts": {
 		"build": "webpack --config webpack.config.prod.js",
-		"chromebook": "webpack --config webpack.config.prod.js&&node files/chromebook",
 		"watch": "node files/watch",
 		"start": "node_modules/.bin/webpack-dev-server"
 	},
