@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": ["https://*/*"],
-      "js": ["src/lazy-helpers.js"]
+      "js": ["dist/bundle.js"]
     }
   ]
 
