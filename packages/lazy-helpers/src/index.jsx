@@ -9,12 +9,12 @@ import { copyToClipboard } from './_helpers/copyToClipboard.js'
 import { isYoutubeURL } from './common'
 import { germanShortkeys } from './_modules/germanShortkeys'
 import { googleSearch } from './_modules/googleSearch'
+import { youtubeAutoplay } from './_modules/youtubeAutoplay'
 import { customCSS } from './_modules/customCSS'
 import { isIframe } from './_helpers/isIframe'
 import { youtubeToAudio } from './_modules/youtubeToAudio'
 import { logAnt } from './ants/log'
 import { alarmBee } from './bees/alarm'
-import { chitankaBee } from './bees/chitanka'
 import { clickableGistBee } from './bees/clickableGist'
 
 const id = 'lazy-helpers-container'
@@ -49,8 +49,8 @@ const methods = {
 }
 
 if (pass){
+  youtubeAutoplay()
   clickableGistBee()
-  chitankaBee()
   googleSearch()
   alarmBee()
   germanShortkeys()
