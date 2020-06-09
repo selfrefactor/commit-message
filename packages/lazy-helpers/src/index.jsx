@@ -10,7 +10,6 @@ import { isYoutubeURL } from './common'
 import { germanShortkeys } from './_modules/germanShortkeys'
 import { googleSearch } from './_modules/googleSearch'
 import { youtubeAutoplay } from './_modules/youtubeAutoplay'
-import { customCSS } from './_modules/customCSS'
 import { isIframe } from './_helpers/isIframe'
 import { youtubeToAudio } from './_modules/youtubeToAudio'
 import { logAnt } from './ants/log'
@@ -54,7 +53,6 @@ if (pass){
   googleSearch()
   alarmBee()
   germanShortkeys()
-  customCSS()
 }
 
 if (process.env.NODE_ENV === 'production' && pass){
