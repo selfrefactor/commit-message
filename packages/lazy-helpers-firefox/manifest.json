@@ -1,7 +1,7 @@
 {
 
   "manifest_version": 2,
-  "name": "Page to extension messaging",
+  "name": "Lazy Helpers",
   "description": "Permenant Youtube play",
   "version": "1.0",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging",
@@ -11,7 +11,7 @@
   "content_scripts": [
     {
       "matches": ["https://*/*"],
-      "js": ["./bundle.js"]
+      "js": ["./dist/bundle.js"]
     }
   ]
 
