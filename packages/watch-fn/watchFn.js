@@ -76,7 +76,7 @@ function start(inputOptions = {}){
       R.any(x => filePath.includes(x), options.negativeMatches)
 
     watcher.on('ready', () => {
-      log(`watching ${ options.directory } has started`, 'info')
+      console.log(`watching ${ options.directory } has started`)
     })
 
     watcher.on('delete', filePath => {
