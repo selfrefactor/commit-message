@@ -1,0 +1,28 @@
+{
+	"name": "test-speed",
+	"version": "0.1.0",
+	"description": "test-speed",
+	"main": "./dist/index.js",
+	"typings": "./src/typings.d.ts",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/test-speed",
+	"author": "Dejan Toteff <deyan8284@gmail.com>",
+	"license": "MIT",
+	"private": false,
+	"dependencies": {
+		"env-fn": "2.1.0",
+		"opener": "1.5.1",
+		"psi": "4.0.1",
+		"rambdax": "3.7.0"
+	},
+	"devDependencies": {
+		"@types/node": "14.0.12",
+		"tslint": "6.1.2",
+		"typescript": "4.0.0-dev.20200609"
+	},
+	"scripts": {
+		"lint": "cd src&&run lx",
+    "out": "tsc -p .",
+    "in": "tsc -w",
+    "test": "yarn out&&node ./dist/test.js"
+	}
+}
