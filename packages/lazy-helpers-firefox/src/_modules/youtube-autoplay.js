@@ -1,4 +1,4 @@
-import { delay } from '../utils/delay'
+import { delay } from 'rambdax'
 
 const dialogSelector = 'yt-confirm-dialog-renderer'
 const confirmSelector = 'confirm-button'
