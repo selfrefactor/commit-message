@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "out": "webpack --config webpack.config.js",
+    "out": "yarn build&&yarn move",
+    "move": "cp ./dist/bundle.js ./to-publish/",
+    "build": "webpack --config webpack.config.js",
     "in": "node files/watch"
   },
   "dependencies": {
