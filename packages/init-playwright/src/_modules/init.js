@@ -20,7 +20,6 @@ async function init(input, extraProps = {}){
     'chromium'
 
   const browserType = input.mobile ? 'chromium' : browserTypeInput
-
   const settings = getSettings(input, extraProps)
   const browser = await playwright[ browserType ].launch(settings)
   const context = await getContext(browser, input.mobile)

@@ -15,10 +15,6 @@ const defaultResolution = {
   x : 1366,
   y : 768,
 }
-const mobileResolution = {
-  x : 400,
-  y : 820,
-}
 
 const defaultInput = {
   headless      : true,
@@ -26,15 +22,6 @@ const defaultInput = {
   resolution    : defaultResolution,
   url           : defaultURL,
   waitCondition : defaultWaitCondition,
-}
-
-function getDefaultInput(mobile){
-  if (!mobile) return defaultInput
-
-  return {
-    ...defaultInput,
-    resolution : mobileResolution,
-  }
 }
 
 function logMethod(input){
@@ -79,7 +66,7 @@ async function initPlaywright(inputRaw){
   const headless = headlessModule() ? {} : { headless : false }
 
   const input = {
-    ...getDefaultInput(inputRaw.mobile),
+    ...defaultInput,
     ...inputRaw,
     ...headless,
   }

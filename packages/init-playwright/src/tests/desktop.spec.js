@@ -1,4 +1,4 @@
-import { attach, initPlaywright } from '../index.js'
+import { attach, initPlaywright } from '../index'
 const GITHUB = 'https://github.com'
 jest.setTimeout(30000)
 
@@ -6,7 +6,7 @@ test('happy', async () => {
   const { browser, page } = await initPlaywright({
     headless      : false,
     logFlag       : false,
-    // browser       : 'chromium',
+    browser       : 'firefox',
     url           : GITHUB,
     waitCondition : {
       timeout   : 5800,
@@ -17,9 +17,11 @@ test('happy', async () => {
   try {
     const _ = attach(page)
 
-    const text = await _.$$(
-      'div', _.its, 'innerHTML'
-    )
+    const foo = await page.$$('.foo')
+    console.log(foo)
+    // const text = await _.$$(
+    //   'div', _.its, 'innerHTML'
+    // )
     expect(text.length).toBeGreaterThan(50)
     await browser.close()
   } catch (error){

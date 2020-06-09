@@ -1,4 +1,4 @@
-import { attach, initPlaywright } from '../index.js'
+import { attach, initPlaywright } from '../index'
 const REDDIT = 'https://reddit.com'
 const LOCAL = 'http://helpkarma.l:3000'
 const GITHUB = 'https://github.com'
@@ -12,10 +12,9 @@ test('local', async () => {
       logFlag       : false,
       mobile        : true,
       url           : LOCAL,
-      waitCondition : {
-        timeout   : 5000,
-        waitUntil : 'load',
-      },
+      waitCondition : 'load',
+      // waitCondition :'domcontentloaded'
+      // waitCondition :'networkidle'
     })
     const _ = attach(page)
 
@@ -55,24 +54,19 @@ test('reddit', async () => {
   }
 })
 
-test.skip('github', async () => {
+test('github', async () => {
   try {
     var { browser, page } = await initPlaywright({
       headless      : false,
       logFlag       : false,
       mobile        : true,
       url           : GITHUB,
-      waitCondition : {
-        timeout   : 5000,
-        waitUntil : 'load',
-      },
+      waitCondition : 'load',
+      // waitCondition :'domcontentloaded'
+      // waitCondition :'networkidle'
     })
-    const _ = attach(page)
-
-    const text = await _.$$(
-      'div', _.its, 'innerHTML'
-    )
-    expect(text.length).toBeGreaterThan(0)
+    const foo = await page.$('foo')
+    expect(foo).toBeNull()
     await browser.close()
   } catch (error){
     console.log(error)
