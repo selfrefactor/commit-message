@@ -66,6 +66,7 @@
     "**/.svn": false,
     "**/.vscodex": true,
     "**/coverage": true,
+    "**/coverage-ts": true,
     "**/CVS": false,
     "**/node_modules": true,
     "**/yarn-error.log": true,
