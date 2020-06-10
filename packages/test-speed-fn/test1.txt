@@ -1,0 +1,20 @@
+  FIRST_CONTENTFUL_PAINT_MS: {
+    percentile: 4587,
+    distributions: [ [Object], [Object], [Object] ],
+    category: 'SLOW'
+  },
+  CUMULATIVE_LAYOUT_SHIFT_SCORE: {
+    percentile: 84,
+    distributions: [ [Object], [Object], [Object] ],
+    category: 'SLOW'
+  },
+  FIRST_INPUT_DELAY_MS: {
+    percentile: 72,
+    distributions: [ [Object], [Object], [Object] ],
+    category: 'FAST'
+  },
+  LARGEST_CONTENTFUL_PAINT_MS: {
+    percentile: 6065,
+    distributions: [ [Object], [Object], [Object] ],
+    category: 'SLOW'
+  }

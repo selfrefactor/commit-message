@@ -1,0 +1,39 @@
+{
+  "name": "test-speed-fn",
+  "scripts": {
+    "out": "tsc -p .",
+    "in": "tsc -w",
+    "test": "jest",
+    "prove": "node ./prove.js"
+  },
+  "typings": "./index.d.ts",
+  "main": "./src/test-speed-fn.js",
+  "version": "0.1.0",
+  "dependencies": {
+    "env-fn": "2.1.0",
+    "helpers-fn": "^0.4.1",
+    "opener": "^1.5.1",
+    "psi": "4.0.1",
+    "rambdax": "3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@babel/plugin-proposal-object-rest-spread": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@types/jest": "25.2.3",
+    "jest": "26.0.1",
+    "typescript": "3.9.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testRegex": ".*\\.spec\\.js$",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ]
+  },
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/test-speed",
+  "license": "MIT",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "description": "test-speed",
+  "private": false
+}
