@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.explanationOfTypes = exports.typesOfCommit = exports.FEATURE = exports.TEST_KEY = exports.SUPPORT_KEY = exports.FIX_KEY = exports.FEATURE_KEY = exports.SERVICE_KEY = exports.DOCS_KEY = exports.CUSTOM_LABEL = exports.NO_LABEL = exports.USER_LABEL_INPUT = exports.ASK_FOR_MESSAGE = exports.ASK_FOR_TYPE = exports.ALL_LABELS = void 0;
 exports.ALL_LABELS = [
-    '🐪 dnd',
     '🎏 refactor',
     '📦 dep',
     '🔥 important',
@@ -16,11 +15,13 @@ exports.ALL_LABELS = [
     '🥑 typings',
     '🎳 lint',
     '💋 style',
-    'examples',
-    'build',
-    'method',
+    '🐪 build',
     'docs',
+    'changelog',
+    'examples',
+    'method',
     'prepublish',
+    'stop',
     'usage',
 ];
 exports.ASK_FOR_TYPE = 'What is the type of the commit?';

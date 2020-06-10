@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.commitMessage = void 0;
 const helpers_fn_1 = require("helpers-fn");
+const string_fn_1 = require("string-fn");
 const constants_1 = require("./constants");
 const getLatestCommits_1 = require("./_modules/getLatestCommits");
 const getCommitLabel_1 = require("./_modules/getCommitLabel");
 const getCommitType_1 = require("./_modules/getCommitType");
-const getWorkInProgress_1 = require("./_modules/getWorkInProgress");
 const promptInput_1 = require("./_modules/promptInput");
 const showExplanations_1 = require("./_modules/showExplanations");
 // It ask the user for type and text of commit
@@ -18,26 +18,26 @@ async function commitMessage(dir = process.cwd()) {
         helpers_fn_1.log(singleCommit, 'info');
     });
     helpers_fn_1.log('sep');
-    const workInProgress = getWorkInProgress_1.getWorkInProgress();
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);
     const commitLabel = await getCommitLabel_1.getCommitLabel(commitType);
-    if (workInProgress.length > 0) {
-        helpers_fn_1.log(`WorkInProgress - '${workInProgress}'`, 'info');
+    const labelIsMessage = string_fn_1.count(commitLabel, ' ') > 0;
+    if (labelIsMessage) {
+        return `${commitType.value}: ${commitLabel}`;
     }
     const commitMessageValue = await promptInput_1.promptInput(constants_1.ASK_FOR_MESSAGE);
-    const noInput = commitMessageValue.trim() === '';
-    const noLabel = commitLabel === constants_1.NO_LABEL;
-    if (noInput && noLabel) {
-        return commitType.value;
+    const hasInput = commitMessageValue.trim() !== '';
+    const hasLabel = commitLabel !== constants_1.NO_LABEL;
+    if (hasInput && hasLabel) {
+        return `${commitType.value}@${commitLabel} ${commitMessageValue}`;
     }
-    if (noInput && !noLabel) {
+    if (!hasInput && hasLabel) {
         return `${commitType.value}@${commitLabel}`;
     }
-    if (!noInput && noLabel) {
+    if (hasInput && !hasLabel) {
         return `${commitType.value}: ${commitMessageValue}`;
     }
-    return `${commitType.value}@${commitLabel} ${commitMessageValue}`;
+    return commitType.value;
 }
 exports.commitMessage = commitMessage;
 //# sourceMappingURL=commitMessage.js.map

@@ -1,10 +1,10 @@
 import {log} from 'helpers-fn'
+import {count} from 'string-fn'
 import {ASK_FOR_MESSAGE, typesOfCommit, NO_LABEL} from './constants'
 
 import {getLatestCommits} from './_modules/getLatestCommits'
 import {getCommitLabel} from './_modules/getCommitLabel'
 import {getCommitType} from './_modules/getCommitType'
-import {getWorkInProgress} from './_modules/getWorkInProgress'
 
 import {promptInput} from './_modules/promptInput'
 import {showExplanations} from './_modules/showExplanations'
@@ -17,30 +17,34 @@ export async function commitMessage(dir = process.cwd()): Promise<string> {
   latestCommits.forEach(singleCommit => {
     log(singleCommit, 'info')
   })
+
   log('sep')
-  const workInProgress = getWorkInProgress()
   showExplanations()
+
   const commitType = await getCommitType(typesOfCommit)
   const commitLabel = await getCommitLabel(commitType)
+  const labelIsMessage = count(commitLabel, ' ') > 0
 
-  if (workInProgress.length > 0) {
-    log(`WorkInProgress - '${workInProgress}'`, 'info')
+  if (labelIsMessage) {
+    return `${commitType.value}: ${commitLabel}`
   }
 
   const commitMessageValue = await promptInput(ASK_FOR_MESSAGE)
 
-  const noInput = commitMessageValue.trim() === ''
-  const noLabel = commitLabel === NO_LABEL
+  const hasInput = commitMessageValue.trim() !== ''
+  const hasLabel = commitLabel !== NO_LABEL
 
-  if (noInput && noLabel) {
-    return commitType.value
+  if (hasInput && hasLabel) {
+    return `${commitType.value}@${commitLabel} ${commitMessageValue}`
   }
-  if (noInput && !noLabel) {
+
+  if (!hasInput && hasLabel) {
     return `${commitType.value}@${commitLabel}`
   }
-  if (!noInput && noLabel) {
+
+  if (hasInput && !hasLabel) {
     return `${commitType.value}: ${commitMessageValue}`
   }
 
-  return `${commitType.value}@${commitLabel} ${commitMessageValue}`
+  return commitType.value
 }

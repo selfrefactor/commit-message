@@ -15,7 +15,9 @@ function sortFn(a, b) {
 }
 async function searchStates(_, userInput) {
     rambdax_1.setter(constants_1.USER_LABEL_INPUT, userInput);
-    const labels = fuzzy.filter(userInput || '', constants_1.ALL_LABELS).map(function (el) {
+    const labels = fuzzy
+        .filter(userInput || '', constants_1.ALL_LABELS)
+        .map(function (el) {
         return el.original;
     });
     const sorted = rambdax_1.sort(sortFn)(labels);

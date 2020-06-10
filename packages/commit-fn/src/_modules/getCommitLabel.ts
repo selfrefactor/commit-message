@@ -1,4 +1,9 @@
-import {NO_LABEL, CUSTOM_LABEL, ALL_LABELS, USER_LABEL_INPUT} from '../constants'
+import {
+  NO_LABEL,
+  CUSTOM_LABEL,
+  ALL_LABELS,
+  USER_LABEL_INPUT,
+} from '../constants'
 import {log} from 'helpers-fn'
 import * as inquirer from 'inquirer'
 import * as fuzzy from 'fuzzy'
@@ -12,9 +17,11 @@ function sortFn(a: any, b: any) {
 
 async function searchStates(_, userInput) {
   setter(USER_LABEL_INPUT, userInput)
-  const labels = fuzzy.filter(userInput || '', ALL_LABELS).map(function(el) {
-    return el.original
-  })
+  const labels = fuzzy
+    .filter(userInput || '', ALL_LABELS)
+    .map(function(el) {
+      return el.original
+    })
   const sorted = sort(sortFn)(labels)
   if (labels.length === 0) return [CUSTOM_LABEL]
   if (labels.length === ALL_LABELS.length) return [NO_LABEL, ...sorted]
@@ -32,7 +39,7 @@ async function pickLabel() {
       pageSize: 5,
     },
   ])
-  if(state === CUSTOM_LABEL) return getter(USER_LABEL_INPUT)
+  if (state === CUSTOM_LABEL) return getter(USER_LABEL_INPUT)
   if (!state.includes(' ')) return state
 
   return last(state.split(' '))

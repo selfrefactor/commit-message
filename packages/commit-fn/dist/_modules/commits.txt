@@ -1,17 +1,17 @@
-commit 7c68ca4af80cc7b8c22bef394b18c753f94532d8
+commit 5089c277b9a3738c45e5a7bb847e9d22f13b2067
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Sat May 30 15:48:41 2020 +0300
+Date:   Wed Jun 10 20:24:42 2020 +0300
 
-    chore@bump patch
+    chore@dnd
 
-commit 45a292c3355eac4b4a96c1f47cd720d502f7cb59
+commit 30ee3719d43298a31df096d6add054500af29297
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Sat May 30 15:48:21 2020 +0300
+Date:   Wed Jun 10 20:23:35 2020 +0300
 
-    fix: create.benchmark should return a promise
+    fix: youtube autoplay needs dom element to be removed
 
-commit 83f7eca6d988f3263ca67da3795ab35946b99c4c
+commit 8b07a03db1064470ccc1799bce75544150724d43
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Fri May 29 11:38:02 2020 +0300
+Date:   Wed Jun 10 18:39:13 2020 +0300
 
     chore@dnd

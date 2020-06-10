@@ -1,6 +1,4 @@
-
 export const ALL_LABELS = [
-  '🐪 dnd',
   '🎏 refactor',
   '📦 dep',
   '🔥 important',
@@ -14,11 +12,13 @@ export const ALL_LABELS = [
   '🥑 typings',
   '🎳 lint',
   '💋 style',
-  'examples',
-  'build',
-  'method',
+  '🐪 build',
   'docs',
+  'changelog',
+  'examples',
+  'method',
   'prepublish',
+  'stop',
   'usage',
 ]
 
