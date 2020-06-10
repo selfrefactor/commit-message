@@ -5,7 +5,7 @@
   "license": "MIT",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/lazy-helpers-firefox",
   "scripts": {
-    "finish": "web-ext build",
+    "finish": "web-ext build --overwrite-dest",
     "out": "yarn build&&yarn finish",
     "move": "cp ./dist/bundle.js ./to-publish/",
     "build": "webpack --config webpack.config.js",
