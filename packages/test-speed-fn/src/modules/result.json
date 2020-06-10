@@ -1388,7 +1388,7 @@
               "wastedBytes": 33912.637500000004,
               "totalBytes": 39319,
               "cacheLifetimeMs": 1800000,
-              "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyBgrqje5UeEd8hgLIXx5bASif2SwwLFjgY&libraries=places&language=en"
+              "url": "https://maps.googleapis.com/maps/api/js?key=&libraries=places&language=en"
             },
             {
               "cacheHitProbability": 0.25,
@@ -1497,7 +1497,7 @@
               "scriptParseCompile": 14.072,
               "total": 76.57199999999999,
               "scripting": 59.315999999999995,
-              "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyBgrqje5UeEd8hgLIXx5bASif2SwwLFjgY&libraries=places&language=en"
+              "url": "https://maps.googleapis.com/maps/api/js?key=&libraries=places&language=en"
             },
             {
               "scripting": 55.272,
@@ -2358,7 +2358,7 @@
             },
             {
               "statusCode": 200,
-              "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyBgrqje5UeEd8hgLIXx5bASif2SwwLFjgY&libraries=places&language=en",
+              "url": "https://maps.googleapis.com/maps/api/js?key=&libraries=places&language=en",
               "finished": true,
               "resourceSize": 118984,
               "startTime": 1594.612999819219,
@@ -3110,7 +3110,7 @@
               "totalBytes": 39319,
               "wastedPercent": 56.73535937605057,
               "wastedBytes": 22308,
-              "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyBgrqje5UeEd8hgLIXx5bASif2SwwLFjgY&libraries=places&language=en"
+              "url": "https://maps.googleapis.com/maps/api/js?key=&libraries=places&language=en"
             },
             {
               "totalBytes": 32869,

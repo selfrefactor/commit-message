@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Object {
+  "details": Object {
+    "firstPaint": Object {
+      "score": "slow",
+      "value": 4500,
+    },
+    "inputDelay": Object {
+      "score": "fast",
+      "value": 22,
+    },
+    "largestPaint": Object {
+      "score": "slow",
+      "value": 5407,
+    },
+    "lauoutShift": Object {
+      "score": "slow",
+      "value": 81,
+    },
+  },
+  "overallScore": "slow",
+  "scoreCounter": Object {
+    "fast": 1,
+    "slow": 3,
+  },
+}
+`;

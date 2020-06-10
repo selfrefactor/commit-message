@@ -2,7 +2,8 @@ import { delay } from 'rambdax'
 
 const dialogSelector = 'yt-confirm-dialog-renderer'
 const confirmSelector = 'confirm-button'
-
+// 
+// getComputedStyle($('yt-confirm-dialog-renderer'))['padding-left']
 function hasDialog(){
   return document.querySelector(dialogSelector) !== null
 }

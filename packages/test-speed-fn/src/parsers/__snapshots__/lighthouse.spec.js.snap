@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Object {
+  "blockingResources": Object {
+    "displayValue": "Potential savings of 600 ms",
+    "score": 0.58,
+  },
+  "bytes": Object {
+    "displayValue": "Total size was 11,901 KB",
+    "score": 0,
+  },
+  "dom": Object {
+    "displayValue": "410 elements",
+    "score": 1,
+  },
+  "firstPaint": Object {
+    "displayValue": "16.8 s",
+    "score": 0,
+  },
+  "firstPaint3G": Object {
+    "displayValue": "35226 ms",
+    "score": 0,
+  },
+  "images": Object {
+    "displayValue": "Potential savings of 596 KB",
+    "score": 0.2,
+  },
+  "interactive": Object {
+    "displayValue": "25.0 s",
+    "score": 0.01,
+  },
+  "largestPaint": Object {
+    "displayValue": "33.2 s",
+    "score": 0,
+  },
+  "layoutShiftElements": "5 elements found",
+  "performanceScore": 0.03,
+  "requestsSummary": "63 requests • 11,901 KB",
+  "responsiveImages": Object {
+    "displayValue": "Potential savings of 5,172 KB",
+    "score": 0,
+  },
+  "server": "Initial server response time was short",
+  "spped": Object {
+    "displayValue": "16.0 s",
+    "score": 0.01,
+  },
+  "thirdParty": Object {
+    "displayValue": "Third-party code blocked the main thread for 630 ms",
+    "score": 0,
+  },
+  "timing": 12108.99,
+  "unused": Object {
+    "displayValue": "Potential savings of 2,168 KB",
+    "score": 0,
+  },
+}
+`;

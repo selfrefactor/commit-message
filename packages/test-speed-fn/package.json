@@ -1,11 +1,5 @@
 {
   "name": "test-speed-fn",
-  "scripts": {
-    "out": "tsc -p .",
-    "in": "tsc -w",
-    "test": "jest",
-    "prove": "node ./src/prove.js"
-  },
   "typings": "./index.d.ts",
   "main": "./src/test-speed-fn.js",
   "version": "0.1.0",
@@ -34,6 +28,6 @@
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/test-speed",
   "license": "MIT",
   "author": "Dejan Toteff <deyan8284@gmail.com>",
-  "description": "test-speed",
+  "description": "test speed of url address using GTMetrix and Page Speed Insights APIs",
   "private": false
 }

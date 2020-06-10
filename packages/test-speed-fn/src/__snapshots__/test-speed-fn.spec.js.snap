@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Object {
+  "gtmetrix": Object {
+    "domInteractive": 1058,
+    "firstPaint": 1829,
+    "fullyLoaded": 2908,
+    "onLoad": 1058,
+    "pageLoadTime": 1058,
+    "pagespeedScore": 20,
+    "yslowScore": 88,
+  },
+  "lighthouse": Object {
+    "blockingResources": Object {
+      "displayValue": "Potential savings of 600 ms",
+      "score": 0.58,
+    },
+    "bytes": Object {
+      "displayValue": "Total size was 12,219 KB",
+      "score": 0,
+    },
+    "dom": Object {
+      "displayValue": "410 elements",
+      "score": 1,
+    },
+    "firstPaint": Object {
+      "displayValue": "16.7 s",
+      "score": 0,
+    },
+    "firstPaint3G": Object {
+      "displayValue": "34600.5 ms",
+      "score": 0,
+    },
+    "images": Object {
+      "displayValue": "Potential savings of 596 KB",
+      "score": 0.22,
+    },
+    "interactive": Object {
+      "displayValue": "25.0 s",
+      "score": 0.01,
+    },
+    "largestPaint": Object {
+      "displayValue": "30.8 s",
+      "score": 0,
+    },
+    "layoutShiftElements": "5 elements found",
+    "loadingExperience": Object {
+      "details": Object {
+        "firstPaint": Object {
+          "score": "slow",
+          "value": 4500,
+        },
+        "inputDelay": Object {
+          "score": "fast",
+          "value": 22,
+        },
+        "largestPaint": Object {
+          "score": "slow",
+          "value": 5407,
+        },
+        "lauoutShift": Object {
+          "score": "slow",
+          "value": 81,
+        },
+      },
+      "overallScore": "slow",
+      "scoreCounter": Object {
+        "fast": 1,
+        "slow": 3,
+      },
+    },
+    "originLoadingExperience": Object {
+      "details": Object {
+        "firstPaint": Object {
+          "score": "slow",
+          "value": 4500,
+        },
+        "inputDelay": Object {
+          "score": "fast",
+          "value": 22,
+        },
+        "largestPaint": Object {
+          "score": "slow",
+          "value": 5407,
+        },
+        "lauoutShift": Object {
+          "score": "slow",
+          "value": 81,
+        },
+      },
+      "overallScore": "slow",
+      "scoreCounter": Object {
+        "fast": 1,
+        "slow": 3,
+      },
+    },
+    "performanceScore": 0.03,
+    "requestsSummary": "62 requests • 12,219 KB",
+    "responsiveImages": Object {
+      "displayValue": "Potential savings of 5,371 KB",
+      "score": 0,
+    },
+    "server": "Initial server response time was short",
+    "spped": Object {
+      "displayValue": "15.8 s",
+      "score": 0.01,
+    },
+    "thirdParty": Object {
+      "displayValue": "Third-party code blocked the main thread for 760 ms",
+      "score": 0,
+    },
+    "timing": 11998.93,
+    "unused": Object {
+      "displayValue": "Potential savings of 2,168 KB",
+      "score": 0,
+    },
+  },
+}
+`;
