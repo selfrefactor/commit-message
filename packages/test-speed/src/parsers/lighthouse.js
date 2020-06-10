@@ -48,6 +48,8 @@ function parseAudits(audits){
 const getPerformanceScore = path('categories.performance.score')
 const getTiming = path('timing.total')
 
+
+// https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html
 /**
  * @param {{ audits: object, timing: object, categories: object }}   input - PSI result.
  * @return {object}
