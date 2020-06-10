@@ -7,7 +7,7 @@ const { log } = require('helpers-fn')
 const { psi } = require('./modules/psi')
 const { webPageTest } = require('./modules/web-page-test')
 
-async function testSpeedFn(url){
+async function testSpeed(url){
   const [ gtmetrixPollCommand, psiResult ] = await Promise.all([
     gtmetrix(url),
     psi(url),
@@ -24,5 +24,5 @@ async function testSpeedFn(url){
   return toReturn
 }
 
-exports.testSpeedFn = testSpeedFn
+exports.testSpeed = testSpeed
 exports.webPageTest = webPageTest
