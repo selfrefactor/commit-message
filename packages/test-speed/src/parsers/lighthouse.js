@@ -48,6 +48,10 @@ function parseAudits(audits){
 const getPerformanceScore = path('categories.performance.score')
 const getTiming = path('timing.total')
 
+/**
+ * @param {{ audits: object, timing: object, categories: object }}   input - PSI result.
+ * @return {object}
+ */
 function parseLighthouse(input){
   return {
     ...parseAudits(input.audits),
