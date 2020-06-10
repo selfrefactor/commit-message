@@ -1,1 +1,1 @@
-export const UNAUTHORIZED = 'UNAUTHORIZED_ACCESS - possibly missing credentials'
+exports.UNAUTHORIZED = 'UNAUTHORIZED_ACCESS - possibly missing credentials'

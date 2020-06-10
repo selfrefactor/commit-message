@@ -1,12 +1,16 @@
 const psiLib = require('psi')
+const { outputJson } = require('fs-extra')
 
 function parseLoadingExperience(loadingExperience){
   console.log({
     loadingExperience,
-      FIRST_CONTENTFUL_PAINT_MS: loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS,
-      CUMULATIVE_LAYOUT_SHIFT_SCORE: loadingExperience.metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE,
-      FIRST_INPUT_DELAY_MS: loadingExperience.metrics.FIRST_INPUT_DELAY_MS,
-      LARGEST_CONTENTFUL_PAINT_MS: loadingExperience.metrics.LARGEST_CONTENTFUL_PAINT_MS,
+    FIRST_CONTENTFUL_PAINT_MS :
+      loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS,
+    CUMULATIVE_LAYOUT_SHIFT_SCORE :
+      loadingExperience.metrics.CUMULATIVE_LAYOUT_SHIFT_SCORE,
+    FIRST_INPUT_DELAY_MS        : loadingExperience.metrics.FIRST_INPUT_DELAY_MS,
+    LARGEST_CONTENTFUL_PAINT_MS :
+      loadingExperience.metrics.LARGEST_CONTENTFUL_PAINT_MS,
   })
 }
 
@@ -31,10 +35,13 @@ function parseResponse(input){
   // })
 }
 
-async function psi(url) {
-    const {data} = await psiLib(url)
+async function psi(url){
+  const { data } = await psiLib(url)
+  await outputJson(
+    `${ __dirname }/result.json`, data, { spaces : 2 }
+  )
 
-    const result= parseResponse(data)
+  // const result= parseResponse(data)
 }
 
 exports.psi = psi

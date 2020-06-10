@@ -4,7 +4,7 @@
     "out": "tsc -p .",
     "in": "tsc -w",
     "test": "jest",
-    "prove": "node ./prove.js"
+    "prove": "node ./src/prove.js"
   },
   "typings": "./index.d.ts",
   "main": "./src/test-speed-fn.js",

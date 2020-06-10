@@ -1,12 +1,12 @@
-const { exec: execModule }  = require('child_process')
+const { exec: execModule } = require('child_process')
 
-function exec(input) {
+function exec(input){
   return new Promise((resolve, reject) => {
     const willReturn = []
-    const execCommand = execModule(input.command, { cwd: input.cwd })
+    const execCommand = execModule(input.command, { cwd : input.cwd })
 
     execCommand.stdout.on('data', chunk => {
-      willReturn.push((chunk as Buffer).toString('utf8'))
+      willReturn.push(chunk.toString('utf8'))
     })
     execCommand.stdout.on('end', () => resolve(willReturn))
     execCommand.stdout.on('error', err => reject(err))
