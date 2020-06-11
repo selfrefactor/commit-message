@@ -4,10 +4,11 @@ const dialogSelector = 'yt-confirm-dialog-renderer'
 const confirmSelector = 'confirm-button'
 
 function hasDialog(){
-  return document.querySelector(dialogSelector) !== null && document.getElementById(confirmSelector)
+  return document.querySelector(dialogSelector) !== null && document.getElementById(confirmSelector) !== null
 }
 
-async function confirmAutoplay(){
+async function removeWarning(){
+  console.log('start remove modal')
   const el = document.getElementById(confirmSelector)
   if (!el) return console.log('Hmm! Confirm selector seems wrong')
   el.click()
@@ -19,9 +20,9 @@ async function confirmAutoplay(){
 }
 
 export async function youtubeAutoplay(){
-  console.log('Start youtube autoplay')
+  console.log('Start youtube autoplay!')
   while (true){
-    if (hasDialog()) await confirmAutoplay()
+    if (hasDialog()) await removeWarning()
     await delay(10000)
   }
 }
