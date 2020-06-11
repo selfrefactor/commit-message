@@ -4,7 +4,11 @@ VSCode extension for magic-like features
 
 [VSCode marketplace link](https://marketplace.visualstudio.com/items?itemName=selfrefactor.magic-beans)
 
-## TODO
+> Important
+
+Commands such as 'format json` and 'create spec file' require the extension to be started. One way to do so is from command panel, but more convinient way is to press 'copy trimmed' or 'order props' shortkeys.
+
+> TODO
 
 Replace `klaw-sync` with `run-fn` related dep
 
@@ -19,6 +23,10 @@ By default the interval is 120 seconds and on every loop a random file larger th
 Start with `ctrl+f8`
 
 If `RANDOM_FILE_AUTO_SCROLL` is set to `true` then on every 10 seconds scroll position is moved down with 10 lines.
+
+## Format Json
+
+Open command search bar and search for `Format JSON`
 
 ## Create spec file
 

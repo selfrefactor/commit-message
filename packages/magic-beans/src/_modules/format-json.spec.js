@@ -1,3 +1,5 @@
+import { formatJson } from './format-json'
+const packageJson = `
 {
 	"jest": {
 		"moduleFileExtensions": [
@@ -105,27 +107,17 @@
 				"magicBeans.RANDOM_FILE_SCROLL_BY": {
 					"type": "number",
 					"default": 15,
-					"description": "(In lines) how many lines to be scrolled down every `RANDOM_FILE_SCROLL_INTERVAL` seconds"
+					"description": "(In lines) how many lines to be scrolled down every RANDOM_FILE_SCROLL_INTERVAL seconds"
 				},
 				"magicBeans.RANDOM_FILE_SCROLL_INTERVAL": {
 					"type": "number",
 					"default": 12,
-					"description": "(In seconds) how ofter scroll down by `RANDOM_FILE_SCROLL_BY` lines will be applied in `random file` mode"
+					"description": "(In seconds) how ofter scroll down by RANDOM_FILE_SCROLL_BY lines will be applied in random file mode"
 				},
 				"magicBeans.RANDOM_FILE_MINIMAL_SIZE": {
 					"type": "number",
 					"default": 500,
-					"description": "(In bytes) smallest file size participating in `random file` mode"
-				},
-				"magicBeans.RANDOM_FILE_MAXIMAL_SIZE": {
-					"type": "number",
-					"default": 3200,
-					"description": "(In bytes) largest file size participating in `random file` mode"
-				},
-				"magicBeans.IMPORT_TARGET": {
-					"type": "string",
-					"default": "lodash",
-					"description": "Set utility library for magic import"
+					"description": "(In bytes) smallest file size participating in random file mode"
 				}
 			}
 		}
@@ -152,3 +144,8 @@
 		"string-fn": "^2.11.0"
 	}
 }
+`.trim()
+
+test('happy', () => {
+  expect(formatJson(packageJson)).toMatchSnapshot()
+})
