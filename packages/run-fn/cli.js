@@ -8,6 +8,7 @@ const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
 const { deploy } = require('./services/de/deploy')
+const { fastDeploy } = require('./services/d/fastDeploy')
 const { lintFile } = require('./services/lintFile/lintFile')
 const { lintFolder } = require('./services/lintFolder/lintFolder')
 const { log } = require('helpers-fn')
@@ -51,6 +52,10 @@ async function runFn(){
 
   if (firstArgument === 'read'){
     return read(secondArgument, thirdArgument)
+  }
+
+  if (firstArgument === 'd'){
+    return fastDeploy(...[ secondArgument, thirdArgument, ...rest ])
   }
 
   log('Such method does not exist', 'error')
