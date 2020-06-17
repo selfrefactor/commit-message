@@ -4,7 +4,7 @@
 	"main": "./src/test-speed.js",
 	"version": "0.2.1",
 	"dependencies": {
-		"env-fn": "2.1.0",
+		"env-fn": "2.1.1",
 		"helpers-fn": "0.4.1",
 		"opener": "1.5.1",
 		"psi": "4.0.1",
