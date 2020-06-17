@@ -2,7 +2,7 @@
 	"name": "test-speed",
 	"typings": "./index.d.ts",
 	"main": "./src/test-speed.js",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"dependencies": {
 		"env-fn": "2.1.1",
 		"helpers-fn": "0.4.1",
