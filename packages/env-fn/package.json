@@ -1,14 +1,16 @@
 {
 	"dependencies": {
-		"fs-extra": "^9.0.0",
-		"rambda": "^5.0.0"
+		"rambda": "5.7.0"
 	},
 	"name": "env-fn",
 	"version": "2.1.0",
 	"typings": "index.d.ts",
-	"description": "Load env from local file system",
+	"description": "Load environment variables from from local `.env` file",
 	"main": "envFn.js",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/env-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		
+	}
 }

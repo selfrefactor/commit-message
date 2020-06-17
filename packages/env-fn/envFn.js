@@ -55,16 +55,14 @@ const envFn = (mode = 'local', cwd = process.cwd()) => {
 
   const initialFilePath = resolve(cwd, '.env')
 
-  if (existsSync(initialFilePath)){
+  if (existsSync(initialFilePath) && mode === 'local'){
     return applyEnvFn(initialFilePath)
   }
 
   const filePath = getEnvPath(mode === 'special', cwd)
 
   if (filePath === undefined || existsSync(filePath) === false){
-    console.log('Such env filepath does not exist !!!')
-
-    return
+    throw new Error('Such env filepath does not exist !!!')
   }
 
   return applyEnvFn(filePath)
