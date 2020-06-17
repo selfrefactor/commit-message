@@ -39,7 +39,7 @@ async function runFn(){
   }
 
   if (firstArgument === 'de'){
-    return deploy(secondArgument)
+    return deploy()
   }
 
   if (firstArgument === 'c'){
