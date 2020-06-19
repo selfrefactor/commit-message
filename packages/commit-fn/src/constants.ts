@@ -1,8 +1,6 @@
 import {load} from 'package-storage'
 
 const loaded = load('commitLabels', undefined, true)
-const loadedx = load('commitLabels', undefined, false)
-console.log({loaded, loadedx})
 export const customCommitLabels = Array.isArray(loaded) ? loaded : []
 
 export const ALL_LABELS = [
