@@ -95,7 +95,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
   const click = async (selector, nth) => {
     const els = await page.$$(selector);
     if (els.length <= nth) {
-      throw new Error(`Found only ${els.length} but requested ${nth} index`);
+      throw new Error(`Found only ${els.length} but requested ${nth} index | ${selector}`);
     }
     els[nth].click();
   };
@@ -107,7 +107,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     };
     const toReturn = await waitForMethod(condition, ms)();
     if (!toReturn) {
-      throw new Error(`Failed wait condition with input '${playwrightInput}'`);
+      throw new Error(`Failed wait condition | '${playwrightInput}'`);
     }
   };
 
@@ -118,7 +118,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     };
     const toReturn = await waitForMethod(condition, ms)();
     if (!toReturn) {
-      throw new Error(`Failed wait condition with input '${playwrightInput}'`);
+      throw new Error(`Failed wait condition | '${playwrightInput}'`);
     }
   };
 
@@ -127,7 +127,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     const foundElements = await page.$$(playwrightInput);
     if (foundElements.length <= nth) {
       throw new Error(
-        `Found only ${foundElements.length} but requested ${nth} index`
+        `Found only ${foundElements.length} but requested ${nth} index | ${playwrightInput}`
       );
     }
     await foundElements[nth].click();
