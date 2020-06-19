@@ -105,8 +105,8 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
       const foundElements = await page.$$(playwrightInput);
       return foundElements.length >= count;
     };
-    const toReturn = await waitForMethod(condition, ms)();
-    if (!toReturn) {
+    const waitResult = await waitForMethod(condition, ms)();
+    if (!waitResult) {
       throw new Error(`Failed wait condition | '${playwrightInput}'`);
     }
   };
@@ -116,8 +116,8 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
       const foundElements = await page.$$(playwrightInput);
       return foundElements.length < count;
     };
-    const toReturn = await waitForMethod(condition, ms)();
-    if (!toReturn) {
+    const waitResult = await waitForMethod(condition, ms)();
+    if (!waitResult) {
       throw new Error(`Failed wait condition | '${playwrightInput}'`);
     }
   };
@@ -132,6 +132,22 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     }
     await foundElements[nth].click();
   };
+
+  const waitForClassName = async ({ typeElement, predicate, ms = 7000, count = 1 }) => {
+    ok(predicate)(Function);
+
+    const checker = async () => {
+      const allClassNames = await getAllClassNames(typeElement)
+      const filtered = allClassNames.filter(predicate);
+
+      return filtered.length >= count
+    };
+
+    const waitResult = await waitForMethod(checker, ms, 7)();
+    if (!waitResult) {
+      throw new Error(`Failed wait condition for class name'`);
+    }
+  }
 
   const snap = async (label) => {
     const fileName = label ? dotCase(label) : uuid(5, true);
@@ -156,6 +172,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     waitAgainst,
     waitFor,
     waitForAndClick,
+    waitForClassName,
     waitForLocation,
   }
 }

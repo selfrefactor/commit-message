@@ -17,6 +17,13 @@ interface GetClassName{
   nth?: number
 }
 
+interface WaitForClassName{
+  typeElement: TypeElement
+  predicate: (className: string) => boolean
+  ms?: number
+  count?: number
+}
+
 export interface InputPlaywright{
   extraProps?: object
   resolution?: Resolution
@@ -49,6 +56,7 @@ interface AttachOutput{
   waitAgainst: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
   waitFor: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
   waitForAndClick: (playwrightInput: string, nth?: number, ms?: number) => Promise<void>
+  waitForClassName: (input: WaitForClassName) => Promise<void>
   waitForLocation: (predicate: (url: string) => boolean, ms?: number) => Promise<void>
 }
 
