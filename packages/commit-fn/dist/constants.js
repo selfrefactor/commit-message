@@ -3,8 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.explanationOfTypes = exports.typesOfCommit = exports.FEATURE = exports.TEST_KEY = exports.SUPPORT_KEY = exports.FIX_KEY = exports.FEATURE_KEY = exports.SERVICE_KEY = exports.DOCS_KEY = exports.CUSTOM_LABEL = exports.NO_LABEL = exports.USER_LABEL_INPUT = exports.ASK_FOR_MESSAGE = exports.ASK_FOR_TYPE = exports.ALL_LABELS = exports.customCommitLabels = void 0;
 const package_storage_1 = require("package-storage");
 const loaded = package_storage_1.load('commitLabels', undefined, true);
-const loadedx = package_storage_1.load('commitLabels', undefined, false);
-console.log({ loaded, loadedx });
 exports.customCommitLabels = Array.isArray(loaded) ? loaded : [];
 exports.ALL_LABELS = [
     ...exports.customCommitLabels,
