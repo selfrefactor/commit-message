@@ -11,17 +11,15 @@ test('local', async () => {
       headless      : false,
       logFlag       : false,
       mobile        : true,
-      url           : LOCAL,
+      url           : REDDIT,
       waitCondition : 'load',
       // waitCondition :'domcontentloaded'
       // waitCondition :'networkidle'
     })
     const _ = attach(page)
 
-    const text = await _.$$(
-      'div', _.its, 'innerHTML'
-    )
-    expect(text.length).toBeGreaterThan(0)
+    const allClassNames = await _.getAllClassNames('div')
+    expect(allClassNames.length).toBeGreaterThan(50)
     await browser.close()
   } catch (error){
     console.log(error)

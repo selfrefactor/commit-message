@@ -4,10 +4,18 @@ export type WaitConditionType = 'load' | 'domcontentloaded' | 'networkidle'
 
 export type SupportedBrowsers = 'chromium' | 'firefox'
 
+type TypeElement = 'div'|'span'|'a'|'button'|'input'|'select'|'textarea'|'img'
+
 interface WaitCondition{
   timeout: number
   waitUntil: WaitConditionType
-}  
+}
+
+interface GetClassName{
+  typeElement: TypeElement
+  predicate: (className: string) => boolean
+  nth?: number
+}
 
 export interface InputPlaywright{
   extraProps?: object
@@ -21,53 +29,27 @@ export interface InputPlaywright{
   logFlag?: boolean
 }
 
-interface Fn{
-  [key: string]: Function
-}
-
-interface Tabs{
-  before: number
-  after: number
-}
-
-interface Helpers{
-  extractText: (el?: any) => string
-}
-
-interface Selector{
-  index?: number,
-  selector: string
+interface ServerMock{
+  route: string
+  path: string
 }
 
 interface AttachOutput{
-  $$: (selector: string, fn: Function, ...args: any[]) => Promise<any>
-  $: (selector: string, fn: Function, ...args: any[]) => Promise<any>
-  ctrlA: () => Promise<void>
-  helpers: Helpers
-  clickAndWaitFor: (firstSelector: Selector, secondSelector: Selector, timeout?: number) => Promise<boolean>
-  eval: (input: Selector, fn: (node: HTMLElement) => any) => Promise<any>
-  click: (input: Selector) => Promise<boolean>
-  clickWithPartialText: (selector: string, text: string) => Promise<boolean>
-  clickWithText: (selector: string, text: string) => Promise<boolean>
+  applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
+  click: (el: string, nth: number) => Promise<void>
+  clickAndWait: (el: string, navigateEndsWith: string) => Promise<void>
   count: (selector: string) => Promise<number>
-  its: (els: Array<HTMLElement>, prop: string) => Promise<any>
-  delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
-  fill(selector: string, text: string): Promise<void>
-  match(label: string, updateFlag?: boolean, allowedPixedDiff?: number, threshold?: number): Promise<void>
-  focus: (selector: string) => Promise<boolean>
+  getAllClassNames: (typeElement: TypeElement) => Promise<Array<string>>
+  getClassName: (input: GetClassName)=> Promise<string>
+  goto: (url: string) => Promise<void>
   page: Page
   pressTab: (timesToPress: number) => Promise<void>
-  setInput: (selector: string, newValue: string) => Promise<boolean>
-  snap: (label: string) => Promise<void>
-  typeText: (text: string, step?: number) => Promise<void>
-  typeTextWithTab: (text: string, tabs?: Tabs, step?: number) => Promise<void>
-  url: () => Promise<string>
-  waitAndClick: (input: Selector) => Promise<boolean>
-  waitFor: (selector: string, count?: number) => Promise<boolean>
-  waitForLocation: (predicate: (url: string, ms?: number) => boolean) => Promise<boolean>
-  waitForSelector: (selector: string, timeout?: number) => Promise<boolean>
-  waitForSelectors: (selectors: string[]) => Promise<boolean>
+  snap: (label?: string) => Promise<void>
+  waitAgainst: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
+  waitFor: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
+  waitForAndClick: (playwrightInput: string, nth?: number, ms?: number) => Promise<void>
+  waitForLocation: (predicate: (url: string) => boolean, ms?: number) => Promise<void>
 }
 
 interface OutputPlaywright{

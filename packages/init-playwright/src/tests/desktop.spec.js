@@ -3,10 +3,11 @@ const GITHUB = 'https://github.com'
 jest.setTimeout(30000)
 
 test('happy', async () => {
+  const browserMode = 'firefox'
   const { browser, page } = await initPlaywright({
     headless      : false,
     logFlag       : false,
-    browser       : 'firefox',
+    browser       : browserMode,
     url           : GITHUB,
     waitCondition : {
       timeout   : 5800,
@@ -15,14 +16,10 @@ test('happy', async () => {
   })
 
   try {
-    const _ = attach(page)
+    const _ = attach(page, browserMode)
 
-    const foo = await page.$$('.foo')
-    console.log(foo)
-    // const text = await _.$$(
-    //   'div', _.its, 'innerHTML'
-    // )
-    expect(text.length).toBeGreaterThan(50)
+    const allClassNames = await _.getAllClassNames('div')
+    expect(allClassNames.length).toBeGreaterThan(50)
     await browser.close()
   } catch (error){
     await browser.close()

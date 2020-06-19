@@ -8,12 +8,13 @@
 	"main": "./src/index.js",
 	"version": "0.2.3",
 	"dependencies": {
-		"playwright": "1.1.0-next.1591678053179",
+		"string-fn": "2.11.1",
+		"playwright": "1.1.1",
 		"rambdax": "3.7.0"
 	},
 	"devDependencies": {
-		"@types/node": "14.0.12",
-		"@types/jest": "25.2.3",
+		"@types/node": "14.0.13",
+		"@types/jest": "26.0.0",
 		"jest": "26.0.1",
 		"@babel/core": "7.10.2",
 		"@babel/plugin-proposal-object-rest-spread": "7.10.1",
