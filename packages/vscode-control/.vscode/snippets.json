@@ -54,11 +54,11 @@
 		"description": "comment"
 	},
 	"StringTemplate": {
-		"prefix": "st",
+		"prefix": "str",
 		"body": [
 			"`${${0}}`"
 		],
-		"description": "st"
+		"description": "str"
 	},
 	"StringTemplatex": {
 		"prefix": "stx",
