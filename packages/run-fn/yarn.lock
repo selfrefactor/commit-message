@@ -521,10 +521,10 @@ commander@^2.15.1:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-commit-fn@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/commit-fn/-/commit-fn-2.3.1.tgz#1e52577a08f0463b8e4f6f3e95d9fc51aee2a77e"
-  integrity sha512-EHsJH/PKgkfZ3732aGAaEI388LBmE0+xcoeBB09Pg6yDaFH67d+remen9xYoc5ATcwAIxX2vG+qvqm3sAP46bw==
+commit-fn@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/commit-fn/-/commit-fn-2.3.2.tgz#af757772e6e19b60aa6cc10958ef40f2913821f0"
+  integrity sha512-pDBGwZfT8CCt+7RdE2jbI+9S8ziAJjFuP/b3TXrZ3St+WjpreQ9/2FSz+8NfRgVCUGRAmOvcFHwstrllwww7yw==
   dependencies:
     fuzzy "0.1.3"
     helpers-fn "0.4.1"
