@@ -7,6 +7,10 @@ const inquirer = require("inquirer");
 const fuzzy = require("fuzzy");
 const rambdax_1 = require("rambdax");
 function sortFn(a, b) {
+    if (constants_1.customCommitLabels.includes(a))
+        return -1;
+    if (constants_1.customCommitLabels.includes(b))
+        return 1;
     if (a.includes(' ') && !b.includes(' '))
         return -1;
     if (!a.includes(' ') && b.includes(' '))
@@ -20,7 +24,7 @@ async function searchStates(_, userInput) {
         .map(function (el) {
         return el.original;
     });
-    const sorted = rambdax_1.sort(sortFn)(labels);
+    const sorted = rambdax_1.sort(sortFn, labels);
     if (labels.length === 0)
         return [constants_1.CUSTOM_LABEL];
     if (labels.length === constants_1.ALL_LABELS.length)

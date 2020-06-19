@@ -2,6 +2,7 @@ import {
   NO_LABEL,
   CUSTOM_LABEL,
   ALL_LABELS,
+  customCommitLabels,
   USER_LABEL_INPUT,
 } from '../constants'
 import {log} from 'helpers-fn'
@@ -10,6 +11,9 @@ import * as fuzzy from 'fuzzy'
 import {sort, last, setter, getter} from 'rambdax'
 
 function sortFn(a: any, b: any) {
+  if(customCommitLabels.includes(a)) return -1
+  if(customCommitLabels.includes(b)) return 1
+  
   if (a.includes(' ') && !b.includes(' ')) return -1
   if (!a.includes(' ') && b.includes(' ')) return 1
   return a > b ? -1 : 1
@@ -22,7 +26,7 @@ async function searchStates(_, userInput) {
     .map(function(el) {
       return el.original
     })
-  const sorted = sort(sortFn)(labels)
+  const sorted = sort(sortFn, labels)
   if (labels.length === 0) return [CUSTOM_LABEL]
   if (labels.length === ALL_LABELS.length) return [NO_LABEL, ...sorted]
 

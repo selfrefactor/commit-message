@@ -1092,6 +1092,11 @@ os-tmpdir@~1.0.2:
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
 
+package-storage@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/package-storage/-/package-storage-1.0.0.tgz#6bc5467bbe6b131f3fa1b738e1b2821eab437253"
+  integrity sha512-jIsOXO3O/H4Mea6pbpl0CUQL12g3gbcUOWhCftSzOKQExxXkNuxAerG6SbRr6lYVl2epoj7vZIa8Yyr1JjyxOg==
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"

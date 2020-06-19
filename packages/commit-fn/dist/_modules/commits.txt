@@ -1,17 +1,17 @@
-commit 5089c277b9a3738c45e5a7bb847e9d22f13b2067
+commit 4bf2ba173262b238166629c70af01954bc661b33
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed Jun 10 20:24:42 2020 +0300
+Date:   Wed Jun 17 17:42:51 2020 +0300
 
-    chore@dnd
+    chore@bump patch
 
-commit 30ee3719d43298a31df096d6add054500af29297
+commit 8687202d1022df1885654c92a67078c964a2cba1
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed Jun 10 20:23:35 2020 +0300
+Date:   Wed Jun 17 17:42:37 2020 +0300
 
-    fix: youtube autoplay needs dom element to be removed
+    feat@deprecate prove script when deploy command
 
-commit 8b07a03db1064470ccc1799bce75544150724d43
+commit 4c46935f6f8efee8cf8334f81ba425e331a9ddb2
 Author: Dejan Toteff <deyan8284@gmail.com>
-Date:   Wed Jun 10 18:39:13 2020 +0300
+Date:   Wed Jun 17 13:44:18 2020 +0300
 
-    chore@dnd
+    feat@extension snap syntax support
