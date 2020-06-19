@@ -6,7 +6,7 @@
 	},
 	"typings": "./index.d.ts",
 	"main": "./src/index.js",
-	"version": "0.2.3",
+	"version": "0.3.0",
 	"dependencies": {
 		"string-fn": "2.11.1",
 		"playwright": "1.1.1",
