@@ -6,7 +6,7 @@
 	},
 	"typings": "./src/index.d.ts",
 	"main": "./dist/index.js",
-	"version": "2.3.1",
+	"version": "2.3.2",
 	"dependencies": {
 		"fuzzy": "0.1.3",
 		"helpers-fn": "0.4.1",
