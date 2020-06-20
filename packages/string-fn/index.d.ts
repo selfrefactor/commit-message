@@ -25,6 +25,7 @@ export function titleCase(str: string, extraLatin?: boolean): string
 export function trim(str: string): string
 export function words(str: string): string[]
 export function wordsX(str: string): string[]
+export function randomString(length?: number, alphabetOnlyFlag?: boolean): string;
 export function getMaxLength(listOfSentences: string[]): number
 
 interface SplitPerLine{

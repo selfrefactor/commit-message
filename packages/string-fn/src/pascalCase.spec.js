@@ -1,6 +1,6 @@
 import { pascalCase } from './pascalCase'
 
-test('', () => {
+test('happy', () => {
   const result = pascalCase('foo bar BAZ')
   const expected = 'FooBarBaz'
 
