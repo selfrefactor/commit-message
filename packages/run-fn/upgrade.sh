@@ -1,0 +1,1 @@
+npm uni -g vsce&&npm uni -g now&&npm uni -g @angular/cli&&npm i -g vsce&&npm i -g now&&npm i -g @angular/cli
