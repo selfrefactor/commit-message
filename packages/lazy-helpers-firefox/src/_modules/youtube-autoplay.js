@@ -1,10 +1,9 @@
 import { delay } from 'rambdax'
 
 const dialogSelector = 'yt-confirm-dialog-renderer'
-const confirmSelector = 'confirm-button'
 
 function hasDialog(){
-  return document.querySelector(dialogSelector) !== null && document.getElementById(confirmSelector) !== null
+  return document.querySelector(dialogSelector) !== null 
 }
 
 function removeElement(el){
@@ -14,19 +13,14 @@ function removeElement(el){
 
 async function removeWarning(){
   console.log('start remove modal')
-  const el = document.getElementById(confirmSelector)
-  if (!el) return console.log('Hmm! Confirm selector seems wrong')
-  el.click()
-  console.log('Success!')
-  await delay(1500)
+  document.querySelector('body').click()
+  await delay(2000)
   removeElement(document.querySelector(dialogSelector))
-  await delay(500)
-  removeElement(document.getElementById(confirmSelector))
-  console.log('Success of remove!')
+  console.log('Success remove modal')
 }
 
 export async function youtubeAutoplay(){
-  console.log('Start youtube autoplay!')
+  console.log('Start youtube autoplay')
   while (true){
     if (hasDialog()) await removeWarning()
     await delay(10000)
