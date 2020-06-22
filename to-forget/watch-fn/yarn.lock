@@ -606,10 +606,10 @@ pump@^3.0.0:
     end-of-stream "^1.1.0"
     once "^1.3.1"
 
-rambda@5.6.2:
-  version "5.6.2"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.6.2.tgz#a746108da2e6fee3b1df25d1e82972f8221887b3"
-  integrity sha512-DH3Uf9g5Xn1suKlaH0EVOXTfTeamvIc7xO2/RtE2Qtfhs58gjnSjoH7w8N2VjSQQqz/5QwKI1EoP6T6G8twbtg==
+rambda@5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.8.0.tgz#41b6ec4c9ab57a1f09c91bc75357136c22dccffd"
+  integrity sha512-gEzvDE/Syadcn+yVjEYKLZnvFiHcoUQWwfjVcEZ3ugwN22IGHGWQebISzr+E2ar7fW8ly7CtDZcgVUnmrvSPIw==
 
 regex-not@^1.0.0, regex-not@^1.0.2:
   version "1.0.2"
@@ -656,7 +656,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-sane@^4.1.0:
+sane@4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/sane/-/sane-4.1.0.tgz#ed881fd922733a6c461bc189dc2b6c006f3ffded"
   integrity sha512-hhbzAgTIX8O7SHfp2c8/kREfEn4qO/9q8C9beyY6+tvZ87EpoZ3i1RIEvp27YBswnNbY9mWd6paKVmKbAgLfZA==

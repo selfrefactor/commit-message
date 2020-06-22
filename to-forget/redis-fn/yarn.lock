@@ -36,10 +36,10 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-rambda@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.0.0.tgz#81e8207cd070f06d149b1f6d364d0a09440ff5f4"
-  integrity sha512-0S/od6vhXG2aMrcCdWHW8fvcTyj7y3IYb46MuXCCKam//yqaUuOGYrZ+lXXVmoNmE1FqmMdeiJcGCqflpPvUNg==
+rambda@5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.8.0.tgz#41b6ec4c9ab57a1f09c91bc75357136c22dccffd"
+  integrity sha512-gEzvDE/Syadcn+yVjEYKLZnvFiHcoUQWwfjVcEZ3ugwN22IGHGWQebISzr+E2ar7fW8ly7CtDZcgVUnmrvSPIw==
 
 rambda@^4.5.0:
   version "4.6.0"

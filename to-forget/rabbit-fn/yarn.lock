@@ -94,10 +94,10 @@ querystringify@^2.1.1:
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
   integrity sha512-w7fLxIRCRT7U8Qu53jQnJyPkYZIaR4n5151KMfcJlO/A9397Wxb1amJvROTK6TOnp7PfoAmg/qXiNHI+08jRfA==
 
-rambda@5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.0.0.tgz#81e8207cd070f06d149b1f6d364d0a09440ff5f4"
-  integrity sha512-0S/od6vhXG2aMrcCdWHW8fvcTyj7y3IYb46MuXCCKam//yqaUuOGYrZ+lXXVmoNmE1FqmMdeiJcGCqflpPvUNg==
+rambda@5.8.0:
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.8.0.tgz#41b6ec4c9ab57a1f09c91bc75357136c22dccffd"
+  integrity sha512-gEzvDE/Syadcn+yVjEYKLZnvFiHcoUQWwfjVcEZ3ugwN22IGHGWQebISzr+E2ar7fW8ly7CtDZcgVUnmrvSPIw==
 
 rambda@^4.5.0:
   version "4.6.0"
