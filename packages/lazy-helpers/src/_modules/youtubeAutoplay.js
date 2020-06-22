@@ -16,7 +16,10 @@ async function removeWarning(){
   document.querySelector('body').click()
   await delay(2000)
   removeElement(document.querySelector(dialogSelector))
+  await delay(2000)
   console.log('Success remove modal')
+  document.querySelector('body').click()
+  console.log('Success remove modal!')
 }
 
 export async function youtubeAutoplay(){
