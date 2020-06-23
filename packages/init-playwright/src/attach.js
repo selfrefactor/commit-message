@@ -192,11 +192,26 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     await found.click();
   }
 
+  const findWithPredicate = async ({typeElement, nth = 0, predicate}) => {
+    const allElements = await page.$$(typeElement);
+    if(allElements.length === 0) throw new Error('!allElements | findWithText')
+    
+    const foundElements = await filterAsync(predicate, allElements)
+
+    if(foundElements.length === 0) throw new Error('!foundElements | findWithText')
+    if(foundElements.length <= nth){
+      throw new Error(`Not enough elements found for predicate - '${predicate.toString()}'. Found only ${foundElements.length}`)
+    } 
+
+    return foundElements[nth]
+  }
+
   return {
     applyMocks,
     click,
     clickAndWait,
     findWithText,
+    findWithPredicate,
     clickWithText,
     count,
     exists,
