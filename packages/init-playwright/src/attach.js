@@ -1,6 +1,17 @@
-const { delay, type, range, waitFor: waitForMethod, ok, mapAsync, uuid } = require('rambdax')
+const { delay, range, waitFor: waitForMethod, ok, mapAsync, uuid } = require('rambdax')
 const { dotCase } = require('string-fn');
 const process = require('process');
+
+async function filterAsync(predicate, list){
+  const toReturn = []
+
+  await mapAsync(async x => {
+    const shouldPush = await predicate(x)
+    if(shouldPush) toReturn.push(x)
+  }, list)
+
+  return toReturn
+}
 
 const DELAY = 7000
 
@@ -163,7 +174,11 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     const allElements = await page.$$(typeElement);
     if(allElements.length === 0) throw new Error('!allElements | findWithText')
     
-    const foundElements = allElements.filter(el => el.textContent === text)
+    const foundElements = await filterAsync(async el => {
+      const textContent = await el.textContent()
+      return textContent === text
+    }, allElements)
+    
     if(foundElements.length === 0) throw new Error('!foundElements | findWithText')
     if(foundElements.length <= nth){
       throw new Error(`Not enough elements found for text - '${text}'. Found only ${foundElements.length}`)
