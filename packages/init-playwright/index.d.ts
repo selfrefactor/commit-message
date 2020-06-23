@@ -30,6 +30,10 @@ interface FindWithText{
   nth: number
 }
 
+interface ClickWithText extends FindWithText{
+  force?: boolean
+}
+
 interface FindWithPredicate{
   typeElement: TypeElement
   predicate: (el: HTMLElement) => Promise<boolean>
@@ -59,7 +63,7 @@ interface AttachOutput{
   clickAndWait: (el: string, navigateEndsWith: string) => Promise<void>
   findWithText: (input: FindWithText) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
-  clickWithText: (input: FindWithText) => Promise<void>
+  clickWithText: (input: ClickWithText) => Promise<void>
   count: (selector: string) => Promise<number>
   exists: (selector: string) => Promise<boolean>
   getAllClassNames: (typeElement: TypeElement) => Promise<Array<string>>

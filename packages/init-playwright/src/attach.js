@@ -187,8 +187,13 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     return foundElements[nth]
   }
 
-  const clickWithText = async ({typeElement, text, nth}) => {
+  const clickWithText = async ({typeElement, text, nth, force = false}) => {
     const found = await findWithText({typeElement, nth, text})
+    if(force){
+      await found.click({force: true})
+      return
+    }
+    
     await found.click();
   }
 
