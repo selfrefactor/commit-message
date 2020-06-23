@@ -24,6 +24,12 @@ interface WaitForClassName{
   count?: number
 }
 
+interface FindWithText{
+  typeElement: TypeElement
+  text: string
+  nth: number
+}
+
 export interface InputPlaywright{
   extraProps?: object
   resolution?: Resolution
@@ -45,6 +51,8 @@ interface AttachOutput{
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
   clickAndWait: (el: string, navigateEndsWith: string) => Promise<void>
+  findWithText: (input: FindWithText) => Promise<HTMLElement>
+  clickWithText: (input: FindWithText) => Promise<void>
   count: (selector: string) => Promise<number>
   exists: (selector: string) => Promise<boolean>
   getAllClassNames: (typeElement: TypeElement) => Promise<Array<string>>

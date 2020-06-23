@@ -2,6 +2,8 @@ const { delay, type, range, waitFor: waitForMethod, ok, mapAsync, uuid } = requi
 const { dotCase } = require('string-fn');
 const process = require('process');
 
+const DELAY = 7000
+
 function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/screenshots`){
   const getWaitCondition = () => {
     if (browserMode === 'chromium') {
@@ -14,7 +16,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     };
   }
   
-  const waitForLocation = async (predicate, ms = 5000) => {
+  const waitForLocation = async (predicate, ms = DELAY) => {
     ok(predicate)(Function)
 
     const checker = async () => {
@@ -100,7 +102,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     els[nth].click();
   };
 
-  const waitFor = async (playwrightInput, count = 1, ms = 7000) => {
+  const waitFor = async (playwrightInput, count = 1, ms = DELAY) => {
     const condition = async () => {
       const foundElements = await page.$$(playwrightInput);
       return foundElements.length >= count;
@@ -111,7 +113,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     }
   };
 
-  const waitAgainst = async (playwrightInput, count = 1, ms = 7000) => {
+  const waitAgainst = async (playwrightInput, count = 1, ms = DELAY) => {
     const condition = async () => {
       const foundElements = await page.$$(playwrightInput);
       return foundElements.length < count;
@@ -122,7 +124,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     }
   };
 
-  const waitForAndClick = async (playwrightInput, nth = 0, ms = 7000) => {
+  const waitForAndClick = async (playwrightInput, nth = 0, ms = DELAY) => {
     await waitFor(playwrightInput, nth + 1, ms);
     const foundElements = await page.$$(playwrightInput);
     if (foundElements.length <= nth) {
@@ -133,7 +135,7 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     await foundElements[nth].click();
   };
 
-  const waitForClassName = async ({ typeElement, predicate, ms = 7000, count = 1 }) => {
+  const waitForClassName = async ({ typeElement, predicate, ms = DELAY, count = 1 }) => {
     ok(predicate)(Function);
 
     const checker = async () => {
@@ -157,10 +159,30 @@ function attach(page, browserMode = 'chromium', snapDir = `${process.cwd()}/scre
     await page.screenshot({ path: screenPath, fullPage: true });
   }
 
+  const findWithText = async ({typeElement, nth, text}) => {
+    const allElements = await page.$$(typeElement);
+    if(allElements.length === 0) throw new Error('!allElements | findWithText')
+    
+    const foundElements = allElements.filter(el => el.textContent === text)
+    if(foundElements.length === 0) throw new Error('!foundElements | findWithText')
+    if(foundElements.length <= nth){
+      throw new Error(`Not enough elements found for text - '${text}'. Found only ${foundElements.length}`)
+    } 
+
+    return foundElements[nth]
+  }
+
+  const clickWithText = async ({typeElement, text, nth}) => {
+    const found = await findWithText({typeElement, nth, text})
+    found.click();
+  }
+
   return {
     applyMocks,
     click,
     clickAndWait,
+    findWithText,
+    clickWithText,
     count,
     exists,
     getAllClassNames,
