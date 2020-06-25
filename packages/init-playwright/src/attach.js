@@ -149,7 +149,7 @@ function attach(
     }
     const waitResult = await waitForMethod(condition, ms)()
     if (!waitResult){
-      throw new Error(`Failed wait condition | '${ playwrightInput }'`)
+      throw new Error(`Failed wait against condition | '${ playwrightInput }'`)
     }
     await delay(TICK)
   }
