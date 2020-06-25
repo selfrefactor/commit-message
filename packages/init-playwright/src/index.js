@@ -76,6 +76,7 @@ async function initPlaywright(inputRaw){
 
   if (input.logAllFlag) page.on('console', input.logMethod)
   if (input.logFlag) page.on('console', logInfoMethod)
+  if (input.logMethod) page.on('console', input.logMethod)
 
   return {
     browser,

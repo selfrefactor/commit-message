@@ -51,6 +51,7 @@ export interface InputPlaywright{
   waitCondition?: WaitConditionType | WaitCondition 
   logFlag?: boolean
   logAllFlag?: boolean
+  logMethod?: (input: object) => void
 }
 
 interface ServerMock{
