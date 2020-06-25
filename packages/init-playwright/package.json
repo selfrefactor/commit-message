@@ -8,17 +8,17 @@
 	"main": "./src/index.js",
 	"version": "0.7.0",
 	"dependencies": {
-		"string-fn": "2.11.1",
+		"string-fn": "2.12.0",
 		"playwright": "1.1.1",
 		"rambdax": "3.7.0"
 	},
 	"devDependencies": {
-		"@types/node": "14.0.13",
-		"@types/jest": "26.0.0",
-		"jest": "26.0.1",
-		"@babel/core": "7.10.2",
-		"@babel/plugin-proposal-object-rest-spread": "7.10.1",
-		"@babel/preset-env": "7.10.2"
+		"@types/node": "14.0.14",
+		"@types/jest": "26.0.3",
+		"jest": "26.1.0",
+		"@babel/core": "7.10.3",
+		"@babel/plugin-proposal-object-rest-spread": "7.10.3",
+		"@babel/preset-env": "7.10.3"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/init-playwright",
 	"license": "MIT",
