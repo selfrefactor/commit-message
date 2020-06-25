@@ -1,4 +1,5 @@
 {
+  "git.fetchOnPull": true,
   "javascript.suggest.autoImports": true,
   "debug.javascript.usePreview": true,
   "workbench.list.smoothScrolling": true,
