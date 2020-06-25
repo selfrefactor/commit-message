@@ -50,6 +50,7 @@ export interface InputPlaywright{
   fullScreen?: boolean
   waitCondition?: WaitConditionType | WaitCondition 
   logFlag?: boolean
+  logAllFlag?: boolean
 }
 
 interface ServerMock{
