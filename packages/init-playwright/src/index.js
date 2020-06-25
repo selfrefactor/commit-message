@@ -1,7 +1,7 @@
 const { attach: attachModule } = require('./attach')
 const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
-const { type, pass } = require('rambdax')
+const { type, pass, isFunction } = require('rambdax')
 const LONG_TIMEOUT = 60000
 const SUPPORTED_WAIT_CONDITIONS = [ 'load', 'domcontentloaded', 'networkidle' ]
 
@@ -22,12 +22,6 @@ const defaultInput = {
   resolution    : defaultResolution,
   url           : defaultURL,
   waitCondition : defaultWaitCondition,
-}
-
-function logMethod(input){
-  if (input._type === 'log'){
-    console.log(input._text)
-  }
 }
 
 function getWaitCondition(waitCondition){
@@ -62,6 +56,11 @@ function getWaitCondition(waitCondition){
   }
 }
 
+const logInfoMethod = input => {
+  if (input._type !== 'log') return
+  console.log(input)
+}
+
 async function initPlaywright(inputRaw){
   const headless = headlessModule() ? {} : { headless : false }
 
@@ -75,7 +74,8 @@ async function initPlaywright(inputRaw){
   const waitCondition = getWaitCondition(input.waitCondition)
   await page.goto(input.url, waitCondition)
 
-  if (input.logFlag) page.on('console', logMethod)
+  if (input.logAllFlag) page.on('console', input.logMethod)
+  if (input.logFlag) page.on('console', logInfoMethod)
 
   return {
     browser,
