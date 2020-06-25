@@ -145,7 +145,7 @@ function attach(
     const condition = async () => {
       const foundElements = await page.$$(playwrightInput)
       
-      return foundElements.length >= count;
+      return foundElements.length < count;
     }
     const waitResult = await waitForMethod(condition, ms)()
     if (!waitResult){
