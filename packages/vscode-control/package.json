@@ -16,5 +16,10 @@
     "esm": "3.0.84",
     "fs-extra": "9.0.0",
     "rambdax": "3.7.0"
-  }
+  },
+  "commitLabels":[
+    "keybinding",
+    "snippet",
+    "setting"
+  ]
 }

@@ -4,6 +4,14 @@
 
 - Populate settings and keybingings to local VSCode instance
 
+## Latest key binding
+
+### Find all references - Caps + F
+
+### Pin tab - Caps + 2
+
+### Unpin tab - Caps + 3
+
 ## VSCode changes
 
 Pin tabs

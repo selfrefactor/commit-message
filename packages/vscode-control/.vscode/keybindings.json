@@ -1,5 +1,15 @@
 [
   {
+    "key": "capslock f",
+    "command": "references-view.find",
+    "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "shift+alt+f12",
+    "command": "-references-view.find",
+    "when": "editorHasReferenceProvider"
+  },
+  {
     "key": "capslock 2",
     "command": "workbench.action.pinEditor",
     "when": "config.workbench.editor.showTabs && !editorSticky"
