@@ -8,9 +8,30 @@
 
 ### Find all references - Caps + F
 
-### Pin tab - Caps + 2
+### Pin/unpin tab - Somehow these setting is lost to VSCode
 
-### Unpin tab - Caps + 3
+```
+{
+    "key": "capslock 2",
+    "command": "workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "capslock 3",
+    "command": "workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
+  },
+```
 
 ## VSCode changes
 

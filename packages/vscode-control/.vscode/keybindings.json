@@ -10,26 +10,6 @@
     "when": "editorHasReferenceProvider"
   },
   {
-    "key": "capslock 2",
-    "command": "workbench.action.pinEditor",
-    "when": "config.workbench.editor.showTabs && !editorSticky"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.pinEditor",
-    "when": "config.workbench.editor.showTabs && !editorSticky"
-  },
-  {
-    "key": "capslock 3",
-    "command": "workbench.action.unpinEditor",
-    "when": "config.workbench.editor.showTabs && editorSticky"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "config.workbench.editor.showTabs && editorSticky"
-  },
-  {
     "key": "ctrl+shift+f",
     "command": "-cursorRightSelect",
     "when": "editorTextFocus"
