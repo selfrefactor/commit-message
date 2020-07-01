@@ -1,8 +1,8 @@
 {
   "scripts": {
     "normal": "node syncSettings",
-    "work": "MINI_MAP=ON SCALE=0.733 node syncSettings",
-    "home": "MINI_MAP=OF SCALE=0.74 node syncSettings",
+    "work": "MINI_MAP=ON SCALE=1.35 node syncSettings",
+    "home": "MINI_MAP=OFF SCALE=0.74 node syncSettings",
     "small": "MINI_MAP=ON SCALE=0.715 node syncSettings",
     "smaller": "MINI_MAP=ON SCALE=0.68 node syncSettings",
     "tiny": "MINI_MAP=ON SCALE=0.6 node syncSettings"
