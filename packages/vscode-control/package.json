@@ -20,6 +20,7 @@
 	},
 	"commitLabels": [
 		"keybinding",
+		"extension",
 		"snippet",
 		"setting"
 	],

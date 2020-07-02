@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "tlent.jest-snapshot-language-support",
+    "mrmlnc.vscode-duplicate",
     "WallabyJs.dingo-vscode",
     "firefox-devtools.vscode-firefox-debug",
     "Angular.ng-template",
