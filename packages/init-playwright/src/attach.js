@@ -111,10 +111,10 @@ function attach(
     await delay(TICK)
   }
 
-  const clickAndWait = async (el, navigateEndsWith) => {
+  const clickAndWaitForNavigation = async (playwrightInput, navigateEndsWith) => {
     await Promise.all([
       page.waitForNavigation({ url : `**/${ navigateEndsWith }` }),
-      page.click(el),
+      page.click(playwrightInput),
     ])
     await delay(TICK)
   }
@@ -258,7 +258,7 @@ function attach(
   return {
     applyMocks,
     click,
-    clickAndWait,
+    clickAndWaitForNavigation,
     findWithText,
     findWithPredicate,
     clickWithText,

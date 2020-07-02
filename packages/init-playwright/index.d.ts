@@ -62,7 +62,7 @@ interface ServerMock{
 interface AttachOutput{
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
-  clickAndWait: (el: string, navigateEndsWith: string) => Promise<void>
+  clickAndWaitForNavigation: (playwrightInput: string, navigateEndsWith: string) => Promise<void>
   findWithText: (input: FindWithText) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
   clickWithText: (input: ClickWithText) => Promise<void>
