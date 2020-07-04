@@ -12,7 +12,10 @@ function removeElement(el){
 }
 
 async function removeWarning(){
-  console.log('start remove modal')
+  console.log('focus body')
+  document.querySelector('body').focus()
+  await delay(2000)
+  console.log('click body')
   document.querySelector('body').click()
   await delay(2000)
   removeElement(document.querySelector(dialogSelector))
@@ -20,7 +23,7 @@ async function removeWarning(){
 }
 
 export async function youtubeAutoplay(){
-  console.log('Start youtube autoplay')
+  console.log('Start youtube autoplay!!')
   while (true){
     if (hasDialog()) await removeWarning()
     await delay(10000)
