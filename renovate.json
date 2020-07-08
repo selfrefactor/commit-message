@@ -3,6 +3,7 @@
     "config:base"
   ],
   "ignorePaths": [
+    "to-forget",
     "lazy-helpers",
     "tuna-player",
     "maided"
