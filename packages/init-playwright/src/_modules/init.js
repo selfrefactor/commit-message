@@ -1,17 +1,37 @@
 const playwright = require('playwright')
 const { getSettings } = require('./getSettings')
+const { ok } = require('rambdax')
 
 const SUPPORTED_BROWSERS = [ 'chromium', 'firefox' ]
-
 const deviceKey = 'iPhone 11'
 
-async function getContext(browser, mobileFlag){
-  if (!mobileFlag){
+async function getContext(browser, mobileFlag, httpAuth){
+  if (!mobileFlag && !httpAuth){
     return browser.newContext()
+  }
+
+  if (!mobileFlag && httpAuth){
+    ok(httpAuth)({username: String, password: String})
+
+    return browser.newContext({
+      httpCredentials: {
+        username: httpAuth.username,
+        password: httpAuth.password,
+      },
+    });
   }
   const iPhone = playwright.devices[ deviceKey ]
 
-  return browser.newContext({ ...iPhone })
+  if(!httpAuth){
+    return browser.newContext({ ...iPhone })
+  }
+
+  ok(httpAuth)({username: String, password: String})
+  
+  return browser.newContext({ ...iPhone, httpCredentials: {
+    username: httpAuth.username,
+    password: httpAuth.password,
+  }})
 }
 
 async function init(input, extraProps = {}){
@@ -22,7 +42,7 @@ async function init(input, extraProps = {}){
   const browserType = input.mobile ? 'chromium' : browserTypeInput
   const settings = getSettings(input, extraProps)
   const browser = await playwright[ browserType ].launch(settings)
-  const context = await getContext(browser, input.mobile)
+  const context = await getContext(browser, input.mobile, input.httpAuth)
   const page = await context.newPage()
 
   if (!input.mobile){

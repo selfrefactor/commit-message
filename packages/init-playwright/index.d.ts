@@ -40,11 +40,17 @@ interface FindWithPredicate{
   nth?: number
 }
 
+interface HttpAuth{
+  username: string
+  password: string
+}
+
 export interface InputPlaywright{
   extraProps?: object
   resolution?: Resolution
   url?: string
   mobile?: boolean
+  httpAuth?: HttpAuth
   browser?: SupportedBrowsers
   headless?: boolean
   fullScreen?: boolean
