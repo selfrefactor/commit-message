@@ -75,7 +75,7 @@
     "yarn.lock": true
   },
   "atomKeymap.promptV3Features": true,
-  "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": true,
   "debug.allowBreakpointsEverywhere": false,
   "debug.inlineValues": false,
   "debug.internalConsoleOptions": "openOnSessionStart",
