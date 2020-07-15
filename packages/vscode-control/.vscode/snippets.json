@@ -192,6 +192,13 @@
 		],
 		"description": "log"
 	},
+	"LogString": {
+		"prefix": "lgs",
+		"body": [
+			"console.log(`$0`)"
+		],
+		"description": "log string"
+	},
 	"Lg": {
 		"prefix": "lg",
 		"body": [
