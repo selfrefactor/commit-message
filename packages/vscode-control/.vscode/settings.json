@@ -51,7 +51,7 @@
   },
   "emmet.triggerExpansionOnTab": true,
   "search.collapseResults": "alwaysCollapse",
-  "window.title": "${activeEditorShort}",
+  "window.title": "${activeFolderMedium}/${activeEditorShort}",
   "zenMode.hideLineNumbers": true,
   "workbench.editor.labelFormat": "default",
   "workbench.editor.focusRecentEditorAfterClose": false,
