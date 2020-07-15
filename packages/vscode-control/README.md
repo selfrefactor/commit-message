@@ -6,6 +6,8 @@
 
 ## Latest key binding
 
+### Collapse all with `Alt+4`
+
 ### Find all references - Caps + F
 
 ### Pin/unpin tab - Somehow these setting is lost to VSCode

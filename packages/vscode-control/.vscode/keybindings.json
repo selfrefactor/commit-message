@@ -1,5 +1,15 @@
 [
   {
+    "key": "alt+4",
+    "command": "list.collapseAll",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "-list.collapseAll",
+    "when": "listFocus && !inputFocus"
+  },
+  {
     "key": "capslock f",
     "command": "references-view.find",
     "when": "editorHasReferenceProvider"
