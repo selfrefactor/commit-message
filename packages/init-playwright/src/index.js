@@ -1,7 +1,7 @@
 const { attach: attachModule } = require('./attach')
 const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
-const { type, pass, isFunction } = require('rambdax')
+const { type, pass } = require('rambdax')
 const LONG_TIMEOUT = 60000
 const SUPPORTED_WAIT_CONDITIONS = [ 'load', 'domcontentloaded', 'networkidle' ]
 

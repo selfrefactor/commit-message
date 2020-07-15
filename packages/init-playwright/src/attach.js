@@ -68,10 +68,12 @@ function attach(
   }
 
   const applyMocks = async serverMocks => {
-    ok(serverMocks)([ {
-      route : String,
-      path  : String,
-    } ])
+    ok(serverMocks)([
+      {
+        route : String,
+        path  : String,
+      },
+    ])
     const applySingleMock = async serverMock => {
       await page.route(serverMock.route, route =>
         route.fulfill({ path : serverMock.path }))
@@ -111,7 +113,10 @@ function attach(
     await delay(TICK)
   }
 
-  const clickAndWaitForNavigation = async (playwrightInput, navigateEndsWith) => {
+  const clickAndWaitForNavigation = async (
+    playwrightInput,
+    navigateEndsWith
+  ) => {
     await Promise.all([
       page.waitForNavigation({ url : `**/${ navigateEndsWith }` }),
       page.click(playwrightInput),
@@ -144,8 +149,8 @@ function attach(
   const waitAgainst = async (playwrightInput, count = 1, ms = DELAY) => {
     const condition = async () => {
       const foundElements = await page.$$(playwrightInput)
-      
-      return foundElements.length < count;
+
+      return foundElements.length < count
     }
     const waitResult = await waitForMethod(condition, ms)()
     if (!waitResult){

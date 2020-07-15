@@ -45,11 +45,19 @@ interface HttpAuth{
   password: string
 }
 
+interface SlowNetwork{
+  offline: boolean
+  downloadThroughput: number  
+  uploadThroughput: number
+  latency: number 
+}
+
 export interface InputPlaywright{
   extraProps?: object
   resolution?: Resolution
   url?: string
   mobile?: boolean
+  slowNetwork?: SlowNetwork | true
   httpAuth?: HttpAuth
   browser?: SupportedBrowsers
   headless?: boolean

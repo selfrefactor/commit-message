@@ -9,7 +9,7 @@
 	"version": "0.8.0",
 	"dependencies": {
 		"string-fn": "2.12.0",
-		"playwright": "1.2.0",
+		"playwright": "1.2.1",
 		"rambdax": "3.7.0"
 	},
 	"devDependencies": {
