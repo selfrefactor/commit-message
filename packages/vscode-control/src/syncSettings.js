@@ -48,7 +48,7 @@ function getMinimapOptions(){
   const whenTrue = {
     "editor.minimap.enabled": true,
     "editor.minimap.maxColumn": 50,
-    "editor.minimap.renderCharacters": true,
+    "editor.minimap.renderCharacters": false,
     "editor.minimap.scale": 2,
     "editor.minimap.side": "left",
     "editor.minimap.size": "fit",
