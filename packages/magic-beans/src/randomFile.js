@@ -3,7 +3,7 @@ const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
 const { readFolders } = require('./_modules/readFolders')
 const { scrollDownAnt, scrollUpAnt } = require('./ants/scroll')
-const { setter, getter, delay, shuffle } = require('rambdax')
+const { setter, getter, delay, shuffle, random } = require('rambdax')
 
 const RANDOM_FILE_SCROLL_BY = configAnt('RANDOM_FILE_SCROLL_BY')
 const RANDOM_FILE_AUTO_SCROLL = configAnt('RANDOM_FILE_AUTO_SCROLL')
@@ -19,7 +19,7 @@ const RANDOM_FILE = 'RANDOM_FILE'
 
 function changeOpenedFile(filePath, callback = () => {}){
   // editor should have
-  //  "workbench.editor.enablePreview": true,
+  // "workbench.editor.enablePreview": true,
   const openPath = vscode.Uri.file(filePath)
   vscode.workspace.openTextDocument(openPath).then(doc => {
     vscode.window.showTextDocument(doc)
@@ -27,7 +27,27 @@ function changeOpenedFile(filePath, callback = () => {}){
   })
 }
 
+function requestRandomFile(){
+  const files = getter('files')
+  changeOpenedFile(files[ random(0, files.length - 1) ])
+}
+
 async function randomFile(){
+  const projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
+  const files = shuffle(readFolders({
+    folderPath        : projectFolder,
+    min               : RANDOM_FILE_MINIMAL_SIZE,
+    max               : RANDOM_FILE_MAXIMAL_SIZE,
+    allowedExtensions : RANDOM_FILE_ALLOWED_EXTENSIONS,
+    skipPatterns      : RANDOM_FILE_SKIP_PATTERNS,
+  }))
+  if (files.length === 0) return
+  setter('files', files)
+  logToUser(`${files.length} files found`)
+  requestRandomFile()
+}
+
+async function randomFileInterval(){
   if (getter(RANDOM_FILE) === true){
     return setter(RANDOM_FILE, false)
   }
@@ -68,4 +88,6 @@ async function randomFile(){
 }
 
 exports.randomFile = randomFile
+exports.requestRandomFile = requestRandomFile
+exports.randomFileInterval = randomFileInterval
 exports.changeOpenedFile = changeOpenedFile

@@ -16,11 +16,13 @@ Replace `klaw-sync` with `run-fn` related dep
 
 > Press `alt+c` to copy multiple or single lines trimmed from both ends
 
+## Open random file mode
+
+It will show number of filtered files and each click on the message will open a random file.
+
 ## Open random file on each interval
 
 By default the interval is 120 seconds and on every loop a random file larger than 650B from the current project will be openened.
-
-Start with `ctrl+f8`
 
 If `RANDOM_FILE_AUTO_SCROLL` is set to `true` then on every 10 seconds scroll position is moved down with 10 lines.
 

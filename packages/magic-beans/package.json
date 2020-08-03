@@ -28,6 +28,14 @@
 		"commands": [
 			{
 				"command": "magicBeans.randomFile",
+				"title": "Magic Beans random file mode"
+			},
+			{
+				"command": "magicBeans.requestRandomFile",
+				"title": "Magic Beans request random file"
+			},
+			{
+				"command": "magicBeans.randomFileInterval",
 				"title": "Magic Beans random file every interval"
 			},
 			{
@@ -43,10 +51,6 @@
 			{
 				"command": "magicBeans.createSpec",
 				"key": "ctrl+shift+x"
-			},
-			{
-				"command": "magicBeans.randomFile",
-				"key": "ctrl+f8"
 			},
 			{
 				"command": "magicBeans.orderProps",
