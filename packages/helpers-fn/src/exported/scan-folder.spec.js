@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+
 import { scanFolder } from './scan-folder.js'
 const testDir = resolve(__dirname, '../../src')
 

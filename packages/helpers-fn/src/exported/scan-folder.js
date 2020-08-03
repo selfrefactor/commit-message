@@ -1,5 +1,5 @@
-const {existsSync} = require('fs')
-const fdir = require('fdir')
+const { existsSync } = require('fs')
+const { fdir } = require('fdir')
 const defaultFilterFn = x => x.endsWith('.js')
 const defaultExcludeFn = x => x.includes('node_modules') || x.startsWith('.')
 
@@ -8,10 +8,10 @@ async function scanFolder({
   filterFn = defaultFilterFn,
   excludeFn = defaultExcludeFn,
 }){
-  if(!existsSync(folder)){
-    throw new Error(`${folder} - folder path is wrong as it doesn't exist`)
+  if (!existsSync(folder)){
+    throw new Error(`${ folder } - folder path is wrong as it doesn't exist`)
   }
-  
+
   const files = await new fdir()
     .withMaxDepth(3)
     .withFullPaths()

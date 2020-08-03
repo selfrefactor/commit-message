@@ -1,23 +1,29 @@
-const { omit, type, map, maybe, filter, equals, headObject, pass: passMethod } = require('rambdax')
+const {
+  omit,
+  type,
+  map,
+  maybe,
+  filter,
+  equals,
+  pass: passMethod,
+} = require('rambdax')
 
 const TEST_MODES = [ 'ok', 'fail', 'danger' ]
 const dataPredicate = data => {
-  const filtered = filter(
-    x => {
-      if (type(x) !== 'Object') return true
-      if (x.only) return true
+  const filtered = filter(x => {
+    if (type(x) !== 'Object') return true
+    if (x.only) return true
 
-      const keys = Object.keys(x)
-      const len = keys.length
-      if (len === 1) return true
-      if (len === 2 && typeof x.label === 'string') return true
-      if (len === 2 && keys.includes('match')) return true
-      if (len === 3 && keys.includes('match') && typeof x.label === 'string') return true
+    const keys = Object.keys(x)
+    const len = keys.length
+    if (len === 1) return true
+    if (len === 2 && typeof x.label === 'string') return true
+    if (len === 2 && keys.includes('match')) return true
+    if (len === 3 && keys.includes('match') && typeof x.label === 'string')
+      return true
 
-      return false
-    },
-    data
-  )
+    return false
+  }, data)
 
   return Object.keys(filtered).length === Object.keys(data).length
 }
@@ -27,65 +33,48 @@ const dataPredicate = data => {
   R.isValid Array of object passing predicate
 */
 
-const parseData = map(
-  x => {
-    if (type(x) !== 'Object') return { ok : x }
-    const keys = Object.keys(x)
-    const len = keys.length
+const parseData = map(x => {
+  if (type(x) !== 'Object') return { ok : x }
+  const keys = Object.keys(x)
+  const len = keys.length
 
-    if (len === 1){
-      const { prop } = headObject(x)
+  if (len === 1){
+    const [ prop ] = Object.keys(x)
 
-      return TEST_MODES.includes(prop) ?
-        x :
-        { ok : x }
-    }
-    if (len === 2 && keys.includes('label')){
-
-      const { prop } = headObject(omit('label', x))
-
-      return TEST_MODES.includes(prop) ?
-        x :
-        { ok : x }
-    }
-
-    if (len === 2 && keys.includes('match')){
-
-      const { prop } = headObject(omit('match', x))
-
-      return TEST_MODES.includes(prop) ?
-        x :
-        { ok : x }
-    }
-
-    if (len === 3 && keys.includes('match') && keys.includes('label')){
-
-      const { prop } = headObject(omit('match,label', x))
-
-      return TEST_MODES.includes(prop) ?
-        x :
-        { ok : x }
-    }
-
-    return { ok : x }
+    return TEST_MODES.includes(prop) ? x : { ok : x }
   }
-)
+  if (len === 2 && keys.includes('label')){
+    const [ prop ] = Object.keys(omit('label', x))
+
+    return TEST_MODES.includes(prop) ? x : { ok : x }
+  }
+
+  if (len === 2 && keys.includes('match')){
+    const [ prop ] = Object.keys(omit('match', x))
+
+    return TEST_MODES.includes(prop) ? x : { ok : x }
+  }
+
+  if (len === 3 && keys.includes('match') && keys.includes('label')){
+    const [ prop ] = Object.keys(omit('match,label', x))
+
+    return TEST_MODES.includes(prop) ? x : { ok : x }
+  }
+
+  return { ok : x }
+})
 
 function findOnlyFlag(input){
-  const [ onlyTest ] = input.data.filter(
-    singleTest => {
-      if (type(singleTest) !== 'Object') return false
+  const [ onlyTest ] = input.data.filter(singleTest => {
+    if (type(singleTest) !== 'Object') return false
 
-      return singleTest.only
-    }
-  )
+    return singleTest.only
+  })
   if (!onlyTest) return input
 
   return {
     ...input,
-    data : [
-      omit('only', onlyTest),
-    ],
+    data : [ omit('only', onlyTest) ],
   }
 }
 
@@ -116,11 +105,12 @@ function runTests(input, optionsInput = {}){
         const withAsync = options.async
         const withLabel = keys.includes('label')
         const withMatch = keys.includes('match')
-        const dataInstance = withLabel || withMatch ?
-          omit('label,match', dataInstanceInput) :
-          dataInstanceInput
+        const dataInstance =
+          withLabel || withMatch ?
+            omit('label,match', dataInstanceInput) :
+            dataInstanceInput
 
-        const { prop: testMode, value: x } = headObject(dataInstance)
+        const [ [ testMode, x ] ] = Object.entries(dataInstance)
 
         if (!TEST_MODES.includes(testMode)) return
         if (!withLabel){
@@ -130,7 +120,7 @@ function runTests(input, optionsInput = {}){
         const appendLabel = maybe(
           withLabel,
           '',
-          counters[ testMode ] > 0 ? ` - ${ counters[ testMode ] }` : '',
+          counters[ testMode ] > 0 ? ` - ${ counters[ testMode ] }` : ''
         )
 
         const testLabel = withLabel ?
@@ -140,10 +130,11 @@ function runTests(input, optionsInput = {}){
         if (testMode === 'ok' && !withMatch && !withAsync){
           test(testLabel, () => {
             const result = fn(x)
-            if (options.logFlag) console.log({
-              result,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                testLabel,
+              })
 
             expect(result).toBeTruthy()
           })
@@ -152,10 +143,11 @@ function runTests(input, optionsInput = {}){
         if (testMode === 'ok' && !withMatch && withAsync){
           test(testLabel, async () => {
             const result = await fn(x)
-            if (options.logFlag) console.log({
-              result,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                testLabel,
+              })
 
             expect(result).toBeTruthy()
           })
@@ -164,15 +156,14 @@ function runTests(input, optionsInput = {}){
         if (testMode === 'ok' && withMatch && !withAsync){
           test(testLabel, () => {
             const result = fn(x)
-            if (options.logFlag) console.log({
-              result,
-              match : dataInstanceInput.match,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                match : dataInstanceInput.match,
+                testLabel,
+              })
 
-            expect(
-              equals(result, dataInstanceInput.match)
-            ).toBeTruthy()
+            expect(equals(result, dataInstanceInput.match)).toBeTruthy()
           })
         }
 
@@ -182,25 +173,25 @@ function runTests(input, optionsInput = {}){
         if (testMode === 'ok' && withMatch && withAsync){
           test(testLabel, async () => {
             const result = await fn(x)
-            if (options.logFlag) console.log({
-              result,
-              match : dataInstanceInput.match,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                match : dataInstanceInput.match,
+                testLabel,
+              })
 
-            expect(
-              equals(result, dataInstanceInput.match)
-            ).toBeTruthy()
+            expect(equals(result, dataInstanceInput.match)).toBeTruthy()
           })
         }
 
         if (testMode === 'fail' && !withMatch && !withAsync){
           test(testLabel, () => {
             const result = fn(x)
-            if (options.logFlag) console.log({
-              result,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                testLabel,
+              })
 
             expect(result).toBeFalsy()
           })
@@ -209,10 +200,11 @@ function runTests(input, optionsInput = {}){
         if (testMode === 'fail' && !withMatch && withAsync){
           test(testLabel, async () => {
             const result = await fn(x)
-            if (options.logFlag) console.log({
-              result,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                testLabel,
+              })
 
             expect(result).toBeFalsy()
           })
@@ -221,57 +213,54 @@ function runTests(input, optionsInput = {}){
         if (testMode === 'fail' && withMatch && !withAsync){
           test(testLabel, () => {
             const result = fn(x)
-            if (options.logFlag) console.log({
-              result,
-              match : dataInstanceInput.match,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                match : dataInstanceInput.match,
+                testLabel,
+              })
 
-            expect(
-              equals(result, dataInstanceInput.match)
-            ).toBeFalsy()
+            expect(equals(result, dataInstanceInput.match)).toBeFalsy()
           })
         }
 
         if (testMode === 'fail' && withMatch && withAsync){
           test(testLabel, async () => {
             const result = await fn(x)
-            if (options.logFlag) console.log({
-              result,
-              match : dataInstanceInput.match,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                result,
+                match : dataInstanceInput.match,
+                testLabel,
+              })
 
-            expect(
-              equals(result, dataInstanceInput.match)
-            ).toBeFalsy()
+            expect(equals(result, dataInstanceInput.match)).toBeFalsy()
           })
         }
 
         if (testMode === 'danger' && !withMatch && !withAsync){
           test(testLabel, () => {
-            if (options.logFlag) console.log({
-              x,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                x,
+                testLabel,
+              })
 
-            expect(
-              () => fn(x)
-            ).toThrow()
+            expect(() => fn(x)).toThrow()
           })
         }
 
         if (testMode === 'danger' && !withMatch && withAsync){
           test(testLabel, async () => {
-            if (options.logFlag) console.log({
-              x,
-              testLabel,
-            })
+            if (options.logFlag)
+              console.log({
+                x,
+                testLabel,
+              })
 
             try {
               await fn(x)
               expect('danger should throw but it didn\'t').toBe('')
-
             } catch (error){
               expect('danger should throw and it did').toBe('danger should throw and it did')
             }
@@ -280,43 +269,41 @@ function runTests(input, optionsInput = {}){
 
         if (testMode === 'danger' && withMatch && !withAsync){
           test(testLabel, () => {
-            if (options.logFlag) console.log({
-              x,
-              testLabel,
-              match : dataInstanceInput.match,
-            })
+            if (options.logFlag)
+              console.log({
+                x,
+                testLabel,
+                match : dataInstanceInput.match,
+              })
 
-            expect(
-              () => fn(x)
-            ).toThrow(dataInstanceInput.match)
+            expect(() => fn(x)).toThrow(dataInstanceInput.match)
           })
         }
 
         if (testMode === 'danger' && withMatch && withAsync){
           test(testLabel, async () => {
-            if (options.logFlag) console.log({
-              x,
-              testLabel,
-              match : dataInstanceInput.match,
-            })
+            if (options.logFlag)
+              console.log({
+                x,
+                testLabel,
+                match : dataInstanceInput.match,
+              })
 
             try {
               await fn(x)
               expect('danger test mode should throw but it didn\'t').toBe('')
             } catch (error){
               const matchError = equals(error, dataInstanceInput.match)
-              const messageError = equals(error, new Error(dataInstanceInput.match))
+              const messageError = equals(error,
+                new Error(dataInstanceInput.match))
 
-              expect(
-                matchError || messageError
-              ).toBeTruthy()
+              expect(matchError || messageError).toBeTruthy()
             }
           })
         }
       })
     })
     if (options.callback){
-
       afterAll(options.callback)
     }
   } catch (err){

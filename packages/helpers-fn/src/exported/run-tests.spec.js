@@ -1,6 +1,7 @@
-import { delay } from 'rambdax'
 import assert from 'assert'
-import {runTests} from './run-tests'
+import { delay } from 'rambdax'
+
+import { runTests } from './run-tests'
 
 const testFn = x => typeof x.a === 'number'
 
@@ -55,6 +56,7 @@ const withObject = {
   data  : withObjectData,
   fn    : withObjectFn,
 }
+
 runTests(withObject, { logFlag : false })
 
 const withAsyncFn = async x => {
@@ -106,21 +108,20 @@ const withOnly = {
     { ok : 4 },
   ],
   fn : () => {
-
     counter++
 
     return true
   },
 }
 
-runTests(withOnly, { callback : () => assert(counter === 1) })
+runTests(withOnly, {
+  callback : () => assert(counter === 1),
+})
 
 test('undefined throws', () => {
   expect(() => runTests()).toThrow()
 })
 
 test('missing `testSuite`', () => {
-  expect(() =>
-    runTests(omit('testSuite', runTestsInput))
-  ).toThrow()
+  expect(() => runTests(omit('testSuite', runTestsInput))).toThrow()
 })
