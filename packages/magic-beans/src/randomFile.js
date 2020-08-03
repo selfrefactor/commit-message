@@ -2,6 +2,7 @@ const vscode = require('vscode')
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
 const { readFolders } = require('./_modules/readFolders')
+const { removeIndex } = require('./_modules/removeIndex')
 const { scrollDownAnt, scrollUpAnt } = require('./ants/scroll')
 const { setter, getter, delay, shuffle, random } = require('rambdax')
 
@@ -29,7 +30,10 @@ function changeOpenedFile(filePath, callback = () => {}){
 
 function requestRandomFile(){
   const files = getter('files')
-  changeOpenedFile(files[ random(0, files.length - 1) ])
+  const index = random(0, files.length - 1)
+  changeOpenedFile(files[ index ])
+  setter('files', removeIndex(files, index))
+  logToUser(`${files.length - 1} files left`)
 }
 
 async function randomFile(){
@@ -43,7 +47,6 @@ async function randomFile(){
   }))
   if (files.length === 0) return
   setter('files', files)
-  logToUser(`${files.length} files found`)
   requestRandomFile()
 }
 
