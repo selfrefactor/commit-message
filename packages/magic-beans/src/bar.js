@@ -2,11 +2,11 @@ const vscode = require('vscode')
 const { delay } = require('rambdax')
 const { REQUEST_RANDOM_FILE } = require('./constants')
 
-const PRIORITY = 201
+const PRIORITY = 1
 const holder = {}
 const WELCOME_MESSAGE = 'START MAGIC BEANS'
 holder.bar = vscode.window.createStatusBarItem(
-  vscode.StatusBarAlignment.Right,
+  vscode.StatusBarAlignment.Left,
   PRIORITY
 )
 holder.bar.command = REQUEST_RANDOM_FILE
