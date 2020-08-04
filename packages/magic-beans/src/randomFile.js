@@ -30,6 +30,7 @@ function changeOpenedFile(filePath, callback = () => {}){
 
 function requestRandomFile(){
   const files = getter('files')
+  if(files.length === 0) return
   const index = random(0, files.length - 1)
   changeOpenedFile(files[ index ])
   setter('files', removeIndex(files, index))
