@@ -1,1 +1,1 @@
-exports.REQUEST_RANDOM_FILE = 'requestRandomFile'
+exports.REQUEST_RANDOM_FILE = 'magicBeans.requestRandomFile'

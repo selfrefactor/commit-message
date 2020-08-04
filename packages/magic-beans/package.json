@@ -21,6 +21,7 @@
 		"onCommand:magicBeans.start",
 		"onCommand:magicBeans.orderProps",
 		"onCommand:magicBeans.randomFile",
+		"onCommand:magicBeans.requestRandomFile",
 		"onCommand:magicBeans.copyTrimmed"
 	],
 	"main": "./src/extension",
@@ -48,6 +49,14 @@
 			}
 		],
 		"keybindings": [
+			{
+				"command": "magicBeans.randomFile",
+				"key": "f6"
+			},
+			{
+				"command": "magicBeans.requestRandomFile",
+				"key": "f7"
+			},
 			{
 				"command": "magicBeans.createSpec",
 				"key": "ctrl+shift+x"
