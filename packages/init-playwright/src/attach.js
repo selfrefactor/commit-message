@@ -59,14 +59,6 @@ function attach(
 
   const exists = selector => page.$$eval(selector, els => els.length > 0)
 
-  const pressTab = async timesToPress => {
-    for (const i of range(0, timesToPress)){
-      await page.keyboard.down('Tab')
-      await delay(200)
-    }
-    await delay(300)
-  }
-
   const applyMocks = async serverMocks => {
     ok(serverMocks)([
       {
@@ -259,6 +251,14 @@ function attach(
 
     return foundElements[ nth ]
   }
+
+  const pressTab = async timesToPress => {
+    await page.focus('body');
+    await mapAsync(async () => {
+      await page.press('body', 'Tab');
+      await delay(TICK);
+    })(range(0, timesToPress + 1));
+  };
 
   return {
     applyMocks,
