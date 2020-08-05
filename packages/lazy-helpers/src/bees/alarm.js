@@ -38,7 +38,8 @@ export async function alarmBee(){
   if (!ok) return
 
   const { alarm } = takeArguments(url, '#')
-
+  console.log({alarm})
+  
   for (const x of delayList(alarm)){
     console.log(x)
     await delay(x.step)
