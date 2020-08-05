@@ -111,7 +111,7 @@ function attach(
   ) => {
     await Promise.all([
       page.waitForNavigation({ url : `**/${ navigateEndsWith }` }),
-      page.click(playwrightInput),
+      page.click(playwrightInput, {force: true}),
     ])
     await delay(TICK)
   }
@@ -121,7 +121,7 @@ function attach(
     if (els.length <= nth){
       throw new Error(`Found only ${ els.length } but requested ${ nth } index | ${ selector }`)
     }
-    els[ nth ].click()
+    els[ nth ].click({ force: true})
     await delay(TICK)
   }
 
@@ -159,7 +159,7 @@ function attach(
     if (foundElements.length <= nth){
       throw new Error(`Found only ${ foundElements.length } but requested ${ nth } index | ${ playwrightInput }`)
     }
-    await foundElements[ nth ].click()
+    await foundElements[ nth ].click({ force : true})
     await delay(TICK)
   }
 
@@ -218,19 +218,14 @@ function attach(
     return foundElements[ nth ]
   }
 
-  const clickWithText = async ({ typeElement, text, nth, force = false }) => {
+  const clickWithText = async ({ typeElement, text, nth }) => {
     const found = await findWithText({
       typeElement,
       nth,
       text,
     })
-    if (force){
-      await found.click({ force : true })
 
-      return
-    }
-
-    await found.click()
+    await found.click({force: true})
     await delay(TICK)
   }
 
