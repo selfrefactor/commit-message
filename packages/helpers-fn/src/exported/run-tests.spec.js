@@ -114,9 +114,7 @@ const withOnly = {
   },
 }
 
-runTests(withOnly, {
-  callback : () => assert(counter === 1),
-})
+runTests(withOnly, { callback : () => assert(counter === 1) })
 
 test('undefined throws', () => {
   expect(() => runTests()).toThrow()

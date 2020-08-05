@@ -1,5 +1,15 @@
 # Code style
 
+## muliple ifs instead of `||`
+
+```javascript
+    if (!state.initialized) return;
+    if (state.searchUsersLoading) return;
+    if (state.searchUsersOffset === 0) return;
+    // instead of
+    if(rule1||rule2||rule3) return
+```
+
 General tips for React and Javascript programming
 
 ## `{{theme}}` folder naming pattern
