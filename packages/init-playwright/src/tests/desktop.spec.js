@@ -1,4 +1,4 @@
-import { attach, initPlaywright } from '../index'
+import { attach, initPlaywright } from '../init-playwright'
 const GITHUB = 'https://github.com'
 jest.setTimeout(30000)
 

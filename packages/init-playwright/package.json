@@ -5,7 +5,7 @@
 		"test:m": "jest src/tests/mobile.spec.js"
 	},
 	"typings": "./index.d.ts",
-	"main": "./src/index.js",
+	"main": "./src/init-playwright.js",
 	"version": "0.10.1",
 	"dependencies": {
 		"string-fn": "2.12.0",

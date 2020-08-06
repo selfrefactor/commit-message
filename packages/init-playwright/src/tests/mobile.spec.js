@@ -1,4 +1,4 @@
-import { attach, initPlaywright } from '../index'
+import { attach, initPlaywright } from '../init-playwright'
 const REDDIT = 'https://reddit.com'
 const LOCAL = 'http://helpkarma.l:3000'
 const GITHUB = 'https://github.com'
