@@ -9,7 +9,6 @@ import { copyToClipboard } from './_helpers/copyToClipboard.js'
 import { isYoutubeURL } from './common'
 import { germanShortkeys } from './_modules/germanShortkeys'
 import { googleSearch } from './_modules/googleSearch'
-import { youtubeAutoplay } from './_modules/youtubeAutoplay'
 import { isIframe } from './_helpers/isIframe'
 import { youtubeToAudio } from './_modules/youtubeToAudio'
 import { logAnt } from './ants/log'
@@ -48,7 +47,6 @@ const methods = {
 } 
 
 if (pass){
-  youtubeAutoplay()
   clickableGistBee()
   googleSearch()
   alarmBee()
