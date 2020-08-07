@@ -1,4 +1,5 @@
 {
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "scm.defaultViewMode": "tree",
   "git.fetchOnPull": true,
   "javascript.suggest.autoImports": true,
