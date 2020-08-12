@@ -8,6 +8,10 @@ It starts a `Playwright` instance and attaches multiple helpers to it.
 
 ## Issues
 
+### Playwright upgrades
+
+Remove `node_modules` folder
+
 ### Webkit
 
 It doesn't work on Manjaro
