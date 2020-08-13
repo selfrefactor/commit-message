@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "svipas.code-autocomplete",
     "saidur2.relative-import",
     "tlent.jest-snapshot-language-support",
     "mrmlnc.vscode-duplicate",
