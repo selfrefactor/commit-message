@@ -1,4 +1,5 @@
-const BASE = `${process.env.HOME}/.config/Code - Insiders/User`
+const BASE = `${process.env.HOME}/.config/Code/User`
+// const BASE = `${process.env.HOME}/.config/Code - Insiders/User`
 
 export const KEYBINDING = `${BASE}/keybindings.json`
 export const SETTINGS = `${BASE}/settings.json`
