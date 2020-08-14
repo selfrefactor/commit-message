@@ -1,27 +1,22 @@
-const getSettings = (input, extraProps) =>
-// const chromiumArguments = [
-//   '--no-first-run',
-//   '--disable-sync',
-//   '--disable-gpu',
-//   '--disable-setuid-sandbox',
-//   '--disable-web-security',
-//   '--disable-dev-profile',
-//   '--mute-audio',
-//   '--disable-translate',
-//   '--disable-background-networking',
-//   '--single-process',
-//   '--ignore-certificate-errors',
-//   `--window-size=${ input.resolution.x },${ input.resolution.y }`,
-//   '--no-sandbox',
-//   '--shm-size=1G',
-// ]
-// if (input.fullScreen){
-//   chromiumArguments.push('--start-fullscreen')
-// }
-
+const getSettings = (input, extraProps, isChrome) =>
   ({
     ...extraProps,
-    // args              : chromiumArguments,
+    ...(isChrome ? {args              : [
+      '--no-first-run',
+      '--disable-sync',
+      '--disable-gpu',
+      '--disable-setuid-sandbox',
+      '--disable-web-security',
+      '--disable-dev-profile',
+      '--mute-audio',
+      '--disable-translate',
+      '--disable-background-networking',
+      '--single-process',
+      '--ignore-certificate-errors',
+      `--window-size=${ input.resolution.x },${ input.resolution.y }`,
+      '--no-sandbox',
+      '--shm-size=1G',
+    ]}: {}),
     ignoreHTTPSErrors : true,
     handleSIGINT      : false,
     handleSIGHUP      : false,

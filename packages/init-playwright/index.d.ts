@@ -77,6 +77,7 @@ interface AttachOutput{
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
   clickWithText: (input: FindWithText) => Promise<void>
   count: (selector: string) => Promise<number>
+  delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
   getAllClassNames: (typeElement: TypeElement) => Promise<Array<string>>
   getClassName: (input: GetClassName)=> Promise<string>

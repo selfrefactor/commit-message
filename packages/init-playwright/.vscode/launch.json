@@ -4,8 +4,20 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Prove",
-      "program": "${workspaceFolder}/prove.js"
+      "name": "Desktop",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose", 
+        "-i", 
+        "--no-cache",
+        "src/tests/desktop.spec.js"
+      ],
+      "env":{
+        "RUN_CHROME": "ON"
+      },
+      "disableOptimisticBPs": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }

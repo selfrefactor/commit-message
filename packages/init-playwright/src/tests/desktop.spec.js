@@ -1,23 +1,28 @@
 import { attach, initPlaywright } from '../init-playwright'
 const GITHUB = 'https://github.com'
+const FACEBOOK = 'https://facebook.com'
 jest.setTimeout(30000)
+
+const RUN_CHROME_ONLY = process.env.RUN_CHROME === 'ON'
+const RUN_FIREFOX_ONLY = process.env.RUN_FIREFOX === 'ON'
+
 
 async function executeTest(browserMode){
   const { browser, page } = await initPlaywright({
     headless      : false,
     logFlag       : false,
     browser       : browserMode,
-    slowNetwork   : true,
-    url           : GITHUB,
-    waitCondition : {
-      timeout   : 5800,
-      waitUntil : 'networkidle',
-    },
+    // slowNetwork   : true,
+    url           : FACEBOOK,
+    // waitCondition : {
+    //   timeout   : 5800,
+    //   waitUntil : 'networkidle',
+    // },
   })
 
   try {
     const _ = attach(page, browserMode)
-
+    
     const allClassNames = await _.getAllClassNames('div')
     expect(allClassNames.length).toBeGreaterThan(50)
     await browser.close()
@@ -29,9 +34,11 @@ async function executeTest(browserMode){
 }
 
 test('chromium', async () => {
+  if(RUN_FIREFOX_ONLY) return
   await executeTest('chromium')
 })
 
-test.only('firefox', async () => {
+test('firefox', async () => {
+  if(RUN_CHROME_ONLY) return
   await executeTest('firefox')
 })

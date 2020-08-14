@@ -5,9 +5,8 @@ const {
   waitFor: waitForMethod,
   ok,
   mapAsync,
-  uuid,
 } = require('rambdax')
-const { dotCase } = require('string-fn')
+const { dotCase, randomString } = require('string-fn')
 
 async function filterAsync(predicate, list){
   const toReturn = []
@@ -188,7 +187,7 @@ function attach(
   }
 
   const snap = async label => {
-    const fileName = label ? dotCase(label) : uuid(5, true)
+    const fileName = label ? dotCase(label) : randomString(5, true)
     const screenPath = `${ snapDir }/${ fileName }.png`
     console.log(`Saved screenshot to '${ fileName }.png'`)
 
@@ -263,6 +262,7 @@ function attach(
     findWithPredicate,
     clickWithText,
     count,
+    delay,
     exists,
     getAllClassNames,
     getClassName,
