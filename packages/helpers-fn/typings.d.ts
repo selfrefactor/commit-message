@@ -4,6 +4,7 @@ interface ScanFolderInput{
     folder: string
     excludeFn?: (dir: string) => boolean
     filterFn?: (file: string) => boolean
+    maxDepth?: number
 }
 
 export function scanFolder(input: ScanFolderInput): Promise<Array<string>>

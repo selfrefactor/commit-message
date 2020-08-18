@@ -7,13 +7,14 @@ async function scanFolder({
   folder,
   filterFn = defaultFilterFn,
   excludeFn = defaultExcludeFn,
+  maxDepth = 4,
 }){
   if (!existsSync(folder)){
     throw new Error(`${ folder } - folder path is wrong as it doesn't exist`)
   }
 
   const files = await new fdir()
-    .withMaxDepth(3)
+    .withMaxDepth(maxDepth)
     .withFullPaths()
     .exclude(excludeFn)
     .filter(filterFn)
