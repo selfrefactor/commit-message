@@ -9,7 +9,7 @@
 	"name": "magic-beans",
 	"displayName": "Magic Beans",
 	"description": "Magic-like effects",
-	"version": "0.27.0",
+	"version": "0.28.0",
 	"publisher": "selfrefactor",
 	"engines": {
 		"vscode": "^1.30.1"
