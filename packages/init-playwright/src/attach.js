@@ -186,6 +186,31 @@ function attach(
     await delay(TICK)
   }
 
+
+  const waitForText = async (text, ms = DELAY) => {
+    const checker = async () => {
+      const el = await page.$(`text="${text}"`);
+      return el !== null;
+    };
+    const waitResult = await waitForMethod(checker, ms)();
+    if (!waitResult) {
+      throw new Error(`Fail to wait for text "${text}" to appear on page`);
+    }
+    await delay(TICK);
+  };
+
+  const waitAgainstText = async (text, ms = DELAY) => {
+    const checker = async () => {
+      const el = await page.$(`text="${text}"`);
+      return el === null;
+    };
+    const waitResult = await waitForMethod(checker, ms)();
+    if (!waitResult) {
+      throw new Error(`Fail to wait for text "${text}" to disappear on page`);
+    }
+    await delay(TICK);
+  };
+
   const snap = async label => {
     const fileName = label ? dotCase(label) : randomString(5, true)
     const screenPath = `${ snapDir }/${ fileName }.png`
@@ -271,7 +296,9 @@ function attach(
     pressTab,
     snap,
     waitAgainst,
+    waitAgainstText,
     waitFor,
+    waitForText,
     waitForAndClick,
     waitForClassName,
     waitForLocation,

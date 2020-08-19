@@ -86,7 +86,9 @@ interface AttachOutput{
   pressTab: (timesToPress: number) => Promise<void>
   snap: (label?: string) => Promise<void>
   waitAgainst: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
+  waitAgainstText: (text: string, ms?: number) => Promise<void>
   waitFor: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
+  waitForText: (text: string, ms?: number) => Promise<void>
   waitForAndClick: (playwrightInput: string, nth?: number, ms?: number) => Promise<void>
   waitForClassName: (input: WaitForClassName) => Promise<void>
   waitForLocation: (predicate: (url: string) => boolean, ms?: number) => Promise<void>
