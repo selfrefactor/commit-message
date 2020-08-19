@@ -28,7 +28,7 @@
 		"eslint-plugin-sort-class-members": "1.8.0",
 		"eslint-plugin-sort-requires": "2.1.0",
 		"prettier": "2.0.5",
-		"rambdax": "4.0.0"
+		"rambdax": "4.2.0"
 	},
 	"peerDependencies": {
 		"typescript": "^3.8.3"
