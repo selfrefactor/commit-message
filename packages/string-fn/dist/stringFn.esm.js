@@ -377,6 +377,18 @@ function head(list) {
   if (typeof list === 'string') return list[0] || '';
   return list[0];
 }
+function shuffle(arrayRaw) {
+  const array = arrayRaw.concat();
+  let counter = array.length;
+  while (counter > 0) {
+    const index = Math.floor(Math.random() * counter);
+    counter--;
+    const temp = array[counter];
+    array[counter] = array[index];
+    array[index] = temp;
+  }
+  return array;
+}
 const charCodesString = [...range(65, 90), ...range(97, 122)];
 const charCodes = [...charCodesString, ...range(49, 57)];
 function toLower(str) {
@@ -783,6 +795,14 @@ function removeIndent(str) {
   return join('\n', map(val => val.trimLeft(), split('\n', str)));
 }
 
+const charCodesString$1 = [...range(65, 90), ...range(97, 122)];
+const charCodes$1 = [...charCodesString$1, ...range(49, 57)];
+function randomString(length = 8, stringTag = false) {
+  const loops = range(0, length);
+  const charSet = stringTag ? charCodesString$1 : charCodes$1;
+  return loops.map(x => String.fromCharCode(head(shuffle(charSet)))).join('');
+}
+
 function reverse(str) {
   return [...str].reverse().join('');
 }
@@ -812,7 +832,7 @@ const shuffleArr = arr => {
   return arr;
 };
 
-function shuffle(str) {
+function shuffle$1(str) {
   return join('', shuffleArr(split('', str)));
 }
 
@@ -954,4 +974,4 @@ function titleCase(str, extraLatin = false) {
   return join(' ', map(val => `${toUpper(head(val))}${toLower(tail(val))}`, method(str)));
 }
 
-export { between, camelCase, constantCase, count, distance, distanceGerman, dotCase, fitWithinLines, getIndent, getMaxLength, glob, indent, isLetter, isPunctuation, kebabCase, maskSentence, maskWords, ms, pascalCase, removeIndent, reverse, seoTitle, shuffle, snakeCase, splitPerLine, splitSentence, stripPunctuation, stripTags, takeArguments, titleCase, trim$1 as trim, words, wordsX };
+export { between, camelCase, constantCase, count, distance, distanceGerman, dotCase, fitWithinLines, getIndent, getMaxLength, glob, indent, isLetter, isPunctuation, kebabCase, maskSentence, maskWords, ms, pascalCase, randomString, removeIndent, reverse, seoTitle, shuffle$1 as shuffle, snakeCase, splitPerLine, splitSentence, stripPunctuation, stripTags, takeArguments, titleCase, trim$1 as trim, words, wordsX };
