@@ -104,7 +104,7 @@ interface AttachOutput{
   waitAgainst: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
   waitAgainstText: (text: string, ms?: number) => Promise<void>
   waitFor: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
-  waitForPredicate: (predicate: (page: Page) => Promise<boolean>, ms?: number) => Promise<void>
+  waitForPredicate: (predicate: () => Promise<boolean>, ms?: number) => Promise<void>
   waitForText: (text: string, ms?: number) => Promise<void>
   waitForAndClick: (playwrightInput: string, nth?: number, ms?: number) => Promise<void>
   waitForClassName: (input: WaitForClassName) => Promise<void>

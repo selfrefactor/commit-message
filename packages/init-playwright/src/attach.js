@@ -325,7 +325,7 @@ function attach(
 
   const waitForPredicate = async (predicate, ms = DELAY) => {
     const condition = async () => {
-      const predicateResult = await predicate(page);
+      const predicateResult = await predicate();
       return predicateResult
     };
     const waitResult = await waitForMethod(condition, ms)();
