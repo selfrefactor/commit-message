@@ -323,6 +323,18 @@ function attach(
     await delay(TICK);
   }
 
+  const waitForPredicate = async (predicate, ms = DELAY) => {
+    const condition = async () => {
+      const predicateResult = await predicate(page);
+      return predicateResult
+    };
+    const waitResult = await waitForMethod(condition, ms)();
+    if (!waitResult) {
+      throw new Error(`Failed wait for predicate | ${predicate.toString()}'`);
+    }
+    await delay(TICK);
+  };
+
   return {
     applyMocks,
     click,
@@ -348,6 +360,7 @@ function attach(
     waitForAndClick,
     waitForClassName,
     waitForLocation,
+    waitForPredicate,
     waitForText,
   }
 }
