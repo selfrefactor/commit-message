@@ -24,7 +24,7 @@ interface WaitForClassName{
   count?: number
 }
 
-interface FindWithText{
+interface FindWithTextNth{
   typeElement: TypeElement
   text: string
   nth: number
@@ -73,9 +73,10 @@ interface AttachOutput{
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
   clickAndWaitForNavigation: (playwrightInput: string, navigateEndsWith: string) => Promise<void>
-  findWithText: (input: FindWithText) => Promise<HTMLElement>
+  findWithTextNth: (input: FindWithTextNth) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
-  clickWithText: (input: FindWithText) => Promise<void>
+  clickWithText: (text: string, ms?: number) => Promise<void>
+  clickWithTextNth: (input: FindWithTextNth) => Promise<void>
   count: (selector: string) => Promise<number>
   delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
