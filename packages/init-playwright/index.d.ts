@@ -90,8 +90,8 @@ interface AttachOutput{
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
   clickWithText: (text: string, ms?: number) => Promise<void>
   clickWithTextNth: (input: FindWithTextNth) => Promise<void>
-  executeInsideIframe: (input: ExecuteInsideIframe) => boolean
-  fillInsideIframe: (input: FillInsideIframe) => void
+  executeInsideIframe: (input: ExecuteInsideIframe) => Promise<boolean>
+  fillInsideIframe: (input: FillInsideIframe) => Promise<void>
   count: (selector: string) => Promise<number>
   delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
