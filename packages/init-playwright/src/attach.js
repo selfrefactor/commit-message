@@ -286,7 +286,53 @@ function attach(
     })(range(0, timesToPress + 1))
   }
 
-  async function executeInsideIframe({ selector, executeFn, predicate }){
+  const waitForPredicate = async (predicate, ms = DELAY) => {
+    const condition = async () => {
+      const predicateResult = await predicate()
+
+      return predicateResult
+    }
+    const waitResult = await waitForMethod(condition, ms)()
+    if (!waitResult){
+      throw new Error(`Failed wait for predicate | ${ predicate.toString() }'`)
+    }
+    await delay(TICK)
+  }
+
+  async function executeInsideNamedIframe({
+    frameName,
+    selector,
+    predicate,
+    executeFn,
+    ms = DELAY,
+  }){
+    await waitForPredicate(async () => {
+      const mainFrame = await page.frame(frameName)
+
+      return mainFrame !== null
+    }, ms)
+    let success = false
+
+    const iframe = await page.frame(frameName)
+    const foundElements = await iframe.$$(selector)
+    if (foundElements.length === 0) return null
+
+    await mapAsync(async el => {
+      if (success) return
+
+      const predicateResult = await predicate(el)
+      if (!predicateResult) return
+
+      success = true
+      await executeFn(el)
+    })(foundElements)
+
+    if (!success){
+      throw new Error(`Cannot execute script over selector "${ selector }" inside iframe with name "${ frameName }"`)
+    }
+  }
+
+  async function executeInsideIframeFn({ selector, executeFn, predicate }){
     const mainFrame = await page.mainFrame()
     const childFrames = await mainFrame.childFrames()
     let success = false
@@ -308,32 +354,48 @@ function attach(
     return success
   }
 
-  async function fillInsideIframe({text, predicate, ms = DELAY, selector = 'input'}){
+  async function executeInsideIframe({
+    selector,
+    executeFn,
+    predicate,
+    ms = DELAY,
+  }){
+    await waitForPredicate(async () => {
+      const success = await executeInsideIframeFn({
+        selector,
+        executeFn,
+        predicate,
+      })
+
+      return success
+    }, ms)
+  }
+
+  async function fillInsideIframe({
+    text,
+    predicate,
+    ms = DELAY,
+    selector = 'input',
+  }){
     const executeFn = async singleElement => {
       await singleElement.fill(text)
     }
     const condition = async () => {
-      const success = await executeInsideIframe({selector, predicate, executeFn})
-      return success;
-    };
-    const waitResult = await waitForMethod(condition, ms)();
-    if (!waitResult) {
-      throw new Error(`Cannot fill text "${text}" inside iframe`)
+      const success = await executeInsideIframeFn({
+        selector,
+        predicate,
+        executeFn,
+      })
+
+      return success
     }
-    await delay(TICK);
+    const waitResult = await waitForMethod(condition, ms)()
+    if (!waitResult){
+      throw new Error(`Cannot fill text "${ text }" inside iframe`)
+    }
+    await delay(TICK)
   }
 
-  const waitForPredicate = async (predicate, ms = DELAY) => {
-    const condition = async () => {
-      const predicateResult = await predicate();
-      return predicateResult
-    };
-    const waitResult = await waitForMethod(condition, ms)();
-    if (!waitResult) {
-      throw new Error(`Failed wait for predicate | ${predicate.toString()}'`);
-    }
-    await delay(TICK);
-  };
 
   return {
     applyMocks,
@@ -347,6 +409,7 @@ function attach(
     findWithPredicate,
     findWithTextNth,
     fillInsideIframe,
+    executeInsideNamedIframe,
     executeInsideIframe,
     getAllClassNames,
     getClassName,

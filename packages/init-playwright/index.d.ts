@@ -71,8 +71,13 @@ interface ServerMock{
 
 interface ExecuteInsideIframe{
   selector: string
+  ms?: number
   executeFn: (singleElement: HTMLElement) => Promise<void>
   predicate: (singleElement: HTMLElement) => Promise<boolean>
+}
+
+interface ExecuteInsideNamedIframe extends ExecuteInsideIframe{
+  frameName: string
 }
 
 interface FillInsideIframe{
@@ -90,7 +95,8 @@ interface AttachOutput{
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
   clickWithText: (text: string, ms?: number) => Promise<void>
   clickWithTextNth: (input: FindWithTextNth) => Promise<void>
-  executeInsideIframe: (input: ExecuteInsideIframe) => Promise<boolean>
+  executeInsideIframe: (input: ExecuteInsideIframe) => Promise<void>
+  executeInsideNamedIframe: (input: ExecuteInsideNamedIframe) => Promise<void>
   fillInsideIframe: (input: FillInsideIframe) => Promise<void>
   count: (selector: string) => Promise<number>
   delay: (ms: number) => Promise<void>
