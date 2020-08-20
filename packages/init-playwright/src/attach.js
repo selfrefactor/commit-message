@@ -54,7 +54,7 @@ function attach(
     await delay(TICK)
   }
 
-  const count = selector => page.$$eval(selector, els => els.length)
+  const countFn = selector => page.$$eval(selector, els => els.length)
 
   const exists = selector => page.$$eval(selector, els => els.length > 0)
 
@@ -110,7 +110,7 @@ function attach(
   ) => {
     await Promise.all([
       page.waitForNavigation({ url : `**/${ navigateEndsWith }` }),
-      page.click(playwrightInput, {force: true}),
+      page.click(playwrightInput, { force : true }),
     ])
     await delay(TICK)
   }
@@ -120,7 +120,7 @@ function attach(
     if (els.length <= nth){
       throw new Error(`Found only ${ els.length } but requested ${ nth } index | ${ selector }`)
     }
-    els[ nth ].click({ force: true})
+    els[ nth ].click({ force : true })
     await delay(TICK)
   }
 
@@ -158,7 +158,7 @@ function attach(
     if (foundElements.length <= nth){
       throw new Error(`Found only ${ foundElements.length } but requested ${ nth } index | ${ playwrightInput }`)
     }
-    await foundElements[ nth ].click({ force : true})
+    await foundElements[ nth ].click({ force : true })
     await delay(TICK)
   }
 
@@ -186,30 +186,31 @@ function attach(
     await delay(TICK)
   }
 
-
   const waitForText = async (text, ms = DELAY) => {
     const checker = async () => {
-      const el = await page.$(`text="${text}"`);
-      return el !== null;
-    };
-    const waitResult = await waitForMethod(checker, ms)();
-    if (!waitResult) {
-      throw new Error(`Fail to wait for text "${text}" to appear on page`);
+      const el = await page.$(`text="${ text }"`)
+
+      return el !== null
     }
-    await delay(TICK);
-  };
+    const waitResult = await waitForMethod(checker, ms)()
+    if (!waitResult){
+      throw new Error(`Fail to wait for text "${ text }" to appear on page`)
+    }
+    await delay(TICK)
+  }
 
   const waitAgainstText = async (text, ms = DELAY) => {
     const checker = async () => {
-      const el = await page.$(`text="${text}"`);
-      return el === null;
-    };
-    const waitResult = await waitForMethod(checker, ms)();
-    if (!waitResult) {
-      throw new Error(`Fail to wait for text "${text}" to disappear on page`);
+      const el = await page.$(`text="${ text }"`)
+
+      return el === null
     }
-    await delay(TICK);
-  };
+    const waitResult = await waitForMethod(checker, ms)()
+    if (!waitResult){
+      throw new Error(`Fail to wait for text "${ text }" to disappear on page`)
+    }
+    await delay(TICK)
+  }
 
   const snap = async label => {
     const fileName = label ? dotCase(label) : randomString(5, true)
@@ -222,7 +223,7 @@ function attach(
     })
   }
 
-  const findWithText = async ({ typeElement, nth, text }) => {
+  const findWithTextNth = async ({ typeElement, nth, text }) => {
     const allElements = await page.$$(typeElement)
     if (allElements.length === 0)
       throw new Error('!allElements | findWithText')
@@ -242,14 +243,20 @@ function attach(
     return foundElements[ nth ]
   }
 
-  const clickWithText = async ({ typeElement, text, nth }) => {
-    const found = await findWithText({
+  const clickWithText = async (text, ms = DELAY) => {
+    await waitForText(text, ms)
+    await page.click(`text="${ text }"`)
+    await delay(TICK)
+  }
+
+  const clickWithTextNth = async ({ typeElement, text, nth }) => {
+    const found = await findWithTextNth({
       typeElement,
       nth,
       text,
     })
 
-    await found.click({force: true})
+    await found.click({ force : true })
     await delay(TICK)
   }
 
@@ -272,23 +279,24 @@ function attach(
   }
 
   const pressTab = async timesToPress => {
-    await page.focus('body');
+    await page.focus('body')
     await mapAsync(async () => {
-      await page.press('body', 'Tab');
-      await delay(TICK);
-    })(range(0, timesToPress + 1));
-  };
+      await page.press('body', 'Tab')
+      await delay(TICK)
+    })(range(0, timesToPress + 1))
+  }
 
   return {
     applyMocks,
     click,
     clickAndWaitForNavigation,
-    findWithText,
-    findWithPredicate,
     clickWithText,
-    count,
+    clickWithTextNth,
+    count: countFn,
     delay,
     exists,
+    findWithPredicate,
+    findWithTextNth,
     getAllClassNames,
     getClassName,
     goto,
@@ -298,10 +306,10 @@ function attach(
     waitAgainst,
     waitAgainstText,
     waitFor,
-    waitForText,
     waitForAndClick,
     waitForClassName,
     waitForLocation,
+    waitForText,
   }
 }
 
