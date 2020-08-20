@@ -76,9 +76,10 @@ interface ExecuteInsideIframe{
 }
 
 interface FillInsideIframe{
-  selector?: string
   text: string
   predicate: (singleElement: HTMLElement) => Promise<boolean>
+  selector?: string
+  ms?: number
 }
 
 interface AttachOutput{

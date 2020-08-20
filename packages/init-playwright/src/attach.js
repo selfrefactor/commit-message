@@ -308,17 +308,19 @@ function attach(
     return success
   }
 
-  async function fillInsideIframe({ selector = 'input', text, predicate }){
+  async function fillInsideIframe({text, predicate, ms = DELAY, selector = 'input'}){
     const executeFn = async singleElement => {
       await singleElement.fill(text)
     }
-    const success = await executeInsideIframe({
-      selector,
-      predicate,
-      executeFn,
-    })
-
-    if (!success) throw new Error(`Cannot fill text "${ text }" inside iframe`)
+    const condition = async () => {
+      const success = await executeInsideIframe({selector, predicate, executeFn})
+      return success;
+    };
+    const waitResult = await waitForMethod(condition, ms)();
+    if (!waitResult) {
+      throw new Error(`Cannot fill text "${text}" inside iframe`)
+    }
+    await delay(TICK);
   }
 
   return {
