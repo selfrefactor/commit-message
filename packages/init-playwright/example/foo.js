@@ -1,4 +1,4 @@
-import { initPlaywright, attach } from "../src/init-playwright.js"
+import { attach, initPlaywright } from '../src/init-playwright'
 
 const GITHUB = 'https://github.com'
 
@@ -16,8 +16,13 @@ export async function foo(){
 
   const executeTest = async () => {
     const allClassNames = await _.getAllClassNames('div')
+
     return allClassNames
   }
-  
-  return {executeTest, _, browser}
+
+  return {
+    executeTest,
+    _,
+    browser,
+  }
 }

@@ -286,17 +286,54 @@ function attach(
     })(range(0, timesToPress + 1))
   }
 
+  async function executeInsideIframe({ selector, executeFn, predicate }){
+    const mainFrame = await page.mainFrame()
+    const childFrames = await mainFrame.childFrames()
+    let success = false
+
+    await mapAsync(async childFrame => {
+      if (success) return
+      const foundElements = await childFrame.$$(selector)
+      if (foundElements.length === 0) return null
+
+      await mapAsync(async singleElement => {
+        if (success) return
+        const predicateResult = await predicate(singleElement)
+        if (!predicateResult) return
+        success = true
+        await executeFn(singleElement)
+      })(foundElements)
+    })(childFrames)
+
+    return success
+  }
+
+  async function fillInsideIframe({ selector = 'input', text, predicate }){
+    const executeFn = async singleElement => {
+      await singleElement.fill(text)
+    }
+    const success = await executeInsideIframe({
+      selector,
+      predicate,
+      executeFn,
+    })
+
+    if (!success) throw new Error(`Cannot fill text "${ text }" inside iframe`)
+  }
+
   return {
     applyMocks,
     click,
     clickAndWaitForNavigation,
     clickWithText,
     clickWithTextNth,
-    count: countFn,
+    count : countFn,
     delay,
     exists,
     findWithPredicate,
     findWithTextNth,
+    fillInsideIframe,
+    executeInsideIframe,
     getAllClassNames,
     getClassName,
     goto,

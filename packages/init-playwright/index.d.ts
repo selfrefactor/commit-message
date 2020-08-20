@@ -69,6 +69,18 @@ interface ServerMock{
   path: string
 }
 
+interface ExecuteInsideIframe{
+  selector: string
+  executeFn: (singleElement: HTMLElement) => Promise<void>
+  predicate: (singleElement: HTMLElement) => Promise<boolean>
+}
+
+interface FillInsideIframe{
+  selector?: string
+  text: string
+  predicate: (singleElement: HTMLElement) => Promise<boolean>
+}
+
 interface AttachOutput{
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
@@ -77,6 +89,8 @@ interface AttachOutput{
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
   clickWithText: (text: string, ms?: number) => Promise<void>
   clickWithTextNth: (input: FindWithTextNth) => Promise<void>
+  executeInsideIframe: (input: ExecuteInsideIframe) => boolean
+  fillInsideIframe: (input: FillInsideIframe) => void
   count: (selector: string) => Promise<number>
   delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
