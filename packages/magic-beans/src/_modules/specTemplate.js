@@ -1,4 +1,4 @@
-const { glue, replace, template, remove } = require('rambdax')
+const { glue, replace, interpolate, remove } = require('rambdax')
 
 const specTemplate = glue(`
   import { {{methodName}} } from './{{fileName}}'
@@ -21,7 +21,7 @@ const specTemplateAsync = glue(`
 function specTemplateFn({ asyncFlag, fileName, methodName }){
   const actualTemplate = asyncFlag ? specTemplateAsync : specTemplate
 
-  const result = template(actualTemplate, {
+  const result = interpolate(actualTemplate, {
     fileName: remove(['.js', '.ts'], fileName),
     methodName,
   })
