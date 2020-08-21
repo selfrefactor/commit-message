@@ -75,8 +75,6 @@ helpers.icons = {
 
 helpers.isMyMode = (mode, behaviourCollection) => R.filter(R.equals(mode))(behaviourCollection).length > 0
 
-helpers.spinnerStartFlag = true
-
 helpers.isMyModeAnyOf = (x, y) => {
   const result = R.compose(
     R.ifElse(

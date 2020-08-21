@@ -82,9 +82,7 @@ type Single = 'obj' |
   'tag=bar' |
   ''
   
-type Standalone = 'stopspin' | 
-  'spin' |
-  'sep' |
+type Standalone = 'sep' |
   'sepx' | 
   'separator' | 
   'separatorx'

@@ -10,8 +10,6 @@ const patternMethod = require('./modules/patternMethod')
 const patternxMethod = require('./modules/patternxMethod')
 const R = require('rambdax')
 const separatorMethod = require('./modules/separatorMethod')
-const spinMethod = require('./modules/spinMethod')
-const stopSpinMethod = require('./modules/stopSpinMethod')
 
 function bigLog(msg){
   CFonts.say(msg, {
@@ -117,8 +115,6 @@ const worker = (inputCollection, behaviourCollection) => {
       boxMethod,
       separatorMethod,
       objMethod,
-      spinMethod,
-      stopSpinMethod,
       //above are the functions that might return 'EXIT'
       iconMethod,
       iconSetMethod,

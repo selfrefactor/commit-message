@@ -23,7 +23,6 @@ Array [
   "/home/s/repos/services/packages/helpers-fn/src/log/pattern.spec.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/patternx.spec.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/separator.spec.js",
-  "/home/s/repos/services/packages/helpers-fn/src/log/spin.spec.js",
   "/home/s/repos/services/packages/helpers-fn/src/tests/benchmark-utils.js",
   "/home/s/repos/services/packages/helpers-fn/src/tests/create-benchmark.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/modules/boxMethod.js",
@@ -35,8 +34,6 @@ Array [
   "/home/s/repos/services/packages/helpers-fn/src/log/modules/patternMethod.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/modules/patternxMethod.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/modules/separatorMethod.js",
-  "/home/s/repos/services/packages/helpers-fn/src/log/modules/spinMethod.js",
-  "/home/s/repos/services/packages/helpers-fn/src/log/modules/stopSpinMethod.js",
   "/home/s/repos/services/packages/helpers-fn/src/tests/benchmarks/allPass.js",
 ]
 `;
@@ -74,6 +71,5 @@ Array [
   "/home/s/repos/services/packages/helpers-fn/src/log/pattern.spec.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/patternx.spec.js",
   "/home/s/repos/services/packages/helpers-fn/src/log/separator.spec.js",
-  "/home/s/repos/services/packages/helpers-fn/src/log/spin.spec.js",
 ]
 `;

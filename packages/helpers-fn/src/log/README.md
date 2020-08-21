@@ -23,7 +23,7 @@ log(...inputCollection: Array<any>, rules: String)
 
 - Your last argument act as rule for logging.
 - You can pass more than one rule using separator `.`
-- For example `log(1,'icon.back')` or `log(1,'spin.tag=foo')`
+- For example `log(1,'icon.back')`
 - You can disable `log-fn` all along by setting `process.env.LOG_FN_FLAG` to `false`
 
 ### Default behaviour
