@@ -5,7 +5,7 @@
 		"eslint": "7.7.0"
 	},
 	"peerDependencies": {
-		"typescript": "^3.8.3"
+		"typescript": "^3.8.3 || ^4.0.0"
 	},
 	"name": "tslint-fn",
 	"version": "0.2.2",
