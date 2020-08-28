@@ -9,15 +9,15 @@
 	"main": "./src/init-playwright.js",
 	"version": "0.18.0",
 	"dependencies": {
-		"string-fn": "2.12.0",
+		"string-fn": "2.12.2",
 		"playwright": "1.3.1-next.1597700800153",
 		"rambdax": "5.1.0"
 	},
 	"devDependencies": {
-		"@types/node": "14.6.0",
+		"@types/node": "14.6.1",
 		"@types/jest": "26.0.10",
-		"jest": "26.4.0",
-		"@babel/core": "7.11.1",
+		"jest": "26.4.2",
+		"@babel/core": "7.11.4",
 		"@babel/plugin-proposal-object-rest-spread": "7.11.0",
 		"@babel/preset-env": "7.11.0"
 	},

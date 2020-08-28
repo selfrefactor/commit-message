@@ -120,9 +120,17 @@ function attach(
     if (els.length <= nth){
       throw new Error(`Found only ${ els.length } but requested ${ nth } index | ${ selector }`)
     }
-    els[ nth ].click({ force : true })
+
+    await els[nth].scrollIntoViewIfNeeded();
+    await els[ nth ].click({ force : true })
     await delay(TICK)
   }
+
+  const forceClick = async (playwrightInput) => {
+    await page.$eval(playwrightInput, el => el.scrollIntoView());
+    await delay(TICK);
+    await click(playwrightInput, 0)
+  };
 
   const waitFor = async (playwrightInput, count = 1, ms = DELAY) => {
     const condition = async () => {
@@ -400,6 +408,7 @@ function attach(
   return {
     applyMocks,
     click,
+    forceClick,
     clickAndWaitForNavigation,
     clickWithText,
     clickWithTextNth,

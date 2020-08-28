@@ -90,6 +90,7 @@ interface FillInsideIframe{
 interface AttachOutput{
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
+  forceClick: (playwrightInput: string) => Promise<void>
   clickAndWaitForNavigation: (playwrightInput: string, navigateEndsWith: string) => Promise<void>
   findWithTextNth: (input: FindWithTextNth) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
