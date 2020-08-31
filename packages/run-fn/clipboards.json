@@ -2,5 +2,5 @@
   "tuna":"cd $HOME/repos/services/packages/tuna-player&&yarn start\n",
   "on":"cd $HOME/repos/on&&yarn on\n",
   "onl":"cd $HOME/repos/on&&yarn onlight\n",
-  "work":"cd $HOME/work/dev/test&&yarn start:demo\n"
+  "work":"cd $HOME/work/dev&&yarn start:demo\n"
 }
