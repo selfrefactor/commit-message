@@ -27,7 +27,7 @@
 		"eslint-plugin-simple-import-sort": "5.0.3",
 		"eslint-plugin-sort-class-members": "1.8.0",
 		"eslint-plugin-sort-requires": "2.1.0",
-		"prettier": "2.0.5",
+		"prettier": "2.1.1",
 		"rambdax": "4.0.0"
 	},
 	"peerDependencies": {
