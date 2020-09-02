@@ -8,10 +8,10 @@
 	"author": "selfrefactor <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"rambda": "5.8.0",
+		"rambda": "5.13.1",
 		"redis": "3.0.2"
 	},
 	"devDependencies": {
-		"env-fn": "2.1.0"
+		"env-fn": "2.1.1"
 	}
 }
