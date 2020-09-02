@@ -14,15 +14,15 @@ env-fn@2.1.1:
   dependencies:
     rambda "5.7.0"
 
-rambda@5.13.1:
-  version "5.13.1"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.13.1.tgz#878de64abba268a515f5cd5327448da4344e9b3b"
-  integrity sha512-ygj/oPmskiJXcTMWPo1RkKnqI2EjwvO/0KV/F+oJ5njhj4vDENLPqBV3CjDMiJ8yZTZvQbPOciUnsmXZkAF3Vw==
-
 rambda@5.7.0:
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.7.0.tgz#1c051e2659549f9bcb1679ec3e84c106a4c010c7"
   integrity sha512-DSranSh0/58bayUCkYyCiuvuSJND4X+di+6CZRko7LPf/Jz7HuGaSz24j5r8YQ39S5L5olqT/QQU8pN2Y8HKaA==
+
+rambdax@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-5.1.0.tgz#a232d3ab84fdad4c27bbfccdb37a8a8877f78794"
+  integrity sha512-zd5gaAza8e/fnqNkroL5ebOoihB1k8mwQAj1FlWillfmGDoFDI7QD6NZygcRgQMI4R/cXK/YjdZjWiwXqatKLQ==
 
 redis-commands@^1.5.0:
   version "1.6.0"

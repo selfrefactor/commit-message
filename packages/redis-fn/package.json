@@ -2,13 +2,13 @@
 	"name": "redis-fn",
 	"version": "0.3.3",
 	"description": "Redis wrapper",
-	"main": "src/index.js",
+	"main": "src/redis-fn.js",
 	"typings": "index.d.ts",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/redis-fn",
 	"author": "selfrefactor <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"rambda": "5.13.1",
+		"rambdax": "5.1.0",
 		"redis": "3.0.2"
 	},
 	"devDependencies": {

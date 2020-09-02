@@ -1,6 +1,6 @@
 require('env-fn')('special')
-const R = require('rambda')
-const { redisFn } = require('../src/')
+const R = require('rambdax')
+const { redisFn } = require('../src/redis-fn')
 const KEY = 'foo'
 const KEY_OBJ = 'foo_obj'
 const VALUE = 'bar'
@@ -66,15 +66,11 @@ const debug = async () => {
     })
 
     console.log(R.equals(updateResult, UPDATE_OBJ_EXPECTED_RESULT))
-    console.log(
-      R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT)
-    )
+    console.log(R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT))
 
     await delay(1100)
 
-    console.log(
-      R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT)
-    )
+    console.log(R.equals(await redis.getObj(KEY_OBJ), UPDATE_OBJ_EXPECTED_RESULT))
 
     await delay(1100)
 

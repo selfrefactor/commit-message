@@ -1,5 +1,7 @@
 export interface RedisOptions{
   url?: string
+  defaultExpiryValue?: number
+  defaultExpiryFlag?: boolean
 }
 
 export interface SetOptions{
