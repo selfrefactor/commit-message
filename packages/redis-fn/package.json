@@ -1,6 +1,6 @@
 {
 	"name": "redis-fn",
-	"version": "0.3.3",
+	"version": "0.3.4",
 	"description": "Redis wrapper",
 	"main": "src/redis-fn.js",
 	"typings": "index.d.ts",
