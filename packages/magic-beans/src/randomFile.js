@@ -50,6 +50,10 @@ async function randomFile(){
   requestRandomFile()
 }
 
+exports.randomFile = randomFile
+exports.requestRandomFile = requestRandomFile
+exports.changeOpenedFile = changeOpenedFile
+
 async function randomFileInterval(){
   if (getter(RANDOM_FILE) === true){
     return setter(RANDOM_FILE, false)
@@ -89,8 +93,3 @@ async function randomFileInterval(){
 
   randomFile()
 }
-
-exports.randomFile = randomFile
-exports.requestRandomFile = requestRandomFile
-exports.randomFileInterval = randomFileInterval
-exports.changeOpenedFile = changeOpenedFile

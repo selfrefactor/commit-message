@@ -36,10 +36,6 @@
 				"title": "Magic Beans request random file"
 			},
 			{
-				"command": "magicBeans.randomFileInterval",
-				"title": "Magic Beans random file every interval"
-			},
-			{
 				"command": "magicBeans.createSpec",
 				"title": "Create spec"
 			},
