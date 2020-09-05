@@ -20,12 +20,6 @@ Replace `klaw-sync` with `run-fn` related dep
 
 It will show number of filtered files and each click on the message will open a random file.
 
-## Open random file on each interval
-
-By default the interval is 120 seconds and on every loop a random file larger than 650B from the current project will be openened.
-
-If `RANDOM_FILE_AUTO_SCROLL` is set to `true` then on every 10 seconds scroll position is moved down with 10 lines.
-
 ## Format Json
 
 Open command search bar and search for `Format JSON`
@@ -37,7 +31,8 @@ Open command search bar and search for `Format JSON`
 It will create `.spec` file importing the current file
 
 For example, the command is started while file `foo.js` is on focus.
-Then file `foo.spec.js` is created importing the first exported method from `foo.js`
+
+Then file `foo.spec.js` is created importing the first exported function from `foo.js`
 
 ## Order props
 

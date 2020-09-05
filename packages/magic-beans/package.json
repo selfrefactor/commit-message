@@ -9,7 +9,7 @@
 	"name": "magic-beans",
 	"displayName": "Magic Beans",
 	"description": "Magic-like effects",
-	"version": "0.28.1",
+	"version": "0.28.2",
 	"publisher": "selfrefactor",
 	"engines": {
 		"vscode": "^1.30.1"
@@ -100,26 +100,6 @@
 						"specs"
 					],
 					"description": "Which file extensions are allowed in random file mode"
-				},
-				"magicBeans.RANDOM_FILE_AUTO_SCROLL": {
-					"type": "boolean",
-					"default": false,
-					"description": "Auto scroll down with 15 lines every RANDOM_FILE_SCROLL_INTERVAL seconds"
-				},
-				"magicBeans.RANDOM_FILE_INTERVAL": {
-					"type": "number",
-					"default": 120,
-					"description": "(In seconds) Every how many seconds to open a random file"
-				},
-				"magicBeans.RANDOM_FILE_SCROLL_BY": {
-					"type": "number",
-					"default": 15,
-					"description": "(In lines) how many lines to be scrolled down every `RANDOM_FILE_SCROLL_INTERVAL` seconds"
-				},
-				"magicBeans.RANDOM_FILE_SCROLL_INTERVAL": {
-					"type": "number",
-					"default": 12,
-					"description": "(In seconds) how ofter scroll down by `RANDOM_FILE_SCROLL_BY` lines will be applied in `random file` mode"
 				},
 				"magicBeans.RANDOM_FILE_MINIMAL_SIZE": {
 					"type": "number",
