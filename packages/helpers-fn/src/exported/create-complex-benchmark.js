@@ -29,7 +29,7 @@ async function createBenchmark({label: topLabel, suites}){
     ({label,fn}) => bench.add(label, fn),
   )
   
-  await bench.suite(
+  return bench.suite(
     getLabel(topLabel),
     ...benches,  
     bench.cycle(),

@@ -17,7 +17,7 @@ async function createBenchmark(input){
     process.env.BENCHMARK_FOLDER ? process.env.BENCHMARK_FOLDER : folderFallback
   )
 
-  await bench.suite(
+  return bench.suite(
     constantCase(suiteLabel),
     ...benches,  
     bench.cycle(),

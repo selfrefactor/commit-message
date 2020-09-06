@@ -18,7 +18,7 @@ export function createBenchmark(
       label: string
     }>
   }    
-): Promise<void>
+): Promise<object>
 
 export function createComplexBenchmark(
     input: Array<{
@@ -28,7 +28,7 @@ export function createComplexBenchmark(
       }>
       label: string
     }>
-): Promise<void>
+): Promise<object>
 
 // TRANSLATE
 // ============================================
