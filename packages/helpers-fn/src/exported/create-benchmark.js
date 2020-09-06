@@ -1,11 +1,11 @@
 const bench = require('benny')
-const {ok, maybe, headObject} = require('rambdax')
+const {ok, maybe} = require('rambdax')
 const {snakeCase, constantCase} = require('string-fn')
 
 const folderFallback = 'benchmark_results'
 
 async function createBenchmark(input){
-  const {prop: suiteLabel,value: tests} = headObject(input)
+  const [[suiteLabel, tests]] = Object.entries(input)
   ok(tests, suiteLabel)([{label: String, fn: Function}], String)
 
   const benches = tests.map(
