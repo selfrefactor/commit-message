@@ -1,5 +1,15 @@
 [
   {
+    "key": "alt+p",
+    "command": "workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "alt+u",
+    "command": "workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
+  },
+  {
     "key": "alt+4",
     "command": "list.collapseAll",
     "when": "listFocus && !inputFocus"
@@ -335,5 +345,15 @@
     "key": "shift+alt+o",
     "command": "-editor.action.organizeImports",
     "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "config.workbench.editor.showTabs && !editorSticky"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.unpinEditor",
+    "when": "config.workbench.editor.showTabs && editorSticky"
   }
 ]

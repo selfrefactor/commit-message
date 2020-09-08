@@ -6,34 +6,11 @@
 
 ## Latest key binding
 
+### Pin/unpin tab - pin with `Alt+P`; unpin with `Alt+U`
+
 ### Collapse all with `Alt+4`
 
 ### Find all references - Caps + F
-
-### Pin/unpin tab - Somehow these setting is lost to VSCode
-
-```
-{
-    "key": "capslock 2",
-    "command": "workbench.action.pinEditor",
-    "when": "config.workbench.editor.showTabs && !editorSticky"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.pinEditor",
-    "when": "config.workbench.editor.showTabs && !editorSticky"
-  },
-  {
-    "key": "capslock 3",
-    "command": "workbench.action.unpinEditor",
-    "when": "config.workbench.editor.showTabs && editorSticky"
-  },
-  {
-    "key": "ctrl+k shift+enter",
-    "command": "-workbench.action.unpinEditor",
-    "when": "config.workbench.editor.showTabs && editorSticky"
-  },
-```
 
 ## VSCode changes
 
