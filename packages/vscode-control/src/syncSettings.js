@@ -67,9 +67,7 @@ function syncSettings(){
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
     "workbench.colorTheme": "Archer",
-    'debug.console.fontFamily' :'Bar',
-    'niketa.PORT_0'            : 3011,
-    'niketa.PORT_1'            : 3012,
+    'debug.console.fontFamily' :'Operator Mono',
   }
 
   writeJsonSync(
