@@ -1,6 +1,8 @@
 {
   "recommendations": [
     "svipas.code-autocomplete",
+    "vscode-icons-team.vscode-icons",
+    "Raathigeshan.waypoint",
     "winddown.vscode-winddown",
     "VisualStudioExptTeam.vscodeintellicode",
     "ms-vscode.vscode-typescript-next"

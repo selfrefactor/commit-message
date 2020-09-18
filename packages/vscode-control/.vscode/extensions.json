@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "breabcrumb.wobbly-icon-theme",
-    "Raathigeshan.waypoint",
     "svipas.code-autocomplete",
     "saidur2.relative-import",
     "tlent.jest-snapshot-language-support",
@@ -11,7 +10,6 @@
     "Angular.ng-template",
     "wallabyjs.wallaby-vscode",
     "syler.sass-indented",
-    "vscode-icons-team.vscode-icons",
     "TabNine.tabnine-vscode",
     "selfrefactor.magic-beans",
     "selfrefactor.niketa-dark-theme",
