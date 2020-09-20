@@ -20,7 +20,7 @@
 		"eslint": "7.7.0",
 		"eslint-plugin-async-await": "0.0.0",
 		"eslint-plugin-babel": "5.3.1",
-		"eslint-plugin-jest": "23.20.0",
+		"eslint-plugin-jest": "24.0.2",
 		"eslint-plugin-jest-formatting": "2.0.0",
 		"eslint-plugin-no-unsafe-regex": "1.0.0",
 		"eslint-plugin-node": "11.1.0",
