@@ -1,4 +1,7 @@
 {
+  "editor.renderWhitespace": "trailing",
+  "editor.fontWeight": 350,
+  "editor.find.cursorMoveOnType": true,
   "files.enableTrash": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "scm.defaultViewMode": "tree",
@@ -135,8 +138,8 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "ClevelandShow",
+  "workbench.iconTheme": "wobbly-icon-theme",
+  "workbench.colorTheme": "CommunicationBreakdown",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,
