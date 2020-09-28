@@ -23,7 +23,7 @@ async function executeTest(browserMode){
     const _ = attach(page, browserMode)
 
     const allClassNames = await _.getAllClassNames('div')
-    expect(allClassNames.length).toBeGreaterThan(50)
+    expect(allClassNames.length).toBeGreaterThan(30)
     await browser.close()
   } catch (e){
     console.log(e)
