@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "ryanluker.vscode-coverage-gutters",
     "breabcrumb.wobbly-icon-theme",
     "svipas.code-autocomplete",
     "saidur2.relative-import",
