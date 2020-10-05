@@ -138,7 +138,7 @@
 	},
 	"dependencies": {
 		"klaw-sync": "6.0.0",
-		"rambdax": "5.0.0",
+		"rambdax": "5.1.0",
 		"string-fn": "2.12.0"
 	}
 }
