@@ -39,6 +39,6 @@
     "typescript": "3.8.3"
   },
   "dependencies": {
-    "rambdax": "3.7.0"
+    "rambdax": "6.2.0"
   }
 }

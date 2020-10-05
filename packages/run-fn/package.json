@@ -23,7 +23,7 @@
 		"fs-extra": "9.0.1",
 		"helpers-fn": "0.6.1",
 		"lint-fn": "2.10.0",
-		"rambdax": "5.1.0",
+		"rambdax": "6.2.0",
 		"string-fn": "2.12.2"
 	},
 	"devDependencies": {

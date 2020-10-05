@@ -21,7 +21,7 @@
 		"inquirer": "7.3.0",
 		"json-format": "1.0.1",
 		"package-storage": "1.0.0",
-		"rambdax": "3.7.0"
+		"rambdax": "6.2.0"
 	},
 	"devDependencies": {
 		"@types/fs-extra": "9.0.1",

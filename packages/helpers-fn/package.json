@@ -28,7 +28,7 @@
 		"gradient-string": "1.2.0",
 		"log-symbols": "4.0.0",
 		"q-i": "2.0.1",
-		"rambdax": "6.1.0",
+		"rambdax": "6.2.0",
 		"string-fn": "2.12.2"
 	},
 	"devDependencies": {

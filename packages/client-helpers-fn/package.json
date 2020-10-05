@@ -17,7 +17,7 @@
 		]
 	},
 	"dependencies": {
-		"rambdax": "^3.7.0"
+		"rambdax": "^6.0.0"
 	},
 	"devDependencies": {
 		"@types/jest": "25.1.4",
