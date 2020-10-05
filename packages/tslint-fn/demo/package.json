@@ -1,15 +1,15 @@
 {
-  "dependencies": {
-    "execa": "4.0.0",
-    "rambdax": "3.7.0"
-  },
-  "scripts": {
+	"dependencies": {
+		"execa": "4.0.3",
+		"rambdax": "6.2.0"
+	},
+	"scripts": {
 		"out": "node buildConfig.js",
-    "lint": "eslint src/foo.ts --fix"
-  },
-  "devDependencies": {
-    "fs-extra": "9.0.0",
-    "tslint-fn": "0.2.1",
-    "typescript": "3.8.3"
-  }
+		"lint": "eslint src/foo.ts --fix"
+	},
+	"devDependencies": {
+		"fs-extra": "9.0.1",
+		"tslint-fn": "0.2.2",
+		"typescript": "4.1.0-dev.20201005"
+	}
 }
