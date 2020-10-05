@@ -20,7 +20,6 @@ module.exports = {
     "project": "./tsconfig.json"
   },
   "rules": {
-    "@typescript-eslint/consistent-type-definitions": [1, "type"],
     "@typescript-eslint/member-delimiter-style": [
       1,
       {
