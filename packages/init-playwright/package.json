@@ -14,9 +14,9 @@
 		"rambdax": "6.2.0"
 	},
 	"devDependencies": {
-		"@types/node": "14.11.2",
+		"@types/node": "14.11.5",
 		"@types/jest": "26.0.14",
-		"jest": "26.4.2",
+		"jest": "26.5.0",
 		"@babel/core": "7.11.6",
 		"@babel/plugin-proposal-object-rest-spread": "7.11.0",
 		"@babel/preset-env": "7.11.5"

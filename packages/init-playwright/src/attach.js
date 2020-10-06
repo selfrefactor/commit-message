@@ -250,6 +250,31 @@ function attach(
 
     return foundElements[ nth ]
   }
+  const queryProp = async (typeElement, predicate, prop) => {
+    const foundList = await page.evaluate(input => {
+      const allSelectors = Array.from(document.querySelectorAll(input.typeElement));
+      return allSelectors.map(el => el[input.prop]);
+    }, {typeElement, prop});
+
+    if (!predicate) return foundList;
+
+    return foundList.filter(predicate);
+  };
+
+  const clickWith = async ({ typeElement, nth = 0, predicate, prop = 'className' }) => {
+    const props = await queryProp(typeElement, predicate, prop)
+    if (props.length <= nth) {
+      throw new Error(
+        `Found only ${props.length} but requested ${nth} index | ${typeElement}`
+      );
+    }
+
+    const playwrightInput = prop === 'className' ?
+    `.${props[nth]}` :
+    `#${props[nth]}`
+
+    await click(playwrightInput)
+  }
 
   const clickWithText = async (text, ms = DELAY) => {
     await waitForText(text, ms)
@@ -410,6 +435,7 @@ function attach(
     click,
     forceClick,
     clickAndWaitForNavigation,
+    clickWith,
     clickWithText,
     clickWithTextNth,
     count : countFn,

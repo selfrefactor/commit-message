@@ -87,6 +87,13 @@ interface FillInsideIframe{
   ms?: number
 }
 
+interface ClickWith{
+  typeElement: TypeElement
+  predicate: (prop: string) => boolean
+  prop?: 'className'|'id'
+  nth?: number
+}
+
 interface AttachOutput{
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
@@ -94,6 +101,7 @@ interface AttachOutput{
   clickAndWaitForNavigation: (playwrightInput: string, navigateEndsWith: string) => Promise<void>
   findWithTextNth: (input: FindWithTextNth) => Promise<HTMLElement>
   findWithPredicate: (input: FindWithPredicate) => Promise<HTMLElement>
+  clickWith: (input: ClickWith) => Promise<void>
   clickWithText: (text: string, ms?: number) => Promise<void>
   clickWithTextNth: (input: FindWithTextNth) => Promise<void>
   executeInsideIframe: (input: ExecuteInsideIframe) => Promise<void>
