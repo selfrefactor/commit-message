@@ -1,5 +1,13 @@
 [
   {
+    "key": "capslock d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "-workbench.view.debug"
+  },
+  {
     "key": "alt+p",
     "command": "workbench.action.pinEditor",
     "when": "config.workbench.editor.showTabs && !editorSticky"
