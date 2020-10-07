@@ -6,7 +6,7 @@
 	"version": "2.1.1",
 	"typings": "index.d.ts",
 	"description": "Load environment variables from from local `.env` file",
-	"main": "envFn.js",
+	"main": "./src/env-fn.js",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/env-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
