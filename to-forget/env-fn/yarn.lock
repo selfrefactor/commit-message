@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-rambda@5.7.0:
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/rambda/-/rambda-5.7.0.tgz#1c051e2659549f9bcb1679ec3e84c106a4c010c7"
-  integrity sha512-DSranSh0/58bayUCkYyCiuvuSJND4X+di+6CZRko7LPf/Jz7HuGaSz24j5r8YQ39S5L5olqT/QQU8pN2Y8HKaA==
+rambda@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.2.0.tgz#4afb776b198b054341bdf53f40edc300bea9a969"
+  integrity sha512-2fIT02e45V2orajVC/TlmNtSyqbaWi/0hB6hfzNigV7qfrllS+mQeST1OQaveKWeVCNVKlXus0F2CAO8lDQNvw==

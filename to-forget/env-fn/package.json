@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"rambda": "5.8.0"
+		"rambda": "6.2.0"
 	},
 	"name": "env-fn",
 	"version": "2.1.1",
