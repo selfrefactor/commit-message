@@ -8,19 +8,19 @@
   "repository": "https://github.com/selfrefactor/services/tree/master/packages/create-vscode-theme",
   "typings": "index.d.ts",
   "dependencies": {
-		"esm": "3.2.25",
-		"fs-extra": "9.0.1",
-		"rambdax": "6.2.0"
+    "esm": "3.2.25",
+    "fs-extra": "9.0.1",
+    "rambdax": "6.2.0"
   },
   "devDependencies": {
-		"@babel/core": "7.11.6",
-		"@babel/plugin-proposal-object-rest-spread": "7.11.0",
-		"@babel/preset-env": "7.11.5",
-		"@types/jest": "26.0.13",
-		"jest": "26.4.2",
-		"rambda": "6.1.0"
+    "@babel/core": "7.11.6",
+    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
+    "@babel/preset-env": "7.11.5",
+    "@types/jest": "^26.0.14",
+    "jest": "26.4.2",
+    "rambda": "6.1.0"
   },
   "scripts": {
-		"test": "jest src -u"
-	}
+    "test": "jest src -u"
+  }
 }
