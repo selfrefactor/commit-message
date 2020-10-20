@@ -13,7 +13,7 @@
 		"inquirer": "7.3.0",
 		"inquirer-autocomplete-prompt": "1.1.0",
 		"package-storage": "1.0.0",
-		"rambda": "5.10.0",
+		"rambda": "6.3.1",
 		"string-fn": "2.11.1"
 	},
 	"devDependencies": {
