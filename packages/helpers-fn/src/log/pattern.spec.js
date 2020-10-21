@@ -10,6 +10,7 @@ test('', () => {
     a,
     b,
     c,
-  }, 'pattern')
+  },
+  'pattern')
   expect(1).toEqual(1)
 })

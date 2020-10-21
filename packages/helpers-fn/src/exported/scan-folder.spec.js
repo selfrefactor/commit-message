@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 
-import { scanFolder } from './scan-folder.js'
+import { scanFolder } from './scan-folder'
 const testDir = resolve(__dirname, '../../src')
 
 test('happy', async () => {

@@ -15,7 +15,7 @@ function bigLog(msg){
   CFonts.say(msg, {
     font          : 'chrome', // define the font face
     align         : 'left', // define text alignment
-    colors        : [ '#77a','#a7a', '#77a' ], // define all colors
+    colors        : [ '#77a', '#a7a', '#77a' ], // define all colors
     background    : 'white', // define the background color, you can also use `backgroundColor` here as key
     letterSpacing : 0, // define letter spacing
     lineHeight    : 0, // define the line height
@@ -29,10 +29,8 @@ const logMethod = (inputCollection, behaviourCollection) => {
     return bigLog(inputCollection[ 0 ])
   }
   const rule = x =>
-    R.both(
-      xInstance => R.type(xInstance) === 'Object',
-      xInstance => R.has('chalkRule')(xInstance)
-    )(x)
+    R.both(xInstance => R.type(xInstance) === 'Object',
+      xInstance => R.has('chalkRule')(xInstance))(x)
 
   let defaultChalkRule
 
@@ -47,9 +45,7 @@ const logMethod = (inputCollection, behaviourCollection) => {
     defaultChalkRule = chalk.hex(`#${ color }`).bgHex(`#${ background }`)
   } else if (helpers.patterns[ tag ] === undefined){
     helpers.patterns[ tag ] =
-      isBackMode === false ?
-        helpers.getChalkFront() :
-        helpers.getChalkBack()
+      isBackMode === false ? helpers.getChalkFront() : helpers.getChalkBack()
 
     const settings = helpers.patterns[ tag ]
 
@@ -66,32 +62,22 @@ const logMethod = (inputCollection, behaviourCollection) => {
         chalk.hex(`#${ settings.color }`).bgHex(`#${ settings.background }`)
   }
 
-  const internals = R.compose(
-    R.ifElse(
-      x => R.length(x) === 0,
-      () => ({ chalkGenericRule : defaultChalkRule }),
-      x => R.head(x).chalkRule
-    ),
-    R.filter(rule)
-  )(inputCollection)
+  const internals = R.compose(R.ifElse(
+    x => R.length(x) === 0,
+    () => ({ chalkGenericRule : defaultChalkRule }),
+    x => R.head(x).chalkRule
+  ),
+  R.filter(rule))(inputCollection)
 
-  const filteredInputCollection = R.filter(x => R.not(rule(x)))(
-    inputCollection
-  )
+  const filteredInputCollection = R.filter(x => R.not(rule(x)))(inputCollection)
 
   if (R.type(internals) === 'Object'){
-    const objectsToLog = R.compose(R.filter(x => R.type(x) === 'Object'))(
-      filteredInputCollection
-    )
+    const objectsToLog = R.compose(R.filter(x => R.type(x) === 'Object'))(filteredInputCollection)
 
-    const inputCollectionToLog = R.compose(
-      R.filter(x => R.type(x) !== 'Object')
-    )(filteredInputCollection)
+    const inputCollectionToLog = R.compose(R.filter(x => R.type(x) !== 'Object'))(filteredInputCollection)
 
-    console.log(
-      internals.chalkGenericRule(...inputCollectionToLog),
-      ...objectsToLog
-    )
+    console.log(internals.chalkGenericRule(...inputCollectionToLog),
+      ...objectsToLog)
   } else {
     console.log(internals, ...filteredInputCollection)
   }
@@ -157,15 +143,12 @@ const UTC_LOCATION_OFFSET = UTC_LOCATION * 60
 
 function getTime(){
   const date = new Date()
-  const offset = Math.round(
-    (date.getTimezoneOffset() + UTC_LOCATION_OFFSET) / 60
-  )
+  const offset = Math.round((date.getTimezoneOffset() + UTC_LOCATION_OFFSET) / 60)
 
   if (offset === 0){
     return dayjs().format(FORMAT)
   } else if (offset > 0){
-    return dayjs()
-      .add(offset, 'hour')
+    return dayjs().add(offset, 'hour')
       .format(FORMAT)
   }
 
@@ -176,7 +159,9 @@ function getTime(){
 
 function logx(...args){
   const time = getTime()
-  log(`[${ time }]`, ...args, 'info')
+  log(
+    `[${ time }]`, ...args, 'info'
+  )
 }
 
 exports.log = log
