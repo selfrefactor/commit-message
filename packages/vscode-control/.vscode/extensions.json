@@ -1,17 +1,14 @@
 {
   "recommendations": [
-    "ryanluker.vscode-coverage-gutters",
+    "ms-vscode.vscode-typescript-next",
     "breabcrumb.wobbly-icon-theme",
-    "svipas.code-autocomplete",
     "saidur2.relative-import",
     "tlent.jest-snapshot-language-support",
-    "mrmlnc.vscode-duplicate",
     "WallabyJs.dingo-vscode",
     "firefox-devtools.vscode-firefox-debug",
     "Angular.ng-template",
     "wallabyjs.wallaby-vscode",
     "syler.sass-indented",
-    "TabNine.tabnine-vscode",
     "selfrefactor.magic-beans",
     "selfrefactor.niketa-dark-theme",
     "selfrefactor.Niketa-theme",

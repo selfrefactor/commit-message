@@ -1,5 +1,8 @@
 {
   "recommendations": [
+    "mrmlnc.vscode-duplicate",
+    "TabNine.tabnine-vscode",
+    "ryanluker.vscode-coverage-gutters",
     "svipas.code-autocomplete",
     "vscode-icons-team.vscode-icons",
     "Raathigeshan.waypoint",
