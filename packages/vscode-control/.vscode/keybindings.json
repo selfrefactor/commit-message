@@ -1,5 +1,15 @@
 [
   {
+    "key": "shift+capslock",
+    "command": "copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+c",
+    "command": "-copyRelativeFilePath",
+    "when": "!editorFocus"
+  },
+  {
     "key": "capslock d",
     "command": "workbench.view.debug"
   },
