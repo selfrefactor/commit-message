@@ -1,11 +1,16 @@
 const vscode = require('vscode')
+const {
+  setter,
+  getter,
+  delay,
+  shuffle,
+  random,
+  removeIndex,
+} = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
-const { readFolders } = require('./_modules/readFolders')
-const { setter, getter, delay, shuffle, random, removeIndex } = require('rambdax')
+const { scanFolder } = require('helpers-fn')
 
-const RANDOM_FILE_MAXIMAL_SIZE = configAnt('RANDOM_FILE_MAXIMAL_SIZE')
-const RANDOM_FILE_MINIMAL_SIZE = configAnt('RANDOM_FILE_MINIMAL_SIZE')
 const RANDOM_FILE_SKIP_PATTERNS = configAnt('RANDOM_FILE_SKIP_PATTERNS')
 const RANDOM_FILE_ALLOWED_EXTENSIONS = configAnt('RANDOM_FILE_ALLOWED_EXTENSIONS')
 
@@ -21,24 +26,30 @@ function changeOpenedFile(filePath, callback = () => {}){
 
 function requestRandomFile(){
   const files = getter('files')
-  if(files.length === 0) return
+  if (files.length === 0) return
   const index = random(0, files.length - 1)
   changeOpenedFile(files[ index ])
   setter('files', removeIndex(files, index))
-  logToUser(`${files.length - 1} files left`)
+  logToUser(`${ files.length - 1 } files left`)
 }
 
 async function randomFile(){
   const projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
-  const files = shuffle(readFolders({
-    folderPath        : projectFolder,
-    min               : RANDOM_FILE_MINIMAL_SIZE,
-    max               : RANDOM_FILE_MAXIMAL_SIZE,
-    allowedExtensions : RANDOM_FILE_ALLOWED_EXTENSIONS,
-    skipPatterns      : RANDOM_FILE_SKIP_PATTERNS,
-  }))
+  const files = await scanFolder({
+    folder    : projectFolder,
+    maxDepth  : 20,
+    excludeFn : dir => {
+      return RANDOM_FILE_SKIP_PATTERNS.includes(dir)
+    },
+    filterFn : filePath => {
+      const [ pass ] = RANDOM_FILE_ALLOWED_EXTENSIONS.filter(singleExtension => filePath.endsWith('singleExtension'))
+
+      return Boolean(!pass)
+    },
+  })
+
   if (files.length === 0) return
-  setter('files', files)
+  setter('files', shuffle(files))
   requestRandomFile()
 }
 

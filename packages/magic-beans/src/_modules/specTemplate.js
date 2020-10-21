@@ -22,7 +22,7 @@ function specTemplateFn({ asyncFlag, fileName, methodName }){
   const actualTemplate = asyncFlag ? specTemplateAsync : specTemplate
 
   const result = interpolate(actualTemplate, {
-    fileName: remove(['.js', '.ts'], fileName),
+    fileName : remove([ '.js', '.ts' ], fileName),
     methodName,
   })
   const withTab = replace(

@@ -14,9 +14,7 @@ function toggleProve(){
     `${ fileName }Prove`
 
   const newFilePath = replace(
-    fileName,
-    newFileName,
-    filePath
+    fileName, newFileName, filePath
   )
   const alreadyExist = existsSync(newFilePath)
   if (alreadyExist) return
