@@ -1252,6 +1252,12 @@ helpers-fn@0.6.1:
     rambdax "5.1.0"
     string-fn "2.12.2"
 
+"hjson-js@https://github.com/selfrefactor/hjson-js#1.0.0":
+  version "3.2.1"
+  resolved "https://github.com/selfrefactor/hjson-js#88dc548f912e7c1a99c8fdab5d0496a053b908f3"
+  dependencies:
+    rambdax "7.0.1"
+
 https-proxy-agent@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-3.0.1.tgz#b8c286433e87602311b01c8ea34413d856a4af81"
@@ -1894,6 +1900,11 @@ rambdax@5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-5.1.0.tgz#a232d3ab84fdad4c27bbfccdb37a8a8877f78794"
   integrity sha512-zd5gaAza8e/fnqNkroL5ebOoihB1k8mwQAj1FlWillfmGDoFDI7QD6NZygcRgQMI4R/cXK/YjdZjWiwXqatKLQ==
+
+rambdax@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.0.1.tgz#6a1b3184abcf4cf6df5dffc27fc0d71100aa21ec"
+  integrity sha512-Xrrp45dg1PLt40LMcjfNyVDcPBndzpR2t+AXGAcc9iqU9lD9bnk/b1B+n4W5tFXoSKDmZmgckcA8ajgVzbtxGA==
 
 regexp-tree@~0.1.1:
   version "0.1.21"
