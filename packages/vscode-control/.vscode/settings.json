@@ -1,6 +1,6 @@
 {
   "panel.opensMaximized": "preserve",
-  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.pinnedTabSizing": "compact",
   "editor.renderWhitespace": "trailing",
   "editor.fontWeight": 350,
   "editor.find.cursorMoveOnType": true,
