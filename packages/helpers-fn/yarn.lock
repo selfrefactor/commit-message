@@ -2387,9 +2387,9 @@ has-values@^1.0.0:
     is-number "^3.0.0"
     kind-of "^4.0.0"
 
-"hjson-js@https://github.com/selfrefactor/hjson-js#1.1.0":
+"hjson-js@https://github.com/selfrefactor/hjson-js#1.1.2":
   version "3.2.1"
-  resolved "https://github.com/selfrefactor/hjson-js#4051a23548bb4a9f121826c05b1cb1e6f783ffde"
+  resolved "https://github.com/selfrefactor/hjson-js#4b2cc987be6b603967888719f18c56c0118907d4"
   dependencies:
     rambdax "7.0.1"
 

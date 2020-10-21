@@ -27,7 +27,7 @@
 		"fs-extra": "9.0.1",
 		"gradient-string": "1.2.0",
 		"log-symbols": "4.0.0",
-		"hjson-js": "https://github.com/selfrefactor/hjson-js#1.1.0",
+		"hjson-js": "https://github.com/selfrefactor/hjson-js#1.1.2",
 		"q-i": "2.0.1",
 		"rambdax": "7.0.1",
 		"string-fn": "2.12.2"

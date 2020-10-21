@@ -1,5 +1,5 @@
-const FOO = a 1 b 2
+const FOO_BAR = a 1 b 2
 
 {
-  a: node {{FOO}}
+  a: node {{FOO_BAR}}
 }
