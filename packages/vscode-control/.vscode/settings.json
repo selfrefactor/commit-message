@@ -77,7 +77,6 @@
     "**/.git": true,
     "**/.hg": false,
     "**/.svn": false,
-    "**/.vscodex": true,
     "**/coverage": true,
     "**/coverage-ts": true,
     "**/CVS": false,
