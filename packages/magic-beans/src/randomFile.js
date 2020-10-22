@@ -42,9 +42,9 @@ async function randomFile(){
       return RANDOM_FILE_SKIP_PATTERNS.includes(dir)
     },
     filterFn : filePath => {
-      const [ pass ] = RANDOM_FILE_ALLOWED_EXTENSIONS.filter(singleExtension => filePath.endsWith('singleExtension'))
+      const [ pass ] = RANDOM_FILE_ALLOWED_EXTENSIONS.filter(singleExtension => filePath.endsWith(singleExtension))
 
-      return Boolean(!pass)
+      return Boolean(pass)
     },
   })
 
