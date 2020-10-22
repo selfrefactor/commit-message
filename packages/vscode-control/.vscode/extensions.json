@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "laktak.hjson",
     "ms-vscode.vscode-typescript-next",
     "breabcrumb.wobbly-icon-theme",
     "saidur2.relative-import",
