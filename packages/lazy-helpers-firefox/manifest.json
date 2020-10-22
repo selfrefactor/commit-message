@@ -2,8 +2,8 @@
 
   "manifest_version": 2,
   "name": "Lazy Helpers",
-  "description": "Permenant Youtube play",
-  "version": "1.5",
+  "description": "Multiple helpers",
+  "version": "1.6",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging",
   "icons": {
     "48": "icons/message-48.png"
@@ -14,5 +14,4 @@
       "js": ["./dist/bundle.js"]
     }
   ]
-
 }

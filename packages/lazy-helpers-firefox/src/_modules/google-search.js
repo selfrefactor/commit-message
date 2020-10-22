@@ -6,10 +6,40 @@ import {
   head,
   init,
   match,
+  remove,
   replace,
 } from 'rambdax'
 
+const allowDoubleSearch = url => {
+  return url.includes('duckduckgo') && url.includes('q=%7C')
+}
+
+function extractSearchQuery(url){
+  if(!url.includes('q=%7C')) return ''
+  const [, base] = url.split('q=%7C')
+  if(!base) return ''
+  const [searchQuery] = base.split('&')
+
+  return searchQuery
+}
+
+function openGoogleTab(searchQuery){
+  const url = `https://www.google.bg/search?q=${searchQuery}`
+  window.open(url, '_blank');
+}
+
+async function doubleSearch(searchQuery){
+  openGoogleTab(searchQuery)
+  window.location.href = remove('%7C', window.location.href)
+}
+
 export function googleSearch(){
+  if(allowDoubleSearch(window.location.href)){
+    const searchQuery = extractSearchQuery(window.location.href)
+    if(!searchQuery) return
+    return doubleSearch(searchQuery)
+  }
+
   if (
     window.location.href.includes('q=%7C') &&
     window.location.href.includes('google.')
@@ -24,8 +54,9 @@ export function googleSearch(){
     const end = `${ query }+${ language }+${ date }+${ stars }+${ github }`
     const base = 'https://github.com/search?utf8=%E2%9C%93&q='
 
-    window.location.href = `${ base }${ end }`
+    return window.location.href = `${ base }${ end }`
   }
+
   if (
     window.location.href.includes('search?q=%60') &&
     window.location.href.includes('google.') &&
@@ -44,6 +75,6 @@ export function googleSearch(){
       allintitle:%22${ query }%22+
       site:soundcloud.com
     `, '')
-    window.location.href = url
+    return window.location.href = url
   }
 }
