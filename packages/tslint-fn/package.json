@@ -1,7 +1,7 @@
 {
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "4.3.1-alpha.2",
-		"@typescript-eslint/parser": "4.3.1-alpha.2",
+		"@typescript-eslint/eslint-plugin": "4.5.0",
+		"@typescript-eslint/parser": "4.5.0",
 		"eslint": "7.10.0"
 	},
 	"peerDependencies": {
