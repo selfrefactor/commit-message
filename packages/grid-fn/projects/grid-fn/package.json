@@ -1,9 +1,9 @@
 {
   "name": "grid-fn",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "self_refactor",
   "license": "MIT",
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/grid-fn/projects/grid-fn",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/grid-fn/projects/grid-fn",
   "homepage": "https://github.com/selfrefactor/services/tree/master/packages/grid-fn#readme",
   "dependencies": {
     "tslib": "^2.0.0"
@@ -11,6 +11,6 @@
   "peerDependencies": {
     "@angular/common": "^9.0.7 || ^10.0.0",
     "@angular/core": "^9.0.7 || ^10.0.0",
-    "rambdax": "^3.7.0"
+    "rambdax": "7.7.0"
   }
 }
