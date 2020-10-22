@@ -14,13 +14,13 @@
 		"babel-eslint"
 	],
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "4.3.1-alpha.2",
-		"@typescript-eslint/parser": "4.3.1-alpha.2",
+		"@typescript-eslint/eslint-plugin": "4.5.1-alpha.0",
+		"@typescript-eslint/parser": "4.5.1-alpha.0",
 		"babel-eslint": "10.1.0",
-		"eslint": "7.10.0",
+		"eslint": "7.11.0",
 		"eslint-plugin-async-await": "0.0.0",
 		"eslint-plugin-babel": "5.3.1",
-		"eslint-plugin-jest": "24.0.2",
+		"eslint-plugin-jest": "24.1.0",
 		"eslint-plugin-jest-formatting": "2.0.0",
 		"eslint-plugin-no-unsafe-regex": "1.0.0",
 		"eslint-plugin-node": "11.1.0",
@@ -28,7 +28,7 @@
 		"eslint-plugin-sort-class-members": "1.8.0",
 		"eslint-plugin-sort-requires": "2.1.0",
 		"prettier": "2.1.2",
-		"rambdax": "6.2.0"
+		"rambdax": "7.0.1"
 	},
 	"peerDependencies": {
 		"typescript": "^3.8.3"
