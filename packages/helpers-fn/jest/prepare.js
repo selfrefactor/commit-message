@@ -1,21 +1,25 @@
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 3*60*1000
-const {isValid} = require('rambdax')
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 3 * 60 * 1000
+const { isValid } = require('rambdax')
 
 expect.extend({
-  is(received, argument) {
-    const pass = isLib.is({input: received, schema:argument});
-    const message = `expected ${received} to have schema '${argument}'`
+  is(received, argument){
+    const pass = isLib.is({
+      input  : received,
+      schema : argument,
+    })
+    const message = `expected ${ received } to have schema '${ argument }'`
 
-    if (pass) {
+    if (pass){
       return {
-        message: () => message,
-        pass: true,
-      };
-    } else {
-      return {
-        message: () => message,
-        pass: false,
-      };
+        message : () => message,
+        pass    : true,
+      }
     }
-  }
+
+    return {
+      message : () => message,
+      pass    : false,
+    }
+
+  },
 })

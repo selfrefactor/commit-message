@@ -2,14 +2,10 @@ const helpers = require('./helpers')
 const R = require('rambdax')
 
 const iconSetMethod = (inputCollection, behaviourCollection) => {
-  const exists = helpers.isMyModeAnyOf(
-    [ 'SUCCESS', 'WARNING', 'INFO', 'ERROR' ],
-    behaviourCollection
-  )
+  const exists = helpers.isMyModeAnyOf([ 'SUCCESS', 'WARNING', 'INFO', 'ERROR' ],
+    behaviourCollection)
 
-  if (
-    exists === false
-  ) {
+  if (exists === false){
     return
   }
 

@@ -2,12 +2,12 @@ const helpers = require('./helpers')
 const R = require('rambdax')
 
 const patternxMethod = (inputCollection, behaviourCollection) => {
-  if (helpers.isMyMode('PATTERNX', behaviourCollection) === false) {
+  if (helpers.isMyMode('PATTERNX', behaviourCollection) === false){
     return
   }
   const logData = R.head(inputCollection)
 
-  if (R.type(logData) !== 'Object') {
+  if (R.type(logData) !== 'Object'){
     return
   }
 
@@ -15,7 +15,7 @@ const patternxMethod = (inputCollection, behaviourCollection) => {
     R.init,
     R.flatten,
     R.map(([ initPart, x ]) => {
-      if (R.type(x) === 'Object') {
+      if (R.type(x) === 'Object'){
         return [ initPart, ' :: ', x, ' | ' ]
       }
 

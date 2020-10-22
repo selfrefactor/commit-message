@@ -1,13 +1,13 @@
-process.env.BENCHMARK_FOLDER =
-  'files/experimental_results'
+process.env.BENCHMARK_FOLDER = 'files/experimental_results'
 const { createComplexBenchmark, scanFolder } = require('../index')
-const { parse } = require('path')
 const { mapAsync } = require('rambdax')
+const { parse } = require('path')
 
 const benchmarksDir = `${ __dirname }/benchmarks`
 
 async function getAllBenchmarks(){
   const files = await scanFolder({ folder : benchmarksDir })
+
   return files
     .filter(filePath => !filePath.includes('benchmark_results'))
     .map(filePath => parse(filePath).name)

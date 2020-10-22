@@ -3,14 +3,14 @@ const { delay, defaultTo, repeat } = require('rambdax')
 const OK = Boolean(process.stderr.isTTY)
 
 const defaultInput = {
-  numberBars: 6,
-  step: 500,
-  symbol: '=',
-  stopAfter: 30000
+  numberBars : 6,
+  step       : 500,
+  symbol     : '=',
+  stopAfter  : 30000,
 }
 
 const clear = () => {
-  if(!OK) return
+  if (!OK) return
   process.stderr.clearLine()
   process.stderr.cursorTo(0)
 }
@@ -19,10 +19,7 @@ function getSymbolFn(totalLength, a){
   let counter = 1
 
   return () => {
-
-    counter = counter === totalLength ?
-      0 :
-      counter + 1
+    counter = counter === totalLength ? 0 : counter + 1
 
     return [ a, counter ]
   }
@@ -33,28 +30,23 @@ let timeoutHolder
 
 async function rabbitHole(getSymbol, step){
   const [ symbol, counter ] = getSymbol()
-  if(OK) {
+  if (OK){
     process.stderr.write(symbol)
     await delay(step - 20)
-  }else{
+  } else {
     console.log(repeat(symbol, counter).join(''))
     await delay(1000)
-  }  
-  
+  }
+
   if (counter === 0){
     clear()
   }
 }
 
 function startLoadingBar(input){
-  const {
-    numberBars,
-    step,
-    symbol,
-    stopAfter
-  } = {
+  const { numberBars, step, symbol, stopAfter } = {
     ...defaultInput,
-    ...defaultTo({}, input)
+    ...defaultTo({}, input),
   }
 
   const getSymbol = getSymbolFn(numberBars, symbol)
@@ -64,7 +56,7 @@ function startLoadingBar(input){
   }, step)
 
   timeoutHolder = setTimeout(() => {
-    clearInterval(intervalHolder)    
+    clearInterval(intervalHolder)
     clear()
   }, stopAfter)
 }
@@ -72,7 +64,7 @@ function startLoadingBar(input){
 function stopLoadingBar(){
   clearInterval(intervalHolder)
   clearTimeout(timeoutHolder)
-  if(!OK) return
+  if (!OK) return
   process.stderr.clearLine()
   process.stderr.cursorTo(0)
 }

@@ -9,13 +9,12 @@ import {
   TS_SNIPPETS,
 } from './constants'
 
+const FONT_SIZE = 18
+const ZOOM = 0.7
+const LINE_HEIGHT = 23
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
-  Number(process.env.SCALE)
-
-const ZOOM_SCALE_FACTOR = SCALE_FACTOR === 1 ?
-  1 :
-  toDecimal(Number(process.env.SCALE) * 0.7)
+  toDecimal(Number(process.env.SCALE))
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')
@@ -25,13 +24,12 @@ function syncFiles(source, destination){
 }
 
 const getCalculatedOptions = () => {
-  const isBig = SCALE_FACTOR === 1
-  const fontSize = toDecimal(24 * SCALE_FACTOR)
-  const zoomLevel = toDecimal(2 * ZOOM_SCALE_FACTOR)
-  const lineHeight = isBig ? 27 : Math.round(toDecimal(37 * SCALE_FACTOR))
-  const suggestFontSize = Math.round(toDecimal(20 * SCALE_FACTOR))
-  const suggestLineHeight = Math.round(toDecimal(23 * SCALE_FACTOR))
-  const terminalFontSize = toDecimal(17 * SCALE_FACTOR)
+  const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
+  const zoomLevel = toDecimal(ZOOM * SCALE_FACTOR)
+  const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
+  const suggestFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR + 0.1) ))
+  const suggestLineHeight = Math.round(toDecimal(LINE_HEIGHT * (SCALE_FACTOR + 0.1) ))
+  const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
 
   return  {
     'editor.fontFamily': 'Operator Mono',

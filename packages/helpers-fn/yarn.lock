@@ -2387,6 +2387,12 @@ has-values@^1.0.0:
     is-number "^3.0.0"
     kind-of "^4.0.0"
 
+"hjson-js@https://github.com/selfrefactor/hjson-js#1.1.2":
+  version "3.2.1"
+  resolved "https://github.com/selfrefactor/hjson-js#4b2cc987be6b603967888719f18c56c0118907d4"
+  dependencies:
+    rambdax "7.0.1"
+
 hosted-git-info@^2.1.4:
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
@@ -3777,10 +3783,10 @@ rambdax@3.7.0:
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-3.7.0.tgz#bc89ced092f95521555eb24fe0a29039807a4756"
   integrity sha512-EaV46HD0sqoFGmm0BT7cMSUXJw0l+iMCH52CkhAuByJNLC+WXE13KgxRd5UsnwdLg/tEskgPADYacOuR0zVa9Q==
 
-rambdax@6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-6.1.0.tgz#fcf9f129bb10931ed02b1ce2371bef1979123e7d"
-  integrity sha512-8hvhYASuwAOtC1WS0Wbw9jJg6iii1yYsBKY/4KNX0MRTv8EmkneN03a3KcDutAMZig/3IPy6+SH2TVmlKVhrHA==
+rambdax@7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.0.1.tgz#6a1b3184abcf4cf6df5dffc27fc0d71100aa21ec"
+  integrity sha512-Xrrp45dg1PLt40LMcjfNyVDcPBndzpR2t+AXGAcc9iqU9lD9bnk/b1B+n4W5tFXoSKDmZmgckcA8ajgVzbtxGA==
 
 ramda@0.27.1:
   version "0.27.1"

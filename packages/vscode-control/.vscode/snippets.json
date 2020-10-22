@@ -1,4 +1,11 @@
 {
+	"Wallaby": {
+		"prefix": "wal",
+		"body": [
+			"/*?*/"
+		],
+		"description": "wallaby log"
+	},
 	"Require": {
 		"prefix": "req",
 		"body": [

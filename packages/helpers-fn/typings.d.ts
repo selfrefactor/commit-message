@@ -30,11 +30,16 @@ export function createComplexBenchmark(
     }>
 ): Promise<object>
 
+// HJSON
+// ============================================
+export function parseHjson(filePath: string) : Promise<object>
+
 // TRANSLATE
 // ============================================
 export function translate(text: string) : Promise<string>
 export function translateToBulgarian(text: string) : Promise<string>
 export function translateToGerman(text: string) : Promise<string>
+
 // EXEC
 // ============================================
 type OnLog = (x: string) => void

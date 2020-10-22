@@ -6,6 +6,8 @@
 
 ## Latest key binding
 
+### `Shift+Caps Lock` when !editorFocus - copy relative path
+
 ### Pin/unpin tab - pin with `Alt+P`; unpin with `Alt+U`
 
 ### Collapse all with `Alt+4`

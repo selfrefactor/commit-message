@@ -1,26 +1,29 @@
 const vscode = require('vscode')
 const { copyTrimmed } = require('./copyTrimmed')
 const { createSpec } = require('./createSpec')
+const { formatJson } = require('./format-json')
 const { initBar } = require('./bar')
 const { initWatcher } = require('./init')
 const { orderProps } = require('./orderProps')
 const { randomFile, requestRandomFile } = require('./randomFile')
-const { formatJson } = require('./format-json')
 const { REQUEST_RANDOM_FILE } = require('./constants')
 
 function activate(context){
   console.log('START MAGIC BEANS')
   initBar()
   initWatcher()
-  const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',formatJson)
+  const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',
+    formatJson)
   const fEightCommand = vscode.commands.registerCommand('magicBeans.orderProps',
     orderProps)
   const altC = vscode.commands.registerCommand('magicBeans.copyTrimmed',
     copyTrimmed)
   const createSpecCommand = vscode.commands.registerCommand('magicBeans.createSpec',
     createSpec)
-  const randomFileCommand = vscode.commands.registerCommand('magicBeans.randomFile', randomFile)
-  const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE, requestRandomFile)
+  const randomFileCommand = vscode.commands.registerCommand('magicBeans.randomFile',
+    randomFile)
+  const requestRandomFileCommand = vscode.commands.registerCommand(REQUEST_RANDOM_FILE,
+    requestRandomFile)
 
   context.subscriptions.push(altC)
   context.subscriptions.push(createSpecCommand)

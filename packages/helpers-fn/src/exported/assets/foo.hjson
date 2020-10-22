@@ -1,0 +1,5 @@
+const FOO_BAR = a 1 b 2
+
+{
+  a: node {{FOO_BAR}}
+}

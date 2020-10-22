@@ -2,18 +2,13 @@ const gradient = require('gradient-string')
 const helpers = require('./helpers')
 const R = require('rambdax')
 
-const extendModes = [
-  'SEPX',
-  'SEPARATORX',
-]
+const extendModes = [ 'SEPX', 'SEPARATORX' ]
 
 const separatorMethod = (inputCollection, behaviourCollection) => {
-  if (helpers.isMyModeAnyOf([
-    'SEPX',
-    'SEPARATORX',
-    'SEP',
-    'SEPARATOR',
-  ], behaviourCollection) === false) {
+  if (
+    helpers.isMyModeAnyOf([ 'SEPX', 'SEPARATORX', 'SEP', 'SEPARATOR' ],
+      behaviourCollection) === false
+  ){
     return
   }
   const char = helpers.isMyModeAnyOf(extendModes, behaviourCollection) ?
