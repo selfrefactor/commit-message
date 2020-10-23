@@ -12,6 +12,7 @@ export function isLetter(char:string): boolean
 export function isPunctuation(char:string): boolean
 export function kebabCase(str: string, extraLatin?: boolean): string
 export function ms(input: string): number
+export function msToText(ms: number): string
 export function pascalCase(str: string, extraLatin?: boolean): string
 export function removeIndent(str: string): string
 export function reverse(str: string): string
