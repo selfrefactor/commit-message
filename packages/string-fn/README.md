@@ -392,11 +392,3 @@ stringFn.words('fooBarBaz')
 > wordsX(str)
 
 It is same as `words`, but for extended Latin languages(German, French, Finnish, etc.).
-
-## Changelog
-
-2.7.0 Support extra latin
-
-2.6.0 Add `fitWithinLines`
-
-2.4.0 Add `splitPerLine`

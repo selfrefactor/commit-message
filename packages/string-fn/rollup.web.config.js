@@ -1,29 +1,31 @@
-const babel = require('rollup-plugin-babel')
-const cleanup = require('rollup-plugin-cleanup')
-const replace = require('rollup-plugin-replace')
-const resolve = require('rollup-plugin-node-resolve')
+import babel from '@rollup/plugin-babel';
+import cleanup from 'rollup-plugin-cleanup'
+import replace from '@rollup/plugin-replace'
+import {nodeResolve}  from '@rollup/plugin-node-resolve'
 
 const extensions = [ '.js' ]
 
 export default {
   plugins : [
     replace({ 'process.env.NODE_ENV' : JSON.stringify('production') }),
-    resolve({
+    nodeResolve({
       extensions,
-      preferBuiltins : false,
+      browser: true,
+      preferBuiltins : true,
     }),
     cleanup(),
-    babel({
-      extensions,
-      exclude : [ 'node_modules/**' ],
-    }),
+    babel({ 
+      babelHelpers: 'bundled',
+        extensions,
+        exclude : [ 'node_modules/**' ],
+    })
   ],
-  input  : 'stringFn.js',
+  input  : 'string-fn.js',
   output : [
     {
-      file   : './dist/stringFn.umd.js',
+      file   : './dist/string-fn.umd.js',
       format : 'umd',
-      name   : 'StringFn',
+      name   : 'R',
     },
-  ],
+  ]
 }
