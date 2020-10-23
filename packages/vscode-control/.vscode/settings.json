@@ -43,7 +43,7 @@
   "editor.lineHeight": 23,
   "editor.suggestFontSize": 20,
   "editor.suggestLineHeight": 23,
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 11,
   "editor.fontFamily": "Bar",
   "json.maxItemsComputed": 1000,
   "debug.console.fontFamily": "Bar",
