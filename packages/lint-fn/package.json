@@ -31,7 +31,7 @@
 		"rambdax": "7.0.1"
 	},
 	"peerDependencies": {
-		"typescript": "^3.8.3"
+		"typescript": "^4.0.3"
 	},
 	"devDependencies": {
 		"maided": "0.1.3"
