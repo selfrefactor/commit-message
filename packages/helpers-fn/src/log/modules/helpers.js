@@ -23,39 +23,6 @@ helpers.chalkBack = [
   },
 ]
 
-helpers.getChalkFront = () => {
-  const counterState =
-    helpers.chalkFrontCounter + 1 === helpers.chalkFront.length ?
-      0 :
-      helpers.chalkFrontCounter + 1
-
-  helpers.chalkFrontCounter = counterState
-
-  return helpers.chalkFront[ counterState ]
-}
-
-helpers.getChalkBack = () => {
-  const counterState =
-    helpers.chalkBackCounter + 1 === helpers.chalkBack.length ?
-      0 :
-      helpers.chalkBackCounter + 1
-
-  helpers.chalkBackCounter = counterState
-
-  return helpers.chalkBack[ counterState ]
-}
-
-helpers.getTag = R.compose(R.ifElse(
-  x => x.length === 1,
-  x => R.compose(
-    R.toUpper, R.replace('TAG=', ''), R.head
-  )(x),
-  R.F
-),
-R.filter(R.startsWith('TAG=')))
-
-helpers.getIcon = () => R.compose(R.head, R.shuffle)(figuresSelection)
-
 helpers.icons = {
   info    : chalk.blue('   ℹ'),
   success : chalk.green('   ✔'),

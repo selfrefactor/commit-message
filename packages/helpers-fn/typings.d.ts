@@ -88,6 +88,10 @@ type LogModes = 'obj' |
   'baz' |
   'random' |
   'box' |
+  'info' |
+  'success' |
+  'warning' |
+  'error' |
   'obj'
   
 type StandaloneLogModes = 'sep' |
