@@ -1,21 +1,31 @@
 const chalk = require('chalk')
 const R = require('rambdax')
-const { chalkFront } = require('../constants')
+const {
+  SUCCESS_COLOR,
+  INFO_COLOR,
+  WARNING_COLOR,
+  ERROR_COLOR,
+} = require('../constants')
 
-function getChalkFront(mode){
-  const modeIndex = R.switcher(mode)
-    .is('foo', 0)
-    .is('bar', 1)
-    .is('baz', 2)
-    .is('random', R.random(0, chalkFront.length - 1))
-    .default(0)
-
-  return chalkFront[ modeIndex ]
+const icons = {
+  info    : chalk.blue('   ℹ'),
+  success : chalk.green('   ✔'),
+  warning : chalk.yellow('   ⚠'),
+  error   : chalk.red('   ✖'),
 }
 
-function colorizedText(mode, toLog){
-  const chalkRule = chalk.hex(`#${ getChalkFront(mode) }`)
-  console.log(chalkRule(toLog))
+function getTextColor(mode){
+  return R.switcher(mode)
+    .is('success', SUCCESS_COLOR)
+    .is('info', INFO_COLOR)
+    .is('warning', WARNING_COLOR)
+    .is('error', ERROR_COLOR)
+    .default(INFO_COLOR)
 }
 
-exports.colorizedText = colorizedText
+function logWithIcon(mode, toLog){
+  const chalkRule = chalk.hex(`#${ getTextColor(mode) }`)
+  console.log(icons[ mode ], chalkRule(String(toLog)))
+}
+
+exports.logWithIcon = logWithIcon

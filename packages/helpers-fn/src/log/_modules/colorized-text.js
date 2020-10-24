@@ -15,7 +15,7 @@ function getChalkFront(mode){
 
 function colorizedText(mode, toLog){
   const chalkRule = chalk.hex(`#${ getChalkFront(mode) }`)
-  console.log(chalkRule(toLog))
+  console.log(chalkRule(String(toLog)))
 }
 
 exports.colorizedText = colorizedText
