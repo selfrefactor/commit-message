@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "WallabyJs.dingo-vscode",
     "mrmlnc.vscode-duplicate",
     "TabNine.tabnine-vscode",
     "ryanluker.vscode-coverage-gutters",
