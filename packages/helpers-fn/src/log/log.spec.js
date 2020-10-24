@@ -11,16 +11,18 @@ afterEach(() => {
 
 const str = 'FOO bar'
 
-test('separator', () => {
+test('separators', () => {
   log('separator')
-  // expect(logSpy.mock.calls[ 0 ]).toMatchSnapshot()
+  log('separatorx')
+  expect(logSpy.mock.calls).toMatchSnapshot()
 })
 
 test('obj', () => {
   log({
     a : 1,
     b : [ 1, 2 ],
-  }, 'obj')
+  },
+  'obj')
   expect(logSpy.mock.calls[ 0 ]).toMatchSnapshot()
 })
 
@@ -35,13 +37,7 @@ test('box', () => {
 })
 
 test('with wrong mode', () => {
-  const expectedSpyCalls = [
-    'FOO bar',
-    'not exist',
-    'unrecognized helpers-fn.log mode',
-  ]
-  log(str, 'not exist')
-  expect(logSpy.mock.calls[ 0 ]).toEqual(expectedSpyCalls)
+  expect(() => log(str, 'not exist')).toThrow()
 })
 
 test('with too many inputs', () => {

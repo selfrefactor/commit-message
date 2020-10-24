@@ -86,6 +86,7 @@ type LogModes = 'obj' |
   'foo' |
   'bar' |
   'baz' |
+  'random' |
   'box' |
   'obj'
   

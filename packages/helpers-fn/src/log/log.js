@@ -1,9 +1,16 @@
 const R = require('rambdax')
+const {
+  SEPARATORS,
+  POSSIBLE_MODES,
+  TEXT_MODES,
+  BACK_MODES,
+} = require('./constants')
 const { bigLog } = require('./_modules/big-log')
 const { box } = require('./_modules/box')
+const { colorizedBackground } = require('./_modules/colorized-background')
+const { colorizedText } = require('./_modules/colorized-text')
 const { logObject } = require('./_modules/log-object')
 const { separator } = require('./_modules/separator')
-const { SEPARATORS, POSSIBLE_MODES } = require('./constants')
 
 function logFn(...inputs){
   const [ toLog, mode, additional ] = inputs
@@ -15,12 +22,16 @@ function logFn(...inputs){
   if (SEPARATORS.includes(toLog)) return separator(toLog)
 
   if (R.excludes(mode, POSSIBLE_MODES)){
-    return console.log(...arguments, 'unrecognized helpers-fn.log mode')
+    throw new Error('mode is not declared')
   }
 
   if (mode === 'big') return bigLog(toLog)
   if (mode === 'box') return box(toLog)
   if (mode === 'obj') return logObject(toLog)
+  if (TEXT_MODES.includes(mode)) return colorizedText(mode, toLog)
+  if (BACK_MODES.includes(mode)) return colorizedBackground(mode, toLog)
+
+  throw new Error('mode is declared but its handling is missing')
 }
 
 exports.log = logFn
