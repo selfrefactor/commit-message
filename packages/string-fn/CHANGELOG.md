@@ -1,5 +1,7 @@
 ## Changelog
 
+3.0.1 Restore remove of extension in `main` property in `package.json`
+
 3.0.1 Cannot import version `3.0.0`
 
 3.0.0

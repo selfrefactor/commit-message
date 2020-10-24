@@ -3,7 +3,7 @@
 	"version": "3.0.1",
 	"typings": "./index.d.ts",
 	"description": "String manipulation library",
-	"main": "./dist/string-fn.js",
+	"main": "./dist/string-fn",
 	"module": "./dist/string-fn.esm.js",
 	"scripts": {
 		"out": "yarn build:main&&yarn build:web",
