@@ -23,6 +23,7 @@
 		"fs-extra": "9.0.1",
 		"helpers-fn": "0.8.1",
 		"lint-fn": "2.12.0",
+		"niketa": "1.0.2",
 		"rambdax": "7.0.1",
 		"string-fn": "2.12.2"
 	},

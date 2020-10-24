@@ -1,4 +1,5 @@
-RUN_FN_CWD=$HOME/repos/rambdax/src node bin/run.js lx
+node bin/run.js niketa
+# RUN_FN_CWD=$HOME/repos/rambdax/src node bin/run.js lx
 # RUN_FN_CWD=$HOME/repos/rambdax node bin/run.js de
 # node bin/run.js lintfile services/clone/index.js
 # node bin/run.js stories

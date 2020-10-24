@@ -6,6 +6,7 @@ const { drop } = require('rambdax')
 
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
+const { niketa } = require('./services/niketa/niketa')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
 const { deploy } = require('./services/de/deploy')
 const { fastDeploy } = require('./services/d/fastDeploy')
@@ -18,6 +19,9 @@ async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
 
+  if ([ 'niketa', 'ni' ].includes(firstArgument)){
+    return niketa()
+  }
   if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){
     return lintFolder({ fastFlag : false })
   }
