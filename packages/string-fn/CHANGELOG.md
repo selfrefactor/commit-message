@@ -1,5 +1,7 @@
 ## Changelog
 
+3.0.1 Cannot import version `3.0.0`
+
 3.0.0
 
 - Change licence from `ISC` to `MIT`
