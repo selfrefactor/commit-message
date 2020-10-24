@@ -1,4 +1,4 @@
-const { log } = require('.')
+const { log } = require('./log')
 
 test('', () => {
   console.log('should see object logging'.toUpperCase())
