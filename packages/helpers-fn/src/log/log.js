@@ -133,10 +133,12 @@ function logx(...args){
   worker(inputCollection, behaviourCollection)
 }
 
-function log([toLog, mode, additional]){
-  if(additional !== undefined){
-    return console.log(...arguments, `helpers-fn.log doesn't support multiple inputs`)
+function logFn(...inputs){
+  const [ toLog, mode, additional ] = inputs
+  if (additional !== undefined){
+    return console.log(...arguments,
+      'helpers-fn.log doesn\'t support multiple inputs')
   }
-} 
+}
 
-exports.log = log
+exports.log = logFn
