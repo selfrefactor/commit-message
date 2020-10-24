@@ -9,3 +9,21 @@ Array [
 ┗━━━━━━━━━━━━━┛",
 ]
 `;
+
+exports[`obj - when input is not an object 1`] = `
+Array [
+  "FOO bar",
+]
+`;
+
+exports[`obj 1`] = `
+Array [
+  "{
+  a: [36m1[39m,
+  b: [
+    [36m1[39m,
+    [36m2[39m
+  ]
+}",
+]
+`;

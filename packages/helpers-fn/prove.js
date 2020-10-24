@@ -1,3 +1,4 @@
 const { log } = require('./src/index.js')
 
-log('fdfd', 'box')
+// log({ a : 1 }, 'obj')
+log('sep')
