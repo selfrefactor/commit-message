@@ -77,57 +77,28 @@ export function runTests(input: {
 // LOG
 // ============================================
 
-type Single = 'obj' |
+type LogModes = 'obj' |
   'back' |
-  'icon' |
+  'back.foo' |
+  'back.bar' |
+  'back.baz' |
   'big' |
-  'icon.tag=foo' |
-  'icon.tag=bar' |
-  'tag=foo' |
-  'tag=bar' |
-  ''
+  'foo' |
+  'bar' |
+  'baz' |
+  'box' |
+  'obj'
   
-type Standalone = 'sep' |
+type StandaloneLogModes = 'sep' |
   'sepx' | 
   'separator' | 
   'separatorx'
 
 export function log(
-  inputmode: Standalone | any[] | object | boolean
+  inputmode: StandaloneLogModes
 ): void
 
 export function log(
-  inputA:any, 
-  inputmode: Single
-): void
-
-export function log(
-  input: string, 
-  inputmode: 'box' | 'success' | 'warning' | 'error' | 'info' 
-): void
-
-export function log(
-  input: object, 
-  inputmode: 'pattern' | 'patternx' | 'obj'
-): void
-
-export function log(
-  inputA:any, 
-  inputB:any, 
-  inputC:any
-): void
-
-export function log(
-  inputA:any, 
-  inputB:any, 
-  inputC:any, 
-  inputD:any
-): void
-
-export function log(
-  inputA:any, 
-  inputB:any, 
-  inputC:any, 
-  inputD:any, 
-  inputF:any
+  toLog: any,
+  inputmode: LogModes
 ): void
