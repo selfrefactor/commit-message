@@ -6,7 +6,7 @@ const {
 const { createBenchmark } = require('./exported/create-benchmark')
 const { createComplexBenchmark } = require('./exported/create-complex-benchmark')
 const { exec, execSafe, spawn } = require('./exported/exec')
-const { log } = require('./log/index')
+const { log } = require('./log/log')
 const { parseHjson } = require('./exported/parse-hjson')
 const { runTests } = require('./exported/run-tests')
 const { scanFolder } = require('./exported/scan-folder')

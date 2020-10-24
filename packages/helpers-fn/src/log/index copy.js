@@ -1,4 +1,4 @@
-const boxMethod = require('./modules/boxMethod')
+const boxMethod = require('./_modules/box')
 const CFonts = require('cfonts')
 const chalk = require('chalk')
 const dayjs = require('dayjs')
