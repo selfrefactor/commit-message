@@ -19,7 +19,7 @@ test('local', async () => {
     const _ = attach(page)
 
     const allClassNames = await _.getAllClassNames('div')
-    expect(allClassNames.length).toBeGreaterThan(50)
+    expect(allClassNames.length).toBeGreaterThan(20)
     await browser.close()
   } catch (error){
     console.log(error)
@@ -41,7 +41,7 @@ test('reddit', async () => {
     })
     const _ = attach(page)
 
-    const text = await _.$$(
+    const text = await _.page.$$(
       'div', _.its, 'innerHTML'
     )
     expect(text.length).toBeGreaterThan(0)

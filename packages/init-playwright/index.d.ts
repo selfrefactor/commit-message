@@ -116,6 +116,7 @@ interface AttachOutput{
   page: Page
   pressTab: (timesToPress: number) => Promise<void>
   snap: (label?: string) => Promise<void>
+  sleep: () => Promise<void>
   waitAgainst: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
   waitAgainstText: (text: string, ms?: number) => Promise<void>
   waitFor: (playwrightInput: string, count?: number, ms?: number) => Promise<void>

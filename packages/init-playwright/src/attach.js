@@ -452,6 +452,7 @@ function attach(
     page,
     pressTab,
     snap,
+    sleep: async () => delay(1000),
     waitAgainst,
     waitAgainstText,
     waitFor,
