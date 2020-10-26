@@ -1,4 +1,4 @@
-import { Browser, Page } from 'playwright'
+import { Browser, Page, BrowserContext } from 'playwright'
 
 export type WaitConditionType = 'load' | 'domcontentloaded' | 'networkidle'
 
@@ -130,11 +130,7 @@ interface AttachOutput{
 interface OutputPlaywright{
   page: Page
   browser: Browser
-}
-
-interface PlaywrightInstance {
-  browser: Browser
-  page: Page
+  context: BrowserContext
 }
 
 interface Resolution {
@@ -151,28 +147,6 @@ interface PlaywrightSettings{
   handleSIGHUP?: boolean
   headless: boolean
 }
-
-interface TypeSettings{
-  selector: string
-  text: string
-}
-
-type TypeModule = (input: ITypeModule) => Promise<Array<void>>
-type ClickModule = (input: IClickModule) => Promise<void>
-
-interface ITypeModule{
-  page: Page
-  text: string
-  selector: string
-}
-
-interface IClickModule{
-  page: Page
-  selector: string
-}
-
-type TypeFunction = (input: ITypeModule) => Promise<Array<void>>
-type ClickFunction = (input: IClickModule) => Promise<void>
 
 export function initPlaywright(input: InputPlaywright): Promise<OutputPlaywright>
 export function attach(page: Page, screenDir?: string): AttachOutput

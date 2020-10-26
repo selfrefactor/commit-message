@@ -69,7 +69,7 @@ async function initPlaywright(inputRaw){
     ...inputRaw,
     ...headless,
   }
-  const { browser, page } = await init(input, inputRaw.extraProps)
+  const { browser, page, context } = await init(input, inputRaw.extraProps)
 
   const waitCondition = getWaitCondition(input.waitCondition)
   await page.goto(input.url, waitCondition)
@@ -79,6 +79,7 @@ async function initPlaywright(inputRaw){
   if (input.logMethod) page.on('console', input.logMethod)
 
   return {
+    context,
     browser,
     page,
   }

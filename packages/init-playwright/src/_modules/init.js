@@ -79,6 +79,7 @@ async function init(input, extraProps = {}){
   }
 
   return {
+    context,
     browser,
     page,
   }
