@@ -7,7 +7,7 @@
 	},
 	"typings": "./index.d.ts",
 	"main": "./src/init-playwright.js",
-	"version": "0.22.0",
+	"version": "0.23.0",
 	"dependencies": {
 		"string-fn": "3.0.2",
 		"playwright": "1.5.1",
