@@ -1,1 +1,1 @@
-run bump&&run d chore: after publish&&./update.sh
+run bump minor&&run d chore: after publish&&./update.sh
