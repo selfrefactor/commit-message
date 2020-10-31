@@ -1,7 +1,7 @@
-import { attach, initPlaywright } from '../init-playwright'
+import { attach, initPlaywright, wrapPlaywright } from '../init-playwright'
 const GITHUB = 'https://github.com'
 const FACEBOOK = 'https://facebook.com'
-jest.setTimeout(30000)
+jest.setTimeout(60000)
 
 const RUN_CHROME_ONLY = process.env.RUN_CHROME === 'ON'
 const RUN_FIREFOX_ONLY = process.env.RUN_FIREFOX === 'ON'
@@ -40,4 +40,12 @@ test('chromium', async () => {
 test('firefox', async () => {
   if (RUN_CHROME_ONLY) return
   await executeTest('firefox')
+})
+
+test('wrap playwright', async () => {
+  const fn = async _ => {
+    return await _.count('div')
+  }
+  const result = await wrapPlaywright({url:GITHUB, fn, fallback: -1})
+  expect(result).toBeGreaterThan(100)
 })

@@ -85,5 +85,33 @@ async function initPlaywright(inputRaw){
   }
 }
 
+async function wrapPlaywright({url, fn, fallback, input = undefined}){
+  const options = {
+    headless:  process.env.HEADLESS,
+    logFlag: false,
+    url,
+    browser: 'chromium',
+    waitCondition: {
+      waitUntil: 'domcontentloaded',
+      timeout: 600000
+    },
+  };
+  const { browser, page } = await initPlaywright(options);
+  const _ = attachModule(page);
+
+  try {
+    const result = await fn(_, input)
+    await browser.close();
+    return result
+  } catch (e) {
+    console.log({e, url})
+    await _.snap('error')
+    await browser.close();
+    return fallback
+  }
+}
+
+
 exports.initPlaywright = initPlaywright
 exports.attach = attachModule
+exports.wrapPlaywright = wrapPlaywright

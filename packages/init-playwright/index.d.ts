@@ -149,4 +149,10 @@ interface PlaywrightSettings{
 }
 
 export function initPlaywright(input: InputPlaywright): Promise<OutputPlaywright>
+export function wrapPlaywright<T>(input: {
+  fn: (_: AttachOutput, input?: any) => Promise<T>,
+  fallback: T, 
+  url: string,
+  fnInput?: any
+}): Promise<T>
 export function attach(page: Page, screenDir?: string): AttachOutput
