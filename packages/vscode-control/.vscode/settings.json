@@ -145,7 +145,6 @@
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
   "editor.find.seedSearchStringFromSelection": true,
-  "niketa.PORT": 3020,
   "workbench.editor.openPositioning": "last",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.find.addExtraSpaceOnTop": false,
@@ -153,5 +152,6 @@
   "wallaby.reportFailuresAsProblems": false,
   "wallaby.showUpdateNotifications": false,
   "wallaby.strictSSL": false,
+  "wallaby.startAutomatically": false,
   "wallaby.suppressExpirationNotifications": true
 }
