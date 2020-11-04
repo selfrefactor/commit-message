@@ -6,9 +6,13 @@
 
 ## Latest key binding
 
-### Wallaby start
+### Single column view - ctrl+shift+5
 
-### `Shift+Caps Lock` when !editorFocus - copy relative path
+### Two column view - ctrl+shift+6
+
+### Wallaby start - alt+w
+
+### copy relative path - `Shift+Caps Lock` when !editorFocus
 
 ### Pin/unpin tab - pin with `Alt+P`; unpin with `Alt+U`
 

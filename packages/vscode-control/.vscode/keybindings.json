@@ -1,5 +1,13 @@
 [
   {
+    "key": "ctrl+shift+6",
+    "command": "workbench.action.editorLayoutTwoColumns"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "workbench.action.editorLayoutSingle"
+  },
+  {
     "key": "alt+w",
     "command": "wallaby.start"
   },
