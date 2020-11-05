@@ -12,6 +12,8 @@
 
 ### Wallaby start - alt+w
 
+### Wallaby stop - ctrl+shift+7
+
 ### copy relative path - `Shift+Caps Lock` when !editorFocus
 
 ### Pin/unpin tab - pin with `Alt+P`; unpin with `Alt+U`
