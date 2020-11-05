@@ -16,7 +16,7 @@
     "command": "workbench.action.editorLayoutSingle"
   },
   {
-    "key": "alt+w",
+    "key": "ctrl+`",
     "command": "wallaby.start"
   },
   {

@@ -42,6 +42,10 @@ Open folder
 
 ## Alt+W
 
+Start Jest run with `Niketa`
+
+## Ctrl+`
+
 Start `Wallaby`
 
 ## Alt+Z
