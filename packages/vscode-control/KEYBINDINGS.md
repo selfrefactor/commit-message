@@ -1,5 +1,49 @@
 # VSCode
 
+## Niketa 
+
+### start
+
+"key": "ctrl+1"
+
+### Single Jest run
+
+"key": "alt+w"
+
+### Lint single file
+
+"key": "ctrl+shift+1"
+
+### Toggle force lint mode
+
+"key": "ctrl+shift+2"
+
+### Request cancelation
+
+"key": "ctrl+shift+3"
+
+## Wallaby
+
+### Start `Wallaby`
+
+Ctrl+`
+
+### Stop `Wallaby`
+
+Ctrl+Shift+4
+
+## Layout
+
+### editorLayoutTwoColumns
+
+Ctrl+Shift+5
+
+### editorLayoutSingleColumn
+
+Ctrl+Shift+6
+
+---
+
 ## Ctrl+`
 
 Toggle zen mode
@@ -43,10 +87,6 @@ Open folder
 ## Alt+W
 
 Start Jest run with `Niketa`
-
-## Ctrl+`
-
-Start `Wallaby`
 
 ## Alt+Z
 
