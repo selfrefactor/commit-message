@@ -49,7 +49,7 @@
   "editor.suggestFontSize": 20,
   "editor.suggestLineHeight": 23,
   "terminal.integrated.fontSize": 11,
-  "editor.fontFamily": "Bar",
+  "editor.fontFamily": "Fantasque Sans Mono",
   "json.maxItemsComputed": 1000,
   "debug.console.fontFamily": "Bar",
   "debug.console.wordWrap": false,
