@@ -1,4 +1,5 @@
 {
+  "editor.suggestStatusBar.enable": true,
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.localEchoLatencyThreshold": 0,
   "panel.opensMaximized": "preserve",
@@ -60,7 +61,6 @@
   "magicBeans.IMPORT_TARGET": "rambdax",
   "editor.semanticHighlighting.enabled": false,
   "editor.suggest.showIcons": true,
-  "editor.suggest.maxVisibleSuggestions": 11,
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
     "source.organizeImports": false
