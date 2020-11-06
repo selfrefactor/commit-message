@@ -1,4 +1,6 @@
 {
+  "window.confirmBeforeClose": "keyboardOnly", 
+  "editor.suggest.insertMode":"replace",
   "editor.suggestStatusBar.enable": true,
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.localEchoLatencyThreshold": 0,
