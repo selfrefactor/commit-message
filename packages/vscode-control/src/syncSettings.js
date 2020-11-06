@@ -32,7 +32,8 @@ const getCalculatedOptions = () => {
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
 
   return  {
-    'editor.fontFamily': 'Fantasque Sans Mono',
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontLigatures": true,
     "editor.fontSize": fontSize,
     "window.zoomLevel": zoomLevel,
     "editor.lineHeight": lineHeight,
