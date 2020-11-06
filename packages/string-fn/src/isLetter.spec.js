@@ -10,3 +10,4 @@ test('multiple', () => {
   expect(isLetter(';')).toBeFalsy()
   expect(isLetter('1')).toBeFalsy()
 })
+ 

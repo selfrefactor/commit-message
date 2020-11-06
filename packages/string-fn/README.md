@@ -2,6 +2,8 @@
 
 String manipulation library build on top of `Rambda`
 
+> Will move to Typescript
+
 ## Example
 
 ```
