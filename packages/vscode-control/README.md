@@ -4,6 +4,13 @@
 
 - Populate settings and keybingings to local VSCode instance
 
+## Fonts
+
+```
+  "editor.fontFamilyxxx": "Fantasque Sans Mono",
+  "editor.fontFamily": "JetBrains Mono",
+```
+
 ## Latest key binding
 
 ### Single column view - ctrl+shift+5
