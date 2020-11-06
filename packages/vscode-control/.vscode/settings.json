@@ -1,4 +1,6 @@
 {
+  "terminal.integrated.localEchoStyle": "dim",
+  "terminal.integrated.localEchoLatencyThreshold": 0,
   "panel.opensMaximized": "preserve",
   "workbench.editor.pinnedTabSizing": "compact",
   "editor.renderWhitespace": "trailing",
