@@ -12,6 +12,7 @@ import {
 const FONT_SIZE = 18
 const ZOOM = 0.7
 const LINE_HEIGHT = 23
+const MONO = process.env.MONO === 'ON'
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
@@ -31,9 +32,14 @@ const getCalculatedOptions = () => {
   const suggestLineHeight = Math.round(toDecimal(LINE_HEIGHT * (SCALE_FACTOR + 0.1) ))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
 
+  const fontSettings = {
+    'debug.console.fontFamily' : MONO? 'Operator Mono': "JetBrains Mono",
+    "editor.fontFamily": MONO? 'Operator Mono': "JetBrains Mono",
+    "editor.fontLigatures": !MONO 
+  }
+
   return  {
-    "editor.fontFamily": "JetBrains Mono",
-    "editor.fontLigatures": true,
+    ...fontSettings,
     "editor.fontSize": fontSize,
     "window.zoomLevel": zoomLevel,
     "editor.lineHeight": lineHeight,
