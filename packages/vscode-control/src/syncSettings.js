@@ -10,9 +10,9 @@ import {
 } from './constants'
 
 const FONT_SIZE = 18
-const ZOOM = 0.7
 const LINE_HEIGHT = 23
 const MONO = process.env.MONO === 'ON'
+const ZOOM = process.env.ZOOM === 'ON' ? 0.7: -0.5
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
