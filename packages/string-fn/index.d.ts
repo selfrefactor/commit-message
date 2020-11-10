@@ -7,7 +7,7 @@ export function distanceGerman(x: string, y: string): number
 export function dotCase(str: string, extraLatin?: boolean): string
 export function glob(str: string, globRule: string): boolean
 export function indent(str:string, indentCount:number): string
-export function indentRight(str:string, indentCount:number): string
+export function toFixedLineLength(str: string, lineLength: number): string
 export function getIndent(str:string): number
 export function isLetter(char:string): boolean
 export function isPunctuation(char:string): boolean
