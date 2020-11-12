@@ -9,14 +9,14 @@
 	"main": "./src/init-playwright.js",
 	"version": "0.24.0",
 	"dependencies": {
-		"string-fn": "3.0.2",
-		"playwright": "1.6.0-next.1604099897983",
+		"string-fn": "3.1.0",
+		"playwright": "1.7.0-next.1605203593743",
 		"rambdax": "7.0.1"
 	},
 	"devDependencies": {
-		"@types/node": "14.14.6",
+		"@types/node": "14.14.7",
 		"@types/jest": "26.0.15",
-		"jest": "26.6.1",
+		"jest": "26.6.3",
 		"@babel/core": "7.12.3",
 		"@babel/plugin-proposal-object-rest-spread": "7.12.1",
 		"@babel/preset-env": "7.12.1"
