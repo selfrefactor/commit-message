@@ -87,7 +87,7 @@ async function initPlaywright(inputRaw){
 
 async function wrapPlaywright({url, fn, fallback, input = undefined}){
   const options = {
-    headless:  process.env.HEADLESS === 'ON',
+    headless:  process.env.HEADLESS !== 'OFF',
     logFlag: false,
     url,
     browser: 'chromium',
