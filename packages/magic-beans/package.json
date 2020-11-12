@@ -79,9 +79,9 @@
 						"type": "string"
 					},
 					"default": [
+						".html",
 						".js",
-						".ts",
-						".go"
+						".ts"
 					],
 					"description": "Which file extensions are allowed in random file mode"
 				},
