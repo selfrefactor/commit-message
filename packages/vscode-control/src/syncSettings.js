@@ -15,7 +15,7 @@ const MONO = process.env.MONO === 'ON'
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
-const ZOOM = process.env.ZOOM === 'ON' ? SCALE_FACTOR: -SCALE_FACTOR
+const ZOOM = process.env.ZOOM === 'OFF' ? -SCALE_FACTOR: SCALE_FACTOR
 console.log({ZOOM})
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
