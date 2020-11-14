@@ -29,6 +29,17 @@
             "karmaConfig": "projects/grid-fn/karma.conf.js"
           }
         },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "grid-fn:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "grid-fn:build:production"
+            }
+          }
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
