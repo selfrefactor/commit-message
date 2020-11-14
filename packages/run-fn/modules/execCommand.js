@@ -1,9 +1,7 @@
 const { exec } = require('child_process')
-const DEFAULT = process.env.RUN_FN_CWD ?
-  process.env.RUN_FN_CWD :
-  process.cwd()
+const {CWD} = require('../constants')
 
-const execCommand = (command, cwd = DEFAULT, logFlag = false) =>
+const execCommand = (command, cwd = CWD, logFlag = false) =>
   new Promise((resolve, reject) => {
     if (logFlag){
       console.log(cwd, command)
