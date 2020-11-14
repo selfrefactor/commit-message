@@ -12,10 +12,11 @@ import {
 const FONT_SIZE = 18
 const LINE_HEIGHT = 23
 const MONO = process.env.MONO === 'ON'
-const ZOOM = process.env.ZOOM === 'ON' ? 0.7: -0.7
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
+const ZOOM = process.env.ZOOM === 'ON' ? SCALE_FACTOR: -SCALE_FACTOR
+console.log({ZOOM})
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')

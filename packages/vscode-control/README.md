@@ -4,12 +4,6 @@
 
 - Populate settings and keybingings to local VSCode instance
 
-## Fonts
-
-```
-  "editor.fontFamilyxxx": "Fantasque Sans Mono",
-  "editor.fontFamily": "JetBrains Mono",
-```
 
 ## Latest key binding
 
@@ -54,6 +48,13 @@ We introduced Focus Next Part (F6) and Focus Previous Part (Shift+F6) commands t
 ---
 
 Collapse All list and tree command with Ctrl+LeftArrow keyboard shortcut
+
+## Alternative fonts
+
+```
+  "editor.fontFamily": "Fantasque Sans Mono",
+  "editor.fontFamily": "JetBrains Mono",
+```
 
 ## On slow machines try disable GPU acceleration
 
