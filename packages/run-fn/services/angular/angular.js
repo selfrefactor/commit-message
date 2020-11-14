@@ -1,8 +1,10 @@
 const { execCommand } = require('../../modules/execCommand')
 const { existsSync } = require('fs')
 const { log } = require('helpers-fn')
+const { CWD } = require('../../constants')
 
 async function angular(repo){
+  console.log({CWD})
   /*
   await execCommand(`git angular git@github.com:selfrefactor/${ repo }.git`)
   const maybePackageJson = `${ process.cwd() }/${ repo }/package.json`
