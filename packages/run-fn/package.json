@@ -1,10 +1,10 @@
 {
 	"name": "run-fn",
-	"version": "3.25.0",
+	"version": "3.26.0",
 	"description": "Collections of useful CLI functions",
 	"main": "./cli.js",
 	"bin": {
-		"run": "./bin/run.js"
+		"run": "bin/run.js"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/run-fn",
 	"keywords": [
