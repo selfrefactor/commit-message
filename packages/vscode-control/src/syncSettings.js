@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 import { copySync, writeJsonSync } from 'fs-extra'
-import { toDecimal } from 'rambdax'
+import { toDecimal, maybe } from 'rambdax'
 import settings from '../.vscode/settings.json'
 import {
   KEYBINDING,
@@ -11,12 +11,15 @@ import {
 
 const FONT_SIZE = 18
 const LINE_HEIGHT = 23
-const MONO = process.env.MONO === 'ON'
+const MONO = process.env.MONO !== 'OFF'
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
-const ZOOM = process.env.ZOOM === 'OFF' ? -SCALE_FACTOR: SCALE_FACTOR
-console.log({ZOOM})
+const ZOOM = maybe(
+  process.env.ZOOM_SCALE === undefined,
+  1,
+  Number(process.env.ZOOM_SCALE)
+)
 
 const KEYBINDING_SOURCE = resolve(__dirname, '../.vscode/keybindings.json')
 const SNIPPETS_SOURCE = resolve(__dirname, '../.vscode/snippets.json')

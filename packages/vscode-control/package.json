@@ -1,8 +1,9 @@
 {
 	"scripts": {
 		"sync": "MINI_MAP=OFF SCALE=1.23 node syncSettings",
-		"small": "MONO=ON ZOOM=OFF MINI_MAP=OFF SCALE=0.75 node syncSettings",
-		"mono": "MONO=ON MINI_MAP=OFF SCALE=0.92 node syncSettings"
+		"tv": "ZOOM_SCALE=-0.45 MINI_MAP=OFF SCALE=0.75 node syncSettings",
+		"small": "ZOOM_SCALE=-0.75 MINI_MAP=OFF SCALE=0.75 node syncSettings",
+		"mono": "MINI_MAP=OFF SCALE=0.92 node syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",
