@@ -8,6 +8,7 @@ const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
 const { niketa } = require('./services/niketa/niketa')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
+const { angular } = require('./services/angular/angular')
 const { deploy } = require('./services/de/deploy')
 const { fastDeploy } = require('./services/d/fastDeploy')
 const { lintFile } = require('./services/lintFile/lintFile')
@@ -19,7 +20,10 @@ async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
 
-  if ([ 'niketa', 'ni' ].includes(firstArgument)){
+  if ([ 'angular', 'ng' ].includes(firstArgument)){
+    return angular()
+  }
+  if (firstArgument === 'niketa'){
     return niketa()
   }
   if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){

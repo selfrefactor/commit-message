@@ -12,9 +12,9 @@ After installation, a binary `run` becomes available for CLI use.
 
 ### angular
 
-It takes Angular dependencies from the closest `foo` folder on the way up from `process.cwd` and update versions of `${process.cwd}/package.json`.
+It takes Angular dependencies from the closest `ng-foo` folder on the way up from `process.cwd` and update versions of `${process.cwd}/package.json`.
 
-This way, if `foo` contains `ng new foo` with updated `@angular/cli`, then the new dependencies can be merged to other Angular apps.
+This way, if `ng-foo` contains `ng new ng-foo` with updated `@angular/cli`, then the new dependencies can be merged to other Angular apps.
 
 ### bump
 
