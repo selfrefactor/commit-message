@@ -1,0 +1,20 @@
+{
+	"name": "playwright-wrap",
+	"version": "0.1.0",
+	"description": "Playwright wrapper",
+	"main": "src/playwright-wrap.js",
+	"typings": "index.d.ts",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/playwright-wrap",
+	"author": "selfrefactor <deyan8284@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"rambdax": "7.0.1",
+		"string-fn": "^3.1.0"
+	},
+	"peerDependencies": {
+		"playwright": "1.6.1"
+	},
+	"devDependencies": {
+		"playwright": "1.6.1"
+	}
+}
