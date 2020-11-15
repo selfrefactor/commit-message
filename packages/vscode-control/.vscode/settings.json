@@ -137,7 +137,7 @@
   "workbench.editor.enablePreview": false,
   "workbench.editor.tabCloseButton": "off",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.sideBar.location": "right",
+  "workbench.sideBar.location": "left",
   "workbench.statusBar.feedback.visible": false,
   "workbench.tips.enabled": false,
   "zenMode.centerLayout": false,
