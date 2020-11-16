@@ -1,26 +1,23 @@
-import { attach, initPlaywright, wrapPlaywright } from '../init-playwright'
+import { playwrightInit, playwrightRun } from '../playwright-init'
+import {wrap} from 'playwright-wrap'
 const GITHUB = 'https://github.com'
 const FACEBOOK = 'https://facebook.com'
+
 jest.setTimeout(60000)
 
 const RUN_CHROME_ONLY = process.env.RUN_CHROME === 'ON'
 const RUN_FIREFOX_ONLY = process.env.RUN_FIREFOX === 'ON'
 
 async function executeTest(browserMode){
-  const { browser, page } = await initPlaywright({
+  const { browser, page } = await playwrightInit({
     headless : false,
     logFlag  : false,
     browser  : browserMode,
-    // slowNetwork   : true,
     url      : FACEBOOK,
-    // waitCondition : {
-    //   timeout   : 5800,
-    //   waitUntil : 'networkidle',
-    // },
   })
 
   try {
-    const _ = attach(page, browserMode)
+    const _ = wrap(page)
 
     const allClassNames = await _.getAllClassNames('div')
     expect(allClassNames.length).toBeGreaterThan(30)
@@ -46,6 +43,6 @@ test('wrap playwright', async () => {
   const fn = async _ => {
     return await _.count('div')
   }
-  const result = await wrapPlaywright({url:GITHUB, fn, fallback: -1})
+  const result = await playwrightRun({url:GITHUB, fn, fallback: -1})
   expect(result).toBeGreaterThan(100)
 })

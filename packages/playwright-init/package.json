@@ -1,19 +1,24 @@
 {
-	"name": "init-playwright",
+	"name": "playwright-init",
 	"scripts": {
 		"test": "yarn test:d&&yarn test:m",
 		"test:d": "jest src/tests/desktop.spec.js",
 		"test:m": "jest src/tests/mobile.spec.js"
 	},
 	"typings": "./index.d.ts",
-	"main": "./src/init-playwright.js",
-	"version": "0.25.3",
+	"main": "./src/playwright-init.js",
+	"version": "0.1.0",
 	"dependencies": {
 		"string-fn": "3.1.0",
-		"playwright": "1.7.0-next.1605203593743",
 		"rambdax": "7.0.1"
 	},
+	"peerDependencies": {
+		"playwright-wrap":"0.1.0",
+		"playwright": "1.6.1"
+	},
 	"devDependencies": {
+		"playwright": "1.6.1",
+		"playwright-wrap":"0.1.0",
 		"@types/node": "14.14.7",
 		"@types/jest": "26.0.15",
 		"jest": "26.6.3",
@@ -21,7 +26,7 @@
 		"@babel/plugin-proposal-object-rest-spread": "7.12.1",
 		"@babel/preset-env": "7.12.1"
 	},
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/init-playwright",
+	"repository": "https://github.com/selfrefactor/services/tree/master/packages/playwright-init",
 	"license": "MIT",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"private": false,

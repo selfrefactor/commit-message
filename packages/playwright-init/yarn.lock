@@ -3443,10 +3443,18 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
-playwright@1.7.0-next.1605203593743:
-  version "1.7.0-next.1605203593743"
-  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.7.0-next.1605203593743.tgz#bb1d977b1f05b6aa8f5984eb54465d4cd867bd41"
-  integrity sha512-cWoXcD0jXpB5jClifk5Ljg8eDoZ3upZxl5rexjPofhWW7LVGcEU1DwjnYP5+j5Ts9rSGhzv6V9kD96DSpBunKg==
+playwright-wrap@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/playwright-wrap/-/playwright-wrap-0.1.0.tgz#3ffe2b4bbcfe826199dd28b0556ea60a2288909d"
+  integrity sha512-3ttYvzI9EHXp+OYQNlJS0v9C18QqvJ2MTYlvuV/BTX+cAUwRAePfvVTNBAC+m6LuW77m9xulsgTypookrckFJg==
+  dependencies:
+    rambdax "7.0.1"
+    string-fn "^3.1.0"
+
+playwright@1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.6.1.tgz#0afc0829139792f6b944fa2a1aa91231fc32a75a"
+  integrity sha512-0CQdAg1NbV+ZXr7p3E62sSPRLO2peNAFC7e7NXCXR7Nj75b9Dmc8lF8bevT7eu1gbzo0ZwtFUlmAGLZ1/W/wVg==
   dependencies:
     debug "^4.1.1"
     extract-zip "^2.0.1"
@@ -3999,7 +4007,7 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
-string-fn@3.1.0:
+string-fn@3.1.0, string-fn@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/string-fn/-/string-fn-3.1.0.tgz#bef505074bc0db40ad8085249c1d97b5e30e128e"
   integrity sha512-LFje5UeJH6t0XILNbwjUWctL5aU9yDKz8ILPzKVHDgw6ZGR8ebulvRD0zjUVEGKzCNxi1IzJK63/HR+7Q9HQQQ==

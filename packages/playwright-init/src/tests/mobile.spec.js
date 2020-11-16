@@ -1,22 +1,20 @@
-import { attach, initPlaywright } from '../init-playwright'
+import { playwrightInit } from '../playwright-init'
+import {wrap} from 'playwright-wrap'
 const REDDIT = 'https://reddit.com'
-const LOCAL = 'http://helpkarma.l:3000'
 const GITHUB = 'https://github.com'
 
 jest.setTimeout(30000)
 
 test('local', async () => {
   try {
-    var { browser, page } = await initPlaywright({
+    var { browser, page } = await playwrightInit({
       headless      : false,
       logFlag       : false,
       mobile        : true,
       url           : REDDIT,
       waitCondition : 'load',
-      // waitCondition :'domcontentloaded'
-      // waitCondition :'networkidle'
     })
-    const _ = attach(page)
+    const _ = wrap(page)
 
     const allClassNames = await _.getAllClassNames('div')
     expect(allClassNames.length).toBeGreaterThan(20)
@@ -29,7 +27,7 @@ test('local', async () => {
 
 test('reddit', async () => {
   try {
-    var { browser, page } = await initPlaywright({
+    var { browser, page } = await playwrightInit({
       headless      : false,
       logFlag       : false,
       mobile        : true,
@@ -39,7 +37,7 @@ test('reddit', async () => {
         waitUntil : 'domcontentloaded',
       },
     })
-    const _ = attach(page)
+    const _ = wrap(page)
 
     const text = await _.page.$$(
       'div', _.its, 'innerHTML'
@@ -54,7 +52,7 @@ test('reddit', async () => {
 
 test('github', async () => {
   try {
-    var { browser, page } = await initPlaywright({
+    var { browser, page } = await playwrightInit({
       headless      : false,
       logFlag       : false,
       mobile        : true,

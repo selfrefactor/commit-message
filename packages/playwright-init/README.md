@@ -1,10 +1,10 @@
-# Init-playwright
+# Playwright-init
 
-It starts a `Playwright` instance and attaches multiple helpers to it.
+Package to easier initialization of `Playwright`.
 
 ## Install
 
-`yarn add init-playwright`
+`yarn add playwright-init`
 
 ## Issues
 

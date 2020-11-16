@@ -1,4 +1,4 @@
-import { attach, initPlaywright } from '../src/init-playwright'
+import { playwrightInit } from '../src/playwright-init'
 
 const GITHUB = 'https://github.com'
 

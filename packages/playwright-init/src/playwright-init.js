@@ -1,7 +1,7 @@
-const { attach: attachModule } = require('./attach')
 const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
 const { type, pass } = require('rambdax')
+const { wrap } = require('playwright-wrap')
 const LONG_TIMEOUT = 60000
 const SUPPORTED_WAIT_CONDITIONS = [ 'load', 'domcontentloaded', 'networkidle' ]
 
@@ -61,7 +61,7 @@ const logInfoMethod = input => {
   console.log(input)
 }
 
-async function initPlaywright(inputRaw){
+async function playwrightInit(inputRaw){
   const headless = headlessModule() ? {} : { headless : false }
 
   const input = {
@@ -85,7 +85,7 @@ async function initPlaywright(inputRaw){
   }
 }
 
-async function wrapPlaywright({url, fn, fallback, input = undefined}){
+async function playwrightRun({url, fn, fallback, input = undefined}){
   const options = {
     headless:  process.env.HEADLESS !== 'OFF',
     logFlag: false,
@@ -96,8 +96,8 @@ async function wrapPlaywright({url, fn, fallback, input = undefined}){
       timeout: 600000
     },
   };
-  const { browser, page } = await initPlaywright(options);
-  const _ = attachModule(page);
+  const { browser, page } = await playwrightInit(options);
+  const _ = wrap(page);
 
   try {
     const result = await fn(_, input)
@@ -112,6 +112,5 @@ async function wrapPlaywright({url, fn, fallback, input = undefined}){
 }
 
 
-exports.initPlaywright = initPlaywright
-exports.attach = attachModule
-exports.wrapPlaywright = wrapPlaywright
+exports.playwrightInit = playwrightInit
+exports.playwrightRun = playwrightRun
