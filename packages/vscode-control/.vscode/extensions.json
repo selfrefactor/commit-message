@@ -1,9 +1,10 @@
 {
   "recommendations": [
+    "helgardrichard.helium-icon-theme",
+    "alefragnani.separators",
     "CodeBiscuits.html-biscuits",
     "laktak.hjson",
     "ms-vscode.vscode-typescript-next",
-    "breabcrumb.wobbly-icon-theme",
     "saidur2.relative-import",
     "tlent.jest-snapshot-language-support",
     "firefox-devtools.vscode-firefox-debug",

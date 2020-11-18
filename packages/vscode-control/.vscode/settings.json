@@ -1,4 +1,7 @@
 {
+  "separators.methods.borderStyle": "dotted",
+  "separators.functions.borderWidth": 0,
+  "separators.constructors.borderStyle": "double",
   "window.confirmBeforeClose": "keyboardOnly", 
   "editor.suggest.insertMode":"replace",
   "editor.suggestStatusBar.enable": true,
@@ -144,7 +147,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.iconTheme": "wobbly-icon-theme",
+  "workbench.iconTheme": "helium-icon-theme",
   "workbench.colorTheme": "CommunicationBreakdown",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
