@@ -1,6 +1,7 @@
 {
 	"scripts": {
 		"sync": "MINI_MAP=OFF SCALE=1.23 node syncSettings",
+		"bed": "ZOOM_SCALE=0.96 MINI_MAP=ON SCALE=0.9 node syncSettings",
 		"tv": "ZOOM_SCALE=1.07 MINI_MAP=ON SCALE=1.2 node syncSettings",
 		"tvx": "ZOOM_SCALE=-0.45 MINI_MAP=OFF SCALE=1 node syncSettings",
 		"small": "ZOOM_SCALE=-0.75 MINI_MAP=OFF SCALE=0.75 node syncSettings",
