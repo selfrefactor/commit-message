@@ -97,7 +97,7 @@ interface WrapOutput{
   goto: (url: string) => Promise<void>
   page: Page
   pressTab: (timesToPress: number) => Promise<void>
-  snap: (label?: string) => Promise<void>
+  snap: (label?: string, fullPage?: boolean) => Promise<void>
   sleep: () => Promise<void>
   waitAgainst: (playwrightInput: string, count?: number, ms?: number) => Promise<void>
   waitAgainstText: (text: string, ms?: number) => Promise<void>

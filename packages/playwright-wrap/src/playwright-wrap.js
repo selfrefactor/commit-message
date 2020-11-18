@@ -220,14 +220,14 @@ function attach(
     await delay(TICK)
   }
 
-  const snap = async label => {
+  const snap = async (label, fullPage = true) => {
     const fileName = label ? dotCase(label) : randomString(5, true)
     const screenPath = `${ snapDir }/${ fileName }.png`
     console.log(`Saved screenshot to '${ fileName }.png'`)
 
     await page.screenshot({
       path     : screenPath,
-      fullPage : true,
+      fullPage,
     })
   }
 
