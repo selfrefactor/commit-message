@@ -4,7 +4,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Jest",
+      "name": "Debug test",
       "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
       "args": [
         "--verbose", 

@@ -1,6 +1,19 @@
-import {monitor} from './monitor'
+import {monitor, getProcessUsage} from './monitor'
+import { delay } from 'rambdax'
+import { ms } from 'string-fn'
 
-test('happy', () => {
-  const a = 1
-  const aa = 1
+jest.setTimeout(ms('30 minutes'))
+
+test.skip('getProcessUsage', async () => {
+  const result = await getProcessUsage()
+  console.log({result})
+})
+
+test('happy', async () => {
+  monitor.start()
+  await delay(30000)
+  const logData = await monitor.stop()
+  expect(
+    logData
+  ).toMatchSnapshot()
 })
