@@ -16,6 +16,10 @@ It takes Angular dependencies from the closest `ng-foo` folder on the way up fro
 
 This way, if `ng-foo` contains `ng new ng-foo` with updated `@angular/cli`, then the new dependencies can be merged to other Angular apps.
 
+### kill
+
+It kills VSCode because of unknown bug that leads to memory leaks
+
 ### bump
 
 > `run bump minor` would trigger `npm publish minor&&npm publish&&git push`
