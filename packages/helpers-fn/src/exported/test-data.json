@@ -1,1 +1,104 @@
-{"data":{"initialState":{"memoryUsage":4.1,"processUsage":4.43},"highestProcessUsage":82.71,"highestMemoryUsage":2.6,"cycles":[{"memoryUsage":4,"processUsage":41.12},{"memoryUsage":3.7,"processUsage":63.86},{"memoryUsage":3.6,"processUsage":56.3},{"memoryUsage":3.5,"processUsage":54.11},{"memoryUsage":3.1,"processUsage":73.03},{"memoryUsage":3,"processUsage":51.76},{"memoryUsage":2.7,"processUsage":60.35},{"memoryUsage":2.7,"processUsage":82.71},{"memoryUsage":2.6,"processUsage":71.87},{"memoryUsage":2.7,"processUsage":70.27},{"memoryUsage":2.9,"processUsage":45.82},{"memoryUsage":4.1,"processUsage":12.03},{"memoryUsage":4.2,"processUsage":3.79},{"memoryUsage":4.2,"processUsage":14.91},{"memoryUsage":4.2,"processUsage":6.77},{"memoryUsage":4.2,"processUsage":28.01},{"memoryUsage":4.2,"processUsage":16.67},{"memoryUsage":4.2,"processUsage":13.16},{"memoryUsage":4.2,"processUsage":6.7},{"memoryUsage":4.2,"processUsage":5.81},{"memoryUsage":4.2,"processUsage":11.97},{"memoryUsage":4.2,"processUsage":4.24},{"memoryUsage":4.2,"processUsage":4.06}]}}
+{
+  "data": {
+    "initialState": {
+      "memoryUsage": 3.1,
+      "processUsage": 39.56
+    },
+    "highestProcessUsage": 73.2,
+    "highestMemoryUsage": 3,
+    "cycles": [
+      {
+        "memoryUsage": 3,
+        "processUsage": 8.04
+      },
+      {
+        "memoryUsage": 3,
+        "processUsage": 5.45
+      },
+      {
+        "memoryUsage": 3,
+        "processUsage": 9.38
+      },
+      {
+        "memoryUsage": 3,
+        "processUsage": 3.46
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 3.44
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 4.18
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 7.14
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 3
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 54.95
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 9.77
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 11.75
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 12.38
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 7.71
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 9.45
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 6.45
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 2.24
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 8.63
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 47.74
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 14.46
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 8.11
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 9.93
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 73.2
+      },
+      {
+        "memoryUsage": 3.1,
+        "processUsage": 7.44
+      }
+    ]
+  }
+}

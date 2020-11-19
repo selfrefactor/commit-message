@@ -10,6 +10,7 @@ const { log } = require('./log/log')
 const { parseHjson } = require('./exported/parse-hjson')
 const { runTests } = require('./exported/run-tests')
 const { scanFolder } = require('./exported/scan-folder')
+const { monitor, Monitor } = require('./exported/monitor')
 
 exports.parseHjson = parseHjson
 exports.scanFolder = scanFolder
@@ -23,3 +24,5 @@ exports.exec = exec
 exports.execSafe = execSafe
 exports.spawn = spawn
 exports.log = log
+exports.Monitor = Monitor
+exports.monitor = monitor

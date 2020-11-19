@@ -1,9 +1,3 @@
-const MODES = [
-  'default',
-  'number',
-  'onoff',
-]
-
 function defaultTo(processEnvKey, defaultValue, mode = 'default') {
   const processEnvValue = process.env[processEnvKey]
   if(!processEnvValue) return defaultValue

@@ -9,6 +9,18 @@ interface ScanFolderInput{
 
 export function scanFolder(input: ScanFolderInput): Promise<Array<string>>
 
+// Monitor
+// ============================================
+export class Monitor {
+  setInitialState: () => Promise<void>
+  start: () => Promise<void>
+  stop: () => Promise<object>
+}
+type monitorType = {
+  start: () => Promise<void>
+  stop: () => Promise<object>
+}
+export const monitor: monitorType
 // Utils
 // ============================================
 type DefaultToMode = 'default' | 'onoff' |'number'

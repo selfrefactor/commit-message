@@ -1,6 +1,7 @@
 const { delay, toDecimal, piped, split, last, head, map, trim } = require('rambdax')
 const { ms } = require('string-fn')
 const { exec } = require('./exec')
+const { parseMonitorData } = require('./utils/parse-monitor-data')
 var osu = require('node-os-utils')
  
 async function getProcessUsage(){
@@ -45,7 +46,7 @@ class Monitor{
     this.initialState = {memoryUsage, processUsage}
   }
   async applyStart(){
-    await delay(this.tick)
+    await delay(1000)
     while(!this.stopFlag){
       await Promise.all([
         this.onEveryTick(),
@@ -79,14 +80,12 @@ class Monitor{
       initialState: this.initialState,
       highestProcessUsage: this.highestProcessUsage,
       highestMemoryUsage: this.highestMemoryUsage,
-      cycles: this.cycles,
-      // averageMemoryUsage: undefined,
-      // averageProcessUsage: undefined
+      cycles: this.cycles
     }
   }
   async stop(){
     const monitorData = await this.stopMonitor()
-    return monitorData
+    return parseMonitorData(monitorData)
   }
 }
 

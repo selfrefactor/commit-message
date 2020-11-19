@@ -18,6 +18,24 @@
       "disableOptimisticBPs": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug util test",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose", 
+        "-i", 
+        "--no-cache",
+        "src/exported/utils/parse-monitor-data.spec.js"
+      ],
+      "env":{
+        "HEADLESS": "OFF"
+      },
+      "disableOptimisticBPs": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
     }
   ]
 }
