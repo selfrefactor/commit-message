@@ -2,7 +2,6 @@ const MODES = [
   'default',
   'number',
   'onoff',
-  'offon',
 ]
 
 function defaultTo(processEnvKey, defaultValue, mode = 'default') {
@@ -16,11 +15,10 @@ function defaultTo(processEnvKey, defaultValue, mode = 'default') {
     return Number(processEnvValue)
   }
   if(mode === 'onoff'){
-    return processEnvValue !== 'OFF'
-  }
-  if(mode === 'offon'){
-    return processEnvValue !== 'ON'
+    return defaultValue ? processEnvValue !== 'OFF' : processEnvValue === 'ON'
   }
 
   return processEnvValue
 }
+
+exports.defaultTo = defaultTo

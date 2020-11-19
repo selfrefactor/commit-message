@@ -11,9 +11,13 @@ export function scanFolder(input: ScanFolderInput): Promise<Array<string>>
 
 // Utils
 // ============================================
-type DefaultToMode = 'default' | 'onoff' | 'offon'|'number'
+type DefaultToMode = 'default' | 'onoff' |'number'
 
-export function defaultTo<Out>(processEnvKey: string, defaultValue: any, mode?: DefaultToMode): Out 
+export function defaultTo(processEnvKey: string, defaultValue: string): string 
+export function defaultTo(processEnvKey: string, defaultValue: string, mode: 'default'): string 
+export function defaultTo(processEnvKey: string, defaultValue: boolean, mode: 'onoff'): boolean 
+export function defaultTo(processEnvKey: string, defaultValue: number, mode: 'number'): number 
+
 // BENCHMARK
 // ============================================
 export function createBenchmark(
