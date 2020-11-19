@@ -4,8 +4,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/demos/simple.js"
+      "name": "Debug",
+      "program": "${workspaceFolder}/test.js"
     }
   ]
 }
