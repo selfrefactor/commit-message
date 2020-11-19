@@ -2,14 +2,14 @@
 	"name": "helpers-fn",
 	"scripts": {
 		"test": "jest src -u",
-		"monitor":"jest src/exported/monitor.spec.js -u",
+		"monitor": "jest src/exported/monitor.spec.js -u",
 		"dev": "node src/tests/create-benchmark.js"
 	},
 	"typings": "typings.d.ts",
 	"main": "src/index.js",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"dependencies": {
-		"node-os-utils":"1.3.2",
+		"node-os-utils": "1.3.2",
 		"benny": "3.6.15",
 		"boxen": "4.2.0",
 		"cfonts": "2.8.6",
