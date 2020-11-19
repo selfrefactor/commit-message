@@ -1,8 +1,16 @@
-import {monitor, getProcessUsage} from './monitor'
+import {monitor, getProcessUsage, getMemoryUsage} from './monitor'
 import { delay } from 'rambdax'
 import { ms } from 'string-fn'
+import { readJson,writeJson } from 'fs-extra'
 
 jest.setTimeout(ms('30 minutes'))
+
+const FILE_PATH = `${__dirname}/test-data.json`
+
+test.skip('getMemoryUsage', async () => {
+  const result = await getMemoryUsage()
+  console.log({result})
+})
 
 test.skip('getProcessUsage', async () => {
   const result = await getProcessUsage()
@@ -10,9 +18,10 @@ test.skip('getProcessUsage', async () => {
 })
 
 test('happy', async () => {
-  monitor.start()
-  await delay(30000)
+  await monitor.start()
+  await delay(ms('2 minutes'))
   const logData = await monitor.stop()
+  await writeJson(FILE_PATH, {data:logData})
   expect(
     logData
   ).toMatchSnapshot()

@@ -2,6 +2,7 @@
 	"name": "helpers-fn",
 	"scripts": {
 		"test": "jest src -u",
+		"monitor":"jest src/exported/monitor.spec.js -u",
 		"dev": "node src/tests/create-benchmark.js"
 	},
 	"typings": "typings.d.ts",

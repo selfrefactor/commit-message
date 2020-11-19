@@ -1,4 +1,4 @@
-const { delay, toDecimal } = require('rambdax')
+const { delay, toDecimal, piped, split, last, head, map, trim } = require('rambdax')
 const { ms } = require('string-fn')
 const { exec } = require('./exec')
 var osu = require('node-os-utils')
@@ -9,31 +9,53 @@ async function getProcessUsage(){
 }  
 
 async function getMemoryUsage(){
-  const command= `free | awk '/^Mem/ { a=(($4+$7)/$2 * 100); print a  }'`
-  const [freeMemory] = await exec({
+  const [freeMemoryData] = await exec({
     cwd: __dirname,
-    command,
+    command: 'free',
     onLog: () => {}
   })
-  return 100 - toDecimal(freeMemory.trim(), 0)
+  const freeMemory = piped(
+    freeMemoryData,
+    split('Mem:'),
+    last,
+    split('Swap:'),
+    head,
+    split(' '),
+    map(trim),
+    last,
+    Number
+  )
+  return toDecimal(freeMemory/1000000, 1)
 }
 
 class Monitor{
   constructor(seconds = 5){
-    this.highestMemoryUsage = 0
+    this.highestMemoryUsage = Infinity
     this.highestProcessUsage = 0
     this.cycles = []
     this.stopFlag = false
+    this.initialState = {}
     this.tick = ms(`${seconds} seconds`)
   }
-  async start(){
+  async setInitialState(){
+    const [memoryUsage, processUsage] = await Promise.all([
+      getMemoryUsage(),
+      getProcessUsage()
+    ])
+    this.initialState = {memoryUsage, processUsage}
+  }
+  async applyStart(){
+    await delay(this.tick)
     while(!this.stopFlag){
       await Promise.all([
         this.onEveryTick(),
         delay(this.tick)
       ])
-      console.log(1)
     }
+  }
+  async start(){
+    await this.setInitialState()
+    this.applyStart()
   }
 
   async onEveryTick(){
@@ -42,7 +64,7 @@ class Monitor{
       getProcessUsage()
     ])
     this.cycles.push({memoryUsage, processUsage})
-    if(memoryUsage > this.highestMemoryUsage){
+    if(memoryUsage < this.highestMemoryUsage){
       this.highestMemoryUsage = memoryUsage
     }
     
@@ -54,11 +76,12 @@ class Monitor{
     this.stopFlag = true
     await delay(this.tick)
     return {
+      initialState: this.initialState,
       highestProcessUsage: this.highestProcessUsage,
       highestMemoryUsage: this.highestMemoryUsage,
-      averageMemoryUsage: undefined,
       cycles: this.cycles,
-      averageProcessUsage: undefined
+      // averageMemoryUsage: undefined,
+      // averageProcessUsage: undefined
     }
   }
   async stop(){
