@@ -9,6 +9,11 @@ interface ScanFolderInput{
 
 export function scanFolder(input: ScanFolderInput): Promise<Array<string>>
 
+// Utils
+// ============================================
+type DefaultToMode = 'default' | 'onoff' | 'offon'|'number'
+
+export function defaultTo<Out>(processEnvKey: string, defaultValue: any, mode?: DefaultToMode): Out 
 // BENCHMARK
 // ============================================
 export function createBenchmark(

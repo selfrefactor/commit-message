@@ -4,247 +4,103 @@ exports[`happy 1`] = `
 Object {
   "cycles": Array [
     Object {
-      "memoryUsage": 108,
-      "processUsage": 91.14,
+      "memoryUsage": 4,
+      "processUsage": 41.12,
     },
     Object {
-      "memoryUsage": 100,
-      "processUsage": 92.29,
+      "memoryUsage": 3.7,
+      "processUsage": 63.86,
     },
     Object {
-      "memoryUsage": 103,
-      "processUsage": 16.18,
+      "memoryUsage": 3.6,
+      "processUsage": 56.3,
     },
     Object {
-      "memoryUsage": 106,
-      "processUsage": 7.89,
+      "memoryUsage": 3.5,
+      "processUsage": 54.11,
     },
     Object {
-      "memoryUsage": 117,
-      "processUsage": 97.49,
+      "memoryUsage": 3.1,
+      "processUsage": 73.03,
     },
     Object {
-      "memoryUsage": 110,
-      "processUsage": 70.05,
+      "memoryUsage": 3,
+      "processUsage": 51.76,
     },
     Object {
-      "memoryUsage": 114,
-      "processUsage": 80.41,
+      "memoryUsage": 2.7,
+      "processUsage": 60.35,
     },
     Object {
-      "memoryUsage": 124,
-      "processUsage": 16.21,
+      "memoryUsage": 2.7,
+      "processUsage": 82.71,
     },
     Object {
-      "memoryUsage": 124,
-      "processUsage": 22.57,
+      "memoryUsage": 2.6,
+      "processUsage": 71.87,
     },
     Object {
-      "memoryUsage": 123,
-      "processUsage": 15.68,
+      "memoryUsage": 2.7,
+      "processUsage": 70.27,
     },
     Object {
-      "memoryUsage": 122,
-      "processUsage": 16.71,
+      "memoryUsage": 2.9,
+      "processUsage": 45.82,
     },
     Object {
-      "memoryUsage": 121,
-      "processUsage": 32.74,
+      "memoryUsage": 4.1,
+      "processUsage": 12.03,
     },
     Object {
-      "memoryUsage": 117,
-      "processUsage": 62.78,
+      "memoryUsage": 4.2,
+      "processUsage": 3.79,
     },
     Object {
-      "memoryUsage": 108,
-      "processUsage": 32.9,
+      "memoryUsage": 4.2,
+      "processUsage": 14.91,
     },
     Object {
-      "memoryUsage": 97,
-      "processUsage": 78.34,
+      "memoryUsage": 4.2,
+      "processUsage": 6.77,
     },
     Object {
-      "memoryUsage": 93,
-      "processUsage": 98.03,
+      "memoryUsage": 4.2,
+      "processUsage": 28.01,
     },
     Object {
-      "memoryUsage": 88,
-      "processUsage": 77.78,
+      "memoryUsage": 4.2,
+      "processUsage": 16.67,
     },
     Object {
-      "memoryUsage": 117,
-      "processUsage": 55.09,
+      "memoryUsage": 4.2,
+      "processUsage": 13.16,
     },
     Object {
-      "memoryUsage": 114,
-      "processUsage": 60.61,
+      "memoryUsage": 4.2,
+      "processUsage": 6.7,
     },
     Object {
-      "memoryUsage": 109,
-      "processUsage": 51.11,
+      "memoryUsage": 4.2,
+      "processUsage": 5.81,
     },
     Object {
-      "memoryUsage": 104,
-      "processUsage": 88.8,
+      "memoryUsage": 4.2,
+      "processUsage": 11.97,
     },
     Object {
-      "memoryUsage": 95,
-      "processUsage": 76.92,
+      "memoryUsage": 4.2,
+      "processUsage": 4.24,
     },
     Object {
-      "memoryUsage": 89,
-      "processUsage": 89,
-    },
-    Object {
-      "memoryUsage": 78,
-      "processUsage": 81.23,
-    },
-    Object {
-      "memoryUsage": 77,
-      "processUsage": 50.62,
-    },
-    Object {
-      "memoryUsage": 76,
-      "processUsage": 71.67,
-    },
-    Object {
-      "memoryUsage": 76,
-      "processUsage": 77.67,
-    },
-    Object {
-      "memoryUsage": 81,
-      "processUsage": 44.64,
-    },
-    Object {
-      "memoryUsage": 122,
-      "processUsage": 5.53,
-    },
-    Object {
-      "memoryUsage": 124,
-      "processUsage": 1.49,
-    },
-    Object {
-      "memoryUsage": 123,
-      "processUsage": 12.68,
-    },
-    Object {
-      "memoryUsage": 125,
-      "processUsage": 69.63,
-    },
-    Object {
-      "memoryUsage": 119,
-      "processUsage": 58.75,
-    },
-    Object {
-      "memoryUsage": 115,
-      "processUsage": 69.07,
-    },
-    Object {
-      "memoryUsage": 111,
-      "processUsage": 52.43,
-    },
-    Object {
-      "memoryUsage": 110,
-      "processUsage": 36.95,
-    },
-    Object {
-      "memoryUsage": 110,
-      "processUsage": 33.68,
-    },
-    Object {
-      "memoryUsage": 101,
-      "processUsage": 98.52,
-    },
-    Object {
-      "memoryUsage": 97,
-      "processUsage": 75.57,
-    },
-    Object {
-      "memoryUsage": 93,
-      "processUsage": 58.59,
-    },
-    Object {
-      "memoryUsage": 92,
-      "processUsage": 14.75,
-    },
-    Object {
-      "memoryUsage": 93,
-      "processUsage": 13.5,
-    },
-    Object {
-      "memoryUsage": 92,
-      "processUsage": 15.8,
-    },
-    Object {
-      "memoryUsage": 92,
-      "processUsage": 10.03,
-    },
-    Object {
-      "memoryUsage": 91,
-      "processUsage": 18.05,
-    },
-    Object {
-      "memoryUsage": 89,
-      "processUsage": 40.6,
-    },
-    Object {
-      "memoryUsage": 90,
-      "processUsage": 25.56,
-    },
-    Object {
-      "memoryUsage": 93,
-      "processUsage": 27.68,
-    },
-    Object {
-      "memoryUsage": 93,
-      "processUsage": 3.95,
-    },
-    Object {
-      "memoryUsage": 98,
-      "processUsage": 1.74,
-    },
-    Object {
-      "memoryUsage": 98,
-      "processUsage": 1.98,
-    },
-    Object {
-      "memoryUsage": 98,
-      "processUsage": 2.48,
-    },
-    Object {
-      "memoryUsage": 98,
-      "processUsage": 2.46,
-    },
-    Object {
-      "memoryUsage": 98,
-      "processUsage": 4.23,
-    },
-    Object {
-      "memoryUsage": 99,
-      "processUsage": 1.49,
-    },
-    Object {
-      "memoryUsage": 99,
-      "processUsage": 1.97,
-    },
-    Object {
-      "memoryUsage": 99,
-      "processUsage": 13.32,
-    },
-    Object {
-      "memoryUsage": 100,
-      "processUsage": 10.28,
-    },
-    Object {
-      "memoryUsage": 100,
-      "processUsage": 17.94,
+      "memoryUsage": 4.2,
+      "processUsage": 4.06,
     },
   ],
-  "highestMemoryUsage": 76,
-  "highestProcessUsage": 98.52,
+  "highestMemoryUsage": 2.6,
+  "highestProcessUsage": 82.71,
   "initialState": Object {
-    "memoryUsage": 122,
-    "processUsage": 3.02,
+    "memoryUsage": 4.1,
+    "processUsage": 4.43,
   },
 }
 `;

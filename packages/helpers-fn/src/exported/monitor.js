@@ -86,7 +86,6 @@ class Monitor{
   }
   async stop(){
     const monitorData = await this.stopMonitor()
-    console.log({monitorData})
     return monitorData
   }
 }
