@@ -1,4 +1,5 @@
 import { Page } from 'playwright'
+import { InputPlaywright, OutputPlaywright } from 'playwright-init'
 
 export type WaitConditionType = 'load' | 'domcontentloaded' | 'networkidle'
 
@@ -39,14 +40,14 @@ interface HttpAuth{
   password: string
 }
 
-interface SlowNetwork{
+export interface SlowNetwork{
   offline: boolean
   downloadThroughput: number  
   uploadThroughput: number
   latency: number 
 }
 
-interface ServerMock{
+export interface ServerMock{
   route: string
   path: string
 }
@@ -110,3 +111,10 @@ interface WrapOutput{
 }
 
 export function wrap(page: Page, screenDir?: string): WrapOutput
+export function playwrightInit(input: InputPlaywright): Promise<OutputPlaywright>
+export function playwrightRun<T>(input: {
+  fn: (_: WrapOutput, input?: any) => Promise<T>,
+  fallback: T, 
+  url: string,
+  fnInput?: any
+}): Promise<T>

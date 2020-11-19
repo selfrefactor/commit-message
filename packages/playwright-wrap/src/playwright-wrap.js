@@ -7,6 +7,7 @@ const {
   mapAsync,
 } = require('rambdax')
 const { dotCase, randomString } = require('string-fn')
+const { playwrightInit } = require('playwright-init')
 
 async function filterAsync(predicate, list){
   const toReturn = []
@@ -464,4 +465,34 @@ function attach(
   }
 }
 
+
+async function playwrightRun({url, fn, fallback, input = undefined}){
+  const options = {
+    headless:  process.env.HEADLESS !== 'OFF',
+    logFlag: false,
+    url,
+    browser: 'chromium',
+    waitCondition: {
+      waitUntil: 'domcontentloaded',
+      timeout: 600000
+    },
+  };
+  const { browser, page } = await playwrightInit(options);
+  const _ = attach(page);
+
+  try {
+    const result = await fn(_, input)
+    await browser.close();
+    return result
+  } catch (e) {
+    console.log({e, url})
+    await _.snap('error')
+    await browser.close();
+    return fallback
+  }
+}
+
+
+exports.playwrightRun = playwrightRun
 exports.wrap = attach
+exports.playwrightInit = playwrightInit
