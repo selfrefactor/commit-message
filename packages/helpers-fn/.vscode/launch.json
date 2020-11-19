@@ -10,7 +10,7 @@
         "--verbose", 
         "-i", 
         "--no-cache",
-        "src/exported/monitor.spec.js"
+        "src/exported/kill-vscode.spec.js"
       ],
       "env":{
         "HEADLESS": "OFF"

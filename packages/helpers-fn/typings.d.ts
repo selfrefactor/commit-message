@@ -129,3 +129,7 @@ export function log(
   toLog: any,
   inputmode: LogModes
 ): void
+
+// Kill VSCode
+// ============================================
+export function killVSCode(): Promise<void>
