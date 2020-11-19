@@ -1,7 +1,6 @@
 const { headless: headlessModule } = require('./_modules/headless')
 const { init } = require('./_modules/init')
 const { type, pass } = require('rambdax')
-const { wrap } = require('playwright-wrap')
 const LONG_TIMEOUT = 60000
 const SUPPORTED_WAIT_CONDITIONS = [ 'load', 'domcontentloaded', 'networkidle' ]
 
@@ -85,32 +84,4 @@ async function playwrightInit(inputRaw){
   }
 }
 
-async function playwrightRun({url, fn, fallback, input = undefined}){
-  const options = {
-    headless:  process.env.HEADLESS !== 'OFF',
-    logFlag: false,
-    url,
-    browser: 'chromium',
-    waitCondition: {
-      waitUntil: 'domcontentloaded',
-      timeout: 600000
-    },
-  };
-  const { browser, page } = await playwrightInit(options);
-  const _ = wrap(page);
-
-  try {
-    const result = await fn(_, input)
-    await browser.close();
-    return result
-  } catch (e) {
-    console.log({e, url})
-    await _.snap('error')
-    await browser.close();
-    return fallback
-  }
-}
-
-
 exports.playwrightInit = playwrightInit
-exports.playwrightRun = playwrightRun

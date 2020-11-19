@@ -53,9 +53,3 @@ interface PlaywrightSettings{
 }
 
 export function playwrightInit(input: InputPlaywright): Promise<OutputPlaywright>
-export function playwrightRun<T>(input: {
-  fn: (_: AttachOutput, input?: any) => Promise<T>,
-  fallback: T, 
-  url: string,
-  fnInput?: any
-}): Promise<T>

@@ -1,5 +1,5 @@
-import { playwrightInit, playwrightRun } from '../playwright-init'
-import {wrap} from 'playwright-wrap'
+import { playwrightInit } from '../playwright-init'
+import {wrap, playwrightRun} from 'playwright-wrap'
 const GITHUB = 'https://github.com'
 const FACEBOOK = 'https://facebook.com'
 
