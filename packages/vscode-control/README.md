@@ -60,4 +60,7 @@ Collapse All list and tree command with Ctrl+LeftArrow keyboard shortcut
 
 Configure runtime arguments
 
-`"disable-hardware-acceleration": true`
+```
+"disable-hardware-acceleration": true
+
+```
