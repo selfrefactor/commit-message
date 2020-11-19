@@ -116,5 +116,6 @@ export function playwrightRun<T>(input: {
   fn: (_: WrapOutput, input?: any) => Promise<T>,
   fallback: T, 
   url: string,
-  fnInput?: any
+  handleError?: (e: Error) => void,
+  input?: any
 }): Promise<T>

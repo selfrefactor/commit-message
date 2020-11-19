@@ -430,7 +430,6 @@ function attach(
     await delay(TICK)
   }
 
-
   return {
     applyMocks,
     click,
@@ -466,7 +465,7 @@ function attach(
 }
 
 
-async function playwrightRun({url, fn, fallback, input = undefined}){
+async function playwrightRun({url, fn, fallback, input = undefined, handleError = () => {}}){
   const options = {
     headless:  process.env.HEADLESS !== 'OFF',
     logFlag: false,
@@ -485,7 +484,7 @@ async function playwrightRun({url, fn, fallback, input = undefined}){
     await browser.close();
     return result
   } catch (e) {
-    console.log({e, url})
+    handleError(e)
     await _.snap('error')
     await browser.close();
     return fallback
