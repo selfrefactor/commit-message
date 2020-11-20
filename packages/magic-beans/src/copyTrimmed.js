@@ -5,7 +5,7 @@ function copy(x){
   vscode.env.clipboard.writeText(x)
 }
 
-function rabbit(
+function applyCopyTrimmed(
   textEditor, startLine, endLine
 ){
   const lines = []
@@ -26,13 +26,13 @@ function rabbit(
   copy(withLast.join('\n'))
 }
 
-function copeTrimmedFn(){
+function copyTrimmedFn(){
   const textEditor = vscode.window.activeTextEditor
   const { selection } = textEditor
 
-  return rabbit(
+  return applyCopyTrimmed(
     textEditor, selection.start.line, selection.end.line
   )
 }
 
-exports.copyTrimmed = () => copeTrimmedFn()
+exports.copyTrimmed = () => copyTrimmedFn()

@@ -8,7 +8,7 @@
 	"icon": "files/magic-beans.png",
 	"name": "magic-beans",
 	"displayName": "Magic Beans",
-	"description": "Magic-like effects",
+	"description": "Magic-like helpers",
 	"version": "1.3.0",
 	"publisher": "selfrefactor",
 	"engines": {
@@ -18,11 +18,10 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:magicBeans.start",
+		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.orderProps",
 		"onCommand:magicBeans.randomFile",
-		"onCommand:magicBeans.requestRandomFile",
-		"onCommand:magicBeans.copyTrimmed"
+		"onCommand:magicBeans.requestRandomFile"
 	],
 	"main": "./src/extension",
 	"contributes": {

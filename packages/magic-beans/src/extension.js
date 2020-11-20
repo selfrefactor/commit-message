@@ -9,7 +9,6 @@ const { randomFile, requestRandomFile } = require('./randomFile')
 const { REQUEST_RANDOM_FILE } = require('./constants')
 
 function activate(context){
-  console.log('START MAGIC BEANS')
   initBar()
   initWatcher()
   const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',
