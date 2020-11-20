@@ -19,16 +19,15 @@
 	],
 	"activationEvents": [
 		"onCommand:magicBeans.copyTrimmed",
-		"onCommand:magicBeans.orderProps",
-		"onCommand:magicBeans.randomFile",
-		"onCommand:magicBeans.requestRandomFile"
+		"onCommand:magicBeans.formatJson",
+		"onCommand:magicBeans.randomFile"
 	],
 	"main": "./src/extension",
 	"contributes": {
 		"commands": [
 			{
 				"command": "magicBeans.randomFile",
-				"title": "Magic Beans random file mode"
+				"title": "Start Magic Beans random file mode"
 			},
 			{
 				"command": "magicBeans.requestRandomFile",
@@ -54,12 +53,7 @@
 			},
 			{
 				"command": "magicBeans.createSpec",
-				"key": "ctrl+shift+x"
-			},
-			{
-				"command": "magicBeans.orderProps",
-				"key": "f8",
-				"when": "editorTextFocus"
+				"key": "ctrl+shift+0"
 			},
 			{
 				"command": "magicBeans.copyTrimmed",
