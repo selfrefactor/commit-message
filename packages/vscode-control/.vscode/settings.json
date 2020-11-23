@@ -1,4 +1,18 @@
 {
+  "separators.methods.borderStyle": "solid",
+  "separators.constructors.borderStyle": "solid",
+  "separators.enabledSymbols": [ 
+    "Methods"
+  ],
+  "separators.enabledSymbolsx": [ 
+    "Classes", 
+    "Constructors",
+    "Enums", 
+    "Functions",
+    "Interfaces", 
+    "Methods",
+    "Namespaces"
+  ],
   "editor.accessibilitySupport": "off",
   "editor.autoClosingBrackets": "always",
   "editor.autoClosingOvertype": "always",
@@ -11,9 +25,6 @@
   "editor.suggestOnTriggerCharacters": false,
   "editor.wordBasedSuggestions": false,
   "editor.parameterHints.enabled": false,
-  "separators.methods.borderStyle": "solid",
-  "separators.functions.borderWidth": 0,
-  "separators.constructors.borderStyle": "dotted",
   "window.confirmBeforeClose": "keyboardOnly", 
   "editor.suggest.insertMode":"replace",
   "editor.suggestStatusBar.enable": true,
