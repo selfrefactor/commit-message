@@ -1,18 +1,11 @@
-const {
-  identity,
-  map,
-  maybe,
-  ok,
-  type,
-} = require('rambdax')
+const { identity, map, maybe, ok, type } = require('rambdax')
+const { takeArguments } = require('string-fn')
 
-function normalizeBoolean (input){
-  return input === 'false' ?
-    false :
-    Boolean(input)
+function normalizeBoolean(input){
+  return input === 'false' ? false : Boolean(input)
 }
 
-function normalizeArray (input){
+function normalizeArray(input){
   if (!input) return []
 
   try {
@@ -43,10 +36,7 @@ function returnNormalized(input){
   if (!asString.startsWith('{')) return input
 
   if (typeof input === 'object'){
-    return map(
-      returnNormalized,
-      input
-    )
+    return map(returnNormalized, input)
   }
 
   try {
@@ -58,7 +48,7 @@ function returnNormalized(input){
   }
 }
 
-function normalizeObject (input){
+function normalizeObject(input){
   try {
     const initialResult = JSON.parse(input)
 
@@ -71,7 +61,7 @@ function normalizeObject (input){
   }
 }
 
-function normalize (input, type){
+function normalize(input, type){
   if (type === undefined) return returnNormalized(input)
 
   const methods = {
@@ -86,7 +76,7 @@ function normalize (input, type){
   return method(input)
 }
 
-function initialGetLocalize (input){
+function initialGetLocalize(input){
   ok(input)({
     defaultValue : 'any',
     key          : 'string',
@@ -103,23 +93,47 @@ function initialGetLocalize (input){
   return normalize(x, typeValue)
 }
 
-function getLocalize (key, type){
+function initialGetLocalizeUrl(input){
+  ok(input)({
+    defaultValue : 'any',
+    key          : 'string',
+    urlKey : 'string',
+  })
+  const urlArguments = takeArguments(window.location.href)
+  const typeValue = type(input.defaultValue).toLowerCase()
+  const x = localStorage.getItem(input.key)
+
+  if(urlArguments[input.urlKey] !== undefined){
+    localStorage.setItem(input.key, toString(urlArguments[input.urlKey]))
+    return normalize(urlArguments[input.urlKey], typeValue)
+  }
+
+  if (x === null || x === 'null'){
+
+    localStorage.setItem(input.key, toString(input.defaultValue))
+
+    return input.defaultValue
+  }
+
+  return normalize(x, typeValue)
+}
+
+function getLocalize(key, type){
   const typeValue = type === undefined ? 'string' : type
   const x = localStorage.getItem(key)
 
   return normalize(x, typeValue)
 }
-function getTypeless (key){
-  return normalize(
-    localStorage.getItem(key)
-  )
+function getTypeless(key){
+  return normalize(localStorage.getItem(key))
 }
-function setLocalize (key, value){
+function setLocalize(key, value){
   localStorage.setItem(key, toString(value))
 }
 
 exports.getLocalize = getLocalize
 exports.getTypeless = getTypeless
+exports.initialGetLocalizeUrl = initialGetLocalizeUrl
 exports.setLocalize = setLocalize
 exports.normalizeLocalize = normalize
 exports.initialGetLocalize = initialGetLocalize

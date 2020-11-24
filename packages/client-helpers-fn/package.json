@@ -7,7 +7,6 @@
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"de": "commit",
 		"test": "jest",
 		"dev": "jest --watch"
 	},
@@ -17,16 +16,12 @@
 		]
 	},
 	"dependencies": {
-		"rambdax": "^3.7.0"
+		"string-fn":"3.1.0",
+		"rambdax": "7.0.1"
 	},
 	"devDependencies": {
 		"@types/jest": "25.1.4",
 		"jest": "25.2.3",
 		"jest-localstorage-mock": "2.4.0"
-	},
-	"commitMessage": {
-		"support": [
-			"typings"
-		]
 	}
 }

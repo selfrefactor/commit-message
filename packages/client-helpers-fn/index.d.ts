@@ -6,10 +6,15 @@ interface InitialGet<T> {
   defaultValue: T
 }
 
+interface InitialGetUrl<T> extends InitialGet<T> {
+  urlKey: string
+}
+
 export function getTypeless<T>(key: string) : T
 export function getLocalize<T>(key: string, forceType?: LocalizeTypes) : T
 export function setLocalize(key: string, value: any) : void
 export function initialGetLocalize<T>(input: InitialGet<T>) : T
+export function initialGetLocalizeUrl<T>(input: InitialGetUrl<T>) : T
 export function normalizeLocalize<T>(rawInput: any, forceType?: LocalizeTypes) : T
 export function returnNormalized<T>(rawInput: any) : T
 
