@@ -1,6 +1,6 @@
 {
 	"name": "client-helpers-fn",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"main": "src/index.js",
 	"typings": "./index.d.ts",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/client-helpers-fn",
@@ -16,7 +16,7 @@
 		]
 	},
 	"dependencies": {
-		"string-fn":"3.1.0",
+		"string-fn": "3.1.0",
 		"rambdax": "7.0.1"
 	},
 	"devDependencies": {
