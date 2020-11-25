@@ -1,6 +1,6 @@
-const {NiketaClient} = require('niketa')
+const { NiketaClient } = require('niketa')
 
-function niketa() {
+function niketa(){
   const niketaClient = new NiketaClient({ port : 3020 })
   console.log('Niketa start')
   niketaClient.start()

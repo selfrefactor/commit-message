@@ -1,5 +1,5 @@
-const { lintFn } = require('lint-fn')
 const { CWD } = require('../../constants')
+const { lintFn } = require('lint-fn')
 
 async function lintFile(filePathRaw){
   const filePath = `${ CWD }/${ filePathRaw }`

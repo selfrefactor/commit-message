@@ -1,7 +1,7 @@
 const R = require('rambdax')
+const { CWD } = require('../../constants')
 const { lintFn } = require('lint-fn')
 const { log, scanFolder } = require('helpers-fn')
-const { CWD } = require('../../constants')
 
 const allowedFileEndings = [ '.ts', '.js' ]
 const MAX_LIMIT = 700
@@ -21,13 +21,14 @@ const HOW_MANY_THREADS = 10
 
 async function lintFolder({ fastFlag }){
   const allFiles = await scanFolder({
-    folder: CWD,
+    folder   : CWD,
     excludeFn,
-    filterFn: filterAllowed
+    filterFn : filterAllowed,
   })
   if (allFiles.length > MAX_LIMIT){
-    return log(`Too many files '${ allFiles.length }' in '${ CWD }'`,
+    log(`Too many files '${ allFiles.length }' in '${ CWD }'`,
       'error')
+    await R.delay(5000)
   }
 
   console.time('lintFolder')
