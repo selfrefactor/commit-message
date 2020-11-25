@@ -77,7 +77,14 @@ interface ClickWith{
   nth?: number
 }
 
+interface WrappedElement{
+  text: () => Promise<string>
+  className: () => Promise<string>
+}
+
 interface WrapOutput{
+  query: (playwrightSelector: string) => Promise<WrappedElement>
+  queryAll: (playwrightSelector: string) => Promise<WrappedElement[]>
   applyMocks: (serverMocks: Array<ServerMock>) => Promise<void>
   click: (el: string, nth: number) => Promise<void>
   forceClick: (playwrightInput: string) => Promise<void>

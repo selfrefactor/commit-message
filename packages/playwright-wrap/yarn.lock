@@ -3,9 +3,9 @@
 
 
 "@types/node@*":
-  version "14.14.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.7.tgz#8ea1e8f8eae2430cf440564b98c6dfce1ec5945d"
-  integrity sha512-Zw1vhUSQZYw+7u5dAwNbIA9TuTotpzY/OF7sJM9FqPOF3SPjKnxrjoTktXDZgUjybf4cWVBP7O8wvKdSaGHweg==
+  version "14.14.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.10.tgz#5958a82e41863cfc71f2307b3748e3491ba03785"
+  integrity sha512-J32dgx2hw8vXrSbu4ZlVhn1Nm3GbeCFNw2FWL8S5QKucHGY0cyNwjdQdO+KMBZ4wpmC7KhLCiNsdk1RFRIYUQQ==
 
 "@types/yauzl@^2.9.1":
   version "2.9.1"
@@ -45,9 +45,9 @@ concat-map@0.0.1:
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
 
 debug@4, debug@^4.1.1:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.2.0.tgz#7f150f93920e94c58f5574c2fd01a3110effe7f1"
-  integrity sha512-IX2ncY78vDTjZMFUdmsvIRFY2Cf4FnD0wRs+nQwJU8Lu99/tPFdb0VybiiMTPe3I6rQmwsqQqRBvxU+bZ/I8sg==
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
   dependencies:
     ms "2.1.2"
 
@@ -170,10 +170,10 @@ playwright-init@0.2.0:
   resolved "https://registry.yarnpkg.com/playwright-init/-/playwright-init-0.2.0.tgz#eadab002299ffb086379f45d2ae20c3c11e05982"
   integrity sha512-nw71wl2hbl/Wt4oaVYUvIAVU6p6yQQ75ZfcX9NI49Bz5ND/5G4iRC7z8hzeun+iZrJsobd6jhCoo7QaSXCLnbQ==
 
-playwright@1.6.1:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.6.1.tgz#0afc0829139792f6b944fa2a1aa91231fc32a75a"
-  integrity sha512-0CQdAg1NbV+ZXr7p3E62sSPRLO2peNAFC7e7NXCXR7Nj75b9Dmc8lF8bevT7eu1gbzo0ZwtFUlmAGLZ1/W/wVg==
+playwright@1.7.0-next.1606332867472:
+  version "1.7.0-next.1606332867472"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.7.0-next.1606332867472.tgz#84fb6459e4a42742ad154d168a9a62707825b360"
+  integrity sha512-+SMQJDMuG9gHQNPooopeDXuLmQI+Z4IqU8d+k9ONvBvj6hAlvISjoN4B688ZrTQMHGZJOvhxd01XUILwVZ05NA==
   dependencies:
     debug "^4.1.1"
     extract-zip "^2.0.1"
@@ -223,6 +223,11 @@ rambdax@7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.0.1.tgz#6a1b3184abcf4cf6df5dffc27fc0d71100aa21ec"
   integrity sha512-Xrrp45dg1PLt40LMcjfNyVDcPBndzpR2t+AXGAcc9iqU9lD9bnk/b1B+n4W5tFXoSKDmZmgckcA8ajgVzbtxGA==
+
+rambdax@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/rambdax/-/rambdax-7.1.0.tgz#138bc13b3dbe445f635e1e3bd94bc6ae24827fe2"
+  integrity sha512-U/fBKF2IrHTLaqCsshQ948fXNrigfU0aE4Cl18y/BqkGM4E/Yg8XYKuAzghlCVq1ybPDJdq8HbGCcnuS8c6CEg==
 
 retry@^0.12.0:
   version "0.12.0"

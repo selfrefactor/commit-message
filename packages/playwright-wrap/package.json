@@ -8,7 +8,7 @@
 	"author": "selfrefactor <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"rambdax": "7.0.1",
+		"rambdax": "7.1.0",
 		"playwright-init": "0.2.0",
 		"string-fn": "3.1.0"
 	},
@@ -16,6 +16,6 @@
 		"playwright": "1.6.1"
 	},
 	"devDependencies": {
-		"playwright": "1.6.1"
+		"playwright": "1.7.0-next.1606332867472"
 	}
 }

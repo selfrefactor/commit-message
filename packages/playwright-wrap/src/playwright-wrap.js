@@ -23,11 +23,42 @@ async function filterAsync(predicate, list){
 const DELAY = 7000
 const TICK = 150
 
+function attachToElement(el){
+  const className = async () => {
+    return el.getAttribute('class')
+  }
+  const text = async () => {
+    return el.textContent()
+  }
+
+  return {
+    className,
+    text
+  }
+}
+
 function attach(
   page,
   browserMode = 'chromium',
   snapDir = `${ process.cwd() }/screenshots`
 ){
+  const query = async playwrightSelector => {
+    const el = await page.$(playwrightSelector)
+    if(el === null){
+      throw new Error(`Couldn't find any element with '${playwrightSelector}'`)
+    }
+    return attachToElement(el)
+  }
+  
+  const queryAll = async playwrightSelector => {
+    const els = await page.$$(playwrightSelector)
+    if(els.length === 0){
+      throw new Error(`Couldn't find any elements with '${playwrightSelector}'`)
+    }
+
+    return Array.from(els).map(attachToElement)
+  }
+
   const getWaitCondition = () => {
     if (browserMode === 'chromium'){
       return { waitUntil : 'networkidle' }
@@ -452,6 +483,8 @@ function attach(
     page,
     pressTab,
     snap,
+    query,
+    queryAll,
     sleep: async () => delay(1000),
     waitAgainst,
     waitAgainstText,
@@ -463,7 +496,6 @@ function attach(
     waitForText,
   }
 }
-
 
 async function playwrightRun({url, fn, fallback, input = undefined, handleError = () => {}}){
   const options = {
