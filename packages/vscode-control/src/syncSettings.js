@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 import { copySync, writeJsonSync } from 'fs-extra'
 import { toDecimal, maybe } from 'rambdax'
+import { defaultTo } from 'helpers-fn'
 import settings from '../.vscode/settings.json'
 import {
   KEYBINDING,
@@ -11,7 +12,8 @@ import {
 
 const FONT_SIZE = 18
 const LINE_HEIGHT = 23
-const MONO = process.env.MONO !== 'OFF'
+const MONO = defaultTo('MONO', true, 'onoff') 
+const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
   toDecimal(Number(process.env.SCALE))
@@ -65,7 +67,7 @@ function getMinimapOptions(){
   const whenFalse = {
     "editor.minimap.enabled": false,
   }
-  return process.env.MINI_MAP === 'ON' ? whenTrue : whenFalse
+  return MINI_MAP? whenTrue : whenFalse
 }
 
 
