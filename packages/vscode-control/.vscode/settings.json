@@ -1,8 +1,14 @@
 {
+  "editor.cursorBlinking": "expand",
+  "editor.find.cursorMoveOnType": true,
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorWidth": 0,
   "separators.methods.borderStyle": "solid",
   "separators.constructors.borderStyle": "solid",
-  "separators.enabledSymbols": [ 
-    "Methods"
+  "separators.enabledSymbols": [
+    "Methods",
+    "Classes",
+    "Constructors"
   ],
   "separators.enabledSymbolsx": [ 
     "Classes", 
@@ -34,7 +40,6 @@
   "workbench.editor.pinnedTabSizing": "compact",
   "editor.renderWhitespace": "trailing",
   "editor.fontWeight": 350,
-  "editor.find.cursorMoveOnType": true,
   "files.enableTrash": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "scm.defaultViewMode": "tree",
@@ -121,9 +126,7 @@
   "breadcrumbs.enabled": true,
   "editor.acceptSuggestionOnEnter": "smart",
   "workbench.editor.closeOnFileDelete": true,
-  "editor.cursorBlinking": "smooth",
   "editor.cursorStyle": "line",
-  "editor.cursorWidth": 0,
   "editor.fontLigatures": false,
   "editor.formatOnPaste": false,
   "editor.mouseWheelZoom": true,
