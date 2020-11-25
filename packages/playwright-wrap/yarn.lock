@@ -165,10 +165,10 @@ pend@~1.2.0:
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
   integrity sha1-elfrVQpng/kRUzH89GY9XI4AelA=
 
-playwright-init@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/playwright-init/-/playwright-init-0.2.0.tgz#eadab002299ffb086379f45d2ae20c3c11e05982"
-  integrity sha512-nw71wl2hbl/Wt4oaVYUvIAVU6p6yQQ75ZfcX9NI49Bz5ND/5G4iRC7z8hzeun+iZrJsobd6jhCoo7QaSXCLnbQ==
+playwright-init@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/playwright-init/-/playwright-init-0.3.0.tgz#df5f4764e127c93e658e8f16112bae498f30cd6f"
+  integrity sha512-5jGV7IIYVngio9JSy/XalRk1p6pOx+jqqUcMXH03db3qrRKMRwolRpqYFt3I2khCHrp5DFpVhvaYUsS/vnePmg==
 
 playwright@1.7.0-next.1606332867472:
   version "1.7.0-next.1606332867472"
