@@ -30,7 +30,7 @@ void async function executeTest(){
 void async function foo(){
   const url  ='https://chordu.com/chords-tabs-freddie-king-sweet-home-chicago-id_pSAz_lVLIJo'
   const DURATION = '#durationViewer'
-  
+  const PLAY = '#playerCtrlPlay'
   const { browser, page } = await playwrightInit({
     headless : false,
     logFlag  : false,
@@ -38,7 +38,9 @@ void async function foo(){
     url      ,
   })
   const _ = wrap(page)
-  const el = await page.$('#playerCtrlPlay')
+  await _.waitFor(PLAY)
+  const el = await page.$(PLAY)
+  const duration = await _.getText(DURATION)
   await _.clickWithText('Consent')
   await el.click({force: true})
   await _.sleep()

@@ -116,7 +116,7 @@ function attach(
     const el = await page.$(playwrightSelector)
 
     if (el === null){
-      throw new Error('No elements found in `getText`')
+      throw new Error(`No elements found in \`getText\` and selector ${playwrightSelector}`)
     }
 
     return el.textContent()
@@ -182,6 +182,12 @@ function attach(
       throw new Error(`Failed wait condition | '${ playwrightInput }'`)
     }
     await delay(TICK)
+  }
+
+  const waitForMany = async (playwrightInputs, ms = DELAY) => {
+    const promised = playwrightInputs.map(x => waitFor(x, 1, ms))
+
+    await Promise.all(promised)
   }
 
   const waitAgainst = async (
@@ -512,6 +518,7 @@ function attach(
     waitAgainst,
     waitAgainstText,
     waitFor,
+    waitForMany,
     waitForAndClick,
     waitForClassName,
     waitForLocation,
