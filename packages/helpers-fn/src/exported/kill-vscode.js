@@ -1,20 +1,33 @@
 /*
   For some reason, VSCode starts using too much resources via its `node` process
-
-  TODO:
-
-  For now it just stops `code` but actually it should find the abusing `node` pid and kill it
 */
 
-var pidusage = require('pidusage')
+const {
+  split,
+  map,
+  filter,
+  piped,
+  tail,
+  drop,
+  join,
+  mapAsync,
+  last,
+  trim,
+  filterAsync,
+} = require('rambdax')
+const { exec } = require('./exec')
 const { head } = require('rambda')
-const { split, map, filter, piped, tail, drop, join, mapAsync, last, trim, find, filterAsync } = require('rambdax')
-var {exec} = require('./exec')
+const { log } = require('../log/log')
 
-const getAllPIDsCommand = `ps -ax`
+const getAllPIDsCommand = 'ps -ax'
+const getTopPIDs = 'ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head'
 
-function parseLine(line) {
-  const pid =  piped(
+function parseTopPidLine(line){
+  console.log({line})
+}
+
+function parseLine(line){
+  const pid = piped(
     line,
     split(' '),
     filter(x => x.trim().length),
@@ -22,65 +35,78 @@ function parseLine(line) {
     Number
   )
 
-  const label =  piped(
-    line,
-    split(':'),
-    last,
-    drop(3),
-    trim
+  const label = piped(
+    line, split(':'), last, drop(3), trim
   )
 
-  return {label, pid} 
+  return {
+    label,
+    pid,
+  }
 }
 
 const MARKER = 'visual-studio-code/code'
 
 async function killVSCode(){
   const pidsData = await exec({
-    cwd: __dirname,
-    command: getAllPIDsCommand,
-    onLog: () => {}
+    cwd     : __dirname,
+    command : getAllPIDsCommand,
+    onLog   : () => {},
   })
+
   const pids = piped(
     pidsData,
     join('\n'),
     split('\n'),
     filter(Boolean),
     tail,
-    map(parseLine),
+    map(parseLine)
   )
-  const plasmaPID = find(
-    x => x.label === '/usr/bin/plasmashell',
-    pids
-  )
-  if(!plasmaPID) throw new Error('!plasmaPID')
 
+  /*
+  usually it is npm registry command
+  I removed it from settings, so maybe we won't see this use case anymore
+
+  const topPidsData = await exec({
+    cwd     : __dirname,
+    command : getTopPIDs,
+    onLog   : () => {},
+  })
+  const topPids = piped(
+    topPidsData,
+    join('\n'),
+    split('\n'),
+    filter(Boolean),
+    map(parseTopPidLine)
+  )
+  */
   const filtered = filter(x => x.pid > 10000, pids)
-  const abusers = []
+
   async function predicate(x){
     try {
-      const stats = await pidusage(x.pid)
-      if(stats.cpu !== 0){
-        abusers.push({...x, stats})
-      }
-      if(stats.ppid === plasmaPID.pid){
-        return x.label.includes(MARKER)
-      }
+      return x.label.includes(MARKER)
+    } catch (error){
+      console.log('inactive pid')
+
       return false
-    } catch (error) {
-       console.log('inactive pid') 
-       return false
     }
   }
-  const [found] = await filterAsync(predicate, filtered)
-  if(!found) throw new Error('!found')
-  console.log({abusers})
-  
-  await exec({
-    cwd: __dirname,
-    command: `kill -9 ${found.pid}`,
-    onLog: () => {}
-  })
+  const found = await filterAsync(predicate, filtered)
+  if (found.length === 0) throw new Error('found.length === 0')
+
+  const killIterator = async ({ pid }) => {
+    try {
+      await exec({
+        cwd     : __dirname,
+        command : `kill -9 ${ pid }`,
+        onLog   : () => {},
+      })
+    } catch (_){
+      log('error in killing a process', 'warning')
+    }
+  }
+
+  await mapAsync(killIterator, found)
 }
 
 exports.killVSCode = killVSCode
