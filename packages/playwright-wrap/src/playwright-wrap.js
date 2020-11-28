@@ -24,16 +24,12 @@ const DELAY = 7000
 const TICK = 150
 
 function attachToElement(el){
-  const className = async () => {
-    return el.getAttribute('class')
-  }
-  const text = async () => {
-    return el.textContent()
-  }
+  const className = async () => el.getAttribute('class')
+  const text = async () => el.textContent()
 
   return {
     className,
-    text
+    text,
   }
 }
 
@@ -44,16 +40,17 @@ function attach(
 ){
   const query = async playwrightSelector => {
     const el = await page.$(playwrightSelector)
-    if(el === null){
-      throw new Error(`Couldn't find any element with '${playwrightSelector}'`)
+    if (el === null){
+      throw new Error(`Couldn't find any element with '${ playwrightSelector }'`)
     }
+
     return attachToElement(el)
   }
-  
+
   const queryAll = async playwrightSelector => {
     const els = await page.$$(playwrightSelector)
-    if(els.length === 0){
-      throw new Error(`Couldn't find any elements with '${playwrightSelector}'`)
+    if (els.length === 0){
+      throw new Error(`Couldn't find any elements with '${ playwrightSelector }'`)
     }
 
     return Array.from(els).map(attachToElement)
@@ -115,11 +112,21 @@ function attach(
     return classNamesList
   }
 
+  const getText = async playwrightSelector => {
+    const el = await page.$(playwrightSelector)
+
+    if (el === null){
+      throw new Error('No elements found in `getText`')
+    }
+
+    return el.textContent()
+  }
+
   const getClassName = async ({ typeElement, predicate, nth = 0 }) => {
     const allClassNames = await getAllClassNames(typeElement)
 
     if (allClassNames.length === 0){
-      throw new Error('No elements found')
+      throw new Error('No elements found in `getClassName`')
     }
 
     const filtered = allClassNames.filter(predicate)
@@ -136,10 +143,8 @@ function attach(
     await delay(TICK)
   }
 
-  const clickAndWaitForNavigation = async (
-    playwrightInput,
-    navigateEndsWith
-  ) => {
+  const clickAndWaitForNavigation = async (playwrightInput,
+    navigateEndsWith) => {
     await Promise.all([
       page.waitForNavigation({ url : `**/${ navigateEndsWith }` }),
       page.click(playwrightInput, { force : true }),
@@ -153,18 +158,20 @@ function attach(
       throw new Error(`Found only ${ els.length } but requested ${ nth } index | ${ selector }`)
     }
 
-    await els[nth].scrollIntoViewIfNeeded();
+    await els[ nth ].scrollIntoViewIfNeeded()
     await els[ nth ].click({ force : true })
     await delay(TICK)
   }
 
-  const forceClick = async (playwrightInput) => {
-    await page.$eval(playwrightInput, el => el.scrollIntoView());
-    await delay(TICK);
+  const forceClick = async playwrightInput => {
+    await page.$eval(playwrightInput, el => el.scrollIntoView())
+    await delay(TICK)
     await click(playwrightInput, 0)
-  };
+  }
 
-  const waitFor = async (playwrightInput, count = 1, ms = DELAY) => {
+  const waitFor = async (
+    playwrightInput, count = 1, ms = DELAY
+  ) => {
     const condition = async () => {
       const foundElements = await page.$$(playwrightInput)
 
@@ -177,7 +184,9 @@ function attach(
     await delay(TICK)
   }
 
-  const waitAgainst = async (playwrightInput, count = 1, ms = DELAY) => {
+  const waitAgainst = async (
+    playwrightInput, count = 1, ms = DELAY
+  ) => {
     const condition = async () => {
       const foundElements = await page.$$(playwrightInput)
 
@@ -190,7 +199,9 @@ function attach(
     await delay(TICK)
   }
 
-  const waitForAndClick = async (playwrightInput, nth = 0, ms = DELAY) => {
+  const waitForAndClick = async (
+    playwrightInput, nth = 0, ms = DELAY
+  ) => {
     await waitFor(
       playwrightInput, nth + 1, ms
     )
@@ -258,7 +269,7 @@ function attach(
     console.log(`Saved screenshot to '${ fileName }.png'`)
 
     await page.screenshot({
-      path     : screenPath,
+      path : screenPath,
       fullPage,
     })
   }
@@ -282,28 +293,39 @@ function attach(
 
     return foundElements[ nth ]
   }
-  const queryProp = async (typeElement, predicate, prop) => {
+  const queryProp = async (
+    typeElement, predicate, prop
+  ) => {
     const foundList = await page.evaluate(input => {
-      const allSelectors = Array.from(document.querySelectorAll(input.typeElement));
-      return allSelectors.map(el => el[input.prop]);
-    }, {typeElement, prop});
+      const allSelectors = Array.from(document.querySelectorAll(input.typeElement))
 
-    if (!predicate) return foundList;
+      return allSelectors.map(el => el[ input.prop ])
+    },
+    {
+      typeElement,
+      prop,
+    })
 
-    return foundList.filter(predicate);
-  };
+    if (!predicate) return foundList
 
-  const clickWith = async ({ typeElement, nth = 0, predicate, prop = 'className' }) => {
-    const props = await queryProp(typeElement, predicate, prop)
-    if (props.length <= nth) {
-      throw new Error(
-        `Found only ${props.length} but requested ${nth} index | ${typeElement}`
-      );
+    return foundList.filter(predicate)
+  }
+
+  const clickWith = async ({
+    typeElement,
+    nth = 0,
+    predicate,
+    prop = 'className',
+  }) => {
+    const props = await queryProp(
+      typeElement, predicate, prop
+    )
+    if (props.length <= nth){
+      throw new Error(`Found only ${ props.length } but requested ${ nth } index | ${ typeElement }`)
     }
 
-    const playwrightInput = prop === 'className' ?
-    `.${props[nth]}` :
-    `#${props[nth]}`
+    const playwrightInput =
+      prop === 'className' ? `.${ props[ nth ] }` : `#${ props[ nth ] }`
 
     await click(playwrightInput)
   }
@@ -479,13 +501,14 @@ function attach(
     executeInsideIframe,
     getAllClassNames,
     getClassName,
+    getText,
     goto,
     page,
     pressTab,
     snap,
     query,
     queryAll,
-    sleep: async () => delay(1000),
+    sleep : async () => delay(1000),
     waitAgainst,
     waitAgainstText,
     waitFor,
@@ -497,32 +520,39 @@ function attach(
   }
 }
 
-async function playwrightRun({url, fn, fallback, input = undefined, handleError = () => {}}){
+async function playwrightRun({
+  url,
+  fn,
+  fallback,
+  input = undefined,
+  handleError = () => {},
+}){
   const options = {
-    headless:  process.env.HEADLESS !== 'OFF',
-    logFlag: false,
+    headless      : process.env.HEADLESS !== 'OFF',
+    logFlag       : false,
     url,
-    browser: 'chromium',
-    waitCondition: {
-      waitUntil: 'domcontentloaded',
-      timeout: 600000
+    browser       : 'chromium',
+    waitCondition : {
+      waitUntil : 'domcontentloaded',
+      timeout   : 600000,
     },
-  };
-  const { browser, page } = await playwrightInit(options);
-  const _ = attach(page);
+  }
+  const { browser, page } = await playwrightInit(options)
+  const _ = attach(page)
 
   try {
     const result = await fn(_, input)
-    await browser.close();
+    await browser.close()
+
     return result
-  } catch (e) {
+  } catch (e){
     handleError(e)
     await _.snap('error')
-    await browser.close();
+    await browser.close()
+
     return fallback
   }
 }
-
 
 exports.playwrightRun = playwrightRun
 exports.wrap = attach

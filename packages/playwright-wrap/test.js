@@ -4,7 +4,7 @@ const {mapAsync} = require('rambdax')
 const GITHUB = 'https://github.com'
 const FACEBOOK = 'https://facebook.com'
 
-async function executeTest(){
+void async function executeTest(){
   const { browser, page } = await playwrightInit({
     headless : false,
     logFlag  : false,
@@ -27,4 +27,32 @@ async function executeTest(){
   await browser.close()
 }
 
-executeTest()
+void async function foo(){
+  const url  ='https://chordu.com/chords-tabs-freddie-king-sweet-home-chicago-id_pSAz_lVLIJo'
+  const DURATION = '#durationViewer'
+  
+  const { browser, page } = await playwrightInit({
+    headless : false,
+    logFlag  : false,
+    browser  : 'chromium',
+    url      ,
+  })
+  const _ = wrap(page)
+  const el = await page.$('#playerCtrlPlay')
+  await _.clickWithText('Consent')
+  await el.click({force: true})
+  await _.sleep()
+  const els = await _.queryAll('div')
+ // #cb_active
+  const allTexts = await mapAsync(
+    async el => {
+      return await el.text()
+    },
+    els
+  )
+  console.log({allTexts})
+  const divs = await _.count('div')
+  console.log({divs})
+
+  await browser.close()
+}()

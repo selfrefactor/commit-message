@@ -100,6 +100,7 @@ interface WrapOutput{
   count: (selector: string) => Promise<number>
   delay: (ms: number) => Promise<void>
   exists: (selector: string) => Promise<boolean>
+  getText: (selector: string) => Promise<string>
   getAllClassNames: (typeElement: TypeElement) => Promise<Array<string>>
   getClassName: (input: GetClassName)=> Promise<string>
   goto: (url: string) => Promise<void>
