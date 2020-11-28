@@ -1,6 +1,6 @@
 {
 	"name": "lint-fn",
-	"version": "2.12.1",
+	"version": "2.13.0",
 	"description": "lint",
 	"main": "lintFn.js",
 	"typings": "index.d.ts",
@@ -8,7 +8,7 @@
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"prove":"node prove/default.js",
+		"prove": "node prove/default.js",
 		"test": "maided test"
 	},
 	"depFn": [
