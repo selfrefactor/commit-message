@@ -12,6 +12,7 @@ const { runTests } = require('./exported/run-tests')
 const { scanFolder } = require('./exported/scan-folder')
 const { monitor, Monitor } = require('./exported/monitor')
 const { killVSCode } = require('./exported/kill-vscode')
+const { defaultTo } = require('./exported/default-to')
 
 exports.killVSCode = killVSCode
 exports.parseHjson = parseHjson
@@ -26,5 +27,6 @@ exports.exec = exec
 exports.execSafe = execSafe
 exports.spawn = spawn
 exports.log = log
+exports.defaultTo = defaultTo
 exports.Monitor = Monitor
 exports.monitor = monitor
