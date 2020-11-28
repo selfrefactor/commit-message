@@ -21,7 +21,7 @@
 		"commit-fn": "2.3.2",
 		"dep-fn": "1.0.0",
 		"fs-extra": "9.0.1",
-		"helpers-fn": "1.3.0",
+		"helpers-fn": "1.3.2",
 		"lint-fn": "2.12.1",
 		"niketa": "1.7.0",
 		"rambdax": "7.0.1",
