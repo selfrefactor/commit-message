@@ -3,14 +3,12 @@
 		"rambda": "6.4.0"
 	},
 	"name": "env-fn",
-	"version": "2.1.1",
+	"version": "2.2.0",
 	"typings": "index.d.ts",
 	"description": "Load environment variables from from local `.env` file",
 	"main": "./src/env-fn.js",
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/env-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
-	"devDependencies": {
-		
-	}
+	"devDependencies": {}
 }
