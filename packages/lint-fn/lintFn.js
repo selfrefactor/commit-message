@@ -62,7 +62,7 @@ async function lintFn(filePath, prettierSpecialCase = 'local', cwdOverride = fal
     return console.log(NO_AVAILABLE_LINTER)
   } catch (err){
     console.log(err, 'in lint.fn')
-    throw err
+    return false
   }
 }
 
