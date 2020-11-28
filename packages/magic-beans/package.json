@@ -20,6 +20,7 @@
 	"activationEvents": [
 		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.formatJson",
+		"onCommand:magicBeans.createSpec",
 		"onCommand:magicBeans.randomFile"
 	],
 	"main": "./src/extension",
