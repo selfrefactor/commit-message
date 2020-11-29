@@ -1,4 +1,10 @@
 {
+  "tabnine.experimentalAutoImports": true,
+  "tabnine.disable_file_regex": [
+  ".json",
+  "*.json",
+  "package.json"
+  ],
   "npm.fetchOnlinePackageInfo": false,
   "typescript.disableAutomaticTypeAcquisition": true,
   "typescript.check.npmIsInstalled": false,
