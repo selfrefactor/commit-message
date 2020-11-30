@@ -38,7 +38,7 @@
   "editor.autoClosingOvertype": "always",
   "editor.autoClosingQuotes": "always",
   "editor.codeLens": false,
-  "editor.folding": false,
+  "editor.folding": true,
   "editor.hover.sticky": false,
   "editor.rename.enablePreview": false,
   "editor.suggest.showColors": false,
