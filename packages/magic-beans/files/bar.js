@@ -1,6 +1,6 @@
 const vscode = require('vscode')
 const { delay } = require('rambdax')
-const { REQUEST_RANDOM_FILE } = require('./constants')
+const { REQUEST_RANDOM_FILE } = require('../src/constants')
 
 const PRIORITY = 1
 const holder = {}

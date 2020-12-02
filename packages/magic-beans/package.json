@@ -93,11 +93,6 @@
 						".git"
 					],
 					"description": "Which directories are excluded in random file mode"
-				},
-				"magicBeans.IMPORT_TARGET": {
-					"type": "string",
-					"default": "lodash",
-					"description": "Set utility library for magic import"
 				}
 			}
 		}
