@@ -1,4 +1,5 @@
 {
+  "explorer.compactFolders":false,
   "tabnine.experimentalAutoImports": true,
   "npm.fetchOnlinePackageInfo": false,
   "typescript.disableAutomaticTypeAcquisition": true,
