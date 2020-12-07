@@ -4,8 +4,10 @@ const { createSpec } = require('./createSpec')
 const { formatJson } = require('./format-json')
 const { randomFile, requestRandomFile } = require('./randomFile')
 const { REQUEST_RANDOM_FILE } = require('./constants')
+const { initBar } = require('./bar')
 
 function activate(context){
+  initBar()
   const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',
     formatJson)
   const copyTrimmedCommand = vscode.commands.registerCommand('magicBeans.copyTrimmed',

@@ -8,7 +8,7 @@ const {
   removeIndex,
 } = require('rambdax')
 const { configAnt } = require('./ants/config')
-const { logToUser } = require('../files/bar')
+const { logToUser } = require('./bar')
 const { scanFolder } = require('helpers-fn')
 
 const RANDOM_FILE_SKIP_PATTERNS = configAnt('RANDOM_FILE_SKIP_PATTERNS')

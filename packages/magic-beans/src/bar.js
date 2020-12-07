@@ -1,6 +1,6 @@
 const vscode = require('vscode')
 const { delay } = require('rambdax')
-const { REQUEST_RANDOM_FILE } = require('../src/constants')
+const { REQUEST_RANDOM_FILE } = require('./constants')
 
 const PRIORITY = 1
 const holder = {}
@@ -17,7 +17,7 @@ const logToUser = text => {
 const initBar = () => {
   holder.bar.show()
   logToUser(WELCOME_MESSAGE)
-  delay(3500).then(() => {
+  delay(1500).then(() => {
     if (holder.bar.text === WELCOME_MESSAGE) logToUser('')
   })
 }
