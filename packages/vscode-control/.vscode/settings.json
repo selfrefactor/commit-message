@@ -1,4 +1,10 @@
 {
+  "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": [
+    ".html",
+    ".js",
+    ".ts",
+    ".tsx"
+  ],
   "explorer.compactFolders":false,
   "tabnine.experimentalAutoImports": true,
   "npm.fetchOnlinePackageInfo": false,
