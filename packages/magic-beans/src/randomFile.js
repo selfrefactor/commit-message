@@ -10,6 +10,8 @@ const {
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
 const { scanFolder } = require('helpers-fn')
+const {getter, setter} = require('rambdax')
+const { REQUEST_RANDOM_FILE } = require('./constants')
 
 const RANDOM_FILE_SKIP_PATTERNS = configAnt('RANDOM_FILE_SKIP_PATTERNS')
 const RANDOM_FILE_ALLOWED_EXTENSIONS = configAnt('RANDOM_FILE_ALLOWED_EXTENSIONS')
@@ -34,6 +36,9 @@ function requestRandomFile(){
 }
 
 async function randomFile(){
+  if(getter(REQUEST_RANDOM_FILE)) return
+  setter(REQUEST_RANDOM_FILE, true)
+  
   const projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
   const files = await scanFolder({
     folder    : projectFolder,

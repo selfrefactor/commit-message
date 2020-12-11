@@ -46,11 +46,11 @@
 		"keybindings": [
 			{
 				"command": "magicBeans.randomFile",
-				"key": "f6"
+				"key": "f7"
 			},
 			{
 				"command": "magicBeans.requestRandomFile",
-				"key": "f7"
+				"key": "f6"
 			},
 			{
 				"command": "magicBeans.createSpec",
@@ -75,6 +75,10 @@
 					"default": [
 						".html",
 						".js",
+						".jsx",
+						".tsx",
+						".css",
+						".scss",
 						".ts"
 					],
 					"description": "Which file extensions are allowed in random file mode"
