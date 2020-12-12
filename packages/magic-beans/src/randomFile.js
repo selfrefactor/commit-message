@@ -10,7 +10,6 @@ const {
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
 const { scanFolder } = require('helpers-fn')
-const {getter, setter} = require('rambdax')
 const { REQUEST_RANDOM_FILE } = require('./constants')
 
 const RANDOM_FILE_SKIP_PATTERNS = configAnt('RANDOM_FILE_SKIP_PATTERNS')
