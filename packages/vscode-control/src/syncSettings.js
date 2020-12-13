@@ -8,6 +8,7 @@ import {
   SETTINGS,
   JS_SNIPPETS,
   TS_SNIPPETS,
+  TSX_SNIPPETS
 } from './constants'
 
 const FONT_SIZE = 18
@@ -70,8 +71,6 @@ function getMinimapOptions(){
   return MINI_MAP? whenTrue : whenFalse
 }
 
-
-
 function syncSettings(){
   const newOptions = {
     ...settings,
@@ -91,6 +90,7 @@ function syncSettings(){
 function syncSnippets(){
   syncFiles(SNIPPETS_SOURCE, JS_SNIPPETS)
   syncFiles(SNIPPETS_SOURCE, TS_SNIPPETS)
+  syncFiles(SNIPPETS_SOURCE, TSX_SNIPPETS)
 }
 
 void function sync(){

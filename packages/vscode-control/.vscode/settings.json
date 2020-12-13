@@ -1,6 +1,6 @@
 {
   "workbench.editor.enablePreviewFromQuickOpen":true,
-  "workbench.tree.expandMode":"doubleClick",
+  "workbench.tree.expandMode":"singleClick",
   "js/ts.implicitProjectConfig.strictNullChecks":true,
   "explorer.compactFolders":false,
   "tabnine.experimentalAutoImports": true,
