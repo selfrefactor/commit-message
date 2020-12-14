@@ -1,0 +1,36 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose", 
+        "-i", 
+        "--no-cache",
+        "src/scrape-chordu.spec.js",
+        "https://chordu.com/chords-tabs-freddie-king-sweet-home-chicago-id_pSAz_lVLIJo"
+      ],
+      "disableOptimisticBPs": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Markdown",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose", 
+        "-i", 
+        "--no-cache",
+        "src/create-markdown.spec.js"
+      ],
+      "disableOptimisticBPs": true,
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    }
+  ]
+}
