@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.execCommand = void 0;
 const child_process_1 = require("child_process");
-exports.execCommand = command => new Promise((resolve, reject) => {
+const execCommand = command => new Promise((resolve, reject) => {
     const cwd = process.env.COMMIT_MESSAGE_CWD || process.cwd();
     const proc = child_process_1.exec(command, { cwd });
     if (!proc)
@@ -17,4 +17,5 @@ exports.execCommand = command => new Promise((resolve, reject) => {
         reject(err);
     });
 });
+exports.execCommand = execCommand;
 //# sourceMappingURL=execCommand.js.map

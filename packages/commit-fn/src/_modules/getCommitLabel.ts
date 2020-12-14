@@ -55,7 +55,7 @@ export async function getCommitLabel(input: CommitType): Promise<string> {
     require('inquirer-autocomplete-prompt')
   )
   log('sepx')
-  log(`${input.key} - ${input.explanation}`, '')
+  log(`${input.key} - ${input.explanation}`, 'bar')
   log('sepx')
 
   return pickLabel()

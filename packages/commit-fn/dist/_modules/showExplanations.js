@@ -15,7 +15,7 @@ exports.normalize = normalize;
 function showExplanations() {
     let counter = 0;
     constants_1.explanationOfTypes.forEach(explanation => {
-        const tag = counter % 2 === 0 ? 'tag=foo' : 'tag=bar';
+        const tag = counter % 2 === 0 ? 'foo' : 'bar';
         helpers_fn_1.log(normalize(explanation), tag);
         counter++;
     });

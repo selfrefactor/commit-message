@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.commitMessage = exports.commitAndPush = void 0;
 var commitAndPush_1 = require("./commitAndPush");
 Object.defineProperty(exports, "commitAndPush", { enumerable: true, get: function () { return commitAndPush_1.commitAndPush; } });
 var commitMessage_1 = require("./commitMessage");

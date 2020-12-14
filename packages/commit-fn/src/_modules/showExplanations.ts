@@ -16,7 +16,7 @@ export function showExplanations(): void {
   let counter = 0
 
   explanationOfTypes.forEach(explanation => {
-    const tag = counter % 2 === 0 ? 'tag=foo' : 'tag=bar'
+    const tag = counter % 2 === 0 ? 'foo' : 'bar'
 
     log(normalize(explanation), tag)
     counter++

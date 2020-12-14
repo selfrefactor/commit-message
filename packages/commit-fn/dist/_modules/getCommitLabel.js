@@ -50,7 +50,7 @@ async function pickLabel() {
 async function getCommitLabel(input) {
     inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
     helpers_fn_1.log('sepx');
-    helpers_fn_1.log(`${input.key} - ${input.explanation}`, '');
+    helpers_fn_1.log(`${input.key} - ${input.explanation}`, 'bar');
     helpers_fn_1.log('sepx');
     return pickLabel();
 }
