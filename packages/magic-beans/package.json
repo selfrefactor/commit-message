@@ -21,6 +21,7 @@
 		"onCommand:magicBeans.copyTrimmed",
 		"onCommand:magicBeans.formatJson",
 		"onCommand:magicBeans.createSpec",
+		"onCommand:magicBeans.sortLines",
 		"onCommand:magicBeans.randomFile"
 	],
 	"main": "./src/extension",
@@ -41,9 +42,17 @@
 			{
 				"command": "magicBeans.formatJson",
 				"title": "Format JSON"
+			},
+			{
+				"command": "magicBeans.sortLines",
+				"title": "Sort lines"
 			}
 		],
 		"keybindings": [
+			{
+				"command": "magicBeans.sortLines",
+				"key": "ctrl+shift+-"
+			},
 			{
 				"command": "magicBeans.randomFile",
 				"key": "f7"
