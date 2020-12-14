@@ -6,11 +6,10 @@ function applyCreateSpec(filePath, fileName){
   const content = readFileSync(filePath).toString()
   const lines = content.split('\n')
 
-  let found
   let toReturn
   lines.forEach(line => {
     const [ matched ] = match(/export\s(async\s)?function\s[a-zA-Z]+/, line)
-    if (matched && !found){
+    if (matched){
       found = true
       const [ startExportStatement ] = match(/export\s(async\s)?function/,
         matched)
