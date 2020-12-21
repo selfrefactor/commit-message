@@ -1,15 +1,15 @@
 {
 	"dependencies": {
-		"execa": "4.0.3",
-		"rambdax": "6.2.0"
+		"execa": "5.0.0",
+		"rambdax": "7.1.0"
 	},
 	"scripts": {
 		"out": "node buildConfig.js",
 		"lint": "eslint src/foo.ts --fix"
 	},
 	"devDependencies": {
-		"lint-fn": "2.10.0",
+		"lint-fn": "2.13.1",
 		"tslint-fn": "0.2.2",
-		"typescript": "4.1.0-dev.20201005"
+		"typescript": "4.2.0-dev.20201221"
 	}
 }

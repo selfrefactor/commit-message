@@ -6,10 +6,10 @@ const delimiter = {
     1,
     {
       multiline: {
-        delimiter: 'comma',
+        delimiter: 'semi',
       },
       singleline: {
-        delimiter: 'comma',
+        delimiter: 'none',
       },
     },
   ],
@@ -55,8 +55,17 @@ const nullishCoalescing = {
     },
   ],
 }
+
+const useInfer = {
+  '@typescript-eslint/no-inferrable-types': {
+    "ignoreParameters": false,
+    "ignoreProperties": false,
+  }
+}
+
 const rules = {
   ...delimiter,
+  ...useInfer,
   ...arrayType,
   ...braceStyle,
   ...callSpacing,
@@ -68,6 +77,7 @@ const rules = {
   '@typescript-eslint/consistent-type-definitions': [1, 'interface'],
   '@typescript-eslint/no-array-constructor': 1,
   '@typescript-eslint/no-empty-interface': 1,
+  '@typescript-eslint/method-signature-style': [1, 'property'],
   '@typescript-eslint/no-explicit-any': 0,
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 1,
   '@typescript-eslint/no-unnecessary-condition': 1,
