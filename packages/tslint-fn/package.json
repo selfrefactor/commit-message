@@ -14,9 +14,6 @@
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/tslint-fn",
 	"author": "Dejan Toteff <deyan8284@gmail.com>",
 	"license": "MIT",
-	"commitMessage": {
-		"workInProgress": ""
-	},
 	"devDependencies": {
 		
 	}
