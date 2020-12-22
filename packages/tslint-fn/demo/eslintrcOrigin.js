@@ -62,6 +62,11 @@ const useInfer = {
     "ignoreProperties": false,
   }
 }
+const consistentTypeImports = {
+  '@typescript-eslint/consistent-type-imports': {
+    prefer: 'type-imports'
+  }
+}
 
 const rules = {
   ...delimiter,
@@ -74,6 +79,8 @@ const rules = {
   ...indent,
   ...nullishCoalescing,
   ...spaceBeforeFunction,
+  ...consistentTypeImports,
+  "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
   '@typescript-eslint/consistent-type-definitions': [1, 'interface'],
   '@typescript-eslint/no-array-constructor': 1,
   '@typescript-eslint/no-empty-interface': 1,
@@ -81,10 +88,14 @@ const rules = {
   '@typescript-eslint/no-explicit-any': 0,
   '@typescript-eslint/no-unnecessary-boolean-literal-compare': 1,
   '@typescript-eslint/no-unnecessary-condition': 1,
+  '@typescript-eslint/no-unnecessary-type-constraint': 1,
+  '@typescript-eslint/non-nullable-type-assertion-style': 1,
   '@typescript-eslint/no-unnecessary-type-arguments': 1,
   '@typescript-eslint/no-unnecessary-type-assertion': 1,
-  '@typescript-eslint/prefer-as-const': 1,
   '@typescript-eslint/prefer-function-type': 1,
+  '@typescript-eslint/prefer-as-const': 1,
+  '@typescript-eslint/promise-function-async': 1,
+  '@typescript-eslint/prefer-ts-expect-error': 1,
   '@typescript-eslint/prefer-includes': 1,
   '@typescript-eslint/prefer-optional-chain': 1,
   '@typescript-eslint/type-annotation-spacing': 1,
