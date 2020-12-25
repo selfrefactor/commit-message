@@ -1,0 +1,2 @@
+allow custom repos
+  

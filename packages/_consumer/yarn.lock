@@ -284,10 +284,10 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-sort-used-by@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.1.0.tgz#f97de7ca5e4dc3d07e34bd0de72686263db9e877"
-  integrity sha512-eVPmtktjh9d3jHWFhWp6czRS3kV7MQBQ4YORA9gizOQKmb2LbAuv8GZK6UMSuGX9ACopJ2yCAIWO6QNzzJOJng==
+sort-used-by@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.1.1.tgz#d67ca947c90483f1d99c11520316fce187569189"
+  integrity sha512-ASv83w/pnFDQOAQLVI8ToM4qSXotP5LjSnTtzHGr8Ms9aY2cfLUx2yV4xl7Fk+TwW760XdlcYkyO05jwKGW/fA==
   dependencies:
     esm "3.2.25"
     fs-extra "9.0.1"

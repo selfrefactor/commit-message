@@ -1,0 +1,3 @@
+void async function main(){
+
+}()
