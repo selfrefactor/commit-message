@@ -4,8 +4,9 @@ import { wrap } from 'playwright-wrap'
 import { delay, mapAsync } from 'rambdax'
 
 import { getRepoData } from './get-repo-data'
+import { sortResult } from './sort-result'
 
-const RESULT = `${ __dirname }/result.json`
+export const RESULT = `${ __dirname }/result.json`
 const COOL_OFF = 2000
 const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
@@ -80,5 +81,6 @@ export async function sortUsedBy(repo){
     console.log({ e }, 'sortUsedBy')
   } finally {
     await browser.close()
+    return sortResult(data)
   }
 }
