@@ -43,6 +43,7 @@ async function getLinks(_){
 function waitForNext(_, compareTo){
   return async () => {
     const el = await _.page.$(LINKS)
+    if(!el) return true
     const text = await el.textContent()
 
     return text !== compareTo
@@ -60,9 +61,9 @@ export async function sortUsedBy(repo){
     browser  : 'chromium',
     url,
   })
+  const _ = wrap(page)
+  
   try {
-    const _ = wrap(page)
-
     let canProceed = await hasNext(_)
 
     while (canProceed){
@@ -79,6 +80,7 @@ export async function sortUsedBy(repo){
     }
   } catch (e){
     console.log({ e }, 'sortUsedBy')
+    await _.snap('error.sort.used.by')
   } finally {
     await browser.close()
     return sortResult(data)
