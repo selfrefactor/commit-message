@@ -2,5 +2,9 @@
   "name": "_consumer",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "sort-used-by": "0.1.0"
+  }
 }

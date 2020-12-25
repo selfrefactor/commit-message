@@ -4,5 +4,4 @@ jest.setTimeout(12*60*1000)
 
 test('happy', async () => {
   await sortUsedBy('selfrefactor/rambda')
-  // await sortUsedBy('nestjs/nest')
 })
