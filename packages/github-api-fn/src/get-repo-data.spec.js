@@ -3,9 +3,15 @@ import { ok } from 'rambdax'
 import { ms } from 'string-fn'
 envFn('special')
 import { getRepoData } from './get-repo-data'
-jest.setTimeout(ms('1min'))
+jest.setTimeout(ms('2 minutes'))
 
-const repos = [ 'selfrefactor/on', 'selfrefactor/rambdax' ]
+const repos = [ 
+  'evanw/esbuild',
+  'VerbalExpressions/JSVerbalExpressions',
+  'aposin/ng-aquila',
+  'g-plane/type-gymnastics',
+  'WolkSoftware/tsmod'
+]
 const input = {
   repos,
   cacheLocation : `${ __dirname }/cache.json`,

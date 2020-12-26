@@ -4,6 +4,9 @@ interface RepoData{
     description: string,
     stargazers_count: number,
     forks_count: number,
+    updated_at: string,
+    pushed_at: string,
+    subscribers_count: string,
     open_issues_count: number
   },
   repoUrl: string

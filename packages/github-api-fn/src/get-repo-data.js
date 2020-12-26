@@ -18,7 +18,7 @@ export async function getRepoData(input){
   if (refreshCache){
     const reposData = await mapAsync(async repoUrl => {
       const repoDataResponse = await getRepo(repoUrl)
-      const propsToPick = 'full_name,description,stargazers_count,forks_count,open_issues_count'
+      const propsToPick = 'full_name,description,stargazers_count,forks_count,open_issues_count,pushed_at,updated_at,subscribers_count'
       const repoData = pick(propsToPick, repoDataResponse)
       return {repoData, repoUrl}
     }, repos)
