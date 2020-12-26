@@ -2,6 +2,10 @@
 
 Scrape Github dependent repos and sorts them by stars.
 
+## Install
+
+> yarn add sort-used-by
+
 ## Usage
 
 ```javascript
