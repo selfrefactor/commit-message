@@ -1,1 +1,1 @@
-export function sortUsedBy(repo: string): Promise<Array<{stars: number, repoUrl: string}>>
+export function getDescriptions(repos: string[]): Promise<Array<{repo: string, description: string}>>

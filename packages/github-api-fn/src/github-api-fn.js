@@ -1,1 +1,1 @@
-export * from './get-description'
+export * from './get-descriptions'
