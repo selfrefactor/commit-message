@@ -6,12 +6,12 @@ export async function getRepo(repo){
   if(!repo.includes('/')) throw new Error(`wrong repo input - ${repo}`)
   
   const url = `https://api.github.com/repos/${ repo }`
-  const { status, data } = await axios({
-    method  : 'get',
-    url,
-    timeout : 7000,
-    headers : { Authorization : `token ${ process.env.GITHUB }` },
-  })
-
-  return data
+    const {data } = await axios({
+      method  : 'get',
+      url,
+      timeout : 7000,
+      headers : { Authorization : `token ${ process.env.GITHUB }` },
+    })
+  
+    return data
 }

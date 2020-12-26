@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Array [
+  Object {
+    "repoData": Object {
+      "description": "Nest server",
+      "forks_count": 0,
+      "full_name": "selfrefactor/on",
+      "open_issues_count": 2,
+      "stargazers_count": 0,
+    },
+    "repoUrl": "selfrefactor/on",
+  },
+  Object {
+    "repoData": Object {
+      "description": "Extended version of Rambda ",
+      "forks_count": 18,
+      "full_name": "selfrefactor/rambdax",
+      "open_issues_count": 1,
+      "stargazers_count": 136,
+    },
+    "repoUrl": "selfrefactor/rambdax",
+  },
+]
+`;

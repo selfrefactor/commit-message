@@ -1,1 +1,1 @@
-export * from './get-descriptions'
+export * from './get-repo-data'

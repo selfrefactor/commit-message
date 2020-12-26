@@ -10,7 +10,7 @@
         "--verbose", 
         "-i", 
         "--no-cache",
-        "src/sort-used-by.spec.js"
+        "src/get-repo-data.spec.js"
       ],
       "disableOptimisticBPs": true,
       "console": "integratedTerminal",

@@ -1,5 +1,5 @@
+cache.json
 node_modules
 coverage
-config.json
 *.log
 result.json
