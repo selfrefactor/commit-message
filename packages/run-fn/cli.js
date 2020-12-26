@@ -21,6 +21,9 @@ async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
 
+  // if (firstArgument === 'commit'){
+  //   return console.log(process.cwd(), 2)
+  // }
   if (firstArgument === 'kill'){
     return killVSCode()
   }
