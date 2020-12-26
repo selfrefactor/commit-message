@@ -84,7 +84,7 @@
   "debug.openExplorerOnEnd": true,
   "debug.showInStatusBar": "never",
   "debug.openDebug": "openOnDebugBreak",
-  "editor.semanticHighlighting.enabled": true,
+  "editor.semanticHighlighting.enabled": false,
   "editor.suggest.showIcons": true,
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
