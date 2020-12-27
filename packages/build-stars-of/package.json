@@ -1,0 +1,30 @@
+{
+  "name": "build-stars-of",
+  "version": "0.1.0",
+  "typings": "index.d.ts",
+  "description": "Scrape Github dependent repos and sorts them by stars",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Dejan Toteff <deyan8284@gmail.com>",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/build-stars-of",
+  "dependencies": {
+    "esm": "3.2.25",
+    "fs-extra": "9.0.1",
+    "sort-used-by": "0.1.1",
+    "github-api-fn": "0.1.1",
+    "rambdax": "7.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "9.0.1",
+    "string-fn": "3.1.0",
+    "@babel/core": "7.11.6",
+    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
+    "@babel/preset-env": "7.11.5",
+    "@types/node": "14.11.1",
+    "@types/jest": "26.0.14",
+    "jest": "26.4.2"
+  },
+  "scripts": {
+    "test": "jest src -u"
+  }
+}

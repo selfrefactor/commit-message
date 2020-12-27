@@ -1,0 +1,1 @@
+export function sortUsedBy(repo: string): Promise<Array<{stars: number, repoUrl: string}>>
