@@ -21,7 +21,6 @@ const { read } = require('./services/read/read')
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
-  console.log({firstArgument})
   if (firstArgument === 'commit'){
     return commit(secondArgument, thirdArgument, ...rest)
   }
