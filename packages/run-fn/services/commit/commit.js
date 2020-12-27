@@ -4,20 +4,22 @@ const { commitAndPushFast } = require('commit-fn')
   "--mode", commitMode, "--tag", commitTag, "--message", commitMessage
 */
 async function commit(...inputs){
-  const [ , commitMode, , commitTag, , commitMessage ] = inputs
+  const [ , commitMode, , commitTag, , ...commitMessageWords ] = inputs
+
+  const commitMessage = commitMessageWords.join(' ').trim()
 
   console.log({
-    dir: process.cwd(),
+    dir : process.cwd(),
     commitMode,
     commitTag,
     commitMessage,
   })
 
   return commitAndPushFast({
-    dir           : process.cwd(),
-    commitMessage : commitMessage.trim(),
-    commitMode    : commitMode.trim(),
-    commitTag     : commitTag.trim(),
+    dir : process.cwd(),
+    commitMessage,
+    commitMode,
+    commitTag,
   })
 }
 
