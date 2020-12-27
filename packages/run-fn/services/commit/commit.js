@@ -10,7 +10,7 @@ async function commit(...inputs){
 
   return commitAndPushFast({
     dir           : process.cwd(),
-    commitMessage : hasTag ? commitMessage.trim() : commitTag.trim(),
+    commitMessage : commitMessage.trim(),
     commitMode,
     commitTag     : hasTag ? commitTag.trim() : '',
   })
