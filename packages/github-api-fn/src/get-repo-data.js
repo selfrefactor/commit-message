@@ -1,7 +1,7 @@
 import { mapAsync, ok, pick } from 'rambdax'
 import { outputJson, readJson } from 'fs-extra'
 
-import { getRepo } from './get-repo'
+import { getRepo } from './_modules/get-repo'
 import { existsSync } from 'fs'
 
 export async function getRepoData(input){

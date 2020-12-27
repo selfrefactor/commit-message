@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Object {
+  "pass": true,
+  "updateDate": "2020-12-21T20:57:54Z",
+  "updateDiff": 5,
+}
+`;
+
+exports[`no package.json 1`] = `
+Object {
+  "pass": false,
+  "updateDate": undefined,
+  "updateDiff": undefined,
+}
+`;
