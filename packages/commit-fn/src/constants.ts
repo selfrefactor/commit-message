@@ -3,7 +3,7 @@ import {load} from 'package-storage'
 const loaded = load('commitLabels', undefined, true)
 export const customCommitLabels = Array.isArray(loaded) ? loaded : []
 
-export const ALL_LABELS = [
+export const ALL_LABELS: string[] = [
   ...customCommitLabels,
   '🎏 refactor',
   '📦 dep',
