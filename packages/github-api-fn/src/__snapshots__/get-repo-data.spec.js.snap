@@ -3,45 +3,65 @@
 exports[`happy 1`] = `
 Array [
   Object {
+    "filterData": Object {
+      "pass": true,
+      "updateDate": "2020-08-13T05:45:16Z",
+      "updateDiff": 136,
+    },
     "repoData": Object {
       "description": "An extremely fast JavaScript bundler and minifier",
       "forks_count": 356,
       "full_name": "evanw/esbuild",
       "open_issues_count": 86,
       "pushed_at": "2020-12-23T22:57:12Z",
-      "stargazers_count": 16503,
+      "stargazers_count": 16506,
       "subscribers_count": 208,
-      "updated_at": "2020-12-26T17:37:55Z",
+      "updated_at": "2020-12-27T13:43:35Z",
     },
     "repoUrl": "evanw/esbuild",
   },
   Object {
+    "filterData": Object {
+      "pass": true,
+      "updateDate": "2020-11-18T19:51:51Z",
+      "updateDiff": 38,
+    },
     "repoData": Object {
       "description": "JavaScript Regular expressions made easy",
-      "forks_count": 521,
+      "forks_count": 522,
       "full_name": "VerbalExpressions/JSVerbalExpressions",
       "open_issues_count": 22,
       "pushed_at": "2020-12-18T22:05:17Z",
-      "stargazers_count": 11764,
+      "stargazers_count": 11763,
       "subscribers_count": 287,
-      "updated_at": "2020-12-25T16:34:44Z",
+      "updated_at": "2020-12-27T12:19:33Z",
     },
     "repoUrl": "VerbalExpressions/JSVerbalExpressions",
   },
   Object {
+    "filterData": Object {
+      "pass": true,
+      "updateDate": "2020-12-16T09:38:40Z",
+      "updateDiff": 11,
+    },
     "repoData": Object {
       "description": "Angular UI Component library for the Open Insurance Platform",
       "forks_count": 20,
       "full_name": "aposin/ng-aquila",
       "open_issues_count": 1,
       "pushed_at": "2020-12-21T19:51:04Z",
-      "stargazers_count": 159,
+      "stargazers_count": 158,
       "subscribers_count": 16,
-      "updated_at": "2020-12-23T19:11:02Z",
+      "updated_at": "2020-12-26T20:38:17Z",
     },
     "repoUrl": "aposin/ng-aquila",
   },
   Object {
+    "filterData": Object {
+      "pass": true,
+      "updateDate": "2020-11-21T03:01:35Z",
+      "updateDiff": 36,
+    },
     "repoData": Object {
       "description": "Collection of wonderful TypeScript type gymnastics code snippets.",
       "forks_count": 4,
@@ -55,6 +75,11 @@ Array [
     "repoUrl": "g-plane/type-gymnastics",
   },
   Object {
+    "filterData": Object {
+      "pass": false,
+      "updateDate": "2019-09-30T11:47:29Z",
+      "updateDiff": 454,
+    },
     "repoData": Object {
       "description": "Refactor TypScript code programmatically using codemods",
       "forks_count": 0,

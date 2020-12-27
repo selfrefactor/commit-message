@@ -12,4 +12,8 @@ interface RepoData{
   repoUrl: string
 }
 
-export function getRepoData(repos: string[]): Promise<Array<RepoData>>
+export function getRepoData(input: {
+  repos: string[],
+  cacheLocation: string,
+  refreshCache?: boolean
+}): Promise<Array<RepoData>>

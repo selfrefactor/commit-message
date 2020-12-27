@@ -20,8 +20,8 @@ const input = {
 
 test('happy', async () => {
   const result = await getRepoData(input)
-  ok(result)(Array)
   expect(
     result
   ).toMatchSnapshot()
+  ok(result)(Array)
 })
