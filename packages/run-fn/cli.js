@@ -7,10 +7,11 @@ const { killVSCode } = require('helpers-fn')
 
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
-const { niketa } = require('./services/niketa/niketa')
+// const { niketa } = require('./services/niketa/niketa')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
 const { angular } = require('./services/angular/angular')
 const { deploy } = require('./services/de/deploy')
+const { commit } = require('./services/commit/commit')
 const { fastDeploy } = require('./services/d/fastDeploy')
 const { lintFile } = require('./services/lintFile/lintFile')
 const { lintFolder } = require('./services/lintFolder/lintFolder')
@@ -20,19 +21,19 @@ const { read } = require('./services/read/read')
 async function runFn(){
   const [ firstArgumentRaw, secondArgument, thirdArgument, ...rest ] = drop(2)(process.argv)
   const firstArgument = firstArgumentRaw.toLowerCase()
-
-  // if (firstArgument === 'commit'){
-  //   return console.log(process.cwd(), 2)
-  // }
+  console.log({firstArgument})
+  if (firstArgument === 'commit'){
+    return commit(secondArgument, thirdArgument, ...rest)
+  }
   if (firstArgument === 'kill'){
     return killVSCode()
   }
   if ([ 'angular', 'ng' ].includes(firstArgument)){
     return angular()
   }
-  if (firstArgument === 'niketa'){
-    return niketa()
-  }
+  // if (firstArgument === 'niketa'){
+  //   return niketa()
+  // }
   if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){
     return lintFolder({ fastFlag : false })
   }
