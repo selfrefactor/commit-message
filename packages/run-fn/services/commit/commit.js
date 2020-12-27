@@ -9,6 +9,8 @@ async function commit(...inputs){
   const commitMessage = commitMessageWords.join(' ').trim()
 
   console.log({
+    inputs,
+    commitMessageWords,
     dir : process.cwd(),
     commitMode,
     commitTag,
