@@ -6,6 +6,9 @@ const rambda_1 = require("rambda");
 const fs_1 = require("fs");
 const nonCommitPrefixes = ['commit', 'Author:', 'Date:'];
 const COMMITS_OUTPUT = `${__dirname}/commits.txt`;
+/*
+  DEPRECATED
+*/
 async function getLatestCommits(dir) {
     await helpers_fn_1.exec({
         command: `git log -3 > ${COMMITS_OUTPUT}`,

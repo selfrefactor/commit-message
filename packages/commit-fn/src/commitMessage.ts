@@ -2,7 +2,6 @@ import {log} from 'helpers-fn'
 import {count} from 'string-fn'
 import {ASK_FOR_MESSAGE, typesOfCommit, NO_LABEL} from './constants'
 
-import {getLatestCommits} from './_modules/getLatestCommits'
 import {getCommitLabel} from './_modules/getCommitLabel'
 import {getCommitType} from './_modules/getCommitType'
 
@@ -13,11 +12,6 @@ import {showExplanations} from './_modules/showExplanations'
 // and returns the final commit message.
 // ============================================
 export async function commitMessage(dir = process.cwd()): Promise<string> {
-  const latestCommits = await getLatestCommits(dir)
-  latestCommits.forEach(singleCommit => {
-    log(singleCommit, 'info')
-  })
-
   log('sep')
   showExplanations()
 

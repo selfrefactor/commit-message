@@ -4,7 +4,6 @@ exports.commitMessage = void 0;
 const helpers_fn_1 = require("helpers-fn");
 const string_fn_1 = require("string-fn");
 const constants_1 = require("./constants");
-const getLatestCommits_1 = require("./_modules/getLatestCommits");
 const getCommitLabel_1 = require("./_modules/getCommitLabel");
 const getCommitType_1 = require("./_modules/getCommitType");
 const promptInput_1 = require("./_modules/promptInput");
@@ -13,10 +12,6 @@ const showExplanations_1 = require("./_modules/showExplanations");
 // and returns the final commit message.
 // ============================================
 async function commitMessage(dir = process.cwd()) {
-    const latestCommits = await getLatestCommits_1.getLatestCommits(dir);
-    latestCommits.forEach(singleCommit => {
-        helpers_fn_1.log(singleCommit, 'info');
-    });
     helpers_fn_1.log('sep');
     showExplanations_1.showExplanations();
     const commitType = await getCommitType_1.getCommitType(constants_1.typesOfCommit);

@@ -6,6 +6,9 @@ const nonCommitPrefixes = ['commit', 'Author:', 'Date:']
 
 const COMMITS_OUTPUT = `${__dirname}/commits.txt`
 
+/*
+  DEPRECATED
+*/
 export async function getLatestCommits(dir: string): Promise<string[]> {
   await exec({
     command: `git log -3 > ${COMMITS_OUTPUT}`,
