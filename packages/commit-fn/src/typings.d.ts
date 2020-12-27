@@ -26,3 +26,10 @@ interface GetLabel {
   commitType: CommitType,
   labels: Label[],
 }
+
+interface CommitMessage{
+  dir: string,
+  commitMessage: string,
+  commitMode: string,
+  commitTag: string,
+}
