@@ -17,6 +17,7 @@
 	"author": "self_refactor",
 	"license": "MIT",
 	"dependencies": {
+		"niketa": "1.8.1",
 		"clipboardy": "2.3.0",
 		"commit-fn": "2.5.0",
 		"dep-fn": "1.0.0",

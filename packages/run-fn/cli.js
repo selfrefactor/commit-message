@@ -7,7 +7,7 @@ const { killVSCode } = require('helpers-fn')
 
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
-// const { niketa } = require('./services/niketa/niketa')
+const { niketa } = require('./services/niketa/niketa')
 const { copyToClipboard } = require('./services/c/copyToClipboard')
 const { angular } = require('./services/angular/angular')
 const { deploy } = require('./services/de/deploy')
@@ -30,9 +30,9 @@ async function runFn(){
   if ([ 'angular', 'ng' ].includes(firstArgument)){
     return angular()
   }
-  // if (firstArgument === 'niketa'){
-  //   return niketa()
-  // }
+  if (firstArgument === 'niketa'){
+    return niketa()
+  }
   if ([ 'lintfolder', 'lint', 'l' ].includes(firstArgument)){
     return lintFolder({ fastFlag : false })
   }
