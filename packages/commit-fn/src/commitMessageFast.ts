@@ -3,7 +3,12 @@ import * as FuzzySet from 'fuzzyset'
 const FUZZY_LIMIT = 0.3
 const FUZZY_CONSERVATIVE_LIMIT = 0.5
 
-function applySearch(fuzzyInstance: any, fuzzyConservativeInstance: any, defaultValue: string,  searchString: string) {
+function applySearch(
+  fuzzyInstance: any,
+  fuzzyConservativeInstance: any,
+  defaultValue: string,
+  searchString: string
+) {
   const fuzzyResult = fuzzyInstance
     .get(searchString)
     .filter(([score]) => score > FUZZY_LIMIT)
@@ -22,31 +27,31 @@ function applySearch(fuzzyInstance: any, fuzzyConservativeInstance: any, default
 
 export async function commitMessageFast(
   input: CommitMessage
-  ): Promise<string> {
-    const allModes = typesOfCommit.map(
-      x => x.value
-      )
-    const allTags = ALL_LABELS.map(
-      x => x.includes(' ') ? x.split(' ')[1]: x
+): Promise<string> {
+  const allModes = typesOfCommit.map(x => x.value)
+  const allTags = ALL_LABELS.map(x =>
+    x.includes(' ') ? x.split(' ')[1] : x
+  )
+
+  const commitMode = applySearch(
+    FuzzySet(allModes, false, 1, 2),
+    FuzzySet(allModes, true, 2, 3),
+    allModes[0],
+    input.commitMode
+  )
+
+  const commitTag = input.commitTag
+    ? applySearch(
+      FuzzySet(allTags, false, 1, 2),
+      FuzzySet(allTags, true, 2, 3),
+      allTags[0],
+      input.commitTag
     )
+    : ''
 
-      const commitMode = applySearch(
-        FuzzySet(allModes, false, 1, 2),
-        FuzzySet(allModes, true, 2, 3),
-        allModes[0],
-        input.commitMode
-      )
-
-      const commitTag = input.commitTag ? applySearch(
-        FuzzySet(allTags, false, 1, 2),
-        FuzzySet(allTags, true, 2, 3),
-        allTags[0],
-        input.commitTag
-      ) : ''
-
-  if(!commitTag){
+  if (!commitTag) {
     return `${commitMode}: ${input.commitMessage}`
-  }    
-  
+  }
+
   return `${commitMode}@${commitTag} ${input.commitMessage}`
 }

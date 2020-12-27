@@ -179,3 +179,7 @@ All `support` members will be labels in `chore` commit type.
 ## Change of working directory
 
 `const cwd = process.env.COMMIT_MESSAGE_CWD || process.cwd()`
+
+## TODO
+
+Replace fuzzy with fuzzyset

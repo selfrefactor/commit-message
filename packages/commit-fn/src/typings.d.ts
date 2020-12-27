@@ -27,7 +27,7 @@ interface GetLabel {
   labels: Label[],
 }
 
-interface CommitMessage{
+interface CommitMessage {
   dir: string,
   commitMessage: string,
   commitMode: string,

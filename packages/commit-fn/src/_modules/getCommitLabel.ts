@@ -11,9 +11,9 @@ import * as fuzzy from 'fuzzy'
 import {sort, last, setter, getter} from 'rambdax'
 
 function sortFn(a: any, b: any) {
-  if(customCommitLabels.includes(a)) return -1
-  if(customCommitLabels.includes(b)) return 1
-  
+  if (customCommitLabels.includes(a)) return -1
+  if (customCommitLabels.includes(b)) return 1
+
   if (a.includes(' ') && !b.includes(' ')) return -1
   if (!a.includes(' ') && b.includes(' ')) return 1
   return a > b ? -1 : 1
