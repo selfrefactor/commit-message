@@ -1,6 +1,6 @@
-import { dropLast, filter, piped, remove, split } from "rambdax";
+const { dropLast, filter, piped, remove, split } = require( "rambdax")
 
-export function getRepoData(rawData){
+function getRepoData(rawData){
   return piped(rawData, remove(/\n/g),split(' '), 
   filter(x => x.trim()),
   x => ({
@@ -9,3 +9,5 @@ export function getRepoData(rawData){
   })
   ) 
 }
+
+exports.getRepoData = getRepoData

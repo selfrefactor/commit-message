@@ -1,12 +1,12 @@
-import { outputJson } from 'fs-extra'
-import { playwrightInit } from 'playwright-init'
-import { wrap } from 'playwright-wrap'
-import { delay, mapAsync } from 'rambdax'
+const { outputJson } = require( 'fs-extra')
+const { playwrightInit } = require( 'playwright-init')
+const { wrap } = require( 'playwright-wrap')
+const { delay, mapAsync } = require( 'rambdax')
 
-import { getRepoData } from './get-repo-data'
-import { sortResult } from './sort-result'
+const { getRepoData } = require( './get-repo-data')
+const { sortResult } = require( './sort-result')
 
-export const RESULT = `${ __dirname }/result.json`
+const RESULT = `${ __dirname }/result.json`
 const COOL_OFF = 2000
 const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
@@ -50,7 +50,7 @@ function waitForNext(_, compareTo){
   }
 }
 
-export async function sortUsedBy(repo){
+async function sortUsedBy(repo){
   if (!repo.includes('/')) throw new Error('!repo')
   const url = `https://github.com/${ repo }/network/dependents`
   let data = []
@@ -86,3 +86,6 @@ export async function sortUsedBy(repo){
     return sortResult(data)
   }
 }
+
+exports.RESULT = RESULT
+exports.sortUsedBy = sortUsedBy

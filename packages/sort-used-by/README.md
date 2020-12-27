@@ -21,9 +21,4 @@ void async function main(){
 
 ## Notes
 
-```
-         $dependants.find(`[href='${path}/network/dependents?dependent_type=REPOSITORY']`)
-          $dependants.find(`[href='${path}/network/dependents?dependent_type=PACKAGE']`)
-```
-
-Similar idea is https://github.com/hacker-DOM/github-by-stars but the origin of this package is very different.
+Similar idea is https://github.com/hacker-DOM/github-by-stars but this is not the origin for the creation of this package.
