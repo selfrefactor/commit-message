@@ -6,7 +6,7 @@ const { filterRepo } = require('./_modules/filter-repo')
 const { getRepo } = require('./_modules/get-repo')
 const cacheLocation = `${ __dirname }/cache.json`
 
-export async function getRepoData(input){
+async function getRepoData(input){
   ok(input)({ repos : [ String ] })
   const { repos, refreshCache = true } = input
   const reposOk = repos.filter(x => x.includes('/')).length === repos.length
@@ -16,8 +16,16 @@ export async function getRepoData(input){
     const reposData = await mapAsync(async repo => {
       const repoDataResponse = await getRepo(repo)
       const filterData = await filterRepo(repo)
-      const propsToPick =
-        'full_name,description,stargazers_count,forks_count,open_issues_count,pushed_at,updated_at,subscribers_count'
+      const propsToPick = [
+        'full_name',
+        'description',
+        'stargazers_count',
+        'forks_count',
+        'open_issues_count',
+        'pushed_at',
+        'updated_at',
+        'subscribers_count',
+      ]
       const repoData = pick(propsToPick, repoDataResponse)
 
       return {
@@ -39,3 +47,5 @@ export async function getRepoData(input){
   }
   throw new Error('cache is lost')
 }
+
+exports.getRepoData = getRepoData
