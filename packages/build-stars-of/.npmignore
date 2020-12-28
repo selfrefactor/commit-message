@@ -1,0 +1,4 @@
+*.snap
+*.spec.js
+.vscode/
+src/assets/*
