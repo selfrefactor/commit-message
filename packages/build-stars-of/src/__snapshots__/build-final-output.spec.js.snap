@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+"# Stars of **Rambda** list
+
+This list contains Github repos depending on **selfrefactor/rambda**. 
+
+These repos are sorted by their stars and thier \`package.json\` is updated in the last year.
+
+> This list is created with \`build-stars-of\` library."
+`;
