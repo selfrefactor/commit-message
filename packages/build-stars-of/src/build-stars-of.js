@@ -7,7 +7,7 @@ import { kebabCase } from 'string-fn'
 
 import { buildFinalOutput } from './build-final-output'
 
-const STARS_LIMIT = 10
+const STARS_LIMIT = 3
 const TOP_LIMIT = 300
 
 async function getScrapedRepos(

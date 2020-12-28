@@ -6,6 +6,10 @@
 
 add months diff with latest update(not package)
 
+overwrite output location
+
+blacklist
+
 add link from rambda for its list
 
 > Upcoming repos
