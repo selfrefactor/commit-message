@@ -10,7 +10,7 @@
   "dependencies": {
     "esm": "3.2.25",
     "fs-extra": "9.0.1",
-    "github-api-fn": "0.2.0",
+    "github-api-fn": "0.2.1",
     "rambdax": "7.0.1",
     "sort-used-by": "0.2.0",
     "string-fn": "3.1.0"
@@ -26,6 +26,7 @@
     "jest": "26.4.2"
   },
   "scripts": {
-    "test": "jest src -u"
+    "test": "jest src -u",
+    "on": "jest src/build-stars-of.spec.js"
   }
 }

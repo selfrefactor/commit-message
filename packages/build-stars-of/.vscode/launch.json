@@ -10,7 +10,7 @@
         "--verbose", 
         "-i", 
         "--no-cache",
-        "src/sort-used-by.spec.js"
+        "src/build-stars-of.spec.js"
       ],
       "disableOptimisticBPs": true,
       "console": "integratedTerminal",

@@ -1,52 +1,78 @@
-import {sortUsedBy} from 'sort-used-by'
-import {getRepoData} from 'github-api-fn'
-import {outputJson, readJson} from 'fs-extra'
-import { kebabCase } from 'string-fn'
 import { existsSync } from 'fs'
-import { map, prop, take } from 'rambdax'
+import { outputJson, readJson } from 'fs-extra'
+import { getRepoData } from 'github-api-fn'
+import { filter, map, piped, prop, take } from 'rambdax'
+import { sortUsedBy } from 'sort-used-by'
+import { kebabCase } from 'string-fn'
+
 import { buildFinalOutput } from './build-final-output'
 
-async function getScrapedRepos(repo, fileName, shouldRefresh){
-  const filePath = `${__dirname}/assets/${fileName}-scraped.json`
+const STARS_LIMIT = 3
 
-  if(!shouldRefresh && !existsSync(filePath)){
+async function getScrapedRepos(
+  repo, fileName, shouldRefresh
+){
+  const filePath = `${ __dirname }/assets/${ fileName }-scraped.json`
+
+  if (!shouldRefresh && !existsSync(filePath)){
     throw new Error('!exists')
   }
 
-  if(!shouldRefresh && existsSync(filePath)){
-    const {data} = await readJson(filePath)
+  if (!shouldRefresh && existsSync(filePath)){
+    const { data } = await readJson(filePath)
+
     return data
   }
 
   const scrapedRepos = await sortUsedBy(repo)
-  await outputJson(filePath, {data: scrapedRepos}, {spaces: 2})
+  await outputJson(
+    filePath, { data : scrapedRepos }, { spaces : 2 }
+  )
 
   return scrapedRepos
 }
 
-async function getApiData(repos, fileName, shouldRefresh){
-  const filePath = `${__dirname}/assets/${fileName}-api-data.json`
-  
-  if(!shouldRefresh && !existsSync(filePath)){
+async function getApiData(
+  repos, fileName, shouldRefresh
+){
+  const filePath = `${ __dirname }/assets/${ fileName }-api-data.json`
+
+  if (!shouldRefresh && !existsSync(filePath)){
     throw new Error('!exists')
   }
-  
-  if(!shouldRefresh && existsSync(filePath)){
-    const {data} = await readJson(filePath)
+
+  if (!shouldRefresh && existsSync(filePath)){
+    const { data } = await readJson(filePath)
+
     return data
   }
-  const apiData = await getRepoData({repos })
-  await outputJson(filePath, {data: apiData}, {spaces: 2})
+  const apiData = await getRepoData({ repos })
+  await outputJson(
+    filePath, { data : apiData }, { spaces : 2 }
+  )
 
   return apiData
 }
 
-export async function buildStarsOf(repo, shouldRefreshScraped = true, shouldRefreshApi = true){
+export async function buildStarsOf(
+  repo,
+  shouldRefreshScraped = true,
+  shouldRefreshApi = true
+){
   const fileName = kebabCase(repo)
-  const scrapedRepos = await getScrapedRepos(repo, fileName, shouldRefreshScraped)
-  
-  const repos = map(prop('repo'), scrapedRepos)
-  const apiData = await getApiData(take(7, repos), fileName, shouldRefreshApi)
+  const scrapedRepos = await getScrapedRepos(
+    repo,
+    fileName,
+    shouldRefreshScraped
+  )
+
+  const repos = piped(
+    scrapedRepos,
+    filter(({ stars }) => stars >= STARS_LIMIT),
+    map(prop('repo'))
+  )
+  console.log({len: repos.length})
+  const apiData = await getApiData(repos, fileName, shouldRefreshApi)
 
   const finalOutput = buildFinalOutput(apiData)
   return finalOutput

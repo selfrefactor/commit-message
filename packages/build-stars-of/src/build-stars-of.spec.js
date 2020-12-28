@@ -4,10 +4,14 @@ import { ms } from 'string-fn'
 
 import { buildStarsOf } from './build-stars-of'
 
-jest.setTimeout(ms('20 minutes'))
+jest.setTimeout(ms('30 minutes'))
+
+const repo = 'selfrefactor/rambda'
+// const repo = 'microsoft/playwright'
 
 test('happy', async () => {
   await buildStarsOf(
-    'selfrefactor/rambda', false, false
+    repo, false, true
+    // repo
   )
 })
