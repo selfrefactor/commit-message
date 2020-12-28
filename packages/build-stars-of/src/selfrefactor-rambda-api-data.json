@@ -87,6 +87,40 @@
       "filterData": {
         "pass": false
       }
+    },
+    {
+      "repoData": {
+        "full_name": "romgrk/todoist.nvim",
+        "description": "A todoist extension for neovim",
+        "stargazers_count": 72,
+        "forks_count": 2,
+        "open_issues_count": 7,
+        "pushed_at": "2020-11-26T18:22:10Z",
+        "updated_at": "2020-12-21T02:05:25Z",
+        "subscribers_count": 5
+      },
+      "repoUrl": "romgrk/todoist.nvim",
+      "filterData": {
+        "pass": true,
+        "updateDate": "2020-06-06T18:22:40Z",
+        "updateDiff": 204
+      }
+    },
+    {
+      "repoData": {
+        "full_name": "SAP-samples/teched2020-developer-keynote",
+        "description": "SAP TechEd 2020: Developer Keynote",
+        "stargazers_count": 64,
+        "forks_count": 54,
+        "open_issues_count": 1,
+        "pushed_at": "2020-12-24T14:33:27Z",
+        "updated_at": "2020-12-26T16:26:47Z",
+        "subscribers_count": 15
+      },
+      "repoUrl": "SAP-samples/teched2020-developer-keynote",
+      "filterData": {
+        "pass": false
+      }
     }
   ]
 }

@@ -34,9 +34,7 @@ async function getApiData(repos, fileName, shouldRefresh){
     const {data} = await readJson(filePath)
     return data
   }
-  const cacheLocation = `${__dirname}/${fileName}-api-data-cache.json`
-
-  const apiData = await getRepoData({repos, cacheLocation })
+  const apiData = await getRepoData({repos })
   await outputJson(filePath, {data: apiData}, {spaces: 2})
 
   return apiData
@@ -47,6 +45,6 @@ export async function buildStarsOf(repo, shouldRefreshScraped = true, shouldRefr
   const scrapedRepos = await getScrapedRepos(repo, fileName, shouldRefreshScraped)
   
   const repos = map(prop('repo'), scrapedRepos)
-  const apiData = await getApiData(take(5, repos), fileName, shouldRefreshApi)
+  const apiData = await getApiData(take(7, repos), fileName, shouldRefreshApi)
   
 }
