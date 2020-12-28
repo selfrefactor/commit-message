@@ -9,11 +9,15 @@ interface RepoData{
     subscribers_count: string,
     open_issues_count: number
   },
+  filterData: {
+    pass       : boolean,
+    updateDate : undefined | string,
+    updateDiff : undefined | string,
+  },
   repoUrl: string
 }
 
 export function getRepoData(input: {
   repos: string[],
-  cacheLocation: string,
   refreshCache?: boolean
 }): Promise<Array<RepoData>>
