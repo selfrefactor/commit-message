@@ -1,9 +1,9 @@
-import { existsSync } from 'fs'
-import { outputJson, readJson } from 'fs-extra'
-import { mapAsync, ok, pick } from 'rambdax'
+const { existsSync } = require('fs')
+const { mapAsync, ok, pick } = require('rambdax')
+const { outputJson, readJson } = require('fs-extra')
 
-import { filterRepo } from './_modules/filter-repo'
-import { getRepo } from './_modules/get-repo'
+const { filterRepo } = require('./_modules/filter-repo')
+const { getRepo } = require('./_modules/get-repo')
 const cacheLocation = `${ __dirname }/cache.json`
 
 export async function getRepoData(input){
