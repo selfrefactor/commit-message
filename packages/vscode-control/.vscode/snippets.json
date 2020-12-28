@@ -77,11 +77,11 @@
 		"description": "test snippet"
 	},
 	"AsyncFunctionSnippet": {
-		"prefix": "async",
+		"prefix": "asnc",
 		"body": [
 			"export async function $0(){",
 			"\t",
-			"})"
+			"}"
 		],
 		"description": "export async function SNIPPET"
 	},
