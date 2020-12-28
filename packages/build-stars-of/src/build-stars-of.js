@@ -4,6 +4,7 @@ import {outputJson, readJson} from 'fs-extra'
 import { kebabCase } from 'string-fn'
 import { existsSync } from 'fs'
 import { map, prop, take } from 'rambdax'
+import { buildFinalOutput } from './build-final-output'
 
 async function getScrapedRepos(repo, fileName, shouldRefresh){
   const filePath = `${__dirname}/${fileName}-scraped.json`
@@ -46,5 +47,7 @@ export async function buildStarsOf(repo, shouldRefreshScraped = true, shouldRefr
   
   const repos = map(prop('repo'), scrapedRepos)
   const apiData = await getApiData(take(7, repos), fileName, shouldRefreshApi)
-  
+
+  const finalOutput = buildFinalOutput(apiData)
+  return finalOutput
 }
