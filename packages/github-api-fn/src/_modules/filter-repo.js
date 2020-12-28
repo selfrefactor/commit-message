@@ -1,12 +1,16 @@
-import axios from 'axios'
+const axios = require('axios')
 import dayjs from 'dayjs'
 import { path } from 'rambdax'
 
 const DAYS_LIMIT = 370
 const FILE = 'package.json'
-const FALLBACK = { pass : false, updateDate: undefined, updateDiff: undefined }
+const FALLBACK = {
+  pass       : false,
+  updateDate : undefined,
+  updateDiff : undefined,
+}
 
-function dateDiff(updateDate) {
+function dateDiff(updateDate){
   const now = dayjs(Date.now())
   const past = dayjs(updateDate)
 
@@ -27,14 +31,13 @@ export async function filterRepo(repo){
   if (data.length === 0){
     return FALLBACK
   }
-  const updateDate = path(
-    'commit.committer.date', data[0])
+  const updateDate = path('commit.committer.date', data[ 0 ])
 
   const diff = dateDiff(updateDate)
-  return {
-    pass: diff < DAYS_LIMIT,
-    updateDate,
-    updateDiff: diff
-  }
 
+  return {
+    pass       : diff < DAYS_LIMIT,
+    updateDate,
+    updateDiff : diff,
+  }
 }
