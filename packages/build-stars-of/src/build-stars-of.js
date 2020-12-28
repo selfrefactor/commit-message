@@ -1,13 +1,14 @@
 import { existsSync } from 'fs'
 import { outputJson, readJson } from 'fs-extra'
 import { getRepoData } from 'github-api-fn'
-import { filter, map, piped, prop } from 'rambdax'
+import { filter, map, piped, prop, sort, take } from 'rambdax'
 import { sortUsedBy } from 'sort-used-by'
 import { kebabCase } from 'string-fn'
 
 import { buildFinalOutput } from './build-final-output'
 
-const STARS_LIMIT = 3
+const STARS_LIMIT = 10
+const TOP_LIMIT = 300
 
 async function getScrapedRepos(
   repo, fileName, shouldRefresh
@@ -69,6 +70,8 @@ export async function buildStarsOf(
   const repos = piped(
     scrapedRepos,
     filter(({ stars }) => stars >= STARS_LIMIT),
+    sort((a, b) => a.stars > b.stars? -1: 1),
+    take(TOP_LIMIT),
     map(prop('repo'))
   )
   console.log({len: repos.length})
