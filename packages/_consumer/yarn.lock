@@ -87,6 +87,13 @@ end-of-stream@^1.1.0:
   dependencies:
     once "^1.4.0"
 
+env-fn@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/env-fn/-/env-fn-2.2.0.tgz#30288cd0294bcc8ac76f2ec9c71ec6ddb2736c43"
+  integrity sha512-hdR0Dpguc2GTA/d1lu7nBgze6gXB/bXkmN1nW6zlaRmRsw8mK4vTNuE0o4bbR0NfXTzgI7mecdGiHsqZRAeO9w==
+  dependencies:
+    rambda "6.4.0"
+
 esm@3.2.25:
   version "3.2.25"
   resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
@@ -295,6 +302,11 @@ pump@^3.0.0:
   dependencies:
     end-of-stream "^1.1.0"
     once "^1.3.1"
+
+rambda@6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/rambda/-/rambda-6.4.0.tgz#bf080047b03d8d2c72e3ce5c17c603517a65749a"
+  integrity sha512-aBoE7YrGQP1xnxjyg5fhupfS+FTrDVjZMtwpezl15RKLNnKLOYDfjx/0xDE+8GyWbbZfODRkAOZmnpvxrAONbQ==
 
 rambdax@7.0.1:
   version "7.0.1"

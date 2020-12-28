@@ -7,8 +7,9 @@
     "stars": "node stars-of/run"
   },
   "dependencies": {
+    "build-stars-of": "0.1.1",
+    "env-fn": "^2.2.0",
     "fs-extra": "^9.0.1",
-    "sort-used-by": "0.1.1",
-    "build-stars-of": "0.1.1"
+    "sort-used-by": "0.1.1"
   }
 }

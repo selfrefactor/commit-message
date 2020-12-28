@@ -1,3 +1,5 @@
+const {envFn} = require('env-fn')
+envFn('special')
 const {buildStarsOf} = require('build-stars-of')
 const {allModes} = require('./config')
 
