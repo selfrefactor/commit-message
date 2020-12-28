@@ -11,7 +11,7 @@ const repo = 'selfrefactor/rambda'
 
 test('happy', async () => {
   await buildStarsOf(
-    repo, false, true
-    // repo
+    // repo, false, true
+    repo
   )
 })

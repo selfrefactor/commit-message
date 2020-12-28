@@ -76,7 +76,8 @@ export async function buildStarsOf(
   )
   console.log({len: repos.length})
   const apiData = await getApiData(repos, fileName, shouldRefreshApi)
-
-  const finalOutput = buildFinalOutput(apiData)
+  const filteredApiData = apiData.filter(({filterData}) => filterData !== false)
+  
+  const finalOutput = buildFinalOutput(filteredApiData)
   return finalOutput
 }

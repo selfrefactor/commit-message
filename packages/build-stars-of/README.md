@@ -6,8 +6,6 @@
 
 add link from rambda for its list
 
-use filterData
-
 > Upcoming repos
 
 Jest
