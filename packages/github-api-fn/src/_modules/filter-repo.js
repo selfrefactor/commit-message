@@ -25,7 +25,7 @@ export async function filterRepo(repo){
   const { data } = await axios({
     method  : 'get',
     url,
-    timeout : 7000,
+    timeout : 20000,
     headers : { Authorization : `token ${ process.env.GITHUB }` },
   })
   if (data.length === 0){
