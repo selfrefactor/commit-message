@@ -6,8 +6,8 @@ import { buildStarsOf } from './build-stars-of'
 
 jest.setTimeout(ms('30 minutes'))
 
-const repo = 'selfrefactor/rambda'
-// const repo = 'microsoft/playwright'
+// const repo = 'selfrefactor/rambda'
+const repo = 'microsoft/playwright'
 
 test('happy', async () => {
   await buildStarsOf(

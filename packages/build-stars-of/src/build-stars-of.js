@@ -1,7 +1,7 @@
 import { existsSync } from 'fs'
 import { outputJson, readJson } from 'fs-extra'
 import { getRepoData } from 'github-api-fn'
-import { filter, map, piped, prop, take } from 'rambdax'
+import { filter, map, piped, prop } from 'rambdax'
 import { sortUsedBy } from 'sort-used-by'
 import { kebabCase } from 'string-fn'
 
