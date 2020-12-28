@@ -20,19 +20,12 @@
 		],
 		"description": "requireX"
 	},
-	"Import": {
-		"prefix": "im",
+	"ImportSnippet": {
+		"prefix": "imp",
 		"body": [
 			"import { ${1:method} } from '${0}'"
 		],
 		"description": "import"
-	},
-	"Bind": {
-		"prefix": "bin",
-		"body": [
-			"this.${1:method} = this.${1:method}.bind(this)${0}"
-		],
-		"description": "bind"
 	},
 	"commentX": {
 		"prefix": "comx",
@@ -74,34 +67,23 @@
 		],
 		"description": "stx"
 	},
-	"Test": {
-		"prefix": "test",
+	"TestSnippet": {
+		"prefix": "tst",
 		"body": [
 			"test('${1:happy}', () => {",
 			"\t$0",
 			"})"
 		],
-		"description": "test"
+		"description": "test snippet"
 	},
-	"Testf": {
-		"prefix": "testf",
-		"body": [
-			"test('${CLIPBOARD}', () => {",
-			"\tconst result = ${CLIPBOARD}($0)",
-			"\tconsole.log(result)",
-			"\t// expect(result).toEqual()",
-			"})"
-		],
-		"description": "test function with clipboard"
-	},
-	"AsyncFunction": {
-		"prefix": "asy",
+	"AsyncFunctionSnippet": {
+		"prefix": "async",
 		"body": [
 			"export async function $0(){",
 			"\t",
 			"})"
 		],
-		"description": "export async function"
+		"description": "export async function SNIPPET"
 	},
 	"LogClipboard": {
 		"prefix": "lgc",
@@ -110,26 +92,15 @@
 		],
 		"description": "log clipboard"
 	},
-	"TestAsyncClipboard": {
-		"prefix": "testac",
-		"body": [
-			"test('${CLIPBOARD}', async () => {",
-			"\tconst result = await ${CLIPBOARD}($0)",
-			"\tconsole.log(result)",
-			"\t// expect(result).toEqual()",
-			"})"
-		],
-		"description": "test async function with clipboard"
-	},
-	"TestAsync": {
-		"prefix": "testa",
+	"TestAsyncSnippet": {
+		"prefix": "tsta",
 		"body": [
 			"test('${1:happy}', async () => {",
 			"\tconst result = await $0",
 			"\texpect(result).toEqual(expected)",
 			"})"
 		],
-		"description": "test"
+		"description": "test SNIPPET"
 	},
 	"Export": {
 		"prefix": "exportx",
@@ -207,7 +178,7 @@
 		"description": "log string"
 	},
 	"Lg": {
-		"prefix": "lg",
+		"prefix": "lgg",
 		"body": [
 			"console.log($0)"
 		],
