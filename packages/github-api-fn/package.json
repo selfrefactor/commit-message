@@ -4,12 +4,11 @@
     "test": "jest src -u"
   },
   "typings": "index.d.ts",
-  "main": "index.js",
+  "main": "src/get-repo-data.js",
   "version": "0.2.1",
   "dependencies": {
     "axios": "0.21.1",
     "dayjs": "^1.9.7",
-    "esm": "3.2.25",
     "fs-extra": "9.0.1",
     "rambdax": "7.0.1"
   },

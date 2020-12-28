@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-export async function getRepo(repo){
+async function getRepo(repo){
   const token = process.env.GITHUB
   if(!token) throw new Error("!token")
   if(!repo.includes('/')) throw new Error(`wrong repo input - ${repo}`)
@@ -15,3 +15,5 @@ export async function getRepo(repo){
   
     return data
 }
+
+exports.getRepo = getRepo
