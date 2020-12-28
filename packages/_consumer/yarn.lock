@@ -26,6 +26,13 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
+axios@0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -44,10 +51,27 @@ buffer-crc32@~0.2.3:
   resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
   integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
+build-stars-of@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.1.1.tgz#cf9c153b641cdcbad3c3205bc62a2d1310fdbc4d"
+  integrity sha512-vMJQ2F/XxxSaz8fE1rDH8m0i0UWbXCSTYpQg1es31hfw47S/isXpcUiKQ9Q4WH50frjeuXyQyJv/o5Mkdz7B2Q==
+  dependencies:
+    esm "3.2.25"
+    fs-extra "9.0.1"
+    github-api-fn "0.2.4"
+    rambdax "7.0.1"
+    sort-used-by "0.2.0"
+    string-fn "3.1.0"
+
 concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+
+dayjs@^1.9.7:
+  version "1.9.8"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.9.8.tgz#9a65fbdca037e3d5835f98672da6e796f757cd58"
+  integrity sha512-F42qBtJRa30FKF7XDnOQyNUTsaxDkuaZRj/i7BejSHC34LlLfPoIU4aeopvWfM+m1dJ6/DHKAWLg2ur+pLgq1w==
 
 debug@4, debug@^4.1.1:
   version "4.3.1"
@@ -86,6 +110,11 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+follow-redirects@^1.10.0:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.1.tgz#5f69b813376cee4fd0474a3aba835df04ab763b7"
+  integrity sha512-SSG5xmZh1mkPGyKzjZP8zLjltIfpW32Y5QpdNJyjcfGxK3qo3NDDkZOZSFiGn1A6SclQxY9GzEwAHQ3dmYRWpg==
+
 fs-extra@9.0.1, fs-extra@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-9.0.1.tgz#910da0062437ba4c39fedd863f1675ccfefcb9fc"
@@ -107,6 +136,16 @@ get-stream@^5.1.0:
   integrity sha512-nBF+F1rAZVCu/p7rjzgA+Yb4lfYXrpl7a6VmJrU8wF9I1CKvP/QwPNZHnOlwbTkY6dvtFIzFMSyQXbLoTQPRpA==
   dependencies:
     pump "^3.0.0"
+
+github-api-fn@0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.2.4.tgz#995f74d95ba1bbb45930390febafcea025bde66b"
+  integrity sha512-O2Dw4uPhHEyqYaqWfUieYa6nKfw9qFVBeGKb7rf78LumDY02vb7S9bSXjuqUSpUdm18l+x7pCzGroU8kSZrAtw==
+  dependencies:
+    axios "0.21.1"
+    dayjs "^1.9.7"
+    fs-extra "9.0.1"
+    rambdax "7.0.1"
 
 glob@^7.1.3:
   version "7.1.6"
@@ -290,6 +329,17 @@ sort-used-by@0.1.1:
   integrity sha512-ASv83w/pnFDQOAQLVI8ToM4qSXotP5LjSnTtzHGr8Ms9aY2cfLUx2yV4xl7Fk+TwW760XdlcYkyO05jwKGW/fA==
   dependencies:
     esm "3.2.25"
+    fs-extra "9.0.1"
+    playwright "1.7.1"
+    playwright-init "0.3.0"
+    playwright-wrap "0.6.0"
+    rambdax "7.0.1"
+
+sort-used-by@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.2.0.tgz#f2c211b45964e5d376f96f99f4ef2505460d7c97"
+  integrity sha512-z7+bdIGKKysqIeq1hA7sXri96soEqbOpwV/0igGdvnF/z9ejIq8PksjdzQeNq0cism5T4rXX/cX7IuesEiuyyg==
+  dependencies:
     fs-extra "9.0.1"
     playwright "1.7.1"
     playwright-init "0.3.0"
