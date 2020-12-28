@@ -21,7 +21,9 @@ function getMainContent(data){
   const template = `
 ## {{name}}
 
-[https://github.com/{{name}}]({{name}}) - 🌟 {{stars}}
+{{description}}
+
+[{{name}}](https://github.com/{{name}}) - 🌟 {{stars}}
   `.trim()
 
   const allMethods = piped(

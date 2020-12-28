@@ -1,7 +1,7 @@
 import { existsSync } from 'fs'
-import { outputJson, readJson } from 'fs-extra'
+import { outputFile, outputJson, readJson } from 'fs-extra'
 import { getRepoData } from 'github-api-fn'
-import { filter, map, piped, prop, sort, take } from 'rambdax'
+import { filter, map, piped, prop, sort, take, ok } from 'rambdax'
 import { sortUsedBy } from 'sort-used-by'
 import { kebabCase } from 'string-fn'
 
@@ -55,11 +55,15 @@ async function getApiData(
   return apiData
 }
 
-export async function buildStarsOf(
+export async function buildStarsOf({
   repo,
+  title,
   shouldRefreshScraped = true,
-  shouldRefreshApi = true
+  shouldRefreshApi = true,
+  outputLocation
+}
 ){
+  ok(outputLocation, repo, title)(String, String, String)
   const fileName = kebabCase(repo)
   const scrapedRepos = await getScrapedRepos(
     repo,
@@ -76,8 +80,15 @@ export async function buildStarsOf(
   )
   console.log({len: repos.length})
   const apiData = await getApiData(repos, fileName, shouldRefreshApi)
-  const filteredApiData = apiData.filter(({filterData}) => filterData !== false)
+  const filteredApiData = apiData.filter(({filterData}) => filterData.pass !== false)
   
-  const finalOutput = buildFinalOutput(filteredApiData)
-  return finalOutput
+  const finalOutput = buildFinalOutput({
+    data: filteredApiData, 
+    title,
+    repo
+  })
+  await outputFile(
+    outputLocation,
+    finalOutput
+  )
 }

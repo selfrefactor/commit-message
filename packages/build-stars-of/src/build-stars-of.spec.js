@@ -6,12 +6,14 @@ import { buildStarsOf } from './build-stars-of'
 
 jest.setTimeout(ms('30 minutes'))
 
-const repo = 'selfrefactor/rambda'
-// const repo = 'microsoft/playwright'
-
 test('happy', async () => {
-  await buildStarsOf(
-    // repo, false, true
-    repo
-  )
+  const repo = 'selfrefactor/rambda'
+  const input = {
+    repo,
+    title : 'Stars of **Rambda** list',
+    shouldRefreshScraped: false,
+    shouldRefreshApi: false,
+    outputLocation: `${__dirname}/assets/stars-of-rambda.md`
+  }
+  await buildStarsOf(input)
 })

@@ -4,3 +4,4 @@ config.json
 *.log
 result.json
 src/assets/*.json
+src/assets/*.md
