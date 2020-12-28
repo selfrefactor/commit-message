@@ -1,6 +1,6 @@
 {
   "name": "build-stars-of",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "typings": "index.d.ts",
   "description": "Build 'stars-of' type of list",
   "main": "index.js",
