@@ -3,3 +3,4 @@ coverage
 config.json
 *.log
 result.json
+src/assets/*.json

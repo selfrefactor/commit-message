@@ -7,7 +7,7 @@ import { map, prop, take } from 'rambdax'
 import { buildFinalOutput } from './build-final-output'
 
 async function getScrapedRepos(repo, fileName, shouldRefresh){
-  const filePath = `${__dirname}/${fileName}-scraped.json`
+  const filePath = `${__dirname}/assets/${fileName}-scraped.json`
 
   if(!shouldRefresh && !existsSync(filePath)){
     throw new Error('!exists')
@@ -25,7 +25,7 @@ async function getScrapedRepos(repo, fileName, shouldRefresh){
 }
 
 async function getApiData(repos, fileName, shouldRefresh){
-  const filePath = `${__dirname}/${fileName}-api-data.json`
+  const filePath = `${__dirname}/assets/${fileName}-api-data.json`
   
   if(!shouldRefresh && !existsSync(filePath)){
     throw new Error('!exists')
