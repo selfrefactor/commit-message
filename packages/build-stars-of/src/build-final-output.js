@@ -1,4 +1,4 @@
-import { interpolate } from "rambdax"
+import { flip, interpolate, join, map, piped } from 'rambdax'
 
 function getIntro(title, repo){
   const template = `
@@ -11,11 +11,44 @@ These repos are sorted by their stars and thier \`package.json\` is updated in t
 > This list is created with \`build-stars-of\` library.
   `.trim()
 
-  return interpolate(template, {title, repo})
+  return interpolate(template, {
+    title,
+    repo,
+  })
+}
+
+function getMainContent(data){
+  const template = `
+## {{name}}
+
+[https://github.com/{{name}}]({{name}}) - 🌟 {{stars}}
+  `.trim()
+
+  const allMethods = piped(
+    data,
+    map(({ repoData: x }) =>
+      interpolate(template, {
+        name        : x.full_name,
+        description : x.description,
+        stars       : x.stargazers_count,
+      })),
+    join('\n\n')
+  )
+
+  return allMethods
 }
 
 export function buildFinalOutput(input){
+  const template = `
+{{intro}}
+
+{{mainContent}}
+  `.trim()
   const intro = getIntro(input.title, input.repo)
 
-  return intro
+  const mainContent = getMainContent(input.data)
+
+  const markdownText = interpolate(template, {intro, mainContent})
+
+  return markdownText
 }
