@@ -2,7 +2,7 @@ const { existsSync } = require('fs')
 const { mapAsync, ok, pick } = require('rambdax')
 const { outputJson, readJson } = require('fs-extra')
 
-const { filterRepo } = require('./_modules/filter-repo')
+const { filterRepo, dateDiff } = require('./_modules/filter-repo')
 const { getRepo } = require('./_modules/get-repo')
 const cacheLocation = `${ __dirname }/cache.json`
 
@@ -15,7 +15,7 @@ async function getRepoData(input){
   if (refreshCache){
     const reposData = await mapAsync(async repo => {
       const repoDataResponse = await getRepo(repo)
-      const filterData = await filterRepo(repo)
+      const filterData = await filterRepo(repo, input.daysLimit)
       const propsToPick = [
         'full_name',
         'description',
@@ -32,6 +32,8 @@ async function getRepoData(input){
         repoData,
         repoUrl : repo,
         filterData,
+        pushedDiff: dateDiff(repoData.pushed_at),
+        updatedDiff: dateDiff(repoData.updated_at),
       }
     }, repos)
     await outputJson(
@@ -45,7 +47,7 @@ async function getRepoData(input){
 
     return data
   }
-  throw new Error('cache is lost')
+  throw new Error('cache is missing')
 }
 
 exports.getRepoData = getRepoData

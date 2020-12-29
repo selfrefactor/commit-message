@@ -14,10 +14,13 @@ interface RepoData{
     updateDate : undefined | string,
     updateDiff : undefined | string,
   },
-  repoUrl: string
+  repoUrl: string,
+  pushedDiff: number,
+  updatedDiff: number,
 }
 
 export function getRepoData(input: {
   repos: string[],
   refreshCache?: boolean
+  daysLimit?: number
 }): Promise<Array<RepoData>>

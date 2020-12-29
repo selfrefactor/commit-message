@@ -1,6 +1,6 @@
 const axios = require('axios')
 const dayjs  = require('dayjs')
-const { path }  = require('rambdax')
+const { path, defaultTo }  = require('rambdax')
 
 const DAYS_LIMIT = 370
 const FILE = 'package.json'
@@ -17,7 +17,9 @@ function dateDiff(updateDate){
   return now.diff(past, 'day')
 }
 
-async function filterRepo(repo){
+async function filterRepo(repo, daysLimitInput){
+  const daysLimit = defaultTo(DAYS_LIMIT, daysLimitInput)
+
   const token = process.env.GITHUB
   if (!token) throw new Error('!token')
   if (!repo.includes('/')) throw new Error(`wrong repo input - ${ repo }`)
@@ -36,10 +38,11 @@ async function filterRepo(repo){
   const diff = dateDiff(updateDate)
 
   return {
-    pass       : diff < DAYS_LIMIT,
+    pass       : diff < daysLimit,
     updateDate,
     updateDiff : diff,
   }
 }
 
 exports.filterRepo = filterRepo
+exports.dateDiff = dateDiff
