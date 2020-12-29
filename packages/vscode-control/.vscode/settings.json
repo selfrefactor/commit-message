@@ -1,4 +1,5 @@
 {
+  "terminal.integrated.rendererType": "dom",
   "workbench.editor.enablePreviewFromQuickOpen":true,
   "workbench.tree.expandMode":"singleClick",
   "js/ts.implicitProjectConfig.strictNullChecks":true,
