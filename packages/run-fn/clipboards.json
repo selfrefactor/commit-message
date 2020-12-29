@@ -1,6 +1,3 @@
 {
-  "ws": "cd $HOME/Documents/WebStorm/bin&&./webstorm.sh\n",
-  "tuna":"cd $HOME/repos/services/packages/tuna-player&&yarn start\n",
-  "on":"cd $HOME/repos/on&&yarn on\n",
-  "onl":"cd $HOME/repos/on&&yarn onlight\n"
+  "tuna":"cd $HOME/repos/services/packages/tuna-player&&yarn start\n"
 }
