@@ -60,6 +60,7 @@ export async function buildStarsOf({
   title,
   shouldRefreshScraped = true,
   shouldRefreshApi = true,
+  starsLimit = STARS_LIMIT,
   outputLocation
 }
 ){
@@ -73,7 +74,7 @@ export async function buildStarsOf({
 
   const repos = piped(
     scrapedRepos,
-    filter(({ stars }) => stars >= STARS_LIMIT),
+    filter(({ stars }) => stars >= starsLimit),
     sort((a, b) => a.stars > b.stars? -1: 1),
     take(TOP_LIMIT),
     map(prop('repo'))

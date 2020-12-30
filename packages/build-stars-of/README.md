@@ -10,6 +10,8 @@ overwrite output location
 
 blacklist
 
+позволи да се дава лимита на звезди
+
 add link from rambda for its list
 
 > Upcoming repos
