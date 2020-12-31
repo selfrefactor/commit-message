@@ -4,12 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "stars": "node stars-of/run"
+    "stars": "node stars-of/run",
+    "simple": "node test-used-by"
   },
   "dependencies": {
-    "build-stars-of": "0.1.1",
+    "build-stars-of": "0.2.0",
     "env-fn": "^2.2.0",
     "fs-extra": "^9.0.1",
-    "sort-used-by": "0.1.1"
+    "sort-used-by": "0.2.0"
   }
 }
