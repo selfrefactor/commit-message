@@ -1,4 +1,6 @@
 {
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.shareSuggestSelections": true,
   "terminal.integrated.rendererType": "dom",
   "workbench.editor.enablePreviewFromQuickOpen":true,
   "workbench.tree.expandMode":"singleClick",
