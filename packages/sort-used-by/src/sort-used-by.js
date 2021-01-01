@@ -1,10 +1,10 @@
-const { outputJson } = require( 'fs-extra')
-const { playwrightInit } = require( 'playwright-init')
-const { wrap } = require( 'playwright-wrap')
-const { delay, mapAsync } = require( 'rambdax')
+const { delay, mapAsync, wait } = require('rambdax')
+const { outputJson } = require('fs-extra')
+const { playwrightInit } = require('playwright-init')
+const { wrap } = require('playwright-wrap')
 
-const { getRepoData } = require( './get-repo-data')
-const { sortResult } = require( './sort-result')
+const { getRepoData } = require('./get-repo-data')
+const { sortResult } = require('./sort-result')
 
 const RESULT = `${ __dirname }/result.json`
 const COOL_OFF = 2000
@@ -19,7 +19,8 @@ async function hasNext(_){
 }
 
 async function getLinks(_){
-  await _.waitFor(LINKS)
+  const [ , err ] = await wait(_.waitFor(LINKS))
+  if (err) return { canContinue : false }
   const els = await _.queryAll(LINKS)
 
   const links = await mapAsync(async el => {
@@ -35,6 +36,7 @@ async function getLinks(_){
   const firstLink = await els[ 0 ].text()
 
   return {
+    canContinue : true,
     links,
     firstLink,
   }
@@ -43,7 +45,7 @@ async function getLinks(_){
 function waitForNext(_, compareTo){
   return async () => {
     const el = await _.page.$(LINKS)
-    if(!el) return true
+    if (!el) return true
     const text = await el.textContent()
 
     return text !== compareTo
@@ -62,12 +64,17 @@ async function sortUsedBy(repo){
     url,
   })
   const _ = wrap(page)
-  
+
   try {
     let canProceed = await hasNext(_)
 
     while (canProceed){
-      const { links, firstLink } = await getLinks(_)
+      const { links, firstLink, canContinue } = await getLinks(_)
+      if (!canContinue){
+        canProceed = false
+
+        return
+      }
       data = [ ...data, ...links ]
       canProceed = await hasNext(_)
       await delay(COOL_OFF)
@@ -83,6 +90,7 @@ async function sortUsedBy(repo){
     await _.snap('error.sort.used.by')
   } finally {
     await browser.close()
+
     return sortResult(data)
   }
 }
