@@ -6,7 +6,7 @@ const shouldRefreshScraped = true
 const shouldRefreshApi = true
 
 const playwright = {
-  repo: 'microsoft/rambda',
+  repo: 'microsoft/playwright',
   title : 'Stars of **Playwright**',
   stars:3
 }
