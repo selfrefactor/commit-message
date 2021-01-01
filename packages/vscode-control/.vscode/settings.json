@@ -1,4 +1,5 @@
 {
+  "terminal.integrated.cursorBlinking": true, 
   "editor.snippetSuggestions": "top",
   "editor.suggest.shareSuggestSelections": true,
   "terminal.integrated.rendererType": "dom",
