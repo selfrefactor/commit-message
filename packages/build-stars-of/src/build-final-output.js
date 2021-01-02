@@ -26,10 +26,16 @@ function getMainContent(data){
 [{{name}}](https://github.com/{{name}}) - 🌟 {{stars}}
   `.trim()
 
+  const templateNoDescription = `
+## {{name}}
+
+[{{name}}](https://github.com/{{name}}) - 🌟 {{stars}}
+  `.trim()
+
   const allMethods = piped(
     data,
     map(({ repoData: x }) =>
-      interpolate(template, {
+      interpolate(x.description ? template: templateNoDescription, {
         name        : x.full_name,
         description : x.description,
         stars       : x.stargazers_count,
