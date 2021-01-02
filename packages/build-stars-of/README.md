@@ -6,8 +6,6 @@
 
 build main README that contains links to all lists with a little preview
 
-add months diff with latest update(not package)
-
 add link from rambda for its list
 
 > Upcoming repos
