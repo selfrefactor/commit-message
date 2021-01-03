@@ -1,5 +1,6 @@
 const vscode = require('vscode')
 const { update, last } = require('rambdax')
+const {logToUser} = require('./bar')
 
 function copy(x){
   vscode.env.clipboard.writeText(x)
@@ -10,10 +11,11 @@ function applyCopyTrimmed(
 ){
   const lines = []
   for (let i = startLine; i <= endLine; i++){
-    lines.push(textEditor.document.lineAt(i).text)
+    const line = textEditor.document.lineAt(i).text
+    lines.push(line)
   }
 
-  if (lines.length === 1) return copy(lines[ 0 ].trim())
+  if (lines.length <= 1) return logToUser('empty selection!!')
 
   const withFirst = update(
     0, lines[ 0 ].trimLeft(), lines
