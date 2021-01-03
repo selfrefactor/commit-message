@@ -1,40 +1,17 @@
 # Services
 
-## Renovate possible rules
+This repo holds multiple NPM libraries.
 
-```txt
-  "packageRules": [
-    {
-      "depTypeList": ["devDependencies"],
-      "extends": [":automergeMinor"]
-    }
-  ]
-   "packageRules": [
-    {
-      "updateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
-    }
-  ]
-  "packageRules": [
-		{
-			"updateTypes": [
-				"minor",
-				"patch",
-				"pin",
-				"digest"
-			],
-			"automerge": true
-		}
-	]
+Most notable are:
 
-  {
-  "semanticCommits": true,
-  "packageRules": [{
-    "depTypeList": ["devDependencies"],
-    "automerge": true
-  }],
-  "extends": [
-    "config:base"
-  ]
-}
-```
+## String-fn
+
+String manipulation library
+
+## Lint-fn
+
+Eslint/Prettier helper
+
+## Commit-fn
+
+Alternative to commitizen
