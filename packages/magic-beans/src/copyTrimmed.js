@@ -15,7 +15,7 @@ function applyCopyTrimmed(
     lines.push(line)
   }
 
-  if (lines.length <= 1) return logToUser('empty selection!!')
+  if (lines.length === 0) return logToUser('empty selection!!')
 
   const withFirst = update(
     0, lines[ 0 ].trimLeft(), lines
