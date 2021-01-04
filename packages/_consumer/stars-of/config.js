@@ -6,12 +6,14 @@ const shouldRefreshScraped = true
 const shouldRefreshApi = true
 
 const playwright = {
+  priority: 0,
   repo: 'microsoft/playwright',
   title : 'Stars of **Playwright**',
   stars:3
 }
 
 const rambda = {
+  priority: 0,
   repo: 'selfrefactor/rambda',
   title : 'Stars of **Rambda** list',
   stars: 2

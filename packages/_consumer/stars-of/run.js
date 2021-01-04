@@ -11,5 +11,5 @@ void async function main(){
     throw new Error('!input')
   }
 
-  await buildStarsOf(input) 
+  await buildStarsOf(input)
 }()

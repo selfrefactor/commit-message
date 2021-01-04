@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "build": "node stars-of/build-main-readme.js",
     "stars": "node stars-of/run",
     "stars:all": "node stars-of/run-all",
     "simple": "node test-used-by"
