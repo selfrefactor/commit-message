@@ -6,7 +6,7 @@ const { initBar } = require('./bar')
 const { sortLines } = require('./sort-lines')
 const { randomFile, requestRandomFile } = require('./randomFile')
 const { REQUEST_RANDOM_FILE, SORT_LINES } = require('./constants')
-
+TabNine::config
 function activate(context){
   initBar()
   const formatJsonCommand = vscode.commands.registerCommand('magicBeans.formatJson',
