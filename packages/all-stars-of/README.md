@@ -3,7 +3,9 @@
 * [Playwright](#playwright) 
 * [Rambda](#rambda) 
 
-## Playwright### mbraak/jqTree
+## Playwright
+
+### mbraak/jqTree
 
 Tree widget for jQuery
 
@@ -33,9 +35,11 @@ An interactive REST console based on RAML/OAS files
 
 [mulesoft/api-console](https://github.com/mulesoft/api-console) - 🌟 843
 
-
 ---
-## Rambda### BeeeQueue/yuna
+
+## Rambda
+
+### BeeeQueue/yuna
 
 ツ An anime player that integrates with AniList, Simkl, Crunchyroll, and Hidive.
 

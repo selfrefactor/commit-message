@@ -26,7 +26,7 @@ void (async function main(){
       split('##'),
       drop(1),
       take(5),
-      prepend(`## ${title}`),
+      prepend(`## ${title}\n\n`),
       join('###'),
     )
 
@@ -52,7 +52,7 @@ void (async function main(){
 {{previews}}
 `.trim()
   const tableOfContents = parsed.map(({toc}) => toc).join('\n')
-  const previews = parsed.map(({preview}) => preview).join('\n---\n')
+  const previews = parsed.map(({preview}) => preview).join('---\n\n')
   const finalContent = interpolate(template, {tableOfContents, previews})
 
   await writeFile(
