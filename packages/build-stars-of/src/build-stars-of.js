@@ -102,4 +102,5 @@ export async function buildStarsOf({
     repo,
   })
   await outputFile(outputLocation, finalOutput)
+  return filteredApiData
 }
