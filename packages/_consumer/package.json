@@ -5,12 +5,12 @@
   "license": "MIT",
   "scripts": {
     "build": "node stars-of/build-main-readme.js",
-    "stars": "node stars-of/run",
-    "stars:all": "node stars-of/run-all",
+    "stars": "node stars-of/run&&yarn build",
+    "stars:all": "node stars-of/run-all&&yarn build",
     "simple": "node test-used-by"
   },
   "dependencies": {
-    "build-stars-of": "0.2.0",
+    "build-stars-of": "0.3.0",
     "env-fn": "^2.2.0",
     "fs-extra": "^9.0.1",
     "sort-used-by": "0.2.0"
