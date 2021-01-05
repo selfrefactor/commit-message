@@ -423,6 +423,15 @@
     "key": "ctrl+k shift+enter",
     "command": "-workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "-relativeImport.quickPick",
+    "when": "editorTextFocus"
   }
 ]
 
