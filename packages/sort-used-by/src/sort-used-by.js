@@ -7,7 +7,7 @@ const { getRepoData } = require('./get-repo-data')
 const { sortResult } = require('./sort-result')
 
 const RESULT = `${ __dirname }/result.json`
-const COOL_OFF = 2000
+const COOL_OFF = 1000
 const LINKS = '[class="Box-row d-flex flex-items-center"]'
 
 async function hasNext(_){
@@ -67,8 +67,8 @@ async function sortUsedBy(repo){
 
   try {
     let canProceed = await hasNext(_)
-
-    while (canProceed){
+    let counter = 60
+    while (canProceed&&counter>=0){
       const { links, firstLink, canContinue } = await getLinks(_)
       if (!canContinue){
         canProceed = false
