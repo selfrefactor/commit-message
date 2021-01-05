@@ -68,7 +68,7 @@ async function sortUsedBy(repo, isDev = false){
   try {
     let canProceed = await hasNext(_)
     let counter = 60
-    while (canProceed&&counter>=0){
+    while (canProceed&&counter-- >=0){
       if(isDev) console.log(counter)
       const { links, firstLink, canContinue } = await getLinks(_)
       if (!canContinue){
