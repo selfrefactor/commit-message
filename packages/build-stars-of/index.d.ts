@@ -27,6 +27,7 @@ interface Input{
   starsLimit?: number
   daysLimit?: number
   isDev?: boolean
+  isHuge?: boolean
   blacklist?: string[]
   outputLocation: string
 }
