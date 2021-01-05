@@ -51,16 +51,16 @@ buffer-crc32@~0.2.3:
   resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
   integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
-build-stars-of@0.6.3:
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.6.3.tgz#0292a42175987607f31756efe2b0ed318c03805d"
-  integrity sha512-yVb5Z6vQ97JwyQ0iWfRpjJOvjxaRmfiY3JRJjDTBZFusyTweeeOyjUVbuzlSCDYzPpA7UV9a15mDFPxc37mskQ==
+build-stars-of@0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.7.0.tgz#33031ddf6bcc789d146ea11069049f33bc9b934c"
+  integrity sha512-ts1HXxxbIP/SIoTI0oav6bwU1QLHVHeMi+HopiMGf1GBJkHKV+7983Gt9B2WrmEUMzdx49FWbrNcFSalHGqhdQ==
   dependencies:
     esm "3.2.25"
     fs-extra "9.0.1"
     github-api-fn "0.3.0"
     rambdax "7.0.1"
-    sort-used-by "0.4.1"
+    sort-used-by "0.5.0"
     string-fn "3.1.0"
 
 concat-map@0.0.1:
@@ -335,21 +335,10 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-sort-used-by@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.4.0.tgz#0e0e30b2ed5638adf090c7913841d4397d0d901f"
-  integrity sha512-qhpIjt7Quwwb8k2HIt95oGoYdkF3vZAKMKifPHFxZKXUyZ/RG32dCNrW3+WxeJU0cAJh7lHVcjW7s3HxRFYOoQ==
-  dependencies:
-    fs-extra "9.0.1"
-    playwright "1.7.1"
-    playwright-init "0.3.0"
-    playwright-wrap "0.6.0"
-    rambdax "7.0.1"
-
-sort-used-by@0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.4.1.tgz#0a5ae3afe95de3272b213786113689bc210810ff"
-  integrity sha512-10+wICbiIe1jNk5Zvts1wfKEiK4OXgJCYhA1PZH5iOh4A8vsiKuELzV9T0ceSRhxS/WHn4vN3DslRs8J/VADBw==
+sort-used-by@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.5.0.tgz#92d1220c447996a4ac50d8e37a2833b9b3dacd25"
+  integrity sha512-3/D9SkSQhTicuxT3RWLLxoKt2qzZaWX5SiIXJMEcD/xXQJp6eC48zlc1qzMyQoEU90DRTi//rdNfdPK6EzfYrQ==
   dependencies:
     fs-extra "9.0.1"
     playwright "1.7.1"

@@ -4,6 +4,7 @@ const BASE = resolve(__dirname, '../../all-stars-of/')
 
 const shouldRefreshScraped = true
 const shouldRefreshApi = true
+const IS_DEV = false
 
 const playwright = {
   priority: 0,
@@ -36,6 +37,7 @@ const angular = {
 
 const rambda = {
   priority: 1,
+  isHuge: false,
   repo: 'selfrefactor/rambda',
   title : 'Stars of **Rambda** list',
   stars: 2
@@ -51,9 +53,10 @@ const iterator = (x, prop) => {
   return {
     ...x,
     daysLimit: x.daysLimit ? x.daysLimit : 370,
+    isHuge: x.isHuge ? x.isHuge : true,
+    isDev: IS_DEV,
     starsLimit: x.stars ? x.stars : 5,
     shouldRefreshApi,
-    isDev: true,
     shouldRefreshScraped,
     outputLocation: `${BASE}/stars-of-${prop}.md`
   }
