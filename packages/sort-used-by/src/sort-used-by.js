@@ -26,8 +26,9 @@ async function getLinks(_){
   const links = await mapAsync(async el => {
     const repoUrlRawData = await el.text()
     const { repoUrl, stars } = getRepoData(repoUrlRawData)
-
+    
     return {
+      isValid: !Number.isNaN(stars) && Boolean(repoUrl),
       repo : repoUrl,
       stars,
     }
@@ -37,7 +38,7 @@ async function getLinks(_){
 
   return {
     canContinue : true,
-    links,
+    links: links.filter(({isValid}) => isValid),
     firstLink,
   }
 }
@@ -52,22 +53,28 @@ function waitForNext(_, compareTo){
   }
 }
 
-async function sortUsedBy(repo, isDev = false){
+async function sortUsedBy({
+  repo, 
+  isDev = false,
+  isHuge = true
+}){
   if (!repo.includes('/')) throw new Error('!repo')
-  const url = `https://github.com/${ repo }/network/dependents`
+  const urlRepos = `https://github.com/${ repo }/network/dependents`
+  const urlPackages = `https://github.com/${ repo }/network/dependents?dependent_type=PACKAGE`
+  
   let data = []
 
   const { browser, page } = await playwrightInit({
     headless : !isDev,
     logFlag  : false,
     browser  : 'chromium',
-    url,
+    url: isHuge ? urlPackages : urlRepos,
   })
   const _ = wrap(page)
 
   try {
     let canProceed = await hasNext(_)
-    let counter = 60
+    let counter = 200
     while (canProceed&&counter-- >=0){
       if(isDev) console.log(counter)
       const { links, firstLink, canContinue } = await getLinks(_)

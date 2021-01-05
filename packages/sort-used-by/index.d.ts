@@ -1,1 +1,7 @@
-export function sortUsedBy(repo: string, isDev?: boolean): Promise<Array<{stars: number, repoUrl: string}>>
+interface Input{
+  repo: string
+  isDev?: boolean
+  isHuge?: boolean
+}
+
+export function sortUsedBy(input: Input): Promise<Array<{stars: number, repoUrl: string}>>
