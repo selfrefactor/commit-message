@@ -2,6 +2,7 @@
 
 * [Playwright](#playwright) 
 * [Rambda](#rambda) 
+* [Puppeteer](#puppeteer) 
 
 ## Playwright
 
@@ -68,4 +69,38 @@ Collection of Javascript libraries
 A todoist extension for neovim
 
 [romgrk/todoist.nvim](https://github.com/romgrk/todoist.nvim) - 🌟 72
+
+---
+
+## Puppeteer
+
+### uiv-lib/uiv
+
+Bootstrap 3 components implemented by Vue 2.
+
+[uiv-lib/uiv](https://github.com/uiv-lib/uiv) - 🌟 873
+
+### neuronetio/gantt-schedule-timeline-calendar
+
+Gantt Gantt Gantt Timeline Schedule Calendar [ javascript gantt, js gantt, projects gantt, timeline, scheduler, gantt timeline, reservation timeline, react gantt, angular gantt, vue gantt, svelte gantt, booking manager ]
+
+[neuronetio/gantt-schedule-timeline-calendar](https://github.com/neuronetio/gantt-schedule-timeline-calendar) - 🌟 832
+
+### TonyGermaneri/canvas-datagrid
+
+Canvas based data grid web component.  Capable of displaying millions of contiguous hierarchical rows and columns without paging or loading, on a single canvas element.
+
+[TonyGermaneri/canvas-datagrid](https://github.com/TonyGermaneri/canvas-datagrid) - 🌟 750
+
+### JsDaddy/ngx-mask
+
+Angular Plugin to make masks on form fields and html elements.
+
+[JsDaddy/ngx-mask](https://github.com/JsDaddy/ngx-mask) - 🌟 736
+
+### faceyspacey/extract-css-chunks-webpack-plugin
+
+Extract CSS from chunks into multiple stylesheets + HMR
+
+[faceyspacey/extract-css-chunks-webpack-plugin](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin) - 🌟 674
 
