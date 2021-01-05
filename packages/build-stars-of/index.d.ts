@@ -26,6 +26,7 @@ interface Input{
   shouldRefreshApi?: boolean
   starsLimit?: number
   daysLimit?: number
+  isDev?: boolean
   blacklist?: string[]
   outputLocation: string
 }

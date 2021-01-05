@@ -12,7 +12,7 @@ const DAYS_LIMIT = 200
 const TOP_LIMIT = 400
 
 async function getScrapedRepos(
-  repo, fileName, shouldRefresh
+  {repo, fileName, shouldRefresh ,isDev}
 ){
   const filePath = `${ __dirname }/assets/${ fileName }-scraped.json`
 
@@ -21,7 +21,7 @@ async function getScrapedRepos(
   }
 
   if (!shouldRefresh && existsSync(filePath)){
-    const { data } = await readJson(filePath)
+    const { data } = await readJson(filePath, isDev)
 
     return data
   }
@@ -60,6 +60,7 @@ async function getApiData({ repos, fileName, daysLimit, shouldRefresh }){
 export async function buildStarsOf({
   repo,
   title,
+  isDev = false,
   shouldRefreshScraped = true,
   shouldRefreshApi = true,
   starsLimit = STARS_LIMIT,
@@ -73,11 +74,14 @@ export async function buildStarsOf({
     String, String, String
   )
   const fileName = kebabCase(repo)
-  const scrapedRepos = await getScrapedRepos(
+  const scrapedRepos = await getScrapedRepos({
+    isDev,
     repo,
     fileName,
-    shouldRefreshScraped
+    shouldRefresh:shouldRefreshScraped
+  }
   )
+  console.log('sort.used.by done')
 
   const repos = piped(
     scrapedRepos,

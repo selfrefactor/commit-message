@@ -4138,10 +4138,10 @@ snapdragon@^0.8.1:
     source-map-resolve "^0.5.0"
     use "^3.1.0"
 
-sort-used-by@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.3.0.tgz#20ab5ef3bcc09b42131d1d4f77b6697a0ca8a839"
-  integrity sha512-brtJ7f/Q6Pn61AI/PWLN31/p0dq5Rbfb1thPpnCs3zHvBz9VFXMhi6rFUFX6XfLtyy4JwYRwS/zHvtVVm5p1sQ==
+sort-used-by@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.4.0.tgz#0e0e30b2ed5638adf090c7913841d4397d0d901f"
+  integrity sha512-qhpIjt7Quwwb8k2HIt95oGoYdkF3vZAKMKifPHFxZKXUyZ/RG32dCNrW3+WxeJU0cAJh7lHVcjW7s3HxRFYOoQ==
   dependencies:
     fs-extra "9.0.1"
     playwright "1.7.1"
