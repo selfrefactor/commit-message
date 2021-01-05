@@ -51,16 +51,16 @@ buffer-crc32@~0.2.3:
   resolved "https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz#0d333e3f00eac50aa1454abd30ef8c2a5d9a7242"
   integrity sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=
 
-build-stars-of@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.3.0.tgz#5edc2b1a221c144cce61d6ac2557cc1a033ef434"
-  integrity sha512-KjBYBRCJMgplRU0rRJysMvH6saxILvVtxiQ3uX/mhqD84aN2i9rYnylxAwo3EBx/Jkfk210nlBNbUCV+shyaKQ==
+build-stars-of@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/build-stars-of/-/build-stars-of-0.5.0.tgz#152072b2c90667ede7e70c8f5571f3abb27d2d85"
+  integrity sha512-EkXr8Y9/qIkTQhEDHxwKrF4z2p5jZ1SMw+WXhN5/J9R/nrdUkoUhK4ZJ54Uu+I3k9fTPDKgeTz+CbN/uIBRINw==
   dependencies:
     esm "3.2.25"
     fs-extra "9.0.1"
     github-api-fn "0.3.0"
     rambdax "7.0.1"
-    sort-used-by "0.2.0"
+    sort-used-by "0.3.0"
     string-fn "3.1.0"
 
 concat-map@0.0.1:
@@ -335,10 +335,10 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-sort-used-by@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.2.0.tgz#f2c211b45964e5d376f96f99f4ef2505460d7c97"
-  integrity sha512-z7+bdIGKKysqIeq1hA7sXri96soEqbOpwV/0igGdvnF/z9ejIq8PksjdzQeNq0cism5T4rXX/cX7IuesEiuyyg==
+sort-used-by@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/sort-used-by/-/sort-used-by-0.3.0.tgz#20ab5ef3bcc09b42131d1d4f77b6697a0ca8a839"
+  integrity sha512-brtJ7f/Q6Pn61AI/PWLN31/p0dq5Rbfb1thPpnCs3zHvBz9VFXMhi6rFUFX6XfLtyy4JwYRwS/zHvtVVm5p1sQ==
   dependencies:
     fs-extra "9.0.1"
     playwright "1.7.1"

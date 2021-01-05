@@ -14,16 +14,36 @@ const playwright = {
 }
 const puppeteer = {
   priority: 2,
-  daysLimit: 200,
+  daysLimit: 100,
   repo: 'puppeteer/puppeteer',
   title : 'Stars of **Puppeteer**',
   stars:15
+}
+const nest = {
+  priority: 2,
+  daysLimit: 260,
+  repo: 'nestjs/nest',
+  title : 'Stars of **Nest.js**',
+  stars:4
+}
+const angular = {
+  priority: 0,
+  daysLimit: 120,
+  repo: 'angular/angular',
+  title : 'Stars of **Angular** - all-you-can-take frontend framework',
+  stars:20
 }
 
 const rambda = {
   priority: 1,
   repo: 'selfrefactor/rambda',
   title : 'Stars of **Rambda** list',
+  stars: 2
+}
+const ramda = {
+  priority: 1,
+  repo: 'ramda/ramda',
+  title : 'Stars of **Ramda** list',
   stars: 2
 }
 
@@ -40,7 +60,7 @@ const iterator = (x, prop) => {
 
 const allModes = map(
   iterator,
-  {rambda, playwright, puppeteer}
+  {rambda, playwright, puppeteer, ramda, nest, angular}
 )
 
 exports.allModes = allModes
