@@ -1,6 +1,6 @@
 {
   "name": "sort-used-by",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "typings": "index.d.ts",
   "description": "Scrape Github dependent repos and sorts them by stars",
   "main": "src/sort-used-by.js",
