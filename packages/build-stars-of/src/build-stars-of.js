@@ -1,7 +1,7 @@
 import { existsSync } from 'fs'
 import { outputFile, outputJson, readJson } from 'fs-extra'
 import { getRepoData } from 'github-api-fn'
-import { filter, map, ok, piped, prop, sort, take } from 'rambdax'
+import { filter, map, ok, piped, prop, sort, take, uniqWith } from 'rambdax'
 import { sortUsedBy } from 'sort-used-by'
 import { kebabCase } from 'string-fn'
 
@@ -14,6 +14,7 @@ const TOP_LIMIT = 400
 async function getScrapedRepos({
   repo,
   fileName,
+  scrapeDeep,
   shouldRefresh,
   isDev,
   isHuge,
@@ -35,6 +36,23 @@ async function getScrapedRepos({
     isDev,
     isHuge,
   })
+  if (scrapeDeep){
+    const additionalScrapedRepos = await sortUsedBy({
+      repo,
+      isDev,
+      isHuge : !isHuge,
+    })
+    const allScrapedRepos = uniqWith((a, b) => a.repoUrl === b.repoUrl, [
+      ...scrapedRepos,
+      ...additionalScrapedRepos,
+    ])
+    await outputJson(
+      filePath, { data : allScrapedRepos }, { spaces : 2 }
+    )
+
+    return allScrapedRepos
+  }
+  
   await outputJson(
     filePath, { data : scrapedRepos }, { spaces : 2 }
   )
@@ -70,6 +88,7 @@ export async function buildStarsOf({
   title,
   isDev = false,
   isHuge = false,
+  scrapeDeep = false,
   shouldRefreshScraped = true,
   shouldRefreshApi = true,
   starsLimit = STARS_LIMIT,
@@ -88,6 +107,7 @@ export async function buildStarsOf({
     isDev,
     repo,
     fileName,
+    scrapeDeep,
     shouldRefresh : shouldRefreshScraped,
   })
   console.log('sort.used.by done')

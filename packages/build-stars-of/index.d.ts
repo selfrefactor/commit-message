@@ -26,6 +26,7 @@ interface Input{
   shouldRefreshApi?: boolean
   starsLimit?: number
   daysLimit?: number
+  scrapeDeep?: boolean
   isDev?: boolean
   isHuge?: boolean
   blacklist?: string[]
