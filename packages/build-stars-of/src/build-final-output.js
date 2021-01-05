@@ -1,4 +1,4 @@
-import { flip, interpolate, join, map, piped } from 'rambdax'
+import { interpolate, join, map, piped } from 'rambdax'
 
 function getIntro(title, repo){
   const template = `
