@@ -52,13 +52,13 @@ function waitForNext(_, compareTo){
   }
 }
 
-async function sortUsedBy(repo){
+async function sortUsedBy(repo, isDev = false){
   if (!repo.includes('/')) throw new Error('!repo')
   const url = `https://github.com/${ repo }/network/dependents`
   let data = []
 
   const { browser, page } = await playwrightInit({
-    headless : true,
+    headless : !isDev,
     logFlag  : false,
     browser  : 'chromium',
     url,
@@ -69,6 +69,7 @@ async function sortUsedBy(repo){
     let canProceed = await hasNext(_)
     let counter = 60
     while (canProceed&&counter>=0){
+      if(isDev) console.log(counter)
       const { links, firstLink, canContinue } = await getLinks(_)
       if (!canContinue){
         canProceed = false

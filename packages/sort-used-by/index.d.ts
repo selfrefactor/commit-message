@@ -1,1 +1,1 @@
-export function sortUsedBy(repo: string): Promise<Array<{stars: number, repoUrl: string}>>
+export function sortUsedBy(repo: string, isDev?: boolean): Promise<Array<{stars: number, repoUrl: string}>>
