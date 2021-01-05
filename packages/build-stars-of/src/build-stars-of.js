@@ -21,12 +21,12 @@ async function getScrapedRepos(
   }
 
   if (!shouldRefresh && existsSync(filePath)){
-    const { data } = await readJson(filePath, isDev)
+    const { data } = await readJson(filePath)
 
     return data
   }
 
-  const scrapedRepos = await sortUsedBy(repo)
+  const scrapedRepos = await sortUsedBy(repo, isDev)
   await outputJson(
     filePath, { data : scrapedRepos }, { spaces : 2 }
   )
