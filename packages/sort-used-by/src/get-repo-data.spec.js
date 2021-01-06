@@ -1,11 +1,11 @@
-import { getRepoUrl } from './get-repo-url copy'
+import { getRepoData } from './get-repo-data'
 
 test('happy', () => {
-  const input = '\n    \n\n    \n      brennancheung /\n      prod10x\n        \n    \n    \n      \n        \n        0\n      \n      \n        \n        0\n      \n    \n  '
-  const result = getRepoUrl(input)
+  const input = "\n    \n\n    \n      romgrk /\n      web-toolkit\n    \n    \n      \n        \n        17\n      \n      \n        \n        1\n      \n    \n  "
+  const result = getRepoData(input)
   const expected = {
-    repoUrl : 'brennancheung/prod10x',
-    stars   : 0,
+    repoUrl : 'romgrk/web-toolkit',
+    stars   : 17,
   }
   expect(result).toEqual(expected)
 })

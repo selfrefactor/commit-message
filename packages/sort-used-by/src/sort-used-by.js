@@ -93,8 +93,8 @@ async function sortUsedBy({
         await _.waitForPredicate(waitForNext(_, firstLink))
       }
     }
-  } catch (e){
-    console.log({ e }, 'sortUsedBy')
+  } catch (err){
+    console.log(err, 'sortUsedBy')
     await _.snap('error.sort.used.by')
   } finally {
     await browser.close()
