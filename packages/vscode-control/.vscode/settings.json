@@ -1,4 +1,11 @@
 {
+  "emmet.showAbbreviationSuggestions": false,
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "explorer.sortOrder": "type",
+  "editor.quickSuggestions": true,
+  "editor.tabCompletion": "on",
+  "editor.wordBasedSuggestionsMode": "allDocuments",
+  "editor.suggest.showStatusBar": true,
   "terminal.integrated.cursorBlinking": true, 
   "editor.snippetSuggestions": "top",
   "editor.suggest.shareSuggestSelections": true,
@@ -11,11 +18,6 @@
   "npm.fetchOnlinePackageInfo": false,
   "typescript.disableAutomaticTypeAcquisition": true,
   "typescript.check.npmIsInstalled": false,
-  "editor.quickSuggestions": {
-    "other": false,
-    "comments": false,
-    "strings": false
-  },
   "editor.cursorBlinking": "expand",
   "editor.find.cursorMoveOnType": true,
   "editor.cursorSmoothCaretAnimation": true,
@@ -36,7 +38,7 @@
   "editor.hover.sticky": false,
   "editor.rename.enablePreview": false,
   "editor.suggest.showColors": false,
-  "editor.suggestOnTriggerCharacters": false,
+  "editor.suggestOnTriggerCharacters": true,
   "editor.wordBasedSuggestions": false,
   "editor.parameterHints.enabled": false,
   "terminal.integrated.localEchoStyle": "dim",
