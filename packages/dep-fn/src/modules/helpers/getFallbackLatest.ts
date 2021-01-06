@@ -10,7 +10,10 @@ export const getFallBackLatest = async(
   try {
     const packageInfo = JSON.parse(packageInfoRaw)
 
-    return last(packageInfo.versions)
+    const filtered = packageInfo.versions.filter((x: string) => !x.includes('-'))
+    if(filtered.length === 0) return last(packageInfo.versions)
+    
+    return last(filtered)
   } catch (err) {
     console.log(err)
     process.exit(1)
