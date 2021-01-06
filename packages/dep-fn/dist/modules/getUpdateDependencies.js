@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getUpdateDependencies = void 0;
 const helpers_fn_1 = require("helpers-fn");
 const getUpdateURL_1 = require("./getUpdateURL");
 const getFallbackUpdate_1 = require("./helpers/getFallbackUpdate");
 const isDependencyEligible_1 = require("./helpers/isDependencyEligible");
-exports.getUpdateDependencies = async (input) => {
+const getUpdateDependencies = async (input) => {
     try {
         const dependencies = input.dependencies;
         const willReturn = {};
@@ -39,3 +40,4 @@ exports.getUpdateDependencies = async (input) => {
         process.exit(1);
     }
 };
+exports.getUpdateDependencies = getUpdateDependencies;

@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.confirm = void 0;
 const inquirer_1 = require("inquirer");
-exports.confirm = async (question) => {
+const confirm = async (question) => {
     if (process.env.DEP_FN_UPDATE_ALL === 'true')
         return true;
     const { answer } = await inquirer_1.prompt([
@@ -9,3 +10,4 @@ exports.confirm = async (question) => {
     ]);
     return answer.toLowerCase() === 'y';
 };
+exports.confirm = confirm;

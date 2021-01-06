@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.renovate = void 0;
 const fs_extra_1 = require("fs-extra");
 const fs_1 = require("fs");
 const rambdax_1 = require("rambdax");

@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getInitTag = void 0;
 const helpers_fn_1 = require("helpers-fn");
 const currentTag_1 = require("./dom/currentTag");
 const getURLPackageJson_1 = require("./helpers/getURLPackageJson");
-exports.getInitTag = async (input) => {
+const getInitTag = async (input) => {
     try {
         const { page, url, dependency, tag } = input;
         await page.goto(url);
@@ -33,3 +34,4 @@ exports.getInitTag = async (input) => {
         process.exit(1);
     }
 };
+exports.getInitTag = getInitTag;

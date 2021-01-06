@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getFallbackUpdate = void 0;
 const confirm_1 = require("./confirm");
 const getFallbackLatest_1 = require("./getFallbackLatest");
 const getUpdateQuestion_1 = require("./getUpdateQuestion");
 const normalizeTag_1 = require("./normalizeTag");
-exports.getFallbackUpdate = async (input) => {
+const getFallbackUpdate = async (input) => {
     try {
         const currentVersion = normalizeTag_1.normalizeTag(input.tag);
         const latestVersion = await getFallbackLatest_1.getFallBackLatest(input.dependency);
@@ -24,3 +25,4 @@ exports.getFallbackUpdate = async (input) => {
         throw new Error(error);
     }
 };
+exports.getFallbackUpdate = getFallbackUpdate;

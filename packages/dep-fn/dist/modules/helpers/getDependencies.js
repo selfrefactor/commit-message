@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getDependencies = void 0;
 const fs_1 = require("fs");
 const fs_extra_1 = require("fs-extra");
 const path_1 = require("path");
 const rambdax_1 = require("rambdax");
-exports.getDependencies = () => {
+const getDependencies = () => {
     const filePath = path_1.join(process.cwd(), 'package.json');
     if (!fs_1.existsSync(filePath)) {
         throw `filePath ${filePath} doesn't exists`;
@@ -20,3 +21,4 @@ exports.getDependencies = () => {
         peerDependencies,
     };
 };
+exports.getDependencies = getDependencies;

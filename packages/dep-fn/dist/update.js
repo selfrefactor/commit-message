@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.update = void 0;
 const init_playwright_1 = require("init-playwright");
 const beforeEnd_1 = require("./modules/beforeEnd");
 const constants_1 = require("./modules/constants");

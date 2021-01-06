@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.getInitURL = void 0;
 const rambdax_1 = require("rambdax");
 const execCommand_1 = require("./helpers/execCommand");
 const urlConditionFn = rambdax_1.compose(x => x === 1, rambdax_1.length, rambdax_1.match(/:/g));
@@ -9,7 +10,7 @@ function getGithubUrl(urlInput) {
     const c = rambdax_1.replace('github.com:', 'github.com/', b);
     return `https://${c}`;
 }
-exports.getInitURL = async (dependency) => {
+const getInitURL = async (dependency) => {
     const command = `npm info --json ${dependency}`;
     const packageInfoRaw = await execCommand_1.execCommand(command);
     try {
@@ -33,3 +34,4 @@ exports.getInitURL = async (dependency) => {
         process.exit(1);
     }
 };
+exports.getInitURL = getInitURL;
