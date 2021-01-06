@@ -1,7 +1,7 @@
 import { existsSync } from 'fs'
 import { outputFile, outputJson, readJson } from 'fs-extra'
 import { getRepoData } from 'github-api-fn'
-import { filter, map, ok, piped, prop, sort, take, uniqWith } from 'rambdax'
+import { filter, map, ok, piped, prop, sort, take, uniq } from 'rambdax'
 import { sortUsedBy } from 'sort-used-by'
 import { kebabCase } from 'string-fn'
 
@@ -19,6 +19,7 @@ async function getScrapedRepos({
   isDev,
   isHuge,
 }){
+  console.log({scrapeDeep})
   const filePath = `${ __dirname }/assets/${ fileName }-scraped.json`
 
   if (!shouldRefresh && !existsSync(filePath)){
@@ -42,7 +43,7 @@ async function getScrapedRepos({
       isDev,
       isHuge : !isHuge,
     })
-    const allScrapedRepos = uniqWith((a, b) => a.repoUrl === b.repoUrl, [
+    const allScrapedRepos = uniq([
       ...scrapedRepos,
       ...additionalScrapedRepos,
     ])
