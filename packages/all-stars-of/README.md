@@ -44,13 +44,13 @@ An interactive REST console based on RAML/OAS files
 
 ツ An anime player that integrates with AniList, Simkl, Crunchyroll, and Hidive.
 
-[BeeeQueue/yuna](https://github.com/BeeeQueue/yuna) - 🌟 313
+[BeeeQueue/yuna](https://github.com/BeeeQueue/yuna) - 🌟 316
 
 ### caderek/benny
 
 A dead simple benchmarking framework for JS/TS libs
 
-[caderek/benny](https://github.com/caderek/benny) - 🌟 274
+[caderek/benny](https://github.com/caderek/benny) - 🌟 275
 
 ### selfrefactor/rambdax
 
@@ -62,13 +62,13 @@ Extended version of Rambda
 
 Collection of Javascript libraries
 
-[selfrefactor/useful-javascript-libraries](https://github.com/selfrefactor/useful-javascript-libraries) - 🌟 80
+[selfrefactor/useful-javascript-libraries](https://github.com/selfrefactor/useful-javascript-libraries) - 🌟 81
 
 ### romgrk/todoist.nvim
 
 A todoist extension for neovim
 
-[romgrk/todoist.nvim](https://github.com/romgrk/todoist.nvim) - 🌟 72
+[romgrk/todoist.nvim](https://github.com/romgrk/todoist.nvim) - 🌟 75
 
 ---
 

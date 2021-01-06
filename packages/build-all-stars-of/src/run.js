@@ -4,7 +4,7 @@ const {buildStarsOf} = require('build-stars-of')
 const {outputJson} = require('fs-extra')
 const {allModes} = require('./config')
 
-const currentMode = 'puppeteer'
+const currentMode = 'rambda'
 
 void async function main(){
   const input = allModes[currentMode]

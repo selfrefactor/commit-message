@@ -37,7 +37,7 @@ const angular = {
 
 const rambda = {
   priority: 1,
-  isHuge: false,
+  scrapeDeep: true,
   repo: 'selfrefactor/rambda',
   title : 'Stars of **Rambda** list',
   stars: 2
@@ -54,6 +54,7 @@ const iterator = (x, prop) => {
     ...x,
     daysLimit: x.daysLimit ? x.daysLimit : 370,
     isHuge: x.isHuge ? x.isHuge : true,
+    scrapeDeep: x.scrapeDeep ? x.scrapeDeep : false,
     isDev: IS_DEV,
     starsLimit: x.stars ? x.stars : 5,
     shouldRefreshApi,
