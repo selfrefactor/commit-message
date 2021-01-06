@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`happy 1`] = `
+Array [
+  Object {
+    "repo": "keen/common-web",
+    "stars": 491,
+  },
+  Object {
+    "repo": "farwayer/mobx-decorators",
+    "stars": 156,
+  },
+  Object {
+    "repo": "selfrefactor/rambdax",
+    "stars": 136,
+  },
+  Object {
+    "repo": "sebastian-software/babel-preset-edge",
+    "stars": 102,
+  },
+  Object {
+    "repo": "zyxd/svelte-store-router",
+    "stars": 30,
+  },
+  Object {
+    "repo": "jpgorman/react-append-to-body",
+    "stars": 25,
+  },
+  Object {
+    "repo": "farwayer/mst-decorators",
+    "stars": 20,
+  },
+  Object {
+    "repo": "devilcoders/tachyons-for-js",
+    "stars": 18,
+  },
+  Object {
+    "repo": "romgrk/web-toolkit",
+    "stars": 17,
+  },
+  Object {
+    "repo": "wagerfield/ig-api",
+    "stars": 15,
+  },
+  Object {
+    "repo": "zoeblow/feui",
+    "stars": 8,
+  },
+  Object {
+    "repo": "dada513/npm-all-packages",
+    "stars": 6,
+  },
+  Object {
+    "repo": "chrisgitrepo/ig-trader",
+    "stars": 3,
+  },
+  Object {
+    "repo": "dristic/novus",
+    "stars": 3,
+  },
+  Object {
+    "repo": "lindesvard/enforce-ui",
+    "stars": 2,
+  },
+  Object {
+    "repo": "joaolucasl/mongoose-notekeeper-plugin",
+    "stars": 2,
+  },
+  Object {
+    "repo": "sebmaldo/functional-memoize",
+    "stars": 2,
+  },
+  Object {
+    "repo": "harryhorton/clivate",
+    "stars": 1,
+  },
+  Object {
+    "repo": "gokaykucuk/specimen02",
+    "stars": 1,
+  },
+  Object {
+    "repo": "dappflow/dappflow-node",
+    "stars": 1,
+  },
+  Object {
+    "repo": "KsRyY/bethlehem",
+    "stars": 1,
+  },
+  Object {
+    "repo": "StreetStrider/aux.js",
+    "stars": 1,
+  },
+  Object {
+    "repo": "Brettm12345/fp-ts-fs",
+    "stars": 1,
+  },
+  Object {
+    "repo": "g770728y/valor-app-utils",
+    "stars": 1,
+  },
+  Object {
+    "repo": "HedvigInsurance/apollo-link-redis-cache",
+    "stars": 1,
+  },
+  Object {
+    "repo": "HedvigInsurance/animated-react-native-components",
+    "stars": 1,
+  },
+  Object {
+    "repo": "priezz/fire-redux",
+    "stars": 1,
+  },
+  Object {
+    "repo": "gorkma/git-jira-tools",
+    "stars": 1,
+  },
+  Object {
+    "repo": "bummmble/babel-preset-frost",
+    "stars": 1,
+  },
+  Object {
+    "repo": "helton/create-node-package",
+    "stars": 1,
+  },
+  Object {
+    "repo": "gleiderr/income",
+    "stars": 1,
+  },
+  Object {
+    "repo": "bjarneo/cendex",
+    "stars": 1,
+  },
+  Object {
+    "repo": "Uninen/garmin-connect-to-json",
+    "stars": 0,
+  },
+  Object {
+    "repo": "Uninen/tweets-to-json",
+    "stars": 0,
+  },
+  Object {
+    "repo": "fredckl/react-cut-input",
+    "stars": 0,
+  },
+  Object {
+    "repo": "roblav96/blue-pill",
+    "stars": 0,
+  },
+  Object {
+    "repo": "kevinfiol/etto",
+    "stars": 0,
+  },
+  Object {
+    "repo": "alzateja/ez-madge",
+    "stars": 0,
+  },
+  Object {
+    "repo": "Brettm12345/webpack-ts",
+    "stars": 0,
+  },
+  Object {
+    "repo": "g770728y/valor-uform-ext",
+    "stars": 0,
+  },
+  Object {
+    "repo": "ts-archive/xlucene-evaluator",
+    "stars": 0,
+  },
+  Object {
+    "repo": "Malusovium/instapy-tools",
+    "stars": 0,
+  },
+  Object {
+    "repo": "graned/confer-js",
+    "stars": 0,
+  },
+  Object {
+    "repo": "aldogcarlos/cache-helper",
+    "stars": 0,
+  },
+  Object {
+    "repo": "xibitdigital/ldap-authenticate",
+    "stars": 0,
+  },
+  Object {
+    "repo": "DiogenesPolanco/string-fn",
+    "stars": 0,
+  },
+]
+`;

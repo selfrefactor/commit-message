@@ -26,10 +26,10 @@ async function getLinks(_){
   const links = await mapAsync(async el => {
     const repoUrlRawData = await el.text()
     const { repoUrl, stars } = getRepoData(repoUrlRawData)
-    
+
     return {
-      isValid: !Number.isNaN(stars) && Boolean(repoUrl),
-      repo : repoUrl,
+      isValid : !Number.isNaN(stars) && Boolean(repoUrl),
+      repo    : repoUrl,
       stars,
     }
   }, els)
@@ -38,7 +38,7 @@ async function getLinks(_){
 
   return {
     canContinue : true,
-    links: links.filter(({isValid}) => isValid),
+    links       : links.filter(({ isValid }) => isValid),
     firstLink,
   }
 }
@@ -54,29 +54,29 @@ function waitForNext(_, compareTo){
 }
 
 async function sortUsedBy({
-  repo, 
+  repo,
   isDev = false,
-  isHuge = true
+  isHuge = true,
 }){
   if (!repo.includes('/')) throw new Error('!repo')
   const urlRepos = `https://github.com/${ repo }/network/dependents`
   const urlPackages = `https://github.com/${ repo }/network/dependents?dependent_type=PACKAGE`
-  
+
   let data = []
 
   const { browser, page } = await playwrightInit({
     headless : !isDev,
     logFlag  : false,
     browser  : 'chromium',
-    url: isHuge ? urlPackages : urlRepos,
+    url      : isHuge ? urlPackages : urlRepos,
   })
   const _ = wrap(page)
 
   try {
     let canProceed = await hasNext(_)
     let counter = 200
-    while (canProceed&&counter-- >=0){
-      if(isDev) console.log(counter)
+    while (canProceed && counter-- >= 0){
+      if (isDev) console.log(counter)
       const { links, firstLink, canContinue } = await getLinks(_)
       if (!canContinue){
         canProceed = false

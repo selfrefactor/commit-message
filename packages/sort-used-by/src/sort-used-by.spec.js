@@ -1,10 +1,10 @@
 import { sortUsedBy } from './sort-used-by'
 
-jest.setTimeout(12*60*1000)
+jest.setTimeout(12 * 60 * 1000)
 
 test('happy', async () => {
   await sortUsedBy({
-    isDev: true,
-    repo: 'selfrefactor/rambda'
+    isDev : true,
+    repo  : 'selfrefactor/rambda',
   })
 })
