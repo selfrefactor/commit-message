@@ -2,7 +2,7 @@
   "emmet.showAbbreviationSuggestions": false,
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "type",
-  "editor.quickSuggestions": true,
+  "editor.quickSuggestions": false,
   "editor.tabCompletion": "on",
   "editor.wordBasedSuggestionsMode": "allDocuments",
   "editor.suggest.showStatusBar": true,

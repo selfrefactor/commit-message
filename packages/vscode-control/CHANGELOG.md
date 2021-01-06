@@ -1,4 +1,3 @@
-  "editor.quickSuggestions": true,
   "editor.suggest.showStatusBar": true,
   "editor.suggestOnTriggerCharacters": true,
   "editor.tabCompletion": "on",

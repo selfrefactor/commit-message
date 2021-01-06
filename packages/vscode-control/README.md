@@ -1,8 +1,10 @@
 # Vscode-control
 
-- Hold current and previous themes
-
 - Populate settings and keybingings to local VSCode instance
+
+## Notes
+
+  "editor.quickSuggestions": true is imporant
 
 
 ## Latest key binding
