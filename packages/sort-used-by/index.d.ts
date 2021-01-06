@@ -4,4 +4,4 @@ interface Input{
   isHuge?: boolean
 }
 
-export function sortUsedBy(input: Input): Promise<Array<{stars: number, repoUrl: string}>>
+export function sortUsedBy(input: Input): Promise<Array<{stars: number, repo: string}>>

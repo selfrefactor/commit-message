@@ -4,7 +4,7 @@ const { playwrightInit } = require('playwright-init')
 const { wrap } = require('playwright-wrap')
 
 const { getRepoData } = require('./get-repo-data')
-const { sortResult } = require('./sort-result')
+const { parseResult } = require('./parse-result')
 
 const RESULT = `${ __dirname }/result.json`
 const COOL_OFF = 1000
@@ -99,7 +99,7 @@ async function sortUsedBy({
   } finally {
     await browser.close()
 
-    return sortResult(data)
+    return parseResult(data)
   }
 }
 
