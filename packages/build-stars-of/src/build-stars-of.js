@@ -19,7 +19,6 @@ async function getScrapedRepos({
   isDev,
   isHuge,
 }){
-  console.log({scrapeDeep})
   const filePath = `${ __dirname }/assets/${ fileName }-scraped.json`
 
   if (!shouldRefresh && !existsSync(filePath)){
