@@ -1,4 +1,7 @@
 {
+  "editor.letterSpacing": 0.3,
+  "editor.cursorWidth": 2,
+  "editor.renderWhitespace": "selection",
   "emmet.showAbbreviationSuggestions": false,
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "type",
@@ -21,7 +24,6 @@
   "editor.cursorBlinking": "expand",
   "editor.find.cursorMoveOnType": true,
   "editor.cursorSmoothCaretAnimation": true,
-  "editor.cursorWidth": 0,
   "separators.methods.borderStyle": "solid",
   "separators.constructors.borderStyle": "solid",
   "separators.enabledSymbols": [
@@ -44,7 +46,6 @@
   "terminal.integrated.localEchoStyle": "dim",
   "terminal.integrated.localEchoLatencyThreshold": 0,
   "workbench.editor.pinnedTabSizing": "compact",
-  "editor.renderWhitespace": "trailing",
   "editor.fontWeight": 350,
   "files.enableTrash": false,
   "typescript.updateImportsOnFileMove.enabled": "always",

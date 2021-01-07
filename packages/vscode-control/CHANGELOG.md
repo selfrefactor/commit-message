@@ -1,3 +1,17 @@
+ ===   
+ ===   
+ ===   
+from 
+  "editor.renderWhitespace": "trailing",
+  "editor.cursorWidth": 0,
+
+  to
+
+   "editor.letterSpacing": 0.3,
+  "editor.cursorWidth": 2,
+  "editor.renderWhitespace": "selection",
+ ===   
+
   "editor.suggest.showStatusBar": true,
   "editor.suggestOnTriggerCharacters": true,
   "editor.tabCompletion": "on",
