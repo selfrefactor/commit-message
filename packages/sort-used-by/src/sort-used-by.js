@@ -57,6 +57,7 @@ async function sortUsedBy({
   repo,
   isDev = false,
   isHuge = true,
+  pageLimit = 200,
 }){
   if (!repo.includes('/')) throw new Error('!repo')
   const urlRepos = `https://github.com/${ repo }/network/dependents`
@@ -74,7 +75,7 @@ async function sortUsedBy({
 
   try {
     let canProceed = await hasNext(_)
-    let counter = 200
+    let counter = pageLimit
     while (canProceed && counter-- >= 0){
       if (isDev) console.log(counter)
       const { links, firstLink, canContinue } = await getLinks(_)
