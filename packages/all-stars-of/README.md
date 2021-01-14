@@ -1,9 +1,44 @@
 # List with all **Stars of** lists
 
-* [Playwright](#playwright) 
-* [Rambda](#rambda) 
-* [Nest](#nest) 
-* [Puppeteer](#puppeteer) 
+* [Angular](/stars-of-angular.md) - list of 91 repos
+* [Playwright](/stars-of-playwright.md) - list of 235 repos
+* [Rambda](/stars-of-rambda.md) - list of 79 repos
+* [Nest](/stars-of-nest.md) - list of 112 repos
+* [Puppeteer](/stars-of-puppeteer.md) - list of 70 repos
+
+## Angular
+
+### bleenco/ngx-uploader
+
+Angular File Uploader
+
+[bleenco/ngx-uploader](https://github.com/bleenco/ngx-uploader) - 🌟 746
+
+### Toinane/colorpicker
+
+A mininal but complete colorpicker desktop app
+
+[Toinane/colorpicker](https://github.com/Toinane/colorpicker) - 🌟 699
+
+### NG-ZORRO/ng-zorro-antd-mobile
+
+A configurable Mobile UI components based on Ant Design Mobile and Angular. 🐜
+
+[NG-ZORRO/ng-zorro-antd-mobile](https://github.com/NG-ZORRO/ng-zorro-antd-mobile) - 🌟 695
+
+### tjoskar/ng-lazyload-image
+
+🖼 A small library for lazy loading images for Angular apps with zero dependencies 
+
+[tjoskar/ng-lazyload-image](https://github.com/tjoskar/ng-lazyload-image) - 🌟 675
+
+### jfcere/ngx-markdown
+
+Angular markdown component/directive/pipe/service to parse static, dynamic or remote content to HTML with syntax highlight
+
+[jfcere/ngx-markdown](https://github.com/jfcere/ngx-markdown) - 🌟 656
+
+---
 
 ## Playwright
 
