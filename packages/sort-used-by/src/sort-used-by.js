@@ -56,6 +56,7 @@ function waitForNext(_, compareTo){
 async function sortUsedBy({
   repo,
   isDev = false,
+  showProgress = false,
   isHuge = false,
   pageLimit = 200,
 }){
@@ -77,7 +78,7 @@ async function sortUsedBy({
     let canProceed = await hasNext(_)
     let counter = pageLimit
     while (canProceed && counter-- >= 0){
-      if (isDev) console.log(counter)
+      if (showProgress) console.log(counter)
       const { links, firstLink, canContinue } = await getLinks(_)
       if (!canContinue){
         canProceed = false

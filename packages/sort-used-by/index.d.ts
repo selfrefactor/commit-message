@@ -2,6 +2,7 @@ interface Input {
   repo: string
   isDev?: boolean
   isHuge?: boolean
+  showProgress?: boolean
   pageLimit?: number
 }
 
