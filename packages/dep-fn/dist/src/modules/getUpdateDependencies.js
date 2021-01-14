@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getUpdateDependencies = void 0;
 const helpers_fn_1 = require("helpers-fn");
-const getFallbackUpdate_1 = require("./helpers/getFallbackUpdate");
+const getUpdate_1 = require("./helpers/getUpdate");
 const isDependencyEligible_1 = require("./helpers/isDependencyEligible");
 const getUpdateDependencies = async (dependencies) => {
     const willReturn = {};
@@ -14,7 +14,7 @@ const getUpdateDependencies = async (dependencies) => {
             willReturn[prop] = dependency;
             continue;
         }
-        const willPush = await getFallbackUpdate_1.getFallbackUpdate({
+        const willPush = await getUpdate_1.getUpdate({
             dependency: prop,
             tag: dependency,
         });
