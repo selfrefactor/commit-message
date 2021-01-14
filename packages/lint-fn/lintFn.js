@@ -75,6 +75,7 @@ async function lintFn(
 
     await usePrettier({
       filePath,
+      cwdOverride,
       withTypescript : false,
       prettierSpecialCase,
     })
