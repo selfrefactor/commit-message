@@ -5,6 +5,7 @@ const {
   drop,
   split,
   join,
+  tap,
   take,
   piped,
   interpolate,
@@ -14,7 +15,7 @@ const { allModes } = require('./config')
 const { existsSync } = require('fs')
 const { resolve } = require('path')
 const { readFile, writeFile } = require('fs-extra')
-const { pascalCase ,kebabCase} = require('string-fn')
+const { pascalCase} = require('string-fn')
 
 void (async function main(){
   const iterator = async prop => {
@@ -23,16 +24,18 @@ void (async function main(){
     const title = pascalCase(titleRaw)
     if(!existsSync(outputLocation)) return {skip:true}
     const content = (await readFile(outputLocation)).toString()
+    let total
     const preview = piped(
       content,
       split('##'),
       drop(1),
+      tap(list => total = list.length),
       take(5),
       prepend(`## ${title}\n\n`),
       join('###'),
     )
 
-    return {preview, title, toc: `* [${title}](#${kebabCase(titleRaw)}) `}
+    return {preview, title, toc: `* [${title}](/stars-of-${title.toLowerCase()}.md) - list of ${total} repos`}
   }
   const sortedKeys = Object.keys(allModes).sort((a, b) => {
     if (allModes[ a ].priority === allModes[ b ].priority){
@@ -51,6 +54,8 @@ void (async function main(){
 # List with all **Stars of** lists
 
 {{tableOfContents}}
+
+> What follows are the top 5 repos for each of the lists
 
 {{previews}}
 `.trim()
