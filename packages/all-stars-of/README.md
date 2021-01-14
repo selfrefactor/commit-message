@@ -1,10 +1,10 @@
 # List with all **Stars of** lists
 
-* [Angular](/stars-of-angular.md) - list of 91 repos
-* [Playwright](/stars-of-playwright.md) - list of 235 repos
-* [Rambda](/stars-of-rambda.md) - list of 79 repos
-* [Nest](/stars-of-nest.md) - list of 112 repos
-* [Puppeteer](/stars-of-puppeteer.md) - list of 70 repos
+* [Angular](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-angular.md) - list of 91 repos
+* [Playwright](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-playwright.md) - list of 235 repos
+* [Rambda](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-rambda.md) - list of 79 repos
+* [Nest](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-nest.md) - list of 112 repos
+* [Puppeteer](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-puppeteer.md) - list of 70 repos
 
 > What follows are the top 5 repos for each of the lists
 
