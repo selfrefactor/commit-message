@@ -8,10 +8,10 @@ const IS_DEV = false
 
 const playwright = {
   priority: 0,
-  daysLimit: 200,
+  daysLimit: 150,
   repo: 'microsoft/playwright',
   title : 'Stars of **Playwright**',
-  stars:3
+  stars:2
 }
 const puppeteer = {
   priority: 2,
