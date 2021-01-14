@@ -4,7 +4,9 @@ const BASE = resolve(__dirname, '../../all-stars-of/')
 
 const shouldRefreshScraped = true
 const shouldRefreshApi = true
-const IS_DEV = false
+const IS_DEV = 0
+const SHOW_PROGRESS = 1
+const MAX_SCRAPE_DEPTH = 300
 
 const playwright = {
   priority: 0,
@@ -55,6 +57,8 @@ const iterator = (x, prop) => {
     daysLimit: x.daysLimit ? x.daysLimit : 370,
     isHuge: x.isHuge ? x.isHuge : true,
     scrapeDeep: x.scrapeDeep ? x.scrapeDeep : false,
+    showProgress: SHOW_PROGRESS,
+    maxScrapeDepth: MAX_SCRAPE_DEPTH,
     isDev: IS_DEV,
     starsLimit: x.stars ? x.stars : 5,
     shouldRefreshApi,

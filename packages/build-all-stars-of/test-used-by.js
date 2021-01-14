@@ -1,10 +1,10 @@
 const {sortUsedBy} = require('sort-used-by')
 const {outputJson} = require('fs-extra')
 
-void async function main(){
-  const result = await sortUsedBy('IdentityModel/oidc-client-js')
-  // const result = await sortUsedBy('microsoft/playwright')
-  // await sortUsedBy('nestjs/nest')
+const repo = 'marmelab/react-admin'
 
-  await outputJson(`${__dirname}/oidc.json`, result, {spaces:2})
+void async function main(){
+  const result = await sortUsedBy(repo)
+  const [,fileName] = repo.split('/')
+  await outputJson(`${__dirname}/assets/${fileName}.json`, result, {spaces:2})
 }()
