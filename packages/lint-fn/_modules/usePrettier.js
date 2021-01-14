@@ -4,6 +4,7 @@ const { resolve } = require('path')
 const { existsSync } = require('fs')
 
 const PRETTIER_PATH_BASE = 'node_modules/prettier/bin-prettier.js'
+const DEBUG = 0
 
 const getPrettierPath = (cwd, prettierSpecialCase) => {
   if (prettierSpecialCase === 'local') return `${ cwd }/${ PRETTIER_PATH_BASE }`
@@ -35,7 +36,7 @@ async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdO
   /*
     Other option is `--parser babel-ts`
   */
-  const typescriptPart = withTypescript ? '' : '--parser typescript'
+  const typescriptPart = withTypescript ? '--parser typescript': ''
 
   const command = glue(`
   ${ prettierPath }
@@ -43,6 +44,7 @@ async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdO
   --no-bracket-spacing
   --print-width 77
   --single-quote
+  ${DEBUG ? '--loglevel debug --file-info':''}
   --no-bracket-spacing
   --trailing-comma es5
   --arrow-parens avoid
@@ -50,6 +52,7 @@ async function usePrettier({ filePath, withTypescript, prettierSpecialCase, cwdO
   ${ typescriptPart }
   ${ filePath }
 `).split(' ')
+
   await spawnCommand("node", command, cwd)
 }
 

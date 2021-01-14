@@ -13,6 +13,12 @@ await lintFn("foo.js")
 await lintFn("bar.ts")
 ```
 
+## Debug prettier
+
+_modules/usePrettier.js
+
+const DEBUG = 1
+
 ## Skip rules
 
 `process.env.SKIP_ESLINT_RULES = 'no-nested-ternary,max-len'
