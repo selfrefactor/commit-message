@@ -13,7 +13,9 @@ const TOP_LIMIT = 400
 
 async function getScrapedRepos({
   repo,
+  maxScrapeDepth,
   fileName,
+  showProgress,
   scrapeDeep,
   shouldRefresh,
   isDev,
@@ -35,12 +37,16 @@ async function getScrapedRepos({
     repo,
     isDev,
     isHuge,
+    showProgress,
+    pageLimit : maxScrapeDepth,
   })
   if (scrapeDeep){
     const additionalScrapedRepos = await sortUsedBy({
       repo,
+      showProgress,
       isDev,
-      isHuge : !isHuge,
+      isHuge    : !isHuge,
+      pageLimit : maxScrapeDepth,
     })
     const allScrapedRepos = uniq([
       ...scrapedRepos,
@@ -52,7 +58,7 @@ async function getScrapedRepos({
 
     return allScrapedRepos
   }
-  
+
   await outputJson(
     filePath, { data : scrapedRepos }, { spaces : 2 }
   )
@@ -90,9 +96,11 @@ export async function buildStarsOf({
   isHuge = false,
   scrapeDeep = false,
   shouldRefreshScraped = true,
+  showProgress = false,
   shouldRefreshApi = true,
   starsLimit = STARS_LIMIT,
   daysLimit = DAYS_LIMIT,
+  maxScrapeDepth = 200,
   blacklist = [],
   outputLocation,
 }){
@@ -103,6 +111,8 @@ export async function buildStarsOf({
   )
   const fileName = kebabCase(repo)
   const scrapedRepos = await getScrapedRepos({
+    showProgress,
+    maxScrapeDepth,
     isHuge,
     isDev,
     repo,
