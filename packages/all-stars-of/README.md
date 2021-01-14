@@ -2,6 +2,7 @@
 
 * [Playwright](#playwright) 
 * [Rambda](#rambda) 
+* [Nest](#nest) 
 * [Puppeteer](#puppeteer) 
 
 ## Playwright
@@ -69,6 +70,40 @@ Collection of Javascript libraries
 A todoist extension for neovim
 
 [romgrk/todoist.nvim](https://github.com/romgrk/todoist.nvim) - 🌟 75
+
+---
+
+## Nest
+
+### mKeRix/room-assistant
+
+Presence tracking and more for automation on the room-level
+
+[mKeRix/room-assistant](https://github.com/mKeRix/room-assistant) - 🌟 662
+
+### nestjsx/nestjs-config
+
+Config module for nestjs using dotenv :key:
+
+[nestjsx/nestjs-config](https://github.com/nestjsx/nestjs-config) - 🌟 451
+
+### nestjsx/nestjs-typeorm-paginate
+
+:page_with_curl: Pagination response object function + types for typeorm + nestjs
+
+[nestjsx/nestjs-typeorm-paginate](https://github.com/nestjsx/nestjs-typeorm-paginate) - 🌟 343
+
+### Theodo-UK/nestjs-admin
+
+A generic administration interface for TypeORM entities 
+
+[Theodo-UK/nestjs-admin](https://github.com/Theodo-UK/nestjs-admin) - 🌟 331
+
+### kyle-mccarthy/nest-next
+
+Render Module to add Nextjs support for Nestjs
+
+[kyle-mccarthy/nest-next](https://github.com/kyle-mccarthy/nest-next) - 🌟 310
 
 ---
 
