@@ -8,7 +8,7 @@ interface ExecPrettier {
 export function lintFn(
   filePath: string, 
   prettierSpecialCase?:PrettierSpecialCase,
-  cwdOverride?:string,
+  cwdOverride?:string|false,
   forceTypescript?:boolean
 ): Promise<void|false>;
 
