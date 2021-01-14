@@ -32,9 +32,10 @@ const nest = {
 const angular = {
   priority: 0,
   daysLimit: 120,
+  scrapeDeep: true,
   repo: 'angular/angular',
   title : 'Stars of **Angular** - all-you-can-take frontend framework',
-  stars:20
+  stars:5
 }
 
 const rambda = {
