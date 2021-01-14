@@ -6,7 +6,7 @@ function getIntro(title, repo){
 
 This list contains Github repos depending on **{{repo}}**. 
 
-These repos are sorted by their stars and thier \`package.json\` is updated in the last year.
+These repos are sorted by their stars and their \`package.json\` is updated in the last year.
 
 > This list is created with \`build-stars-of\` library.
   `.trim()

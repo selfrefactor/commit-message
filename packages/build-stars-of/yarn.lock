@@ -2182,10 +2182,10 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-github-api-fn@0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.3.0.tgz#55e87cdbd14ce3a44f622e4a559921bc1c10cea1"
-  integrity sha512-tA9iMwhKRG9wN2OSfV5JyHJJW6Na5AjyGHXvedazFCzuPe4Z1dO5Lr8a5sQxsReESZqW/w4nIhJFm6Iea8WeCw==
+github-api-fn@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/github-api-fn/-/github-api-fn-0.4.0.tgz#777cf1164039053617af9f12332d3afd97291ff2"
+  integrity sha512-KHV3/8k4cBIOV8GadxIhMGHn056iQXANa/p8A1BHkzxl2oI0FjYPB4MQjtFKUYr3ccnBErfOhD+b0NTZII6e7A==
   dependencies:
     axios "0.21.1"
     dayjs "^1.9.7"

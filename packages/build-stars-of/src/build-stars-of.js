@@ -66,7 +66,7 @@ async function getScrapedRepos({
   return scrapedRepos
 }
 
-async function getApiData({ repos, fileName, daysLimit, shouldRefresh }){
+async function getApiData({ repos, fileName, daysLimit, shouldRefresh, showProgress }){
   const filePath = `${ __dirname }/assets/${ fileName }-api-data.json`
 
   if (!shouldRefresh && !existsSync(filePath)){
@@ -79,6 +79,7 @@ async function getApiData({ repos, fileName, daysLimit, shouldRefresh }){
     return data
   }
   const apiData = await getRepoData({
+    showProgress,
     repos,
     daysLimit,
   })
@@ -134,6 +135,7 @@ export async function buildStarsOf({
   const apiData = await getApiData({
     repos,
     fileName,
+    showProgress,
     shouldRefresh : shouldRefreshApi,
     daysLimit,
   })
