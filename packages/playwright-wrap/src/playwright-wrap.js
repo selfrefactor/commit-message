@@ -23,6 +23,15 @@ async function filterAsync(predicate, list){
 const DELAY = 7000
 const TICK = 150
 
+async function getText(el){
+  const text = await el.textContent()
+  return text
+} 
+async function getClassName(el){
+  const className = el.getAttribute('class')
+  return className
+} 
+
 function attachToElement(el){
   const className = async () => el.getAttribute('class')
   const text = async () => el.textContent()
@@ -39,15 +48,17 @@ function attach(
   snapDir = `${ process.cwd() }/screenshots`
 ){
   const query = async playwrightSelector => {
+    console.log('WILL BE DEPRECATED')
     const el = await page.$(playwrightSelector)
     if (el === null){
       throw new Error(`Couldn't find any element with '${ playwrightSelector }'`)
     }
-
+    
     return attachToElement(el)
   }
-
+  
   const queryAll = async playwrightSelector => {
+    console.log('WILL BE DEPRECATED')
     const els = await page.$$(playwrightSelector)
     if (els.length === 0){
       throw new Error(`Couldn't find any elements with '${ playwrightSelector }'`)
@@ -564,3 +575,5 @@ async function playwrightRun({
 exports.playwrightRun = playwrightRun
 exports.wrap = attach
 exports.playwrightInit = playwrightInit
+exports.getText = getText
+exports.getClassName = getClassName
