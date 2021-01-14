@@ -6,6 +6,8 @@
 * [Nest](/stars-of-nest.md) - list of 112 repos
 * [Puppeteer](/stars-of-puppeteer.md) - list of 70 repos
 
+> What follows are the top 5 repos for each of the lists
+
 ## Angular
 
 ### bleenco/ngx-uploader
