@@ -1,4 +1,4 @@
-import { map, merge, defaultTo } from 'rambdax'
+import { map, merge } from 'rambdax'
 import { camelCase } from './camelCase'
 
 function mergeAll(arr){

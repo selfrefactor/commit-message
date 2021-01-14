@@ -6,11 +6,11 @@ export function distance(x: string, y: string): number
 export function distanceGerman(x: string, y: string): number
 export function dotCase(str: string, extraLatin?: boolean): string
 export function glob(str: string, globRule: string): boolean
-export function indent(str:string, indentCount:number): string
+export function indent(str: string, indentCount: number): string
 export function toFixedLineLength(str: string, lineLength: number): string
-export function getIndent(str:string): number
-export function isLetter(char:string): boolean
-export function isPunctuation(char:string): boolean
+export function getIndent(str: string): number
+export function isLetter(char: string): boolean
+export function isPunctuation(char: string): boolean
 export function kebabCase(str: string, extraLatin?: boolean): string
 export function ms(input: string): number
 export function msToText(ms: number): string
@@ -27,17 +27,20 @@ export function titleCase(str: string, extraLatin?: boolean): string
 export function trim(str: string): string
 export function words(str: string): string[]
 export function wordsX(str: string): string[]
-export function randomString(length?: number, alphabetOnlyFlag?: boolean): string;
+export function randomString(
+  length?: number,
+  alphabetOnlyFlag?: boolean
+): string
 export function getMaxLength(listOfSentences: string[]): number
 
-interface SplitPerLine{
+interface SplitPerLine {
   text: string
   perLine?: number
   splitChar?: string
 }
 export function splitPerLine(input: SplitPerLine): string[]
 
-interface FitWithinLines{
+interface FitWithinLines {
   text: string
   perLine?: number
   limit: number
@@ -46,12 +49,12 @@ interface FitWithinLines{
 export function fitWithinLines(input: FitWithinLines): string[]
 
 export function takeArguments<T>(
-  url: string, 
+  url: string,
   separator?: string,
   rawFlag?: boolean
 ): T
 
-export interface MaskSentence{
+export interface MaskSentence {
   sentence: string
   replacer?: string
   charLimit?: number
@@ -61,7 +64,7 @@ export interface MaskSentence{
   easierMode?: boolean
 }
 
-export interface OutputMaskSentence{
+export interface OutputMaskSentence {
   visible: string[]
   hidden: string[]
 }
@@ -69,8 +72,8 @@ export interface OutputMaskSentence{
 export function maskSentence(input: MaskSentence): OutputMaskSentence
 
 export interface MaskWords {
-  words:string
-  replacer?:string
+  words: string
+  replacer?: string
   charLimit?: number
 }
 
