@@ -32,17 +32,9 @@ It kills VSCode because of unknown bug that leads to memory leaks
 
 It adds all changed files, makes a commit and finally runs `git push`
 
-#### Run `prove` script if found in `package.json`
+### dep/depx
 
-If developers commits brake the build, who is to blame - the developer or the dev process that allows that?
-
-If `yarn prove` returns error or failing test, then the command stops and doesn't proceed with the commit.
-
-Typical `prove` script:
-
-```
-"prove": "jest src --json"
-```
+It updateds all dependencies. `depx` means that update is confirmed by the user.
 
 ### read
 
