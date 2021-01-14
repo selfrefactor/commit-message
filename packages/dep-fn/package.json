@@ -1,7 +1,7 @@
 {
   "name": "dep-fn",
   "scripts": {
-    "lint": "cd src&&run lx",
+    "lint:doesnt:work": "cd src&&run lx",
     "out": "tsc -p .",
     "in": "tsc -p . --watch",
     "debug": "yarn out&&node dist/debug.js",

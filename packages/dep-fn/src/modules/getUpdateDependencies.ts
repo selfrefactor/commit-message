@@ -1,6 +1,6 @@
 import {log} from 'helpers-fn'
 import {StringMap} from '../../typings'
-import {getFallbackUpdate} from './helpers/getFallbackUpdate'
+import {getUpdate} from './helpers/getUpdate'
 import {isDependencyEligible} from './helpers/isDependencyEligible'
 
 export const getUpdateDependencies = async(
@@ -19,7 +19,7 @@ export const getUpdateDependencies = async(
       continue
     }
 
-    const willPush: string = await getFallbackUpdate({
+    const willPush: string = await getUpdate({
       dependency: prop,
       tag: dependency,
     })
