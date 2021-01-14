@@ -56,7 +56,7 @@ function waitForNext(_, compareTo){
 async function sortUsedBy({
   repo,
   isDev = false,
-  isHuge = true,
+  isHuge = false,
   pageLimit = 200,
 }){
   if (!repo.includes('/')) throw new Error('!repo')
