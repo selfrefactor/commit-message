@@ -14,11 +14,10 @@ const getUpdateDependencies = async (dependencies) => {
             willReturn[prop] = dependency;
             continue;
         }
-        const options = {
+        const willPush = await getFallbackUpdate_1.getFallbackUpdate({
             dependency: prop,
             tag: dependency,
-        };
-        const willPush = await getFallbackUpdate_1.getFallbackUpdate(options);
+        });
         if (willPush !== dependency) {
             helpers_fn_1.log(`Updated '${prop}' dependency to ${willPush}`, 'success');
         }
