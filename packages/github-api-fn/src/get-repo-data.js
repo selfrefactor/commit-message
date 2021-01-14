@@ -13,7 +13,11 @@ async function getRepoData(input){
   if (!reposOk) throw new Error(`Wrong repos input - ${ repos }`)
 
   if (refreshCache){
+    let counter = repos.length
     const reposData = await mapAsync(async repo => {
+      if(input.showProgress){
+        console.log(counter--)
+      }
       const repoDataResponse = await getRepo(repo)
       const filterData = await filterRepo(repo, input.daysLimit)
       const propsToPick = [
