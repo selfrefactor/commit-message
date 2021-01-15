@@ -6,7 +6,6 @@
 
   "editor.quickSuggestions": true is imporant
 
-
 ## Latest key binding
 
 ### Single column view - ctrl+shift+5
@@ -19,7 +18,7 @@
 
 ### copy relative path - `Shift+Caps Lock` when !editorFocus
 
-### Pin/unpin tab - pin with `Alt+P`; unpin with `Alt+U`
+### Pin - pin with `Alt+P`
 
 ### Collapse all with `Alt+4`
 

@@ -415,11 +415,6 @@
     "when": "config.workbench.editor.showTabs && editorSticky"
   },
   {
-    "key": "alt+u",
-    "command": "workbench.action.unpinEditor",
-    "when": "activeEditorIsPinned"
-  },
-  {
     "key": "ctrl+k shift+enter",
     "command": "-workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"

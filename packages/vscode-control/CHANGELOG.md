@@ -1,5 +1,7 @@
  ===   
  ===   
+Remove unpin keybinding
+this makes alt+u available
  ===   
 from 
   "editor.renderWhitespace": "trailing",
