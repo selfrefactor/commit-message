@@ -33,6 +33,7 @@ const betweenStatements = {
 
 module.exports = {
   'node/no-deprecated-api': 1,
+  'no-unsafe-optional-chaining': 1,
   'node/file-extension-in-import': [1, 'never'],
   'node/callback-return': 0,
   'max-len': [1, {code: 90}],
@@ -79,7 +80,7 @@ module.exports = {
   'max-params': [1, 3],
   'max-statements': [1, 50],
   'max-statements-per-line': [1, {max: 3}],
-  'multiline-ternary': 0,
+  'multiline-ternary': [1,'always-multiline'],
   'newline-before-return': 1,
   'newline-per-chained-call': 1,
   'no-await-in-loop': 0,
