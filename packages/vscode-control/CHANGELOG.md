@@ -1,4 +1,7 @@
  ===   
+ add slowbug extension
+ ===   
+ add markdown lint extension
  ===   
 Remove unpin keybinding
 this makes alt+u available
