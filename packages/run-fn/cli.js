@@ -3,7 +3,6 @@ process.on('uncaughtException', console.log)
 
 const depFn = require('dep-fn')
 const { drop } = require('rambdax')
-const { killVSCode } = require('helpers-fn')
 
 const { bump } = require('./services/bump/bump')
 const { clone } = require('./services/clone/clone')
@@ -23,9 +22,6 @@ async function runFn(){
   const firstArgument = firstArgumentRaw.toLowerCase()
   if (firstArgument === 'commit'){
     return commit(secondArgument, thirdArgument, ...rest)
-  }
-  if (firstArgument === 'kill'){
-    return killVSCode()
   }
   if ([ 'angular', 'ng' ].includes(firstArgument)){
     return angular()
