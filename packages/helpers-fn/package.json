@@ -3,7 +3,7 @@
 	"scripts": {
 		"test": "jest src -u",
 		"monitor": "jest src/exported/monitor.spec.js -u",
-		"x": "jest src/exported/kill-vscode.spec.js"
+		"dev": "jest src/exported/get-staged-files.spec.js"
 	},
 	"typings": "typings.d.ts",
 	"main": "src/index.js",

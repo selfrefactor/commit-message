@@ -44,7 +44,7 @@ const execCommandSafe = ({ command, cwd }) =>
     )
   })
 
-const execCommand = ({ cwd, command, onLog }) =>
+const execCommand = ({ cwd, command, onLog = undefined }) =>
   new Promise((resolve, reject) => {
     const logs = []
     const proc = exec(command, { cwd })

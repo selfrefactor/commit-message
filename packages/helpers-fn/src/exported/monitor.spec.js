@@ -1,4 +1,4 @@
-import { readJson, writeJson } from 'fs-extra'
+import { writeJson } from 'fs-extra'
 import { delay } from 'rambdax'
 import { ms } from 'string-fn'
 import { getMemoryUsage, getProcessUsage, monitor } from './monitor'
