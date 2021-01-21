@@ -5,7 +5,8 @@ async function getStagedFiles(cwd){
     command: 'git diff --staged --diff-filter=ACMR --name-only -z',
     cwd
   })
-
+  if(!execResult) return []
+  
   return execResult.split('\x00').filter(Boolean)
 }
 

@@ -21,7 +21,7 @@ test.skip('getProcessUsage', async () => {
 
 test('happy', async () => {
   await monitor.start()
-  await delay(ms('2 minutes'))
+  await delay(ms('5 seconds'))
   const logData = await monitor.stopMonitor()
   if (UPDATE_TEST_DATA) await writeJson(FILE_PATH, { data : logData })
   expect(parseMonitorData(logData)).toMatchSnapshot()

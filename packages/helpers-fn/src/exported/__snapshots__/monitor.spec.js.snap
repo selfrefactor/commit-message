@@ -2,105 +2,19 @@
 
 exports[`happy 1`] = `
 Object {
-  "cycles": Array [
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 37.24,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 8.89,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 5.45,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 2.48,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 20.1,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 75.49,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 11.03,
-    },
-    Object {
-      "memoryUsage": 4.6,
-      "processUsage": 59.64,
-    },
-    Object {
-      "memoryUsage": 4,
-      "processUsage": 98.49,
-    },
-    Object {
-      "memoryUsage": 3.5,
-      "processUsage": 72.89,
-    },
-    Object {
-      "memoryUsage": 3.4,
-      "processUsage": 12.44,
-    },
-    Object {
-      "memoryUsage": 3.4,
-      "processUsage": 19.35,
-    },
-    Object {
-      "memoryUsage": 3.3,
-      "processUsage": 66.16,
-    },
-    Object {
-      "memoryUsage": 3,
-      "processUsage": 47.62,
-    },
-    Object {
-      "memoryUsage": 3,
-      "processUsage": 81.7,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 14.68,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 21.11,
-    },
-    Object {
-      "memoryUsage": 3,
-      "processUsage": 50.37,
-    },
-    Object {
-      "memoryUsage": 3,
-      "processUsage": 29.95,
-    },
-    Object {
-      "memoryUsage": 3,
-      "processUsage": 28.57,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 13.33,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 14.68,
-    },
-    Object {
-      "memoryUsage": 2.9,
-      "processUsage": 12.99,
-    },
-  ],
-  "highestMemoryUsage": 2.9,
-  "highestProcessUsage": 98.49,
-  "initialState": Object {
-    "memoryUsage": 2.9,
-    "processUsage": 6.75,
+  "avarages": Object {
+    "memoryUsage": 5.7,
+    "processUsage": 11.22,
+  },
+  "diff": Object {
+    "memory": 0,
+    "memoryAverage": 0,
+    "process": -9.9,
+    "processAvarage": -9.9,
+  },
+  "initial": Object {
+    "memoryUsage": 5.7,
+    "processUsage": 21.12,
   },
 }
 `;

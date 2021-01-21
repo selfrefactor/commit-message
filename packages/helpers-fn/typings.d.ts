@@ -1,6 +1,5 @@
 export function getStagedFiles(cwd: string): Promise<string[]>
 export function parseHjson(filePath: string): Promise<object>
-export function killVSCode(): Promise<void>
 
 // READ FOLDER
 // ============================================

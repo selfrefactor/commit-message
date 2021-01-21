@@ -11,12 +11,10 @@ const { parseHjson } = require('./exported/parse-hjson')
 const { runTests } = require('./exported/run-tests')
 const { scanFolder } = require('./exported/scan-folder')
 const { monitor, Monitor } = require('./exported/monitor')
-const { killVSCode } = require('./exported/kill-vscode')
 const { defaultTo } = require('./exported/default-to')
 const { getStagedFiles } = require('./exported/get-staged-files')
 
 exports.getStagedFiles = getStagedFiles
-exports.killVSCode = killVSCode
 exports.parseHjson = parseHjson
 exports.scanFolder = scanFolder
 exports.createBenchmark = createBenchmark
