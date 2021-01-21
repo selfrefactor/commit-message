@@ -27,21 +27,32 @@
 		],
 		"description": "import"
 	},
-	"commentX": {
-		"prefix": "comx",
+	"Test": {
+		"prefix": "test",
 		"body": [
-			"/**",
-			" * $0",
-			" */"
+      "test('happy', () => {",
+      "\tconst result = $0",
+      "\tconsole.log(result)",
+			"})"
 		],
-		"description": "commentx"
+		"description": "test"
+	},
+	"TestAsync": {
+		"prefix": "testa",
+		"body": [
+			"test('happy', async () => {",
+			"\tconst result = await $0",
+			"\tconsole.log(result)",
+			"})"
+		],
+		"description": "test async"
 	},
 	"commentMultiline": {
 		"prefix": "comm",
 		"body": [
-			"/*",
-			"  $0",
-			"*/"
+			"/**",
+			" * $0",
+			" */"
 		],
 		"description": "comment multiline"
 	},
@@ -51,7 +62,7 @@
 			"// $0",
 			"// ============================================"
 		],
-		"description": "comment"
+		"description": "comment with underline"
 	},
 	"StringTemplate": {
 		"prefix": "str",
