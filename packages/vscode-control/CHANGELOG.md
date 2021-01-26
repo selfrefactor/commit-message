@@ -1,4 +1,6 @@
  ===   
+ add separate constants for suggestions settings
+ ===   
  add slowbug extension
  ===   
  add markdown lint extension

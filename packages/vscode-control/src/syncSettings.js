@@ -12,7 +12,9 @@ import {
 } from './constants'
 
 const FONT_SIZE = 18
+const SUGGEST_FONT_SIZE = 13
 const LINE_HEIGHT = 23
+const SUGGEST_LINE_HEIGHT = 16
 const MONO = defaultTo('MONO', true, 'onoff') 
 const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
 const SCALE_FACTOR = process.env.SCALE === undefined ?
@@ -35,8 +37,8 @@ const getCalculatedOptions = () => {
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const zoomLevel = toDecimal(ZOOM * SCALE_FACTOR)
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
-  const suggestFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR + 0.1) ))
-  const suggestLineHeight = Math.round(toDecimal(LINE_HEIGHT * (SCALE_FACTOR + 0.1) ))
+  const suggestFontSize = Math.round(toDecimal(FONT_SIZE * (SUGGEST_FONT_SIZE + 0.1) ))
+  const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * (SCALE_FACTOR + 0.1) ))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
 
   const fontSettings = {
