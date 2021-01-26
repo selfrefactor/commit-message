@@ -20,14 +20,7 @@
 		],
 		"description": "requireX"
 	},
-	"ImportSnippet": {
-		"prefix": "imp",
-		"body": [
-			"import { ${1:method} } from '${0}'"
-		],
-		"description": "import"
-	},
-	"Test": {
+	"Test Snippet": {
 		"prefix": "test",
 		"body": [
       "test('happy', () => {",
@@ -48,7 +41,7 @@
 		"description": "test async"
 	},
 	"commentMultiline": {
-		"prefix": "comm",
+		"prefix": "com",
 		"body": [
 			"/**",
 			" * $0",
@@ -57,7 +50,7 @@
 		"description": "comment multiline"
 	},
 	"commentx": {
-		"prefix": "com",
+		"prefix": "comx",
 		"body": [
 			"// $0",
 			"// ============================================"
@@ -78,47 +71,21 @@
 		],
 		"description": "stx"
 	},
-	"TestSnippet": {
-		"prefix": "tst",
-		"body": [
-			"test('${1:happy}', () => {",
-			"\t$0",
-			"})"
-		],
-		"description": "test snippet"
-	},
-	"AsyncFunctionSnippet": {
-		"prefix": "asnc",
-		"body": [
-			"export async function $0(){",
-			"\t",
-			"}"
-		],
-		"description": "export async function SNIPPET"
-	},
-	"LogClipboard": {
-		"prefix": "lgc",
-		"body": [
-			"console.log(`${CLIPBOARD}`, ${CLIPBOARD} $0)"
-		],
-		"description": "log clipboard"
-	},
-	"TestAsyncSnippet": {
-		"prefix": "tsta",
-		"body": [
-			"test('${1:happy}', async () => {",
-			"\tconst result = await $0",
-			"\texpect(result).toEqual(expected)",
-			"})"
-		],
-		"description": "test SNIPPET"
-	},
 	"Export": {
 		"prefix": "exportx",
 		"body": [
 			"exports.${1:module} = ${1:module}"
 		],
 		"description": "export"
+	},
+	"Expect Snippet": {
+		"prefix": "exp",
+		"body": [
+			"expect(",
+			"\t$0",
+			").toEqual($1)"
+		],
+		"description": "ext"
 	},
 	"ExpectTruthy": {
 		"prefix": "expt",
@@ -138,14 +105,6 @@
 		],
 		"description": "x"
 	},
-	"ExpectEqual": {
-		"prefix": "exp",
-		"body": [
-			"expect(",
-			"\t${1:testResult}",
-			").toEqual($0)"
-		]
-	},
 	"ExpectSnapshot": {
 		"prefix": "snap",
 		"body": [
@@ -162,38 +121,26 @@
 			").toMatchInlineSnapshot()"
 		]
 	},
-	"Rambdax": {
-		"prefix": "ramx",
-		"body": [
-			"import { $0 } from 'rambdax'"
-		]
-	},
-	"RambdaxRequire": {
-		"prefix": "ramxq",
-		"body": [
-			"const { $0 } = require('rambdax')"
-		]
-	},
-	"LogRoot": {
+	"Log as object": {
 		"prefix": "lgr",
 		"body": [
 			"console.log({$0})"
 		],
 		"description": "log"
 	},
-	"LogString": {
-		"prefix": "lgs",
-		"body": [
-			"console.log(`$0`)"
-		],
-		"description": "log string"
-	},
-	"Lg": {
-		"prefix": "lgg",
+	"Log Snippet": {
+		"prefix": "lll",
 		"body": [
 			"console.log($0)"
 		],
 		"description": "simple log"
+	},
+	"Log Clipboard": {
+		"prefix": "ccc",
+		"body": [
+			"console.log(`${CLIPBOARD}`, ${CLIPBOARD} $0)"
+		],
+		"description": "log clipboard"
 	},
 	"LogDebug": {
 		"prefix": "lgd",
