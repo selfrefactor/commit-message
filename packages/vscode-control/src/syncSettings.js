@@ -37,8 +37,8 @@ const getCalculatedOptions = () => {
   const fontSize = toDecimal(FONT_SIZE * SCALE_FACTOR)
   const zoomLevel = toDecimal(ZOOM * SCALE_FACTOR)
   const lineHeight = Math.round(toDecimal(LINE_HEIGHT * SCALE_FACTOR))
-  const suggestFontSize = Math.round(toDecimal(FONT_SIZE * (SUGGEST_FONT_SIZE + 0.1) ))
-  const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * (SCALE_FACTOR + 0.1) ))
+  const suggestFontSize = Math.round(toDecimal(SUGGEST_FONT_SIZE * SCALE_FACTOR ))
+  const suggestLineHeight = Math.round(toDecimal(SUGGEST_LINE_HEIGHT * SCALE_FACTOR ))
   const terminalFontSize = Math.round(toDecimal(FONT_SIZE * (SCALE_FACTOR - 0.14) ))
 
   const fontSettings = {
