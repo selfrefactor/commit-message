@@ -5,7 +5,7 @@
   "editor.renderWhitespace": "selection",
   "emmet.showAbbreviationSuggestions": false,
   "explorer.openEditors.sortOrder": "alphabetical",
-  "explorer.sortOrder": "type",
+  "explorer.sortOrder": "default",
   "editor.quickSuggestions": true,
   "editor.tabCompletion": "on",
   "editor.wordBasedSuggestionsMode": "allDocuments",

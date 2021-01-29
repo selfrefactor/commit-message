@@ -35,7 +35,7 @@ void (async function main(){
       join('###'),
     )
 
-    return {preview, title, toc: `* [${title}](/stars-of-${title.toLowerCase()}.md) - list of ${total} repos`}
+    return {preview, title, toc: `* [${title}](https://github.com/selfrefactor/services/blob/master/packages/all-stars-of/stars-of-${title.toLowerCase()}.md) - list of ${total} repos`}
   }
   const sortedKeys = Object.keys(allModes).sort((a, b) => {
     if (allModes[ a ].priority === allModes[ b ].priority){

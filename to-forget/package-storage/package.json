@@ -1,9 +1,0 @@
-{
-	"name": "package-storage",
-	"version": "1.0.0",
-	"main": "index.js",
-	"typings": "index.d.ts",
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/package-storage",
-	"author": "Dejan Toteff <deyan8284@gmail.com>",
-	"license": "MIT"
-}

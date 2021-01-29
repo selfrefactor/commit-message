@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+  }
+}
+
+.range{
+  min-width: 70vw;
+}
+.range__container{
+  padding: 30px;
+  font-size:4vh;
+}
+.confirm__button{
+  width: 10vw;
+  font-size:4vh;
+}

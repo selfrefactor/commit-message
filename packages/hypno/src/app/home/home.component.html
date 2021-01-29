@@ -1,0 +1,9 @@
+<div *ngIf="answered" class="container" (click)="togglePause()">
+  <img src="{{imageUrl}}" />
+</div>
+<div *ngIf="!answered" class="range__container">
+  <input class="range" type="range" min="100" max="1000" step="50" #ranger (input)="onRangeChange(ranger.value)">
+  <button class="confirm__button" (click)="confirm()">start</button>
+  <div>{{tick}}</div>
+  <input class="range" type="range" min="1000" max="10000" step="500" #longrange (input)="onRangeChange(longrange.value)">
+</div>
