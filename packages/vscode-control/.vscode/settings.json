@@ -1,4 +1,5 @@
 {
+  "files.insertFinalNewline": true,
   "slowbug.stepDuration": 1500,
   "editor.letterSpacing": 0.3,
   "editor.cursorWidth": 2,
