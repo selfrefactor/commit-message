@@ -16,7 +16,7 @@
 
 ### Wallaby stop - ctrl+shift+7
 
-### copy relative path - `Shift+Caps Lock` when !editorFocus
+### copy relative path - `Shift+Caps Lock` when !editorFocus - this is available
 
 ### Pin - pin with `Alt+P`
 
