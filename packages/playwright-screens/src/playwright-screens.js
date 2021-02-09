@@ -39,13 +39,14 @@ async function snap({url, screen, label, waitForReady,waitForTime, screensDir}) 
 
 async function playwrightScreens({
   url,
+  screens,
   waitForTime = 2000,
   waitForReady = null,
   screensDir = `${process.cwd()}/screens`
 }){
   await mapAsync(async ({screen,label}) => {
     await snap({url, waitForTime, screen, label, waitForReady, screensDir})
-  }, SCREENS)
+  }, screens ? screens :  SCREENS)
 }
 
 exports.playwrightScreens = playwrightScreens
