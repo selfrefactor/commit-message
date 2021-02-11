@@ -1,5 +1,4 @@
 export function getStagedFiles(cwd: string): Promise<string[]>
-export function parseHjson(filePath: string): Promise<object>
 
 // READ FOLDER
 // ============================================
