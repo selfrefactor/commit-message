@@ -1,4 +1,8 @@
 {
+  "search.mode": "existingEditor",
+  "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.decorations.colors":true,
   "files.insertFinalNewline": true,
   "slowbug.stepDuration": 1500,
   "editor.letterSpacing": 0.3,
