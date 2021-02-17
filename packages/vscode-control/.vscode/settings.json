@@ -1,5 +1,5 @@
 {
-  "search.mode": "existingEditor",
+  "search.mode": "view",
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.wrapTabs": true,
   "workbench.editor.decorations.colors":true,
