@@ -89,7 +89,6 @@
   "terminal.integrated.fontSize": 18,
   "editor.fontFamily": "Operator Mono",
   "json.maxItemsComputed": 1000,
-  "debug.console.fontFamily": "Operator Mono",
   "debug.console.wordWrap": false,
   "debug.allowBreakpointsEverywhere": false,
   "debug.inlineValues": true,
