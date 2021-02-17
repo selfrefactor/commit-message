@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "mrmlnc.vscode-scss",
     "srimukh.slowbug",
     "quilicicf.markdown-spec-formatter",
     "helgardrichard.helium-icon-theme",
