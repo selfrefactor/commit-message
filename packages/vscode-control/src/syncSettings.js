@@ -79,7 +79,6 @@ function syncSettings(){
     ...getMinimapOptions(),
     ...getCalculatedOptions(),
     "workbench.colorTheme": "Archer",
-    'debug.console.fontFamily' :'Operator Mono',
   }
 
   writeJsonSync(
