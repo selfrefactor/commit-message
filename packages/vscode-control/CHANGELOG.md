@@ -1,4 +1,10 @@
  ===   
+   "workbench.editor.enablePreviewFromCodeNavigation": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.decorations.colors":true,
+
+  also alt+r does something
+ ===   
  add separate constants for suggestions settings
  ===   
  add slowbug extension
