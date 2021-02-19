@@ -1,10 +1,10 @@
 {
   "recommendations": [
+    "Equinusocio.vsc-material-theme-icons",
     "TabNine.tabnine-vscode",
     "mrmlnc.vscode-scss",
     "srimukh.slowbug",
     "quilicicf.markdown-spec-formatter",
-    "helgardrichard.helium-icon-theme",
     "alefragnani.separators",
     "CodeBiscuits.html-biscuits",
     "ms-vscode.vscode-typescript-next",

@@ -178,7 +178,7 @@
   "zenMode.hideStatusBar": false,
   "editor.suggest.localityBonus": true,
   "editor.scrollBeyondLastLine": false,
-  "workbench.iconTheme": "vs-seti",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
   "workbench.colorTheme": "AquaTeenHungerForce",
   "search.useGlobalIgnoreFiles": true,
   "workbench.list.keyboardNavigation": "simple",
