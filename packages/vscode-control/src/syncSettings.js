@@ -15,7 +15,7 @@ const FONT_SIZE = 18
 const SUGGEST_FONT_SIZE = 13
 const LINE_HEIGHT = 23
 const SUGGEST_LINE_HEIGHT = 16
-const MONO = defaultTo('MONO', true, 'onoff') 
+const MONO = defaultTo('MONO', false, 'onoff') 
 const MINI_MAP = defaultTo('MINI_MAP', false, 'onoff') 
 const SCALE_FACTOR = process.env.SCALE === undefined ?
   1 :
