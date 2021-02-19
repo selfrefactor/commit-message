@@ -1,12 +1,12 @@
 {
   "recommendations": [
+    "TabNine.tabnine-vscode",
     "mrmlnc.vscode-scss",
     "srimukh.slowbug",
     "quilicicf.markdown-spec-formatter",
     "helgardrichard.helium-icon-theme",
     "alefragnani.separators",
     "CodeBiscuits.html-biscuits",
-    "laktak.hjson",
     "ms-vscode.vscode-typescript-next",
     "tlent.jest-snapshot-language-support",
     "firefox-devtools.vscode-firefox-debug",
