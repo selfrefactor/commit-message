@@ -1,5 +1,6 @@
-const BASE = `${process.env.HOME}/.config/Code/User`
-// const BASE = `${process.env.HOME}/.config/Code - Insiders/User`
+const BASE_STABLE = `${process.env.HOME}/.config/Code/User`
+const BASE_BETA = `${process.env.HOME}/.config/Code - Insiders/User`
+const BASE = process.env.BETA === 'ON' ? BASE_BETA :BASE_STABLE
 
 export const KEYBINDING = `${BASE}/keybindings.json`
 export const SETTINGS = `${BASE}/settings.json`
