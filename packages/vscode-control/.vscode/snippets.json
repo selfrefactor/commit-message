@@ -30,6 +30,24 @@
 		],
 		"description": "test"
 	},
+	"FnAsyncSnippet": {
+		"prefix": "async",
+		"body": [
+			"export async function $0(){",
+			"\t",
+			"})"
+		],
+		"description": "test async"
+	},
+	"FnSnippet": {
+		"prefix": "func",
+		"body": [
+			"export function $0(){",
+			"\t",
+			"})"
+		],
+		"description": "test async"
+	},
 	"TestAsync": {
 		"prefix": "testa",
 		"body": [
