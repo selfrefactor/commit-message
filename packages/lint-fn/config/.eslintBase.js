@@ -34,7 +34,7 @@ const betweenStatements = {
 module.exports = {
   'node/no-deprecated-api': 1,
   'no-unsafe-optional-chaining': 1,
-  'node/file-extension-in-import': [1, 'never'],
+  'node/file-extension-in-import': [1, { ".js": "never", ".ts": "never" }],
   'node/callback-return': 0,
   'max-len': [1, {code: 90}],
   'function-paren-newline': [1, {minItems: 3}],
