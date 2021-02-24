@@ -1,20 +1,13 @@
 {
 	"scripts": {
 		"bed": "ZOOM_SCALE=0.96 MINI_MAP=ON SCALE=0.9 node syncSettings",
-		"bed:beta": "BETA=ON ZOOM_SCALE=0.96 MINI_MAP=ON SCALE=0.9 node syncSettings",
+		"bedx": "BETA=ON ZOOM_SCALE=0.96 MINI_MAP=ON SCALE=0.9 node syncSettings",
 		"css": "ZOOM_SCALE=0.65 MINI_MAP=OFF SCALE=1 node syncSettings",
-		"css:beta": "BETA=ON ZOOM_SCALE=0.65MINI_MAP=OFF SCALE=1 node syncSettings",
-		"workx": "ZOOM_SCALE=0.7 MINI_MAP=ON SCALE=1.18 node syncSettings",
-		"workx:beta": "BETA=ON ZOOM_SCALE=0.7 MINI_MAP=ON SCALE=1.18 node syncSettings",
-		"work": "ZOOM_SCALE=0.65 MINI_MAP=ON SCALE=1 node syncSettings",
-		"work:beta": "BETA=ON ZOOM_SCALE=0.75 MINI_MAP=ON SCALE=1 node syncSettings",
-		"close": "ZOOM_SCALE=0.9 MINI_MAP=ON SCALE=0.95 node syncSettings",
-		"close:beta": "BETA=ON ZOOM_SCALE=0.9 MINI_MAP=ON SCALE=0.95 node syncSettings",
+		"cssx": "BETA=ON ZOOM_SCALE=0.65MINI_MAP=OFF SCALE=1 node syncSettings",
+		"work": "ZOOM_SCALE=0.7 MINI_MAP=OFF SCALE=1.18 node syncSettings",
+		"workx": "BETA=ON ZOOM_SCALE=0.7 MINI_MAP=OFF SCALE=1.18 node syncSettings",
 		"tv": "ZOOM_SCALE=1.07 MINI_MAP=OFF SCALE=1.03 node syncSettings",
-		"tv:beta": "BETA=ON ZOOM_SCALE=1.07 MINI_MAP=OFF SCALE=1.03 node syncSettings",
-		"small": "ZOOM_SCALE=-0.75 MINI_MAP=OFF SCALE=0.75 node syncSettings",
-		"small:beta": "BETA=ON ZOOM_SCALE=-0.75 MINI_MAP=OFF SCALE=0.75 node syncSettings",
-		"mono": "MONO=ON MINI_MAP=OFF SCALE=0.92 node syncSettings"
+		"tvx": "BETA=ON ZOOM_SCALE=1.07 MINI_MAP=OFF SCALE=1.03 node syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",
