@@ -1,6 +1,6 @@
 {
 	"name": "lint-fn",
-	"version": "2.17.0",
+	"version": "2.17.1",
 	"description": "lint",
 	"main": "lintFn.js",
 	"typings": "index.d.ts",
