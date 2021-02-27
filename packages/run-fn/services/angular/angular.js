@@ -9,8 +9,9 @@ function findSource(){
   let found = ''
   range(1, 6).forEach(i => {
     if (found) return
-    const relativePath = repeat('../', i) + 'ng-foo/package.json'
+    const relativePath = (repeat('../', i)).join('') + 'ng-foo/package.json'
     const maybePath = resolve(CWD, relativePath)
+    console.log({maybePath, relativePath})
     if (existsSync(maybePath)) found = maybePath
   })
 

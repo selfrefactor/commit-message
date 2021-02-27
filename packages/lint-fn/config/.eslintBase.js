@@ -80,7 +80,7 @@ module.exports = {
   'max-params': [1, 3],
   'max-statements': [1, 50],
   'max-statements-per-line': [1, {max: 3}],
-  'multiline-ternary': [1,'always-multiline'],
+  'multiline-ternary': [1, 'always-multiline'],
   'newline-before-return': 1,
   'newline-per-chained-call': 1,
   'no-await-in-loop': 0,
