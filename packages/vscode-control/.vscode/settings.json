@@ -1,7 +1,8 @@
 {
   "tabnine.disable_file_regex": [
     "!**.scss"
-    ],
+  ],
+  "editor.lineNumbers": "off",
   "search.mode": "view",
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.wrapTabs": true,
