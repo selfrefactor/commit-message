@@ -147,14 +147,14 @@
 		"description": "log"
 	},
 	"Log Snippet": {
-		"prefix": "lll",
+		"prefix": "lgg",
 		"body": [
 			"console.log($0)"
 		],
 		"description": "simple log"
 	},
 	"Log Clipboard": {
-		"prefix": "ccc",
+		"prefix": "lgc",
 		"body": [
 			"console.log(`${CLIPBOARD}`, ${CLIPBOARD} $0)"
 		],
