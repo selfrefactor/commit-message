@@ -61,11 +61,11 @@ const getCalculatedOptions = () => {
 function getMinimapOptions(){
   const whenTrue = {
     "editor.minimap.enabled": true,
-    "editor.minimap.maxColumn": 50,
+    "editor.minimap.maxColumn": 40,
     "editor.minimap.renderCharacters": false,
-    "editor.minimap.scale": 2,
-    "editor.minimap.side": "left",
-    "editor.minimap.size": "fit",
+    "editor.minimap.scale": 1,
+    "editor.minimap.side": "right",
+    "editor.minimap.size": "fill",
   }
   const whenFalse = {
     "editor.minimap.enabled": false,

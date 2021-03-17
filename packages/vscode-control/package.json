@@ -4,8 +4,8 @@
 		"bedx": "BETA=ON ZOOM_SCALE=0.96 MINI_MAP=ON SCALE=0.9 node syncSettings",
 		"css": "ZOOM_SCALE=0.65 MINI_MAP=OFF SCALE=1 node syncSettings",
 		"cssx": "BETA=ON ZOOM_SCALE=0.65MINI_MAP=OFF SCALE=1 node syncSettings",
-		"work": "ZOOM_SCALE=0.7 MINI_MAP=OFF SCALE=1.18 node syncSettings",
-		"workx": "BETA=ON ZOOM_SCALE=0.5 MINI_MAP=OFF SCALE=1.05 node syncSettings",
+		"work": "ZOOM_SCALE=0.7 MINI_MAP=ON SCALE=1.18 node syncSettings",
+		"workx": "BETA=ON ZOOM_SCALE=0.5 MINI_MAP=ON SCALE=1.05 node syncSettings",
 		"tv": "ZOOM_SCALE=1.07 MINI_MAP=OFF SCALE=1.03 node syncSettings",
 		"tvx": "BETA=ON ZOOM_SCALE=1.07 MINI_MAP=OFF SCALE=1.03 node syncSettings"
 	},
