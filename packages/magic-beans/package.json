@@ -1,135 +1,517 @@
 {
-	"jest": {
-		"moduleFileExtensions": [
-			"js"
-		],
-		"testRegex": ".+spec.js$"
-	},
-	"icon": "files/magic-beans.png",
-	"name": "magic-beans",
-	"displayName": "Magic Beans",
-	"description": "Magic-like helpers",
-	"version": "2.2.1",
-	"publisher": "selfrefactor",
-	"engines": {
-		"vscode": "^1.30.1"
-	},
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"onCommand:magicBeans.copyTrimmed",
-		"onCommand:magicBeans.formatJson",
-		"onCommand:magicBeans.createSpec",
-		"onCommand:magicBeans.sortLines",
-		"onCommand:magicBeans.randomFile"
-	],
-	"main": "./src/extension",
-	"contributes": {
-		"commands": [
-			{
-				"command": "magicBeans.randomFile",
-				"title": "Start Magic Beans random file mode"
-			},
-			{
-				"command": "magicBeans.requestRandomFile",
-				"title": "Magic Beans request random file"
-			},
-			{
-				"command": "magicBeans.createSpec",
-				"title": "Create spec"
-			},
-			{
-				"command": "magicBeans.formatJson",
-				"title": "Format JSON"
-			},
-			{
-				"command": "magicBeans.sortLines",
-				"title": "Sort lines"
-			}
-		],
-		"keybindings": [
-			{
-				"command": "magicBeans.sortLines",
-				"key": "ctrl+shift+-"
-			},
-			{
-				"command": "magicBeans.randomFile",
-				"key": "f7"
-			},
-			{
-				"command": "magicBeans.requestRandomFile",
-				"key": "f6"
-			},
-			{
-				"command": "magicBeans.createSpec",
-				"key": "ctrl+shift+0"
-			},
-			{
-				"command": "magicBeans.copyTrimmed",
-				"key": "alt+c",
-				"when": "editorTextFocus"
-			}
-		],
-		"configuration": {
-			"type": "object",
-			"title": "MagicBeans",
-			"properties": {
-				"magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": {
-					"type": "array",
-					"uniqueItems": true,
-					"items": {
-						"type": "string"
-					},
-					"default": [
-						".html",
-						".js",
-						".jsx",
-						".tsx",
-						".css",
-						".scss",
-						".ts"
-					],
-					"description": "Which file extensions are allowed in random file mode"
-				},
-				"magicBeans.RANDOM_FILE_SKIP_PATTERNS": {
-					"type": "array",
-					"items": {
-						"type": "string"
-					},
-					"uniqueItems": true,
-					"default": [
-						"node_modules",
-						"coverage",
-						"vendor",
-						"bin",
-						".git"
-					],
-					"description": "Which directories are excluded in random file mode"
-				}
-			}
-		}
-	},
-	"scripts": {
-		"test": "jest src/_modules",
-		"postinstall": "node ./node_modules/vscode/bin/install"
-	},
-	"devDependencies": {
-		"@babel/core": "7.12.10",
-		"@babel/plugin-proposal-object-rest-spread": "7.12.1",
-		"@babel/preset-env": "7.12.11",
-		"@types/jest": "26.0.19",
-		"jest": "27.0.0-next.2",
-		"typescript": "4.2.0-dev.20210103",
-		"vscode": "1.1.37"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/selfrefactor/services/tree/master/packages/magic-beans"
-	},
-	"dependencies": {
-		"helpers-fn": "1.3.2",
-		"rambdax": "7.1.0",
-		"string-fn": "3.1.0"
-	}
+  "name": "magic-beans",
+  "scripts": {
+    "test": "jest src/_modules",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "main": "./src/extension",
+  "version": "2.2.1",
+  "dependencies": {
+    "helpers-fn": "1.3.2",
+    "rambdax": "7.1.0",
+    "string-fn": "3.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.12.10",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@babel/preset-env": "7.12.11",
+    "@types/jest": "26.0.19",
+    "jest": "27.0.0-next.2",
+    "typescript": "4.2.0-dev.20210103",
+    "vscode": "1.1.37"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testRegex": ".+spec.js$"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selfrefactor/services/tree/master/packages/magic-beans"
+  },
+  "icon": "files/magic-beans.png",
+  "displayName": "Magic Beans",
+  "description": "Magic-like helpers",
+  "publisher": "selfrefactor",
+  "engines": {
+    "vscode": "^1.30.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:magicBeans.copyTrimmed",
+    "onCommand:magicBeans.formatJson",
+    "onCommand:magicBeans.createSpec",
+    "onCommand:magicBeans.sortLines",
+    "onCommand:magicBeans.randomFile"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "magicBeans.randomFile",
+        "title": "Start Magic Beans random file mode"
+      },
+      {
+        "command": "magicBeans.requestRandomFile",
+        "title": "Magic Beans request random file"
+      },
+      {
+        "command": "magicBeans.createSpec",
+        "title": "Create spec"
+      },
+      {
+        "command": "magicBeans.formatJson",
+        "title": "Format JSON"
+      },
+      {
+        "command": "magicBeans.sortLines",
+        "title": "Sort lines"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "magicBeans.sortLines",
+        "key": "ctrl+shift+-"
+      },
+      {
+        "command": "magicBeans.randomFile",
+        "key": "f7"
+      },
+      {
+        "command": "magicBeans.requestRandomFile",
+        "key": "f6"
+      },
+      {
+        "command": "magicBeans.createSpec",
+        "key": "ctrl+shift+0"
+      },
+      {
+        "command": "magicBeans.copyTrimmed",
+        "key": "alt+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "a",
+        "win": "a",
+        "linux": "a",
+        "key": "a",
+        "when": "filesExplorerFocus && !inputFocus",
+        "command": "explorer.newFile"
+      },
+      {
+        "mac": "shift+a",
+        "win": "shift+a",
+        "linux": "shift+a",
+        "key": "shift+a",
+        "when": "filesExplorerFocus && !inputFocus",
+        "command": "explorer.newFolder"
+      },
+      {
+        "mac": "cmd+1",
+        "win": "ctrl+1",
+        "linux": "ctrl+1",
+        "key": "ctrl+1",
+        "when": "filesExplorerFocus && !inputFocus",
+        "command": "explorer.openToSide"
+      },
+      {
+        "mac": "cmd+c",
+        "win": "ctrl+c",
+        "linux": "ctrl+c",
+        "key": "ctrl+c",
+        "when": "filesExplorerFocus && !inputFocus",
+        "command": "filesExplorer.copy"
+      },
+      {
+        "mac": "ctrl+cmd+down",
+        "win": "ctrl+down",
+        "linux": "ctrl+down",
+        "key": "ctrl+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "ctrl+cmd+up",
+        "win": "ctrl+up",
+        "linux": "ctrl+up",
+        "key": "ctrl+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+shift+d",
+        "win": "ctrl+shift+d",
+        "linux": "ctrl+shift+d",
+        "key": "ctrl+shift+d",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus"
+      },
+      {
+        "win": "ctrl+shift+o",
+        "linux": "ctrl+shift+o",
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.files.openFolder"
+      },
+      {
+        "mac": "cmd+shift+o",
+        "key": "none",
+        "command": "workbench.action.files.openFileFolder"
+      },
+      {
+        "mac": "ctrl+m",
+        "win": "ctrl+m",
+        "linux": "ctrl+m",
+        "key": "ctrl+m",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+l",
+        "win": "ctrl+l",
+        "linux": "ctrl+l",
+        "key": "ctrl+l",
+        "command": "expandLineSelection",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "ctrl+shift+up",
+        "linux": "shift+alt+up",
+        "key": "shift+alt+up",
+        "command": "cursorColumnSelectUp",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "ctrl+shift+down",
+        "linux": "shift+alt+down",
+        "key": "shift+alt+down",
+        "command": "cursorColumnSelectDown",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "ctrl+alt+b",
+        "win": "alt+shift+f",
+        "linux": "ctrl+shift+i",
+        "key": "ctrl+shift+i",
+        "command": "editor.action.format",
+        "when": "editorHasFormattingProvider && editorTextFocus && !editorReadonly"
+      },
+      {
+        "mac": "ctrl+alt+t",
+        "win": "ctrl+`",
+        "linux": "ctrl+`",
+        "key": "ctrl+`",
+        "command": "workbench.action.terminal.toggleTerminal"
+      },
+      {
+        "mac": "ctrl+cmd+f",
+        "win": "f11",
+        "linux": "f11",
+        "key": "f11",
+        "command": "workbench.action.toggleFullScreen"
+      },
+      {
+        "mac": "cmd+r",
+        "win": "ctrl+r",
+        "linux": "ctrl+r",
+        "key": "ctrl+r",
+        "command": "workbench.action.gotoSymbol"
+      },
+      {
+        "mac": "alt+cmd+[",
+        "win": "alt+ctrl+[",
+        "linux": "alt+ctrl+[",
+        "key": "alt+ctrl+[",
+        "command": "editor.fold",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "alt+cmd+]",
+        "win": "alt+ctrl+]",
+        "linux": "alt+ctrl+]",
+        "key": "alt+ctrl+]",
+        "command": "editor.unfold",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "alt+cmd+shift+[",
+        "win": "alt+ctrl+shift+[",
+        "linux": "alt+ctrl+shift+[",
+        "key": "alt+ctrl+shift+[",
+        "command": "editor.foldAll",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "alt+cmd+shift+]",
+        "win": "alt+ctrl+shift+]",
+        "linux": "alt+ctrl+shift+]",
+        "key": "alt+ctrl+shift+]",
+        "command": "editor.unfoldAll",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+shift+7",
+        "key": "cmd+k cmd+c",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+=",
+        "key": "ctrl+=",
+        "command": "workbench.action.zoomIn"
+      },
+      {
+        "mac": "cmd+-",
+        "key": "ctrl+-",
+        "command": "workbench.action.zoomOut"
+      },
+      {
+        "mac": "cmd+k cmd+1",
+        "win": "ctrl+k ctrl+1",
+        "linux": "ctrl+k ctrl+1",
+        "key": "ctrl+k ctrl+1",
+        "command": "editor.foldLevel1",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+k cmd+2",
+        "win": "ctrl+k ctrl+2",
+        "linux": "ctrl+k ctrl+2",
+        "key": "ctrl+k ctrl+2",
+        "command": "editor.foldLevel2",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+k cmd+3",
+        "win": "ctrl+k ctrl+3",
+        "linux": "ctrl+k ctrl+3",
+        "key": "ctrl+k ctrl+3",
+        "command": "editor.foldLevel3",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+k cmd+4",
+        "win": "ctrl+k ctrl+4",
+        "linux": "ctrl+k ctrl+4",
+        "key": "ctrl+k ctrl+4",
+        "command": "editor.foldLevel4",
+        "when": "editorTextFocus"
+      },
+      {
+        "mac": "cmd+k cmd+5",
+        "win": "ctrl+k ctrl+5",
+        "linux": "ctrl+k ctrl+5",
+        "key": "ctrl+k ctrl+5",
+        "command": "editor.foldLevel5",
+        "when": "editorTextFocus"
+      },
+      {
+        "win": "ctrl+pagedown",
+        "linux": "ctrl+pagedown",
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.nextEditor"
+      },
+      {
+        "win": "ctrl+pageup",
+        "linux": "ctrl+pageup",
+        "key": "ctrl+pageup",
+        "command": "workbench.action.previousEditor"
+      },
+      {
+        "mac": "ctrl+cmd+g",
+        "win": "alt+f3",
+        "linux": "alt+f3",
+        "key": "alt+f3",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+      },
+      {
+        "mac": "cmd+shift+l",
+        "linux": "alt+shift+l",
+        "win": "alt+shift+l",
+        "key": "alt+shift+l",
+        "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+        "when": "editorTextFocus && editorHasSelection"
+      },
+      {
+        "mac": "cmd+-",
+        "win": "ctrl+-",
+        "linux": "ctrl+-",
+        "key": "ctrl+-",
+        "command": "workbench.action.zoomOut"
+      },
+      {
+        "mac": "cmd+1",
+        "win": "alt+1",
+        "linux": "alt+1",
+        "key": "alt+1",
+        "command": "workbench.action.openEditorAtIndex1"
+      },
+      {
+        "mac": "cmd+2",
+        "win": "alt+2",
+        "linux": "alt+2",
+        "key": "alt+2",
+        "command": "workbench.action.openEditorAtIndex2"
+      },
+      {
+        "mac": "cmd+3",
+        "win": "alt+3",
+        "linux": "alt+3",
+        "key": "alt+3",
+        "command": "workbench.action.openEditorAtIndex3"
+      },
+      {
+        "mac": "cmd+4",
+        "win": "alt+4",
+        "linux": "alt+4",
+        "key": "alt+4",
+        "command": "workbench.action.openEditorAtIndex4"
+      },
+      {
+        "mac": "cmd+5",
+        "win": "alt+5",
+        "linux": "alt+5",
+        "key": "alt+5",
+        "command": "workbench.action.openEditorAtIndex5"
+      },
+      {
+        "mac": "cmd+6",
+        "win": "alt+6",
+        "linux": "alt+6",
+        "key": "alt+6",
+        "command": "workbench.action.openEditorAtIndex6"
+      },
+      {
+        "mac": "cmd+7",
+        "win": "alt+7",
+        "linux": "alt+7",
+        "key": "alt+7",
+        "command": "workbench.action.openEditorAtIndex7"
+      },
+      {
+        "mac": "cmd+8",
+        "win": "alt+8",
+        "linux": "alt+8",
+        "key": "alt+8",
+        "command": "workbench.action.openEditorAtIndex8"
+      },
+      {
+        "mac": "cmd+9",
+        "win": "alt+9",
+        "linux": "alt+9",
+        "key": "alt+9",
+        "command": "workbench.action.openEditorAtIndex9"
+      },
+      {
+        "mac": "alt+cmd+\\",
+        "win": "ctrl+shift+\\",
+        "linux": "ctrl+shift+\\",
+        "key": "ctrl+shift+\\",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+      },
+      {
+        "mac": "ctrl+shift+c",
+        "win": "ctrl+shift+c",
+        "linux": "ctrl+shift+c",
+        "key": "ctrl+shift+c",
+        "command": "workbench.action.files.copyPathOfActiveFile",
+        "when": "!terminalFocus"
+      },
+      {
+        "mac": "cmd+,",
+        "win": "ctrl+,",
+        "linux": "ctrl+,",
+        "key": "ctrl+,",
+        "command": "workbench.action.openGlobalSettings"
+      },
+      {
+        "mac": "cmd+b",
+        "win": "ctrl+b",
+        "linux": "ctrl+b",
+        "key": "ctrl+b",
+        "command": "workbench.action.showAllEditors"
+      },
+      {
+        "mac": "cmd+ctrl+shift+f",
+        "win": "shift+f11",
+        "linux": "shift+f11",
+        "key": "shift+f11",
+        "command": "workbench.action.toggleZenMode"
+      },
+      {
+        "mac": "cmd+y",
+        "win": "ctrl+y",
+        "linux": "ctrl+y",
+        "key": "ctrl+y",
+        "command": "redo"
+      },
+      {
+        "mac": "cmd+j",
+        "linux": "ctrl+j",
+        "win": "ctrl+j",
+        "key": "ctrl+j",
+        "command": "editor.action.joinLines"
+      },
+      {
+        "mac": "cmd+p",
+        "win": "ctrl+p",
+        "linux": "ctrl+p",
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenPreviousEditor"
+      },
+      {
+        "key": "/",
+        "command": "list.toggleKeyboardNavigation",
+        "when": "listFocus && !inputFocus && listSupportsKeyboardNavigation"
+      },
+      {
+        "mac": "cmd+k",
+        "win": "ctrl+k",
+        "linux": "ctrl+k",
+        "key": "ctrl+k",
+        "command": "workbench.action.terminal.clear",
+        "when": "terminalFocus"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "MagicBeans",
+      "properties": {
+        "magicBeans.RANDOM_FILE_ALLOWED_EXTENSIONS": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            ".html",
+            ".js",
+            ".jsx",
+            ".tsx",
+            ".css",
+            ".scss",
+            ".ts"
+          ],
+          "description": "Which file extensions are allowed in random file mode"
+        },
+        "magicBeans.RANDOM_FILE_SKIP_PATTERNS": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true,
+          "default": [
+            "node_modules",
+            "coverage",
+            "vendor",
+            "bin",
+            ".git"
+          ],
+          "description": "Which directories are excluded in random file mode"
+        }
+      }
+    }
+  }
 }
