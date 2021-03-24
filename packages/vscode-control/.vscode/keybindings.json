@@ -422,6 +422,46 @@
     "key": "ctrl+shift+a",
     "command": "-relativeImport.quickPick",
     "when": "editorTextFocus"
+  },
+  {
+    "mac": "a",
+    "win": "a",
+    "linux": "a",
+    "key": "a",
+    "when": "filesExplorerFocus && !inputFocus",
+    "command": "explorer.newFile"
+  },
+  {
+    "mac": "shift+a",
+    "win": "shift+a",
+    "linux": "shift+a",
+    "key": "shift+a",
+    "when": "filesExplorerFocus && !inputFocus",
+    "command": "explorer.newFolder"
+  },
+  {
+    "mac": "ctrl+cmd+down",
+    "win": "ctrl+down",
+    "linux": "ctrl+down",
+    "key": "ctrl+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "mac": "ctrl+cmd+up",
+    "win": "ctrl+up",
+    "linux": "ctrl+up",
+    "key": "ctrl+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus"
+  },
+  {
+    "mac": "cmd+shift+d",
+    "win": "ctrl+shift+d",
+    "linux": "ctrl+shift+d",
+    "key": "ctrl+shift+d",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus"
   }
 ]
 
