@@ -5,7 +5,7 @@
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "main": "./src/extension",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "dependencies": {
     "helpers-fn": "1.3.2",
     "rambdax": "7.1.0",
