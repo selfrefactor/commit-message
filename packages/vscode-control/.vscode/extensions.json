@@ -19,7 +19,6 @@
     "selfrefactor.Niketa-theme",
     "selfrefactor.niketatools",
     "christian-kohler.path-intellisense",
-    "naumovs.color-highlight",
-    "ms-vscode.atom-keybindings"
+    "naumovs.color-highlight"
   ]
 }
