@@ -4,6 +4,12 @@ Linux MP3 player which applies various sound effects to the songs
 
 ## Bugs
 
+Manjaro
+
+`sudo pacman -S gconf`
+
+Ubuntu
+
 `sudo apt-get install libgtk2.0-0`
 
 ## Screen
