@@ -4,7 +4,7 @@
   "description": "Fork of react-toast",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
-  "module": "dist/react-toast.esm.js",
+  "module": "dist/react-toast-fork.esm.js",
   "scripts": {
     "dev": "tsdx watch",
     "start": "cd playground && yarn start",
@@ -27,16 +27,6 @@
     "minimal",
     "react toast",
     "react notification"
-  ],
-  "size-limit": [
-    {
-      "path": "dist/react-toast.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/react-toast.esm.js",
-      "limit": "10 KB"
-    }
   ],
   "peerDependencies": {
     "react": ">=16"
