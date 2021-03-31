@@ -1,6 +1,6 @@
 {
   "name": "react-toast-fork",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fork of react-toast",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -18,8 +18,8 @@
     "dist",
     "src"
   ],
-	"repository": "https://github.com/selfrefactor/services/tree/master/packages/react-toast-fork",
-	"author": "selfrefactor <deyan8284@gmail.com>",
+  "repository": "https://github.com/selfrefactor/services/tree/master/packages/react-toast-fork",
+  "author": "selfrefactor <deyan8284@gmail.com>",
   "license": "MIT",
   "keywords": [
     "react",
