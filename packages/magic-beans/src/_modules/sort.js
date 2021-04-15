@@ -79,9 +79,8 @@ const simpleSort = (a, b) => a === b ? 0 : a > b ? 1 : -1
 
 const isSimple = line => {
   const hasBrackets = line.includes(':{') || line.includes(': {')
-  const isOneLineObject = hasBrackets && line.includes('}')
 
-  return hasBrackets ? isOneLineObject : true
+  return hasBrackets ? hasBrackets && line.includes('}') : true
 }
 
 const getProp = line => init(head(match(/[a-zA-Z\s]+:/, line)))

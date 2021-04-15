@@ -9,8 +9,8 @@ const {
 } = require('rambdax')
 const { configAnt } = require('./ants/config')
 const { logToUser } = require('./bar')
-const { scanFolder } = require('helpers-fn')
 const { REQUEST_RANDOM_FILE } = require('./constants')
+const { scanFolder } = require('helpers-fn')
 
 const RANDOM_FILE_SKIP_PATTERNS = configAnt('RANDOM_FILE_SKIP_PATTERNS')
 const RANDOM_FILE_ALLOWED_EXTENSIONS = configAnt('RANDOM_FILE_ALLOWED_EXTENSIONS')
@@ -35,17 +35,15 @@ function requestRandomFile(){
 }
 
 async function randomFile(){
-  if(getter(REQUEST_RANDOM_FILE)) return
+  if (getter(REQUEST_RANDOM_FILE)) return
   setter(REQUEST_RANDOM_FILE, true)
-  
+
   const projectFolder = vscode.workspace.workspaceFolders[ 0 ].uri.path
   const files = await scanFolder({
     folder    : projectFolder,
     maxDepth  : 20,
-    excludeFn : dir => {
-      return RANDOM_FILE_SKIP_PATTERNS.includes(dir)
-    },
-    filterFn : filePath => {
+    excludeFn : dir => RANDOM_FILE_SKIP_PATTERNS.includes(dir),
+    filterFn  : filePath => {
       const [ pass ] = RANDOM_FILE_ALLOWED_EXTENSIONS.filter(singleExtension => filePath.endsWith(singleExtension))
 
       return Boolean(pass)

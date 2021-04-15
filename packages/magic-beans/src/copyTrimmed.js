@@ -1,6 +1,6 @@
 const vscode = require('vscode')
+const { logToUser } = require('./bar')
 const { update, last } = require('rambdax')
-const {logToUser} = require('./bar')
 
 function copy(x){
   vscode.env.clipboard.writeText(x)
