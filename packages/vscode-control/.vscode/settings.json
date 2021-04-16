@@ -2,11 +2,12 @@
   "tabnine.disable_file_regex": [
     "!**.scss"
   ],
+  "workbench.editor.decorations.badges":false,
+  "workbench.editor.decorations.colors": false,
   "editor.lineNumbers": "off",
   "search.mode": "view",
   "workbench.editor.enablePreviewFromCodeNavigation": true,
   "workbench.editor.wrapTabs": true,
-  "workbench.editor.decorations.colors":true,
   "files.insertFinalNewline": true,
   "slowbug.stepDuration": 1500,
   "editor.letterSpacing": 0.3,
