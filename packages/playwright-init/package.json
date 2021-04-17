@@ -8,24 +8,26 @@
 	"typings": "./index.d.ts",
 	"main": "./src/playwright-init.js",
 	"version": "0.3.0",
-	"dependencies": {},
+	"dependencies": {
+		
+	},
 	"peerDependencies": {
 		"string-fn": "3.1.0",
-		"rambdax": "7.0.1",
+		"rambdax": "7.2.0",
 		"playwright-wrap": "0.1.0",
 		"playwright": "1.6.1"
 	},
 	"devDependencies": {
 		"string-fn": "3.1.0",
-		"rambdax": "7.1.0",
-		"playwright": "1.7.0-next.1606332867472",
-		"playwright-wrap": "0.4.0",
-		"@types/node": "14.14.10",
-		"@types/jest": "26.0.15",
+		"rambdax": "7.2.0",
+		"playwright": "1.10.0",
+		"playwright-wrap": "0.7.0",
+		"@types/node": "14.14.41",
+		"@types/jest": "26.0.22",
 		"jest": "26.6.3",
-		"@babel/core": "7.12.9",
-		"@babel/plugin-proposal-object-rest-spread": "7.12.1",
-		"@babel/preset-env": "7.12.7"
+		"@babel/core": "7.13.15",
+		"@babel/plugin-proposal-object-rest-spread": "7.13.8",
+		"@babel/preset-env": "7.13.15"
 	},
 	"repository": "https://github.com/selfrefactor/services/tree/master/packages/playwright-init",
 	"license": "MIT",
