@@ -17,7 +17,7 @@
   "editor.suggest.showProperties": false,
   "editor.suggest.showOperators": false,
   "editor.suggest.showReferences": false,
-  "editor.suggest.showSnippets": false,
+  "editor.suggest.showSnippets": true,
   "editor.suggest.showStructs": false,
   "editor.suggest.showUnits": false,
   "editor.suggest.showUsers": false,
@@ -30,4 +30,4 @@
   "php.suggest.basic": false,
   "javascript.suggest.completeJSDocs": false,
   "javascript.suggest.includeAutomaticOptionalChainCompletions": false,
-  "javascript.suggest.autoImports": false
+  "javascript.suggest.autoImports": true
