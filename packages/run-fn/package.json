@@ -19,8 +19,8 @@
 	"dependencies": {
 		"niketa": "1.9.0",
 		"clipboardy": "2.3.0",
-		"commit-fn": "2.5.0",
-		"dep-fn": "2.1.1",
+		"commit-fn": "2.7.0",
+		"dep-fn": "2.1.2",
 		"fs-extra": "9.1.0",
 		"helpers-fn": "1.6.0",
 		"lint-fn": "2.18.0",
@@ -28,6 +28,6 @@
 		"string-fn": "3.1.0"
 	},
 	"devDependencies": {
-		"typescript": "4.2.2"
+		"typescript": "4.2.4"
 	}
 }
