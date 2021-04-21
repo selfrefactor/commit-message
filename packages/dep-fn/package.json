@@ -9,7 +9,7 @@
 	},
 	"main": "dist/index.js",
 	"typings": "index.d.ts",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"dependencies": {
 		"fs-extra": "9.1.0",
 		"helpers-fn": "1.6.0",
