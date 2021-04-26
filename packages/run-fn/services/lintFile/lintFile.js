@@ -4,7 +4,7 @@ const { lintFn } = require('lint-fn')
 async function lintFile(filePathRaw){
   const filePath = `${ CWD }/${ filePathRaw }`
 
-  await lintFn(filePath, 'local')
+  await lintFn(filePath, 'outer')
 }
 
 exports.lintFile = lintFile
