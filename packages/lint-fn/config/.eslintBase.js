@@ -18,12 +18,6 @@ const curlySpacing = {
   arraysInObjects: true,
   objectsInObjects: true,
 }
-const memberSyntaxSortOrder = ['none', 'all', 'multiple', 'single']
-const sortImports = {
-  ignoreCase: true,
-  ignoreMemberSort: true,
-  memberSyntaxSortOrder,
-}
 const linesClass = [1, 'always', {exceptAfterSingleLine: true}]
 const betweenStatements = {
   blankLine: 'always',
@@ -34,7 +28,6 @@ const betweenStatements = {
 module.exports = {
   'node/no-deprecated-api': 1,
   'no-unsafe-optional-chaining': 1,
-  // 'node/file-extension-in-import': [1, { ".js": "never", ".ts": "never" }],
   'node/callback-return': 0,
   'max-len': [1, {code: 90}],
   'function-paren-newline': [1, {minItems: 3}],
