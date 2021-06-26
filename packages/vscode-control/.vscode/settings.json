@@ -1,4 +1,20 @@
 {
+   "blockmanx.n04ColorComboPreset": "Classic Dark 2 (Gradients)",
+  "blockmanx.n16EnableFocus": false,
+  "blockmanx.n21BorderRadius": 0,
+  "blockmanx.n05CustomColorOfDepth0": "none",
+  "blockmanx.n06CustomColorOfDepth1": "rgba(0,0,0,.1)",
+  "blockmanx.n07CustomColorOfDepth2": "rgba(0,0,0,.2)",
+  "blockmanx.n08CustomColorOfDepth3": "rgba(0,0,0,.3)",
+  "blockmanx.n09CustomColorOfDepth4": "rgba(0,0,0,.4)",
+  "blockmanx.n10CustomColorOfDepth5": "none",
+  "blockmanx.n11CustomColorOfDepth6": "none",
+  "blockmanx.n12CustomColorOfDepth7": "none",
+  "blockmanx.n12CustomColorOfDepth8": "none",
+  "blockmanx.n14CustomColorOfDepth9": "none",
+  "blockmanx.n18CustomColorOfFocusedBlockBorder": "none",
+  "blockmanx.n19CustomColorOfBlockBorder": "none",
+  "blockmanx.n20CustomColorOfDepth0Border": "none",
   "tabnine.disable_file_regex": [
     "!**.scss"
   ],
