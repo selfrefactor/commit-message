@@ -7,10 +7,8 @@
 	},
 	"typings": "./index.d.ts",
 	"main": "./src/playwright-init.js",
-	"version": "0.4.0",
-	"dependencies": {
-		
-	},
+	"version": "0.4.1",
+	"dependencies": {},
 	"peerDependencies": {
 		"string-fn": "3.1.0",
 		"rambdax": "7.2.0",
