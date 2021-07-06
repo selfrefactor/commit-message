@@ -8,14 +8,14 @@
 	"author": "selfrefactor <deyan8284@gmail.com>",
 	"license": "MIT",
 	"dependencies": {
-		"rambdax": "7.1.0",
-		"playwright-init": "0.3.0",
+		"rambdax": "7.2.0",
+		"playwright-init": "0.4.0",
 		"string-fn": "3.1.0"
 	},
 	"peerDependencies": {
 		"playwright": "1.6.1"
 	},
 	"devDependencies": {
-		"playwright": "1.7.0-next.1606332867472"
+		"playwright": "1.12.3"
 	}
 }
