@@ -95,6 +95,11 @@ module.exports = {
     "@typescript-eslint/prefer-function-type": 1,
     "@typescript-eslint/prefer-includes": 1,
     "@typescript-eslint/prefer-optional-chain": 1,
-    "@typescript-eslint/type-annotation-spacing": 1
+    "@typescript-eslint/type-annotation-spacing": 1,
+    "@typescript-eslint/non-nullable-type-assertion-style": 1,
+    "@typescript-eslint/no-unnecessary-type-constraint": 1,
+    "@typescript-eslint/prefer-string-starts-ends-with": 1,
+    "@typescript-eslint/no-extra-non-null-assertion": 1,
+    "@typescript-eslint/no-confusing-void-expression": 1
   }
 }
