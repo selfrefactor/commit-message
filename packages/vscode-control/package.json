@@ -11,8 +11,8 @@
 		"tv:1": "ZOOM_SCALE=1.27 MINI_MAP=ON SCALE=1.23 node syncSettings",
 		"tv:2": "BETA=ON ZOOM_SCALE=1.27 MINI_MAP=ON SCALE=1.23 node syncSettings",
 		"big": "yarn big:1&&yarn big:2",
-		"big:1": "ZOOM_SCALE=1.5 MINI_MAP=ON SCALE=1.5 node syncSettings",
-		"big:2": "BETA=ON ZOOM_SCALE=1.5 MINI_MAP=ON SCALE=1.5 node syncSettings"
+		"big:1": "ZOOM_SCALE=1.6 MINI_MAP=ON SCALE=1.6 node syncSettings",
+		"big:2": "BETA=ON ZOOM_SCALE=1.6 MINI_MAP=ON SCALE=1.6 node syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",
