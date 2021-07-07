@@ -9,7 +9,10 @@
 		"work:2": "BETA=ON ZOOM_SCALE=0.7 MINI_MAP=ON SCALE=1.18 node syncSettings",
 		"tv": "yarn tv:1&&yarn tv:2",
 		"tv:1": "ZOOM_SCALE=1.27 MINI_MAP=ON SCALE=1.23 node syncSettings",
-		"tv:2": "BETA=ON ZOOM_SCALE=1.27 MINI_MAP=ON SCALE=1.23 node syncSettings"
+		"tv:2": "BETA=ON ZOOM_SCALE=1.27 MINI_MAP=ON SCALE=1.23 node syncSettings",
+		"big": "yarn big:1&&yarn big:2",
+		"big:1": "ZOOM_SCALE=1.5 MINI_MAP=ON SCALE=1.5 node syncSettings",
+		"big:2": "BETA=ON ZOOM_SCALE=1.5 MINI_MAP=ON SCALE=1.5 node syncSettings"
 	},
 	"name": "vscode-control",
 	"version": "0.1.0",
