@@ -1,6 +1,6 @@
 {
   "terminal.integrated.defaultLocation": "editor",
-  "terminal.integrated.gpuAcceleration": "canvas",
+  "terminal.integratedx.gpuAcceleration": "canvas",
   "workbench.editor.decorations.badges":false,
   "workbench.editor.decorations.colors": false,
   "editor.lineNumbers": "on",
