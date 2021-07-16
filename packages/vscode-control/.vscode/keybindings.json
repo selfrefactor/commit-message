@@ -1,5 +1,14 @@
 [
   {
+    "key": "ctrl+shift+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "alt+s",
+    "command": "workbench.action.terminal.newInActiveWorkspace"
+  },
+  {
     "key": "ctrl+shift+4",
     "command": "wallaby.stop"
   },
@@ -171,7 +180,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "alt+s",
+    "key": "ctrl+shift+c",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
