@@ -1,4 +1,6 @@
 {
+  "editor.scrollbar.verticalScrollbarSize": 60,
+  "editor.scrollbar.vertical": "visible",
   "terminal.integrated.defaultLocation": "editor",
   "terminal.integratedx.gpuAcceleration": "canvas",
   "workbench.editor.decorations.badges":false,
