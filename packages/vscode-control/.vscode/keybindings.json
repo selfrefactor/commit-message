@@ -1,12 +1,12 @@
 [
+    {
+    "key": "ctrl+shift+c",
+    "command": "workbench.action.createTerminalEditor"
+  },
   {
     "key": "ctrl+shift+c",
     "command": "-workbench.action.terminal.openNativeConsole",
     "when": "!terminalFocus"
-  },
-  {
-    "key": "alt+s",
-    "command": "workbench.action.terminal.newInActiveWorkspace"
   },
   {
     "key": "ctrl+shift+4",
@@ -180,7 +180,7 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
-    "key": "ctrl+shift+c",
+    "key": "alt+s",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
