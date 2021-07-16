@@ -5,7 +5,7 @@
     "when": "terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
   },
   {
-    "key": "ctrl+shift+c",
+    "key": "ctrl+shift+a",
     "command": "workbench.action.createTerminalEditor"
   },
   {
@@ -427,10 +427,6 @@
     "key": "ctrl+k shift+enter",
     "command": "-workbench.action.unpinEditor",
     "when": "activeEditorIsPinned"
-  },
-  {
-    "key": "ctrl+shift+a",
-    "command": "workbench.action.terminal.focusNext"
   },
   {
     "key": "ctrl+shift+a",
