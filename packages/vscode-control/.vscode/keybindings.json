@@ -1,5 +1,10 @@
 [
-    {
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.killEditor",
+    "when": "terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
+  },
+  {
     "key": "ctrl+shift+c",
     "command": "workbench.action.createTerminalEditor"
   },
